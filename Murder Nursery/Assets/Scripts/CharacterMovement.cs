@@ -17,10 +17,10 @@ public class CharacterMovement : MonoBehaviour
     bool isMoving;
 
     [SerializeField]
-    float runSpeed = 5.0f;
+    float runSpeed = 3.0f;
 
     [SerializeField]
-    float rotationSpeed = 1.0f;
+    float rotationSpeed = 15.0f;
 
     void Awake()
     {

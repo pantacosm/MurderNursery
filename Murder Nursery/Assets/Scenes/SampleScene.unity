@@ -128,6 +128,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2316088729555242697, guid: e3bf30e860fade34d81bcf970c47e1ab, type: 3}
@@ -221,6 +222,7 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 1929724852752976016, guid: e3bf30e860fade34d81bcf970c47e1ab, type: 3}
     - {fileID: 6710617003257873176, guid: e3bf30e860fade34d81bcf970c47e1ab, type: 3}
+    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: e3bf30e860fade34d81bcf970c47e1ab, type: 3}
 --- !u!1 &705507993
 GameObject:
@@ -393,7 +395,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: -0.00000072196616, y: 1, z: -2.04}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

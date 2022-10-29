@@ -9,15 +9,20 @@ public class CharacterMovement : MonoBehaviour
     CharacterController controller;
     Animator animator;
 
-    int isWalkingHash;
-    int isRunningHash;
-
     Vector2 movementInput;
     Vector3 movement;
-    bool isMoving;
+    bool isMoving = false;
+    bool isRunning = false;
+    float velocity;
+    
+    [SerializeField]
+    float acceleration = 0.3f;
 
     [SerializeField]
-    float runSpeed = 3.0f;
+    float deceleration = 3.0f;
+
+    [SerializeField]
+    float speed = 3.0f;
 
     [SerializeField]
     float rotationSpeed = 15.0f;
@@ -27,9 +32,6 @@ public class CharacterMovement : MonoBehaviour
         playerControls = new PlayerControls();
         controller = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
-
-        isWalkingHash = Animator.StringToHash("isWalking");
-        isRunningHash = Animator.StringToHash("isRunning");
 
         // keyboard input pressed
         playerControls.PlayerInputMap.Move.started += OnMovementInput;
@@ -53,35 +55,67 @@ public class CharacterMovement : MonoBehaviour
     void OnMovementInput(InputAction.CallbackContext context)
     {
         movementInput = context.ReadValue<Vector2>();
-        movement.x = movementInput.x * runSpeed;
-        movement.z = movementInput.y * runSpeed;
+        if(!isRunning)
+        {
+            movement.x = movementInput.x;
+            movement.z = movementInput.y;
+        }
+        else if(isRunning)
+        {
+            movement.x = movementInput.x * speed;
+            movement.z = movementInput.y * speed;
+        }
+
         isMoving = movementInput.x != 0 || movementInput.y != 0;
     }
 
     void HandleAnimation()
     {
-        bool isWalking = animator.GetBool(isWalkingHash);
-        bool isRunning = animator.GetBool(isRunningHash);
+        //bool isWalking = animator.GetBool("isWalking");
+        //bool isRunning = animator.GetBool("isRunning");
 
-        // set walking animation
-        if(isMoving && !isWalking)
+        //// set walking animation
+        //if(isMoving && !isWalking)
+        //{
+        //    animator.SetBool("isWalking", true);
+        //}
+        //else if(!isMoving && isWalking)
+        //{
+        //    animator.SetBool("isWalking", false);
+        //}
+
+        //// set run animation
+        //if(isMoving && !isRunning)
+        //{
+        //    animator.SetBool("isRunning", true);
+        //}
+        //else if(!isMoving && isRunning)
+        //{
+        //    animator.SetBool("isRunning", false);
+        //}
+
+        // blends between walk/run animations as velocity increases / decreases
+        if(isMoving && velocity < 1.0f)
         {
-            animator.SetBool(isWalkingHash, true);
+            velocity += Time.deltaTime * acceleration;
+            velocity = Mathf.Clamp(velocity, 0, 1);
         }
-        else if(!isMoving && isWalking)
+        if(!isMoving && velocity > 0.0f)
         {
-            animator.SetBool(isWalkingHash, false);
+            velocity -= Time.deltaTime * deceleration;
+            velocity = Mathf.Clamp(velocity, 0, 1);
         }
 
-        // set run animation
-        if(isMoving && !isRunning)
+        if(velocity > 0.5f)
         {
-            animator.SetBool(isRunningHash, true);
+            isRunning = true;
         }
-        else if(!isMoving && isRunning)
+        else
         {
-            animator.SetBool(isRunningHash, false);
+            isRunning = false;
         }
+
+        animator.SetFloat("Velocity", velocity);
     }
 
     void HandleRotation()

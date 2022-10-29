@@ -962,8 +962,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4012444083292806530}
   - component: {fileID: 8652230991603199038}
-  - component: {fileID: 1929724852752976016}
   - component: {fileID: 7339087189459365875}
+  - component: {fileID: 8650316180361271579}
+  - component: {fileID: 3843304622363596247}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1015,10 +1016,30 @@ MonoBehaviour:
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
-  m_DefaultActionMap: Player
+  m_DefaultActionMap: PlayerInputMap
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!143 &1929724852752976016
+--- !u!95 &7339087189459365875
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4387843103654496056}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 49896aa3f3b12254cab05c6f342c7d81, type: 3}
+  m_Controller: {fileID: 9100000, guid: caee6bb63e62cbb4c8c20d131998d596, type: 2}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!143 &8650316180361271579
 CharacterController:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1033,29 +1054,22 @@ CharacterController:
   m_Radius: 0.3
   m_SlopeLimit: 45
   m_StepOffset: 0.3
-  m_SkinWidth: 0.08
+  m_SkinWidth: 0.05
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.85, z: 0}
---- !u!95 &7339087189459365875
-Animator:
-  serializedVersion: 4
+  m_Center: {x: 0, y: 0.9, z: 0}
+--- !u!114 &3843304622363596247
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4387843103654496056}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: caee6bb63e62cbb4c8c20d131998d596, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0a98330c1f85564ba9e734b71156331, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 15
 --- !u!1 &4447745325626627085
 GameObject:
   m_ObjectHideFlags: 0

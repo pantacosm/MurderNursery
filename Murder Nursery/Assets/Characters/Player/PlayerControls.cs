@@ -35,6 +35,33 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""processors"": ""NormalizeVector2"",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""MouseLook"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""04946687-0b37-4e46-b0a8-30202964a8b7"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Jump"",
+                    ""type"": ""Button"",
+                    ""id"": ""88c1a974-621d-4b73-b547-43ace6357c13"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""GamepadLook"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""4666fa76-3898-427b-b0be-d4f5e2361a0b"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -103,6 +130,39 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""623d30a4-874c-4583-a8ec-4ab68824ae85"",
+                    ""path"": ""<Mouse>/delta"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MouseLook"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""86771bb3-400e-4613-8e7b-a783021e24bb"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Jump"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""cf5b9073-20a6-456a-a775-1a832f8f3fda"",
+                    ""path"": ""<Gamepad>/rightStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""GamepadLook"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -112,6 +172,9 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
         // PlayerInputMap
         m_PlayerInputMap = asset.FindActionMap("PlayerInputMap", throwIfNotFound: true);
         m_PlayerInputMap_Move = m_PlayerInputMap.FindAction("Move", throwIfNotFound: true);
+        m_PlayerInputMap_MouseLook = m_PlayerInputMap.FindAction("MouseLook", throwIfNotFound: true);
+        m_PlayerInputMap_Jump = m_PlayerInputMap.FindAction("Jump", throwIfNotFound: true);
+        m_PlayerInputMap_GamepadLook = m_PlayerInputMap.FindAction("GamepadLook", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -172,11 +235,17 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     private readonly InputActionMap m_PlayerInputMap;
     private IPlayerInputMapActions m_PlayerInputMapActionsCallbackInterface;
     private readonly InputAction m_PlayerInputMap_Move;
+    private readonly InputAction m_PlayerInputMap_MouseLook;
+    private readonly InputAction m_PlayerInputMap_Jump;
+    private readonly InputAction m_PlayerInputMap_GamepadLook;
     public struct PlayerInputMapActions
     {
         private @PlayerControls m_Wrapper;
         public PlayerInputMapActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move => m_Wrapper.m_PlayerInputMap_Move;
+        public InputAction @MouseLook => m_Wrapper.m_PlayerInputMap_MouseLook;
+        public InputAction @Jump => m_Wrapper.m_PlayerInputMap_Jump;
+        public InputAction @GamepadLook => m_Wrapper.m_PlayerInputMap_GamepadLook;
         public InputActionMap Get() { return m_Wrapper.m_PlayerInputMap; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -189,6 +258,15 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @Move.started -= m_Wrapper.m_PlayerInputMapActionsCallbackInterface.OnMove;
                 @Move.performed -= m_Wrapper.m_PlayerInputMapActionsCallbackInterface.OnMove;
                 @Move.canceled -= m_Wrapper.m_PlayerInputMapActionsCallbackInterface.OnMove;
+                @MouseLook.started -= m_Wrapper.m_PlayerInputMapActionsCallbackInterface.OnMouseLook;
+                @MouseLook.performed -= m_Wrapper.m_PlayerInputMapActionsCallbackInterface.OnMouseLook;
+                @MouseLook.canceled -= m_Wrapper.m_PlayerInputMapActionsCallbackInterface.OnMouseLook;
+                @Jump.started -= m_Wrapper.m_PlayerInputMapActionsCallbackInterface.OnJump;
+                @Jump.performed -= m_Wrapper.m_PlayerInputMapActionsCallbackInterface.OnJump;
+                @Jump.canceled -= m_Wrapper.m_PlayerInputMapActionsCallbackInterface.OnJump;
+                @GamepadLook.started -= m_Wrapper.m_PlayerInputMapActionsCallbackInterface.OnGamepadLook;
+                @GamepadLook.performed -= m_Wrapper.m_PlayerInputMapActionsCallbackInterface.OnGamepadLook;
+                @GamepadLook.canceled -= m_Wrapper.m_PlayerInputMapActionsCallbackInterface.OnGamepadLook;
             }
             m_Wrapper.m_PlayerInputMapActionsCallbackInterface = instance;
             if (instance != null)
@@ -196,6 +274,15 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
                 @Move.started += instance.OnMove;
                 @Move.performed += instance.OnMove;
                 @Move.canceled += instance.OnMove;
+                @MouseLook.started += instance.OnMouseLook;
+                @MouseLook.performed += instance.OnMouseLook;
+                @MouseLook.canceled += instance.OnMouseLook;
+                @Jump.started += instance.OnJump;
+                @Jump.performed += instance.OnJump;
+                @Jump.canceled += instance.OnJump;
+                @GamepadLook.started += instance.OnGamepadLook;
+                @GamepadLook.performed += instance.OnGamepadLook;
+                @GamepadLook.canceled += instance.OnGamepadLook;
             }
         }
     }
@@ -203,5 +290,8 @@ public partial class @PlayerControls : IInputActionCollection2, IDisposable
     public interface IPlayerInputMapActions
     {
         void OnMove(InputAction.CallbackContext context);
+        void OnMouseLook(InputAction.CallbackContext context);
+        void OnJump(InputAction.CallbackContext context);
+        void OnGamepadLook(InputAction.CallbackContext context);
     }
 }

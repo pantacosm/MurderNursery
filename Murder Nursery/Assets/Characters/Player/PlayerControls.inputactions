@@ -15,7 +15,7 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "MouseLook",
+                    "name": "Look",
                     "type": "PassThrough",
                     "id": "04946687-0b37-4e46-b0a8-30202964a8b7",
                     "expectedControlType": "Vector2",
@@ -28,15 +28,6 @@
                     "type": "Button",
                     "id": "88c1a974-621d-4b73-b547-43ace6357c13",
                     "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "GamepadLook",
-                    "type": "PassThrough",
-                    "id": "4666fa76-3898-427b-b0be-d4f5e2361a0b",
-                    "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -116,7 +107,18 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "MouseLook",
+                    "action": "Look",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d81c0a24-b181-40d6-a883-c00540138555",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Look",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -133,12 +135,12 @@
                 },
                 {
                     "name": "",
-                    "id": "cf5b9073-20a6-456a-a775-1a832f8f3fda",
-                    "path": "<Gamepad>/rightStick",
+                    "id": "a3d464a3-07d1-4149-bb65-c2d2128f6fda",
+                    "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "GamepadLook",
+                    "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
     private float velocity;
 
     [SerializeField]
-    private float playerSpeed = 4.0f;
+    public float playerSpeed = 4.0f;
 
     [SerializeField]
     private float acceleration = 2.0f;
@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
     private float deceleration = 3.0f;
 
     [SerializeField]
-    private float jumpHeight = 1.0f;
+    public float jumpHeight = 1.0f;
 
     [SerializeField]
     private Transform cameraTransform;

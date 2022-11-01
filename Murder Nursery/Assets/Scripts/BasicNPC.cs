@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BasicNPC : MonoBehaviour
 {
+    public string initialStatement;
     public string playerResponse1A; //1 Represents the first stage of dialogue with the character and A represents the response option
     public string playerResponse1B;
     public string playerResponse1C;

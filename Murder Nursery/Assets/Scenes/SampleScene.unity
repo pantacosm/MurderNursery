@@ -719,6 +719,7 @@ MonoBehaviour:
   responseText1: {fileID: 907595302}
   responseText2: {fileID: 545086550}
   responseText3: {fileID: 772376186}
+  statementText: {fileID: 1090959858}
 --- !u!4 &626848580
 Transform:
   m_ObjectHideFlags: 0
@@ -2216,6 +2217,9 @@ MonoBehaviour:
   player: {fileID: 766892539}
   inConvo: 0
   thisNPC: {fileID: 1497264729}
+  responsePanel1: {fileID: 1313155304}
+  responsePanel2: {fileID: 1413527682}
+  responsePanel3: {fileID: 68130136}
 --- !u!135 &1497264731
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2336,6 +2340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b341b0f77bb247041b21df3b5c21b6db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialStatement: 
   playerResponse1A: I am cool
   playerResponse1B: Yu loser
   playerResponse1C: K BYE

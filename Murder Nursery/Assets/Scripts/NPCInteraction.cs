@@ -10,12 +10,19 @@ public class NPCInteraction : MonoBehaviour
     public GameObject dialoguePanel;
     public GameObject player;
     public bool inConvo;
+    private string playerReply1;
+    private string playerReply2;
+    private string playerReply3;
+    public GameObject thisNPC;
     // Start is called before the first frame update
     void Start()
     {
         interactable = false;
-        ; inConvo = false;
+        inConvo = false;
         manager = GameObject.FindGameObjectWithTag("Manager");
+        playerReply1 = thisNPC.GetComponent<BasicNPC>().playerResponse1A;
+        playerReply2 = thisNPC.GetComponent<BasicNPC>().playerResponse1B;
+        playerReply3 = thisNPC.GetComponent<BasicNPC>().playerResponse1C;
     }
 
     // Update is called once per frame
@@ -54,6 +61,7 @@ public class NPCInteraction : MonoBehaviour
     public void EnterConverstion()
     {
         dialoguePanel.SetActive(true);
+        manager.GetComponent<DialogueSystem>().LoadResponses(playerReply1, playerReply2, playerReply3);
     }
 
     public void ExitConversation()

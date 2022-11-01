@@ -27,16 +27,16 @@ public class DialogueSystem : MonoBehaviour
     {
         statementText.GetComponent<TextMeshProUGUI>().text = statement;
     }
-    public void LoadResponses(string firstResponse)
+    public void LoadResponses(string firstResponse) //Loads in a single response, used when we only need to leave a convo 
     {
         responseText1.GetComponent<TextMeshProUGUI>().text = firstResponse;
     }
-    public void LoadResponses(string firstResponse, string secondResponse)
+    public void LoadResponses(string firstResponse, string secondResponse) //Loads in two responses, e.g. in the proposed truth or dare scenario
     {
         responseText1.GetComponent<TextMeshProUGUI>().text = firstResponse;
         responseText2.GetComponent<TextMeshProUGUI>().text = secondResponse;   
     }
-    public void LoadResponses(string firstResponse, string secondResponse, string thirdResponse)
+    public void LoadResponses(string firstResponse, string secondResponse, string thirdResponse) //Loads in all three responses, most commonly used
     {
         responseText1.GetComponent<TextMeshProUGUI>().text = firstResponse;
         responseText2.GetComponent<TextMeshProUGUI>().text = secondResponse;

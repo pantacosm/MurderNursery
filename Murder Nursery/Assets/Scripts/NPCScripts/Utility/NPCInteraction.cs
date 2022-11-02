@@ -90,6 +90,7 @@ public class NPCInteraction : MonoBehaviour
         dialoguePanel.SetActive(true);
         manager.GetComponent<DialogueSystem>().LoadNPCStatement(npcStatement1);
         manager.GetComponent<DialogueSystem>().LoadResponses(playerReply1, playerReply2, playerReply3);
+        GameObject.FindGameObjectWithTag("Camera").GetComponent<Cinemachine.CinemachineInputProvider>().enabled = false;
     }
 
     public void ExitConversation() //Exits the conversation and re-enables player controls
@@ -99,6 +100,7 @@ public class NPCInteraction : MonoBehaviour
         player.GetComponent<PlayerMovement>().enabled = true;
         player.GetComponent<Animator>().enabled = true;
         dialoguePanel.SetActive(false);
+        GameObject.FindGameObjectWithTag("Camera").GetComponent<Cinemachine.CinemachineInputProvider>().enabled = true;
         
         
     }

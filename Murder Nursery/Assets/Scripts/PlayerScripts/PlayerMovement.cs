@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     private CharacterController controller;
     private PlayerControls playerControls;
     private Animator animator;
+    private ToggleInventory inventory;
 
     private Vector3 playerVelocity;
     private bool groundedPlayer;
@@ -36,6 +37,7 @@ public class PlayerMovement : MonoBehaviour
     {
         controller = gameObject.GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
+        inventory = GetComponent<ToggleInventory>();
         cameraTransform = Camera.main.transform;
 
         // holds a map of inputs for the player
@@ -65,7 +67,19 @@ public class PlayerMovement : MonoBehaviour
 
         playerVelocity.y += gravityValue * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);
-        HandleMovement();
+
+        if(inventory.inventoryOpen)
+        {
+            animator.Play("Idle");
+            animator.SetFloat("Velocity", 0);
+            
+            GameObject.FindGameObjectWithTag("Camera").GetComponent<Cinemachine.CinemachineInputProvider>().enabled = false;
+        }
+        else
+        {
+            GameObject.FindGameObjectWithTag("Camera").GetComponent<Cinemachine.CinemachineInputProvider>().enabled = true;
+            HandleMovement();
+        }
         HandleAnimation();
     }
 
@@ -107,18 +121,13 @@ public class PlayerMovement : MonoBehaviour
         playerControls.PlayerInputMap.Disable();
     }
 
-        // hide mouse cursor when player is focus
+    // hide mouse cursor when player is focus
     private void OnApplicationFocus(bool focus)
     {
-        if(focus)
+        if (focus)
         {
-            Cursor.lockState = CursorLockMode.Locked;
+            //Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
-        }
-        else
-        {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
         }
     }
 }

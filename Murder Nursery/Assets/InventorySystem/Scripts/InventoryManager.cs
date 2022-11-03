@@ -10,6 +10,7 @@ public class InventoryManager : MonoBehaviour
 
     public Transform itemContent;
     public GameObject inventoryItem;
+    public ItemManager[] inventoryItems;
 
     private void Awake()
     {
@@ -19,34 +20,28 @@ public class InventoryManager : MonoBehaviour
     public void AddItem(Item item)
     {
         items.Add(item);
-        ListItems();
+
+        // adds itemUI to Inventory UI (allows us to see the item in inventory) 
+        GameObject itemObj = Instantiate(inventoryItem, itemContent);
+        var itemIcon = itemObj.transform.Find("ItemIcon").GetComponent<Image>();
+        itemIcon.sprite = item.icon;
+
+        // sets the item in ItemManager so we can access its UseItem() function
+        SetInventoryItems();
     }
 
     public void RemoveItem(Item item)
     {
         items.Remove(item);
-        ListItems();
     }
 
-    public void CleanupList()
+    public void SetInventoryItems()
     {
-        // Clean up inventory ui content before adding next item
-        foreach (Transform item in itemContent)
+        inventoryItems = itemContent.GetComponentsInChildren<ItemManager>();
+
+        for (int i = 0; i < items.Count; i++)
         {
-            Destroy(item.gameObject);
-        }
-    }
-
-    public void ListItems()
-    {
-
-        CleanupList();
-        foreach ( var item in items)
-        {
-            GameObject itemObj = Instantiate(inventoryItem, itemContent);
-            var itemIcon = itemObj.transform.Find("ItemIcon").GetComponent<Image>();
-
-            itemIcon.sprite = item.icon;
+            inventoryItems[i].AddItem(items[i]);
         }
     }
 }

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8779012939053094843}
   - component: {fileID: 9121862527474164910}
   - component: {fileID: 5405292859003473763}
-  - component: {fileID: 2144283823}
+  - component: {fileID: 9203519605866139332}
   m_Layer: 5
   m_Name: ItemUI
   m_TagString: Untagged
@@ -34,7 +34,7 @@ RectTransform:
   m_Children:
   - {fileID: 2950695871751248041}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -123,7 +123,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2144283823}
+      - m_Target: {fileID: 9203519605866139332}
         m_TargetAssemblyTypeName: ItemManager, Assembly-CSharp
         m_MethodName: UseItem
         m_Mode: 1
@@ -134,8 +134,8 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 1
---- !u!114 &2144283823
+        m_CallState: 2
+--- !u!114 &9203519605866139332
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -147,7 +147,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b8bf6f7bf64f294abbccdc5a5fa8e5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 0}
 --- !u!1 &4280037570794525352
 GameObject:
   m_ObjectHideFlags: 0

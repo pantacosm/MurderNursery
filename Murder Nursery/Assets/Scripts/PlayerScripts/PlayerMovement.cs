@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private PlayerControls playerControls;
     private Animator animator;
     private ToggleInventory inventory;
+    InputAction leftMouseClick;
 
     private Vector3 playerVelocity;
     private bool groundedPlayer;

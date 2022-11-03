@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class ToggleInventory : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class ToggleInventory : MonoBehaviour
     GameObject inventoryUI;
 
     public bool inventoryOpen = false;
+
 
     // Update is called once per frame
     void Update()
@@ -22,7 +24,7 @@ public class ToggleInventory : MonoBehaviour
         }
     }
 
-    void OpenInventory()
+    public void OpenInventory()
     {
         inventoryUI.SetActive(true);
         inventoryOpen = true;
@@ -31,7 +33,7 @@ public class ToggleInventory : MonoBehaviour
         Cursor.visible = true;
     }
 
-    void CloseInventory()
+    public void CloseInventory()
     {
         inventoryUI.SetActive(false);
         inventoryOpen = false;

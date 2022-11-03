@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b723294a1cd0b2c45b6c4c069d4b5da1, type: 3}
-  m_Name: CandyBar
+  m_Name: Cupcake
   m_EditorClassIdentifier: 
-  id: 1
-  itemName: Candy Bar
-  itemDescription: Maybe I can bribe someone with this.
-  icon: {fileID: 21300000, guid: a9be4d91c1c39084692e454f4449650e, type: 3}
+  id: 2
+  itemName: Cupcake
+  itemDescription: Who likes cake...
+  icon: {fileID: 21300012, guid: fea96a0220c344686b40cf9b233701f1, type: 3}
+  itemType: 3

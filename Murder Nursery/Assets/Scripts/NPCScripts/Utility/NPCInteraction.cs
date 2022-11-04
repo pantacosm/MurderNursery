@@ -25,6 +25,10 @@ public class NPCInteraction : MonoBehaviour
     public int firstChoice = 0;
     public int secondChoice = 0;
     public bool firstInteractionComplete;
+
+    PinboardManager PM;
+
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -36,6 +40,7 @@ public class NPCInteraction : MonoBehaviour
         playerReply3 = thisNPC.GetComponent<BasicNPC>().playerResponse1C;
         npcStatement1 = thisNPC.GetComponent<BasicNPC>().initialStatement;
         firstInteractionComplete = false;
+        PM = FindObjectOfType<PinboardManager>();
     }
 
     // Update is called once per frame
@@ -132,6 +137,10 @@ public class NPCInteraction : MonoBehaviour
             {
                 choice = 1;
                 firstInteractionComplete = true; //Signals that the first response has been logged
+                
+                // Test to show info being added to pin board based on dialogue chosen
+                //PM.UpdatePinboard(PM.GoonLikes, "COOL GUY");
+
                 return choice;
             }
         }

@@ -17,6 +17,7 @@ public class ItemManager : MonoBehaviour
         Destroy(gameObject);
     }
 
+    // Called when we click an item in our inventory (item type determines the items use functionality)
     public void UseItem()
     {
         switch (item.itemType)

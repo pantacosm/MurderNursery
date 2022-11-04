@@ -9,10 +9,12 @@ public class PinboardManager : MonoBehaviour
     public static PinboardManager pinboard;
 
     [SerializeField]
-    Transform GoonLikesContent;
+    public Transform GoonLikes;
 
     [SerializeField]
-    Transform GoonDislikesContent;
+    public Transform GoonDislikes;
+
+    public Transform GoonEvents;
 
     [SerializeField]
     GameObject CharacterTraitsUI;
@@ -28,27 +30,23 @@ public class PinboardManager : MonoBehaviour
     {
         if(Input.GetKeyUp(KeyCode.KeypadPlus))
         {
-            UpdateGoonLikes("COOL GUY");
+            UpdatePinboard(GoonLikes, "COOL GUY");
+            UpdatePinboard(GoonEvents, "Has a thing for femme.");
         }
 
         if(Input.GetKeyUp(KeyCode.KeypadMinus))
         {
-            UpdateGoonDislikes("JUICEBOX");
+            UpdatePinboard(GoonDislikes, "JUICE BOX");
         }
     }
 
-    void UpdateGoonLikes(string goonLikesText)
+    // Called when we want to update the pin board after discovering a characters likes/dislikes
+    // content determines whos likes/dislikes we are updating / string is what we want the content to say
+    public void UpdatePinboard(Transform content, string pinboardText)
     {
-        GameObject likesObj = Instantiate(CharacterTraitsUI, GoonLikesContent);
+        GameObject likesObj = Instantiate(CharacterTraitsUI, content);
         var likesText = likesObj.gameObject.transform.Find("TraitsText").GetComponent<TextMeshProUGUI>();
-        likesText.text = goonLikesText;
-    }
-
-    void UpdateGoonDislikes(string goonDislikesText)
-    {
-        GameObject dislikesObj = Instantiate(CharacterTraitsUI, GoonDislikesContent);
-        var dislikesText = dislikesObj.gameObject.transform.Find("TraitsText").GetComponent<TextMeshProUGUI>();
-        dislikesText.text = goonDislikesText;
+        likesText.text = pinboardText;
     }
 
 

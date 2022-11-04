@@ -11,6 +11,12 @@ public class ItemManager : MonoBehaviour
         item = newItem;
     }
 
+    public void RemoveItem()
+    {
+        InventoryManager.inventory.RemoveItem(item);
+        Destroy(gameObject);
+    }
+
     public void UseItem()
     {
         switch (item.itemType)
@@ -18,12 +24,12 @@ public class ItemManager : MonoBehaviour
             case Item.ItemType.Bribery:
                 if(item.itemName == ("Candy"))
                 {
-                    Debug.Log("I can bribe someone with this half eating candy.");
+                    Debug.Log("I can bribe someone with this half eaten candy.");
                 }
                 break;
             case Item.ItemType.Gift:
                 Debug.Log(item.itemName);
-                InventoryManager.inventory.RemoveItem(item);
+                RemoveItem();
                 break;
             case Item.ItemType.MagnifyingGlass:
                 // Used for investigating

@@ -8,7 +8,14 @@ public class ToggleInventory : MonoBehaviour
     [SerializeField]
     GameObject inventoryUI;
 
+    [SerializeField]
+    GameObject pinboardUI;
+
+    [HideInInspector]
     public bool inventoryOpen = false;
+
+    [HideInInspector]
+    public bool pinboardOpen = false;
 
 
     // Update is called once per frame
@@ -21,6 +28,11 @@ public class ToggleInventory : MonoBehaviour
         else if(inventoryOpen == true && Input.GetKeyUp(KeyCode.B))
         {
             CloseInventory();
+        }
+
+        if(Input.GetKeyUp(KeyCode.P))
+        {
+            TogglePinboard();
         }
     }
 
@@ -40,5 +52,19 @@ public class ToggleInventory : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+    }
+
+    public void TogglePinboard()
+    {
+        if(pinboardOpen = !pinboardOpen)
+        {
+            pinboardUI.SetActive(true);
+            pinboardOpen = true;
+        }
+        else
+        {
+            pinboardUI.SetActive(false);
+            pinboardOpen = false;
+        }
     }
 }

@@ -6,11 +6,17 @@ using UnityEngine.UI;
 public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager inventory;
-    public List<Item> items = new List<Item>();
 
-    public Transform itemContent;
-    public GameObject inventoryItem;
-    public ItemManager[] inventoryItems;
+    [SerializeField]
+    List<Item> items = new List<Item>();
+
+    [SerializeField]
+    Transform itemContent;
+
+    [SerializeField]
+    GameObject inventoryItem;
+
+    private ItemManager[] inventoryItems;
 
     private void Awake()
     {
@@ -20,14 +26,7 @@ public class InventoryManager : MonoBehaviour
     public void AddItem(Item item)
     {
         items.Add(item);
-
-        // adds itemUI to Inventory UI (allows us to see the item in inventory) 
-        GameObject itemObj = Instantiate(inventoryItem, itemContent);
-        var itemIcon = itemObj.transform.Find("ItemIcon").GetComponent<Image>();
-        itemIcon.sprite = item.icon;
-
-        // sets the item in ItemManager so we can access its UseItem() function
-        SetInventoryItems();
+        SetInventoryItems(item);
     }
 
     public void RemoveItem(Item item)
@@ -35,8 +34,14 @@ public class InventoryManager : MonoBehaviour
         items.Remove(item);
     }
 
-    public void SetInventoryItems()
+    private void SetInventoryItems(Item item)
     {
+        // adds itemUI to Inventory UI (allows us to see the item in inventory) 
+        GameObject itemObj = Instantiate(inventoryItem, itemContent);
+        var itemIcon = itemObj.transform.Find("ItemIcon").GetComponent<Image>();
+        itemIcon.sprite = item.icon;
+
+        // sets the item in ItemManager so we can access its UseItem() function
         inventoryItems = itemContent.GetComponentsInChildren<ItemManager>();
 
         for (int i = 0; i < items.Count; i++)

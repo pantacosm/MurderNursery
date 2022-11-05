@@ -35,6 +35,9 @@ public class ItemManager : MonoBehaviour
             case Item.ItemType.MagnifyingGlass:
                 // Used for investigating
                 break;
+            case Item.ItemType.PinBoard:
+                InventoryManager.inventory.UIVisibility.TogglePinboard();
+                break;
         }
     }
 }

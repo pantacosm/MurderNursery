@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     private CharacterController controller;
     private PlayerControls playerControls;
     private Animator animator;
-    private ToggleInventory inventory;
+    private InventoryManager inventory;
     InputAction leftMouseClick;
 
     private Vector3 playerVelocity;
@@ -38,7 +38,7 @@ public class PlayerMovement : MonoBehaviour
     {
         controller = gameObject.GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
-        inventory = GetComponent<ToggleInventory>();
+        inventory = FindObjectOfType<InventoryManager>();
         cameraTransform = Camera.main.transform;
 
         // holds a map of inputs for the player
@@ -69,7 +69,8 @@ public class PlayerMovement : MonoBehaviour
         playerVelocity.y += gravityValue * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);
 
-        if(inventory.inventoryOpen)
+        // stops player movement & disables camera whilst UI open
+        if(inventory.UIVisibility.inventoryOpen || inventory.UIVisibility.pinboardOpen)
         {
             animator.Play("Idle");
             animator.SetFloat("Velocity", 0);

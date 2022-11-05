@@ -7,6 +7,9 @@ public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager inventory;
 
+    [HideInInspector]
+    public ToggleUIVisibility UIVisibility;
+
     [SerializeField]
     List<Item> items = new List<Item>();
 
@@ -21,6 +24,15 @@ public class InventoryManager : MonoBehaviour
     private void Awake()
     {
         inventory = this;
+        UIVisibility = GetComponent<ToggleUIVisibility>();
+    }
+
+    private void Update()
+    {
+        if(Input.GetKeyUp(KeyCode.B))
+        {
+            UIVisibility.ToggleInventory();
+        }
     }
 
     public void AddItem(Item item)

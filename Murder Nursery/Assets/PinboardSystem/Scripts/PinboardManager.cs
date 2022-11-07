@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+// displays characters traits likes/dislikes/events on a pin-board style ui
 public class PinboardManager : MonoBehaviour
 {
     public static PinboardManager pinboard;
@@ -31,6 +32,12 @@ public class PinboardManager : MonoBehaviour
     [SerializeField]
     GameObject CharacterTraitsUI;
 
+    [SerializeField]
+    GameObject RelationshipOptionsUI;
+
+    [SerializeField]
+    Transform RelationshipOptionsContent;
+
 
     // Start is called before the first frame update
     void Awake()
@@ -57,6 +64,8 @@ public class PinboardManager : MonoBehaviour
             UpdatePinboard(JuiceboxEvents, "Close to dead girl.");
 
             UpdatePinboard(FemmeLikes, "DRESS-UP");
+
+            UpdateRelationshipOptions("Goon does not like Juice Box");
         }
 
         if(Input.GetKeyUp(KeyCode.KeypadMinus))
@@ -74,14 +83,16 @@ public class PinboardManager : MonoBehaviour
     // content determines whos likes/dislikes/events we are updating / string is what we want the content to say
     public void UpdatePinboard(Transform content, string pinboardText)
     {
-        GameObject likesObj = Instantiate(CharacterTraitsUI, content);
-        var likesText = likesObj.gameObject.transform.Find("TraitsText").GetComponent<TextMeshProUGUI>();
-        likesText.text = pinboardText;
+        GameObject pinboardObj = Instantiate(CharacterTraitsUI, content);
+        var contentText = pinboardObj.transform.Find("TraitsText").GetComponent<TextMeshProUGUI>();
+        contentText.text = pinboardText;
     }
 
-
-
-
-
+    public void UpdateRelationshipOptions(string optionsText)
+    {
+        GameObject optionsObj = Instantiate(RelationshipOptionsUI, RelationshipOptionsContent);
+        var relationshipText = optionsObj.transform.Find("RelationshipOptionsText").GetComponent<TextMeshProUGUI>();
+        relationshipText.text = optionsText;
+    }
 
 }

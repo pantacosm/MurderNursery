@@ -9,7 +9,7 @@ public class ToggleUIVisibility : MonoBehaviour
     GameObject inventoryUI;
 
     [SerializeField]
-    GameObject pinboardUI;
+    public GameObject pinboardUI;
 
     [HideInInspector]
     public bool inventoryOpen = false;

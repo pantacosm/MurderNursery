@@ -11,19 +11,44 @@ public class BasicNPC : MonoBehaviour
     public string playerResponse1C;
 
     [Header("NPC First Reply Set")] //First set of possible NPC replies
-    public string npcResponse1A;
-    public string npcResponse1B;
-    public string npcResponse1C;
+    public string alphaBranchNPC;
+    public string betaBranchNPC;
+    public string gammaBranchNPC;
 
     [Header("Player Second Reply Set")] //Second set of player responses
-    public string playerResponse2A;
-    public string playerResponse2B;
-    public string playerResponse2C;
+    public string alphaAlphaBranchPlayer;
+    public string alphaBetaBranchPlayer;
+    public string betaAlphaBranchPlayer;
+    public string betaBetaBranchPlayer;
+    public string gammaAlphaBranchPlayer;
+    public string gammaBetaBranchPlayer;
+
 
     [Header("NPC Second Reply Set")] //Second set of possible npc replies 
-    public string npcRespone2A;
-    public string npcResponse2B;
-    public string npcResponse2C;
+    public string alphaAlphaBranchNPC;
+    public string alphaBetaBranchNPC;
+    public string betaAlphaBranchNPC;
+    public string gammaAlphaBranchNPC;
+    public string gammaBetaBranchNPC;
+
+    [Header("Player Third Reply Set")]
+    public string alphaAlphaAlphaBranchPlayer;
+    public string alphaAlphaBetaBranchPlayer;
+    public string alphaAlphaGammaBranchPlayer;
+    public string betaAlphaAlphaBranchPlayer;
+    public string betaAlphaBetaBranchPlayer;
+    public string gammaAlphaAlphaBranchPlayer;
+    public string gammaAlphaBetaBranchPlayer;
+    public string gammaBetaAlphaBranchPlayer;
+
+    [Header("NPC Third Reply Set")]
+    public string alphaAlphaAlphaBranchNPC;
+    public string alphaAlphaGammaBranchNPC;
+    public string alphaBetaAlphaBranchNPC;
+    public string betaAlphaAlphaBranchNPC;
+    public string gammaAlphaAlphaBranchNPC;
+    public string gammaAlphaBetaBranchNPC;
+    public string gammaBetaAlphaBranchNPC;
 
     //Yes I know this will exponentially increase in responses but I can handle it :)))))))))))
 

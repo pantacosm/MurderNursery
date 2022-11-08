@@ -21,19 +21,19 @@ public class Susie : MonoBehaviour
 
     public void CheckFirstReply() //Retrieves and stores the player's first reply, also loads the next set of dialogue choices and responses depending on choice.
     {
-        int firstChoice = this.gameObject.GetComponent<NPCInteraction>().firstChoice;
+        int firstChoice = this.gameObject.GetComponent<NPCInteraction>().initialChoice;
         if (firstChoice == 1)
         {
-            manager.gameObject.GetComponent<DialogueSystem>().LoadNPCStatement(this.gameObject.GetComponent<BasicNPC>().npcResponse1A); 
+            manager.gameObject.GetComponent<DialogueSystem>().LoadNPCStatement(this.gameObject.GetComponent<BasicNPC>().alphaBranchNPC); 
              
         }
 
         if(firstChoice == 2)
-            manager.gameObject.GetComponent<DialogueSystem>().LoadNPCStatement(this.gameObject.GetComponent<BasicNPC>().npcResponse1B);
-            manager.gameObject.GetComponent<DialogueSystem>().LoadResponses(this.gameObject.GetComponent<BasicNPC>().playerResponse2A, this.gameObject.GetComponent<BasicNPC>().playerResponse2B, this.gameObject.GetComponent<BasicNPC>().playerResponse2C);
+            manager.gameObject.GetComponent<DialogueSystem>().LoadNPCStatement(this.gameObject.GetComponent<BasicNPC>().betaBranchNPC);
+            manager.gameObject.GetComponent<DialogueSystem>().LoadResponses(this.gameObject.GetComponent<BasicNPC>().alphaAlphaBranchPlayer, this.gameObject.GetComponent<BasicNPC>().alphaBetaBranchPlayer, this.gameObject.GetComponent<BasicNPC>().betaAlphaBranchPlayer);
         if (firstChoice == 3)
         {
-            manager.gameObject.GetComponent<DialogueSystem>().LoadNPCStatement(this.gameObject.GetComponent<BasicNPC>().npcResponse1C);
+            manager.gameObject.GetComponent<DialogueSystem>().LoadNPCStatement(this.gameObject.GetComponent<BasicNPC>().gammaBranchNPC);
             manager.gameObject.GetComponent<RelationshipManager>().UpdateCoolMeter(manager.GetComponent<RelationshipManager>().coolMeter, 10); //Updates specific relationship with predetermined value
         }
     }

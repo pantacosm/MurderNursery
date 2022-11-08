@@ -20,14 +20,14 @@ public class Lucy : MonoBehaviour
 
     public void CheckFirstReply()
     {
-        int firstChoice = this.gameObject.GetComponent<NPCInteraction>().firstChoice;
+        int firstChoice = this.gameObject.GetComponent<NPCInteraction>().initialChoice;
         if (firstChoice == 1)
-            manager.gameObject.GetComponent<DialogueSystem>().LoadNPCStatement(this.gameObject.GetComponent<BasicNPC>().npcResponse1A);
+            manager.gameObject.GetComponent<DialogueSystem>().LoadNPCStatement(this.gameObject.GetComponent<BasicNPC>().alphaBranchNPC);
         if (firstChoice == 2)
-            manager.gameObject.GetComponent<DialogueSystem>().LoadNPCStatement(this.gameObject.GetComponent<BasicNPC>().npcResponse1B);
+            manager.gameObject.GetComponent<DialogueSystem>().LoadNPCStatement(this.gameObject.GetComponent<BasicNPC>().betaBranchNPC);
         if (firstChoice == 3)
         {
-            manager.gameObject.GetComponent<DialogueSystem>().LoadNPCStatement(this.gameObject.GetComponent<BasicNPC>().npcResponse1C);
+            manager.gameObject.GetComponent<DialogueSystem>().LoadNPCStatement(this.gameObject.GetComponent<BasicNPC>().gammaBranchNPC);
         }
     }
 }

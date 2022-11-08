@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class NPCDialogue : MonoBehaviour
 {
-    public DialogueNode[] dialogueTree = new DialogueNode[27];
+    public DialogueNode[] dialogueTree = new DialogueNode[27]; //Creates the dialogue tree used to store nodes
     public bool isInteractable = false;
     public bool inConversation = false;
     

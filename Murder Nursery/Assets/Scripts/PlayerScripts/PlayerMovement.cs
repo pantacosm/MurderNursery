@@ -34,6 +34,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private Transform cameraTransform;
 
+    [SerializeField]
+    private GameObject dialogueZone;
+
     private void Awake()
     {
         controller = gameObject.GetComponent<CharacterController>();
@@ -70,19 +73,19 @@ public class PlayerMovement : MonoBehaviour
         controller.Move(playerVelocity * Time.deltaTime);
 
         // stops player movement & disables camera whilst UI open
-        // if(inventory.UIVisibility.inventoryOpen || inventory.UIVisibility.pinboardOpen)
-        // {
-        //     animator.Play("Idle");
-        //     animator.SetFloat("Velocity", 0);
+        if (inventory.UIVisibility.inventoryOpen || inventory.UIVisibility.pinboardOpen || dialogueZone.activeInHierarchy)
+        {
+            animator.Play("Idle");
+            animator.SetFloat("Velocity", 0);
 
-        //     GameObject.FindGameObjectWithTag("Camera").GetComponent<Cinemachine.CinemachineInputProvider>().enabled = false;
-        //// }
-        // //else
-        // {
-        //     GameObject.FindGameObjectWithTag("Camera").GetComponent<Cinemachine.CinemachineInputProvider>().enabled = true;
-        //     HandleMovement();
-        // }
-        HandleMovement();
+            GameObject.FindGameObjectWithTag("Camera").GetComponent<Cinemachine.CinemachineInputProvider>().enabled = false;
+        }
+        else
+        {
+            GameObject.FindGameObjectWithTag("Camera").GetComponent<Cinemachine.CinemachineInputProvider>().enabled = true;
+            HandleMovement();
+        }
+
         HandleAnimation();
     }
 

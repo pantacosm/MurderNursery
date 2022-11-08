@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2506754139236650975
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2506754139236650972}
+  - component: {fileID: 2506754139236650973}
+  - component: {fileID: 2506754139236650970}
+  - component: {fileID: 2506754139236650971}
+  m_Layer: 0
+  m_Name: PinboardManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2506754139236650972
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2506754139236650975}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2506754139236650973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2506754139236650975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1817e73d7eecaa94a85b34471391a912, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GoonLikes: {fileID: 0}
+  GoonDislikes: {fileID: 0}
+  GoonEvents: {fileID: 0}
+  CoolGuyLikes: {fileID: 0}
+  CoolGuyDislikes: {fileID: 0}
+  CoolGuyEvents: {fileID: 0}
+  JuiceboxLikes: {fileID: 0}
+  JuiceboxDislikes: {fileID: 0}
+  JuiceboxEvents: {fileID: 0}
+  FemmeLikes: {fileID: 0}
+  FemmeDislikes: {fileID: 0}
+  FemmeEvents: {fileID: 0}
+  DeadGirlLikes: {fileID: 0}
+  DeadGirlDislikes: {fileID: 0}
+  DeadGirlEvents: {fileID: 0}
+  CharacterTraitsUI: {fileID: 6584414628537741809, guid: 01f40cb9a8752cf4c8e178bfa44550fc, type: 3}
+  RelationshipOptionsUI: {fileID: 1213981622304529268, guid: 08afd2ef3580e2e4cbea7a68c67910c3, type: 3}
+  RelationshipOptionsContent: {fileID: 0}
+--- !u!114 &2506754139236650970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2506754139236650975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33248e18ff6c4ff4bb9aefc9c186ce4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  charactersSelected: {fileID: 0}
+  relationshipPanel: {fileID: 0}
+  relationshipOptionsPanel: {fileID: 0}
+--- !u!114 &2506754139236650971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2506754139236650975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a269d03873d8b814083cab9b842a1d53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  relationshipUI: {fileID: 9158919659317779731, guid: 65bf00dadb35fdd45b01e18cf54c3a89, type: 3}
+  relationshipContent: {fileID: 0}
+  relationshipList: []
+  detailsCorrect: {fileID: 0}

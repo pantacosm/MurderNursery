@@ -16,18 +16,18 @@ public class DialogueManager : MonoBehaviour
     public GameObject playerSecondResponseBox;
     public GameObject playerThirdResponseBox;
 
-    private GameObject player;
     private DialogueNode activeNode;
     private GameObject activeNPC;
     private bool inConvo = false;
     public int pos = 0;
-    public GameObject manager;
     public int relationship = 0;
+
+    [HideInInspector]
+    public GameObject manager;
 
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
         manager = GameObject.FindGameObjectWithTag("Manager");
     }
 
@@ -45,7 +45,6 @@ public class DialogueManager : MonoBehaviour
         activeNPC = npc;
         LoadNodeInfo(startNode);
         dialogueZone.SetActive(true);
-        player.GetComponent<CharacterController>().enabled = false;
         inConvo = true;
     }
 
@@ -53,7 +52,6 @@ public class DialogueManager : MonoBehaviour
     {
         activeNPC = null;
         dialogueZone.SetActive(false);
-        player.GetComponent<CharacterController>().enabled = true;
         inConvo = false;
     }
 
@@ -87,12 +85,11 @@ public class DialogueManager : MonoBehaviour
             playerFirstResponse.GetComponent<TextMeshProUGUI>().text = activeNode.responses[0].ToString();
         if (activeNode.responses.Length >= 2)
             playerSecondResponseBox.SetActive(true);
-            playerSecondResponse.GetComponent<TextMeshProUGUI>().text = activeNode.responses[1].ToString();
+        playerSecondResponse.GetComponent<TextMeshProUGUI>().text = activeNode.responses[1].ToString();
         if (activeNode.responses.Length >= 3)
             playerThirdResponseBox.SetActive(true);
-            playerThirdResponse.GetComponent<TextMeshProUGUI>().text = activeNode.responses[2].ToString();
-        
-        
+        playerThirdResponse.GetComponent<TextMeshProUGUI>().text = activeNode.responses[2].ToString();
+
     }
 
     public void ContinueConversation()

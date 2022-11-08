@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class FemmeFataleV2 : MonoBehaviour
+public class NPCDialogue : MonoBehaviour
 {
     public DialogueNode[] dialogueTree = new DialogueNode[27];
     public bool isInteractable = false;

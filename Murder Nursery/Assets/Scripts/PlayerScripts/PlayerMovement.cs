@@ -70,18 +70,19 @@ public class PlayerMovement : MonoBehaviour
         controller.Move(playerVelocity * Time.deltaTime);
 
         // stops player movement & disables camera whilst UI open
-        if(inventory.UIVisibility.inventoryOpen || inventory.UIVisibility.pinboardOpen)
-        {
-            animator.Play("Idle");
-            animator.SetFloat("Velocity", 0);
-            
-            GameObject.FindGameObjectWithTag("Camera").GetComponent<Cinemachine.CinemachineInputProvider>().enabled = false;
-        }
-        else
-        {
-            GameObject.FindGameObjectWithTag("Camera").GetComponent<Cinemachine.CinemachineInputProvider>().enabled = true;
-            HandleMovement();
-        }
+        // if(inventory.UIVisibility.inventoryOpen || inventory.UIVisibility.pinboardOpen)
+        // {
+        //     animator.Play("Idle");
+        //     animator.SetFloat("Velocity", 0);
+
+        //     GameObject.FindGameObjectWithTag("Camera").GetComponent<Cinemachine.CinemachineInputProvider>().enabled = false;
+        //// }
+        // //else
+        // {
+        //     GameObject.FindGameObjectWithTag("Camera").GetComponent<Cinemachine.CinemachineInputProvider>().enabled = true;
+        //     HandleMovement();
+        // }
+        HandleMovement();
         HandleAnimation();
     }
 

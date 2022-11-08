@@ -22,7 +22,7 @@ public class DialogueManager : MonoBehaviour
     private bool inConvo = false;
     public int pos = 0;
     public GameObject manager;
-    public int femmeFataleRelationship = 0;
+    public int relationship = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -100,15 +100,15 @@ public class DialogueManager : MonoBehaviour
         int playerChoice = RecordResponse();
         if(playerChoice == 0 && activeNode.repGainResponse1 != 0)
         {
-            manager.GetComponent<RelationshipManager>().UpdateCoolMeter(femmeFataleRelationship, activeNode.repGainResponse1);
+            manager.GetComponent<RelationshipManager>().UpdateCoolMeter(relationship, activeNode.repGainResponse1);
         }
         if(playerChoice == 1 && activeNode.repGainResponse2 != 0)
         {
-            manager.GetComponent<RelationshipManager>().UpdateCoolMeter(femmeFataleRelationship, activeNode.repGainResponse2);
+            manager.GetComponent<RelationshipManager>().UpdateCoolMeter(relationship, activeNode.repGainResponse2);
         }
         if(playerChoice == 2 && activeNode.repGainResponse3 != 0)
         {
-            manager.GetComponent<RelationshipManager>().UpdateCoolMeter(femmeFataleRelationship, activeNode.repGainResponse3);
+            manager.GetComponent<RelationshipManager>().UpdateCoolMeter(relationship, activeNode.repGainResponse3);
         }
 
         if(playerChoice >=0 && playerChoice <= 2)
@@ -132,14 +132,14 @@ public class DialogueManager : MonoBehaviour
             }
             if(Input.GetKeyUp(KeyCode.Return))
             {
-                if (femmeFataleRelationship >= activeNode.repLevelOption1)
+                if (relationship >= activeNode.repLevelOption1)
                 {
                     choice = 0;
                     playerFirstResponseBox.GetComponent<Image>().color = Color.white;
                     print(choice);
                     return choice;
                 }
-                else if(femmeFataleRelationship < activeNode.repLevelOption1)
+                else if(relationship < activeNode.repLevelOption1)
                 {
                     print("Rep Level Not High Enough");
                 }
@@ -162,14 +162,14 @@ public class DialogueManager : MonoBehaviour
             
             if(Input.GetKeyUp(KeyCode.Return))
             {
-                if (femmeFataleRelationship >= activeNode.repLevelOption2)
+                if (relationship >= activeNode.repLevelOption2)
                 {
                     choice = 1;
                     playerSecondResponseBox.GetComponent<Image>().color = Color.white;
                     print(choice);
                     return choice;
                 }
-                else if (femmeFataleRelationship < activeNode.repLevelOption2)
+                else if (relationship < activeNode.repLevelOption2)
                 {
                     print("Rep Level Not High Enough");
                 }
@@ -185,14 +185,14 @@ public class DialogueManager : MonoBehaviour
             }
             if (Input.GetKeyUp(KeyCode.Return))
             {
-                if (femmeFataleRelationship >= activeNode.repLevelOption3)
+                if (relationship >= activeNode.repLevelOption3)
                 {
                     choice = 2;
                     playerThirdResponseBox.GetComponent<Image>().color = Color.white;
                     print(choice);
                     return choice;
                  }
-            else if (femmeFataleRelationship < activeNode.repLevelOption3)
+            else if (relationship < activeNode.repLevelOption3)
             {
                 print("Rep Level Not High Enough");
             }

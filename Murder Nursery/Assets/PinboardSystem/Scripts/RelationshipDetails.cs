@@ -11,41 +11,37 @@ public class RelationshipDetails : MonoBehaviour
     [SerializeField]
     Transform relationshipContent;
 
-    public List<string> relationshipList;
+    [SerializeField]
+    GameObject relationshipOptionsUI;
 
-    // shows a tick if player has correct relationship details
-    [HideInInspector]
-    public Toggle detailsCorrect;
+    [SerializeField]
+    Transform optionsContent;
 
-    public void UpdateRelationship(string[] relationshipText)
+    public void ClearDetails()
     {
-        if(relationshipContent.childCount > 0)
+        // Clear content before updating the next relationship
+        if (relationshipContent.childCount > 0)
         {
             foreach (Transform content in relationshipContent)
             {
                 Destroy(content.gameObject);
-                relationshipList.Clear();
             }
         }
-
-        foreach (var item in relationshipText)
-        {
-            relationshipList.Add(item);
-        }
-
-        foreach (string item in relationshipList)
-        {
-            GameObject relationshipObj = Instantiate(relationshipUI, relationshipContent);
-            var contentText = relationshipObj.transform.Find("RelationshipText").GetComponent<TextMeshProUGUI>();
-            detailsCorrect = relationshipObj.transform.Find("Toggle").GetComponent<Toggle>();
-            contentText.text = item;
-        }
-
+    }
+    public void UpdateRelationship(string relationshipText)
+    {
+        GameObject relationshipObj = Instantiate(relationshipUI, relationshipContent);
+        var contentButton = relationshipObj.transform.Find("RelationshipButton").GetComponent<Button>();
+        var contentText = contentButton.transform.Find("RelationshipText").GetComponent<TextMeshProUGUI>();
+        contentText.text = relationshipText;
     }
 
-    public string ReplaceRelationshipDetails(string currentText, string textToReplace)
+    // called when we want to update the relationship options panel with statements
+    // for the player to choose to replace undiscovered (?????) or false statements
+    public void AddToRelationshipOptionsUI(string textToAdd)
     {
-        string replace = currentText.Replace(textToReplace, "Juice Boxes");
-        return replace;
+        GameObject optionsObj = Instantiate(relationshipOptionsUI, optionsContent);
+        var optionsText = optionsObj.transform.Find("RelationshipOptionsText").GetComponent<TextMeshProUGUI>();
+        optionsText.text = textToAdd;
     }
 }

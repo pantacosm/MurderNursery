@@ -7,36 +7,29 @@ using UnityEngine.UI;
 
 public class ReplaceRelationshipText : MonoBehaviour, IPointerClickHandler
 {
-    RelationshipComparrison RC;
-
     [SerializeField]
     GameObject relationshipUI;
 
     [SerializeField]
     GameObject relationshipOptionsUI;
 
-    string contentText;
-    Toggle contentToggle;
+    OpenRelationshipOptionsPanel optionsPanel;
 
-    string contentOptionsText;
+    private PinboardManager PM;
+
+    RelationshipComparrison RC;
 
     private void Start()
     {
-        RC = FindObjectOfType<RelationshipComparrison>();
-
-        contentToggle = relationshipUI.transform.Find("Toggle").GetComponent<Toggle>();
+        PM = FindObjectOfType<PinboardManager>();
+        RC = PM.GetComponent<RelationshipComparrison>();
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        RC.relationshipOptionsPanel.SetActive(true);
-        contentOptionsText = relationshipOptionsUI.transform.Find("RelationshipOptionsText").GetComponent<TextMeshProUGUI>().text;
+        string replacingText = relationshipOptionsUI.transform.Find("RelationshipOptionsText").GetComponent<TextMeshProUGUI>().text;
+        optionsPanel = relationshipUI.GetComponent<OpenRelationshipOptionsPanel>();
 
-        if(contentToggle.isOn == false)
-        {
-            contentText = relationshipUI.transform.Find("RelationshipText").GetComponent<TextMeshProUGUI>().text;
-            Debug.Log(contentText);
-        }
-
+        Debug.Log(replacingText);
     }
 }

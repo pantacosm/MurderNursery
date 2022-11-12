@@ -16,4 +16,5 @@ public class DialogueNode : MonoBehaviour
     public int repGainResponse1; //Rep gained by response
     public int repGainResponse2; //''
     public int repGainResponse3; //'' 
+    public bool interrogationNode = false;
 }

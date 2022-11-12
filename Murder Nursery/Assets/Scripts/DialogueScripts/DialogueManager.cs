@@ -22,8 +22,10 @@ public class DialogueManager : MonoBehaviour
     public int pos = 0;
     public int relationship = 0;
 
+
     [HideInInspector]
     public GameObject manager;
+
 
     // Start is called before the first frame update
     void Start()
@@ -84,17 +86,25 @@ public class DialogueManager : MonoBehaviour
         if (activeNode.responses.Length >= 1)
             playerFirstResponse.GetComponent<TextMeshProUGUI>().text = activeNode.responses[0].ToString();
         if (activeNode.responses.Length >= 2)
+        {
             playerSecondResponseBox.SetActive(true);
-        playerSecondResponse.GetComponent<TextMeshProUGUI>().text = activeNode.responses[1].ToString();
-        if (activeNode.responses.Length >= 3)
+            playerSecondResponse.GetComponent<TextMeshProUGUI>().text = activeNode.responses[1].ToString();
+        }
+        if (activeNode.responses.Length == 3)
+        {
             playerThirdResponseBox.SetActive(true);
-        playerThirdResponse.GetComponent<TextMeshProUGUI>().text = activeNode.responses[2].ToString();
+            playerThirdResponse.GetComponent<TextMeshProUGUI>().text = activeNode.responses[2].ToString();
+        }
 
     }
 
     public void ContinueConversation()
     {
         int playerChoice = RecordResponse();
+        if(activeNode.interrogationNode)
+        {
+            EnterInterrogation(activeNPC);
+        }
         if(playerChoice == 0 && activeNode.repGainResponse1 != 0)
         {
             manager.GetComponent<RelationshipManager>().UpdateCoolMeter(relationship, activeNode.repGainResponse1);
@@ -108,11 +118,19 @@ public class DialogueManager : MonoBehaviour
             manager.GetComponent<RelationshipManager>().UpdateCoolMeter(relationship, activeNode.repGainResponse3);
         }
 
-        if(playerChoice >=0 && playerChoice <= 2)
+        if(playerChoice == 0 || playerChoice == 1 || playerChoice == 2)
         {           
                 LoadNodeInfo(activeNode.children[playerChoice]);           
         }
         inConvo = true;
+    }
+
+    public void EnterInterrogation(GameObject targetNPC)
+    {
+        
+        ExitConversation();
+        manager.GetComponent<SceneTransition>().ChangeToInterrogation(targetNPC);
+
     }
 
     public int RecordResponse()

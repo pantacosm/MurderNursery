@@ -16,10 +16,12 @@ public class PostProcessingActivation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            filterOn = !filterOn;
-            filter.GetComponent<PostProcessLayer>().enabled = filterOn;
-        }
+        
+    }
+
+    public void TurnFilterOn(bool filterStatus)
+    {
+        filterOn = filterStatus;
+        filter.GetComponent<PostProcessLayer>().enabled = filterOn;
     }
 }

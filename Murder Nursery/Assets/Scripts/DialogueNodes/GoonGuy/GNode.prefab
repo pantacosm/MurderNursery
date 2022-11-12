@@ -59,3 +59,4 @@ MonoBehaviour:
   repGainResponse1: 0
   repGainResponse2: 0
   repGainResponse3: 0
+  interrogationNode: 1

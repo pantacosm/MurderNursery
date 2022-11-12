@@ -56,7 +56,8 @@ MonoBehaviour:
   repLevelOption2: 0
   repLevelOption3: 0
   nodeID: 
-  nodeActive: 0
+  nodeActive: 1
   repGainResponse1: 0
   repGainResponse2: -1
   repGainResponse3: 0
+  interrogationNode: 1

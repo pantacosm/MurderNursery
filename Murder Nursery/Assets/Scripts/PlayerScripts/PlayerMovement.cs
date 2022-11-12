@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     private InventoryManager inventory;
     InputAction leftMouseClick;
 
+
     private Vector3 playerVelocity;
     private bool groundedPlayer;
     private float gravityValue = -9.81f;
@@ -18,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 movementInput;
     private bool isMoving;
     private float velocity;
+
 
     [SerializeField]
     public float playerSpeed = 4.0f;

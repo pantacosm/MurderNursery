@@ -28,6 +28,8 @@ public class RelationshipDetails : MonoBehaviour
             }
         }
     }
+
+    // Called from RelationshipComparrison when we want to add new content to the relationship panel
     public void UpdateRelationship(string relationshipText)
     {
         GameObject relationshipObj = Instantiate(relationshipUI, relationshipContent);

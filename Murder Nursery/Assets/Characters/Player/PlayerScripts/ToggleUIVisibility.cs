@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+// attached to inventory manager object (called any time we want to update ui visibility)
 public class ToggleUIVisibility : MonoBehaviour
 {
     [SerializeField]

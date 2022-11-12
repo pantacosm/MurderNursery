@@ -32,12 +32,6 @@ public class PinboardManager : MonoBehaviour
     [SerializeField]
     GameObject CharacterTraitsUI;
 
-    [SerializeField]
-    GameObject RelationshipOptionsUI;
-
-    [SerializeField]
-    Transform RelationshipOptionsContent;
-
 
     // Start is called before the first frame update
     void Awake()
@@ -47,6 +41,7 @@ public class PinboardManager : MonoBehaviour
 
     private void Update()
     {
+        // temp set up to show content being added to the pin-board (will be called through dialogue/ bribery etc.)
         if(Input.GetKeyUp(KeyCode.KeypadPlus))
         {
             UpdatePinboard(GoonLikes, "COOL GUY");
@@ -64,8 +59,6 @@ public class PinboardManager : MonoBehaviour
             UpdatePinboard(JuiceboxEvents, "Close to dead girl.");
 
             UpdatePinboard(FemmeLikes, "DRESS-UP");
-
-            UpdateRelationshipOptions("Goon does not like Juice Box");
         }
 
         if(Input.GetKeyUp(KeyCode.KeypadMinus))
@@ -86,13 +79,6 @@ public class PinboardManager : MonoBehaviour
         GameObject pinboardObj = Instantiate(CharacterTraitsUI, content);
         var contentText = pinboardObj.transform.Find("TraitsText").GetComponent<TextMeshProUGUI>();
         contentText.text = pinboardText;
-    }
-
-    public void UpdateRelationshipOptions(string optionsText)
-    {
-        GameObject optionsObj = Instantiate(RelationshipOptionsUI, RelationshipOptionsContent);
-        var relationshipText = optionsObj.transform.Find("RelationshipOptionsText").GetComponent<TextMeshProUGUI>();
-        relationshipText.text = optionsText;
     }
 
 }

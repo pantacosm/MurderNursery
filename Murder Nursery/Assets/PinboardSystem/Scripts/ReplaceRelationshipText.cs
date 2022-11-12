@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 using TMPro;
 using UnityEngine.UI;
 
+// attached to relationship options ui, allows player to click text to replace current relationship text
 public class ReplaceRelationshipText : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField]
@@ -30,6 +31,7 @@ public class ReplaceRelationshipText : MonoBehaviour, IPointerClickHandler
         string replacingText = relationshipOptionsUI.transform.Find("RelationshipOptionsText").GetComponent<TextMeshProUGUI>().text;
         optionsPanel = relationshipUI.GetComponent<OpenRelationshipOptionsPanel>();
 
-        Debug.Log(replacingText);
+
+        Debug.Log(optionsPanel.currentText);
     }
 }

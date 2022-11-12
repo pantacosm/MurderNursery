@@ -18,6 +18,7 @@ public class ItemPickUp : MonoBehaviour
 
     private void Update()
     {
+        // once we are in range of an items trigger & press R, the item is added to the players inventory
         if(Input.GetKeyUp(KeyCode.R) && canPickUp)
         {
             PickUp();

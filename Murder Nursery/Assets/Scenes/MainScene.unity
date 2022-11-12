@@ -380,17 +380,17 @@ MonoBehaviour:
   m_MoveRepeatDelay: 0.5
   m_MoveRepeatRate: 0.1
   m_XRTrackingOrigin: {fileID: 0}
-  m_ActionsAsset: {fileID: -944628639613478452, guid: 535c0d4a4da4a2f4b8ca265bfc88d9d2, type: 3}
-  m_PointAction: {fileID: 1710588276135892957, guid: 535c0d4a4da4a2f4b8ca265bfc88d9d2, type: 3}
-  m_MoveAction: {fileID: 5641119723739042069, guid: 535c0d4a4da4a2f4b8ca265bfc88d9d2, type: 3}
-  m_SubmitAction: {fileID: -1859641712093447128, guid: 535c0d4a4da4a2f4b8ca265bfc88d9d2, type: 3}
-  m_CancelAction: {fileID: -4075918043682193116, guid: 535c0d4a4da4a2f4b8ca265bfc88d9d2, type: 3}
-  m_LeftClickAction: {fileID: -1561826366491535184, guid: 535c0d4a4da4a2f4b8ca265bfc88d9d2, type: 3}
-  m_MiddleClickAction: {fileID: 6794158192064029449, guid: 535c0d4a4da4a2f4b8ca265bfc88d9d2, type: 3}
-  m_RightClickAction: {fileID: 5757490952964235202, guid: 535c0d4a4da4a2f4b8ca265bfc88d9d2, type: 3}
-  m_ScrollWheelAction: {fileID: -8190257968430398630, guid: 535c0d4a4da4a2f4b8ca265bfc88d9d2, type: 3}
-  m_TrackedDevicePositionAction: {fileID: -3992232879088136702, guid: 535c0d4a4da4a2f4b8ca265bfc88d9d2, type: 3}
-  m_TrackedDeviceOrientationAction: {fileID: 3611670947029990636, guid: 535c0d4a4da4a2f4b8ca265bfc88d9d2, type: 3}
+  m_ActionsAsset: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_PointAction: {fileID: -1654692200621890270, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MoveAction: {fileID: -8784545083839296357, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_SubmitAction: {fileID: 392368643174621059, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_CancelAction: {fileID: 7727032971491509709, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_LeftClickAction: {fileID: 3001919216989983466, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_MiddleClickAction: {fileID: -2185481485913320682, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_RightClickAction: {fileID: -4090225696740746782, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_ScrollWheelAction: {fileID: 6240969308177333660, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDevicePositionAction: {fileID: 6564999863303420839, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_TrackedDeviceOrientationAction: {fileID: 7970375526676320489, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
@@ -675,7 +675,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -65.64905, y: 11.809021}
+  m_AnchoredPosition: {x: -65.648926, y: 11.809021}
   m_SizeDelta: {x: -347.22, y: -829.2085}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &352601993
@@ -785,10 +785,13 @@ MonoBehaviour:
     Press "R"
     to Pick Up Items
 
-    Press "Q" for noir filter
+    Press "E" to interact with NPCs
 
-    Press "E" to interact with
-    NPCs'
+    Press "Enter" to select
+    dialogue option
+
+    Pin-Board - Selected two characters names to view their
+    relationship'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -815,7 +818,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 56.7
+  m_fontSize: 49.15
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1947,7 +1950,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 887190577}
-  m_LocalRotation: {x: 0.095343515, y: -0, z: -0, w: 0.9954445}
+  m_LocalRotation: {x: 0.095343515, y: 1e-45, z: -0, w: 0.9954445}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2171,7 +2174,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.14925902, y: -0.00000005893697, z: 0.0000000088965315, w: 0.98879814}
+  m_LocalRotation: {x: 0.14925902, y: 0.00000005893697, z: -0.0000000088965315, w: 0.98879814}
   m_LocalPosition: {x: 0, y: 2.5, z: -3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2478,7 +2481,7 @@ MonoBehaviour:
   PlayerIndex: -1
   AutoEnableInputs: 1
   XYAxis: {fileID: 481483000790925577, guid: 535c0d4a4da4a2f4b8ca265bfc88d9d2, type: 3}
-  ZAxis: {fileID: 0}
+  ZAxis: {fileID: -1022986846930854275, guid: 535c0d4a4da4a2f4b8ca265bfc88d9d2, type: 3}
 --- !u!114 &1031444032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2693,7 +2696,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1254365693}
-  m_LocalRotation: {x: 0.149259, y: -1e-45, z: -0, w: 0.98879814}
+  m_LocalRotation: {x: 0.149259, y: 1e-45, z: -0, w: 0.98879814}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2788,7 +2791,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 3840, y: 2160}
@@ -2838,7 +2841,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1436896496
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3427,14 +3430,6 @@ PrefabInstance:
       propertyPath: cameraTransform
       value: 
       objectReference: {fileID: 963194228}
-    - target: {fileID: 8652230991603199038, guid: e3bf30e860fade34d81bcf970c47e1ab, type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 963194227}
-    - target: {fileID: 8652230991603199038, guid: e3bf30e860fade34d81bcf970c47e1ab, type: 3}
-      propertyPath: m_UIInputModule
-      value: 
-      objectReference: {fileID: 68178590}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: e3bf30e860fade34d81bcf970c47e1ab, type: 3}
@@ -3512,7 +3507,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1707626073}
-  m_LocalRotation: {x: 0.11063002, y: -0.000000016582797, z: 0.000000001845886, w: 0.9938617}
+  m_LocalRotation: {x: 0.11063002, y: -0.000000016582808, z: 0.0000000018458868, w: 0.9938617}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4947,6 +4942,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 221329516}
+    - target: {fileID: 2026140424890045704, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_text
+      value: RELATIONSHIP PIN BOARD
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140424890045704, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_fontSize
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140424890045704, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140424890045704, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2026140424997649490, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -5091,6 +5102,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2506754139236650970, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: goonCoolContent1
+      value: Goon likes Cool Guy but ?????
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650970, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: goonJuiceContent1
+      value: Goon ????? Juice Box because ?????
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650970, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: goonJuiceContent2
+      value: Juice Box likes Goon because ?????
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650970, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
       propertyPath: relationshipPanel
       value: 
       objectReference: {fileID: 2039141234}
@@ -5098,6 +5121,18 @@ PrefabInstance:
       propertyPath: charactersSelected
       value: 
       objectReference: {fileID: 1472647731}
+    - target: {fileID: 2506754139236650970, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: goonCoolConclusion1
+      value: Goon likes Cool Guy but Cool Guy don't like no bullies.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650970, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: goonJuiceConclusion1
+      value: Goon dislikes Juice Box because he's dating Femme.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650970, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: goonJuiceConclusion2
+      value: Juice Box likes Goon because he gave him juice once.
+      objectReference: {fileID: 0}
     - target: {fileID: 2506754139236650970, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
       propertyPath: relationshipOptionsPanel
       value: 

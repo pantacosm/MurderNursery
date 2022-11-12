@@ -37,8 +37,6 @@ public class RelationshipComparrison : MonoBehaviour
     private bool femmeSelected;
     private bool deadGirlSelected;
 
-    private List<string> relationshipContents = new();
-
     [Header ("False/Undiscovered Relationship Contents")]
     public string goonJuiceContent1;
     public string goonJuiceContent2;
@@ -156,6 +154,7 @@ public class RelationshipComparrison : MonoBehaviour
                 femmeSelected = false;
                 goonSelected = false;
                 SetActivePanel();
+                UpdateRelationshipContents(new string[] { } );
             }
             if(deadGirlSelected)
             {
@@ -163,6 +162,7 @@ public class RelationshipComparrison : MonoBehaviour
                 deadGirlSelected = false;
                 goonSelected = false;
                 SetActivePanel();
+                UpdateRelationshipContents(new string[] { } );
             }
         }
     }
@@ -178,6 +178,7 @@ public class RelationshipComparrison : MonoBehaviour
                 juiceboxSelected = false;
                 coolguySelected = false;
                 SetActivePanel();
+                UpdateRelationshipContents(new string[] { } );
             }
             if(goonSelected)
             {
@@ -185,6 +186,7 @@ public class RelationshipComparrison : MonoBehaviour
                 goonSelected = false;
                 coolguySelected = false;
                 SetActivePanel();
+                UpdateRelationshipContents(new string[] { } );
             }
             if(femmeSelected)
             {
@@ -192,6 +194,7 @@ public class RelationshipComparrison : MonoBehaviour
                 femmeSelected = false;
                 coolguySelected = false;
                 SetActivePanel();
+                UpdateRelationshipContents(new string[] { } );
             }
             if(deadGirlSelected)
             {
@@ -199,6 +202,7 @@ public class RelationshipComparrison : MonoBehaviour
                 deadGirlSelected = false;
                 coolguySelected = false;
                 SetActivePanel();
+                UpdateRelationshipContents(new string[] { } );
             }
         }
     }
@@ -214,6 +218,7 @@ public class RelationshipComparrison : MonoBehaviour
                 juiceboxSelected = false;
                 coolguySelected = false;
                 SetActivePanel();
+                UpdateRelationshipContents(new string[] { } );
             }
             if(goonSelected)
             {
@@ -222,6 +227,7 @@ public class RelationshipComparrison : MonoBehaviour
                 goonSelected = false;
                 juiceboxSelected = false;
                 SetActivePanel();
+                UpdateRelationshipContents(new string[] { } );
             }
             if(femmeSelected)
             {
@@ -230,6 +236,7 @@ public class RelationshipComparrison : MonoBehaviour
                 femmeSelected = false;
                 juiceboxSelected = false;
                 SetActivePanel();
+                UpdateRelationshipContents(new string[] { } );
             }
             if(deadGirlSelected)
             {
@@ -238,6 +245,7 @@ public class RelationshipComparrison : MonoBehaviour
                 deadGirlSelected = false;
                 juiceboxSelected = false;
                 SetActivePanel();
+                UpdateRelationshipContents(new string[] { } );
             }
         }
     }
@@ -254,6 +262,7 @@ public class RelationshipComparrison : MonoBehaviour
                 juiceboxSelected = false;
                 femmeSelected = false;
                 SetActivePanel();
+                UpdateRelationshipContents(new string[] { } );
             }
             if(goonSelected)
             {
@@ -262,6 +271,7 @@ public class RelationshipComparrison : MonoBehaviour
                 goonSelected = false;
                 femmeSelected = false;
                 SetActivePanel();
+                UpdateRelationshipContents(new string[] { } );
             }
             if(coolguySelected)
             {
@@ -270,6 +280,7 @@ public class RelationshipComparrison : MonoBehaviour
                 femmeSelected = false;
                 coolguySelected = false;
                 SetActivePanel();
+                UpdateRelationshipContents(new string[] { } );
             }
             if(deadGirlSelected)
             {
@@ -278,6 +289,7 @@ public class RelationshipComparrison : MonoBehaviour
                 deadGirlSelected = false;
                 femmeSelected = false;
                 SetActivePanel();
+                UpdateRelationshipContents(new string[] { } );
             }
         }
     }
@@ -294,6 +306,7 @@ public class RelationshipComparrison : MonoBehaviour
                 juiceboxSelected = false;
                 deadGirlSelected = false;
                 SetActivePanel();
+                UpdateRelationshipContents(new string[] { } );
             }
             if(goonSelected)
             {
@@ -302,6 +315,7 @@ public class RelationshipComparrison : MonoBehaviour
                 goonSelected = false;
                 deadGirlSelected = false;
                 SetActivePanel();
+                UpdateRelationshipContents(new string[] { } );
             }
             if(femmeSelected)
             {
@@ -310,6 +324,7 @@ public class RelationshipComparrison : MonoBehaviour
                 femmeSelected = false;
                 deadGirlSelected = false;
                 SetActivePanel();
+                UpdateRelationshipContents(new string[] { } );
             }
             if(coolguySelected)
             {
@@ -318,6 +333,7 @@ public class RelationshipComparrison : MonoBehaviour
                 deadGirlSelected = false;
                 coolguySelected = false;
                 SetActivePanel();
+                UpdateRelationshipContents(new string[] { } );
             }
         }
     }

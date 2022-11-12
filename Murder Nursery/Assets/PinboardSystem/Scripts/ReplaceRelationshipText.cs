@@ -9,12 +9,7 @@ using UnityEngine.UI;
 public class ReplaceRelationshipText : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField]
-    GameObject relationshipUI;
-
-    [SerializeField]
     GameObject relationshipOptionsUI;
-
-    OpenRelationshipOptionsPanel optionsPanel;
 
     private PinboardManager PM;
 
@@ -29,9 +24,31 @@ public class ReplaceRelationshipText : MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData eventData)
     {
         string replacingText = relationshipOptionsUI.transform.Find("RelationshipOptionsText").GetComponent<TextMeshProUGUI>().text;
-        optionsPanel = relationshipUI.GetComponent<OpenRelationshipOptionsPanel>();
+        if(RC.textToReplace == RC.goonJuiceContent1 && replacingText == RC.goonJuiceConclusion1)
+        {
+            RC.goonJuiceContent1 = RC.goonJuiceConclusion1;
+            Destroy(relationshipOptionsUI);
+            RC.UpdateRelationshipContents(new string[] {RC.goonJuiceContent1, RC.goonJuiceContent2 });
+        }
+
+        if(RC.textToReplace == RC.goonJuiceContent2 && replacingText == RC.goonJuiceConclusion2)
+        {
+            RC.goonJuiceContent2 = RC.goonJuiceConclusion2;
+            Destroy(relationshipOptionsUI);
+            RC.UpdateRelationshipContents(new string[] {RC.goonJuiceContent1, RC.goonJuiceContent2 });
+        }
+
+        if(RC.textToReplace == RC.goonCoolContent1 && replacingText == RC.goonCoolConclusion1)
+        {
+            RC.goonCoolContent1 = RC.goonCoolConclusion1;
+            Destroy(relationshipOptionsUI);
+            RC.UpdateRelationshipContents(new string[] {RC.goonCoolContent1});
+        }
 
 
-        Debug.Log(optionsPanel.currentText);
+
+
+
+        
     }
 }

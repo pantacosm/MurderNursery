@@ -442,7 +442,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -610.49, y: 0}
+  m_AnchoredPosition: {x: -610.4922, y: 0}
   m_SizeDelta: {x: 955.2, y: 561.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &456157597
@@ -1153,7 +1153,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 887190577}
-  m_LocalRotation: {x: 0.095343515, y: -0, z: -0, w: 0.9954445}
+  m_LocalRotation: {x: 0.095343515, y: 3.0275132e-37, z: -3.472363e-37, w: 0.9954445}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1724,7 +1724,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1254365693}
-  m_LocalRotation: {x: 0.149259, y: -1e-45, z: -0, w: 0.98879814}
+  m_LocalRotation: {x: 0.149259, y: -0, z: -0, w: 0.98879814}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1804,7 +1804,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 55
 --- !u!114 &1430613557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1817,9 +1817,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
+  m_ScaleFactor: 0.5
   m_ReferenceResolution: {x: 3840, y: 2160}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
@@ -1951,7 +1951,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8948470477203751158, guid: efac65689e3d89842bd845899d51767e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 658.92
+      value: 658.9219
       objectReference: {fileID: 0}
     - target: {fileID: 8948470477203751158, guid: efac65689e3d89842bd845899d51767e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2173,7 +2173,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1707626073}
-  m_LocalRotation: {x: 0.11063001, y: 0.000000018160963, z: -0.0000000020215567, w: 0.9938617}
+  m_LocalRotation: {x: 0.11063001, y: -0.000000018160947, z: 0.0000000020215547, w: 0.9938617}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3373,6 +3373,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2506754139236650970, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: goonCoolContent1
+      value: Goon wants to be friends with Cool Guy but ?????
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650970, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: goonJuiceContent1
+      value: Goon ????? Juice Box because ?????.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650970, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: goonJuiceContent2
+      value: Juice Box likes Goon because ?????.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650970, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
       propertyPath: relationshipPanel
       value: 
       objectReference: {fileID: 2039141234}
@@ -3380,6 +3392,18 @@ PrefabInstance:
       propertyPath: charactersSelected
       value: 
       objectReference: {fileID: 1472647731}
+    - target: {fileID: 2506754139236650970, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: goonCoolConclusion1
+      value: Goon wants to be friends with Cool Guy but Cool Guy don't like bullies.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650970, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: goonJuiceConclusion1
+      value: Goon dislikes Juice Box because he's dating Femme.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650970, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: goonJuiceConclusion2
+      value: Juice Box likes Goon because he gave him juice once.
+      objectReference: {fileID: 0}
     - target: {fileID: 2506754139236650970, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
       propertyPath: relationshipOptionsPanel
       value: 

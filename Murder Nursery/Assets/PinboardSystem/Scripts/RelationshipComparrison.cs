@@ -6,14 +6,14 @@ using TMPro;
 // shows the relationship between two selected characters from the pin-board
 public class RelationshipComparrison : MonoBehaviour
 {
+    // called when we want to hide the pin-board
     private InventoryManager pinboardVisibility;
 
+    // reference to relationship details component
     [HideInInspector]
     public RelationshipDetails details;
 
-    [HideInInspector]
-    public string textToChange;
-
+    // stores characters name text
     [SerializeField]
     GameObject charactersSelected;
 
@@ -23,18 +23,16 @@ public class RelationshipComparrison : MonoBehaviour
     // used for opening relationship options panel
     public GameObject relationshipOptionsPanel;
 
+    // updates based on the character relationship we are viewing (displays Goon & Juice Box etc.)
     TextMeshProUGUI charNameTextLeft;
     TextMeshProUGUI charNameTextRight;
 
+    // set once we select which characters relationship to view
     private bool goonSelected;
     private bool coolguySelected;
     private bool juiceboxSelected;
     private bool femmeSelected;
     private bool deadGirlSelected;
-
-    // array of text containing undiscovered info about characters' relationship
-    [HideInInspector]
-    public string[] relationShipContents;
     
     // Start is called before the first frame update
     void Start()
@@ -50,7 +48,6 @@ public class RelationshipComparrison : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         UpdateCharactersSelected();
 
         if(Input.GetKeyUp(KeyCode.O))
@@ -70,11 +67,13 @@ public class RelationshipComparrison : MonoBehaviour
         DeadGirlSelected();
     }
 
+    // Called when we want to add info to the relationship panel (parameter is what we want the info to say)
     public void UpdateRelationshipContents(string contentsText)
     {
         details.UpdateRelationship(contentsText);
     }
 
+    // Called when two characters are selected (hides pin-board & shows relationship panel)
     void SetActivePanel()
     {
         relationshipPanel.SetActive(true);

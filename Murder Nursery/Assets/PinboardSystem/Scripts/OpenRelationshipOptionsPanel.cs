@@ -17,7 +17,8 @@ public class OpenRelationshipOptionsPanel : MonoBehaviour
     [HideInInspector]
     public Button buttonObj;
 
-    string currentText;
+    [HideInInspector]
+    public string currentText;
 
     private void Start()
     {
@@ -28,6 +29,8 @@ public class OpenRelationshipOptionsPanel : MonoBehaviour
     {
         RC.relationshipOptionsPanel.SetActive(true);
         buttonObj = relationshipUI.transform.Find("RelationshipButton").GetComponent<Button>();
+        currentText = buttonObj.transform.Find("RelationshipText").GetComponent<TextMeshProUGUI>().text;
+        Debug.Log(currentText);
     }
 
 }

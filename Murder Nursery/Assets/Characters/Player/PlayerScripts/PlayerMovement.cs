@@ -89,6 +89,7 @@ public class PlayerMovement : MonoBehaviour
         HandleAnimation();
     }
 
+    // Called when we want the player to be able to move (character moves forward in direction camera is facing)
     void HandleMovement()
     {
         movementInput = playerControls.PlayerInputMap.Move.ReadValue<Vector2>();

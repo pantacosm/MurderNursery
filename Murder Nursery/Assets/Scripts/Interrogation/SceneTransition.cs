@@ -47,12 +47,14 @@ public class SceneTransition : MonoBehaviour
     {
 
         StartCoroutine(BlackTransitionToInterrogation(mainCamera, interrogationCam));
-        StartCoroutine(WaitForSeconds());             
+        StartCoroutine(WaitForSeconds());
+        interrogationActive=true;
     }
     private void ChangeToMainArea()
     {
         StartCoroutine(BlackTransitionToInterrogation(interrogationCam, mainCamera));
         StartCoroutine(WaitForSeconds());
+        interrogationActive = false;
     }
 
     public IEnumerator BlackTransitionToInterrogation(GameObject currentCam, GameObject desiredCam, bool transitionToBlack = true, int timeToFade = 1)

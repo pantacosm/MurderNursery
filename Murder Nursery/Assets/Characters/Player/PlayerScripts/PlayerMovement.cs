@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     private Animator animator;
     private InventoryManager inventory;
     InputAction leftMouseClick;
+    public GameObject manager;
 
 
     private Vector3 playerVelocity;
@@ -39,6 +40,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private GameObject dialogueZone;
 
+    private void Start()
+    {
+        manager = GameObject.FindGameObjectWithTag("Manager");
+    }
     private void Awake()
     {
         controller = gameObject.GetComponent<CharacterController>();
@@ -75,7 +80,7 @@ public class PlayerMovement : MonoBehaviour
         controller.Move(playerVelocity * Time.deltaTime);
 
         // stops player movement & disables camera whilst UI open
-        if (inventory.UIVisibility.inventoryOpen || inventory.UIVisibility.pinboardOpen || dialogueZone.activeInHierarchy)
+        if (inventory.UIVisibility.inventoryOpen || inventory.UIVisibility.pinboardOpen || dialogueZone.activeInHierarchy || manager.GetComponent<SceneTransition>().interrogationActive)
         {
             animator.Play("Idle");
             animator.SetFloat("Velocity", 0);

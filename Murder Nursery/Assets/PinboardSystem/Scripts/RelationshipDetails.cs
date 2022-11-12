@@ -29,12 +29,11 @@ public class RelationshipDetails : MonoBehaviour
         }
     }
 
-    // Called from RelationshipComparrison when we want to add new content to the relationship panel
+    // Called from RelationshipComparrison UpdateRelationshipContents() when we want to add new content to the relationship panel
     public void UpdateRelationship(string relationshipText)
     {
         GameObject relationshipObj = Instantiate(relationshipUI, relationshipContent);
-        var contentButton = relationshipObj.transform.Find("RelationshipButton").GetComponent<Button>();
-        var contentText = contentButton.transform.Find("RelationshipText").GetComponent<TextMeshProUGUI>();
+        var contentText = relationshipObj.transform.Find("RelationshipText").GetComponent<TextMeshProUGUI>();
         contentText.text = relationshipText;
     }
 

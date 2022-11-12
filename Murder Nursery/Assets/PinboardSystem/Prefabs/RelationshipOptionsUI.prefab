@@ -50,7 +50,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e972389b9091bba44b4b628ab5a42ae7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  relationshipUI: {fileID: 9158919659317779731, guid: 65bf00dadb35fdd45b01e18cf54c3a89, type: 3}
   relationshipOptionsUI: {fileID: 1213981622304529268}
 --- !u!1 &5515848226223444898
 GameObject:
@@ -127,8 +126,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 2768305092
-  m_fontColor: {r: 0.76856124, g: 0.9862069, b: 0, a: 0.647}
+    rgba: 4288145151
+  m_fontColor: {r: 1, g: 0.901363, b: 0.591, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -148,7 +147,7 @@ MonoBehaviour:
   m_fontSize: 40
   m_fontSizeBase: 40
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1

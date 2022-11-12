@@ -13,6 +13,9 @@ public class RelationshipComparrison : MonoBehaviour
     [HideInInspector]
     public RelationshipDetails details;
 
+    [HideInInspector]
+    public string textToReplace;
+
     // stores characters name text
     [SerializeField]
     GameObject charactersSelected;
@@ -33,6 +36,18 @@ public class RelationshipComparrison : MonoBehaviour
     private bool juiceboxSelected;
     private bool femmeSelected;
     private bool deadGirlSelected;
+
+    private List<string> relationshipContents = new();
+
+    [Header ("False/Undiscovered Relationship Contents")]
+    public string goonJuiceContent1;
+    public string goonJuiceContent2;
+    public string goonCoolContent1;
+
+    [Header("Relationship Conclusions")]
+    public string goonJuiceConclusion1;
+    public string goonJuiceConclusion2;
+    public string goonCoolConclusion1;
     
     // Start is called before the first frame update
     void Start()
@@ -52,7 +67,9 @@ public class RelationshipComparrison : MonoBehaviour
 
         if(Input.GetKeyUp(KeyCode.O))
         {
-            details.AddToRelationshipOptionsUI("Goon dislikes Juice Box cos he's dating Femme.");
+            details.AddToRelationshipOptionsUI(goonJuiceConclusion1);
+            details.AddToRelationshipOptionsUI(goonJuiceConclusion2);
+            details.AddToRelationshipOptionsUI(goonCoolConclusion1);
         }
 
     }
@@ -67,10 +84,14 @@ public class RelationshipComparrison : MonoBehaviour
         DeadGirlSelected();
     }
 
-    // Called when we want to add info to the relationship panel (parameter is what we want the info to say)
-    public void UpdateRelationshipContents(string contentsText)
+    // Called when we want to update info in the relationship panel
+    public void UpdateRelationshipContents(string[] contents)
     {
-        details.UpdateRelationship(contentsText);
+        details.ClearDetails();
+        foreach (var item in contents)
+        {
+            details.UpdateRelationship(item);
+        }
     }
 
     // Called when two characters are selected (hides pin-board & shows relationship panel)
@@ -118,18 +139,15 @@ public class RelationshipComparrison : MonoBehaviour
                 juiceboxSelected = false;
                 goonSelected = false;
                 SetActivePanel();
-                details.ClearDetails();
-                UpdateRelationshipContents("Goon ????? Juice Box because ?????.");
-                UpdateRelationshipContents("Juice Box likes Goon.");
+                UpdateRelationshipContents(new string[] {goonJuiceContent1, goonJuiceContent2 });
             }
             if(coolguySelected)
             {
                 charNameTextRight.text = "Cool Guy";
                 coolguySelected = false;
                 goonSelected = false;
-                details.ClearDetails();
-                UpdateRelationshipContents("Goon likes Cool Guy.");
                 SetActivePanel();
+                UpdateRelationshipContents(new string[] {goonCoolContent1 });
 
             }
             if(femmeSelected)

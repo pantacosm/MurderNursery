@@ -675,7 +675,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -65.648926, y: 11.809021}
+  m_AnchoredPosition: {x: -65.648926, y: 11.809082}
   m_SizeDelta: {x: -347.22, y: -829.2085}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &352601993
@@ -1091,6 +1091,14 @@ MonoBehaviour:
   manager: {fileID: 0}
   interrogationPanel: {fileID: 1597744526}
   interrogationUnderway: 0
+  intResponseBox1: {fileID: 352601991}
+  intResponseBox2: {fileID: 1627881895}
+  intResponseBox3: {fileID: 903408050}
+  intResponseText1: {fileID: 1742976944}
+  intResponseText2: {fileID: 1528401110}
+  intResponseText3: {fileID: 795160831}
+  npcStatement: {fileID: 49026765}
+  activeNode: {fileID: 0}
 --- !u!4 &508265365
 Transform:
   m_ObjectHideFlags: 0
@@ -1995,7 +2003,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -65.659, y: -385}
+  m_AnchoredPosition: {x: -65.65918, y: -384.99976}
   m_SizeDelta: {x: -347.22, y: -829.2085}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &903408052
@@ -3325,7 +3333,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -65.659, y: -187}
+  m_AnchoredPosition: {x: -65.65918, y: -187}
   m_SizeDelta: {x: -347.22, y: -829.2085}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1627881897
@@ -3507,7 +3515,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1707626073}
-  m_LocalRotation: {x: 0.11063002, y: -0.000000016582808, z: 0.0000000018458868, w: 0.9938617}
+  m_LocalRotation: {x: 0.11063002, y: -0.000000016582797, z: 0.000000001845886, w: 0.9938617}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3723,7 +3731,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6586933808422567718, guid: 04709edae85b29045bb20e108e46a170, type: 3}
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 04709edae85b29045bb20e108e46a170, type: 3}
 --- !u!1001 &1737368961
@@ -4281,6 +4290,7 @@ MonoBehaviour:
   goonIntObject: {fileID: 1065516691}
   coolIntObject: {fileID: 2068943987}
   activeInterrogant: {fileID: 0}
+  interrogationManager: {fileID: 508265362}
 --- !u!1 &2039141234 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1001649217660503050, guid: f123bf29eeaafcb45955e31a7720ecb0, type: 3}

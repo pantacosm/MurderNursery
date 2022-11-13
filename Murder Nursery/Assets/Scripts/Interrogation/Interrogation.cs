@@ -19,14 +19,6 @@ public class Interrogation : MonoBehaviour
     {
         interrogationUnderway = manager.GetComponent<SceneTransition>().interrogationActive;
 
-        if(interrogationUnderway)
-        {
-            interrogationPanel.SetActive(true);
-            this.GetComponent<DialogueManager>().StartConversation(this.GetComponent<SceneTransition>().activeInterrogant.GetComponent<NPCDialogue>().dialogueTree[0], this.GetComponent<SceneTransition>().activeInterrogant);
-        }
-        if(!interrogationUnderway)
-        {
-            interrogationPanel.SetActive(false);
-        }
+        
     }
 }

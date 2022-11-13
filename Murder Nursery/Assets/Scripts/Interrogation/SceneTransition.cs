@@ -49,6 +49,7 @@ public class SceneTransition : MonoBehaviour
 
     public void ChangeToInterrogation(GameObject npc) //Check here for detective outfit
     {
+        blackFade.gameObject.SetActive(true);
         StartCoroutine(BlackTransitionToInterrogation(mainCamera, interrogationCam));
         StartCoroutine(WaitForSeconds());
         if(npc.name == "FemmeFatale")
@@ -75,8 +76,9 @@ public class SceneTransition : MonoBehaviour
     
     public void ChangeToMainArea()
     {
+        blackFade.gameObject.SetActive(true);
         StartCoroutine(BlackTransitionToMainArea(interrogationCam, mainCamera));
-        StartCoroutine(WaitForSeconds());
+        StartCoroutine(WaitForSecondsMain());
     }
 
     public IEnumerator BlackTransitionToInterrogation(GameObject currentCam, GameObject desiredCam, bool transitionToBlack = true, int timeToFade = 1)
@@ -107,6 +109,11 @@ public class SceneTransition : MonoBehaviour
                 fadeProgress = screenColour.a - (timeToFade * Time.deltaTime);
                 screenColour = new Color(screenColour.r, screenColour.g, screenColour.b, fadeProgress);
                 blackFade.color = screenColour;
+                if(fadeProgress < 0.01f)
+                {
+                    blackFade.gameObject.SetActive(false);
+                    yield return null;
+                }
                 yield return null;
             }
         }
@@ -141,6 +148,11 @@ public class SceneTransition : MonoBehaviour
                 fadeProgress = screenColour.a - (timeToFade * Time.deltaTime);
                 screenColour = new Color(screenColour.r, screenColour.g, screenColour.b, fadeProgress);
                 blackFade.color = screenColour;
+                if(fadeProgress < 0.01f)
+                {
+                    blackFade.gameObject.SetActive(false);
+                    yield return null;
+                }
                 yield return null;
             }
         }
@@ -154,8 +166,19 @@ public class SceneTransition : MonoBehaviour
             yield return new WaitForSeconds(1);
             currentCountdownValue--;
         }
-        StartCoroutine(BlackTransitionToInterrogation(mainCamera, interrogationCam, false));
-        
+        StartCoroutine(BlackTransitionToInterrogation(mainCamera, interrogationCam, false)); //This be wrong
+    }
+
+    public IEnumerator WaitForSecondsMain(float countdownValue = 2)
+    {
+        currentCountdownValue = countdownValue;
+        while (currentCountdownValue > 0)
+        {
+            yield return new WaitForSeconds(1);
+            currentCountdownValue--;
+        }
+        StartCoroutine(BlackTransitionToInterrogation(interrogationCam, mainCamera, false)); //This be wrong
+
     }
 
 }

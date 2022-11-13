@@ -104,6 +104,7 @@ public class DialogueManager : MonoBehaviour
         if(activeNode.interrogationNode)
         {
             EnterInterrogation(activeNPC);
+            inConvo = false;
         }
         if(playerChoice == 0 && activeNode.repGainResponse1 != 0)
         {
@@ -122,7 +123,6 @@ public class DialogueManager : MonoBehaviour
         {           
                 LoadNodeInfo(activeNode.children[playerChoice]);           
         }
-        inConvo = true;
     }
 
     public void EnterInterrogation(GameObject targetNPC)

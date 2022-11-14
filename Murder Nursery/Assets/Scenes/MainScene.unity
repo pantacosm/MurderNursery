@@ -496,74 +496,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1001649219239282225, guid: f123bf29eeaafcb45955e31a7720ecb0, type: 3}
   m_PrefabInstance: {fileID: 1001649219162412920}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &136846451
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 136846453}
-  - component: {fileID: 136846452}
-  m_Layer: 0
-  m_Name: ReputationManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &136846452
+--- !u!114 &136846452 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 2873506898117971542, guid: fa8344d6ae8a15843a5dcc00dfa06657, type: 3}
+  m_PrefabInstance: {fileID: 2873506898250617378}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 136846451}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 89139cb3fe37d7d4b939a8c45110815c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  JotterUI: {fileID: 2050490978}
-  friendshipStarPrefab: {fileID: 7619137129810446203, guid: 8199e15a778459044ad41823ab7a5995, type: 3}
-  skullPrefab: {fileID: 8972597557750714189, guid: ff5fefec736823244af6ed64cd6f289d, type: 3}
-  GoonContent: {fileID: 1999443968}
-  FemmeContent: {fileID: 1166021992}
-  JuiceBoxContent: {fileID: 1325303316}
-  CoolGuyContent: {fileID: 1148207901}
-  characterPanel: {fileID: 1213684921}
-  characterTierContent: {fileID: 839654262}
-  notesPrefab: {fileID: 584940988446887021, guid: 2008178120ec00442b02c8441a436d65, type: 3}
-  goonNotes: {fileID: 456889984}
-  femmeNotes: {fileID: 6116977971574435096}
-  juiceboxNotes: {fileID: 6116977971574435095}
-  coolguyNotes: {fileID: 6116977971574435094}
-  goonPoints: 2
-  coolGuyPoints: 5
-  femmePoints: -1
-  juiceBoxPoints: 10
-  coolGuyNote1: Considers me a Friend.
-  coolGuyNote2: Doesn't respond well to Goon outfit.
-  goonTier: 1
-  coolGuyTier: 1
-  femmeTier: 1
-  juiceBoxTier: 1
---- !u!4 &136846453
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 136846451}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 21
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &221329516 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2506754139236650970, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
@@ -1164,6 +1107,14 @@ MonoBehaviour:
   manager: {fileID: 0}
   interrogationPanel: {fileID: 1597744526}
   interrogationUnderway: 0
+  intResponseBox1: {fileID: 0}
+  intResponseBox2: {fileID: 0}
+  intResponseBox3: {fileID: 0}
+  intResponseText1: {fileID: 0}
+  intResponseText2: {fileID: 0}
+  intResponseText3: {fileID: 0}
+  npcStatement: {fileID: 0}
+  activeNode: {fileID: 0}
 --- !u!4 &508265365
 Transform:
   m_ObjectHideFlags: 0
@@ -2028,7 +1979,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 887190577}
-  m_LocalRotation: {x: 0.095343515, y: 0.000000011739324, z: -0.0000000011243907, w: 0.9954445}
+  m_LocalRotation: {x: 0.095343515, y: 5.2213065e-22, z: -6.516566e-23, w: 0.9954445}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2789,7 +2740,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1254365693}
-  m_LocalRotation: {x: 0.149259, y: -0, z: -0, w: 0.98879814}
+  m_LocalRotation: {x: 0.149259, y: -1e-45, z: -0, w: 0.98879814}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3606,7 +3557,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1707626073}
-  m_LocalRotation: {x: 0.11063002, y: -0.000000017055362, z: 0.0000000018984885, w: 0.9938617}
+  m_LocalRotation: {x: 0.11063001, y: -0.000000018095744, z: 0.0000000020142967, w: 0.9938617}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4380,6 +4331,7 @@ MonoBehaviour:
   goonIntObject: {fileID: 1065516691}
   coolIntObject: {fileID: 2068943987}
   activeInterrogant: {fileID: 0}
+  interrogationManager: {fileID: 0}
 --- !u!224 &1999443968 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6116977970687538453, guid: 51c6c7f4cd75872458cb3ef685008667, type: 3}
@@ -5563,6 +5515,74 @@ PrefabInstance:
       propertyPath: relationshipOptionsPanel
       value: 
       objectReference: {fileID: 1853417188}
+    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: conclusionsList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: goonJuiceContent.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: goonJuiceDetails.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: conclusionsList.Array.data[0]
+      value: Juice Box likes Goon because he gave him juice once.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: conclusionsList.Array.data[1]
+      value: Goon dislikes Juice Box because he's dating Femme.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: goonCoolguyContent.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: goonCoolguyDetails.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: goonJuiceConclusion.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: goonJuiceContent.Array.data[0]
+      value: goon ????? because juice box is a ?????
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: goonJuiceContent.Array.data[1]
+      value: goon ????? because juice box is a ?????
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: goonJuiceDetails.Array.data[0]
+      value: Goon ????? Juice Box because ?????.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: goonJuiceDetails.Array.data[1]
+      value: Juice Box ????? Goon because ?????.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: goonCoolguyContent.Array.data[0]
+      value: goon ???? cool guy but ?????
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: goonCoolguyDetails.Array.data[0]
+      value: Goon ????? Cool Guy but ?????.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: goonJuiceConclusion.Array.data[0]
+      value: Goon hates Juice Box because he's dating Femme.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: goonJuiceConclusion.Array.data[1]
+      value: Juice Box likes Goon because he gave him juice once.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: goonJuiceConclusion.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2506754139236650972, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
       propertyPath: m_RootOrder
       value: 17
@@ -5667,6 +5687,10 @@ PrefabInstance:
       propertyPath: JuiceboxDislikes
       value: 
       objectReference: {fileID: 1832295230}
+    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: goonLikes.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
       propertyPath: RelationshipOptionsContent
       value: 
@@ -5829,6 +5853,109 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: e293644794acb9649a349dbfec9a49c2, type: 3}
+--- !u!1001 &2873506898250617378
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2873506898117971537, guid: fa8344d6ae8a15843a5dcc00dfa06657, type: 3}
+      propertyPath: m_Name
+      value: ReputationManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 2873506898117971542, guid: fa8344d6ae8a15843a5dcc00dfa06657, type: 3}
+      propertyPath: JotterUI
+      value: 
+      objectReference: {fileID: 2050490978}
+    - target: {fileID: 2873506898117971542, guid: fa8344d6ae8a15843a5dcc00dfa06657, type: 3}
+      propertyPath: GoonContent
+      value: 
+      objectReference: {fileID: 1999443968}
+    - target: {fileID: 2873506898117971542, guid: fa8344d6ae8a15843a5dcc00dfa06657, type: 3}
+      propertyPath: FemmeContent
+      value: 
+      objectReference: {fileID: 1166021992}
+    - target: {fileID: 2873506898117971542, guid: fa8344d6ae8a15843a5dcc00dfa06657, type: 3}
+      propertyPath: CoolGuyContent
+      value: 
+      objectReference: {fileID: 1148207901}
+    - target: {fileID: 2873506898117971542, guid: fa8344d6ae8a15843a5dcc00dfa06657, type: 3}
+      propertyPath: characterPanel
+      value: 
+      objectReference: {fileID: 1213684921}
+    - target: {fileID: 2873506898117971542, guid: fa8344d6ae8a15843a5dcc00dfa06657, type: 3}
+      propertyPath: JuiceBoxContent
+      value: 
+      objectReference: {fileID: 1325303316}
+    - target: {fileID: 2873506898117971542, guid: fa8344d6ae8a15843a5dcc00dfa06657, type: 3}
+      propertyPath: goonNotesContent
+      value: 
+      objectReference: {fileID: 456889984}
+    - target: {fileID: 2873506898117971542, guid: fa8344d6ae8a15843a5dcc00dfa06657, type: 3}
+      propertyPath: femmeNotesContent
+      value: 
+      objectReference: {fileID: 6116977971574435096}
+    - target: {fileID: 2873506898117971542, guid: fa8344d6ae8a15843a5dcc00dfa06657, type: 3}
+      propertyPath: coolguyNotesContent
+      value: 
+      objectReference: {fileID: 6116977971574435094}
+    - target: {fileID: 2873506898117971542, guid: fa8344d6ae8a15843a5dcc00dfa06657, type: 3}
+      propertyPath: characterTierContent
+      value: 
+      objectReference: {fileID: 839654262}
+    - target: {fileID: 2873506898117971542, guid: fa8344d6ae8a15843a5dcc00dfa06657, type: 3}
+      propertyPath: juiceboxNotesContent
+      value: 
+      objectReference: {fileID: 6116977971574435095}
+    - target: {fileID: 2873506898117971543, guid: fa8344d6ae8a15843a5dcc00dfa06657, type: 3}
+      propertyPath: m_RootOrder
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 2873506898117971543, guid: fa8344d6ae8a15843a5dcc00dfa06657, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2873506898117971543, guid: fa8344d6ae8a15843a5dcc00dfa06657, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2873506898117971543, guid: fa8344d6ae8a15843a5dcc00dfa06657, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2873506898117971543, guid: fa8344d6ae8a15843a5dcc00dfa06657, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2873506898117971543, guid: fa8344d6ae8a15843a5dcc00dfa06657, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2873506898117971543, guid: fa8344d6ae8a15843a5dcc00dfa06657, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2873506898117971543, guid: fa8344d6ae8a15843a5dcc00dfa06657, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2873506898117971543, guid: fa8344d6ae8a15843a5dcc00dfa06657, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2873506898117971543, guid: fa8344d6ae8a15843a5dcc00dfa06657, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2873506898117971543, guid: fa8344d6ae8a15843a5dcc00dfa06657, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: fa8344d6ae8a15843a5dcc00dfa06657, type: 3}
 --- !u!1001 &3865871986027254516
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -36,16 +36,16 @@ public class ReputationManager : MonoBehaviour
     GameObject notesPrefab;
 
     [SerializeField]
-    Transform goonNotes;
+    Transform goonNotesContent;
 
     [SerializeField]
-    Transform femmeNotes;
+    Transform femmeNotesContent;
 
     [SerializeField]
-    Transform juiceboxNotes;
+    Transform juiceboxNotesContent;
 
     [SerializeField]
-    Transform coolguyNotes;
+    Transform coolguyNotesContent;
 
     // keeps track of our reputation with each character ( -1 = Bully, 5 = Friend, 10 = Best Friend etc.)
     [Header( "Reputation Points" )]
@@ -55,8 +55,10 @@ public class ReputationManager : MonoBehaviour
     public int juiceBoxPoints = 0;
 
     [Header( "Reputation Notes" )]
-    public string coolGuyNote1;
-    public string coolGuyNote2;
+    public string[] goonNotes;
+    public string[] femmeNotes;
+    public string[] juiceboxNotes;
+    public string[] coolguyNotes;
 
     public enum FriendshipTier {Bully, Stranger, Classmates, Friends, BestFriends};
 
@@ -74,29 +76,18 @@ public class ReputationManager : MonoBehaviour
 
     private void Start()
     {
-        goonNotes.gameObject.SetActive(false);
-        coolguyNotes.gameObject.SetActive(false);
-        femmeNotes.gameObject.SetActive(false);
-        juiceboxNotes.gameObject.SetActive(false);
-
-        UpdateNotes(goonNotes, "Look at us");
-        UpdateNotes(coolguyNotes, coolGuyNote1);
-        UpdateNotes(coolguyNotes, coolGuyNote2);
-        UpdateNotes(femmeNotes, "Thinks i'm garbage");
-        UpdateNotes(juiceboxNotes, "My homie");
+        goonNotesContent.gameObject.SetActive(false);
+        coolguyNotesContent.gameObject.SetActive(false);
+        femmeNotesContent.gameObject.SetActive(false);
+        juiceboxNotesContent.gameObject.SetActive(false);
     }
 
     private void Update()
     {
-
         HandleRep(GoonContent, goonPoints);
         HandleRep(JuiceBoxContent, juiceBoxPoints);
         HandleRep(FemmeContent, femmePoints);
         HandleRep(CoolGuyContent, coolGuyPoints);
-
-
-
-
     }
 
     // Called as an onClick() Event when we click a character to view in the Jotter (updated FriendshipNotes UI details)
@@ -105,10 +96,10 @@ public class ReputationManager : MonoBehaviour
         characterPanel.transform.Find("Name").GetComponent<TextMeshProUGUI>().text = "Goon";
         UpdateTierText(goonTier);
         UpdateCharacterTierContent(GoonContent, goonPoints);
-        goonNotes.gameObject.SetActive(true);
-        coolguyNotes.gameObject.SetActive(false);
-        femmeNotes.gameObject.SetActive(false);
-        juiceboxNotes.gameObject.SetActive(false);
+        goonNotesContent.gameObject.SetActive(true);
+        coolguyNotesContent.gameObject.SetActive(false);
+        femmeNotesContent.gameObject.SetActive(false);
+        juiceboxNotesContent.gameObject.SetActive(false);
 
     }
 
@@ -117,10 +108,10 @@ public class ReputationManager : MonoBehaviour
         characterPanel.transform.Find("Name").GetComponent<TextMeshProUGUI>().text = "Cool Guy";
         UpdateTierText(coolGuyTier);
         UpdateCharacterTierContent(CoolGuyContent, coolGuyPoints);
-        goonNotes.gameObject.SetActive(false);
-        coolguyNotes.gameObject.SetActive(true);
-        femmeNotes.gameObject.SetActive(false);
-        juiceboxNotes.gameObject.SetActive(false);
+        goonNotesContent.gameObject.SetActive(false);
+        coolguyNotesContent.gameObject.SetActive(true);
+        femmeNotesContent.gameObject.SetActive(false);
+        juiceboxNotesContent.gameObject.SetActive(false);
 
 
     }
@@ -130,10 +121,10 @@ public class ReputationManager : MonoBehaviour
         characterPanel.transform.Find("Name").GetComponent<TextMeshProUGUI>().text = "Femme";
         UpdateTierText(femmeTier);
         UpdateCharacterTierContent(FemmeContent, femmePoints);
-        goonNotes.gameObject.SetActive(false);
-        coolguyNotes.gameObject.SetActive(false);
-        femmeNotes.gameObject.SetActive(true);
-        juiceboxNotes.gameObject.SetActive(false);
+        goonNotesContent.gameObject.SetActive(false);
+        coolguyNotesContent.gameObject.SetActive(false);
+        femmeNotesContent.gameObject.SetActive(true);
+        juiceboxNotesContent.gameObject.SetActive(false);
 
 
     }
@@ -143,10 +134,10 @@ public class ReputationManager : MonoBehaviour
         characterPanel.transform.Find("Name").GetComponent<TextMeshProUGUI>().text = "Juice Box";
         UpdateTierText(juiceBoxTier);
         UpdateCharacterTierContent(JuiceBoxContent, juiceBoxPoints);
-        goonNotes.gameObject.SetActive(false);
-        coolguyNotes.gameObject.SetActive(false);
-        femmeNotes.gameObject.SetActive(false);
-        juiceboxNotes.gameObject.SetActive(true);
+        goonNotesContent.gameObject.SetActive(false);
+        coolguyNotesContent.gameObject.SetActive(false);
+        femmeNotesContent.gameObject.SetActive(false);
+        juiceboxNotesContent.gameObject.SetActive(true);
 
     }
 

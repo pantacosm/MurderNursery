@@ -9,7 +9,7 @@ public class RelationshipDetails : MonoBehaviour
     GameObject relationshipUI;
 
     [SerializeField]
-    Transform relationshipContent;
+    public Transform relationshipContent;
 
     // used for opening relationship options panel
     public GameObject relationshipOptionsPanel;
@@ -24,25 +24,33 @@ public class RelationshipDetails : MonoBehaviour
     [HideInInspector]
     public string textToReplace;
 
-    [Header ("False/Undiscovered Relationship Contents")]
-    public string goonJuiceContent1;
-    public string goonJuiceContent2;
-    public string goonCoolContent1;
+    // contains list of undiscovered relationship details
+    public List<string> goonJuiceList;
+    public List<string> goonCoolguyList;
 
-    // included as a parameter when calling AddToRelationshipOptionsUI(string textToAdd)
-    // (used for replacing relationship content)
+
+    [Header ("False/Undiscovered Relationship Details")]
+    public List<string> goonJuiceDetails;
+    public List<string> goonCoolguyDetails;
+
+
+    // contains list of optional conclusions to replace undiscovered text with
     [Header("Relationship Conclusions")]
-    public string goonJuiceConclusion1;
-    public string goonJuiceConclusion2;
-    public string goonCoolConclusion1;
+    public List<string> conclusionsList;
 
     private void Update()
     {
-        if(Input.GetKeyUp(KeyCode.O))
+        if(Input.GetKeyUp(KeyCode.Alpha1))
         {
-            AddToRelationshipOptionsUI(goonJuiceConclusion1);
-            AddToRelationshipOptionsUI(goonJuiceConclusion2);
-            AddToRelationshipOptionsUI(goonCoolConclusion1);
+            goonJuiceList.Add(goonJuiceDetails[0]);
+            goonCoolguyList.Add(goonJuiceDetails[1]);
+            AddToRelationshipOptionsUI(conclusionsList[0]);
+            AddToRelationshipOptionsUI(conclusionsList[1]);
+        }
+
+        if(Input.GetKeyUp(KeyCode.Alpha2))
+        {
+            goonJuiceList.Add(goonJuiceDetails[1]);
         }
     }
 
@@ -58,12 +66,11 @@ public class RelationshipDetails : MonoBehaviour
         }
     }
 
-    // Called from RelationshipComparrison or when replacing text when we want to add/update content in the relationship panel
-    public void UpdateRelationship(string[] relationshipText)
+    // Called when we to update the relationship panel with info that is incomplete or false
+    public void UpdateRelationship(List<string> relationshipList)
     {
         ClearDetails();
-
-        foreach (var item in relationshipText)
+        foreach (var item in relationshipList)
         {
             GameObject relationshipObj = Instantiate(relationshipUI, relationshipContent);
             var contentText = relationshipObj.transform.Find("RelationshipText").GetComponent<TextMeshProUGUI>();

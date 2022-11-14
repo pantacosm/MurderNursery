@@ -32,44 +32,37 @@ public class PinboardManager : MonoBehaviour
     [SerializeField]
     GameObject CharacterTraitsUI;
 
+    [Header( "Pin-board Content")]
+    [Header( "Goon")]
+    public string[] goonLikes;
+    public string[] goonDislikes;
+    public string[] goonEvents;
+
+    [Header( "Cool Guy")]
+    public string[] coolguyLikes;
+    public string[] coolguyDislikes;
+    public string[] coolguyEvents;
+
+    [Header( "Juice Box")]
+    public string[] juiceboxLikes;
+    public string[] juiceboxDislikes;
+    public string[] juiceboxEvents;
+
+    [Header( "Femme")]
+    public string[] femmeLikes;
+    public string[] femmeDislikes;
+    public string[] femmeEvents;
+
+    [Header( "Dead Girl")]
+    public string[] deadgirlLikes;
+    public string[] deadgirlDislikes;
+    public string[] deadgirlEvents;
+
 
     // Start is called before the first frame update
     void Awake()
     {
         pinboard = this;
-    }
-
-    private void Update()
-    {
-        // temp set up to show content being added to the pin-board (will be called through dialogue/ bribery etc.)
-        if(Input.GetKeyUp(KeyCode.KeypadPlus))
-        {
-            UpdatePinboard(GoonLikes, "COOL GUY");
-            UpdatePinboard(GoonEvents, "Has a thing for femme.");
-            UpdatePinboard(GoonEvents, "Did odd jobs for Cool Guy.");
-
-            UpdatePinboard(CoolGuyLikes, "RUNNING");
-            UpdatePinboard(CoolGuyLikes, "CANDY BARS");
-
-            UpdatePinboard(JuiceboxLikes, "GOON");
-            UpdatePinboard(JuiceboxLikes, "JUICE BOXES");
-            UpdatePinboard(JuiceboxLikes, "ART");
-            UpdatePinboard(JuiceboxEvents, "Fell out of a tree cos of Goon.");
-            UpdatePinboard(JuiceboxEvents, "Juice box addiction.");
-            UpdatePinboard(JuiceboxEvents, "Close to dead girl.");
-
-            UpdatePinboard(FemmeLikes, "DRESS-UP");
-        }
-
-        if(Input.GetKeyUp(KeyCode.KeypadMinus))
-        {
-            UpdatePinboard(GoonDislikes, "JUICE BOX");
-            UpdatePinboard(GoonDislikes, "COPS");
-
-            UpdatePinboard(FemmeDislikes, "DEAD GIRL");
-            UpdatePinboard(FemmeDislikes, "UGGOS");
-            UpdatePinboard(FemmeDislikes, "BOYS");
-        }        
     }
 
     // Called when we want to update the pin board after discovering a characters likes/dislikes/events

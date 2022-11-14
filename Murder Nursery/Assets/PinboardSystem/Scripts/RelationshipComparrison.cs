@@ -13,18 +13,12 @@ public class RelationshipComparrison : MonoBehaviour
     [HideInInspector]
     public RelationshipDetails details;
 
-    [HideInInspector]
-    public string textToReplace;
-
-    // stores characters name text
+    // stores characters name text so we know which relationship we're currently viewing
     [SerializeField]
     GameObject charactersSelected;
 
     [SerializeField]
     GameObject relationshipPanel;
-
-    // used for opening relationship options panel
-    public GameObject relationshipOptionsPanel;
 
     // updates based on the character relationship we are viewing (displays Goon & Juice Box etc.)
     TextMeshProUGUI charNameTextLeft;
@@ -36,16 +30,6 @@ public class RelationshipComparrison : MonoBehaviour
     private bool juiceboxSelected;
     private bool femmeSelected;
     private bool deadGirlSelected;
-
-    [Header ("False/Undiscovered Relationship Contents")]
-    public string goonJuiceContent1;
-    public string goonJuiceContent2;
-    public string goonCoolContent1;
-
-    [Header("Relationship Conclusions")]
-    public string goonJuiceConclusion1;
-    public string goonJuiceConclusion2;
-    public string goonCoolConclusion1;
     
     // Start is called before the first frame update
     void Start()
@@ -62,14 +46,6 @@ public class RelationshipComparrison : MonoBehaviour
     void Update()
     {
         UpdateCharactersSelected();
-
-        if(Input.GetKeyUp(KeyCode.O))
-        {
-            details.AddToRelationshipOptionsUI(goonJuiceConclusion1);
-            details.AddToRelationshipOptionsUI(goonJuiceConclusion2);
-            details.AddToRelationshipOptionsUI(goonCoolConclusion1);
-        }
-
     }
 
     // Updates relationshipPanel text to show which characters relationship is being viewed
@@ -80,16 +56,6 @@ public class RelationshipComparrison : MonoBehaviour
         JuiceBoxSelected();
         FemmeSelected();
         DeadGirlSelected();
-    }
-
-    // Called when we want to update info in the relationship panel
-    public void UpdateRelationshipContents(string[] contents)
-    {
-        details.ClearDetails();
-        foreach (var item in contents)
-        {
-            details.UpdateRelationship(item);
-        }
     }
 
     // Called when two characters are selected (hides pin-board & shows relationship panel)
@@ -137,7 +103,7 @@ public class RelationshipComparrison : MonoBehaviour
                 juiceboxSelected = false;
                 goonSelected = false;
                 SetActivePanel();
-                UpdateRelationshipContents(new string[] {goonJuiceContent1, goonJuiceContent2 });
+                details.UpdateRelationship(new string[] {details.goonJuiceContent1, details.goonJuiceContent2 });
             }
             if(coolguySelected)
             {
@@ -145,7 +111,7 @@ public class RelationshipComparrison : MonoBehaviour
                 coolguySelected = false;
                 goonSelected = false;
                 SetActivePanel();
-                UpdateRelationshipContents(new string[] {goonCoolContent1 });
+                details.UpdateRelationship(new string[] {details.goonCoolContent1 });
 
             }
             if(femmeSelected)
@@ -154,7 +120,7 @@ public class RelationshipComparrison : MonoBehaviour
                 femmeSelected = false;
                 goonSelected = false;
                 SetActivePanel();
-                UpdateRelationshipContents(new string[] { } );
+                details.UpdateRelationship(new string[] { });
             }
             if(deadGirlSelected)
             {
@@ -162,7 +128,7 @@ public class RelationshipComparrison : MonoBehaviour
                 deadGirlSelected = false;
                 goonSelected = false;
                 SetActivePanel();
-                UpdateRelationshipContents(new string[] { } );
+                details.UpdateRelationship(new string[] { });
             }
         }
     }
@@ -178,7 +144,7 @@ public class RelationshipComparrison : MonoBehaviour
                 juiceboxSelected = false;
                 coolguySelected = false;
                 SetActivePanel();
-                UpdateRelationshipContents(new string[] { } );
+                details.UpdateRelationship(new string[] { });
             }
             if(goonSelected)
             {
@@ -186,7 +152,7 @@ public class RelationshipComparrison : MonoBehaviour
                 goonSelected = false;
                 coolguySelected = false;
                 SetActivePanel();
-                UpdateRelationshipContents(new string[] { } );
+                details.UpdateRelationship(new string[] { });
             }
             if(femmeSelected)
             {
@@ -194,7 +160,7 @@ public class RelationshipComparrison : MonoBehaviour
                 femmeSelected = false;
                 coolguySelected = false;
                 SetActivePanel();
-                UpdateRelationshipContents(new string[] { } );
+                details.UpdateRelationship(new string[] { });
             }
             if(deadGirlSelected)
             {
@@ -202,7 +168,7 @@ public class RelationshipComparrison : MonoBehaviour
                 deadGirlSelected = false;
                 coolguySelected = false;
                 SetActivePanel();
-                UpdateRelationshipContents(new string[] { } );
+                details.UpdateRelationship(new string[] { });
             }
         }
     }
@@ -218,7 +184,7 @@ public class RelationshipComparrison : MonoBehaviour
                 juiceboxSelected = false;
                 coolguySelected = false;
                 SetActivePanel();
-                UpdateRelationshipContents(new string[] { } );
+                details.UpdateRelationship(new string[] { });
             }
             if(goonSelected)
             {
@@ -227,7 +193,7 @@ public class RelationshipComparrison : MonoBehaviour
                 goonSelected = false;
                 juiceboxSelected = false;
                 SetActivePanel();
-                UpdateRelationshipContents(new string[] { } );
+                details.UpdateRelationship(new string[] { });
             }
             if(femmeSelected)
             {
@@ -236,7 +202,7 @@ public class RelationshipComparrison : MonoBehaviour
                 femmeSelected = false;
                 juiceboxSelected = false;
                 SetActivePanel();
-                UpdateRelationshipContents(new string[] { } );
+                details.UpdateRelationship(new string[] { });
             }
             if(deadGirlSelected)
             {
@@ -245,7 +211,7 @@ public class RelationshipComparrison : MonoBehaviour
                 deadGirlSelected = false;
                 juiceboxSelected = false;
                 SetActivePanel();
-                UpdateRelationshipContents(new string[] { } );
+                details.UpdateRelationship(new string[] { });
             }
         }
     }
@@ -262,7 +228,7 @@ public class RelationshipComparrison : MonoBehaviour
                 juiceboxSelected = false;
                 femmeSelected = false;
                 SetActivePanel();
-                UpdateRelationshipContents(new string[] { } );
+                details.UpdateRelationship(new string[] { });
             }
             if(goonSelected)
             {
@@ -271,7 +237,7 @@ public class RelationshipComparrison : MonoBehaviour
                 goonSelected = false;
                 femmeSelected = false;
                 SetActivePanel();
-                UpdateRelationshipContents(new string[] { } );
+                details.UpdateRelationship(new string[] { });
             }
             if(coolguySelected)
             {
@@ -280,7 +246,7 @@ public class RelationshipComparrison : MonoBehaviour
                 femmeSelected = false;
                 coolguySelected = false;
                 SetActivePanel();
-                UpdateRelationshipContents(new string[] { } );
+                details.UpdateRelationship(new string[] { });
             }
             if(deadGirlSelected)
             {
@@ -289,7 +255,7 @@ public class RelationshipComparrison : MonoBehaviour
                 deadGirlSelected = false;
                 femmeSelected = false;
                 SetActivePanel();
-                UpdateRelationshipContents(new string[] { } );
+                details.UpdateRelationship(new string[] { });
             }
         }
     }
@@ -306,7 +272,7 @@ public class RelationshipComparrison : MonoBehaviour
                 juiceboxSelected = false;
                 deadGirlSelected = false;
                 SetActivePanel();
-                UpdateRelationshipContents(new string[] { } );
+                details.UpdateRelationship(new string[] { });
             }
             if(goonSelected)
             {
@@ -315,7 +281,7 @@ public class RelationshipComparrison : MonoBehaviour
                 goonSelected = false;
                 deadGirlSelected = false;
                 SetActivePanel();
-                UpdateRelationshipContents(new string[] { } );
+                details.UpdateRelationship(new string[] { });
             }
             if(femmeSelected)
             {
@@ -324,7 +290,7 @@ public class RelationshipComparrison : MonoBehaviour
                 femmeSelected = false;
                 deadGirlSelected = false;
                 SetActivePanel();
-                UpdateRelationshipContents(new string[] { } );
+                details.UpdateRelationship(new string[] { });
             }
             if(coolguySelected)
             {
@@ -333,7 +299,7 @@ public class RelationshipComparrison : MonoBehaviour
                 deadGirlSelected = false;
                 coolguySelected = false;
                 SetActivePanel();
-                UpdateRelationshipContents(new string[] { } );
+                details.UpdateRelationship(new string[] { });
             }
         }
     }

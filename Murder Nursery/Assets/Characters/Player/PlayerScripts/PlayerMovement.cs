@@ -9,9 +9,9 @@ public class PlayerMovement : MonoBehaviour
     private PlayerControls playerControls;
     private Animator animator;
     private InventoryManager inventory;
-    InputAction leftMouseClick;
-    public GameObject manager;
 
+    [HideInInspector]
+    public GameObject manager;
 
     private Vector3 playerVelocity;
     private bool groundedPlayer;
@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
 
 
     [SerializeField]
-    public float playerSpeed = 4.0f;
+    private float playerSpeed = 4.0f;
 
     [SerializeField]
     private float acceleration = 2.0f;
@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
     private float deceleration = 3.0f;
 
     [SerializeField]
-    public float jumpHeight = 1.0f;
+    private float jumpHeight = 1.0f;
 
     [SerializeField]
     private Transform cameraTransform;
@@ -40,10 +40,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private GameObject dialogueZone;
 
-    private void Start()
-    {
-        manager = GameObject.FindGameObjectWithTag("Manager");
-    }
     private void Awake()
     {
         controller = gameObject.GetComponent<CharacterController>();
@@ -53,6 +49,11 @@ public class PlayerMovement : MonoBehaviour
 
         // holds a map of inputs for the player
         playerControls = new PlayerControls();
+    }
+
+    private void Start()
+    {
+        manager = GameObject.FindGameObjectWithTag("Manager");
     }
 
     void Update()
@@ -70,17 +71,10 @@ public class PlayerMovement : MonoBehaviour
             gameObject.transform.forward = movement;
         }
 
-        // Changes the height position of the player..
-        if (playerControls.PlayerInputMap.Jump.IsPressed() && groundedPlayer)
-        {
-            playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
-        }
-
-        playerVelocity.y += gravityValue * Time.deltaTime;
-        controller.Move(playerVelocity * Time.deltaTime);
-
         // stops player movement & disables camera whilst UI open
-        if (inventory.UIVisibility.inventoryOpen || inventory.UIVisibility.pinboardOpen || dialogueZone.activeInHierarchy || manager.GetComponent<SceneTransition>().interrogationActive)
+        if (inventory.UIVisibility.inventoryOpen || inventory.UIVisibility.pinboardOpen 
+            || dialogueZone.activeInHierarchy || manager.GetComponent<SceneTransition>().interrogationActive 
+            || inventory.UIVisibility.jotterOpen)
         {
             animator.Play("Idle");
             animator.SetFloat("Velocity", 0);
@@ -105,6 +99,15 @@ public class PlayerMovement : MonoBehaviour
         movement.y = 0;
 
         controller.Move(movement * Time.deltaTime * playerSpeed);
+
+        // Changes the height position of the player.. (Jump)
+        if (playerControls.PlayerInputMap.Jump.IsPressed() && groundedPlayer)
+        {
+            playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
+        }
+
+        playerVelocity.y += gravityValue * Time.deltaTime;
+        controller.Move(playerVelocity * Time.deltaTime);
     }
 
     void HandleAnimation()

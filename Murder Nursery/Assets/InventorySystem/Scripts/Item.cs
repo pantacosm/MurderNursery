@@ -19,7 +19,8 @@ public class Item : ScriptableObject
         QuestItem,
         Gift,
         MagnifyingGlass,
-        PinBoard
+        PinBoard,
+        Jotter
     }
 
 }

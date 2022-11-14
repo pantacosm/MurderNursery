@@ -10,6 +10,9 @@ public class ToggleUIVisibility : MonoBehaviour
     GameObject inventoryUI;
 
     [SerializeField]
+    GameObject jotterUI;
+
+    [SerializeField]
     public GameObject pinboardUI;
 
     [HideInInspector]
@@ -17,6 +20,9 @@ public class ToggleUIVisibility : MonoBehaviour
 
     [HideInInspector]
     public bool pinboardOpen = false;
+
+    [HideInInspector]
+    public bool jotterOpen = false;
 
     public void ToggleInventory()
     {
@@ -42,6 +48,12 @@ public class ToggleUIVisibility : MonoBehaviour
             pinboardUI.SetActive(false);
             pinboardOpen = false;
         }
+
+        if(jotterOpen)
+        {
+            jotterUI.SetActive(false);
+            jotterOpen = false;
+        }
     }
 
     public void TogglePinboard()
@@ -58,6 +70,32 @@ public class ToggleUIVisibility : MonoBehaviour
         {
             pinboardUI.SetActive(false);
             pinboardOpen = false;
+
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
+
+        if(inventoryOpen)
+        {
+            inventoryUI.SetActive(false);
+            inventoryOpen = false;
+        }
+    }
+
+    public void ToggleJotter()
+    {
+        if(jotterOpen = !jotterOpen)
+        {
+            jotterUI.SetActive(true);
+            jotterOpen = true;
+
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+        else
+        {
+            jotterUI.SetActive(false);
+            jotterOpen = false;
 
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;

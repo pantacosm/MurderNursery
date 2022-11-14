@@ -2478,11 +2478,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 887190577}
-<<<<<<< Updated upstream
   m_LocalRotation: {x: 0.09534356, y: 0.000000017655134, z: -0.0000000016910068, w: 0.9954445}
-=======
-  m_LocalRotation: {x: 0.0953436, y: -4.242606e-16, z: -7.8285525e-17, w: 0.9954444}
->>>>>>> Stashed changes
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3796,38 +3792,6 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 1430613555}
     m_Modifications:
-    - target: {fileID: 8948470476877887105, guid: efac65689e3d89842bd845899d51767e, type: 3}
-      propertyPath: m_VerticalAlignment
-      value: 256
-      objectReference: {fileID: 0}
-    - target: {fileID: 8948470476877887105, guid: efac65689e3d89842bd845899d51767e, type: 3}
-      propertyPath: m_HorizontalAlignment
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8948470476877887110, guid: efac65689e3d89842bd845899d51767e, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 3017.4807
-      objectReference: {fileID: 0}
-    - target: {fileID: 8948470476877887110, guid: efac65689e3d89842bd845899d51767e, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 616.016
-      objectReference: {fileID: 0}
-    - target: {fileID: 8948470476877887110, guid: efac65689e3d89842bd845899d51767e, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 136.24396
-      objectReference: {fileID: 0}
-    - target: {fileID: 8948470476877887110, guid: efac65689e3d89842bd845899d51767e, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -65.245544
-      objectReference: {fileID: 0}
-    - target: {fileID: 8948470477203751156, guid: efac65689e3d89842bd845899d51767e, type: 3}
-      propertyPath: m_Type
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8948470477203751156, guid: efac65689e3d89842bd845899d51767e, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 33c1364d011b089409207936eb3dac85, type: 3}
     - target: {fileID: 8948470477203751157, guid: efac65689e3d89842bd845899d51767e, type: 3}
       propertyPath: m_Name
       value: DialogueZone
@@ -5097,19 +5061,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8639815407638529036, guid: ec29c44ed3bb89647840c47cd92a3f03, type: 3}
       propertyPath: m_LocalPosition.x
-<<<<<<< Updated upstream
       value: 28.89
       objectReference: {fileID: 0}
     - target: {fileID: 8639815407638529036, guid: ec29c44ed3bb89647840c47cd92a3f03, type: 3}
       propertyPath: m_LocalPosition.y
       value: 1.745
-=======
-      value: 44.19
-      objectReference: {fileID: 0}
-    - target: {fileID: 8639815407638529036, guid: ec29c44ed3bb89647840c47cd92a3f03, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3.68
->>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 8639815407638529036, guid: ec29c44ed3bb89647840c47cd92a3f03, type: 3}
       propertyPath: m_LocalPosition.z

@@ -2478,11 +2478,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 887190577}
-<<<<<<< Updated upstream
   m_LocalRotation: {x: 0.09534356, y: 0.000000017655134, z: -0.0000000016910068, w: 0.9954445}
-=======
-  m_LocalRotation: {x: 0.0953436, y: -4.242606e-16, z: -7.8285525e-17, w: 0.9954444}
->>>>>>> Stashed changes
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3796,38 +3792,6 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 1430613555}
     m_Modifications:
-    - target: {fileID: 8948470476877887105, guid: efac65689e3d89842bd845899d51767e, type: 3}
-      propertyPath: m_VerticalAlignment
-      value: 256
-      objectReference: {fileID: 0}
-    - target: {fileID: 8948470476877887105, guid: efac65689e3d89842bd845899d51767e, type: 3}
-      propertyPath: m_HorizontalAlignment
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8948470476877887110, guid: efac65689e3d89842bd845899d51767e, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 3017.4807
-      objectReference: {fileID: 0}
-    - target: {fileID: 8948470476877887110, guid: efac65689e3d89842bd845899d51767e, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 616.016
-      objectReference: {fileID: 0}
-    - target: {fileID: 8948470476877887110, guid: efac65689e3d89842bd845899d51767e, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 136.24396
-      objectReference: {fileID: 0}
-    - target: {fileID: 8948470476877887110, guid: efac65689e3d89842bd845899d51767e, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -65.245544
-      objectReference: {fileID: 0}
-    - target: {fileID: 8948470477203751156, guid: efac65689e3d89842bd845899d51767e, type: 3}
-      propertyPath: m_Type
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8948470477203751156, guid: efac65689e3d89842bd845899d51767e, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 33c1364d011b089409207936eb3dac85, type: 3}
     - target: {fileID: 8948470477203751157, guid: efac65689e3d89842bd845899d51767e, type: 3}
       propertyPath: m_Name
       value: DialogueZone
@@ -5097,19 +5061,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8639815407638529036, guid: ec29c44ed3bb89647840c47cd92a3f03, type: 3}
       propertyPath: m_LocalPosition.x
-<<<<<<< Updated upstream
       value: 28.89
       objectReference: {fileID: 0}
     - target: {fileID: 8639815407638529036, guid: ec29c44ed3bb89647840c47cd92a3f03, type: 3}
       propertyPath: m_LocalPosition.y
       value: 1.745
-=======
-      value: 44.19
-      objectReference: {fileID: 0}
-    - target: {fileID: 8639815407638529036, guid: ec29c44ed3bb89647840c47cd92a3f03, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3.68
->>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 8639815407638529036, guid: ec29c44ed3bb89647840c47cd92a3f03, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5814,26 +5770,7 @@ MonoBehaviour:
   dialogueTree:
   - {fileID: 3499891356269125111, guid: 58cc48083d232e34cba6fe1d99aa2313, type: 3}
   - {fileID: 3499891356269125111, guid: cdecb0b504ee4704fb0a10ec506e17fd, type: 3}
-  - {fileID: 3499891356269125111, guid: 3f9172eeb617ad343b6f7ccac77a3667, type: 3}
-  - {fileID: 3499891356269125111, guid: 956755a11b6bc70419946dfa3a3f5e88, type: 3}
-  - {fileID: 3499891356269125111, guid: 5bcccca9aa0cbc54ebe9cf776bb657ca, type: 3}
-  - {fileID: 3499891356269125111, guid: 3a075004fb355854381ef6e1c334b6af, type: 3}
-  - {fileID: 3499891356269125111, guid: 44143192ad4b4bf45a352be5fec5f653, type: 3}
-  - {fileID: 3499891356269125111, guid: e9d06c5419dce414082b2bdfd2a09476, type: 3}
-  - {fileID: 3499891356269125111, guid: a86ab249275db304f96d85a1486cd46e, type: 3}
-  - {fileID: 3499891356269125111, guid: 87e98388353048541ac8138fc5eee817, type: 3}
-  - {fileID: 3499891356269125111, guid: 1fbffd3a00fec2f44a693cce65220614, type: 3}
-  - {fileID: 3499891356269125111, guid: ccf8e1f39ed28ab42a329f2425db38cd, type: 3}
-  - {fileID: 3499891356269125111, guid: c2c317368259c6442bcd44d9145fa1d1, type: 3}
-  - {fileID: 3499891356269125111, guid: 6b5a6a2d61cc7034c9ca625b55a091f9, type: 3}
-  - {fileID: 3499891356269125111, guid: b9aae7dbe9aece9418c28e3f3e346ae7, type: 3}
-  - {fileID: 3499891356269125111, guid: c4a5f274b76c3a944bac3783bf2de470, type: 3}
-  - {fileID: 3499891356269125111, guid: 7fdc05fd8bad7b146b7a84fb123f9fa1, type: 3}
-  - {fileID: 3499891356269125111, guid: 6df23349a9d65a643b1119a819edeff3, type: 3}
-  - {fileID: 3499891356269125111, guid: 75f06cafdc6c4c345a8bd9f0d6e3543e, type: 3}
-  - {fileID: 3499891356269125111, guid: 08de372332f6fcc41a088895e658ce63, type: 3}
-  - {fileID: 3499891356269125111, guid: 6bde27cfb099ce94984b31b93130a2e4, type: 3}
-  - {fileID: 3499891356269125111, guid: d6b517a048f156448b86285f59dda6e3, type: 3}
+  - {fileID: 0}
   isInteractable: 0
   inConversation: 0
 --- !u!1 &2140091095 stripped

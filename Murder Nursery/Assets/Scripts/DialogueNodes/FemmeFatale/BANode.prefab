@@ -47,7 +47,7 @@ MonoBehaviour:
   parent: {fileID: 3499891356269125111, guid: a39e403cc683b7342bc099c04fc02a38, type: 3}
   children:
   - {fileID: 3499891356269125111, guid: bb7af23aeae713845bf9aeb90d44a4ae, type: 3}
-  - {fileID: 3499891356269125111, guid: f461153ce6fcc634d8d9868306cd1f84, type: 3}
+  - {fileID: 3499891356269125111, guid: 7ddb665c4acfb9641b363c4aca52e786, type: 3}
   speech: No can do, creepo! Get outta here!
   responses:
   - Alright, alright. I hear ya. Take my card and give me a holler if you think of
@@ -62,3 +62,6 @@ MonoBehaviour:
   repGainResponse1: -1
   repGainResponse2: 0
   repGainResponse3: 0
+  interrogationNode: 0
+  lifeLoss: 0
+  exitNode: 0

@@ -44,6 +44,9 @@ public class DialogueManager : MonoBehaviour
 
     public void StartConversation(DialogueNode startNode, GameObject npc)
     {
+        pos = 0;
+        playerSecondResponseBox.GetComponent<Image>().color = Color.white;
+        playerThirdResponseBox.GetComponent<Image>().color = Color.white;
         activeNPC = npc;
         LoadNodeInfo(startNode);
         dialogueZone.SetActive(true);
@@ -120,8 +123,9 @@ public class DialogueManager : MonoBehaviour
         }
 
         if(playerChoice == 0 || playerChoice == 1 || playerChoice == 2)
-        {           
-                LoadNodeInfo(activeNode.children[playerChoice]);           
+        {
+            pos = 0; 
+            LoadNodeInfo(activeNode.children[playerChoice]);           
         }
     }
 

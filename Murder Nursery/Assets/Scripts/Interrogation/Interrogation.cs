@@ -37,7 +37,6 @@ public class Interrogation : MonoBehaviour
         }
         if(interrogationUnderway)
         {
-            interrogationPanel.SetActive(true);
             ContinueInterrogation();
         }
         if(interrogationLives == 0 && interrogationUnderway)

@@ -47,12 +47,14 @@ MonoBehaviour:
   parent: {fileID: 3499891356269125111, guid: 8df613962a6945a4da32b40ca2b5ca0f, type: 3}
   children:
   - {fileID: 3499891356269125111, guid: bb7af23aeae713845bf9aeb90d44a4ae, type: 3}
+  - {fileID: 3499891356269125111, guid: 7ddb665c4acfb9641b363c4aca52e786, type: 3}
   speech: This is the last time I'll say this, Detective. You're givin' me the heebie
     jeebies! Scram, before things get messy...
   responses:
   - Alright, alright. I hear ya. Take my card and give me a holler if you think of
     anythin'.
-  - Start Interrogation Game when added (press escape for now)
+  - 'Listen, pal. I got a quota to meet and the boss won''t be happy if I don''t
+    get some answers. Let''s talk. '
   repLevelOption1: 0
   repLevelOption2: 0
   repLevelOption3: 0
@@ -61,3 +63,6 @@ MonoBehaviour:
   repGainResponse1: 0
   repGainResponse2: 0
   repGainResponse3: 0
+  interrogationNode: 0
+  lifeLoss: 0
+  exitNode: 0

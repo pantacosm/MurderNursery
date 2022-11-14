@@ -61,3 +61,5 @@ MonoBehaviour:
   repGainResponse2: -1
   repGainResponse3: 0
   interrogationNode: 1
+  lifeLoss: 0
+  exitNode: 0

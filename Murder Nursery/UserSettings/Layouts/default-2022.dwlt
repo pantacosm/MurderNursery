@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2560
     height: 1357
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Scene
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -641,9 +641,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 7.3490424, y: 16.251049, z: 12.112448}
+    m_Target: {x: 35.6988, y: 2.0952115, z: 2.1990554}
     speed: 2
-    m_Value: {x: 7.3490424, y: 16.251049, z: 12.112448}
+    m_Value: {x: 35.6988, y: 2.0952115, z: 2.1990554}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -689,13 +689,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.021005703, y: -0.9658873, z: 0.24438104, w: 0.08307036}
+    m_Target: {x: 0.13435645, y: -0.83037895, z: 0.22741777, w: 0.49062812}
     speed: 2
-    m_Value: {x: 0.02100568, y: -0.9658863, z: 0.24438077, w: 0.08307027}
+    m_Value: {x: 0.1346964, y: -0.8296356, z: 0.22721422, w: 0.49186933}
   m_Size:
-    m_Target: 14.677661
+    m_Target: 9.002673
     speed: 2
-    m_Value: 14.677661
+    m_Value: 8.614998
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -807,9 +807,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: b2f0ffff
-      m_LastClickedID: 0
-      m_ExpandedIDs: eafaffff
+      m_SelectedIDs: 1e6d0000
+      m_LastClickedID: 27934
+      m_ExpandedIDs: 6ad4e4ff84f1ffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -874,13 +874,13 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Props
+    - Assets/Materials
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Props
+  - Assets/Materials
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\fifi4\OneDrive\Documents\GitHub\MurderNursery\Murder
     Nursery
@@ -888,9 +888,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 18700000
-    m_LastClickedID: 28696
-    m_ExpandedIDs: 00000000c06f000000ca9a3bffffff7f
+    m_SelectedIDs: f27b0000
+    m_LastClickedID: 31730
+    m_ExpandedIDs: 00000000a47b000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -918,7 +918,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000c06f0000
+    m_ExpandedIDs: 00000000a47b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

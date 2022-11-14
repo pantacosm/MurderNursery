@@ -19,6 +19,8 @@ public class Interrogation : MonoBehaviour
     public GameObject intResponseText3;
     public GameObject npcStatement;
     public DialogueNode activeNode;
+    public int interrogationLives;
+    public GameObject repManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,8 +37,15 @@ public class Interrogation : MonoBehaviour
         }
         if(interrogationUnderway)
         {
-            interrogationPanel.SetActive(true);
             ContinueInterrogation();
+        }
+        if(interrogationLives == 0 && interrogationUnderway)
+        {
+            BadEnd(2, repManager.GetComponent<ReputationManager>().femmePoints);
+        }
+        if(interrogationUnderway && activeNode.exitNode == true)
+        {
+            SuccessfulEnd();
         }
     }
 
@@ -44,6 +53,10 @@ public class Interrogation : MonoBehaviour
     {
         int j;
         j =  RecordInterrogationResponse();
+        if(j == 0 || j == 1 || j == 2)
+        {
+            LoadIntNodeInfo(activeNode.children[j]);         
+        }
     }
 
     public int RecordInterrogationResponse()
@@ -129,16 +142,17 @@ public class Interrogation : MonoBehaviour
                 break;
         }
     }
-    public string SuccessfulEnd(int repGain, int chosenRepLevel, string evidenceGained)
+    public void SuccessfulEnd()
     {
-        chosenRepLevel += repGain;
-        string keyEvidence = evidenceGained;
-        return keyEvidence;
+        manager.GetComponent<SceneTransition>().ChangeToMainArea();
+        interrogationPanel.SetActive(false);
     }
 
     public void BadEnd(int repLoss, int chosenRepLevel)
     {
         chosenRepLevel -= repLoss;
+        manager.GetComponent<SceneTransition>().ChangeToMainArea();
+        interrogationPanel.SetActive(false);
     }
 
     public void LoadIntNodeInfo(DialogueNode newNode)
@@ -179,10 +193,16 @@ public class Interrogation : MonoBehaviour
             intResponseBox3.SetActive(true);
             intResponseText3.GetComponent<TextMeshProUGUI>().text = activeNode.responses[2].ToString();
         }
+        if (activeNode.lifeLoss > 0)
+        {
+            interrogationLives -= activeNode.lifeLoss;
+            print("Life Lost!");
+        }
     }
 
     public void StartInterrogation(DialogueNode startNode)
     {
+        interrogationLives = 5;
         LoadIntNodeInfo(startNode);
     }
 

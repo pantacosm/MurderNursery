@@ -17,4 +17,6 @@ public class DialogueNode : MonoBehaviour
     public int repGainResponse2; //''
     public int repGainResponse3; //'' 
     public bool interrogationNode = false;
+    public int lifeLoss = 0;
+    public bool exitNode = false;
 }

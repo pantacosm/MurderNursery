@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8024310265325356385}
   - component: {fileID: 3499891356269125111}
   m_Layer: 0
-  m_Name: InterNode1
+  m_Name: InterNode5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46,16 +46,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 0}
   children:
-  - {fileID: 3499891356269125111, guid: cdecb0b504ee4704fb0a10ec506e17fd, type: 3}
-  - {fileID: 3499891356269125111, guid: 6b5a6a2d61cc7034c9ca625b55a091f9, type: 3}
-  - {fileID: 3499891356269125111, guid: 956755a11b6bc70419946dfa3a3f5e88, type: 3}
-  speech: I don't know nothin! I keep to myself in these parts, narc! I've never
-    even seen the gal!
+  - {fileID: 3499891356269125111, guid: 7fdc05fd8bad7b146b7a84fb123f9fa1, type: 3}
+  - {fileID: 3499891356269125111, guid: 6df23349a9d65a643b1119a819edeff3, type: 3}
+  - {fileID: 3499891356269125111, guid: e9d06c5419dce414082b2bdfd2a09476, type: 3}
+  speech: I didn't, I'm not that kinda gal! I don't even like cool guy that much,
+    we're not close at all! He doesn't tell me anythin these days!
   responses:
-  - Come on, now. You can tell me anythin!
-  - I know you're guilty of something!!
-  - Didn't know her? and yet Cool Guy seemed to be under the impression she'd been
-    rufflin feathers! Sounds like you guys HAD been aquainted!
+  - Thought you guys were the king and queen round these parts?
+  - You ain't fooling me!
+  - Not close, huh? From what I've heard you and Cool been close for a while now!
+    But for a moll who loves the attention.. why hide that...? Trouble in paradise?
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8024310265325356385}
   - component: {fileID: 3499891356269125111}
   m_Layer: 0
-  m_Name: InterNode1
+  m_Name: LifeLossNode10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,18 +44,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b70be5e9440559442826bf7731a6e3b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parent: {fileID: 0}
+  parent: {fileID: 3499891356269125111, guid: 1fbffd3a00fec2f44a693cce65220614, type: 3}
   children:
-  - {fileID: 3499891356269125111, guid: cdecb0b504ee4704fb0a10ec506e17fd, type: 3}
-  - {fileID: 3499891356269125111, guid: 6b5a6a2d61cc7034c9ca625b55a091f9, type: 3}
-  - {fileID: 3499891356269125111, guid: 956755a11b6bc70419946dfa3a3f5e88, type: 3}
-  speech: I don't know nothin! I keep to myself in these parts, narc! I've never
-    even seen the gal!
+  - {fileID: 3499891356269125111, guid: 1fbffd3a00fec2f44a693cce65220614, type: 3}
+  speech: Get ya facts straight before ya come after me kiddo!
   responses:
-  - Come on, now. You can tell me anythin!
-  - I know you're guilty of something!!
-  - Didn't know her? and yet Cool Guy seemed to be under the impression she'd been
-    rufflin feathers! Sounds like you guys HAD been aquainted!
+  - You have lost a life (continue)
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

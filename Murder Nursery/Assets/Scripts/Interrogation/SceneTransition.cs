@@ -113,6 +113,7 @@ public class SceneTransition : MonoBehaviour
                 blackFade.color = screenColour;
                 if(fadeProgress < 0.01f)
                 {
+                    interrogationManager.GetComponent<Interrogation>().interrogationPanel.SetActive(true);
                     blackFade.gameObject.SetActive(false);
                     yield return null;
                 }

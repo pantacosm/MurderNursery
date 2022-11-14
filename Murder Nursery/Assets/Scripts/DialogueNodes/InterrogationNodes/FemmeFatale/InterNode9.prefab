@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3480883043495859750
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8024310265325356385}
+  - component: {fileID: 3499891356269125111}
+  m_Layer: 0
+  m_Name: InterNode9
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8024310265325356385
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3480883043495859750}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.8900001, y: 1.2, z: 7.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3499891356269125111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3480883043495859750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b70be5e9440559442826bf7731a6e3b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parent: {fileID: 3499891356269125111, guid: 87e98388353048541ac8138fc5eee817, type: 3}
+  children:
+  - {fileID: 3499891356269125111, guid: 6bde27cfb099ce94984b31b93130a2e4, type: 3}
+  - {fileID: 3499891356269125111, guid: d6b517a048f156448b86285f59dda6e3, type: 3}
+  - {fileID: 3499891356269125111, guid: ccf8e1f39ed28ab42a329f2425db38cd, type: 3}
+  speech: Sounds like you're makin up your mind already, detective! You badges are
+    all the same!! Maybe it was me then, FINE! Would ya leave me alone if it was?!
+  responses:
+  - You aren't the type to do somethin like that! Come on now, we're all friends
+    here!
+  - You ain't got the nerve!
+  - You're alotta things, Princess! But you're no killer so don't try to take the
+    blame! Tell me who you're protectin!
+  repLevelOption1: -10
+  repLevelOption2: -10
+  repLevelOption3: -10
+  nodeID: 
+  nodeActive: 0
+  repGainResponse1: 0
+  repGainResponse2: 0
+  repGainResponse3: 0
+  interrogationNode: 0
+  lifeLoss: 0

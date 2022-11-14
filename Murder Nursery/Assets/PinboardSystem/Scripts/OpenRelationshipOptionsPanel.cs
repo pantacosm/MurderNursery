@@ -12,20 +12,18 @@ public class OpenRelationshipOptionsPanel : MonoBehaviour, IPointerClickHandler
     [SerializeField]
     GameObject relationshipUI;
 
-    RelationshipComparrison RC;
-
-    [HideInInspector]
-    public string textToReplace;
+    RelationshipDetails RD;
 
     private void Start()
     {
-        RC = FindObjectOfType<RelationshipComparrison>();
+        RD = FindObjectOfType<RelationshipDetails>();
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        RC.relationshipOptionsPanel.SetActive(true);
-        textToReplace = relationshipUI.transform.Find("RelationshipText").GetComponent<TextMeshProUGUI>().text;
-        RC.textToReplace = textToReplace;
+        RD.relationshipOptionsPanel.SetActive(true);
+
+        string textToReplace = relationshipUI.transform.Find("RelationshipText").GetComponent<TextMeshProUGUI>().text;
+        RD.textToReplace = textToReplace;
     }
 }

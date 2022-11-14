@@ -38,6 +38,9 @@ public class ItemManager : MonoBehaviour
             case Item.ItemType.PinBoard:
                 InventoryManager.inventory.UIVisibility.TogglePinboard();
                 break;
+            case Item.ItemType.Jotter:
+                InventoryManager.inventory.UIVisibility.ToggleJotter();
+                break;
         }
     }
 }

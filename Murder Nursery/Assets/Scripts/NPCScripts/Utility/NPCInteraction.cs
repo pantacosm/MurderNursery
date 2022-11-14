@@ -167,10 +167,6 @@ public class NPCInteraction : MonoBehaviour
 
     public void EnterConverstion() //Enters a conversation with an npc and disables the player's movement
     {
-        player.GetComponent<PlayerMovement>().playerSpeed = 0f;
-        player.GetComponent<PlayerMovement>().jumpHeight = 0f;
-        player.GetComponent<PlayerMovement>().enabled = false;
-        player.GetComponent<Animator>().enabled = false;
         dialoguePanel.SetActive(true);
         manager.GetComponent<DialogueSystem>().LoadNPCStatement(npcStatement1);
         manager.GetComponent<DialogueSystem>().LoadResponses(playerReply1, playerReply2, playerReply3);
@@ -178,10 +174,6 @@ public class NPCInteraction : MonoBehaviour
 
     public void ExitConversation() //Exits the conversation and re-enables player controls
     {
-        player.GetComponent<PlayerMovement>().playerSpeed = 4.0f;
-        player.GetComponent<PlayerMovement>().jumpHeight = 1.0f;
-        player.GetComponent<PlayerMovement>().enabled = true;
-        player.GetComponent<Animator>().enabled = true;
         dialoguePanel.SetActive(false);
         
         

@@ -13,36 +13,36 @@ public class ReplaceRelationshipText : MonoBehaviour, IPointerClickHandler
 
     private PinboardManager PM;
 
-    RelationshipComparrison RC;
+    private RelationshipDetails RD;
 
     private void Start()
     {
         PM = FindObjectOfType<PinboardManager>();
-        RC = PM.GetComponent<RelationshipComparrison>();
+        RD = PM.GetComponent<RelationshipDetails>();
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
         string replacingText = relationshipOptionsUI.transform.Find("RelationshipOptionsText").GetComponent<TextMeshProUGUI>().text;
-        if(RC.textToReplace == RC.goonJuiceContent1 && replacingText == RC.goonJuiceConclusion1)
+        if(RD.textToReplace == RD.goonJuiceContent1 && replacingText == RD.goonJuiceConclusion1)
         {
-            RC.goonJuiceContent1 = RC.goonJuiceConclusion1;
+            RD.goonJuiceContent1 = RD.goonJuiceConclusion1;
             Destroy(relationshipOptionsUI);
-            RC.UpdateRelationshipContents(new string[] {RC.goonJuiceContent1, RC.goonJuiceContent2 });
+            RD.UpdateRelationship(new string[] {RD.goonJuiceContent1, RD.goonJuiceContent2 });
         }
 
-        if(RC.textToReplace == RC.goonJuiceContent2 && replacingText == RC.goonJuiceConclusion2)
+        if(RD.textToReplace == RD.goonJuiceContent2 && replacingText == RD.goonJuiceConclusion2)
         {
-            RC.goonJuiceContent2 = RC.goonJuiceConclusion2;
+            RD.goonJuiceContent2 = RD.goonJuiceConclusion2;
             Destroy(relationshipOptionsUI);
-            RC.UpdateRelationshipContents(new string[] {RC.goonJuiceContent1, RC.goonJuiceContent2 });
+            RD.UpdateRelationship(new string[] {RD.goonJuiceContent1, RD.goonJuiceContent2 });
         }
 
-        if(RC.textToReplace == RC.goonCoolContent1 && replacingText == RC.goonCoolConclusion1)
+        if(RD.textToReplace == RD.goonCoolContent1 && replacingText == RD.goonCoolConclusion1)
         {
-            RC.goonCoolContent1 = RC.goonCoolConclusion1;
+            RD.goonCoolContent1 = RD.goonCoolConclusion1;
             Destroy(relationshipOptionsUI);
-            RC.UpdateRelationshipContents(new string[] {RC.goonCoolContent1});
+            RD.UpdateRelationship(new string[] {RD.goonCoolContent1});
         }
 
 

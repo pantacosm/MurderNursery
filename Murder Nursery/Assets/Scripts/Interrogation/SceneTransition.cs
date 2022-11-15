@@ -57,7 +57,7 @@ public class SceneTransition : MonoBehaviour
         {
             femmeIntObject.SetActive(true);
             activeInterrogant = femmeIntObject;
-            interrogationManager.GetComponent<Interrogation>().StartInterrogation(activeInterrogant.GetComponent<NPCDialogue>().dialogueTree[0]);
+            interrogationManager.GetComponent<Interrogation>().StartInterrogation(activeInterrogant.GetComponent<NPCDialogue>().dialogueTree[0], activeInterrogant);
         }
         if(npc.name == "CoolGangstaKid")
         {
@@ -138,6 +138,7 @@ public class SceneTransition : MonoBehaviour
                     ChangeCam(currentCam, desiredCam);
                     noirFilter.GetComponent<PostProcessingActivation>().TurnFilterOn(false);
                     activeInterrogant.SetActive(false);
+                    interrogationManager.GetComponent<Interrogation>().interrogationPanel.SetActive(false);
                     interrogationActive = false;
                 }
 
@@ -154,6 +155,7 @@ public class SceneTransition : MonoBehaviour
                 if(fadeProgress < 0.01f)
                 {
                     blackFade.gameObject.SetActive(false);
+                    interrogationManager.GetComponent<Interrogation>().interrogationPanel.SetActive(false);
                     yield return null;
                 }
                 yield return null;
@@ -180,7 +182,7 @@ public class SceneTransition : MonoBehaviour
             yield return new WaitForSeconds(1);
             currentCountdownValue--;
         }
-        StartCoroutine(BlackTransitionToInterrogation(interrogationCam, mainCamera, false)); 
+        StartCoroutine(BlackTransitionToMainArea(interrogationCam, mainCamera, false)); 
 
     }
 

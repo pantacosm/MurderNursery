@@ -21,6 +21,7 @@ public class Interrogation : MonoBehaviour
     public DialogueNode activeNode;
     public int interrogationLives;
     public GameObject repManager;
+    public GameObject activeInterrogant;
     // Start is called before the first frame update
     void Start()
     {
@@ -200,10 +201,12 @@ public class Interrogation : MonoBehaviour
         }
     }
 
-    public void StartInterrogation(DialogueNode startNode)
+    public void StartInterrogation(DialogueNode startNode, GameObject targetNPC)
     {
+
         interrogationLives = 5;
         LoadIntNodeInfo(startNode);
+        activeInterrogant = targetNPC;
     }
 
 }

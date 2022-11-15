@@ -51,7 +51,7 @@ MonoBehaviour:
   speech: One that got me put in the cooler more than once. A man's game. Round here,
     we call it "Truth or Dare".
   responses:
-  - Sure, why not?
+  - Sure, why not? (Minigame in development, press escape to leave)
   - I don't think so.
   repLevelOption1: -10
   repLevelOption2: -10
@@ -61,3 +61,6 @@ MonoBehaviour:
   repGainResponse1: 0
   repGainResponse2: 0
   repGainResponse3: 0
+  interrogationNode: 0
+  lifeLoss: 0
+  exitNode: 0

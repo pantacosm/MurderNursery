@@ -16,6 +16,13 @@ public class DialogueManager : MonoBehaviour
     public GameObject playerSecondResponseBox;
     public GameObject playerThirdResponseBox;
 
+    [Header("Characters")]
+    public GameObject Femme;
+    public GameObject JuiceBox;
+    public GameObject Goon;
+    public GameObject CoolGuy;
+
+
     private DialogueNode activeNode;
     private GameObject activeNPC;
     private bool inConvo = false;
@@ -26,11 +33,17 @@ public class DialogueManager : MonoBehaviour
     [HideInInspector]
     public GameObject manager;
 
+    [SerializeField]
+    GameObject repManager;
+
+    ReputationManager RM;
+
 
     // Start is called before the first frame update
     void Start()
     {
         manager = GameObject.FindGameObjectWithTag("Manager");
+        RM = repManager.GetComponent<ReputationManager>();
     }
 
     // Update is called once per frame
@@ -101,6 +114,35 @@ public class DialogueManager : MonoBehaviour
 
     }
 
+    void UpdateRep()
+    {
+        if (activeNPC == Goon)
+        {
+            RM.UpdateReputation(RM.goonPoints += activeNode.repGainResponse1);
+            //RM.UpdateReputation(RM.goonPoints += activeNode.repGainResponse2);
+            //RM.UpdateReputation(RM.goonPoints += activeNode.repGainResponse3);
+        }
+        if (activeNPC == Femme)
+        {
+            RM.UpdateReputation(RM.femmePoints += activeNode.repGainResponse1);
+            //RM.UpdateReputation(RM.femmePoints += activeNode.repGainResponse2);
+            //RM.UpdateReputation(RM.femmePoints += activeNode.repGainResponse3);
+        }
+        if (activeNPC == JuiceBox)
+        {
+            RM.UpdateReputation(RM.juiceBoxPoints += activeNode.repGainResponse1);
+            //RM.UpdateReputation(RM.juiceBoxPoints += activeNode.repGainResponse2);
+            //RM.UpdateReputation(RM.juiceBoxPoints += activeNode.repGainResponse3);
+
+        }
+        if (activeNPC == CoolGuy)
+        {
+            RM.UpdateReputation(RM.coolGuyPoints += activeNode.repGainResponse1);
+            //RM.UpdateReputation(RM.coolGuyPoints += activeNode.repGainResponse2);
+            //RM.UpdateReputation(RM.coolGuyPoints += activeNode.repGainResponse3);
+        }
+    }
+
     public void ContinueConversation()
     {
         int playerChoice = RecordResponse();
@@ -111,15 +153,19 @@ public class DialogueManager : MonoBehaviour
         }
         if(playerChoice == 0 && activeNode.repGainResponse1 != 0)
         {
-            manager.GetComponent<RelationshipManager>().UpdateCoolMeter(relationship, activeNode.repGainResponse1);
+            //manager.GetComponent<RelationshipManager>().UpdateCoolMeter(relationship, activeNode.repGainResponse1);
+            UpdateRep();
+
         }
         if(playerChoice == 1 && activeNode.repGainResponse2 != 0)
         {
-            manager.GetComponent<RelationshipManager>().UpdateCoolMeter(relationship, activeNode.repGainResponse2);
+            // manager.GetComponent<RelationshipManager>().UpdateCoolMeter(relationship, activeNode.repGainResponse2);
+            UpdateRep();
         }
         if(playerChoice == 2 && activeNode.repGainResponse3 != 0)
         {
-            manager.GetComponent<RelationshipManager>().UpdateCoolMeter(relationship, activeNode.repGainResponse3);
+            // manager.GetComponent<RelationshipManager>().UpdateCoolMeter(relationship, activeNode.repGainResponse3);
+            UpdateRep();
         }
 
         if(playerChoice == 0 || playerChoice == 1 || playerChoice == 2)

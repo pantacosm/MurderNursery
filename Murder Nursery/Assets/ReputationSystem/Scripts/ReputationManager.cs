@@ -157,6 +157,7 @@ public class ReputationManager : MonoBehaviour
         // points capped between -1 & 10
 
         if(goonPoints <= -1) {goonPoints = -1;}
+        print("Goon points = " + goonPoints);
         if(femmePoints <= -1) {femmePoints = -1;}
         if(coolGuyPoints <= -1) {coolGuyPoints = -1;}
         if(juiceBoxPoints <= -1) {juiceBoxPoints = -1;}

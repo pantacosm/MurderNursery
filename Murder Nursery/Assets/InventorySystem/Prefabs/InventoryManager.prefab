@@ -31,7 +31,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5082937854988416734
 MonoBehaviour:
@@ -45,6 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 322f4cb32f42d714fb894ecc61558492, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pinboard: {fileID: 11400000, guid: e25df1ccd6fd9924fb7a3ac3fdbf9788, type: 2}
+  jotter: {fileID: 11400000, guid: ea3ba1a3a52c62e43aea6577cdc13b84, type: 2}
   UIVisibility: {fileID: 0}
   items: []
   itemContent: {fileID: 0}
@@ -62,6 +64,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryUI: {fileID: 0}
+  jotterUI: {fileID: 0}
   pinboardUI: {fileID: 0}
   inventoryOpen: 0
   pinboardOpen: 0
+  jotterOpen: 0

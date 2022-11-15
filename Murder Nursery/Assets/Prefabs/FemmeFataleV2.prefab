@@ -32,11 +32,11 @@ Transform:
   m_GameObject: {fileID: 8639815407638529140}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.89, y: 1.2, z: 7.1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.54922, y: 0.54922, z: 0.54922}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8639815407638529139
 MeshFilter:
@@ -172,6 +172,8 @@ MonoBehaviour:
   - {fileID: 3499891356269125111, guid: e8f8491cd3c04084eaaf35ea8296de54, type: 3}
   - {fileID: 3499891356269125111, guid: 5ea33d640acea4e4a8e1f6e2c90741de, type: 3}
   - {fileID: 3499891356269125111, guid: a627da6c9c17ba54e8ab5cacba36722c, type: 3}
+  - {fileID: 3499891356269125111, guid: f99fc59011af17a4fb531670f51fafcc, type: 3}
+  - {fileID: 3499891356269125111, guid: 7ddb665c4acfb9641b363c4aca52e786, type: 3}
   isInteractable: 0
   inConversation: 0
 --- !u!114 &8639815407638529141
@@ -194,6 +196,11 @@ MonoBehaviour:
   playerFirstResponseBox: {fileID: 0}
   playerSecondResponseBox: {fileID: 0}
   playerThirdResponseBox: {fileID: 0}
+  Femme: {fileID: 8639815407638529140}
+  JuiceBox: {fileID: 0}
+  Goon: {fileID: 0}
+  CoolGuy: {fileID: 0}
   pos: 0
-  manager: {fileID: 0}
   relationship: 0
+  manager: {fileID: 0}
+  repManager: {fileID: 0}

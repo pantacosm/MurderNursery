@@ -8,6 +8,12 @@ public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager inventory;
 
+    [SerializeField]
+    Item pinboard;
+
+    [SerializeField]
+    Item jotter;
+
     [HideInInspector]
     public ToggleUIVisibility UIVisibility;
 
@@ -26,6 +32,12 @@ public class InventoryManager : MonoBehaviour
     {
         inventory = this;
         UIVisibility = GetComponent<ToggleUIVisibility>();
+    }
+
+    private void Start()
+    {
+        AddItem(pinboard);
+        AddItem(jotter);
     }
 
     private void Update()

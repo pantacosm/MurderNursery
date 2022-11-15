@@ -32,11 +32,11 @@ Transform:
   m_GameObject: {fileID: 4202205716510092986}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -10.99, y: 1.12, z: 7.192}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.54922, y: 0.54922, z: 0.54922}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4202205716510092869
 MeshFilter:
@@ -151,9 +151,14 @@ MonoBehaviour:
   playerFirstResponseBox: {fileID: 0}
   playerSecondResponseBox: {fileID: 0}
   playerThirdResponseBox: {fileID: 0}
+  Femme: {fileID: 0}
+  JuiceBox: {fileID: 4202205716510092986}
+  Goon: {fileID: 0}
+  CoolGuy: {fileID: 0}
   pos: 0
-  manager: {fileID: 0}
   relationship: 0
+  manager: {fileID: 0}
+  repManager: {fileID: 0}
 --- !u!114 &4202205716510092987
 MonoBehaviour:
   m_ObjectHideFlags: 0

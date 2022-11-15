@@ -15,6 +15,7 @@ public class DialogueManager : MonoBehaviour
     public GameObject playerFirstResponseBox;
     public GameObject playerSecondResponseBox;
     public GameObject playerThirdResponseBox;
+    public GameObject npcNameArea;
 
     [Header("Characters")]
     public GameObject Femme;
@@ -63,6 +64,8 @@ public class DialogueManager : MonoBehaviour
         activeNPC = npc;
         LoadNodeInfo(startNode);
         dialogueZone.SetActive(true);
+        npcNameArea.GetComponent<TextMeshProUGUI>().text = npc.name;
+
         inConvo = true;
     }
 

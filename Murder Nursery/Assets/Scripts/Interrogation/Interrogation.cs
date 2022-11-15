@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using static UnityEditor.PlayerSettings;
 
 public class Interrogation : MonoBehaviour
 {
@@ -56,6 +55,7 @@ public class Interrogation : MonoBehaviour
         j =  RecordInterrogationResponse();
         if(j == 0 || j == 1 || j == 2)
         {
+            pos = 0;
             LoadIntNodeInfo(activeNode.children[j]);         
         }
     }
@@ -203,7 +203,9 @@ public class Interrogation : MonoBehaviour
 
     public void StartInterrogation(DialogueNode startNode, GameObject targetNPC)
     {
-
+        pos = 0;
+        intResponseBox2.GetComponent<Image>().color = Color.gray;
+        intResponseBox3.GetComponent<Image>().color = Color.gray;
         interrogationLives = 5;
         LoadIntNodeInfo(startNode);
         activeInterrogant = targetNPC;

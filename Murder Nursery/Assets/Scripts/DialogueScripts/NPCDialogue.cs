@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -8,6 +9,7 @@ public class NPCDialogue : MonoBehaviour
     public DialogueNode[] dialogueTree = new DialogueNode[27]; //Creates the dialogue tree used to store nodes
     public bool isInteractable = false;
     public bool inConversation = false;
+    public GameObject interactionMessage;
     
     // Start is called before the first frame update
     void Start()
@@ -27,6 +29,10 @@ public class NPCDialogue : MonoBehaviour
         {
             this.GetComponent<DialogueManager>().ExitConversation();
         }
+        if(inConversation)
+        {
+            interactionMessage.SetActive(false);
+        }
     }
 
     public void OnTriggerEnter(Collider other)
@@ -34,6 +40,8 @@ public class NPCDialogue : MonoBehaviour
         if (other.name == "Player")
         {
             isInteractable = true;
+            interactionMessage.SetActive(true);
+            interactionMessage.GetComponent<TextMeshProUGUI>().text = "Press [E] to interact with " + this.name;
         }
     }
 
@@ -42,6 +50,8 @@ public class NPCDialogue : MonoBehaviour
         if (other.name == "Player")
         {
             isInteractable = false;
+            interactionMessage.SetActive(false);
+            inConversation = false;
         }
     }
 }

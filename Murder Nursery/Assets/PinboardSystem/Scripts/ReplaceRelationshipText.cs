@@ -24,33 +24,51 @@ public class ReplaceRelationshipText : MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData eventData)
     {
         string replacingText = relationshipOptionsUI.transform.Find("RelationshipOptionsText").GetComponent<TextMeshProUGUI>().text;
-        
-        // Goon : Juice Box Details
-        foreach (var item in RD.goonJuiceDetails)
+
+        //// Goon : Juice Box Details
+        if (RD.textToReplace == RD.goonJuiceDetails[0] && replacingText == RD.conclusionsList[0])
         {
-            foreach (var conclusion in RD.conclusionsList)
+            foreach (var item in RD.goonJuiceList)
             {
-                int itemIndex = 0;
-                int conclusionIndex = 1;
-                if(RD.goonJuiceDetails.IndexOf(item) == itemIndex && RD.conclusionsList.IndexOf(conclusion) == conclusionIndex)
+                if(item == RD.goonJuiceDetails[0])
                 {
-                    Debug.Log(itemIndex);
-                    RD.goonJuiceList[itemIndex] = RD.conclusionsList[conclusionIndex];
-                    Destroy(relationshipOptionsUI);
+                    RD.goonJuiceList[RD.goonJuiceList.IndexOf(item)] = RD.conclusionsList[0];
                     RD.UpdateRelationship(RD.goonJuiceList);
+                    Destroy(relationshipOptionsUI);
+                    break;
                 }
-                break;
             }
-            break;
         }
 
+        if (RD.textToReplace == RD.goonJuiceDetails[1] && replacingText == RD.conclusionsList[1])
+        {
+            foreach (var item in RD.goonJuiceList)
+            {
+                if(item == RD.goonJuiceDetails[1])
+                {
+                    RD.goonJuiceList[RD.goonJuiceList.IndexOf(item)] = RD.conclusionsList[1];
+                    RD.UpdateRelationship(RD.goonJuiceList);
+                    Destroy(relationshipOptionsUI);
+                    break;
+                }
+            }
+        }
 
-        //if (RD.textToReplace == RD.go && replacingText == RD.goonJuiceConclusion1)
-        //{
-        //    RD.goonJuiceContent1 = RD.goonJuiceConclusion1;
-        //    Destroy(relationshipOptionsUI);
-        //    RD.UpdateRelationship(new string[] { RD.goonJuiceContent1, RD.goonJuiceContent2 });
-        //}
+        //// Goon : Cool Guy Details
+        if (RD.textToReplace == RD.goonCoolguyDetails[0] && replacingText == RD.conclusionsList[2])
+        {
+            foreach (var item in RD.goonCoolguyList)
+            {
+                if(item == RD.goonCoolguyDetails[0])
+                {
+                    RD.goonCoolguyList[RD.goonCoolguyList.IndexOf(item)] = RD.conclusionsList[2];
+                    RD.UpdateRelationship(RD.goonCoolguyList);
+                    Destroy(relationshipOptionsUI);
+                    break;
+                }
+            }
+        }
+
 
         //if (RD.textToReplace == RD.goonJuiceContent2 && replacingText == RD.goonJuiceConclusion2)
         //{

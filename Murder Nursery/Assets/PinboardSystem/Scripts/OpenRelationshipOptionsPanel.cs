@@ -22,7 +22,7 @@ public class OpenRelationshipOptionsPanel : MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData eventData)
     {
         RD.relationshipOptionsPanel.SetActive(true);
-
+        
         string textToReplace = relationshipUI.transform.Find("RelationshipText").GetComponent<TextMeshProUGUI>().text;
         RD.textToReplace = textToReplace;
     }

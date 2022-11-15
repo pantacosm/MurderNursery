@@ -25,10 +25,13 @@ public class RelationshipDetails : MonoBehaviour
     public string textToReplace;
 
     // contains list of undiscovered relationship details
+    [HideInInspector]
     public List<string> goonJuiceList;
+
+    [HideInInspector]
     public List<string> goonCoolguyList;
 
-
+    // detials to pass in when adding to relationship list
     [Header ("False/Undiscovered Relationship Details")]
     public List<string> goonJuiceDetails;
     public List<string> goonCoolguyDetails;
@@ -38,20 +41,17 @@ public class RelationshipDetails : MonoBehaviour
     [Header("Relationship Conclusions")]
     public List<string> conclusionsList;
 
-    private void Update()
+    private void Start()
     {
-        if(Input.GetKeyUp(KeyCode.Alpha1))
-        {
-            goonJuiceList.Add(goonJuiceDetails[0]);
-            goonCoolguyList.Add(goonJuiceDetails[1]);
-            AddToRelationshipOptionsUI(conclusionsList[0]);
-            AddToRelationshipOptionsUI(conclusionsList[1]);
-        }
 
-        if(Input.GetKeyUp(KeyCode.Alpha2))
-        {
-            goonJuiceList.Add(goonJuiceDetails[1]);
-        }
+        goonJuiceList.Add(goonJuiceDetails[0]);
+        goonJuiceList.Add(goonJuiceDetails[1]);
+
+        goonCoolguyList.Add(goonCoolguyDetails[0]);
+
+        AddToRelationshipOptionsUI(conclusionsList[0]);
+        AddToRelationshipOptionsUI(conclusionsList[1]);
+        AddToRelationshipOptionsUI(conclusionsList[2]);
     }
 
     public void ClearDetails()

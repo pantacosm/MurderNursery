@@ -80,6 +80,7 @@ public class ReputationManager : MonoBehaviour
         coolguyNotesContent.gameObject.SetActive(false);
         femmeNotesContent.gameObject.SetActive(false);
         juiceboxNotesContent.gameObject.SetActive(false);
+
     }
 
     private void Update()

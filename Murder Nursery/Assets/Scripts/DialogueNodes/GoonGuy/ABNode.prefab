@@ -45,8 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parent: {fileID: 3499891356269125111, guid: 642020a78ad23bb46920dff525f9c667, type: 3}
-  children:
-  - {fileID: 0}
+  children: []
   speech: Aw, shucks. It's alright. I guess I'm just all shaken up.
   responses:
   - 'Know anything about that moll decorating the floor? '
@@ -58,3 +57,6 @@ MonoBehaviour:
   repGainResponse1: 0
   repGainResponse2: 0
   repGainResponse3: 0
+  interrogationNode: 0
+  lifeLoss: 0
+  exitNode: 0

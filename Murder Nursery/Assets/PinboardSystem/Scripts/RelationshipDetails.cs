@@ -43,15 +43,15 @@ public class RelationshipDetails : MonoBehaviour
 
     private void Start()
     {
+        // temp code for prototyping
+        goonJuiceList.Add(goonJuiceDetails[0]);
+        goonJuiceList.Add(goonJuiceDetails[1]);
 
-        //goonJuiceList.Add(goonJuiceDetails[0]);
-        //goonJuiceList.Add(goonJuiceDetails[1]);
+        goonCoolguyList.Add(goonCoolguyDetails[0]);
 
-        //goonCoolguyList.Add(goonCoolguyDetails[0]);
-
-        //AddToRelationshipOptionsUI(conclusionsList[0]);
-        //AddToRelationshipOptionsUI(conclusionsList[1]);
-        //AddToRelationshipOptionsUI(conclusionsList[2]);
+        AddToRelationshipOptionsUI(conclusionsList[0]);
+        AddToRelationshipOptionsUI(conclusionsList[1]);
+        AddToRelationshipOptionsUI(conclusionsList[2]);
     }
 
     public void ClearDetails()

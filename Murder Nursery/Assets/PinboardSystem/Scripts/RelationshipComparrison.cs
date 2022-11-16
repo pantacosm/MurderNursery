@@ -119,6 +119,7 @@ public class RelationshipComparrison : MonoBehaviour
                 charNameTextRight.text = "Femme";
                 femmeSelected = false;
                 goonSelected = false;
+                details.UpdateRelationship(new());
                 SetActivePanel();
             }
             if(deadGirlSelected)
@@ -126,6 +127,7 @@ public class RelationshipComparrison : MonoBehaviour
                 charNameTextRight.text = "Dead Girl";
                 deadGirlSelected = false;
                 goonSelected = false;
+                details.UpdateRelationship(new());
                 SetActivePanel();
             }
         }
@@ -141,6 +143,7 @@ public class RelationshipComparrison : MonoBehaviour
                 charNameTextRight.text = "Juice Box";
                 juiceboxSelected = false;
                 coolguySelected = false;
+                details.UpdateRelationship(new());
                 SetActivePanel();
 
             }
@@ -149,6 +152,7 @@ public class RelationshipComparrison : MonoBehaviour
                 charNameTextRight.text = "Goon";
                 goonSelected = false;
                 coolguySelected = false;
+                details.UpdateRelationship(new());
                 SetActivePanel();
 
             }
@@ -157,6 +161,7 @@ public class RelationshipComparrison : MonoBehaviour
                 charNameTextRight.text = "Femme";
                 femmeSelected = false;
                 coolguySelected = false;
+                details.UpdateRelationship(new());
                 SetActivePanel();
 
             }
@@ -165,6 +170,7 @@ public class RelationshipComparrison : MonoBehaviour
                 charNameTextRight.text = "Dead Girl";
                 deadGirlSelected = false;
                 coolguySelected = false;
+                details.UpdateRelationship(new());
                 SetActivePanel();
             }
         }
@@ -180,6 +186,7 @@ public class RelationshipComparrison : MonoBehaviour
                 charNameTextRight.text = "Cool Guy";
                 juiceboxSelected = false;
                 coolguySelected = false;
+                details.UpdateRelationship(new());
                 SetActivePanel();
             }
             if(goonSelected)
@@ -188,6 +195,7 @@ public class RelationshipComparrison : MonoBehaviour
                 charNameTextRight.text = "Goon";
                 goonSelected = false;
                 juiceboxSelected = false;
+                details.UpdateRelationship(new());
                 SetActivePanel();
             }
             if(femmeSelected)
@@ -196,6 +204,7 @@ public class RelationshipComparrison : MonoBehaviour
                 charNameTextRight.text = "Femme";
                 femmeSelected = false;
                 juiceboxSelected = false;
+                details.UpdateRelationship(new());
                 SetActivePanel();
             }
             if(deadGirlSelected)
@@ -204,6 +213,7 @@ public class RelationshipComparrison : MonoBehaviour
                 charNameTextRight.text = "Dead Girl";
                 deadGirlSelected = false;
                 juiceboxSelected = false;
+                details.UpdateRelationship(new());
                 SetActivePanel();
             }
         }
@@ -220,6 +230,7 @@ public class RelationshipComparrison : MonoBehaviour
                 charNameTextRight.text = "Juice Box";
                 juiceboxSelected = false;
                 femmeSelected = false;
+                details.UpdateRelationship(new());
                 SetActivePanel();
             }
             if(goonSelected)
@@ -228,6 +239,7 @@ public class RelationshipComparrison : MonoBehaviour
                 charNameTextRight.text = "Goon";
                 goonSelected = false;
                 femmeSelected = false;
+                details.UpdateRelationship(new());
                 SetActivePanel();
             }
             if(coolguySelected)
@@ -236,6 +248,7 @@ public class RelationshipComparrison : MonoBehaviour
                 charNameTextRight.text = "Cool Guy";
                 femmeSelected = false;
                 coolguySelected = false;
+                details.UpdateRelationship(new());
                 SetActivePanel();
             }
             if(deadGirlSelected)
@@ -244,6 +257,7 @@ public class RelationshipComparrison : MonoBehaviour
                 charNameTextRight.text = "Dead Girl";
                 deadGirlSelected = false;
                 femmeSelected = false;
+                details.UpdateRelationship(new());
                 SetActivePanel();
             }
         }
@@ -260,6 +274,7 @@ public class RelationshipComparrison : MonoBehaviour
                 charNameTextRight.text = "Juice Box";
                 juiceboxSelected = false;
                 deadGirlSelected = false;
+                details.UpdateRelationship(new());
                 SetActivePanel();
             }
             if(goonSelected)
@@ -268,6 +283,7 @@ public class RelationshipComparrison : MonoBehaviour
                 charNameTextRight.text = "Goon";
                 goonSelected = false;
                 deadGirlSelected = false;
+                details.UpdateRelationship(new());
                 SetActivePanel();
             }
             if(femmeSelected)
@@ -276,6 +292,7 @@ public class RelationshipComparrison : MonoBehaviour
                 charNameTextRight.text = "Femme";
                 femmeSelected = false;
                 deadGirlSelected = false;
+                details.UpdateRelationship(new());
                 SetActivePanel();
             }
             if(coolguySelected)
@@ -284,6 +301,7 @@ public class RelationshipComparrison : MonoBehaviour
                 charNameTextRight.text = "Cool Guy";
                 deadGirlSelected = false;
                 coolguySelected = false;
+                details.UpdateRelationship(new());
                 SetActivePanel();
             }
         }

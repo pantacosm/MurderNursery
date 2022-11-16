@@ -65,6 +65,31 @@ public class PinboardManager : MonoBehaviour
         pinboard = this;
     }
 
+    private void Start()
+    {
+        UpdatePinboard(GoonLikes, goonLikes[0]);
+        UpdatePinboard(GoonLikes, goonLikes[1]);
+        UpdatePinboard(GoonDislikes, goonDislikes[0]);
+        UpdatePinboard(GoonDislikes, goonDislikes[1]);
+        UpdatePinboard(GoonEvents, goonEvents[0]);
+        UpdatePinboard(GoonEvents, goonEvents[1]);
+
+        UpdatePinboard(JuiceboxLikes, juiceboxLikes[0]);
+        UpdatePinboard(JuiceboxLikes, juiceboxLikes[1]);
+        UpdatePinboard(JuiceboxLikes, juiceboxLikes[2]);
+        UpdatePinboard(JuiceboxDislikes, juiceboxDislikes[0]);
+        UpdatePinboard(JuiceboxEvents, juiceboxEvents[0]);
+        UpdatePinboard(JuiceboxEvents, juiceboxEvents[1]);
+
+        UpdatePinboard(FemmeLikes, femmeLikes[0]);
+        UpdatePinboard(FemmeDislikes, femmeDislikes[0]);
+        UpdatePinboard(FemmeDislikes, femmeDislikes[1]);
+        UpdatePinboard(FemmeDislikes, femmeDislikes[2]);
+
+        UpdatePinboard(CoolGuyLikes, coolguyLikes[0]);
+        UpdatePinboard(CoolGuyLikes, coolguyLikes[1]);
+    }
+
     // Called when we want to update the pin board after discovering a characters likes/dislikes/events
     // content determines whos likes/dislikes/events we are updating / string is what we want the content to say
     public void UpdatePinboard(Transform content, string pinboardText)

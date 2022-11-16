@@ -117,32 +117,24 @@ public class DialogueManager : MonoBehaviour
 
     }
 
-    void UpdateRep()
+    void UpdateRep(int repGain)
     {
         if (activeNPC == Goon)
         {
-            RM.UpdateReputation(RM.goonPoints += activeNode.repGainResponse1);
-            //RM.UpdateReputation(RM.goonPoints += activeNode.repGainResponse2);
-            //RM.UpdateReputation(RM.goonPoints += activeNode.repGainResponse3);
+            RM.UpdateReputation(RM.goonPoints += repGain);
         }
         if (activeNPC == Femme)
         {
-            RM.UpdateReputation(RM.femmePoints += activeNode.repGainResponse1);
-            //RM.UpdateReputation(RM.femmePoints += activeNode.repGainResponse2);
-            //RM.UpdateReputation(RM.femmePoints += activeNode.repGainResponse3);
+            RM.UpdateReputation(RM.femmePoints += repGain);
         }
         if (activeNPC == JuiceBox)
         {
-            RM.UpdateReputation(RM.juiceBoxPoints += activeNode.repGainResponse1);
-            //RM.UpdateReputation(RM.juiceBoxPoints += activeNode.repGainResponse2);
-            //RM.UpdateReputation(RM.juiceBoxPoints += activeNode.repGainResponse3);
+            RM.UpdateReputation(RM.juiceBoxPoints += repGain);
 
         }
         if (activeNPC == CoolGuy)
         {
-            RM.UpdateReputation(RM.coolGuyPoints += activeNode.repGainResponse1);
-            //RM.UpdateReputation(RM.coolGuyPoints += activeNode.repGainResponse2);
-            //RM.UpdateReputation(RM.coolGuyPoints += activeNode.repGainResponse3);
+            RM.UpdateReputation(RM.coolGuyPoints += repGain);
         }
     }
 
@@ -156,25 +148,25 @@ public class DialogueManager : MonoBehaviour
         }
         if(playerChoice == 0 && activeNode.repGainResponse1 != 0)
         {
-            //manager.GetComponent<RelationshipManager>().UpdateCoolMeter(relationship, activeNode.repGainResponse1);
-            UpdateRep();
+            UpdateRep(activeNode.repGainResponse1);
 
         }
         if(playerChoice == 1 && activeNode.repGainResponse2 != 0)
         {
-            // manager.GetComponent<RelationshipManager>().UpdateCoolMeter(relationship, activeNode.repGainResponse2);
-            UpdateRep();
+            UpdateRep(activeNode.repGainResponse2);
         }
         if(playerChoice == 2 && activeNode.repGainResponse3 != 0)
         {
-            // manager.GetComponent<RelationshipManager>().UpdateCoolMeter(relationship, activeNode.repGainResponse3);
-            UpdateRep();
+            UpdateRep(activeNode.repGainResponse3);
         }
 
         if(playerChoice == 0 || playerChoice == 1 || playerChoice == 2)
         {
-            pos = 0; 
-            LoadNodeInfo(activeNode.children[playerChoice]);           
+            pos = 0;
+            if(activeNode.children.Length > 0)
+            {
+                LoadNodeInfo(activeNode.children[playerChoice]);
+            }
         }
     }
 

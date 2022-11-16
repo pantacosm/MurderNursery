@@ -54,6 +54,7 @@ public class ReputationManager : MonoBehaviour
     public int femmePoints = 0;
     public int juiceBoxPoints = 0;
 
+    // will be added as our reputation with each of the characters is updated (which is based on player choice)
     [Header( "Reputation Notes" )]
     public string[] goonNotes;
     public string[] femmeNotes;
@@ -81,6 +82,7 @@ public class ReputationManager : MonoBehaviour
         femmeNotesContent.gameObject.SetActive(false);
         juiceboxNotesContent.gameObject.SetActive(false);
 
+
     }
 
     private void Update()
@@ -91,7 +93,7 @@ public class ReputationManager : MonoBehaviour
         HandleRep(CoolGuyContent, coolGuyPoints);
     }
 
-    // Called as an onClick() Event when we click a character to view in the Jotter (updated FriendshipNotes UI details)
+    // Called as an onClick() Event when we click a character to view in the Jotter (updates FriendshipNotes UI details)
     public void UpdateGoon()
     {
         characterPanel.transform.Find("Name").GetComponent<TextMeshProUGUI>().text = "Goon";
@@ -157,7 +159,6 @@ public class ReputationManager : MonoBehaviour
         // points capped between -1 & 10
 
         if(goonPoints <= -1) {goonPoints = -1;}
-        print("Goon points = " + goonPoints);
         if(femmePoints <= -1) {femmePoints = -1;}
         if(coolGuyPoints <= -1) {coolGuyPoints = -1;}
         if(juiceBoxPoints <= -1) {juiceBoxPoints = -1;}
@@ -187,14 +188,14 @@ public class ReputationManager : MonoBehaviour
             }
         }
 
-        // Checks the content inside characters FrienshipTierUI of the Jotter and loads in the same amount 
+        // Checks the content inside characters FrienshipTierUI of the Jotter and loads in the same amount
         for (int i = 0; i < content.childCount; i++)
         {
             if(points == -1)
             {
                 Instantiate(skullPrefab, characterTierContent);
             }
-            else if(i < 5)
+            else if(points >= 2 && i < 5)
             {
                 Instantiate(friendshipStarPrefab, characterTierContent);
             }
@@ -260,7 +261,7 @@ public class ReputationManager : MonoBehaviour
         }
 
         // Handles gaining Stars & updating Friendship Tier enum
-        if (points == 2 || points == 3 || points == 5 || points == 7 || points == 10)
+        if (points >= 2 || points >= 3 || points >= 5 || points >= 7 || points == 10)
         {
             if(content.childCount < 5)
             {
@@ -268,7 +269,7 @@ public class ReputationManager : MonoBehaviour
             }
         }
 
-        if(points >= 0 && points < 2)
+        if(points >= 0 && points < 3)
         {
             if(goonPoints == points)
             {
@@ -287,7 +288,7 @@ public class ReputationManager : MonoBehaviour
                 juiceBoxTier = FriendshipTier.Stranger;
             }
         }
-        if(points >= 2 && points < 5)
+        if(points >= 3 && points < 5)
         {
             if(goonPoints == points)
             {

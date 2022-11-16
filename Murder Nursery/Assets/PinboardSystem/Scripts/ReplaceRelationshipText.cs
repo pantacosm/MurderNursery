@@ -15,79 +15,45 @@ public class ReplaceRelationshipText : MonoBehaviour, IPointerClickHandler
 
     private RelationshipDetails RD;
 
+    string replacingText;
+
     private void Start()
     {
         PM = FindObjectOfType<PinboardManager>();
         RD = PM.GetComponent<RelationshipDetails>();
     }
 
+    //// Updates undiscovered "?????" text with full conclusion 
+    void ReplaceRelationshipDetails(List<string> detailsList, List<string> relationshipList, int detailsIndex, int conclusionIndex)
+    {
+        replacingText = relationshipOptionsUI.transform.Find("RelationshipOptionsText").GetComponent<TextMeshProUGUI>().text;
+
+        
+        if (RD.textToReplace == detailsList[detailsIndex] && replacingText == RD.conclusionsList[conclusionIndex])
+        {
+            foreach (var item in relationshipList)
+            {
+                if(item == detailsList[detailsIndex])
+                {
+                    relationshipList[relationshipList.IndexOf(item)] = RD.conclusionsList[conclusionIndex];
+                    RD.UpdateRelationship(relationshipList);
+                    Destroy(relationshipOptionsUI);
+                    break;
+                }
+            }
+        }
+    }
+
     public void OnPointerClick(PointerEventData eventData)
     {
-        string replacingText = relationshipOptionsUI.transform.Find("RelationshipOptionsText").GetComponent<TextMeshProUGUI>().text;
+        // Goon : Juice Box
+        ReplaceRelationshipDetails(RD.goonJuiceDetails, RD.goonJuiceList, 0, 0);
+        ReplaceRelationshipDetails(RD.goonJuiceDetails, RD.goonJuiceList, 1, 1);
 
-        //// Goon : Juice Box Details
-        if (RD.textToReplace == RD.goonJuiceDetails[0] && replacingText == RD.conclusionsList[0])
-        {
-            foreach (var item in RD.goonJuiceList)
-            {
-                if(item == RD.goonJuiceDetails[0])
-                {
-                    RD.goonJuiceList[RD.goonJuiceList.IndexOf(item)] = RD.conclusionsList[0];
-                    RD.UpdateRelationship(RD.goonJuiceList);
-                    Destroy(relationshipOptionsUI);
-                    break;
-                }
-            }
-        }
-
-        if (RD.textToReplace == RD.goonJuiceDetails[1] && replacingText == RD.conclusionsList[1])
-        {
-            foreach (var item in RD.goonJuiceList)
-            {
-                if(item == RD.goonJuiceDetails[1])
-                {
-                    RD.goonJuiceList[RD.goonJuiceList.IndexOf(item)] = RD.conclusionsList[1];
-                    RD.UpdateRelationship(RD.goonJuiceList);
-                    Destroy(relationshipOptionsUI);
-                    break;
-                }
-            }
-        }
-
-        //// Goon : Cool Guy Details
-        if (RD.textToReplace == RD.goonCoolguyDetails[0] && replacingText == RD.conclusionsList[2])
-        {
-            foreach (var item in RD.goonCoolguyList)
-            {
-                if(item == RD.goonCoolguyDetails[0])
-                {
-                    RD.goonCoolguyList[RD.goonCoolguyList.IndexOf(item)] = RD.conclusionsList[2];
-                    RD.UpdateRelationship(RD.goonCoolguyList);
-                    Destroy(relationshipOptionsUI);
-                    break;
-                }
-            }
-        }
+        // Goon : Cool Guy
+        ReplaceRelationshipDetails(RD.goonCoolguyDetails, RD.goonCoolguyList, 0, 2);
 
 
-        //if (RD.textToReplace == RD.goonJuiceContent2 && replacingText == RD.goonJuiceConclusion2)
-        //{
-        //    RD.goonJuiceContent2 = RD.goonJuiceConclusion2;
-        //    Destroy(relationshipOptionsUI);
-        //    RD.UpdateRelationship(new string[] { RD.goonJuiceContent1, RD.goonJuiceContent2 });
-        //}
-
-        //if (RD.textToReplace == RD.goonCoolContent1 && replacingText == RD.goonCoolConclusion1)
-        //{
-        //    RD.goonCoolContent1 = RD.goonCoolConclusion1;
-        //    Destroy(relationshipOptionsUI);
-        //    RD.UpdateRelationship(new string[] { RD.goonCoolContent1 });
-        //}
-
-
-
-
-
-
+   
     }
 }

@@ -1634,7 +1634,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 887190577}
-  m_LocalRotation: {x: 0.09534354, y: -0.000000019733713, z: 0.0000000018900923, w: 0.9954445}
+  m_LocalRotation: {x: 0.095343545, y: -0.000000026900711, z: 0.000000002576547, w: 0.9954445}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5069,15 +5069,23 @@ PrefabInstance:
       objectReference: {fileID: 1853417188}
     - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
       propertyPath: conclusionsList.Array.size
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: goonFemmeDetails.Array.size
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
       propertyPath: goonJuiceDetails.Array.size
-      value: 2
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: juiceFemmeDetails.Array.size
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
       propertyPath: conclusionsList.Array.data[0]
-      value: Goon dislikes Juice Box because he's dating Femme.
+      value: Goon dislikes Juice Box because JB loves juice.
       objectReference: {fileID: 0}
     - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
       propertyPath: conclusionsList.Array.data[1]
@@ -5088,8 +5096,60 @@ PrefabInstance:
       value: Goon likes Cool Guy but Cool Guy don't like bullies.
       objectReference: {fileID: 0}
     - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: conclusionsList.Array.data[3]
+      value: Juice Box and Goon are Frenemies
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: conclusionsList.Array.data[4]
+      value: Juice Box dislikes Cool Guy because Cool Guy is sporty.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: conclusionsList.Array.data[5]
+      value: Cool Guy hates Juice Box because ?????
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: conclusionsList.Array.data[6]
+      value: Juice Box and Cool Guy are bully/victim
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: conclusionsList.Array.data[7]
+      value: Juice Box likes Femme because ?????
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: conclusionsList.Array.data[8]
+      value: Femme dislikes JB because ?????
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: conclusionsList.Array.data[9]
+      value: Juice Box and Femme are dating
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
       propertyPath: goonCoolguyDetails.Array.size
-      value: 1
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: conclusionsList.Array.data[10]
+      value: Juice Box likes Dead Girl because ?????
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: coolguyFemmeDetails.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: goonDeadgirlDetails.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: goonFemmeDetails.Array.data[0]
+      value: Femme ????? Goon because ?????
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: goonFemmeDetails.Array.data[1]
+      value: Goon ????? Femme because ?????
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: goonFemmeDetails.Array.data[2]
+      value: Goon and Femme are ?????
       objectReference: {fileID: 0}
     - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
       propertyPath: goonJuiceDetails.Array.data[0]
@@ -5100,8 +5160,124 @@ PrefabInstance:
       value: Juice Box ????? Goon because ?????
       objectReference: {fileID: 0}
     - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: goonJuiceDetails.Array.data[2]
+      value: Juice Box and Goon are ?????
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: juiceCoolguyDetails.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: femmeDeadgirlDetails.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: juiceDeadgirlDetails.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: juiceFemmeDetails.Array.data[0]
+      value: Juice Box ????? Femme because ?????
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: juiceFemmeDetails.Array.data[1]
+      value: Femme ????? Juice Box because ?????
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: juiceFemmeDetails.Array.data[2]
+      value: Juice Box and Femme are ?????
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
       propertyPath: goonCoolguyDetails.Array.data[0]
-      value: Goon ????? Cool Guy but ?????
+      value: Goon ????? Cool Guy because ?????
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: goonCoolguyDetails.Array.data[1]
+      value: Cool Guy ????? Goon because ?????
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: goonCoolguyDetails.Array.data[2]
+      value: Cool Guy and Goon are ?????
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: coolguyDeadgirlDetails.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: coolguyFemmeDetails.Array.data[0]
+      value: Cool Guy ????? Femme because ?????
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: coolguyFemmeDetails.Array.data[1]
+      value: Femme ????? Cool Guy because ?????
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: coolguyFemmeDetails.Array.data[2]
+      value: Cool Guy and Femme are ?????
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: goonDeadgirlDetails.Array.data[0]
+      value: Goon ????? Dead Girl because ?????
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: goonDeadgirlDetails.Array.data[1]
+      value: Dead Girl ????? Goon because ?????
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: goonDeadgirlDetails.Array.data[2]
+      value: Goon and Dead Girl are ?????
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: juiceCoolguyDetails.Array.data[0]
+      value: Juice Box ????? Cool Guy because ?????
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: juiceCoolguyDetails.Array.data[1]
+      value: Cool Guy ????? Juice Box because ?????
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: juiceCoolguyDetails.Array.data[2]
+      value: Juice Box and Cool Guy are ?????
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: juiceCoolguyDetails.Array.data[3]
+      value: Cool Guy ????? Juice Box
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: femmeDeadgirlDetails.Array.data[0]
+      value: Femme ????? Dead Girl because ?????
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: femmeDeadgirlDetails.Array.data[1]
+      value: Dead Girl ????? Femme because ?????
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: femmeDeadgirlDetails.Array.data[2]
+      value: Dead Girl and Femme are ?????
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: juiceDeadgirlDetails.Array.data[0]
+      value: Juice Box ????? Dead Girl because ?????
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: juiceDeadgirlDetails.Array.data[1]
+      value: Dead Girl ????? Juice Box because ?????
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: juiceDeadgirlDetails.Array.data[2]
+      value: Juice Box and Dead Girl are ?????
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: coolguyDeadgirlDetails.Array.data[0]
+      value: Cool Guy ????? Dead Girl because ?????
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: coolguyDeadgirlDetails.Array.data[1]
+      value: Dead Girl ????? Cool Guy because ?????
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: coolguyDeadgirlDetails.Array.data[2]
+      value: Cool Guy and Dead Girl are ?????
       objectReference: {fileID: 0}
     - target: {fileID: 2506754139236650972, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
       propertyPath: m_RootOrder
@@ -5209,39 +5385,63 @@ PrefabInstance:
       objectReference: {fileID: 1832295230}
     - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
       propertyPath: goonLikes.Array.size
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
       propertyPath: femmeLikes.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
       propertyPath: goonEvents.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: coolguyLikes.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: goonDislikes.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: goonLikes.Array.data[0]
-      value: cool guy
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: goonLikes.Array.data[1]
-      value: candy bars
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: femmeDislikes.Array.size
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: femmeEvents.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: coolguyLikes.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: goonDislikes.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: goonLikes.Array.data[0]
+      value: Cool Guy
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: goonLikes.Array.data[1]
+      value: Candy Bars
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: goonLikes.Array.data[2]
+      value: Femme
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: goonLikes.Array.data[3]
+      value: Dead Girl
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: coolguyEvents.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: deadgirlLikes.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: femmeDislikes.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
       propertyPath: femmeLikes.Array.data[0]
-      value: dress-up
+      value: Being the favourite
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: femmeLikes.Array.data[1]
+      value: Gossiping
       objectReference: {fileID: 0}
     - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
       propertyPath: goonEvents.Array.data[0]
@@ -5249,35 +5449,87 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
       propertyPath: goonEvents.Array.data[1]
-      value: Has a thing for Femme.
+      value: Had something to do with JB's broken arm.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: goonEvents.Array.data[2]
+      value: Capable of violence.
       objectReference: {fileID: 0}
     - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
       propertyPath: juiceboxLikes.Array.size
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: deadgirlEvents.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: femmeEvents.Array.data[0]
+      value: Think she's the Queen bee.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: femmeEvents.Array.data[1]
+      value: Jealous of Dead Girl.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: femmeEvents.Array.data[2]
+      value: Not the violent type.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
       propertyPath: juiceboxEvents.Array.size
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
       propertyPath: RelationshipOptionsContent
       value: 
       objectReference: {fileID: 1320803934}
     - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: coolguyDislikes.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
       propertyPath: coolguyLikes.Array.data[0]
-      value: running
+      value: Running
       objectReference: {fileID: 0}
     - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
       propertyPath: coolguyLikes.Array.data[1]
-      value: candy bars
+      value: Femme
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: coolguyLikes.Array.data[2]
+      value: Candy Bars
       objectReference: {fileID: 0}
     - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
       propertyPath: goonDislikes.Array.data[0]
-      value: juice box
+      value: Juice Box
       objectReference: {fileID: 0}
     - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
       propertyPath: goonDislikes.Array.data[1]
       value: cops
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: coolguyEvents.Array.data[0]
+      value: Has been quiet lately.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: coolguyEvents.Array.data[1]
+      value: Has a secret enemy.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: coolguyEvents.Array.data[2]
+      value: Does not trust Femme.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: deadgirlDislikes.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: deadgirlLikes.Array.data[0]
+      value: Cool Guy
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: deadgirlLikes.Array.data[1]
+      value: Juice Box
       objectReference: {fileID: 0}
     - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
       propertyPath: femmeDislikes.Array.data[0]
@@ -5285,39 +5537,75 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
       propertyPath: femmeDislikes.Array.data[1]
-      value: uggos
+      value: Boys
       objectReference: {fileID: 0}
     - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
       propertyPath: femmeDislikes.Array.data[2]
-      value: boys
+      value: Boys
       objectReference: {fileID: 0}
     - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
       propertyPath: juiceboxDislikes.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
       propertyPath: juiceboxLikes.Array.data[0]
-      value: juice boxes
+      value: Art
       objectReference: {fileID: 0}
     - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
       propertyPath: juiceboxLikes.Array.data[1]
-      value: art
+      value: Goon
       objectReference: {fileID: 0}
     - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
       propertyPath: juiceboxLikes.Array.data[2]
-      value: goon
+      value: Juice boxes
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: deadgirlEvents.Array.data[0]
+      value: Nursery newbie.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: deadgirlEvents.Array.data[1]
+      value: All the boys were interested in her.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: deadgirlEvents.Array.data[2]
+      value: Was talking to Cool Guy.
       objectReference: {fileID: 0}
     - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
       propertyPath: juiceboxEvents.Array.data[0]
-      value: Fell out of a tree because of Goon.
+      value: Greatest masterpiece is a turkey hand he painted.
       objectReference: {fileID: 0}
     - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
       propertyPath: juiceboxEvents.Array.data[1]
-      value: Close to Dead Girl.
+      value: Has a broken right arm.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: juiceboxEvents.Array.data[2]
+      value: He's ambidextrous.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: juiceboxEvents.Array.data[3]
+      value: Has  a love hate relationship with Femme.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: coolguyDislikes.Array.data[0]
+      value: Other People
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: coolguyDislikes.Array.data[1]
+      value: Juice Box
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: deadgirlDislikes.Array.data[0]
+      value: Juice Box drinking so much
       objectReference: {fileID: 0}
     - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
       propertyPath: juiceboxDislikes.Array.data[0]
-      value: philistines
+      value: Cool Guy
+      objectReference: {fileID: 0}
+    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
+      propertyPath: juiceboxDislikes.Array.data[1]
+      value: Dead Girl
       objectReference: {fileID: 0}
     - target: {fileID: 2506754139236650975, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
       propertyPath: m_Name

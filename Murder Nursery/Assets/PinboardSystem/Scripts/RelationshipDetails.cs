@@ -31,10 +31,22 @@ public class RelationshipDetails : MonoBehaviour
     [HideInInspector]
     public List<string> goonCoolguyList;
 
+    [HideInInspector]
+    public List<string> juiceCoolguyList;
+
     // detials to pass in when adding to relationship list
     [Header ("False/Undiscovered Relationship Details")]
     public List<string> goonJuiceDetails;
     public List<string> goonCoolguyDetails;
+    public List<string> goonDeadgirlDetails;
+    public List<string> goonFemmeDetails;
+    public List<string> juiceCoolguyDetails;
+    public List<string> juiceFemmeDetails;
+    public List<string> juiceDeadgirlDetails;
+    public List<string> coolguyFemmeDetails;
+    public List<string> coolguyDeadgirlDetails;
+    public List<string> femmeDeadgirlDetails;
+
 
 
     // contains list of optional conclusions to replace undiscovered text with

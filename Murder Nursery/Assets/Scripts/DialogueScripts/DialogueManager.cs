@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.PlasticSCM.Editor.WebApi;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -45,6 +46,7 @@ public class DialogueManager : MonoBehaviour
     {
         manager = GameObject.FindGameObjectWithTag("Manager");
         RM = repManager.GetComponent<ReputationManager>();
+        
     }
 
     // Update is called once per frame
@@ -58,6 +60,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartConversation(DialogueNode startNode, GameObject npc)
     {
+        activeNode = startNode;
         pos = 0;
         playerSecondResponseBox.GetComponent<Image>().color = Color.white;
         playerThirdResponseBox.GetComponent<Image>().color = Color.white;
@@ -82,11 +85,24 @@ public class DialogueManager : MonoBehaviour
         {
             activeNode.nodeActive = false;
         }
+        
         activeNode = newNode;
         newNode.nodeActive = true;
         npcStatement.GetComponent<TextMeshProUGUI>().text = newNode.speech;
+        if (!activeNode.firstPathLocked)
+        {
+            playerFirstResponseBox.SetActive(true);
+        }
+        if(!activeNode.secondPathLocked)
+        {
+            playerSecondResponseBox.SetActive(true);
+        }
+        if(!activeNode.thirdPathLocked)
+        {
+            playerThirdResponseBox.SetActive(true);
+        }
 
-        if(activeNode.responses.Length == 0)
+        if (activeNode.responses.Length == 0)
         {
             playerFirstResponse.GetComponent<TextMeshProUGUI>().text = "Press Escape To Leave Conversation";
             playerSecondResponseBox.SetActive(false);
@@ -114,6 +130,28 @@ public class DialogueManager : MonoBehaviour
             playerThirdResponseBox.SetActive(true);
             playerThirdResponse.GetComponent<TextMeshProUGUI>().text = activeNode.responses[2].ToString();
         }
+        if(activeNode.lockingNode)
+        {
+            if (activeNode.nodeVisited)
+            {
+                if (activeNode.firstPathLocked)
+                {
+                    playerFirstResponseBox.SetActive(false);
+                }
+                
+                if (activeNode.secondPathLocked)
+                {
+                    playerSecondResponseBox.SetActive(false);
+                }
+
+                if(activeNode.thirdPathLocked)
+                {
+                    playerThirdResponseBox.SetActive(false);
+                }
+                
+            }
+        }
+        
 
     }
 
@@ -140,7 +178,20 @@ public class DialogueManager : MonoBehaviour
 
     public void ContinueConversation()
     {
-        int playerChoice = RecordResponse();
+        int playerChoice = 4;
+        playerChoice = RecordResponse();
+        if (playerChoice == 0)
+        {
+            activeNode.firstPathLocked = true;
+        }
+        if(playerChoice == 1)
+        {
+            activeNode.secondPathLocked = true;
+        }
+        if (playerChoice == 2)
+        {
+            activeNode.thirdPathLocked = true;
+        }
         if(activeNode.interrogationNode)
         {
             EnterInterrogation(activeNPC);
@@ -160,12 +211,15 @@ public class DialogueManager : MonoBehaviour
             UpdateRep(activeNode.repGainResponse3);
         }
 
-        if(playerChoice == 0 || playerChoice == 1 || playerChoice == 2)
+        if(playerChoice == 0|| playerChoice == 1 || playerChoice == 2)
         {
+
             pos = 0;
             if(activeNode.children.Length > 0)
             {
+                activeNode.nodeVisited = true;
                 LoadNodeInfo(activeNode.children[playerChoice]);
+                
             }
         }
     }

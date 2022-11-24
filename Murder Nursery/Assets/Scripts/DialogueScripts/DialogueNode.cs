@@ -19,4 +19,16 @@ public class DialogueNode : MonoBehaviour
     public bool interrogationNode = false;
     public int lifeLoss = 0;
     public bool exitNode = false;
+    public bool firstPathLocked = false;
+    public bool secondPathLocked = false;
+    public bool thirdPathLocked = false;
+    public bool nodeVisited = false;
+    public bool lockingNode = false;
+
+    private void Start()
+    {
+        firstPathLocked = false;
+        secondPathLocked = false;
+        thirdPathLocked = false;
+    }
 }

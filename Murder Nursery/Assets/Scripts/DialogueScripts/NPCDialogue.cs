@@ -14,7 +14,13 @@ public class NPCDialogue : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        foreach(DialogueNode node in dialogueTree)
+            {
+            node.firstPathLocked = false;
+            node.secondPathLocked = false;
+            node.thirdPathLocked = false;
+            node.nodeVisited = false;
+            }
     }
 
     // Update is called once per frame

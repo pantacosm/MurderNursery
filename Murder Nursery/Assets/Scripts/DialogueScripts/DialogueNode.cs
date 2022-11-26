@@ -24,6 +24,7 @@ public class DialogueNode : MonoBehaviour
     public bool thirdPathLocked = false;
     public bool nodeVisited = false;
     public bool lockingNode = false;
+    public bool briberyAvailable = false;
 
     private void Start()
     {

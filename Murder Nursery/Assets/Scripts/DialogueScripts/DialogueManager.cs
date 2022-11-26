@@ -1,7 +1,9 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using Unity.PlasticSCM.Editor.WebApi;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,6 +19,10 @@ public class DialogueManager : MonoBehaviour
     public GameObject playerSecondResponseBox;
     public GameObject playerThirdResponseBox;
     public GameObject npcNameArea;
+    public GameObject briberyOption;
+    public GameObject briberyPanel;
+    public Image repGainSprite;
+    public Image repLossSprite;
 
     [Header("Characters")]
     public GameObject Femme;
@@ -30,6 +36,11 @@ public class DialogueManager : MonoBehaviour
     private bool inConvo = false;
     public int pos = 0;
     public int relationship = 0;
+    public bool gainingRep = false;
+    public bool losingRep = false;
+    public Vector3 response1Position;
+    public Vector3 response2Position;
+    public Vector3 response3Position;
 
 
     [HideInInspector]
@@ -46,7 +57,11 @@ public class DialogueManager : MonoBehaviour
     {
         manager = GameObject.FindGameObjectWithTag("Manager");
         RM = repManager.GetComponent<ReputationManager>();
-        
+        response1Position = new Vector3(1377.7333984375f, 326.85614013671877f, 0.0f);
+        response2Position = new Vector3(1377.738037109375f, 232.59222412109376f, 0.0f);
+        response3Position = new Vector3(1377.7333984375f, 143.99176025390626f, 0.0f);
+
+
     }
 
     // Update is called once per frame
@@ -55,6 +70,22 @@ public class DialogueManager : MonoBehaviour
         if(inConvo)
         {
             ContinueConversation();
+        }
+        if(gainingRep)
+        {
+            for (int i = 0; i < 1; i++)
+            {
+                StartCoroutine(RepFader(repGainSprite, true));
+                StartCoroutine(WaitForSeconds(gainingRep, repGainSprite, 1.5f));
+            }
+        }
+        if(losingRep)
+        {
+            for(int i = 0; i < 1; i++)
+            {
+                StartCoroutine(RepFader(repLossSprite, true));
+                StartCoroutine(WaitForSeconds(losingRep, repLossSprite, 1.5f));
+            }
         }
     }
 
@@ -66,6 +97,14 @@ public class DialogueManager : MonoBehaviour
         playerThirdResponseBox.GetComponent<Image>().color = Color.white;
         activeNPC = npc;
         LoadNodeInfo(startNode);
+        if(startNode.firstPathLocked)
+        {
+            pos = 1;
+        }
+        if(startNode.firstPathLocked && startNode.secondPathLocked)
+        {
+            pos = 2;
+        }
         dialogueZone.SetActive(true);
         npcNameArea.GetComponent<TextMeshProUGUI>().text = npc.name;
 
@@ -151,6 +190,12 @@ public class DialogueManager : MonoBehaviour
                 
             }
         }
+        MoveOptions();
+
+        if (activeNode.briberyAvailable)
+        {
+            briberyOption.SetActive(true);
+        }
         
 
     }
@@ -159,19 +204,51 @@ public class DialogueManager : MonoBehaviour
     {
         if (activeNPC == Goon)
         {
+            if (repGain > 0)
+            {
+                gainingRep = true;
+            }
+            if(repGain < 0)
+            {
+                losingRep = true;
+            }
             RM.UpdateReputation(RM.goonPoints += repGain);
         }
         if (activeNPC == Femme)
         {
+            if (repGain > 0)
+            {
+                gainingRep = true;
+            }
+            if (repGain < 0)
+            {
+                losingRep = true;
+            }
             RM.UpdateReputation(RM.femmePoints += repGain);
         }
         if (activeNPC == JuiceBox)
         {
+            if (repGain > 0)
+            {
+                gainingRep = true;
+            }
+            if (repGain < 0)
+            {
+                losingRep = true;
+            }
             RM.UpdateReputation(RM.juiceBoxPoints += repGain);
 
         }
         if (activeNPC == CoolGuy)
         {
+            if (repGain > 0)
+            {
+                gainingRep = true;
+            }
+            if (repGain < 0)
+            {
+                losingRep = true;
+            }
             RM.UpdateReputation(RM.coolGuyPoints += repGain);
         }
     }
@@ -218,8 +295,7 @@ public class DialogueManager : MonoBehaviour
             if(activeNode.children.Length > 0)
             {
                 activeNode.nodeVisited = true;
-                LoadNodeInfo(activeNode.children[playerChoice]);
-                
+                LoadNodeInfo(activeNode.children[playerChoice]);               
             }
         }
     }
@@ -240,8 +316,14 @@ public class DialogueManager : MonoBehaviour
             playerFirstResponseBox.GetComponent<Image>().color = Color.cyan;
             if(Input.GetKeyUp(KeyCode.DownArrow))
             {
-                
-                pos++;
+                if (activeNode.secondPathLocked)
+                {
+                    pos = pos + 2;
+                }
+                else
+                {
+                    pos++;
+                }
                 playerFirstResponseBox.GetComponent<Image>().color = Color.white;
             }
             if(Input.GetKeyUp(KeyCode.Return))
@@ -264,14 +346,19 @@ public class DialogueManager : MonoBehaviour
             playerSecondResponseBox.GetComponent<Image>().color = Color.cyan;
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {
-                
-                pos--;
-                playerSecondResponseBox.GetComponent<Image>().color = Color.white;
+                if (!activeNode.firstPathLocked)
+                {
+                    pos--;
+                    playerSecondResponseBox.GetComponent<Image>().color = Color.white;
+                }
             }
             if (Input.GetKeyDown(KeyCode.DownArrow))
                 {
-                pos++;
-                playerSecondResponseBox.GetComponent<Image>().color = Color.white;
+                if (!activeNode.thirdPathLocked)
+                {
+                    pos++;
+                    playerSecondResponseBox.GetComponent<Image>().color = Color.white;
+                }
             }
             
             if(Input.GetKeyUp(KeyCode.Return))
@@ -294,7 +381,14 @@ public class DialogueManager : MonoBehaviour
             playerThirdResponseBox.GetComponent<Image>().color = Color.cyan;
             if(Input.GetKeyUp(KeyCode.UpArrow))
             {
-                pos--;
+                if (activeNode.secondPathLocked)
+                {
+                    pos = pos - 2;
+                }
+                else
+                {
+                    pos--;
+                }
                 playerThirdResponseBox.GetComponent<Image>().color = Color.white;
             }
             if (Input.GetKeyUp(KeyCode.Return))
@@ -314,5 +408,87 @@ public class DialogueManager : MonoBehaviour
         }
         
         return choice;
+    }
+
+    public void Bribery()
+    {
+        dialogueZone.SetActive(false);
+        briberyPanel.SetActive(true);
+    }
+
+    public IEnumerator RepFader(Image repSymbol, bool fadeIn, float fadeSpeed = 1f)
+    {
+        repSymbol.gameObject.SetActive(true);
+        Color repColour = repSymbol.color;
+        float fadeProgress;
+        if(fadeIn)
+        {
+            
+            while(repSymbol.color.a < 1)
+            {
+                fadeProgress = repColour.a + (fadeSpeed * Time.deltaTime) ;
+                repColour = new Color(repColour.r, repColour.g, repColour.b, fadeProgress);
+                repSymbol.color = repColour;
+                yield return null;
+            }
+
+        }
+        else
+        {
+            while(repSymbol.color.a > 0)
+            {
+                fadeProgress = repColour.a - (fadeSpeed * Time.deltaTime);
+                repColour = new Color(repColour.r, repColour.g, repColour.b, fadeProgress);
+                repSymbol.color = repColour;
+                if(fadeProgress < 0.01f)
+                {
+                    repSymbol.gameObject.SetActive(false);
+                }
+                yield return null;
+            }
+            
+        }
+    }
+
+    public IEnumerator WaitForSeconds(bool signal, Image sprite, float countdownValue = 2)
+    {
+        float currentCountdownValue = countdownValue;
+        while (currentCountdownValue > 0)
+        {
+            yield return new WaitForSeconds(1);
+            currentCountdownValue--;
+        }
+        StartCoroutine(RepFader(sprite, false));
+        signal = false;
+    }
+
+    public void MoveOptions()
+    {
+        if(!activeNode.nodeVisited)
+        {
+            playerFirstResponseBox.transform.position = response1Position;
+            playerSecondResponseBox.transform.position = response2Position;
+            playerThirdResponseBox.transform.position = response3Position;
+        }
+        else
+        if(activeNode.firstPathLocked)
+        {
+            playerSecondResponseBox.transform.position = response1Position;
+            playerThirdResponseBox.transform.position = response2Position;
+        }
+        if(activeNode.secondPathLocked)
+        {
+            
+            playerFirstResponseBox.transform.position = response1Position;
+            playerThirdResponseBox.transform.position = response2Position;
+        }
+        if(activeNode.firstPathLocked && activeNode.secondPathLocked)
+        {
+            playerThirdResponseBox.transform.position = response1Position;
+        }
+        if(activeNode.firstPathLocked && activeNode.thirdPathLocked)
+        {
+            playerSecondResponseBox.transform.position = response1Position;
+        }
     }
 }

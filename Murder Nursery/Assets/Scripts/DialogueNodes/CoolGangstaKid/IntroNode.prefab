@@ -65,3 +65,9 @@ MonoBehaviour:
   interrogationNode: 0
   lifeLoss: 0
   exitNode: 0
+  firstPathLocked: 0
+  secondPathLocked: 0
+  thirdPathLocked: 0
+  nodeVisited: 0
+  lockingNode: 0
+  briberyAvailable: 1

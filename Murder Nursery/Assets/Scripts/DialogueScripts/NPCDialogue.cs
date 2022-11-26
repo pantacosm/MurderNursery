@@ -26,14 +26,16 @@ public class NPCDialogue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(isInteractable && Input.GetKeyDown(KeyCode.E))
+        if(isInteractable && Input.GetKeyDown(KeyCode.E) &&!inConversation)
         {
             this.GetComponent<DialogueManager>().StartConversation(dialogueTree[0], this.gameObject);
             inConversation = true;
+            isInteractable = false;
         }
-        if(inConversation && Input.GetKeyDown(KeyCode.Escape))
+        if(inConversation && Input.GetKeyDown(KeyCode.Escape) && !isInteractable)
         {
             this.GetComponent<DialogueManager>().ExitConversation();
+            inConversation = false;
         }
         if(inConversation)
         {

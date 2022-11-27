@@ -41,7 +41,7 @@ public class SceneTransition : MonoBehaviour
 
     }
 
-    private void ChangeCam(GameObject currentCam, GameObject newCam) //Activates the desired cam and deactivates the previous cam
+    public void ChangeCam(GameObject currentCam, GameObject newCam) //Activates the desired cam and deactivates the previous cam
     {
         currentCam.SetActive(false);
         newCam.SetActive(true);

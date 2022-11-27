@@ -10,10 +10,12 @@ public class NPCDialogue : MonoBehaviour
     public bool isInteractable = false;
     public bool inConversation = false;
     public GameObject interactionMessage;
+    public GameObject manager;
     
     // Start is called before the first frame update
     void Start()
     {
+        manager = GameObject.FindGameObjectWithTag("Manager");
         foreach(DialogueNode node in dialogueTree)
             {
             node.firstPathLocked = false;
@@ -28,13 +30,13 @@ public class NPCDialogue : MonoBehaviour
     {
         if(isInteractable && Input.GetKeyDown(KeyCode.E) &&!inConversation)
         {
-            this.GetComponent<DialogueManager>().StartConversation(dialogueTree[0], this.gameObject);
+            manager.GetComponent<DialogueManager>().StartConversation(dialogueTree[0], this.gameObject);
             inConversation = true;
             isInteractable = false;
         }
         if(inConversation && Input.GetKeyDown(KeyCode.Escape) && !isInteractable)
         {
-            this.GetComponent<DialogueManager>().ExitConversation();
+            manager.GetComponent<DialogueManager>().ExitConversation();
             inConversation = false;
         }
         if(inConversation)

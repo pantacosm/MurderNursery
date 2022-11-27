@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 0}
   children:
-  - {fileID: 0}
+  - {fileID: 3499891356269125111, guid: b2cba708665ce2249bc1cf03455e8f33, type: 3}
   speech: It... It... It wasn't me!
   responses:
   - "\u201CI was\u2026 wrong? No - surely not\u2026 but I swore I had it all right
@@ -71,3 +71,6 @@ MonoBehaviour:
   nodeVisited: 0
   lockingNode: 0
   briberyAvailable: 0
+  triggerTrueEnd: 0
+  triggerGoodEnd: 0
+  triggerBadEnd: 0

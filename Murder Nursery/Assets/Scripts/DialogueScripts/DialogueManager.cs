@@ -33,7 +33,7 @@ public class DialogueManager : MonoBehaviour
 
     private DialogueNode activeNode;
     private GameObject activeNPC;
-    private bool inConvo = false;
+    public bool inConvo = false;
     public int pos = 0;
     public int relationship = 0;
     public bool gainingRep = false;
@@ -41,6 +41,9 @@ public class DialogueManager : MonoBehaviour
     public Vector3 response1Position;
     public Vector3 response2Position;
     public Vector3 response3Position;
+    public bool trueEndingReached = false;
+    public bool goodEndingReached = false;
+    public bool badEndingReached = false;
 
 
     [HideInInspector]
@@ -85,6 +88,33 @@ public class DialogueManager : MonoBehaviour
             {
                 StartCoroutine(RepFader(repLossSprite, true));
                 StartCoroutine(WaitForSeconds(losingRep, repLossSprite, 1.5f));
+            }
+        }
+        if (activeNode != null)
+        {
+            if (activeNode.exitNode)
+            {
+
+                if (activeNode.triggerTrueEnd)
+                {
+                    trueEndingReached = true;
+                    manager.GetComponent<Conclusion>().blackFade.gameObject.SetActive(true);
+                    StartCoroutine(manager.GetComponent<Conclusion>().BlackTransition());
+                }
+                if(activeNode.triggerGoodEnd)
+                {
+                    goodEndingReached = true;
+                    manager.GetComponent<Conclusion>().blackFade.gameObject.SetActive(true);
+                    StartCoroutine(manager.GetComponent<Conclusion>().BlackTransition());
+
+                }
+                if(activeNode.triggerBadEnd)
+                {
+                    badEndingReached = true;
+                    manager.GetComponent<Conclusion>().blackFade.gameObject.SetActive(true);
+                    StartCoroutine(manager.GetComponent<Conclusion>().BlackTransition());
+                }
+                ExitConversation();
             }
         }
     }
@@ -314,7 +344,7 @@ public class DialogueManager : MonoBehaviour
         if(pos == 0)
         {
             playerFirstResponseBox.GetComponent<Image>().color = Color.cyan;
-            if(Input.GetKeyUp(KeyCode.DownArrow))
+            if (Input.GetKeyUp(KeyCode.DownArrow) && activeNode.responses.Length > 1)
             {
                 if (activeNode.secondPathLocked)
                 {

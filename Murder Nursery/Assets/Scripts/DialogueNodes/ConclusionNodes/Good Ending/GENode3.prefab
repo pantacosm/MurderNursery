@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8024310265325356385}
   - component: {fileID: 3499891356269125111}
   m_Layer: 0
-  m_Name: TENode1
+  m_Name: GENode3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46,19 +46,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 0}
   children:
-  - {fileID: 3499891356269125111, guid: 8b18ae1843db72546847807e9540a3ea, type: 3}
-  - {fileID: 3499891356269125111, guid: 58126c46cd360364dbdddfc4c453e0d2, type: 3}
-  - {fileID: 3499891356269125111, guid: e3ef3bbba7b07a34e8cf0f04d136628a, type: 3}
-  speech: It was me... I'm sorry class, I let you all down!
+  - {fileID: 3499891356269125111, guid: 5a0942a2aa967b942b735c95efdfa676, type: 3}
+  speech: Love makes us do crazy things, friend. I was real selfish watchin' other
+    folks go down for what I did.
   responses:
-  - I knew it!
-  - But why?
-  - You sure did, punk!
+  - You did this all yourself?
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10
   nodeID: 
-  nodeActive: 1
+  nodeActive: 0
   repGainResponse1: 0
   repGainResponse2: 0
   repGainResponse3: 0
@@ -71,3 +68,6 @@ MonoBehaviour:
   nodeVisited: 0
   lockingNode: 0
   briberyAvailable: 0
+  triggerTrueEnd: 0
+  triggerGoodEnd: 0
+  triggerBadEnd: 0

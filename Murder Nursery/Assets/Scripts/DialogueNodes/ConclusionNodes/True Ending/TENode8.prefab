@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8024310265325356385}
   - component: {fileID: 3499891356269125111}
   m_Layer: 0
-  m_Name: TENode1
+  m_Name: TENode8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,21 +44,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b70be5e9440559442826bf7731a6e3b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parent: {fileID: 0}
+  parent: {fileID: 3499891356269125111, guid: 7b165c05c20fbae4fb38075aa527df88, type: 3}
   children:
-  - {fileID: 3499891356269125111, guid: 8b18ae1843db72546847807e9540a3ea, type: 3}
-  - {fileID: 3499891356269125111, guid: 58126c46cd360364dbdddfc4c453e0d2, type: 3}
-  - {fileID: 3499891356269125111, guid: e3ef3bbba7b07a34e8cf0f04d136628a, type: 3}
-  speech: It was me... I'm sorry class, I let you all down!
+  - {fileID: 3499891356269125111, guid: cf77ac5e9a571a74a8e63564b607c594, type: 3}
+  speech: Well, say. I don't know where to start detective. I'm real sorry I got
+    you all into this mess... it was all because of my pride. See, I'm not the gal
+    I told you all I was. I'm real jealous, and mean for what I did to Femme! I'm
+    sorry, Femme. You offered me the hand of friendship and I swatted it away! I
+    hope the offer still stands. The kids at my old nursery were real mean and never
+    shared their toys, nothin' like you guys! But I didn't even give you all a chance.
+    I hope you can all forgive me. I hope I didn't make a bad first impression on
+    ya detective! Can we put this all behind us and play fair again?
   responses:
-  - I knew it!
-  - But why?
-  - You sure did, punk!
+  - Well what do we say kids, do we forgive 'em?
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10
   nodeID: 
-  nodeActive: 1
+  nodeActive: 0
   repGainResponse1: 0
   repGainResponse2: 0
   repGainResponse3: 0

@@ -46,8 +46,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 0}
   children:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 3499891356269125111, guid: 061f15b982936f84b838cb996a6e195c, type: 3}
+  - {fileID: 3499891356269125111, guid: 0f76ee99d520cb946b87e1b03e8b31d4, type: 3}
   - {fileID: 0}
   speech: It was me... I'm sorry class, I let you all down!
   responses:
@@ -71,3 +71,6 @@ MonoBehaviour:
   nodeVisited: 0
   lockingNode: 0
   briberyAvailable: 0
+  triggerTrueEnd: 0
+  triggerGoodEnd: 0
+  triggerBadEnd: 0

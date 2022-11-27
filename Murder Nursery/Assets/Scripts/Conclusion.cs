@@ -22,6 +22,9 @@ public class Conclusion : MonoBehaviour
     public GameObject juicebox;
     public GameObject grace;
     public GameObject scarlet;
+    public GameObject trueEndingText;
+    public GameObject goodEndingText;
+    public GameObject badEndingText;
     // Start is called before the first frame update
     void Start()
     {
@@ -97,9 +100,22 @@ public class Conclusion : MonoBehaviour
                 fadeProgress = screenColour.a + (fadeSpeed * Time.deltaTime);
                 screenColour = new Color(screenColour.r, screenColour.g, screenColour.b, fadeProgress);
                 blackFade.color = screenColour;
-                if (fadeProgress > 0.95f)
+                if (fadeProgress > 0.95f && currentCam!=null && desiredCam!=null)
                 {
                     manager.GetComponent<SceneTransition>().ChangeCam(currentCam, desiredCam);
+                    
+                }
+                if (fadeProgress > 0.95f && manager.GetComponent<DialogueManager>().trueEndingReached)
+                {
+                    trueEndingText.SetActive(true);
+                }
+                if(fadeProgress > 0.95f && manager.GetComponent<DialogueManager>().goodEndingReached)
+                {
+                    goodEndingText.SetActive(true);
+                }
+                if(fadeProgress > 0.95f && manager.GetComponent<DialogueManager>().badEndingReached)
+                {
+                    badEndingText.SetActive(true);
                 }
 
                 yield return null;

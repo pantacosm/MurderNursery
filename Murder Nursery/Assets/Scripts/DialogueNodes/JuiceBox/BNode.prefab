@@ -44,10 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b70be5e9440559442826bf7731a6e3b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parent: {fileID: 3499891356269125111, guid: 5f2712ed33aee564f9c87ea34632db8a, type: 3}
+  parent: {fileID: 3499891356269125111, guid: 69b5164b459553a41812419bfa5745af, type: 3}
   children:
-  - {fileID: 3499891356269125111, guid: ce3308be003cca74fbe40186f87dfc45, type: 3}
-  - {fileID: 3499891356269125111, guid: 24aceb68c11fb34428d1b44080247597, type: 3}
+  - {fileID: 3499891356269125111, guid: ed80c71555101c5489d52ce57ba1f161, type: 3}
+  - {fileID: 3499891356269125111, guid: ed80c71555101c5489d52ce57ba1f161, type: 3}
   speech: '*mumble?*'
   responses:
   - '*grumble mumble!*'
@@ -63,3 +63,15 @@ MonoBehaviour:
   interrogationNode: 0
   lifeLoss: 0
   exitNode: 0
+  firstPathLocked: 0
+  secondPathLocked: 0
+  thirdPathLocked: 0
+  nodeVisited: 0
+  lockingNode: 0
+  briberyAvailable: 0
+  triggerTrueEnd: 0
+  triggerGoodEnd: 0
+  triggerBadEnd: 0
+  lockingFirstPath: 0
+  lockingSecondPath: 0
+  lockingThirdPath: 0

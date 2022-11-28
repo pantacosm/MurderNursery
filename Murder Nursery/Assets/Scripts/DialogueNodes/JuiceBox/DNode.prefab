@@ -46,10 +46,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 0}
   children:
-  - {fileID: 3499891356269125111, guid: be4e384b05f38614dbaac5b530e8fd9f, type: 3}
-  - {fileID: 3499891356269125111, guid: be4e384b05f38614dbaac5b530e8fd9f, type: 3}
-  - {fileID: 0}
-  speech: Verily my good sir, what doth thou wear?
+  - {fileID: 3499891356269125111, guid: 8b0993842799ecc4a8d118e4f6965aea, type: 3}
+  - {fileID: 3499891356269125111, guid: 8b0993842799ecc4a8d118e4f6965aea, type: 3}
+  - {fileID: 3499891356269125111, guid: 7e7e37b8afceb3a4ca9acd25fc00f88c, type: 3}
+  speech: Verily my good sir, what an excellent choice of attire!
   responses:
   - Uh, what the what now?
   - Me not talk good.
@@ -65,3 +65,15 @@ MonoBehaviour:
   interrogationNode: 0
   lifeLoss: 0
   exitNode: 0
+  firstPathLocked: 0
+  secondPathLocked: 0
+  thirdPathLocked: 0
+  nodeVisited: 0
+  lockingNode: 1
+  briberyAvailable: 0
+  triggerTrueEnd: 0
+  triggerGoodEnd: 0
+  triggerBadEnd: 0
+  lockingFirstPath: 1
+  lockingSecondPath: 1
+  lockingThirdPath: 0

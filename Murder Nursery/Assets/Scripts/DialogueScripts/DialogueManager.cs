@@ -154,7 +154,7 @@ public class DialogueManager : MonoBehaviour
         {
             activeNode.nodeActive = false;
         }
-        
+
         activeNode = newNode;
         newNode.nodeActive = true;
         npcStatement.GetComponent<TextMeshProUGUI>().text = newNode.speech;
@@ -217,6 +217,7 @@ public class DialogueManager : MonoBehaviour
                 {
                     playerThirdResponseBox.SetActive(false);
                 }
+
                 
             }
         }
@@ -287,15 +288,15 @@ public class DialogueManager : MonoBehaviour
     {
         int playerChoice = 4;
         playerChoice = RecordResponse();
-        if (playerChoice == 0)
+        if (playerChoice == 0 && activeNode.lockingFirstPath)
         {
             activeNode.firstPathLocked = true;
         }
-        if(playerChoice == 1)
+        if(playerChoice == 1 && activeNode.lockingSecondPath)
         {
             activeNode.secondPathLocked = true;
         }
-        if (playerChoice == 2)
+        if (playerChoice == 2 && activeNode.lockingThirdPath)
         {
             activeNode.thirdPathLocked = true;
         }

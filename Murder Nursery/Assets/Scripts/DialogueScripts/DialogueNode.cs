@@ -28,6 +28,9 @@ public class DialogueNode : MonoBehaviour
     public bool triggerTrueEnd = false;
     public bool triggerGoodEnd = false;
     public bool triggerBadEnd = false;
+    public bool lockingFirstPath = false;
+    public bool lockingSecondPath = false;
+    public bool lockingThirdPath = false;
 
     private void Start()
     {

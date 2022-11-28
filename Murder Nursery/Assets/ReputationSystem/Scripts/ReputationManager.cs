@@ -15,6 +15,22 @@ public class ReputationManager : MonoBehaviour
     GameObject skullPrefab;
 
     [SerializeField]
+    Transform CharacterImageUI;
+
+    [SerializeField]
+    GameObject GoonImage;
+
+    [SerializeField]
+    GameObject JuiceBoxImage;
+
+    [SerializeField]
+    GameObject FemmeImage;
+
+    [SerializeField]
+    GameObject CoolGuyImage;
+
+
+    [SerializeField]
     Transform GoonContent;
 
     [SerializeField]
@@ -91,14 +107,15 @@ public class ReputationManager : MonoBehaviour
         HandleRep(JuiceBoxContent, juiceBoxPoints);
         HandleRep(FemmeContent, femmePoints);
         HandleRep(CoolGuyContent, coolGuyPoints);
+
     }
 
     // Called as an onClick() Event when we click a character to view in the Jotter (updates FriendshipNotes UI details)
     public void UpdateGoon()
     {
-        characterPanel.transform.Find("Name").GetComponent<TextMeshProUGUI>().text = "Goon";
+        characterPanel.transform.Find("Name").GetComponent<TextMeshProUGUI>().text = "Eddie";
+        UpdateCharacterTierContent(GoonImage, GoonContent, goonPoints);
         UpdateTierText(goonTier);
-        UpdateCharacterTierContent(GoonContent, goonPoints);
         goonNotesContent.gameObject.SetActive(true);
         coolguyNotesContent.gameObject.SetActive(false);
         femmeNotesContent.gameObject.SetActive(false);
@@ -108,9 +125,9 @@ public class ReputationManager : MonoBehaviour
 
     public void UpdateCoolGuy()
     {
-        characterPanel.transform.Find("Name").GetComponent<TextMeshProUGUI>().text = "Cool Guy";
+        characterPanel.transform.Find("Name").GetComponent<TextMeshProUGUI>().text = "Chase";
+        UpdateCharacterTierContent(CoolGuyImage, CoolGuyContent, coolGuyPoints);
         UpdateTierText(coolGuyTier);
-        UpdateCharacterTierContent(CoolGuyContent, coolGuyPoints);
         goonNotesContent.gameObject.SetActive(false);
         coolguyNotesContent.gameObject.SetActive(true);
         femmeNotesContent.gameObject.SetActive(false);
@@ -121,9 +138,9 @@ public class ReputationManager : MonoBehaviour
 
     public void UpdateFemme()
     {
-        characterPanel.transform.Find("Name").GetComponent<TextMeshProUGUI>().text = "Femme";
+        characterPanel.transform.Find("Name").GetComponent<TextMeshProUGUI>().text = "Scarlet";
+        UpdateCharacterTierContent(FemmeImage, FemmeContent, femmePoints);
         UpdateTierText(femmeTier);
-        UpdateCharacterTierContent(FemmeContent, femmePoints);
         goonNotesContent.gameObject.SetActive(false);
         coolguyNotesContent.gameObject.SetActive(false);
         femmeNotesContent.gameObject.SetActive(true);
@@ -135,8 +152,8 @@ public class ReputationManager : MonoBehaviour
     public void UpdateJuiceBox()
     {
         characterPanel.transform.Find("Name").GetComponent<TextMeshProUGUI>().text = "Juice Box";
+        UpdateCharacterTierContent(JuiceBoxImage, JuiceBoxContent, juiceBoxPoints);
         UpdateTierText(juiceBoxTier);
-        UpdateCharacterTierContent(JuiceBoxContent, juiceBoxPoints);
         goonNotesContent.gameObject.SetActive(false);
         coolguyNotesContent.gameObject.SetActive(false);
         femmeNotesContent.gameObject.SetActive(false);
@@ -145,7 +162,7 @@ public class ReputationManager : MonoBehaviour
     }
 
 
-    // Called any time we want to add to or update a characters notes in the JotterUI
+    // Called any time we want to add to or update a characters notes in the JotterUI (content = "goonNotesContent" etc. / noteToAdd = "Goon is a bully")
     public void UpdateNotes(Transform content, string noteToAdd)
     {
         GameObject notesObj = Instantiate(notesPrefab, content);
@@ -177,7 +194,7 @@ public class ReputationManager : MonoBehaviour
     }
 
     // Updates amount of images are loaded in (stars or skull) inside the FriendshipNotes UI
-    void UpdateCharacterTierContent(Transform content, int points)
+    void UpdateCharacterTierContent(GameObject image, Transform content, int points)
     {
         // Clean up content before adding new content
         if (characterTierContent.childCount > 0)
@@ -188,18 +205,28 @@ public class ReputationManager : MonoBehaviour
             }
         }
 
-        // Checks the content inside characters FrienshipTierUI of the Jotter and loads in the same amount
-        for (int i = 0; i < content.childCount; i++)
+        //// Checks the content inside characters FrienshipTierUI of the Jotter and loads in the same amount
+        foreach (var item in content)
         {
-            if(points == -1)
+            if (points == -1)
             {
                 Instantiate(skullPrefab, characterTierContent);
             }
-            else if(points >= 2 && i < 5)
+            else
             {
                 Instantiate(friendshipStarPrefab, characterTierContent);
             }
         }
+
+        // Updates the character image shown on the right side of the jotter ui
+        if (CharacterImageUI.childCount > 0)
+        {
+            foreach (Transform childImage in CharacterImageUI)
+            {
+                Destroy(childImage.gameObject);
+            }
+        }
+        Instantiate(image, CharacterImageUI);
     }
 
     // Updates reputation text in the JotterUI depending their friendship tier enum

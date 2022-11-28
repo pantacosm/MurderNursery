@@ -96,7 +96,7 @@ public class RelationshipComparrison : MonoBehaviour
     {
         if(goonSelected)
         {
-            charNameTextLeft.text = "Goon";
+            charNameTextLeft.text = "Eddie";
             if(juiceboxSelected)
             {
                 charNameTextRight.text = "Juice Box";
@@ -107,7 +107,7 @@ public class RelationshipComparrison : MonoBehaviour
             }
             if(coolguySelected)
             {
-                charNameTextRight.text = "Cool Guy";
+                charNameTextRight.text = "Chase";
                 coolguySelected = false;
                 goonSelected = false;
                 details.UpdateRelationship(details.goonCoolguyList);
@@ -116,18 +116,18 @@ public class RelationshipComparrison : MonoBehaviour
             }
             if(femmeSelected)
             {
-                charNameTextRight.text = "Femme";
+                charNameTextRight.text = "Scarlet";
                 femmeSelected = false;
                 goonSelected = false;
-                details.UpdateRelationship(new());
+                details.UpdateRelationship(details.goonFemmeList);
                 SetActivePanel();
             }
             if(deadGirlSelected)
             {
-                charNameTextRight.text = "Dead Girl";
+                charNameTextRight.text = "Grace";
                 deadGirlSelected = false;
                 goonSelected = false;
-                details.UpdateRelationship(new());
+                details.UpdateRelationship(details.goonDeadGirlList);
                 SetActivePanel();
             }
         }
@@ -137,40 +137,40 @@ public class RelationshipComparrison : MonoBehaviour
     {
         if(coolguySelected)
         {
-            charNameTextLeft.text = "Cool Guy";
+            charNameTextLeft.text = "Chase";
             if(juiceboxSelected)
             {
                 charNameTextRight.text = "Juice Box";
                 juiceboxSelected = false;
                 coolguySelected = false;
-                details.UpdateRelationship(new());
+                details.UpdateRelationship(details.juiceCoolguyList);
                 SetActivePanel();
 
             }
             if(goonSelected)
             {
-                charNameTextRight.text = "Goon";
+                charNameTextRight.text = "Eddie";
                 goonSelected = false;
                 coolguySelected = false;
-                details.UpdateRelationship(new());
+                details.UpdateRelationship(details.goonCoolguyList);
                 SetActivePanel();
 
             }
             if(femmeSelected)
             {
-                charNameTextRight.text = "Femme";
+                charNameTextRight.text = "Scarlet";
                 femmeSelected = false;
                 coolguySelected = false;
-                details.UpdateRelationship(new());
+                details.UpdateRelationship(details.coolGuyFemmeList);
                 SetActivePanel();
 
             }
             if(deadGirlSelected)
             {
-                charNameTextRight.text = "Dead Girl";
+                charNameTextRight.text = "Grace";
                 deadGirlSelected = false;
                 coolguySelected = false;
-                details.UpdateRelationship(new());
+                details.UpdateRelationship(details.coolGuyDeadGirlList);
                 SetActivePanel();
             }
         }
@@ -183,37 +183,37 @@ public class RelationshipComparrison : MonoBehaviour
             charNameTextLeft.text = "Juice Box";
             if(coolguySelected)
             {
-                charNameTextRight.text = "Cool Guy";
+                charNameTextRight.text = "Chase";
                 juiceboxSelected = false;
                 coolguySelected = false;
-                details.UpdateRelationship(new());
+                details.UpdateRelationship(details.juiceCoolguyList);
                 SetActivePanel();
             }
             if(goonSelected)
             {
                 
-                charNameTextRight.text = "Goon";
+                charNameTextRight.text = "Eddie";
                 goonSelected = false;
                 juiceboxSelected = false;
-                details.UpdateRelationship(new());
+                details.UpdateRelationship(details.goonJuiceList);
                 SetActivePanel();
             }
             if(femmeSelected)
             {
                 
-                charNameTextRight.text = "Femme";
+                charNameTextRight.text = "Scarlet";
                 femmeSelected = false;
                 juiceboxSelected = false;
-                details.UpdateRelationship(new());
+                details.UpdateRelationship(details.juiceFemmeList);
                 SetActivePanel();
             }
             if(deadGirlSelected)
             {
                 
-                charNameTextRight.text = "Dead Girl";
+                charNameTextRight.text = "Grace";
                 deadGirlSelected = false;
                 juiceboxSelected = false;
-                details.UpdateRelationship(new());
+                details.UpdateRelationship(details.juiceDeadGirlList);
                 SetActivePanel();
             }
         }
@@ -223,41 +223,41 @@ public class RelationshipComparrison : MonoBehaviour
     {
         if(femmeSelected)
         {
-            charNameTextLeft.text = "Femme";
+            charNameTextLeft.text = "Scarlet";
             if(juiceboxSelected)
             {
                 
                 charNameTextRight.text = "Juice Box";
                 juiceboxSelected = false;
                 femmeSelected = false;
-                details.UpdateRelationship(new());
+                details.UpdateRelationship(details.juiceFemmeList);
                 SetActivePanel();
             }
             if(goonSelected)
             {
                 
-                charNameTextRight.text = "Goon";
+                charNameTextRight.text = "Eddie";
                 goonSelected = false;
                 femmeSelected = false;
-                details.UpdateRelationship(new());
+                details.UpdateRelationship(details.goonFemmeList);
                 SetActivePanel();
             }
             if(coolguySelected)
             {
                 
-                charNameTextRight.text = "Cool Guy";
+                charNameTextRight.text = "Chase";
                 femmeSelected = false;
                 coolguySelected = false;
-                details.UpdateRelationship(new());
+                details.UpdateRelationship(details.coolGuyFemmeList);
                 SetActivePanel();
             }
             if(deadGirlSelected)
             {
                 
-                charNameTextRight.text = "Dead Girl";
+                charNameTextRight.text = "Grace";
                 deadGirlSelected = false;
                 femmeSelected = false;
-                details.UpdateRelationship(new());
+                details.UpdateRelationship(details.femmeDeadGirlList);
                 SetActivePanel();
             }
         }
@@ -267,41 +267,41 @@ public class RelationshipComparrison : MonoBehaviour
     {
         if(deadGirlSelected)
         {
-            charNameTextLeft.text = "Dead Girl";
+            charNameTextLeft.text = "Grace";
             if(juiceboxSelected)
             {
                 
                 charNameTextRight.text = "Juice Box";
                 juiceboxSelected = false;
                 deadGirlSelected = false;
-                details.UpdateRelationship(new());
+                details.UpdateRelationship(details.juiceDeadGirlList);
                 SetActivePanel();
             }
             if(goonSelected)
             {
                 
-                charNameTextRight.text = "Goon";
+                charNameTextRight.text = "Eddie";
                 goonSelected = false;
                 deadGirlSelected = false;
-                details.UpdateRelationship(new());
+                details.UpdateRelationship(details.goonDeadGirlList);
                 SetActivePanel();
             }
             if(femmeSelected)
             {
                 
-                charNameTextRight.text = "Femme";
+                charNameTextRight.text = "Scarlet";
                 femmeSelected = false;
                 deadGirlSelected = false;
-                details.UpdateRelationship(new());
+                details.UpdateRelationship(details.femmeDeadGirlList);
                 SetActivePanel();
             }
             if(coolguySelected)
             {
                 
-                charNameTextRight.text = "Cool Guy";
+                charNameTextRight.text = "Chase";
                 deadGirlSelected = false;
                 coolguySelected = false;
-                details.UpdateRelationship(new());
+                details.UpdateRelationship(details.coolGuyDeadGirlList);
                 SetActivePanel();
             }
         }

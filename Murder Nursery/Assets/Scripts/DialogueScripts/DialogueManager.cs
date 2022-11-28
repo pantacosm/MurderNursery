@@ -244,6 +244,7 @@ public class DialogueManager : MonoBehaviour
                 losingRep = true;
             }
             RM.UpdateReputation(RM.goonPoints += repGain);
+            RM.UpdateGoon();
         }
         if (activeNPC == Femme)
         {
@@ -256,6 +257,7 @@ public class DialogueManager : MonoBehaviour
                 losingRep = true;
             }
             RM.UpdateReputation(RM.femmePoints += repGain);
+            RM.UpdateFemme();
         }
         if (activeNPC == JuiceBox)
         {
@@ -268,6 +270,7 @@ public class DialogueManager : MonoBehaviour
                 losingRep = true;
             }
             RM.UpdateReputation(RM.juiceBoxPoints += repGain);
+            RM.UpdateJuiceBox();
 
         }
         if (activeNPC == CoolGuy)
@@ -281,6 +284,7 @@ public class DialogueManager : MonoBehaviour
                 losingRep = true;
             }
             RM.UpdateReputation(RM.coolGuyPoints += repGain);
+            RM.UpdateCoolGuy();
         }
     }
 

@@ -70,7 +70,6 @@ public class PinboardManager : MonoBehaviour
         UpdatePinboard(GoonLikes, goonLikes[0]);
         UpdatePinboard(GoonLikes, goonLikes[1]);
         UpdatePinboard(GoonDislikes, goonDislikes[0]);
-        UpdatePinboard(GoonDislikes, goonDislikes[1]);
         UpdatePinboard(GoonEvents, goonEvents[0]);
         UpdatePinboard(GoonEvents, goonEvents[1]);
 
@@ -84,7 +83,6 @@ public class PinboardManager : MonoBehaviour
         UpdatePinboard(FemmeLikes, femmeLikes[0]);
         UpdatePinboard(FemmeDislikes, femmeDislikes[0]);
         UpdatePinboard(FemmeDislikes, femmeDislikes[1]);
-        UpdatePinboard(FemmeDislikes, femmeDislikes[2]);
 
         UpdatePinboard(CoolGuyLikes, coolguyLikes[0]);
         UpdatePinboard(CoolGuyLikes, coolguyLikes[1]);

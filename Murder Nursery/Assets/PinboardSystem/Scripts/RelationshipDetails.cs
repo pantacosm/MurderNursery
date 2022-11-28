@@ -32,7 +32,28 @@ public class RelationshipDetails : MonoBehaviour
     public List<string> goonCoolguyList;
 
     [HideInInspector]
+    public List<string> goonFemmeList;
+
+    [HideInInspector]
+    public List<string> goonDeadGirlList;
+
+    [HideInInspector]
     public List<string> juiceCoolguyList;
+
+    [HideInInspector]
+    public List<string> juiceFemmeList;
+
+    [HideInInspector]
+    public List<string> juiceDeadGirlList;
+
+    [HideInInspector]
+    public List<string> coolGuyFemmeList;
+
+    [HideInInspector]
+    public List<string> coolGuyDeadGirlList;
+
+    [HideInInspector]
+    public List<string> femmeDeadGirlList;
 
     // detials to pass in when adding to relationship list
     [Header ("False/Undiscovered Relationship Details")]
@@ -58,12 +79,18 @@ public class RelationshipDetails : MonoBehaviour
         // temp code for prototyping
         goonJuiceList.Add(goonJuiceDetails[0]);
         goonJuiceList.Add(goonJuiceDetails[1]);
+        goonJuiceList.Add(goonJuiceDetails[2]);
 
         goonCoolguyList.Add(goonCoolguyDetails[0]);
+        goonCoolguyList.Add(goonCoolguyDetails[1]);
+        goonCoolguyList.Add(goonCoolguyDetails[2]);
 
         AddToRelationshipOptionsUI(conclusionsList[0]);
         AddToRelationshipOptionsUI(conclusionsList[1]);
         AddToRelationshipOptionsUI(conclusionsList[2]);
+        AddToRelationshipOptionsUI(conclusionsList[3]);
+        AddToRelationshipOptionsUI(conclusionsList[4]);
+        AddToRelationshipOptionsUI(conclusionsList[5]);
     }
 
     public void ClearDetails()

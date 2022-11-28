@@ -32,7 +32,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2506754139236650973
 MonoBehaviour:
@@ -62,8 +62,59 @@ MonoBehaviour:
   DeadGirlDislikes: {fileID: 0}
   DeadGirlEvents: {fileID: 0}
   CharacterTraitsUI: {fileID: 6584414628537741809, guid: 01f40cb9a8752cf4c8e178bfa44550fc, type: 3}
-  RelationshipOptionsUI: {fileID: 1213981622304529268, guid: 08afd2ef3580e2e4cbea7a68c67910c3, type: 3}
-  RelationshipOptionsContent: {fileID: 0}
+  goonLikes:
+  - Chase
+  - Candy Bars
+  - Scarlet
+  - Grace
+  goonDislikes:
+  - Juice Box
+  goonEvents:
+  - Did odd-jobs for Chase.
+  - Had something to do with Juice Box's broken arm.
+  - Capable of violence.
+  coolguyLikes:
+  - Running
+  - Scarlet
+  - Candy Bars
+  coolguyDislikes:
+  - Other People
+  - Juice Box
+  coolguyEvents:
+  - Has been quiet lately.
+  - Has a secret enemy.
+  - Does not trust Scarlet.
+  juiceboxLikes:
+  - Art
+  - Eddie
+  - Juice boxes
+  juiceboxDislikes:
+  - Chase
+  - Grace
+  juiceboxEvents:
+  - Greatest masterpiece is a turkey hand he painted.
+  - Has a broken right arm.
+  - He's ambidextrous.
+  - Has  a love hate relationship with Scarlet.
+  femmeLikes:
+  - Being the favourite
+  - Gossiping
+  femmeDislikes:
+  - Grace
+  - Boys
+  femmeEvents:
+  - Think she's the Queen bee.
+  - Jealous of Grace.
+  - Not the violent type.
+  deadgirlLikes:
+  - Chase
+  - Juice Box
+  deadgirlDislikes:
+  - Juice Box drinking so much
+  deadgirlEvents:
+  - Nursery newbie.
+  - All the boys were interested in her.
+  - Was talking to Chase.
 --- !u!114 &2506754139236650970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76,9 +127,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33248e18ff6c4ff4bb9aefc9c186ce4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  details: {fileID: 0}
   charactersSelected: {fileID: 0}
   relationshipPanel: {fileID: 0}
-  relationshipOptionsPanel: {fileID: 0}
 --- !u!114 &2506754139236650971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93,5 +144,88 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   relationshipUI: {fileID: 9158919659317779731, guid: 65bf00dadb35fdd45b01e18cf54c3a89, type: 3}
   relationshipContent: {fileID: 0}
-  relationshipList: []
-  detailsCorrect: {fileID: 0}
+  relationshipOptionsPanel: {fileID: 0}
+  relationshipOptionsUI: {fileID: 1213981622304529268, guid: 08afd2ef3580e2e4cbea7a68c67910c3, type: 3}
+  optionsContent: {fileID: 0}
+  textToReplace: 
+  goonJuiceList: []
+  goonCoolguyList: []
+  goonFemmeList: []
+  goonDeadGirlList: []
+  juiceCoolguyList: []
+  juiceFemmeList: []
+  juiceDeadGirlList: []
+  coolGuyFemmeList: []
+  coolGuyDeadGirlList: []
+  femmeDeadGirlList: []
+  goonJuiceDetails:
+  - Eddie ????? Juice Box because ?????
+  - Juice Box ????? Eddie because ?????
+  - Juice Box and Eddie are ?????
+  goonCoolguyDetails:
+  - Eddie ????? Chase but ?????
+  - Chase ????? Eddie because ?????
+  - Chase and Eddie are ?????
+  goonDeadgirlDetails:
+  - Eddie ????? Grace because ?????
+  - Grace ????? Eddie because ?????
+  - Eddie and Grace are ?????
+  goonFemmeDetails:
+  - Scarlet ????? Eddie because ?????
+  - Eddie ????? Scarlet because ?????
+  - Eddie and Scarlet are ?????
+  juiceCoolguyDetails:
+  - Juice Box ????? Chase because ?????
+  - Chase ????? Juice Box because ?????
+  - Juice Box and Chase are ?????
+  juiceFemmeDetails:
+  - Juice Box ????? Scarlet because ?????
+  - Scarlet ????? Juice Box because ?????
+  - Juice Box and Scarlet are ?????
+  juiceDeadgirlDetails:
+  - Juice Box ????? Grace because ?????
+  - Grace ????? Juice Box because ?????
+  - Juice Box and Grace are ?????
+  coolguyFemmeDetails:
+  - Chase ????? Scarlet because ?????
+  - Scarlet ????? Chase because ?????
+  - Chase and Scarlet are ?????
+  coolguyDeadgirlDetails:
+  - Chase ????? Grace because ?????
+  - Grace ????? Chase because ?????
+  - Chase and Grace are ?????
+  femmeDeadgirlDetails:
+  - Scarlet ????? Grace because ?????
+  - Grace ????? Scarlet because ?????
+  - Grace and Scarlet are ?????
+  conclusionsList:
+  - Eddie hates Juice Box because Juice Box loves juice.
+  - Juice Box loves Eddie because they have fun.
+  - Eddie loves Chase but Chase don't like bullies.
+  - Juice Box and Eddie are Frenemies
+  - Juice Box dislikes Chase because Chase is sporty.
+  - Chase hates Juice Box because ?????
+  - Juice Box and Chase are bully/victim
+  - Juice Box likes Scarlet because ?????
+  - Scarlet dislikes Juice Box because ?????
+  - Juice Box and Scarlet are dating
+  - Juice Box likes Grace because ?????
+  - Grace likes Juice Box because ?????
+  - Juice Box and Grace are Friends
+  - Chase doesn't care about Eddie because ?????
+  - Chase and Eddie are Friends
+  - Chase likes Scarlet because ?????
+  - Scarlet dislikes Chase because ?????
+  - Chase and Scarlet are Dating
+  - Scarlet dislikes Eddie because ?????
+  - Eddie loves Scarlet because ?????
+  - Eddie and Scarlet are Dating
+  - Chase loves Grace because ?????
+  - Grace loves Chase because ?????
+  - Chase and Grace are Secret Besties
+  - Eddie likes Grace because ?????
+  - Grace dislikes Eddie because ?????
+  - Eddie and Gracel are Distant
+  - Scarlet hates Grace because she's jealous of Grace
+  - Grace dislikes Scarlet because ?????
+  - Grace and Scarlet are Rivals

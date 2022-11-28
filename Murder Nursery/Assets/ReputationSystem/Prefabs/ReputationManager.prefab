@@ -30,7 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2873506898117971542
 MonoBehaviour:
@@ -58,10 +58,10 @@ MonoBehaviour:
   femmeNotesContent: {fileID: 0}
   juiceboxNotesContent: {fileID: 0}
   coolguyNotesContent: {fileID: 0}
-  goonPoints: 2
-  coolGuyPoints: 5
-  femmePoints: -1
-  juiceBoxPoints: 10
+  goonPoints: 0
+  coolGuyPoints: 0
+  femmePoints: 0
+  juiceBoxPoints: 0
   goonNotes: []
   femmeNotes: []
   juiceboxNotes: []

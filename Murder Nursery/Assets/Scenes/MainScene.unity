@@ -692,22 +692,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1001649219239282225, guid: f123bf29eeaafcb45955e31a7720ecb0, type: 3}
   m_PrefabInstance: {fileID: 1001649219162412920}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &136846451 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7000148856994520084, guid: 671789fe9964ae94ba3f1d13672b3e49, type: 3}
-  m_PrefabInstance: {fileID: 7000148856862916711}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &136846452 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7000148856994520083, guid: 671789fe9964ae94ba3f1d13672b3e49, type: 3}
-  m_PrefabInstance: {fileID: 7000148856862916711}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 136846451}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89139cb3fe37d7d4b939a8c45110815c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &139499157 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -5347215952048231963, guid: f64b3bb8f8bb7394d9c35a90780e1b91, type: 3}
@@ -1337,7 +1321,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1356.2596, y: 1551.8315}
+  m_AnchoredPosition: {x: -1356.2598, y: 1551.8314}
   m_SizeDelta: {x: -2712.5972, y: -480.9967}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &389297946
@@ -1461,8 +1445,17 @@ Transform:
   m_Children:
   - {fileID: 1662952291}
   m_Father: {fileID: 0}
+<<<<<<< Updated upstream
   m_RootOrder: 26
+=======
+  m_RootOrder: 24
+>>>>>>> Stashed changes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!224 &433480736 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2708390522689039104, guid: 51c6c7f4cd75872458cb3ef685008667, type: 3}
+  m_PrefabInstance: {fileID: 6116977971574435093}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &456157595
 GameObject:
   m_ObjectHideFlags: 0
@@ -1720,6 +1713,145 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 475672494}
   m_CullTransparentMesh: 1
+--- !u!1001 &480519831
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 2
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2873506898117971537, guid: fa8344d6ae8a15843a5dcc00dfa06657, type: 3}
+      propertyPath: m_Name
+      value: ReputationManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 2873506898117971542, guid: fa8344d6ae8a15843a5dcc00dfa06657, type: 3}
+      propertyPath: JotterUI
+      value: 
+      objectReference: {fileID: 2050490978}
+    - target: {fileID: 2873506898117971542, guid: fa8344d6ae8a15843a5dcc00dfa06657, type: 3}
+      propertyPath: GoonImage
+      value: 
+      objectReference: {fileID: 6523157589042792933, guid: 358c92b731f690246ad8a5874ee232ea, type: 3}
+    - target: {fileID: 2873506898117971542, guid: fa8344d6ae8a15843a5dcc00dfa06657, type: 3}
+      propertyPath: FemmeImage
+      value: 
+      objectReference: {fileID: 5864208080734772782, guid: 7394fc73c78ac0443811d87664a4f144, type: 3}
+    - target: {fileID: 2873506898117971542, guid: fa8344d6ae8a15843a5dcc00dfa06657, type: 3}
+      propertyPath: goonPoints
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2873506898117971542, guid: fa8344d6ae8a15843a5dcc00dfa06657, type: 3}
+      propertyPath: GoonContent
+      value: 
+      objectReference: {fileID: 1999443968}
+    - target: {fileID: 2873506898117971542, guid: fa8344d6ae8a15843a5dcc00dfa06657, type: 3}
+      propertyPath: femmePoints
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2873506898117971542, guid: fa8344d6ae8a15843a5dcc00dfa06657, type: 3}
+      propertyPath: CoolGuyImage
+      value: 
+      objectReference: {fileID: 5051787042514031050, guid: 063f7bc81ad1341408085feabadf1a66, type: 3}
+    - target: {fileID: 2873506898117971542, guid: fa8344d6ae8a15843a5dcc00dfa06657, type: 3}
+      propertyPath: FemmeContent
+      value: 
+      objectReference: {fileID: 1166021992}
+    - target: {fileID: 2873506898117971542, guid: fa8344d6ae8a15843a5dcc00dfa06657, type: 3}
+      propertyPath: JuiceBoxImage
+      value: 
+      objectReference: {fileID: 4292891478034005822, guid: c7cef02f843c8c7449c1e4aff890438c, type: 3}
+    - target: {fileID: 2873506898117971542, guid: fa8344d6ae8a15843a5dcc00dfa06657, type: 3}
+      propertyPath: coolGuyPoints
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2873506898117971542, guid: fa8344d6ae8a15843a5dcc00dfa06657, type: 3}
+      propertyPath: CoolGuyContent
+      value: 
+      objectReference: {fileID: 1148207901}
+    - target: {fileID: 2873506898117971542, guid: fa8344d6ae8a15843a5dcc00dfa06657, type: 3}
+      propertyPath: characterPanel
+      value: 
+      objectReference: {fileID: 1213684921}
+    - target: {fileID: 2873506898117971542, guid: fa8344d6ae8a15843a5dcc00dfa06657, type: 3}
+      propertyPath: juiceBoxPoints
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2873506898117971542, guid: fa8344d6ae8a15843a5dcc00dfa06657, type: 3}
+      propertyPath: JuiceBoxContent
+      value: 
+      objectReference: {fileID: 1325303316}
+    - target: {fileID: 2873506898117971542, guid: fa8344d6ae8a15843a5dcc00dfa06657, type: 3}
+      propertyPath: CharacterImageUI
+      value: 
+      objectReference: {fileID: 433480736}
+    - target: {fileID: 2873506898117971542, guid: fa8344d6ae8a15843a5dcc00dfa06657, type: 3}
+      propertyPath: goonNotesContent
+      value: 
+      objectReference: {fileID: 456889984}
+    - target: {fileID: 2873506898117971542, guid: fa8344d6ae8a15843a5dcc00dfa06657, type: 3}
+      propertyPath: femmeNotesContent
+      value: 
+      objectReference: {fileID: 6116977971574435096}
+    - target: {fileID: 2873506898117971542, guid: fa8344d6ae8a15843a5dcc00dfa06657, type: 3}
+      propertyPath: coolguyNotesContent
+      value: 
+      objectReference: {fileID: 6116977971574435094}
+    - target: {fileID: 2873506898117971542, guid: fa8344d6ae8a15843a5dcc00dfa06657, type: 3}
+      propertyPath: characterTierContent
+      value: 
+      objectReference: {fileID: 839654262}
+    - target: {fileID: 2873506898117971542, guid: fa8344d6ae8a15843a5dcc00dfa06657, type: 3}
+      propertyPath: juiceboxNotesContent
+      value: 
+      objectReference: {fileID: 6116977971574435095}
+    - target: {fileID: 2873506898117971543, guid: fa8344d6ae8a15843a5dcc00dfa06657, type: 3}
+      propertyPath: m_RootOrder
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 2873506898117971543, guid: fa8344d6ae8a15843a5dcc00dfa06657, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2873506898117971543, guid: fa8344d6ae8a15843a5dcc00dfa06657, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2873506898117971543, guid: fa8344d6ae8a15843a5dcc00dfa06657, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2873506898117971543, guid: fa8344d6ae8a15843a5dcc00dfa06657, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2873506898117971543, guid: fa8344d6ae8a15843a5dcc00dfa06657, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2873506898117971543, guid: fa8344d6ae8a15843a5dcc00dfa06657, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2873506898117971543, guid: fa8344d6ae8a15843a5dcc00dfa06657, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2873506898117971543, guid: fa8344d6ae8a15843a5dcc00dfa06657, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2873506898117971543, guid: fa8344d6ae8a15843a5dcc00dfa06657, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2873506898117971543, guid: fa8344d6ae8a15843a5dcc00dfa06657, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_AddedGameObjects: []
+  m_SourcePrefab: {fileID: 100100000, guid: fa8344d6ae8a15843a5dcc00dfa06657, type: 3}
 --- !u!1 &488529801
 GameObject:
   m_ObjectHideFlags: 0
@@ -1803,7 +1935,11 @@ Transform:
   m_Children:
   - {fileID: 365704600}
   m_Father: {fileID: 0}
+<<<<<<< Updated upstream
   m_RootOrder: 24
+=======
+  m_RootOrder: 22
+>>>>>>> Stashed changes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &494680920
 GameObject:
@@ -2269,7 +2405,7 @@ PrefabInstance:
     - target: {fileID: 1247166577472143928, guid: 0ccfe2584ae8d3348baa971558f62141, type: 3}
       propertyPath: repManager
       value: 
-      objectReference: {fileID: 136846451}
+      objectReference: {fileID: 0}
     - target: {fileID: 1247166577472143928, guid: 0ccfe2584ae8d3348baa971558f62141, type: 3}
       propertyPath: npcNameArea
       value: 
@@ -3154,7 +3290,11 @@ Transform:
   m_Children:
   - {fileID: 361309822}
   m_Father: {fileID: 0}
+<<<<<<< Updated upstream
   m_RootOrder: 27
+=======
+  m_RootOrder: 25
+>>>>>>> Stashed changes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &857170631 stripped
 RectTransform:
@@ -3398,7 +3538,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 887190577}
-  m_LocalRotation: {x: 0.095343545, y: 0.000000013827169, z: -0.0000000013243646, w: 0.9954445}
+  m_LocalRotation: {x: 0.09534356, y: -0.000000017655134, z: 0.0000000016910068, w: 0.9954445}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4874,7 +5014,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1254365693}
-  m_LocalRotation: {x: 0.14925902, y: -0, z: -0, w: 0.98879814}
+  m_LocalRotation: {x: 0.14925902, y: -1e-45, z: -0, w: 0.98879814}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5152,7 +5292,11 @@ Transform:
   m_Children:
   - {fileID: 1661519761}
   m_Father: {fileID: 0}
+<<<<<<< Updated upstream
   m_RootOrder: 25
+=======
+  m_RootOrder: 23
+>>>>>>> Stashed changes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1382500522
 GameObject:
@@ -5328,9 +5472,9 @@ RectTransform:
   - {fileID: 1853417189}
   - {fileID: 1436896498}
   - {fileID: 1597744527}
-  - {fileID: 2050490979}
   - {fileID: 1730785442}
   - {fileID: 475672495}
+  - {fileID: 2050490979}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5390,7 +5534,7 @@ Canvas:
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 963194227}
-  m_PlaneDistance: 100
+  m_PlaneDistance: 1
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -5733,7 +5877,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8948470477203751158, guid: efac65689e3d89842bd845899d51767e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -658.9201
+      value: -658.92017
       objectReference: {fileID: 0}
     - target: {fileID: 8948470477203751158, guid: efac65689e3d89842bd845899d51767e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -6737,7 +6881,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
+    rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -6952,7 +7096,7 @@ PrefabInstance:
     - target: {fileID: 6433059971483124855, guid: 54b16d245329ed24fb0d7ed65d2f5cff, type: 3}
       propertyPath: repManager
       value: 
-      objectReference: {fileID: 136846451}
+      objectReference: {fileID: 0}
     - target: {fileID: 6433059971483124855, guid: 54b16d245329ed24fb0d7ed65d2f5cff, type: 3}
       propertyPath: npcNameArea
       value: 
@@ -7058,6 +7202,22 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8539272253757505686, guid: ba753dabcc8473e4bb7846fce759fd23, type: 3}
   m_PrefabInstance: {fileID: 8539272254242125606}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1751095590 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2873506898117971537, guid: fa8344d6ae8a15843a5dcc00dfa06657, type: 3}
+  m_PrefabInstance: {fileID: 480519831}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1751095591 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2873506898117971542, guid: fa8344d6ae8a15843a5dcc00dfa06657, type: 3}
+  m_PrefabInstance: {fileID: 480519831}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751095590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89139cb3fe37d7d4b939a8c45110815c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1757886374
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7129,7 +7289,7 @@ PrefabInstance:
     - target: {fileID: 8639815407638529141, guid: ec29c44ed3bb89647840c47cd92a3f03, type: 3}
       propertyPath: repManager
       value: 
-      objectReference: {fileID: 136846451}
+      objectReference: {fileID: 0}
     - target: {fileID: 8639815407638529141, guid: ec29c44ed3bb89647840c47cd92a3f03, type: 3}
       propertyPath: npcNameArea
       value: 
@@ -7401,7 +7561,7 @@ PrefabInstance:
     - target: {fileID: 4202205716510092984, guid: 8515c6d86e2cdba4782ae54b6572276a, type: 3}
       propertyPath: repManager
       value: 
-      objectReference: {fileID: 136846451}
+      objectReference: {fileID: 0}
     - target: {fileID: 4202205716510092984, guid: 8515c6d86e2cdba4782ae54b6572276a, type: 3}
       propertyPath: npcNameArea
       value: 
@@ -8001,7 +8161,7 @@ MonoBehaviour:
   goodEndingReached: 0
   badEndingReached: 0
   manager: {fileID: 0}
-  repManager: {fileID: 136846451}
+  repManager: {fileID: 1751095590}
 --- !u!1 &1922029153
 GameObject:
   m_ObjectHideFlags: 0
@@ -8848,7 +9008,7 @@ PrefabInstance:
     - target: {fileID: 64911682466373705, guid: 8a548156d801c664988451aa214d7ccf, type: 3}
       propertyPath: repManager
       value: 
-      objectReference: {fileID: 136846451}
+      objectReference: {fileID: 1751095590}
     - target: {fileID: 64911682466373705, guid: 8a548156d801c664988451aa214d7ccf, type: 3}
       propertyPath: dialogueZone
       value: 
@@ -8884,7 +9044,7 @@ PrefabInstance:
     - target: {fileID: 64911682466373710, guid: 8a548156d801c664988451aa214d7ccf, type: 3}
       propertyPath: repManager
       value: 
-      objectReference: {fileID: 136846451}
+      objectReference: {fileID: 1751095590}
     - target: {fileID: 64911682466373710, guid: 8a548156d801c664988451aa214d7ccf, type: 3}
       propertyPath: npcStatement
       value: 
@@ -9083,10 +9243,70 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1488023838}
+    - target: {fileID: 2026140423784994322, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140423784994322, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140423795585793, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140423795585793, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140423795585793, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -17
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140423798322126, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140423798322126, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140423801127426, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140423801127426, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140423801127426, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -17
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140423920299120, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140423920299120, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2026140423920822170, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 221329516}
+    - target: {fileID: 2026140423972619381, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140423972619381, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140423972619381, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -17
+      objectReference: {fileID: 0}
     - target: {fileID: 2026140424009595698, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -9175,18 +9395,262 @@ PrefabInstance:
       propertyPath: m_Name
       value: PinboardPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 2026140424009595699, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140424077258520, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140424077258520, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140424224105301, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140424224105301, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140424230353785, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140424230353785, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140424237651252, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140424237651252, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140424237651252, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -17
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140424270257135, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140424270257135, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140424270257135, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -17
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140424425621217, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140424425621217, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140424425621217, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -17
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140424448263434, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140424448263434, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140424523773450, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140424523773450, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140424523773450, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -17
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140424595106504, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140424595106504, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140424595106504, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -17
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140424704829873, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140424704829873, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140424704829873, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -17
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140424745466419, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140424745466419, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140424837615794, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140424837615794, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2026140424881924139, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 221329516}
+    - target: {fileID: 2026140424997649490, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140424997649490, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140425069691305, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140425069691305, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140425078291186, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140425078291186, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140425115572244, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140425115572244, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140425207297301, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140425207297301, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140425207297301, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -17
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140425252275264, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140425252275264, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140425283153118, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140425283153118, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140425283153118, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -17
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140425404256417, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140425404256417, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140425404256417, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -17
+      objectReference: {fileID: 0}
     - target: {fileID: 2026140425412382371, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 221329516}
+    - target: {fileID: 2026140425469689479, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140425469689479, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140425469689479, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -17
+      objectReference: {fileID: 0}
     - target: {fileID: 2026140425472214879, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 221329516}
+    - target: {fileID: 2026140425531683906, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140425531683906, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140425591667367, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140425591667367, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140425591667367, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -17
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140425726977475, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140425726977475, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2026140425726977475, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -17
+      objectReference: {fileID: 0}
     - target: {fileID: 2026140425886193635, guid: ec81d26bedbe51a4cba89b9295f9df97, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -9203,18 +9667,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2506754139236650970, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: goonCoolContent1
-      value: Goon likes Cool Guy but ?????
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650970, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: goonJuiceContent1
-      value: Goon ????? Juice Box because ?????
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650970, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: goonJuiceContent2
-      value: Juice Box likes Goon because ?????
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650970, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
       propertyPath: relationshipPanel
       value: 
       objectReference: {fileID: 2039141234}
@@ -9222,290 +9674,18 @@ PrefabInstance:
       propertyPath: charactersSelected
       value: 
       objectReference: {fileID: 1472647731}
-    - target: {fileID: 2506754139236650970, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: goonCoolConclusion1
-      value: Goon likes Cool Guy but Cool Guy don't like no bullies.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650970, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: goonJuiceConclusion1
-      value: Goon dislikes Juice Box because he's dating Femme.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650970, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: goonJuiceConclusion2
-      value: Juice Box likes Goon because he gave him juice once.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650970, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: relationshipOptionsPanel
-      value: 
-      objectReference: {fileID: 1853417188}
-    - target: {fileID: 2506754139236650970, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: relationshipContents.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650970, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: relationshipContents.Array.data[0]
-      value: Goon ????? Juice Box because ?????.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650970, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: relationshipContents.Array.data[1]
-      value: Juice Box likes Goon.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: updateText
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
       propertyPath: optionsContent
       value: 
       objectReference: {fileID: 1320803934}
     - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: goonCoolContent1
-      value: Goon likes Cool Guy but ?????
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: goonJuiceContent1
-      value: Goon ????? Juice Box because ?????
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: goonJuiceContent2
-      value: Juice Box likes Goon because ?????
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: goonCoolConclusion1
-      value: Goon likes Cool Guy but Cool Guy don't like bullies.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
       propertyPath: relationshipContent
       value: 
       objectReference: {fileID: 133632329}
     - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: goonJuiceConclusion1
-      value: Goon dislikes Juice Box because he's dating Femme.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: goonJuiceConclusion2
-      value: Juice Box likes Goon because he gave him juice once.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: relationshipOptionsUI
-      value: 
-      objectReference: {fileID: 1213981622304529268, guid: 08afd2ef3580e2e4cbea7a68c67910c3, type: 3}
-    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
       propertyPath: relationshipOptionsPanel
       value: 
       objectReference: {fileID: 1853417188}
-    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: conclusionsList.Array.size
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: goonFemmeDetails.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: goonJuiceDetails.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: juiceFemmeDetails.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: conclusionsList.Array.data[0]
-      value: Goon dislikes Juice Box because JB loves juice.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: conclusionsList.Array.data[1]
-      value: Juice Box likes Goon because he gave him juice once.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: conclusionsList.Array.data[2]
-      value: Goon likes Cool Guy but Cool Guy don't like bullies.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: conclusionsList.Array.data[3]
-      value: Juice Box and Goon are Frenemies
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: conclusionsList.Array.data[4]
-      value: Juice Box dislikes Cool Guy because Cool Guy is sporty.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: conclusionsList.Array.data[5]
-      value: Cool Guy hates Juice Box because ?????
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: conclusionsList.Array.data[6]
-      value: Juice Box and Cool Guy are bully/victim
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: conclusionsList.Array.data[7]
-      value: Juice Box likes Femme because ?????
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: conclusionsList.Array.data[8]
-      value: Femme dislikes JB because ?????
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: conclusionsList.Array.data[9]
-      value: Juice Box and Femme are dating
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: goonCoolguyDetails.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: conclusionsList.Array.data[10]
-      value: Juice Box likes Dead Girl because ?????
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: coolguyFemmeDetails.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: goonDeadgirlDetails.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: goonFemmeDetails.Array.data[0]
-      value: Femme ????? Goon because ?????
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: goonFemmeDetails.Array.data[1]
-      value: Goon ????? Femme because ?????
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: goonFemmeDetails.Array.data[2]
-      value: Goon and Femme are ?????
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: goonJuiceDetails.Array.data[0]
-      value: Goon ????? Juice Box because ?????
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: goonJuiceDetails.Array.data[1]
-      value: Juice Box ????? Goon because ?????
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: goonJuiceDetails.Array.data[2]
-      value: Juice Box and Goon are ?????
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: juiceCoolguyDetails.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: femmeDeadgirlDetails.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: juiceDeadgirlDetails.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: juiceFemmeDetails.Array.data[0]
-      value: Juice Box ????? Femme because ?????
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: juiceFemmeDetails.Array.data[1]
-      value: Femme ????? Juice Box because ?????
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: juiceFemmeDetails.Array.data[2]
-      value: Juice Box and Femme are ?????
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: goonCoolguyDetails.Array.data[0]
-      value: Goon ????? Cool Guy because ?????
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: goonCoolguyDetails.Array.data[1]
-      value: Cool Guy ????? Goon because ?????
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: goonCoolguyDetails.Array.data[2]
-      value: Cool Guy and Goon are ?????
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: coolguyDeadgirlDetails.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: coolguyFemmeDetails.Array.data[0]
-      value: Cool Guy ????? Femme because ?????
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: coolguyFemmeDetails.Array.data[1]
-      value: Femme ????? Cool Guy because ?????
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: coolguyFemmeDetails.Array.data[2]
-      value: Cool Guy and Femme are ?????
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: goonDeadgirlDetails.Array.data[0]
-      value: Goon ????? Dead Girl because ?????
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: goonDeadgirlDetails.Array.data[1]
-      value: Dead Girl ????? Goon because ?????
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: goonDeadgirlDetails.Array.data[2]
-      value: Goon and Dead Girl are ?????
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: juiceCoolguyDetails.Array.data[0]
-      value: Juice Box ????? Cool Guy because ?????
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: juiceCoolguyDetails.Array.data[1]
-      value: Cool Guy ????? Juice Box because ?????
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: juiceCoolguyDetails.Array.data[2]
-      value: Juice Box and Cool Guy are ?????
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: juiceCoolguyDetails.Array.data[3]
-      value: Cool Guy ????? Juice Box
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: femmeDeadgirlDetails.Array.data[0]
-      value: Femme ????? Dead Girl because ?????
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: femmeDeadgirlDetails.Array.data[1]
-      value: Dead Girl ????? Femme because ?????
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: femmeDeadgirlDetails.Array.data[2]
-      value: Dead Girl and Femme are ?????
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: juiceDeadgirlDetails.Array.data[0]
-      value: Juice Box ????? Dead Girl because ?????
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: juiceDeadgirlDetails.Array.data[1]
-      value: Dead Girl ????? Juice Box because ?????
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: juiceDeadgirlDetails.Array.data[2]
-      value: Juice Box and Dead Girl are ?????
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: coolguyDeadgirlDetails.Array.data[0]
-      value: Cool Guy ????? Dead Girl because ?????
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: coolguyDeadgirlDetails.Array.data[1]
-      value: Dead Girl ????? Cool Guy because ?????
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650971, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: coolguyDeadgirlDetails.Array.data[2]
-      value: Cool Guy and Dead Girl are ?????
-      objectReference: {fileID: 0}
     - target: {fileID: 2506754139236650972, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
       propertyPath: m_RootOrder
       value: 19
@@ -9610,230 +9790,6 @@ PrefabInstance:
       propertyPath: JuiceboxDislikes
       value: 
       objectReference: {fileID: 1832295230}
-    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: goonLikes.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: femmeLikes.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: goonEvents.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: femmeEvents.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: coolguyLikes.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: goonDislikes.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: goonLikes.Array.data[0]
-      value: Cool Guy
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: goonLikes.Array.data[1]
-      value: Candy Bars
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: goonLikes.Array.data[2]
-      value: Femme
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: goonLikes.Array.data[3]
-      value: Dead Girl
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: coolguyEvents.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: deadgirlLikes.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: femmeDislikes.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: femmeLikes.Array.data[0]
-      value: Being the favourite
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: femmeLikes.Array.data[1]
-      value: Gossiping
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: goonEvents.Array.data[0]
-      value: Did odd-jobs for Cool Guy.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: goonEvents.Array.data[1]
-      value: Had something to do with JB's broken arm.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: goonEvents.Array.data[2]
-      value: Capable of violence.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: juiceboxLikes.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: deadgirlEvents.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: femmeEvents.Array.data[0]
-      value: Think she's the Queen bee.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: femmeEvents.Array.data[1]
-      value: Jealous of Dead Girl.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: femmeEvents.Array.data[2]
-      value: Not the violent type.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: juiceboxEvents.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: RelationshipOptionsContent
-      value: 
-      objectReference: {fileID: 1320803934}
-    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: coolguyDislikes.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: coolguyLikes.Array.data[0]
-      value: Running
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: coolguyLikes.Array.data[1]
-      value: Femme
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: coolguyLikes.Array.data[2]
-      value: Candy Bars
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: goonDislikes.Array.data[0]
-      value: Juice Box
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: goonDislikes.Array.data[1]
-      value: Juice Box
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: coolguyEvents.Array.data[0]
-      value: Has been quiet lately.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: coolguyEvents.Array.data[1]
-      value: Has a secret enemy.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: coolguyEvents.Array.data[2]
-      value: Does not trust Femme.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: deadgirlDislikes.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: deadgirlLikes.Array.data[0]
-      value: Cool Guy
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: deadgirlLikes.Array.data[1]
-      value: Juice Box
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: femmeDislikes.Array.data[0]
-      value: Dead Girl
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: femmeDislikes.Array.data[1]
-      value: Boys
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: femmeDislikes.Array.data[2]
-      value: Boys
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: juiceboxDislikes.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: juiceboxLikes.Array.data[0]
-      value: Art
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: juiceboxLikes.Array.data[1]
-      value: Goon
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: juiceboxLikes.Array.data[2]
-      value: Juice boxes
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: deadgirlEvents.Array.data[0]
-      value: Nursery newbie.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: deadgirlEvents.Array.data[1]
-      value: All the boys were interested in her.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: deadgirlEvents.Array.data[2]
-      value: Was talking to Cool Guy.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: juiceboxEvents.Array.data[0]
-      value: Greatest masterpiece is a turkey hand he painted.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: juiceboxEvents.Array.data[1]
-      value: Has a broken right arm.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: juiceboxEvents.Array.data[2]
-      value: He's ambidextrous.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: juiceboxEvents.Array.data[3]
-      value: Has  a love hate relationship with Femme.
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: coolguyDislikes.Array.data[0]
-      value: Other People
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: coolguyDislikes.Array.data[1]
-      value: Juice Box
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: deadgirlDislikes.Array.data[0]
-      value: Juice Box drinking so much
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: juiceboxDislikes.Array.data[0]
-      value: Cool Guy
-      objectReference: {fileID: 0}
-    - target: {fileID: 2506754139236650973, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
-      propertyPath: juiceboxDislikes.Array.data[1]
-      value: Dead Girl
-      objectReference: {fileID: 0}
     - target: {fileID: 2506754139236650975, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
       propertyPath: m_Name
       value: PinboardManager
@@ -9849,6 +9805,14 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 1430613555}
     m_Modifications:
+    - target: {fileID: 2783186728316544646, guid: e293644794acb9649a349dbfec9a49c2, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2783186728316544646, guid: e293644794acb9649a349dbfec9a49c2, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2783186728360716678, guid: e293644794acb9649a349dbfec9a49c2, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -9937,6 +9901,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: RelationshipOptionsPanel
       objectReference: {fileID: 0}
+    - target: {fileID: 2783186728360716679, guid: e293644794acb9649a349dbfec9a49c2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2783186728461996235, guid: e293644794acb9649a349dbfec9a49c2, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2783186728461996235, guid: e293644794acb9649a349dbfec9a49c2, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2783186728461996235, guid: e293644794acb9649a349dbfec9a49c2, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -17
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: e293644794acb9649a349dbfec9a49c2, type: 3}
@@ -9948,6 +9928,18 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 1430613555}
     m_Modifications:
+    - target: {fileID: 3865871985307638114, guid: 58899154d31653145b5b51b845212940, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3865871985307638114, guid: 58899154d31653145b5b51b845212940, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3865871985307638114, guid: 58899154d31653145b5b51b845212940, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -17
+      objectReference: {fileID: 0}
     - target: {fileID: 3865871985482755963, guid: 58899154d31653145b5b51b845212940, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -9955,6 +9947,10 @@ PrefabInstance:
     - target: {fileID: 3865871985718735409, guid: 58899154d31653145b5b51b845212940, type: 3}
       propertyPath: m_Name
       value: InventoryPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 3865871985718735409, guid: 58899154d31653145b5b51b845212940, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3865871985718735410, guid: 58899154d31653145b5b51b845212940, type: 3}
       propertyPath: m_Pivot.x
@@ -10039,6 +10035,14 @@ PrefabInstance:
     - target: {fileID: 3865871985718735410, guid: 58899154d31653145b5b51b845212940, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3865871986058606761, guid: 58899154d31653145b5b51b845212940, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3865871986058606761, guid: 58899154d31653145b5b51b845212940, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -10162,10 +10166,14 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6116977970221810699, guid: 51c6c7f4cd75872458cb3ef685008667, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6116977970577371662, guid: 51c6c7f4cd75872458cb3ef685008667, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 136846452}
+      objectReference: {fileID: 1751095591}
     - target: {fileID: 6116977970577371663, guid: 51c6c7f4cd75872458cb3ef685008667, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -10184,35 +10192,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6116977970577371663, guid: 51c6c7f4cd75872458cb3ef685008667, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 120
+      value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 6116977970577371663, guid: 51c6c7f4cd75872458cb3ef685008667, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -677
+      value: -774.42004
       objectReference: {fileID: 0}
     - target: {fileID: 6116977970637844911, guid: 51c6c7f4cd75872458cb3ef685008667, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6116977970637844911, guid: 51c6c7f4cd75872458cb3ef685008667, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6116977970637844911, guid: 51c6c7f4cd75872458cb3ef685008667, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6116977970637844911, guid: 51c6c7f4cd75872458cb3ef685008667, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 1300
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6116977970637844911, guid: 51c6c7f4cd75872458cb3ef685008667, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 550
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6116977970637844911, guid: 51c6c7f4cd75872458cb3ef685008667, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -650
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6116977970662232689, guid: 51c6c7f4cd75872458cb3ef685008667, type: 3}
       propertyPath: m_AnchorMax.x
@@ -10229,7 +10237,7 @@ PrefabInstance:
     - target: {fileID: 6116977970737978226, guid: 51c6c7f4cd75872458cb3ef685008667, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 136846452}
+      objectReference: {fileID: 1751095591}
     - target: {fileID: 6116977970737978236, guid: 51c6c7f4cd75872458cb3ef685008667, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -10248,11 +10256,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6116977970737978236, guid: 51c6c7f4cd75872458cb3ef685008667, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 120
+      value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 6116977970737978236, guid: 51c6c7f4cd75872458cb3ef685008667, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -177
+      value: -170
       objectReference: {fileID: 0}
     - target: {fileID: 6116977970871365494, guid: 51c6c7f4cd75872458cb3ef685008667, type: 3}
       propertyPath: m_Pivot.x
@@ -10308,15 +10316,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6116977970871365494, guid: 51c6c7f4cd75872458cb3ef685008667, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6116977970871365494, guid: 51c6c7f4cd75872458cb3ef685008667, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6116977970871365494, guid: 51c6c7f4cd75872458cb3ef685008667, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6116977970871365494, guid: 51c6c7f4cd75872458cb3ef685008667, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -10349,7 +10357,7 @@ PrefabInstance:
     - target: {fileID: 6116977970871655252, guid: 51c6c7f4cd75872458cb3ef685008667, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 136846452}
+      objectReference: {fileID: 1751095591}
     - target: {fileID: 6116977970871655253, guid: 51c6c7f4cd75872458cb3ef685008667, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -10368,23 +10376,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6116977970871655253, guid: 51c6c7f4cd75872458cb3ef685008667, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 120
+      value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 6116977970871655253, guid: 51c6c7f4cd75872458cb3ef685008667, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -427
+      value: -477.21002
+      objectReference: {fileID: 0}
+    - target: {fileID: 6116977971425115029, guid: 51c6c7f4cd75872458cb3ef685008667, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.00022888184
       objectReference: {fileID: 0}
     - target: {fileID: 6116977971984400124, guid: 51c6c7f4cd75872458cb3ef685008667, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 977
+      value: 1141.63
       objectReference: {fileID: 0}
     - target: {fileID: 6116977971984400124, guid: 51c6c7f4cd75872458cb3ef685008667, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 649.9998
+      value: 650.00037
       objectReference: {fileID: 0}
     - target: {fileID: 6116977972213728455, guid: 51c6c7f4cd75872458cb3ef685008667, type: 3}
       propertyPath: m_Value
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6116977972242583766, guid: 51c6c7f4cd75872458cb3ef685008667, type: 3}
       propertyPath: m_SizeDelta.y
@@ -10393,7 +10405,7 @@ PrefabInstance:
     - target: {fileID: 6116977972245143033, guid: 51c6c7f4cd75872458cb3ef685008667, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 136846452}
+      objectReference: {fileID: 1751095591}
     - target: {fileID: 6116977972245143038, guid: 51c6c7f4cd75872458cb3ef685008667, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -10412,11 +10424,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6116977972245143038, guid: 51c6c7f4cd75872458cb3ef685008667, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 120
+      value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 6116977972245143038, guid: 51c6c7f4cd75872458cb3ef685008667, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -927
+      value: -1091.63
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -10495,6 +10507,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: ad2b11c0c08117843a714b84ec521bb6, type: 3}
+<<<<<<< Updated upstream
 --- !u!1001 &7000148856862916711
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10610,6 +10623,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 671789fe9964ae94ba3f1d13672b3e49, type: 3}
+=======
+>>>>>>> Stashed changes
 --- !u!1001 &8539272254242125606
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10704,7 +10719,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8539272253350138537, guid: ba753dabcc8473e4bb7846fce759fd23, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -585.07
+      value: -585.07007
       objectReference: {fileID: 0}
     - target: {fileID: 8539272253350138537, guid: ba753dabcc8473e4bb7846fce759fd23, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -10717,6 +10732,10 @@ PrefabInstance:
     - target: {fileID: 8539272253350138537, guid: ba753dabcc8473e4bb7846fce759fd23, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8539272253722130062, guid: ba753dabcc8473e4bb7846fce759fd23, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -79.586914
       objectReference: {fileID: 0}
     - target: {fileID: 8539272253757505684, guid: ba753dabcc8473e4bb7846fce759fd23, type: 3}
       propertyPath: m_fontAsset

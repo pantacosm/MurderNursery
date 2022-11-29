@@ -30,7 +30,8 @@ public class DialogueNode : MonoBehaviour
     public bool triggerBadEnd = false;
     public bool lockingFirstPath = false;
     public bool lockingSecondPath = false;
-    public bool lockingThirdPath = false;
+    public bool lockingThirdPath
+        = false;
 
     private void Start()
     {

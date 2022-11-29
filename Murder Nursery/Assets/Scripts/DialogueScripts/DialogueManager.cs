@@ -44,6 +44,7 @@ public class DialogueManager : MonoBehaviour
     public bool trueEndingReached = false;
     public bool goodEndingReached = false;
     public bool badEndingReached = false;
+    public GameObject dressUpBox;
 
 
     [HideInInspector]
@@ -154,10 +155,19 @@ public class DialogueManager : MonoBehaviour
         {
             activeNode.nodeActive = false;
         }
-
-        activeNode = newNode;
-        newNode.nodeActive = true;
-        npcStatement.GetComponent<TextMeshProUGUI>().text = newNode.speech;
+        if (newNode.fitCheck)
+        {
+            if (dressUpBox.GetComponent<DressUp>().checkOutfit(activeNode.requiredOutfit))
+            {
+                activeNode = newNode.dressUpNode;
+            }
+        }
+        else if (!newNode.fitCheck || !dressUpBox.GetComponent<DressUp>().checkOutfit(activeNode.requiredOutfit))
+        {
+            activeNode = newNode;
+        }
+        activeNode.nodeActive = true;
+        npcStatement.GetComponent<TextMeshProUGUI>().text = activeNode.speech;
         if (!activeNode.firstPathLocked)
         {
             playerFirstResponseBox.SetActive(true);

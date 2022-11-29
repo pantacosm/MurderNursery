@@ -77,3 +77,6 @@ MonoBehaviour:
   lockingFirstPath: 1
   lockingSecondPath: 1
   lockingThirdPath: 0
+  fitCheck: 1
+  dressUpNode: {fileID: 3499891356269125111, guid: b0f129a15e86254448b387cc7b2f3c49, type: 3}
+  requiredOutfit: Artist Outfit

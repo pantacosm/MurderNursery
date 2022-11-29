@@ -53,26 +53,29 @@ public class SceneTransition : MonoBehaviour
         blackFade.gameObject.SetActive(true); //Activates the image which serves as our fade to black
         StartCoroutine(BlackTransitionToInterrogation(mainCamera, interrogationCam)); //Activates the gradual fade to black
         StartCoroutine(WaitForSeconds()); //Waits for a few seconds and activates the reverse fade
-        if(npc.name == "FemmeFatale") //Checks which npc the player is talking to and moves them to the interrogation.
+        if(npc.name == "Scarlet") //Checks which npc the player is talking to and moves them to the interrogation.
         {
             femmeIntObject.SetActive(true);
             activeInterrogant = femmeIntObject;
             interrogationManager.GetComponent<Interrogation>().StartInterrogation(activeInterrogant.GetComponent<NPCDialogue>().dialogueTree[0], activeInterrogant);
         }
-        if(npc.name == "CoolGangstaKid")
+        if(npc.name == "Chase")
         {
             coolIntObject.SetActive(true);
             activeInterrogant = coolIntObject;
+            interrogationManager.GetComponent<Interrogation>().StartInterrogation(activeInterrogant.GetComponent<NPCDialogue>().dialogueTree[0], activeInterrogant);
         }
         if(npc.name == "JuiceBox")
         {
             juiceIntObject.SetActive(true);
             activeInterrogant=juiceIntObject;
+            interrogationManager.GetComponent<Interrogation>().StartInterrogation(activeInterrogant.GetComponent<NPCDialogue>().dialogueTree[0], activeInterrogant);
         }
-        if(npc.name == "GoonGuy")
+        if(npc.name == "Eddie")
         {
             goonIntObject.SetActive(true);
             activeInterrogant = goonIntObject;
+            interrogationManager.GetComponent<Interrogation>().StartInterrogation(activeInterrogant.GetComponent<NPCDialogue>().dialogueTree[0], activeInterrogant);
         }
     }
     

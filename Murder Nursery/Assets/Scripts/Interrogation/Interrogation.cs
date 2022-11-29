@@ -31,7 +31,7 @@ public class Interrogation : MonoBehaviour
     void Update()
     {
         interrogationUnderway = manager.GetComponent<SceneTransition>().interrogationActive;
-        if(Input.GetKeyDown(KeyCode.C) && interrogationUnderway)
+        if(Input.GetKeyDown(KeyCode.X) && interrogationUnderway)
         {
             UpdateCurrentEmotion(1);
         }

@@ -32,7 +32,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2506754139236650973
 MonoBehaviour:
@@ -103,9 +103,10 @@ MonoBehaviour:
   - Grace
   - Boys
   femmeEvents:
-  - Think she's the Queen bee.
-  - Jealous of Grace.
-  - Not the violent type.
+  - Greatest masterpiece is a turkey hand he painted.
+  - Has a broken right arm.
+  - He's ambidextrous.
+  - Has  a love hate relationship with Scarlet.
   deadgirlLikes:
   - Chase
   - Juice Box

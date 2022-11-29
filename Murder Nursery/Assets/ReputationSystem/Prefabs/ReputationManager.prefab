@@ -30,7 +30,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2873506898117971542
 MonoBehaviour:
@@ -47,6 +47,11 @@ MonoBehaviour:
   JotterUI: {fileID: 0}
   friendshipStarPrefab: {fileID: 7619137129810446203, guid: 8199e15a778459044ad41823ab7a5995, type: 3}
   skullPrefab: {fileID: 8972597557750714189, guid: ff5fefec736823244af6ed64cd6f289d, type: 3}
+  CharacterImageUI: {fileID: 0}
+  GoonImage: {fileID: 6523157589042792933, guid: 358c92b731f690246ad8a5874ee232ea, type: 3}
+  JuiceBoxImage: {fileID: 4292891478034005822, guid: c7cef02f843c8c7449c1e4aff890438c, type: 3}
+  FemmeImage: {fileID: 5864208080734772782, guid: 7394fc73c78ac0443811d87664a4f144, type: 3}
+  CoolGuyImage: {fileID: 5051787042514031050, guid: 063f7bc81ad1341408085feabadf1a66, type: 3}
   GoonContent: {fileID: 0}
   FemmeContent: {fileID: 0}
   JuiceBoxContent: {fileID: 0}

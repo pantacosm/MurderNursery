@@ -45,6 +45,8 @@ public class DialogueManager : MonoBehaviour
     public bool goodEndingReached = false;
     public bool badEndingReached = false;
     public GameObject dressUpBox;
+    public AudioSource playerAudio;
+    public AudioClip repLossSound;
 
 
     [HideInInspector]
@@ -79,6 +81,7 @@ public class DialogueManager : MonoBehaviour
         {
             for (int i = 0; i < 1; i++)
             {
+                
                 StartCoroutine(RepFader(repGainSprite, true));
                 StartCoroutine(WaitForSeconds(gainingRep, repGainSprite, 1.5f));
             }
@@ -291,6 +294,7 @@ public class DialogueManager : MonoBehaviour
             }
             if (repGain < 0)
             {
+                playerAudio.PlayOneShot(repLossSound, 0.5f);
                 losingRep = true;
             }
             RM.UpdateReputation(RM.coolGuyPoints += repGain);

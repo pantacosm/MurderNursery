@@ -24,10 +24,14 @@ public class ToggleUIVisibility : MonoBehaviour
     [HideInInspector]
     public bool jotterOpen = false;
 
+    public AudioSource playerAudioSource;
+    public AudioClip openInventorySound;
+
     public void ToggleInventory()
     {
         if(inventoryOpen = !inventoryOpen)
         {
+            playerAudioSource.PlayOneShot(openInventorySound, 0.2f) ;
             inventoryUI.SetActive(true);
             inventoryOpen = true;
 

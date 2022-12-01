@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 4202205716510092871}
   - component: {fileID: 4202205716510092870}
   - component: {fileID: 4202205716510092985}
-  - component: {fileID: 4202205716510092984}
   - component: {fileID: 4202205716510092987}
   m_Layer: 0
   m_Name: JuiceBox
@@ -36,7 +35,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4202205716510092869
 MeshFilter:
@@ -131,34 +130,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &4202205716510092984
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4202205716510092986}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 048e36bac73b2a44dacb36716fcfcb63, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueZone: {fileID: 0}
-  npcStatement: {fileID: 0}
-  playerFirstResponse: {fileID: 0}
-  playerSecondResponse: {fileID: 0}
-  playerThirdResponse: {fileID: 0}
-  playerFirstResponseBox: {fileID: 0}
-  playerSecondResponseBox: {fileID: 0}
-  playerThirdResponseBox: {fileID: 0}
-  Femme: {fileID: 0}
-  JuiceBox: {fileID: 4202205716510092986}
-  Goon: {fileID: 0}
-  CoolGuy: {fileID: 0}
-  pos: 0
-  relationship: 0
-  manager: {fileID: 0}
-  repManager: {fileID: 0}
 --- !u!114 &4202205716510092987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,32 +143,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueTree:
-  - {fileID: 3499891356269125111, guid: 5f2712ed33aee564f9c87ea34632db8a, type: 3}
-  - {fileID: 3499891356269125111, guid: 55d0d49fd1587db4abc52d9f6db21836, type: 3}
-  - {fileID: 3499891356269125111, guid: 3d71eb6841ac0ba48a86c6f4627cd55b, type: 3}
-  - {fileID: 3499891356269125111, guid: d1c5d77850df5dc4e86e440ef3a73262, type: 3}
-  - {fileID: 3499891356269125111, guid: 6c0a8a6cc0d87d6458d486d40b8c82fb, type: 3}
-  - {fileID: 3499891356269125111, guid: 7ab402639d8b454499b0c4fa6623f758, type: 3}
-  - {fileID: 3499891356269125111, guid: 80f2244b64120334892f4ec3f3e47c6a, type: 3}
-  - {fileID: 3499891356269125111, guid: ce3308be003cca74fbe40186f87dfc45, type: 3}
-  - {fileID: 3499891356269125111, guid: 24aceb68c11fb34428d1b44080247597, type: 3}
-  - {fileID: 3499891356269125111, guid: d42bff965e2b340478f8722415ba9a91, type: 3}
-  - {fileID: 3499891356269125111, guid: be4e384b05f38614dbaac5b530e8fd9f, type: 3}
-  - {fileID: 3499891356269125111, guid: 49b522e65b9acc6469b74d1b2ba87b18, type: 3}
-  - {fileID: 3499891356269125111, guid: c933fb1113dda5f49a2790a4f5e91baa, type: 3}
-  - {fileID: 3499891356269125111, guid: 4830d4b0ef575ac438a2bd86fdce81a6, type: 3}
-  - {fileID: 3499891356269125111, guid: 9ebad1caa9d3ccc4097cdd004c1a05d2, type: 3}
-  - {fileID: 3499891356269125111, guid: 8ec851aed02fb674ba704e414dfc359a, type: 3}
-  - {fileID: 3499891356269125111, guid: d250f9b65654f0840a21674b9d8b7c0e, type: 3}
-  - {fileID: 3499891356269125111, guid: e47f3460936a9984bb1a2b7df7ab5569, type: 3}
-  - {fileID: 3499891356269125111, guid: 471a0bd3e6c97d24bac20272e182f2b2, type: 3}
-  - {fileID: 3499891356269125111, guid: 6a75da418d7071e4193a9b4b5e0f8c8d, type: 3}
-  - {fileID: 3499891356269125111, guid: 13722039c2fe0a24491e9907b24b3b8b, type: 3}
-  - {fileID: 3499891356269125111, guid: 940ae13855b586142b2b15d5630e1e9c, type: 3}
-  - {fileID: 3499891356269125111, guid: c154bb9c99e73724c89338a3511eec7f, type: 3}
-  - {fileID: 3499891356269125111, guid: 49031f70a1f6bc044b2f8099355156b2, type: 3}
-  - {fileID: 3499891356269125111, guid: 4a103c5d1dea8f9479460422a07937c6, type: 3}
-  - {fileID: 3499891356269125111, guid: 1e41e0b13be56b840842dfe348314c28, type: 3}
-  - {fileID: 3499891356269125111, guid: 5163c9f83f74b334fa29c3e648839272, type: 3}
+  - {fileID: 3499891356269125111, guid: 69b5164b459553a41812419bfa5745af, type: 3}
+  - {fileID: 3499891356269125111, guid: 475728ab47fce2e4dbdf4d8d9429c021, type: 3}
+  - {fileID: 3499891356269125111, guid: ed80c71555101c5489d52ce57ba1f161, type: 3}
+  - {fileID: 3499891356269125111, guid: 4069a615f035abb46b3bb8d0e027bfae, type: 3}
+  - {fileID: 3499891356269125111, guid: a82d4c7aaaf5fa44797d022a45e071b6, type: 3}
+  - {fileID: 3499891356269125111, guid: 3de6a98c42a429b4391448c9883431f1, type: 3}
+  - {fileID: 3499891356269125111, guid: 87493a5bcdcee4c41b6dad0d2718e14e, type: 3}
+  - {fileID: 3499891356269125111, guid: 2d335ce51d15cdc41b3f02562f11eaff, type: 3}
+  - {fileID: 3499891356269125111, guid: 0da3a4b56dca9cc49ac9673472c1cf86, type: 3}
+  - {fileID: 3499891356269125111, guid: 12d41ddad6794f747a5bebe5d177f8f3, type: 3}
+  - {fileID: 3499891356269125111, guid: 202d3b9a9f890bb4d8e8bd8712417b95, type: 3}
+  - {fileID: 3499891356269125111, guid: 05bb10ef00798e045b6289185aeab031, type: 3}
+  - {fileID: 3499891356269125111, guid: 2f6bcab6c95ca424f9bdada88ba91e16, type: 3}
+  - {fileID: 3499891356269125111, guid: 67220094beb5cda44ac11fccfa244018, type: 3}
+  - {fileID: 3499891356269125111, guid: e80d294982133894d8614098122cfda0, type: 3}
+  - {fileID: 3499891356269125111, guid: 2db5c4845d715f848b666e06da383f6c, type: 3}
+  - {fileID: 3499891356269125111, guid: 10ce059478d594a4989caa0dc2eb41ce, type: 3}
+  - {fileID: 3499891356269125111, guid: 3ed06df5a122eb74e94bfec2c86cb131, type: 3}
+  - {fileID: 3499891356269125111, guid: 45908264eaf13584fbfecb6df8c1b2c0, type: 3}
+  - {fileID: 3499891356269125111, guid: 4d17d8ff9566fe74f9dff40c768bdc5b, type: 3}
+  - {fileID: 3499891356269125111, guid: 8b0993842799ecc4a8d118e4f6965aea, type: 3}
+  - {fileID: 3499891356269125111, guid: 1b4dcf9aeea4c4345953eddca217ff0f, type: 3}
+  - {fileID: 3499891356269125111, guid: 9f6c021d81ce161478f51484ac9e3f1f, type: 3}
+  - {fileID: 3499891356269125111, guid: 82c24674cc040d94a9e56dab55ec0248, type: 3}
+  - {fileID: 3499891356269125111, guid: 599a017083b47dd41990fe00b83d996c, type: 3}
+  - {fileID: 3499891356269125111, guid: 7e7e37b8afceb3a4ca9acd25fc00f88c, type: 3}
+  - {fileID: 3499891356269125111, guid: b0f129a15e86254448b387cc7b2f3c49, type: 3}
   isInteractable: 0
   inConversation: 0
+  interactionMessage: {fileID: 0}
+  manager: {fileID: 0}

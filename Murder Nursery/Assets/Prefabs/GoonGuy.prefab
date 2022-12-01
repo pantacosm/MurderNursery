@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 6433059971483124848}
   - component: {fileID: 6433059971483124849}
   - component: {fileID: 6433059971483124854}
-  - component: {fileID: 6433059971483124855}
   m_Layer: 0
   m_Name: GoonGuy
   m_TagString: Untagged
@@ -36,7 +35,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6433059971483124877
 MeshFilter:
@@ -144,59 +143,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueTree:
-  - {fileID: 3499891356269125111, guid: 28675b1f7c8ce3c41bd2bcc7e5933bfa, type: 3}
-  - {fileID: 3499891356269125111, guid: 75e349d5607b69c40ac11ab9098cf04b, type: 3}
-  - {fileID: 3499891356269125111, guid: f02cf269c5a853e49a1a951f09ec3621, type: 3}
-  - {fileID: 3499891356269125111, guid: 642020a78ad23bb46920dff525f9c667, type: 3}
-  - {fileID: 3499891356269125111, guid: eb961bb675fad394ea3e3f2c6c685176, type: 3}
-  - {fileID: 3499891356269125111, guid: c458ff679fc4b4f4a9b44866d4313078, type: 3}
-  - {fileID: 3499891356269125111, guid: b2f0fa4834a037348ab4773467067478, type: 3}
-  - {fileID: 3499891356269125111, guid: 3f6dda9a692365349b1138acc5925679, type: 3}
-  - {fileID: 3499891356269125111, guid: aa4459a48145e7247855f376b5ad9b72, type: 3}
-  - {fileID: 3499891356269125111, guid: 5d17d2349b9ea5847bde76b469766768, type: 3}
-  - {fileID: 3499891356269125111, guid: a27a2c00b97f624428d04d4c28ed7613, type: 3}
-  - {fileID: 3499891356269125111, guid: 12f6ef496ed260b478644c95decb0ef5, type: 3}
-  - {fileID: 3499891356269125111, guid: 0dde0cbd2e55528458a1ccb576136a24, type: 3}
-  - {fileID: 3499891356269125111, guid: 2e0497660c420ea4986d68c57df4ee41, type: 3}
-  - {fileID: 3499891356269125111, guid: c0dc2a4932a3ec84f9dda2c85d70d783, type: 3}
-  - {fileID: 3499891356269125111, guid: 00e4b178bc0462e4ea93769b8f531a91, type: 3}
-  - {fileID: 3499891356269125111, guid: a277c82d67fbadc40b384389b70fe014, type: 3}
-  - {fileID: 3499891356269125111, guid: c245da7bc0ae59c42923f80b124662fc, type: 3}
-  - {fileID: 3499891356269125111, guid: 319e505098b8e5e4c8c20d2bb25ccf1c, type: 3}
-  - {fileID: 3499891356269125111, guid: 4ff2a5ec5f5605c46ad465e6030a6596, type: 3}
-  - {fileID: 3499891356269125111, guid: a75e47f5cc0d37c4888c36e34e7dbe55, type: 3}
-  - {fileID: 3499891356269125111, guid: 5e896d4e0b40ae747832ba0b639b7456, type: 3}
-  - {fileID: 3499891356269125111, guid: f6ff67b807eef8343bbda2eccddc858d, type: 3}
-  - {fileID: 3499891356269125111, guid: d392084ac474f364b990a22817c87657, type: 3}
-  - {fileID: 3499891356269125111, guid: 87339af74dcb881499894e953d8e51ed, type: 3}
-  - {fileID: 3499891356269125111, guid: 4b330d91cc8f36746bbf7e8c00108cc7, type: 3}
+  - {fileID: 3499891356269125111, guid: 455c8c7f2eaed9845899318f5cf1c9cf, type: 3}
+  - {fileID: 3499891356269125111, guid: 8aa63d9864459c941b04ebc195e1ccae, type: 3}
+  - {fileID: 3499891356269125111, guid: e121f03aa2afb7545b1b4ce9eca3d34e, type: 3}
+  - {fileID: 3499891356269125111, guid: 1a6e2014742ccba42b20f925372f9190, type: 3}
+  - {fileID: 3499891356269125111, guid: 58789240138336e46b61d70b3375ecab, type: 3}
+  - {fileID: 3499891356269125111, guid: 79a5944512b9c4e458cd90aa32805fce, type: 3}
+  - {fileID: 3499891356269125111, guid: ece55be20f0658b4395459ee33df7035, type: 3}
+  - {fileID: 3499891356269125111, guid: 717fb53dd26551e498a712cf081bb61f, type: 3}
+  - {fileID: 3499891356269125111, guid: 92b0168fc925e2048b2b4a0736ab3c9f, type: 3}
+  - {fileID: 3499891356269125111, guid: 27a299cfb3ad3b34bbceb99d2021c44a, type: 3}
+  - {fileID: 3499891356269125111, guid: 3d3fb4f2a2d50084b93352cf7da7e0fc, type: 3}
+  - {fileID: 3499891356269125111, guid: 1c28ad8b15cd1a94ea8ae0c0250e7663, type: 3}
+  - {fileID: 3499891356269125111, guid: e18584293564c4f4e841d8f539266ca2, type: 3}
+  - {fileID: 3499891356269125111, guid: 6e648ef3e093dc345bfba1f7dda59b1c, type: 3}
+  - {fileID: 3499891356269125111, guid: 507ba51448698ce41966451d7016c5fb, type: 3}
+  - {fileID: 3499891356269125111, guid: 64343a153850b1c45824ddc6cbf3a6af, type: 3}
+  - {fileID: 3499891356269125111, guid: 2b19cefff09e8b94aa9d88568f77ce03, type: 3}
+  - {fileID: 3499891356269125111, guid: fe9792d6ea730024db2158de87701e02, type: 3}
+  - {fileID: 3499891356269125111, guid: 97375db3281ecaf4fbe4ff49b3401ee9, type: 3}
+  - {fileID: 3499891356269125111, guid: 634503d1ccfd7534ea05c749582e1259, type: 3}
+  - {fileID: 3499891356269125111, guid: ace76e746acdf5b4cbe849a1a59e419b, type: 3}
+  - {fileID: 3499891356269125111, guid: 6ca9a29a08c9ca84bbfe3ca085adb719, type: 3}
+  - {fileID: 3499891356269125111, guid: 170105634c51423408d6f662c3facab5, type: 3}
+  - {fileID: 3499891356269125111, guid: b014733383f10a943989ff73d3849ab9, type: 3}
+  - {fileID: 3499891356269125111, guid: 5fb4e4ffb23fd7441822fbd2cd6289b2, type: 3}
+  - {fileID: 3499891356269125111, guid: 3d901f63781ebc34392699ca29e35d66, type: 3}
+  - {fileID: 3499891356269125111, guid: 126ae1006fd2d874bac601212655b922, type: 3}
+  - {fileID: 3499891356269125111, guid: a8fe317a267a2094d94f8b5343da1089, type: 3}
   isInteractable: 0
   inConversation: 0
---- !u!114 &6433059971483124855
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6433059971483124852}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 048e36bac73b2a44dacb36716fcfcb63, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueZone: {fileID: 0}
-  npcStatement: {fileID: 0}
-  playerFirstResponse: {fileID: 0}
-  playerSecondResponse: {fileID: 0}
-  playerThirdResponse: {fileID: 0}
-  playerFirstResponseBox: {fileID: 0}
-  playerSecondResponseBox: {fileID: 0}
-  playerThirdResponseBox: {fileID: 0}
-  Femme: {fileID: 0}
-  JuiceBox: {fileID: 0}
-  Goon: {fileID: 6433059971483124852}
-  CoolGuy: {fileID: 0}
-  pos: 0
-  relationship: 0
+  interactionMessage: {fileID: 0}
   manager: {fileID: 0}
-  repManager: {fileID: 0}

@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 8639815407638529136}
   - component: {fileID: 8639815407638529143}
   - component: {fileID: 8639815407638529142}
-  - component: {fileID: 8639815407638529141}
   m_Layer: 0
   m_Name: FemmeFataleV2
   m_TagString: Untagged
@@ -144,63 +143,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueTree:
-  - {fileID: 3499891356269125111, guid: 485384a0b78653c4994899ad2676396f, type: 3}
-  - {fileID: 3499891356269125111, guid: c8824d4064691204a8f8d7fdb6bb749d, type: 3}
-  - {fileID: 3499891356269125111, guid: a39e403cc683b7342bc099c04fc02a38, type: 3}
-  - {fileID: 3499891356269125111, guid: e69fffe90e9259a47902a62b55ecf5c1, type: 3}
-  - {fileID: 3499891356269125111, guid: d1265a332e445324283c6ce67ff5ec48, type: 3}
-  - {fileID: 3499891356269125111, guid: 044d1e1612c29014a9c126fa40a1ea53, type: 3}
-  - {fileID: 3499891356269125111, guid: 660fa088243ea794e960ce94321a5b5a, type: 3}
-  - {fileID: 3499891356269125111, guid: 2185424841919a04f91ff36742a7f17e, type: 3}
-  - {fileID: 3499891356269125111, guid: d3f52bce166459f4b8eed794e1f466b3, type: 3}
-  - {fileID: 3499891356269125111, guid: 52baa08acf7c4a2428668b87e3faa587, type: 3}
-  - {fileID: 3499891356269125111, guid: 83581e128429f08448ed0c8a78e93592, type: 3}
-  - {fileID: 3499891356269125111, guid: c7432fc1814353746966d471d382a24c, type: 3}
-  - {fileID: 3499891356269125111, guid: d79a35a7c6e83154dad02410849ec777, type: 3}
-  - {fileID: 3499891356269125111, guid: 365fe82b52f85a8499b9eaf296216f23, type: 3}
-  - {fileID: 3499891356269125111, guid: f52124aadcfc8bf43a9a77c6165a0bad, type: 3}
-  - {fileID: 3499891356269125111, guid: 0f065590770469e45a9c260efe3cdbfa, type: 3}
-  - {fileID: 3499891356269125111, guid: 35c84450616d44649aace09773cbe1c9, type: 3}
-  - {fileID: 3499891356269125111, guid: 32a374b3821130948b4de211f412e975, type: 3}
-  - {fileID: 3499891356269125111, guid: 4c7e9bb18c439c8468f1df100d07e342, type: 3}
-  - {fileID: 3499891356269125111, guid: 8df613962a6945a4da32b40ca2b5ca0f, type: 3}
-  - {fileID: 3499891356269125111, guid: bb7af23aeae713845bf9aeb90d44a4ae, type: 3}
-  - {fileID: 3499891356269125111, guid: f461153ce6fcc634d8d9868306cd1f84, type: 3}
-  - {fileID: 3499891356269125111, guid: e07b637e53ef32743b8f69efe3df9184, type: 3}
-  - {fileID: 3499891356269125111, guid: 7389e3d0848ee5445b011ae39890e2be, type: 3}
-  - {fileID: 3499891356269125111, guid: f8667cf11081af749a5e2b8e36fd9b63, type: 3}
-  - {fileID: 3499891356269125111, guid: e8f8491cd3c04084eaaf35ea8296de54, type: 3}
-  - {fileID: 3499891356269125111, guid: 5ea33d640acea4e4a8e1f6e2c90741de, type: 3}
-  - {fileID: 3499891356269125111, guid: a627da6c9c17ba54e8ab5cacba36722c, type: 3}
-  - {fileID: 3499891356269125111, guid: f99fc59011af17a4fb531670f51fafcc, type: 3}
-  - {fileID: 3499891356269125111, guid: 7ddb665c4acfb9641b363c4aca52e786, type: 3}
+  - {fileID: 3499891356269125111, guid: 9d4b23c4fb5720f459284aacd9821d47, type: 3}
+  - {fileID: 3499891356269125111, guid: e5bc21eef83378e49b78c9429498c9a0, type: 3}
+  - {fileID: 3499891356269125111, guid: da95711cf2614ce46a23f9faf7e04fef, type: 3}
+  - {fileID: 3499891356269125111, guid: 28db32b5e09196044bba12eba20427df, type: 3}
+  - {fileID: 3499891356269125111, guid: a659e0ba96cd54249be8bcd89d6bbb5b, type: 3}
+  - {fileID: 3499891356269125111, guid: 6c4c2e2ec50c6954b91fb0236c9c99f0, type: 3}
+  - {fileID: 3499891356269125111, guid: db001223e46f9cf44a86f2c746118dd5, type: 3}
+  - {fileID: 3499891356269125111, guid: 73428595e6386854690a8c2b815f6779, type: 3}
+  - {fileID: 3499891356269125111, guid: eac0a5e7554bd754c875baed2ad7615c, type: 3}
+  - {fileID: 3499891356269125111, guid: 4b00468c026b8ef4b9b464c6f928388b, type: 3}
+  - {fileID: 3499891356269125111, guid: a50bf5af7017b4b46a0872f3d6dd73a1, type: 3}
+  - {fileID: 3499891356269125111, guid: f6ef5933b6fa5b648934be6cf777ef0e, type: 3}
+  - {fileID: 3499891356269125111, guid: 0d3f0ae8c985e8d4ab7e225ddf1c3b76, type: 3}
+  - {fileID: 3499891356269125111, guid: 5d3c4d05f32f99c41a9bffe464817b41, type: 3}
+  - {fileID: 3499891356269125111, guid: 4cee0192615724345acb94bee9df24c3, type: 3}
+  - {fileID: 3499891356269125111, guid: dd7729fda4edc9c4f973d3b57884d2cc, type: 3}
+  - {fileID: 3499891356269125111, guid: 6192528ab53479449bd4e11775f981c5, type: 3}
+  - {fileID: 3499891356269125111, guid: 2c0bc6fd7742c0342b41719966627fe3, type: 3}
+  - {fileID: 3499891356269125111, guid: 514158bdc6e43a747aff73eb6864bf4e, type: 3}
+  - {fileID: 3499891356269125111, guid: a95016b0a4778ec4ebf205f12a7c9887, type: 3}
+  - {fileID: 3499891356269125111, guid: b8c0cbce94e45994ca1afec774f756eb, type: 3}
+  - {fileID: 3499891356269125111, guid: 994b398f32677604a8aa425e7f089e27, type: 3}
+  - {fileID: 3499891356269125111, guid: db2c5c67e042ad64388906f1726c9b3f, type: 3}
+  - {fileID: 3499891356269125111, guid: f6754b6aac0a1c841ae1a2180d746162, type: 3}
+  - {fileID: 3499891356269125111, guid: 8a2478636a77a394bbedb4ec050d377a, type: 3}
+  - {fileID: 3499891356269125111, guid: d046b2d1ade8cff4da312dda7b4905e8, type: 3}
+  - {fileID: 3499891356269125111, guid: 1d5018c3f9a6ff649a3fd8df3771dbcd, type: 3}
+  - {fileID: 3499891356269125111, guid: 2bb5baf483d25f9498b1e00771741dbd, type: 3}
+  - {fileID: 3499891356269125111, guid: bacae687215b9324dbff3aab52d65ee3, type: 3}
+  - {fileID: 3499891356269125111, guid: 1892bc4094239d2458e835134072ee43, type: 3}
+  - {fileID: 3499891356269125111, guid: 9bca328180c2ef441abd692ecfb06e86, type: 3}
+  - {fileID: 3499891356269125111, guid: ead7ec8240f8b6a46a9e9a6314d3e4e7, type: 3}
   isInteractable: 0
   inConversation: 0
---- !u!114 &8639815407638529141
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8639815407638529140}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 048e36bac73b2a44dacb36716fcfcb63, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueZone: {fileID: 0}
-  npcStatement: {fileID: 0}
-  playerFirstResponse: {fileID: 0}
-  playerSecondResponse: {fileID: 0}
-  playerThirdResponse: {fileID: 0}
-  playerFirstResponseBox: {fileID: 0}
-  playerSecondResponseBox: {fileID: 0}
-  playerThirdResponseBox: {fileID: 0}
-  Femme: {fileID: 8639815407638529140}
-  JuiceBox: {fileID: 0}
-  Goon: {fileID: 0}
-  CoolGuy: {fileID: 0}
-  pos: 0
-  relationship: 0
+  interactionMessage: {fileID: 0}
   manager: {fileID: 0}
-  repManager: {fileID: 0}

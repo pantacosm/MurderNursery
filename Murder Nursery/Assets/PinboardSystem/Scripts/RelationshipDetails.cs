@@ -91,6 +91,15 @@ public class RelationshipDetails : MonoBehaviour
         AddToRelationshipOptionsUI(conclusionsList[3]);
         AddToRelationshipOptionsUI(conclusionsList[4]);
         AddToRelationshipOptionsUI(conclusionsList[5]);
+        AddToRelationshipOptionsUI(conclusionsList[6]);
+        AddToRelationshipOptionsUI(conclusionsList[7]);
+        AddToRelationshipOptionsUI(conclusionsList[8]);
+        AddToRelationshipOptionsUI(conclusionsList[9]);
+        AddToRelationshipOptionsUI(conclusionsList[10]);
+        AddToRelationshipOptionsUI(conclusionsList[11]);
+        AddToRelationshipOptionsUI(conclusionsList[12]);
+        AddToRelationshipOptionsUI(conclusionsList[13]);
+        AddToRelationshipOptionsUI(conclusionsList[14]);
     }
 
     public void ClearDetails()

@@ -32,9 +32,6 @@ public class PlayerMovement : MonoBehaviour
     private float deceleration = 3.0f;
 
     [SerializeField]
-    private float jumpHeight = 1.0f;
-
-    [SerializeField]
     private Transform cameraTransform;
 
     [SerializeField]
@@ -99,12 +96,6 @@ public class PlayerMovement : MonoBehaviour
         movement.y = 0;
 
         controller.Move(movement * Time.deltaTime * playerSpeed);
-
-        // Changes the height position of the player.. (Jump)
-        if (playerControls.PlayerInputMap.Jump.IsPressed() && groundedPlayer)
-        {
-            playerVelocity.y += Mathf.Sqrt(jumpHeight * -3.0f * gravityValue);
-        }
 
         playerVelocity.y += gravityValue * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);

@@ -15,6 +15,9 @@ public class ToggleUIVisibility : MonoBehaviour
     [SerializeField]
     public GameObject pinboardUI;
 
+    [SerializeField]
+    GameObject evidenceJotter;
+
     [HideInInspector]
     public bool inventoryOpen = false;
 
@@ -50,6 +53,7 @@ public class ToggleUIVisibility : MonoBehaviour
         if(pinboardOpen)
         {
             pinboardUI.SetActive(false);
+            evidenceJotter.SetActive(false);
             pinboardOpen = false;
         }
 
@@ -65,6 +69,7 @@ public class ToggleUIVisibility : MonoBehaviour
         if(pinboardOpen = !pinboardOpen)
         {
             pinboardUI.SetActive(true);
+            evidenceJotter.SetActive(true);
             pinboardOpen = true;
 
             Cursor.lockState = CursorLockMode.None;

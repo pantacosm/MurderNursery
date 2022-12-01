@@ -31,7 +31,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5082937854988416734
 MonoBehaviour:
@@ -66,6 +66,9 @@ MonoBehaviour:
   inventoryUI: {fileID: 0}
   jotterUI: {fileID: 0}
   pinboardUI: {fileID: 0}
+  evidenceJotter: {fileID: 0}
   inventoryOpen: 0
   pinboardOpen: 0
   jotterOpen: 0
+  playerAudioSource: {fileID: 0}
+  openInventorySound: {fileID: 8300000, guid: 72589927e61e86144aa7f126cb1cfaf5, type: 3}

@@ -47,7 +47,12 @@ public class DialogueManager : MonoBehaviour
     public GameObject dressUpBox;
     public AudioSource playerAudio;
     public AudioClip repLossSound;
-
+    public AudioClip repGainSound;
+    public AudioClip selectOptionSound;
+    public AudioClip changeOptionSound;
+    public AudioClip passOutfitCheckSound;
+    public Camera currentNPCCam;
+    public Camera playerCam;
 
     [HideInInspector]
     public GameObject manager;
@@ -123,12 +128,15 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public void StartConversation(DialogueNode startNode, GameObject npc)
+    public void StartConversation(DialogueNode startNode, GameObject npc, Camera npcCam)
     {
         activeNode = startNode;
         pos = 0;
         playerSecondResponseBox.GetComponent<Image>().color = Color.white;
         playerThirdResponseBox.GetComponent<Image>().color = Color.white;
+        currentNPCCam = npcCam;
+        currentNPCCam.gameObject.SetActive(true);
+        playerCam.gameObject.SetActive(false);
         activeNPC = npc;
         LoadNodeInfo(startNode);
         if(startNode.firstPathLocked)
@@ -147,6 +155,8 @@ public class DialogueManager : MonoBehaviour
 
     public void ExitConversation()
     {
+        playerCam.gameObject.SetActive(true);
+        currentNPCCam.gameObject.SetActive(false);
         activeNPC = null;
         dialogueZone.SetActive(false);
         inConvo = false;
@@ -162,6 +172,7 @@ public class DialogueManager : MonoBehaviour
         {
             if (dressUpBox.GetComponent<DressUp>().checkOutfit(activeNode.requiredOutfit))
             {
+                playerAudio.PlayOneShot(passOutfitCheckSound, 0.5f);
                 activeNode = newNode.dressUpNode;
             }
         }
@@ -250,10 +261,12 @@ public class DialogueManager : MonoBehaviour
         {
             if (repGain > 0)
             {
+                playerAudio.PlayOneShot(repGainSound, 0.5f);
                 gainingRep = true;
             }
             if(repGain < 0)
             {
+                playerAudio.PlayOneShot(repLossSound, 0.5f);
                 losingRep = true;
             }
             RM.UpdateReputation(RM.goonPoints += repGain);
@@ -263,10 +276,12 @@ public class DialogueManager : MonoBehaviour
         {
             if (repGain > 0)
             {
+                playerAudio.PlayOneShot(repGainSound, 0.5f);
                 gainingRep = true;
             }
             if (repGain < 0)
             {
+                playerAudio.PlayOneShot(repLossSound, 0.5f);
                 losingRep = true;
             }
             RM.UpdateReputation(RM.femmePoints += repGain);
@@ -276,11 +291,14 @@ public class DialogueManager : MonoBehaviour
         {
             if (repGain > 0)
             {
+                playerAudio.PlayOneShot(repGainSound, 0.5f);
                 gainingRep = true;
             }
             if (repGain < 0)
             {
+                playerAudio.PlayOneShot(repLossSound, 0.5f);
                 losingRep = true;
+
             }
             RM.UpdateReputation(RM.juiceBoxPoints += repGain);
             RM.UpdateJuiceBox();
@@ -290,6 +308,7 @@ public class DialogueManager : MonoBehaviour
         {
             if (repGain > 0)
             {
+                playerAudio.PlayOneShot(repGainSound, 0.5f);
                 gainingRep = true;
             }
             if (repGain < 0)
@@ -344,6 +363,7 @@ public class DialogueManager : MonoBehaviour
             if(activeNode.children.Length > 0)
             {
                 activeNode.nodeVisited = true;
+                playerAudio.PlayOneShot(selectOptionSound, 0.5f);
                 LoadNodeInfo(activeNode.children[playerChoice]);               
             }
         }
@@ -368,10 +388,12 @@ public class DialogueManager : MonoBehaviour
                 if (activeNode.secondPathLocked)
                 {
                     pos = pos + 2;
+                    playerAudio.PlayOneShot(changeOptionSound, 0.5f);
                 }
                 else
                 {
                     pos++;
+                    playerAudio.PlayOneShot(changeOptionSound, 0.5f);
                 }
                 playerFirstResponseBox.GetComponent<Image>().color = Color.white;
             }
@@ -398,6 +420,7 @@ public class DialogueManager : MonoBehaviour
                 if (!activeNode.firstPathLocked)
                 {
                     pos--;
+                    playerAudio.PlayOneShot(changeOptionSound, 0.5f);
                     playerSecondResponseBox.GetComponent<Image>().color = Color.white;
                 }
             }
@@ -406,6 +429,7 @@ public class DialogueManager : MonoBehaviour
                 if (!activeNode.thirdPathLocked)
                 {
                     pos++;
+                    playerAudio.PlayOneShot(changeOptionSound, 0.5f);
                     playerSecondResponseBox.GetComponent<Image>().color = Color.white;
                 }
             }
@@ -433,10 +457,12 @@ public class DialogueManager : MonoBehaviour
                 if (activeNode.secondPathLocked)
                 {
                     pos = pos - 2;
+                    playerAudio.PlayOneShot(changeOptionSound, 0.5f);
                 }
                 else
                 {
                     pos--;
+                    playerAudio.PlayOneShot(changeOptionSound, 0.5f);
                 }
                 playerThirdResponseBox.GetComponent<Image>().color = Color.white;
             }

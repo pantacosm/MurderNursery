@@ -133,7 +133,7 @@ public class Conclusion : MonoBehaviour
                     blackFade.gameObject.SetActive(false);
                     if(startDialogue)
                     {
-                        manager.GetComponent<DialogueManager>().StartConversation(npcTalking.GetComponent<NPCDialogue>().dialogueTree[0], npcTalking);
+                        manager.GetComponent<DialogueManager>().StartConversation(npcTalking.GetComponent<NPCDialogue>().dialogueTree[0], npcTalking, manager.GetComponent<DialogueManager>().currentNPCCam);
                     }
                     yield return null;
                 }

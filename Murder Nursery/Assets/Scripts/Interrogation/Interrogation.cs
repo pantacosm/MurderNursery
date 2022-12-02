@@ -21,6 +21,8 @@ public class Interrogation : MonoBehaviour
     public int interrogationLives;
     public GameObject repManager;
     public GameObject activeInterrogant;
+    public AudioSource interrogationSource;
+    public AudioClip lifeLostSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -196,6 +198,7 @@ public class Interrogation : MonoBehaviour
         }
         if (activeNode.lifeLoss > 0)
         {
+            interrogationSource.PlayOneShot(lifeLostSound, 0.5f);
             interrogationLives -= activeNode.lifeLoss;
             print("Life Lost!");
         }

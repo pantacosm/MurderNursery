@@ -29,6 +29,8 @@ public class ToggleUIVisibility : MonoBehaviour
 
     public AudioSource playerAudioSource;
     public AudioClip openInventorySound;
+    public AudioClip openPinBoardSound;
+    public AudioClip openJotterSound;
 
     public void ToggleInventory()
     {
@@ -68,6 +70,7 @@ public class ToggleUIVisibility : MonoBehaviour
     {
         if(pinboardOpen = !pinboardOpen)
         {
+            playerAudioSource.PlayOneShot(openPinBoardSound, 0.5f);
             pinboardUI.SetActive(true);
             evidenceJotter.SetActive(true);
             pinboardOpen = true;
@@ -95,6 +98,7 @@ public class ToggleUIVisibility : MonoBehaviour
     {
         if(jotterOpen = !jotterOpen)
         {
+            playerAudioSource.PlayOneShot(openJotterSound, 0.5f);
             jotterUI.SetActive(true);
             jotterOpen = true;
 

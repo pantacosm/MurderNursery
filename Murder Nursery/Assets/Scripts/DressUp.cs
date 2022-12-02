@@ -18,6 +18,9 @@ public class DressUp : MonoBehaviour
     private Vector3 firstButton;
     private Vector3 secondButton;
     private Vector3 thirdButton;
+    public AudioSource playerAudio;
+    public AudioClip openBoxSound;
+    public AudioClip changeOutfitSound;
     
     // Start is called before the first frame update
     void Start()
@@ -41,14 +44,12 @@ public class DressUp : MonoBehaviour
             interactableText.SetActive(false);
             dressUpMenu.SetActive(true);
             Cursor.visible = true;
+            playerAudio.PlayOneShot(openBoxSound, 0.5f);
         }
 
         if(inDressUp && Input.GetKeyDown(KeyCode.Escape))
         {
-            dressUpMenu.SetActive(false);
-            interactableText.SetActive(true);
-            inDressUp = false;
-            Cursor.visible = false;
+            ExitDressUp();
         }
 
     }
@@ -71,6 +72,8 @@ public class DressUp : MonoBehaviour
         activeOutfit = "Artist Outfit";
         print("You are now wearing the " + activeOutfit);
         UpdateOutfitChoices(artistButton);
+        ExitDressUp();
+        playerAudio.PlayOneShot(changeOutfitSound, 0.5f);
         //Add code here for visual changes
     }
 
@@ -79,6 +82,8 @@ public class DressUp : MonoBehaviour
         activeOutfit = "Wizard Outfit";
         print("You are now wearing the " + activeOutfit);
         UpdateOutfitChoices(wizardButton);
+        ExitDressUp();
+        playerAudio.PlayOneShot(changeOutfitSound, 0.5f);
         //Add code here for visual changes
     }
 
@@ -87,6 +92,8 @@ public class DressUp : MonoBehaviour
         activeOutfit = "Gangster Outfit";
         print("You are now wearing the " + activeOutfit);
         UpdateOutfitChoices(gangsterButton);
+        ExitDressUp();
+        playerAudio.PlayOneShot(changeOutfitSound, 0.5f);
         //Add code here for visual changes;
     }
 
@@ -95,6 +102,8 @@ public class DressUp : MonoBehaviour
         activeOutfit = "Detective Outfit";
         print("You are now wearing the " + activeOutfit);
         UpdateOutfitChoices(detectiveButton);
+        ExitDressUp();
+        playerAudio.PlayOneShot(changeOutfitSound, 0.5f);
         //Add code here for visual changes
     }
 
@@ -132,5 +141,13 @@ public class DressUp : MonoBehaviour
     {
         interactable = false;
         interactableText.SetActive(false);
+    }
+
+    public void ExitDressUp()
+    {
+        dressUpMenu.SetActive(false);
+        interactableText.SetActive(true);
+        inDressUp = false;
+        Cursor.visible = false;
     }
 }

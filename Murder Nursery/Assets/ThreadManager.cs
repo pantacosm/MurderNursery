@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 public class ThreadManager : MonoBehaviour
@@ -37,20 +38,75 @@ public class ThreadManager : MonoBehaviour
                 pinBoardManager.GetComponent<PinboardManager>().chaseThreadedLikes.Add(newEvidenceText);
                 pinBoardManager.GetComponent<PinboardManager>().PrintEvidence();
             }
+            if(firstThreadItem.tag == "ScarletSlot")
+            {
+                pinBoardManager.GetComponent<PinboardManager>().scarletThreadedLikes.Add(newEvidenceText);
+            }
+            if(firstThreadItem.tag == "EddieSlot")
+            {
+                pinBoardManager.GetComponent<PinboardManager>().eddieThreadedLikes.Add(newEvidenceText);
+            }
+            if(firstThreadItem.tag == "JuiceBoxSlot")
+            {
+                pinBoardManager.GetComponent<PinboardManager>().juiceBoxThreadedLikes.Add(newEvidenceText);
+            }
+            if(firstThreadItem.tag == "GraceSlot")
+            {
+                pinBoardManager.GetComponent<PinboardManager>().graceThreadedLikes.Add(newEvidenceText);
+            }
+            
         }
         if(firstThreadItem.gameObject.name == "Dislikes")
         {
             newEvidenceImage = secondThreadItem.GetComponent<EvidenceSlot>().evidenceImage;
             newEvidenceText = secondThreadItem.GetComponent<EvidenceSlot>().evidenceText;
-            pinBoardManager.GetComponent<PinboardManager>().chaseThreadedDislikes.Add(newEvidenceText);
-            pinBoardManager.GetComponent<PinboardManager>().PrintEvidence();
+            if (firstThreadItem.tag == "ChaseSlot")
+            {
+                pinBoardManager.GetComponent<PinboardManager>().chaseThreadedDislikes.Add(newEvidenceText);
+                pinBoardManager.GetComponent<PinboardManager>().PrintEvidence();
+            }
+            if(firstThreadItem.tag == "ScarletSlot")
+            {
+                pinBoardManager.GetComponent<PinboardManager>().scarletThreadedDislikes.Add(newEvidenceText);
+            }
+            if(firstThreadItem.tag == "EddieSlot")
+            {
+                pinBoardManager.GetComponent<PinboardManager>().eddieThreadedDislikes.Add(newEvidenceText);
+            }
+            if(firstThreadItem.tag == "JuiceBoxSlot")
+            {
+                pinBoardManager.GetComponent<PinboardManager>().juiceBoxThreadedDislikes.Add(newEvidenceText);
+            }
+            if(firstThreadItem.tag == "GraceSlot")
+            {
+                pinBoardManager.GetComponent<PinboardManager>().graceThreadedDislikes.Add(newEvidenceText);
+            }
         }
         if(firstThreadItem.gameObject.name == "Events")
         {
             newEvidenceImage = secondThreadItem.GetComponent<EvidenceSlot>().evidenceImage;
             newEvidenceText = secondThreadItem.GetComponent<EvidenceSlot>().evidenceText;
-            pinBoardManager.GetComponent<PinboardManager>().chaseThreadedEvents.Add(newEvidenceText);
-            pinBoardManager.GetComponent<PinboardManager>().PrintEvidence();
+            if (firstThreadItem.tag == "ChaseSlot")
+            {
+                pinBoardManager.GetComponent<PinboardManager>().chaseThreadedEvents.Add(newEvidenceText);
+                pinBoardManager.GetComponent<PinboardManager>().PrintEvidence();
+            }
+            if(firstThreadItem.tag == "ScarletSlot")
+            {
+                pinBoardManager.GetComponent<PinboardManager>().scarletThreadedEvents.Add(newEvidenceText);
+            }
+            if(firstThreadItem.tag == "EddieSlot")
+            {
+                pinBoardManager.GetComponent<PinboardManager>().eddieThreadedEvents.Add(newEvidenceText);
+            }
+            if(firstThreadItem.tag == "JuiceBoxSlot")
+            {
+                pinBoardManager.GetComponent<PinboardManager>().juiceBoxThreadedEvents.Add(newEvidenceText);
+            }
+            if(firstThreadItem.tag == "GraceSlot")
+            {
+                pinBoardManager.GetComponent<PinboardManager>().graceThreadedEvents.Add(newEvidenceText);
+            }
         }
     }
 }

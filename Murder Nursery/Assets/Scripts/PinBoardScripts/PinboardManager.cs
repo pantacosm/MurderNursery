@@ -88,6 +88,21 @@ public class PinboardManager : MonoBehaviour
     public List<string> scarletThreadedLikes = new List<string>();
     public List<string> scarletThreadedDislikes = new List<string>();
     public List<string> scarletThreadedEvents = new List<string>();
+
+    public GameObject[] eddieEvidenceSlots;
+    public List<string> eddieThreadedLikes = new List<string>();
+    public List<string> eddieThreadedDislikes = new List<string>();
+    public List<string> eddieThreadedEvents = new List<string>();
+
+    public GameObject[] juiceBoxEvidenceSlots;
+    public List<string> juiceBoxThreadedLikes = new List<string>();
+    public List<string> juiceBoxThreadedDislikes = new List<string>();
+    public List<string> juiceBoxThreadedEvents = new List<string>();
+
+    public GameObject[] graceEvidenceSlots;
+    public List<string> graceThreadedLikes = new List<string>();
+    public List<string> graceThreadedDislikes = new List<string>();
+    public List<string> graceThreadedEvents = new List<string>();
     // Start is called before the first frame update
     void Awake()
     {
@@ -201,26 +216,55 @@ public class PinboardManager : MonoBehaviour
 
     public void TransitionToScarletArea()
     {
+        foreach(GameObject slot in scarletEvidenceSlots)
+        {
+            if(slot.GetComponent<EvidenceSlot>().slotFilled)
+            {
+                slot.SetActive(true);
+            }
+        }
         pinBoard.SetActive(false);
         scarletSectionZoom.SetActive(true);
     }
 
     public void TransitionToEddieArea()
     {
+        foreach(GameObject slot in eddieEvidenceSlots)
+        {
+            if(slot.GetComponent<EvidenceSlot>().slotFilled)
+            {
+                slot.SetActive(true);
+            }
+        }
         pinBoard.SetActive(false);
         eddieSectionZoom.SetActive(true);
     }
 
     public void TransitionToJuiceBox()
     {
+        foreach(GameObject slot in juiceBoxEvidenceSlots)
+        {
+            if(slot.GetComponent<EvidenceSlot>().slotFilled)
+            {
+                slot.SetActive(true);
+            }
+        }
         pinBoard.SetActive(false);
         juiceBoxSectionZoom.SetActive(true);
     }
 
     public void TransitionToGraceArea()
     {
-        pinBoard.SetActive(false);
-        graceSectionZoom.SetActive(true);
+        foreach (GameObject slot in graceEvidenceSlots)
+        {
+            if (slot.GetComponent<EvidenceSlot>().slotFilled)
+            {
+                slot.SetActive(true);
+            }
+        }
+            pinBoard.SetActive(false);
+            graceSectionZoom.SetActive(true);
+        
     }
 
     public void TransitionToPinboard()

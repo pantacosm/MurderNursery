@@ -59,6 +59,7 @@ public class DialogueManager : MonoBehaviour
 
     [SerializeField]
     GameObject repManager;
+    public GameObject pinBoardManager;
 
     ReputationManager RM;
 
@@ -164,6 +165,7 @@ public class DialogueManager : MonoBehaviour
 
     public void LoadNodeInfo(DialogueNode newNode)
     {
+        
         if(activeNode != null)
         {
             activeNode.nodeActive = false;
@@ -179,6 +181,13 @@ public class DialogueManager : MonoBehaviour
         else if (!newNode.fitCheck || !dressUpBox.GetComponent<DressUp>().checkOutfit(activeNode.requiredOutfit))
         {
             activeNode = newNode;
+        }
+        if(activeNode.evidenceToDiscover != null && !activeNode.nodeVisited)
+        {
+            pinBoardManager.GetComponent<PinboardManager>().discoveredEvidence.Add(activeNode.evidenceToDiscover);
+            pinBoardManager.GetComponent<PinboardManager>().UpdateEvidenceListUI(activeNode.evidenceToDiscover);
+            pinBoardManager.GetComponent<PinboardManager>().UpdateEvidenceImages(activeNode.evidenceToDiscover);
+            activeNode.evidenceToDiscover.evidenceFound = true;
         }
         activeNode.nodeActive = true;
         npcStatement.GetComponent<TextMeshProUGUI>().text = activeNode.speech;

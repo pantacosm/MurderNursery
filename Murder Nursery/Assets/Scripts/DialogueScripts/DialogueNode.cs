@@ -34,6 +34,16 @@ public class DialogueNode : MonoBehaviour
     public bool fitCheck = false;
     public DialogueNode dressUpNode;
     public string requiredOutfit;
+    public EvidenceClass evidenceToDiscover = null;
+    public bool evidenceCheckNode = false;
+    public string pathARequiredEvidence = null;
+    public string pathBRequiredEvidence = null;
+    public string pathCRequiredEvidence = null;
+    public bool pathAInterrogationEvidenceRequired;
+    public bool pathBInterrogationEvidenceRequired;
+    public bool pathCInterrogationEvidenceRequired;
+
+   
 
     private void Start()
     {

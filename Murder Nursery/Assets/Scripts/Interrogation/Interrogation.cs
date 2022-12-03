@@ -23,6 +23,7 @@ public class Interrogation : MonoBehaviour
     public GameObject activeInterrogant;
     public AudioSource interrogationSource;
     public AudioClip lifeLostSound;
+    public GameObject PinboardManager;
     // Start is called before the first frame update
     void Start()
     {
@@ -202,6 +203,17 @@ public class Interrogation : MonoBehaviour
             interrogationLives -= activeNode.lifeLoss;
             print("Life Lost!");
         }
+        if(activeNode.evidenceCheckNode)
+        {
+            if(activeNode.pathAInterrogationEvidenceRequired)
+            {
+                intResponseBox1.SetActive(false);
+                if(CheckNodeEvidence())
+                {
+                    intResponseBox1.SetActive(true);
+                }
+            }
+        }
     }
 
     public void StartInterrogation(DialogueNode startNode, GameObject targetNPC)
@@ -212,6 +224,21 @@ public class Interrogation : MonoBehaviour
         interrogationLives = 5;
         LoadIntNodeInfo(startNode);
         activeInterrogant = targetNPC;
+    }
+
+    public bool CheckNodeEvidence()
+    {
+        bool evidencePresent;
+        foreach(string evidence in PinboardManager.GetComponent<PinboardManager>().chaseThreadedLikes)
+        {
+            if (activeNode.pathARequiredEvidence == evidence)
+            {
+                evidencePresent = true;
+                return evidencePresent;
+                
+            }
+        }
+        return evidencePresent = false;
     }
 
 }

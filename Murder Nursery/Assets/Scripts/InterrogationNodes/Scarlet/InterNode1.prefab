@@ -60,7 +60,7 @@ MonoBehaviour:
   repLevelOption2: -10
   repLevelOption3: -10
   nodeID: 
-  nodeActive: 0
+  nodeActive: 1
   repGainResponse1: 0
   repGainResponse2: 0
   repGainResponse3: 0
@@ -82,3 +82,11 @@ MonoBehaviour:
   fitCheck: 0
   dressUpNode: {fileID: 0}
   requiredOutfit: 
+  evidenceToDiscover: {fileID: 0}
+  evidenceCheckNode: 1
+  pathARequiredEvidence: Chase is a loser
+  pathBRequiredEvidence: 
+  pathCRequiredEvidence: 
+  pathAInterrogationEvidenceRequired: 1
+  pathBInterrogationEvidenceRequired: 0
+  pathCInterrogationEvidenceRequired: 0

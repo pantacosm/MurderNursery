@@ -8,6 +8,9 @@ TagManager:
   - Camera
   - Item
   - Inventory
+  - PinboardUI
+  - RelationshipOptions
+  - InventoryUI
   layers:
   - Default
   - TransparentFX
@@ -15,7 +18,7 @@ TagManager:
   - PP Layer
   - Water
   - UI
-  - 
+  - Blur
   - 
   - 
   - 

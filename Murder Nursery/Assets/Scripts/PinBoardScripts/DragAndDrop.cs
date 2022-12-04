@@ -37,6 +37,7 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
         itemPrefab = this.gameObject;
         canvasGroup.blocksRaycasts = false;
         itemImage.maskable = false;
+        itemPrefab.GetComponent<Image>().maskable = false;
         originalPos = transform.position;
     }
 
@@ -49,6 +50,7 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
     {
         canvasGroup.blocksRaycasts = true;
         itemImage.maskable = true;
+        itemPrefab.GetComponent<Image>().maskable = true;
         ResetPosition();
     }
 

@@ -49,7 +49,7 @@ public class NPCDialogue : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.name == "Player")
+        if (other.name == "DetectiveDrew")
         {
             isInteractable = true;
             interactionMessage.SetActive(true);
@@ -59,7 +59,7 @@ public class NPCDialogue : MonoBehaviour
 
     public void OnTriggerExit(Collider other)
     {
-        if (other.name == "Player")
+        if (other.name == "DetectiveDrew")
         {
             isInteractable = false;
             interactionMessage.SetActive(false);

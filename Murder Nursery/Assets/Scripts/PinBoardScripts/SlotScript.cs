@@ -35,7 +35,7 @@ public class SlotScript : MonoBehaviour, IDropHandler
             if(eventData.pointerDrag.GetComponent<DragAndDrop>().itemID == slotID)
             {
                 Debug.Log("Correct Slot");
-                switch(eventData.pointerDrag.GetComponent<DragAndDrop>().itemID)
+                switch(slotID)
                 {
                     case 0: print("Chase Evidence Placed");
                         pinboardManager.GetComponent<PinboardManager>().chaseEvidenceSlots[chaseCount].GetComponent<Image>().sprite = eventData.pointerDrag.GetComponent<Image>().sprite;
@@ -78,7 +78,7 @@ public class SlotScript : MonoBehaviour, IDropHandler
                 //pinboardManager.GetComponent<PinboardManager>().incorrectConclusions++;
                 //pinboardManager.GetComponent<PinboardManager>().evidencePiecesPlaced++;
                 //pinboardManager.GetComponent<PinboardManager>().CalculateAnswerPercentages();
-                switch (eventData.pointerDrag.GetComponent<DragAndDrop>().itemID)
+                switch (slotID)
                 {
                     case 0:
                         print("Chase Evidence Placed");

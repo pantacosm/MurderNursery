@@ -72,7 +72,6 @@ public class ToggleUIVisibility : MonoBehaviour
         {
             playerAudioSource.PlayOneShot(openPinBoardSound, 0.5f);
             pinboardUI.SetActive(true);
-            evidenceJotter.SetActive(true);
             pinboardOpen = true;
 
             Cursor.lockState = CursorLockMode.None;

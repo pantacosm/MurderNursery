@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -17,6 +19,7 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
     public Image itemImage;
     
     public int itemID;
+    public GameObject hoverOverText;
 
     private Vector2 originalPos;
 
@@ -51,6 +54,17 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
 
     public void OnPointerDown(PointerEventData eventData)
     {
+    }
+
+    public void OnMouseOver()
+    {
+        hoverOverText.SetActive(true);
+        hoverOverText.GetComponent<TextMeshProUGUI>().text = this.GetComponent<EvidenceClass>().evidenceText;
+    }
+
+    public void OnMouseExit()
+    {
+        hoverOverText.SetActive(false);
     }
 
     public void ResetPosition()

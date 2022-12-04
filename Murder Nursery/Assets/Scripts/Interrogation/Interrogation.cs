@@ -24,10 +24,16 @@ public class Interrogation : MonoBehaviour
     public AudioSource interrogationSource;
     public AudioClip lifeLostSound;
     public GameObject PinboardManager;
+    private Vector3 response1Position;
+    private Vector3 response2Position;
+    private Vector3 response3Position;
     // Start is called before the first frame update
     void Start()
     {
         manager = GameObject.FindGameObjectWithTag("Manager");
+        response1Position = new Vector3(1371.9603271484375f, 385.18438720703127f ,0.0f);
+        response2Position  = new Vector3(1371.9603271484375f, 276.89532470703127f, 0.0f);
+        response3Position = new Vector3 (1371.966796875f, 170.09844970703126f, 0.0f);
     }
 
     // Update is called once per frame
@@ -208,12 +214,15 @@ public class Interrogation : MonoBehaviour
             if(activeNode.pathAInterrogationEvidenceRequired)
             {
                 intResponseBox1.SetActive(false);
+                activeNode.firstPathLocked = true;
                 if(CheckNodeEvidence())
                 {
                     intResponseBox1.SetActive(true);
+                    activeNode.firstPathLocked = false;
                 }
             }
         }
+        MoveOptions();
     }
 
     public void StartInterrogation(DialogueNode startNode, GameObject targetNPC)
@@ -241,4 +250,27 @@ public class Interrogation : MonoBehaviour
         return evidencePresent = false;
     }
 
+    public void MoveOptions()
+    {
+        
+        if (activeNode.firstPathLocked)
+        {
+            intResponseBox2.transform.position = response1Position;
+            intResponseBox3.transform.position = response2Position;
+        }
+        if (activeNode.secondPathLocked)
+        {
+
+            intResponseBox1.transform.position = response1Position;
+            intResponseBox3.transform.position = response2Position;
+        }
+        if (activeNode.firstPathLocked && activeNode.secondPathLocked)
+        {
+            intResponseBox3.transform.position = response1Position;
+        }
+        if (activeNode.firstPathLocked && activeNode.thirdPathLocked)
+        {
+            intResponseBox2.transform.position = response1Position;
+        }
+    }
 }

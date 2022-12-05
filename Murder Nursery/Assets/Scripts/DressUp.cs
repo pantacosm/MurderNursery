@@ -133,14 +133,20 @@ public class DressUp : MonoBehaviour
     }
     public void OnTriggerEnter(Collider other)
     {
-        interactable = true;
-        interactableText.SetActive(true);
+        if (other.gameObject.name == "DetectiveDrew")
+        {
+            interactable = true;
+            interactableText.SetActive(true);
+        }
     }
 
     public void OnTriggerExit(Collider other)
     {
-        interactable = false;
-        interactableText.SetActive(false);
+        if (other.gameObject.name == "DetectiveDrew")
+        {
+            interactable = false;
+            interactableText.SetActive(false);
+        }
     }
 
     public void ExitDressUp()

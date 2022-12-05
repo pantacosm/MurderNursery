@@ -12,6 +12,7 @@ public class NPCDialogue : MonoBehaviour
     public GameObject interactionMessage;
     public GameObject manager;
     public Camera npcCam;
+    public GameObject interrogationManager;
     
     // Start is called before the first frame update
     void Start()
@@ -36,7 +37,7 @@ public class NPCDialogue : MonoBehaviour
             inConversation = true;
             isInteractable = false;
         }
-        if(inConversation && Input.GetKeyDown(KeyCode.Escape) && !isInteractable)
+        if(inConversation && Input.GetKeyDown(KeyCode.Escape) && !isInteractable && !interrogationManager.GetComponent<Interrogation>().interrogationUnderway) 
         {
             manager.GetComponent<DialogueManager>().ExitConversation();
             inConversation = false;

@@ -41,7 +41,7 @@ public class SceneTransition : MonoBehaviour
 
     }
 
-    private void ChangeCam(GameObject currentCam, GameObject newCam) //Activates the desired cam and deactivates the previous cam
+    public void ChangeCam(GameObject currentCam, GameObject newCam) //Activates the desired cam and deactivates the previous cam
     {
         currentCam.SetActive(false);
         newCam.SetActive(true);
@@ -53,27 +53,32 @@ public class SceneTransition : MonoBehaviour
         blackFade.gameObject.SetActive(true); //Activates the image which serves as our fade to black
         StartCoroutine(BlackTransitionToInterrogation(mainCamera, interrogationCam)); //Activates the gradual fade to black
         StartCoroutine(WaitForSeconds()); //Waits for a few seconds and activates the reverse fade
-        if(npc.name == "FemmeFatale") //Checks which npc the player is talking to and moves them to the interrogation.
+        if(npc.name == "Scarlet") //Checks which npc the player is talking to and moves them to the interrogation.
         {
             femmeIntObject.SetActive(true);
             activeInterrogant = femmeIntObject;
-            interrogationManager.GetComponent<Interrogation>().StartInterrogation(activeInterrogant.GetComponent<NPCDialogue>().dialogueTree[0]);
+            interrogationManager.GetComponent<Interrogation>().StartInterrogation(activeInterrogant.GetComponent<NPCDialogue>().dialogueTree[0], activeInterrogant);
+            
         }
-        if(npc.name == "CoolGangstaKid")
+        if(npc.name == "Chase")
         {
             coolIntObject.SetActive(true);
             activeInterrogant = coolIntObject;
+            interrogationManager.GetComponent<Interrogation>().StartInterrogation(activeInterrogant.GetComponent<NPCDialogue>().dialogueTree[0], activeInterrogant);
         }
         if(npc.name == "JuiceBox")
         {
             juiceIntObject.SetActive(true);
             activeInterrogant=juiceIntObject;
+            interrogationManager.GetComponent<Interrogation>().StartInterrogation(activeInterrogant.GetComponent<NPCDialogue>().dialogueTree[0], activeInterrogant);
         }
-        if(npc.name == "GoonGuy")
+        if(npc.name == "Eddie")
         {
             goonIntObject.SetActive(true);
             activeInterrogant = goonIntObject;
+            interrogationManager.GetComponent<Interrogation>().StartInterrogation(activeInterrogant.GetComponent<NPCDialogue>().dialogueTree[0], activeInterrogant);
         }
+        interrogationCam.GetComponent<Camera>().transform.LookAt(activeInterrogant.transform.position);
     }
     
     public void ChangeToMainArea() //This method is called when the player is being transitioned back to the main play area
@@ -97,6 +102,7 @@ public class SceneTransition : MonoBehaviour
                 if(fadeProgress > 0.95f)
                 {
                     ChangeCam(currentCam, desiredCam);
+                    
                     noirFilter.GetComponent<PostProcessingActivation>().TurnFilterOn(true);
                     interrogationActive = true;
                 }
@@ -138,6 +144,7 @@ public class SceneTransition : MonoBehaviour
                     ChangeCam(currentCam, desiredCam);
                     noirFilter.GetComponent<PostProcessingActivation>().TurnFilterOn(false);
                     activeInterrogant.SetActive(false);
+                    interrogationManager.GetComponent<Interrogation>().interrogationPanel.SetActive(false);
                     interrogationActive = false;
                 }
 
@@ -154,6 +161,7 @@ public class SceneTransition : MonoBehaviour
                 if(fadeProgress < 0.01f)
                 {
                     blackFade.gameObject.SetActive(false);
+                    interrogationManager.GetComponent<Interrogation>().interrogationPanel.SetActive(false);
                     yield return null;
                 }
                 yield return null;
@@ -180,7 +188,7 @@ public class SceneTransition : MonoBehaviour
             yield return new WaitForSeconds(1);
             currentCountdownValue--;
         }
-        StartCoroutine(BlackTransitionToInterrogation(interrogationCam, mainCamera, false)); 
+        StartCoroutine(BlackTransitionToMainArea(interrogationCam, mainCamera, false)); 
 
     }
 

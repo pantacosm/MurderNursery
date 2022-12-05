@@ -116,6 +116,9 @@ MonoBehaviour:
   - {fileID: 0}
   isInteractable: 0
   inConversation: 0
+  interactionMessage: {fileID: 0}
+  manager: {fileID: 0}
+  npcCam: {fileID: 0}
 --- !u!1 &6375318995331326063
 GameObject:
   m_ObjectHideFlags: 0
@@ -245,13 +248,13 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6375318996486152407}
   - {fileID: 6375318995224245344}
   - {fileID: 6375318995331326056}
   - {fileID: 6375318995924682696}
   - {fileID: 6375318996334791304}
+  - {fileID: 6375318996486152407}
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6375318995775876704
 MeshFilter:

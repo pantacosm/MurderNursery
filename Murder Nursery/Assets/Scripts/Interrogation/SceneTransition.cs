@@ -58,7 +58,6 @@ public class SceneTransition : MonoBehaviour
             femmeIntObject.SetActive(true);
             activeInterrogant = femmeIntObject;
             interrogationManager.GetComponent<Interrogation>().StartInterrogation(activeInterrogant.GetComponent<NPCDialogue>().dialogueTree[0], activeInterrogant);
-            
         }
         if(npc.name == "Chase")
         {
@@ -78,7 +77,6 @@ public class SceneTransition : MonoBehaviour
             activeInterrogant = goonIntObject;
             interrogationManager.GetComponent<Interrogation>().StartInterrogation(activeInterrogant.GetComponent<NPCDialogue>().dialogueTree[0], activeInterrogant);
         }
-        interrogationCam.GetComponent<Camera>().transform.LookAt(activeInterrogant.transform.position);
     }
     
     public void ChangeToMainArea() //This method is called when the player is being transitioned back to the main play area
@@ -102,7 +100,6 @@ public class SceneTransition : MonoBehaviour
                 if(fadeProgress > 0.95f)
                 {
                     ChangeCam(currentCam, desiredCam);
-                    
                     noirFilter.GetComponent<PostProcessingActivation>().TurnFilterOn(true);
                     interrogationActive = true;
                 }

@@ -7,7 +7,6 @@ public class PostProcessingActivation : MonoBehaviour
 {
     public GameObject filter;
     private bool filterOn;
-    public GameObject mainCamera;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +23,5 @@ public class PostProcessingActivation : MonoBehaviour
     {
         filterOn = filterStatus;
         filter.GetComponent<PostProcessLayer>().enabled = filterOn;
-        mainCamera.GetComponent<PostProcessLayer>().enabled = false;
-
     }
 }

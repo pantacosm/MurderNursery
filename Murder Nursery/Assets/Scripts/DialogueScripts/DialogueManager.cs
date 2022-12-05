@@ -383,7 +383,6 @@ public class DialogueManager : MonoBehaviour
         
         ExitConversation();
         manager.GetComponent<SceneTransition>().ChangeToInterrogation(targetNPC);
-        currentNPCCam.gameObject.SetActive(false);
 
     }
 

@@ -33,8 +33,10 @@ public class ToggleUIVisibility : MonoBehaviour
     public AudioClip openJotterSound;
     public GameObject blur;
 
+  
     public void ToggleInventory()
     {
+        
         if(inventoryOpen = !inventoryOpen)
         {
             playerAudioSource.PlayOneShot(openInventorySound, 0.2f) ;

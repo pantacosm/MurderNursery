@@ -42,7 +42,7 @@ public class InventoryManager : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyUp(KeyCode.B))
+        if(Input.GetKeyUp(KeyCode.I))
         {
             UIVisibility.ToggleInventory();
         }

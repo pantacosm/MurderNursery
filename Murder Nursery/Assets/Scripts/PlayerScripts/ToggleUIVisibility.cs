@@ -31,6 +31,7 @@ public class ToggleUIVisibility : MonoBehaviour
     public AudioClip openInventorySound;
     public AudioClip openPinBoardSound;
     public AudioClip openJotterSound;
+    public GameObject blur;
 
     public void ToggleInventory()
     {
@@ -72,6 +73,7 @@ public class ToggleUIVisibility : MonoBehaviour
         {
             playerAudioSource.PlayOneShot(openPinBoardSound, 0.5f);
             pinboardUI.SetActive(true);
+            blur.SetActive(true);
             pinboardOpen = true;
 
             Cursor.lockState = CursorLockMode.None;
@@ -80,6 +82,7 @@ public class ToggleUIVisibility : MonoBehaviour
         else
         {
             pinboardUI.SetActive(false);
+            blur.SetActive(false);
             pinboardOpen = false;
 
             Cursor.lockState = CursorLockMode.Locked;
@@ -99,6 +102,7 @@ public class ToggleUIVisibility : MonoBehaviour
         {
             playerAudioSource.PlayOneShot(openJotterSound, 0.5f);
             jotterUI.SetActive(true);
+            blur.SetActive(true);
             jotterOpen = true;
 
             Cursor.lockState = CursorLockMode.None;
@@ -107,6 +111,7 @@ public class ToggleUIVisibility : MonoBehaviour
         else
         {
             jotterUI.SetActive(false);
+            blur.SetActive(false);
             jotterOpen = false;
 
             Cursor.lockState = CursorLockMode.Locked;

@@ -45,7 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parent: {fileID: 3499891356269125111, guid: 6e648ef3e093dc345bfba1f7dda59b1c, type: 3}
-  children: []
+  children:
+  - {fileID: 3499891356269125111, guid: 8a420f7dab2d3d749b54658ba0bcf910, type: 3}
   speech: Don't know if I like your attitude, buddy.
   responses:
   - Don't know if I like the baloney you're tryna feed me.
@@ -72,3 +73,15 @@ MonoBehaviour:
   lockingFirstPath: 0
   lockingSecondPath: 0
   lockingThirdPath: 0
+  fitCheck: 0
+  dressUpNode: {fileID: 0}
+  requiredOutfit: 
+  evidenceToDiscover: {fileID: 0}
+  evidenceCheckNode: 0
+  pathARequiredEvidence: 
+  pathBRequiredEvidence: 
+  pathCRequiredEvidence: 
+  pathAInterrogationEvidenceRequired: 0
+  pathBInterrogationEvidenceRequired: 0
+  pathCInterrogationEvidenceRequired: 0
+  nodeEmotion: 1

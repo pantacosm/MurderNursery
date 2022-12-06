@@ -77,6 +77,15 @@ MonoBehaviour:
   lockingFirstPath: 1
   lockingSecondPath: 1
   lockingThirdPath: 0
-  fitCheck: 1
+  fitCheck: 0
   dressUpNode: {fileID: 3499891356269125111, guid: b0f129a15e86254448b387cc7b2f3c49, type: 3}
   requiredOutfit: Artist Outfit
+  evidenceToDiscover: {fileID: 0}
+  evidenceCheckNode: 0
+  pathARequiredEvidence: 
+  pathBRequiredEvidence: 
+  pathCRequiredEvidence: 
+  pathAInterrogationEvidenceRequired: 0
+  pathBInterrogationEvidenceRequired: 0
+  pathCInterrogationEvidenceRequired: 0
+  nodeEmotion: 3

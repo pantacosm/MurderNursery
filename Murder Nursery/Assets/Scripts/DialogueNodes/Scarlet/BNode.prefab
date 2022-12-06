@@ -67,7 +67,7 @@ MonoBehaviour:
   firstPathLocked: 0
   secondPathLocked: 0
   thirdPathLocked: 0
-  nodeVisited: 1
+  nodeVisited: 0
   lockingNode: 0
   briberyAvailable: 0
   triggerTrueEnd: 0
@@ -79,3 +79,12 @@ MonoBehaviour:
   fitCheck: 0
   dressUpNode: {fileID: 0}
   requiredOutfit: 
+  evidenceToDiscover: {fileID: 0}
+  evidenceCheckNode: 0
+  pathARequiredEvidence: 
+  pathBRequiredEvidence: 
+  pathCRequiredEvidence: 
+  pathAInterrogationEvidenceRequired: 0
+  pathBInterrogationEvidenceRequired: 0
+  pathCInterrogationEvidenceRequired: 0
+  nodeEmotion: 4

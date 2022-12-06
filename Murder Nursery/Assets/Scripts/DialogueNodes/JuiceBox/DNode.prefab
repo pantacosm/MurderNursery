@@ -77,3 +77,15 @@ MonoBehaviour:
   lockingFirstPath: 1
   lockingSecondPath: 1
   lockingThirdPath: 0
+  fitCheck: 0
+  dressUpNode: {fileID: 0}
+  requiredOutfit: 
+  evidenceToDiscover: {fileID: 0}
+  evidenceCheckNode: 0
+  pathARequiredEvidence: 
+  pathBRequiredEvidence: 
+  pathCRequiredEvidence: 
+  pathAInterrogationEvidenceRequired: 0
+  pathBInterrogationEvidenceRequired: 0
+  pathCInterrogationEvidenceRequired: 0
+  nodeEmotion: 6

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class NPCDialogue : MonoBehaviour
 {
     public DialogueNode[] dialogueTree = new DialogueNode[27]; //Creates the dialogue tree used to store nodes
@@ -12,6 +12,17 @@ public class NPCDialogue : MonoBehaviour
     public GameObject interactionMessage;
     public GameObject manager;
     public Camera npcCam;
+    public GameObject interrogationManager;
+    public Sprite sprite;
+    public Texture defaultEmotion;
+    public Texture angryEmotion;
+    public Texture cryingEmotion;
+    public Texture guiltyEmotion;
+    public Texture playfulEmotion;
+    public Texture sadEmotion;
+    public Texture shockedEmotion;
+    public Texture thinkingEmotion;
+    public Material textureToChange;
     
     // Start is called before the first frame update
     void Start()
@@ -25,6 +36,7 @@ public class NPCDialogue : MonoBehaviour
             node.thirdPathLocked = false;
             node.nodeVisited = false;
             }
+        textureToChange.SetTexture("_DetailAlbedoMap", defaultEmotion);
     }
 
     // Update is called once per frame
@@ -36,9 +48,10 @@ public class NPCDialogue : MonoBehaviour
             inConversation = true;
             isInteractable = false;
         }
-        if(inConversation && Input.GetKeyDown(KeyCode.Escape) && !isInteractable)
+        if(inConversation && Input.GetKeyDown(KeyCode.Escape) && !isInteractable && !interrogationManager.GetComponent<Interrogation>().interrogationUnderway)
         {
             manager.GetComponent<DialogueManager>().ExitConversation();
+            textureToChange.SetTexture("_DetailAlbedoMap", defaultEmotion);
             inConversation = false;
         }
         if(inConversation)

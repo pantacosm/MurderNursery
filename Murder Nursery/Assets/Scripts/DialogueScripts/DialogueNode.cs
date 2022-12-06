@@ -42,6 +42,7 @@ public class DialogueNode : MonoBehaviour
     public bool pathAInterrogationEvidenceRequired;
     public bool pathBInterrogationEvidenceRequired;
     public bool pathCInterrogationEvidenceRequired;
+    public int nodeEmotion;
 
    
 

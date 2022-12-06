@@ -100,6 +100,7 @@ public class SceneTransition : MonoBehaviour
                 if(fadeProgress > 0.95f)
                 {
                     ChangeCam(currentCam, desiredCam);
+                    desiredCam.transform.Rotate(0f, 180f, 0f);
                     noirFilter.GetComponent<PostProcessingActivation>().TurnFilterOn(true);
                     interrogationActive = true;
                 }

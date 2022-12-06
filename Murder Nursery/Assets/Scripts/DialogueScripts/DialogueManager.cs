@@ -2,7 +2,6 @@ using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using Unity.PlasticSCM.Editor.WebApi;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -53,6 +52,29 @@ public class DialogueManager : MonoBehaviour
     public AudioClip passOutfitCheckSound;
     public Camera currentNPCCam;
     public Camera playerCam;
+    public GameObject player;
+    public Color unselectedColour;
+    public Color selectedColour;
+    public Image npcSprite1;
+    public Image npcSprite2;
+    public Image npcSprite3;
+    public Image npcSprite4;
+    public GameObject npcStatement2;
+    public GameObject npcStatement3;
+    public GameObject npcStatement4;
+    public GameObject playerResponse1;
+    public GameObject playerResponse2;
+    public GameObject playerResponse3;
+    public GameObject playerResponse4;
+    private int responseCount = 0;
+    private bool lastResponsePlayer = false;
+    private int lastResponseID;
+    private bool firstNode = true;
+    private string lastResponse;
+    private string lastResponse2;
+    private string npcLastResponse1;
+    private string npcLastResponse2;
+
 
     [HideInInspector]
     public GameObject manager;
@@ -69,12 +91,10 @@ public class DialogueManager : MonoBehaviour
     {
         manager = GameObject.FindGameObjectWithTag("Manager");
         RM = repManager.GetComponent<ReputationManager>();
-        response1Position = new Vector3(1377.7333984375f, 326.85614013671877f, 0.0f);
-        response2Position = new Vector3(1377.738037109375f, 232.59222412109376f, 0.0f);
-        response3Position = new Vector3(1377.7333984375f, 143.99176025390626f, 0.0f);
-
-
-    }
+        response1Position = new Vector3(1963.9716796875f, 329.7158203125f, 0.0f);
+        response2Position = new Vector3(1963.9686279296875f, 232.59219360351563f, 0.0f);
+        response3Position = new Vector3(1963.975341796875f, 136.84246826171876f, 0.0f);
+    } 
 
     // Update is called once per frame
     void Update()
@@ -131,16 +151,20 @@ public class DialogueManager : MonoBehaviour
 
     public void StartConversation(DialogueNode startNode, GameObject npc, Camera npcCam)
     {
-        activeNode = startNode;
+        player.SetActive(false);
         pos = 0;
-        playerSecondResponseBox.GetComponent<Image>().color = Color.white;
-        playerThirdResponseBox.GetComponent<Image>().color = Color.white;
+        playerSecondResponseBox.GetComponent<Image>().color = unselectedColour;
+        playerThirdResponseBox.GetComponent<Image>().color = unselectedColour;
         currentNPCCam = npcCam;
         currentNPCCam.gameObject.SetActive(true);
         playerCam.gameObject.SetActive(false);
         activeNPC = npc;
+        
         LoadNodeInfo(startNode);
-        if(startNode.firstPathLocked)
+        npcStatement.SetActive(true);
+        npcStatement.GetComponent<TextMeshProUGUI>().text = activeNode.speech;
+        npcLastResponse1 = activeNode.speech;
+        if (startNode.firstPathLocked)
         {
             pos = 1;
         }
@@ -150,39 +174,60 @@ public class DialogueManager : MonoBehaviour
         }
         dialogueZone.SetActive(true);
         npcNameArea.GetComponent<TextMeshProUGUI>().text = npc.name;
-
         inConvo = true;
+        npcSprite1.sprite = npc.GetComponent<NPCDialogue>().sprite;
+        npcSprite2.sprite = npc.GetComponent<NPCDialogue>().sprite;
+        npcSprite3.sprite = npc.GetComponent<NPCDialogue>().sprite;
+        npcSprite4.sprite = npc.GetComponent<NPCDialogue>().sprite;
     }
 
     public void ExitConversation()
     {
+        player.SetActive(true);
         playerCam.gameObject.SetActive(true);
         currentNPCCam.gameObject.SetActive(false);
         activeNPC = null;
         dialogueZone.SetActive(false);
         inConvo = false;
+        ClearDialogue();
     }
 
     public void LoadNodeInfo(DialogueNode newNode)
     {
         
-        if(activeNode != null)
+        if (activeNode != null)
         {
             activeNode.nodeActive = false;
+            
         }
+        
         if (newNode.fitCheck)
         {
-            if (dressUpBox.GetComponent<DressUp>().checkOutfit(activeNode.requiredOutfit))
+            if (dressUpBox.GetComponent<DressUp>().CheckOutfit(activeNode.requiredOutfit))
             {
                 playerAudio.PlayOneShot(passOutfitCheckSound, 0.5f);
                 activeNode = newNode.dressUpNode;
             }
         }
-        else if (!newNode.fitCheck || !dressUpBox.GetComponent<DressUp>().checkOutfit(activeNode.requiredOutfit))
+        else if (!newNode.fitCheck || !dressUpBox.GetComponent<DressUp>().CheckOutfit(activeNode.requiredOutfit))
         {
             activeNode = newNode;
+            
         }
-        if(activeNode.evidenceToDiscover != null && !activeNode.nodeVisited)
+        if (firstNode)
+        {
+            npcLastResponse1 = activeNode.speech;
+        }
+        if (!firstNode)
+        {
+            npcLastResponse2 = npcLastResponse1;
+            npcLastResponse1 = activeNode.speech;
+            
+            UpdateRollingText();
+            
+        }
+        SwitchEmotion();
+        if (activeNode.evidenceToDiscover != null && !activeNode.nodeVisited)
         {
             pinBoardManager.GetComponent<PinboardManager>().discoveredEvidence.Add(activeNode.evidenceToDiscover);
             pinBoardManager.GetComponent<PinboardManager>().UpdateEvidenceListUI(activeNode.evidenceToDiscover);
@@ -190,7 +235,7 @@ public class DialogueManager : MonoBehaviour
             activeNode.evidenceToDiscover.evidenceFound = true;
         }
         activeNode.nodeActive = true;
-        npcStatement.GetComponent<TextMeshProUGUI>().text = activeNode.speech;
+        //npcStatement.GetComponent<TextMeshProUGUI>().text = activeNode.speech;
         if (!activeNode.firstPathLocked)
         {
             playerFirstResponseBox.SetActive(true);
@@ -255,7 +300,7 @@ public class DialogueManager : MonoBehaviour
             }
         }
         MoveOptions();
-
+        firstNode = false;
         if (activeNode.briberyAvailable)
         {
             briberyOption.SetActive(true);
@@ -373,7 +418,24 @@ public class DialogueManager : MonoBehaviour
             {
                 activeNode.nodeVisited = true;
                 playerAudio.PlayOneShot(selectOptionSound, 0.5f);
-                LoadNodeInfo(activeNode.children[playerChoice]);               
+                if (responseCount >= 1)
+                {
+                    lastResponse2 = lastResponse;
+                }
+                switch (playerChoice)
+                {
+                    case 0: lastResponse = activeNode.responses[0];
+                        break;
+                    case 1: lastResponse = activeNode.responses[1];
+                        break;
+                    case 2: lastResponse = activeNode.responses[2];
+                        break;
+                }
+                
+                responseCount++;
+                LoadNodeInfo(activeNode.children[playerChoice]);
+                
+
             }
         }
     }
@@ -391,7 +453,7 @@ public class DialogueManager : MonoBehaviour
         int choice = 4;
         if(pos == 0)
         {
-            playerFirstResponseBox.GetComponent<Image>().color = Color.cyan;
+            playerFirstResponseBox.GetComponent<Image>().color = Color.green;
             if (Input.GetKeyUp(KeyCode.DownArrow) && activeNode.responses.Length > 1)
             {
                 if (activeNode.secondPathLocked)
@@ -404,14 +466,15 @@ public class DialogueManager : MonoBehaviour
                     pos++;
                     playerAudio.PlayOneShot(changeOptionSound, 0.5f);
                 }
-                playerFirstResponseBox.GetComponent<Image>().color = Color.white;
+                playerFirstResponseBox.GetComponent<Image>().color = unselectedColour;
             }
             if(Input.GetKeyUp(KeyCode.Return))
             {
                 if (relationship >= activeNode.repLevelOption1)
                 {
                     choice = 0;
-                    playerFirstResponseBox.GetComponent<Image>().color = Color.white;
+                    lastResponseID = choice;
+                    playerFirstResponseBox.GetComponent<Image>().color = unselectedColour;
                     print(choice);
                     return choice;
                 }
@@ -423,14 +486,14 @@ public class DialogueManager : MonoBehaviour
         }
         if (pos == 1)
         {
-            playerSecondResponseBox.GetComponent<Image>().color = Color.cyan;
+            playerSecondResponseBox.GetComponent<Image>().color = Color.green; ;
             if (Input.GetKeyDown(KeyCode.UpArrow))
             {
                 if (!activeNode.firstPathLocked)
                 {
                     pos--;
                     playerAudio.PlayOneShot(changeOptionSound, 0.5f);
-                    playerSecondResponseBox.GetComponent<Image>().color = Color.white;
+                    playerSecondResponseBox.GetComponent<Image>().color = unselectedColour;
                 }
             }
             if (Input.GetKeyDown(KeyCode.DownArrow))
@@ -439,7 +502,7 @@ public class DialogueManager : MonoBehaviour
                 {
                     pos++;
                     playerAudio.PlayOneShot(changeOptionSound, 0.5f);
-                    playerSecondResponseBox.GetComponent<Image>().color = Color.white;
+                    playerSecondResponseBox.GetComponent<Image>().color = unselectedColour;
                 }
             }
             
@@ -448,7 +511,8 @@ public class DialogueManager : MonoBehaviour
                 if (relationship >= activeNode.repLevelOption2)
                 {
                     choice = 1;
-                    playerSecondResponseBox.GetComponent<Image>().color = Color.white;
+                    lastResponseID = choice;
+                    playerSecondResponseBox.GetComponent<Image>().color = unselectedColour;
                     print(choice);
                     return choice;
                 }
@@ -460,7 +524,7 @@ public class DialogueManager : MonoBehaviour
         }
         if(pos == 2)
         {
-            playerThirdResponseBox.GetComponent<Image>().color = Color.cyan;
+            playerThirdResponseBox.GetComponent<Image>().color = Color.green;
             if(Input.GetKeyUp(KeyCode.UpArrow))
             {
                 if (activeNode.secondPathLocked)
@@ -473,14 +537,15 @@ public class DialogueManager : MonoBehaviour
                     pos--;
                     playerAudio.PlayOneShot(changeOptionSound, 0.5f);
                 }
-                playerThirdResponseBox.GetComponent<Image>().color = Color.white;
+                playerThirdResponseBox.GetComponent<Image>().color = unselectedColour;
             }
             if (Input.GetKeyUp(KeyCode.Return))
             {
                 if (relationship >= activeNode.repLevelOption3)
                 {
                     choice = 2;
-                    playerThirdResponseBox.GetComponent<Image>().color = Color.white;
+                    lastResponseID = choice;
+                    playerThirdResponseBox.GetComponent<Image>().color = unselectedColour;
                     print(choice);
                     return choice;
                  }
@@ -573,6 +638,63 @@ public class DialogueManager : MonoBehaviour
         if(activeNode.firstPathLocked && activeNode.thirdPathLocked)
         {
             playerSecondResponseBox.transform.position = response1Position;
+        }
+    }
+
+    private void UpdateRollingText()
+    {
+        if (responseCount == 1)
+        {
+            npcStatement.SetActive(true);
+            npcStatement.GetComponent<TextMeshProUGUI>().text = npcLastResponse1;          
+            npcStatement3.SetActive(true);
+            npcStatement3.GetComponent<TextMeshProUGUI>().text = npcLastResponse2;
+            playerResponse2.SetActive(true);
+            playerResponse2.GetComponent<TextMeshProUGUI>().text = lastResponse;
+        }
+        if(responseCount >1)
+        {
+            npcStatement.GetComponent<TextMeshProUGUI>().text = npcLastResponse1;
+            npcStatement3.GetComponent<TextMeshProUGUI>().text = npcLastResponse2;
+            playerResponse2.GetComponent<TextMeshProUGUI>().text = lastResponse;
+            playerResponse4.SetActive(true);
+            playerResponse4.GetComponent<TextMeshProUGUI>().text = lastResponse2;
+        }
+    }
+
+    private void ClearDialogue()
+    {
+        npcStatement3.GetComponent<TextMeshProUGUI>().text = "";
+        npcStatement3.SetActive(false);
+        playerResponse2.GetComponent<TextMeshProUGUI>().text = "";
+        playerResponse2.SetActive(false);
+        playerResponse4.GetComponent<TextMeshProUGUI>().text = "";
+        playerResponse4.SetActive(false);
+        lastResponse = null;
+        lastResponse2 = null;
+        responseCount = 0;
+    }
+
+    private void SwitchEmotion()
+    {
+        switch(activeNode.nodeEmotion)
+        {
+            case 0: activeNPC.GetComponent<NPCDialogue>().textureToChange.SetTexture("_DetailAlbedoMap", activeNPC.GetComponent<NPCDialogue>().defaultEmotion);
+                break;
+            case 1: activeNPC.GetComponent<NPCDialogue>().textureToChange.SetTexture("_DetailAlbedoMap", activeNPC.GetComponent<NPCDialogue>().angryEmotion);
+                break;
+            case 2: activeNPC.GetComponent<NPCDialogue>().textureToChange.SetTexture("_DetailAlbedoMap", activeNPC.GetComponent<NPCDialogue>().cryingEmotion);
+                break;
+            case 3: activeNPC.GetComponent<NPCDialogue>().textureToChange.SetTexture("_DetailAlbedoMap", activeNPC.GetComponent<NPCDialogue>().guiltyEmotion);
+                break;
+            case 4: activeNPC.GetComponent<NPCDialogue>().textureToChange.SetTexture("_DetailAlbedoMap", activeNPC.GetComponent<NPCDialogue>().playfulEmotion);
+                break;
+            case 5: activeNPC.GetComponent<NPCDialogue>().textureToChange.SetTexture("_DetailAlbedoMap", activeNPC.GetComponent<NPCDialogue>().sadEmotion);
+                break;
+            case 6: activeNPC.GetComponent<NPCDialogue>().textureToChange.SetTexture("_DetailAlbedoMap", activeNPC.GetComponent<NPCDialogue>().shockedEmotion);
+                break;
+            case 7: activeNPC.GetComponent<NPCDialogue>().textureToChange.SetTexture("_DetailAlbedoMap", activeNPC.GetComponent<NPCDialogue>().thinkingEmotion);
+                break;
         }
     }
 }

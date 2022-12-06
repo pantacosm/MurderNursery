@@ -25,6 +25,17 @@ public class Conclusion : MonoBehaviour
     public GameObject trueEndingText;
     public GameObject goodEndingText;
     public GameObject badEndingText;
+    public GameObject scarletEnd;
+    public GameObject eddieEnd;
+    public GameObject juiceBoxEnd;
+    public GameObject drewEnd;
+    public GameObject chaseEnd;
+    public GameObject scarletMain;
+    public GameObject eddieMain;
+    public GameObject juiceBoxMain;
+    public GameObject drewMain;
+    public GameObject chaseMain;
+    public GameObject tempText;
     // Start is called before the first frame update
     void Start()
     {
@@ -53,10 +64,21 @@ public class Conclusion : MonoBehaviour
     {
         if(eddieChosen)
         {
-            print("Eddie ending here");
+            
             blackFade.gameObject.SetActive(true);
-            StartCoroutine(BlackTransition(suspectSelectionCam, goodEndingCam));
+            StartCoroutine(BlackTransition(suspectSelectionCam, badEndingCam));
             StartCoroutine(WaitThenFadeIn(eddie, true));
+            eddieMain.SetActive(false);
+            scarletMain.SetActive(false);
+            drewMain.SetActive(false);
+            chaseMain.SetActive(false);
+            juiceBoxMain.SetActive(false);
+            eddieEnd.SetActive(true);
+            scarletEnd.SetActive(true);
+            drewEnd.SetActive(true);
+            juiceBoxEnd.SetActive(true);
+            chaseEnd.SetActive(true);
+            
         }
         if(chaseChosen)
         {
@@ -78,6 +100,7 @@ public class Conclusion : MonoBehaviour
             blackFade.gameObject.SetActive(true);
             StartCoroutine(BlackTransition(suspectSelectionCam, badEndingCam));
             StartCoroutine(WaitThenFadeIn(juicebox, true));
+
         }
         if(graceChosen)
         {
@@ -131,10 +154,16 @@ public class Conclusion : MonoBehaviour
                 if (fadeProgress < 0.01f)
                 {
                     blackFade.gameObject.SetActive(false);
-                    if(startDialogue)
+                    if(eddieChosen)
+                    {
+                        tempText.SetActive(true);
+                    }
+                    
+                    if (startDialogue)
                     {
                         manager.GetComponent<DialogueManager>().StartConversation(npcTalking.GetComponent<NPCDialogue>().dialogueTree[0], npcTalking, manager.GetComponent<DialogueManager>().currentNPCCam);
                     }
+                    
                     yield return null;
                 }
                 yield return null;

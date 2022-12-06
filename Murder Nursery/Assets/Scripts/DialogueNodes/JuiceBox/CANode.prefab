@@ -58,7 +58,7 @@ MonoBehaviour:
   repLevelOption2: -10
   repLevelOption3: -10
   nodeID: 
-  nodeActive: 0
+  nodeActive: 1
   repGainResponse1: 0
   repGainResponse2: 0
   repGainResponse3: 0
@@ -76,7 +76,7 @@ MonoBehaviour:
   triggerBadEnd: 0
   lockingFirstPath: 1
   lockingSecondPath: 0
-  lockingThirdPath: 0
+  lockingThirdPath: 1
   fitCheck: 0
   dressUpNode: {fileID: 0}
   requiredOutfit: 

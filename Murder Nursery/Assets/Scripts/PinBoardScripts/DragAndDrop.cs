@@ -12,7 +12,9 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
     public GameObject itemPrefab;
 
     RectTransform rectTrans;
+
     Canvas myCanvas;
+
     CanvasGroup canvasGroup;
 
     [HideInInspector]
@@ -36,8 +38,8 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
     {
         itemPrefab = this.gameObject;
         canvasGroup.blocksRaycasts = false;
-        //itemImage.maskable = false;
-        //itemPrefab.GetComponent<Image>().maskable = false;
+        itemImage.maskable = false;
+        itemPrefab.GetComponent<Image>().maskable = false;
         originalPos = transform.position;
     }
 
@@ -49,8 +51,8 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
     public void OnEndDrag(PointerEventData eventData)
     {
         canvasGroup.blocksRaycasts = true;
-        //itemImage.maskable = true;
-        //itemPrefab.GetComponent<Image>().maskable = true;
+        itemImage.maskable = true;
+        itemPrefab.GetComponent<Image>().maskable = true;
         ResetPosition();
     }
 

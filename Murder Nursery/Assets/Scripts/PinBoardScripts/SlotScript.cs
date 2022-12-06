@@ -119,6 +119,7 @@ public class SlotScript : MonoBehaviour, IDropHandler
 
             }
 
+            eventData.pointerDrag.GetComponent<DragAndDrop>().itemPrefab.GetComponent<Image>().maskable = true;
             Instantiate(eventData.pointerDrag.GetComponent<DragAndDrop>().itemPrefab, content);
             Destroy(eventData.pointerDrag.GetComponent<DragAndDrop>().itemPrefab);
 

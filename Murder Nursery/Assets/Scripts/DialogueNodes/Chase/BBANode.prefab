@@ -47,14 +47,16 @@ MonoBehaviour:
   parent: {fileID: 3499891356269125111, guid: f661a047bb74ecb48abea995ea3d5394, type: 3}
   children:
   - {fileID: 3499891356269125111, guid: 0d20a138abddf5941bfecb025cb1cfd8, type: 3}
+  - {fileID: 3499891356269125111, guid: bac4de9741da0a84ea7a436776fdf9c9, type: 3}
   speech: 'Suspicious? No more than usual. '
   responses:
   - What's the usual?
+  - I'll come back later big man!
   repLevelOption1: 4
   repLevelOption2: -10
   repLevelOption3: -10
   nodeID: 
-  nodeActive: 0
+  nodeActive: 1
   repGainResponse1: 0
   repGainResponse2: 0
   repGainResponse3: 0
@@ -73,3 +75,15 @@ MonoBehaviour:
   lockingFirstPath: 0
   lockingSecondPath: 0
   lockingThirdPath: 0
+  fitCheck: 0
+  dressUpNode: {fileID: 0}
+  requiredOutfit: 
+  evidenceToDiscover: {fileID: 0}
+  evidenceCheckNode: 0
+  pathARequiredEvidence: 
+  pathBRequiredEvidence: 
+  pathCRequiredEvidence: 
+  pathAInterrogationEvidenceRequired: 0
+  pathBInterrogationEvidenceRequired: 0
+  pathCInterrogationEvidenceRequired: 0
+  nodeEmotion: 0

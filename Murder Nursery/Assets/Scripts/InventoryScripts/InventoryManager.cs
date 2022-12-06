@@ -27,6 +27,7 @@ public class InventoryManager : MonoBehaviour
     GameObject inventoryItem;
 
     private ItemManager[] inventoryItems;
+    public GameObject blur;
 
     private void Awake()
     {
@@ -45,6 +46,10 @@ public class InventoryManager : MonoBehaviour
         if(Input.GetKeyUp(KeyCode.I))
         {
             UIVisibility.ToggleInventory();
+            if(blur.activeSelf)
+            {
+                blur.SetActive(false);
+            }
         }
     }
 

@@ -159,7 +159,7 @@ public class DialogueManager : MonoBehaviour
         currentNPCCam.gameObject.SetActive(true);
         playerCam.gameObject.SetActive(false);
         activeNPC = npc;
-        
+        activeNode = startNode;
         LoadNodeInfo(startNode);
         npcStatement.SetActive(true);
         npcStatement.GetComponent<TextMeshProUGUI>().text = activeNode.speech;

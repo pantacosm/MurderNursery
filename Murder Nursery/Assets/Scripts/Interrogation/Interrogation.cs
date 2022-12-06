@@ -27,23 +27,32 @@ public class Interrogation : MonoBehaviour
     private Vector3 response1Position;
     private Vector3 response2Position;
     private Vector3 response3Position;
+    private int responseCount = 0;
+    public GameObject playerResponse1;
+    public GameObject playerResponse2;
+    public GameObject npcStatement1;
+    public GameObject npcStatement2;
+    private string lastResponse;
+    private string lastResponse2;
+    private string npcLastResponse1;
+    private string npcLastResponse2;
+    private bool firstNode = true;
+    public Image npcSprite1;
+    public Image npcSprite2;
+
     // Start is called before the first frame update
     void Start()
     {
         manager = GameObject.FindGameObjectWithTag("Manager");
-        response1Position = new Vector3(1371.9603271484375f, 385.18438720703127f ,0.0f);
-        response2Position  = new Vector3(1371.9603271484375f, 276.89532470703127f, 0.0f);
-        response3Position = new Vector3 (1371.966796875f, 170.09844970703126f, 0.0f);
+        response1Position = new Vector3(2030.744140625f, 326.246826171875f, 0.0f);
+        response2Position = new Vector3(2030.777587890625f, 228.91348266601563f, 0.0f);
+        response3Position = new Vector3(2030.7772216796875f, 126.91357421875f, 0.0f);
     }
 
     // Update is called once per frame
     void Update()
     {
         interrogationUnderway = manager.GetComponent<SceneTransition>().interrogationActive;
-        if(Input.GetKeyDown(KeyCode.X) && interrogationUnderway)
-        {
-            UpdateCurrentEmotion(1);
-        }
         if(interrogationUnderway)
         {
             ContinueInterrogation();
@@ -52,10 +61,15 @@ public class Interrogation : MonoBehaviour
         {
             BadEnd(2, repManager.GetComponent<ReputationManager>().femmePoints);
         }
-        if(interrogationUnderway && activeNode.exitNode == true)
+        if(interrogationUnderway && activeNode!=null)
         {
-            SuccessfulEnd();
+            if (activeNode.exitNode == true)
+            {
+                SuccessfulEnd();
+            }
         }
+        
+        
     }
 
     public void ContinueInterrogation()
@@ -64,6 +78,23 @@ public class Interrogation : MonoBehaviour
         j =  RecordInterrogationResponse();
         if(j == 0 || j == 1 || j == 2)
         {
+            if (responseCount >= 1)
+            {
+                lastResponse2 = lastResponse;
+            }
+            switch (j)
+            {
+                case 0:
+                    lastResponse = activeNode.responses[0];
+                    break;
+                case 1:
+                    lastResponse = activeNode.responses[1];
+                    break;
+                case 2:
+                    lastResponse = activeNode.responses[2];
+                    break;
+            }
+            responseCount++;
             pos = 0;
             LoadIntNodeInfo(activeNode.children[j]);         
         }
@@ -156,6 +187,7 @@ public class Interrogation : MonoBehaviour
     {
         manager.GetComponent<SceneTransition>().ChangeToMainArea();
         interrogationPanel.SetActive(false);
+        ClearDialogue();
     }
 
     public void BadEnd(int repLoss, int chosenRepLevel)
@@ -163,6 +195,7 @@ public class Interrogation : MonoBehaviour
         chosenRepLevel -= repLoss;
         manager.GetComponent<SceneTransition>().ChangeToMainArea();
         interrogationPanel.SetActive(false);
+        ClearDialogue();
     }
 
     public void LoadIntNodeInfo(DialogueNode newNode)
@@ -174,6 +207,17 @@ public class Interrogation : MonoBehaviour
         activeNode = newNode;
         newNode.nodeActive = true;
         npcStatement.GetComponent<TextMeshProUGUI>().text = newNode.speech;
+        if(firstNode)
+        {
+            npcLastResponse1 = activeNode.speech;
+        }
+        if(!firstNode)
+        {
+            npcLastResponse2 = npcLastResponse1;
+            npcLastResponse1 = activeNode.speech;
+
+            UpdateRollingText();
+        }
 
         if (activeNode.responses.Length == 0)
         {
@@ -223,6 +267,7 @@ public class Interrogation : MonoBehaviour
             }
         }
         MoveOptions();
+        firstNode = false;
     }
 
     public void StartInterrogation(DialogueNode startNode, GameObject targetNPC)
@@ -233,6 +278,8 @@ public class Interrogation : MonoBehaviour
         interrogationLives = 5;
         LoadIntNodeInfo(startNode);
         activeInterrogant = targetNPC;
+        npcSprite1.sprite = activeInterrogant.GetComponent<NPCDialogue>().sprite;
+        npcSprite2.sprite = activeInterrogant.GetComponent<NPCDialogue>().sprite;
     }
 
     public bool CheckNodeEvidence()
@@ -272,5 +319,39 @@ public class Interrogation : MonoBehaviour
         {
             intResponseBox2.transform.position = response1Position;
         }
+    }
+
+    private void UpdateRollingText()
+    {
+        if (responseCount == 1)
+        {
+            npcStatement.SetActive(true);
+            npcStatement.GetComponent<TextMeshProUGUI>().text = npcLastResponse1;
+            npcStatement2.SetActive(true);
+            npcStatement2.GetComponent<TextMeshProUGUI>().text = npcLastResponse2;
+            playerResponse1.SetActive(true);
+            playerResponse1.GetComponent<TextMeshProUGUI>().text = lastResponse;
+        }
+        if (responseCount > 1)
+        {
+            npcStatement.GetComponent<TextMeshProUGUI>().text = npcLastResponse1;
+            npcStatement2.GetComponent<TextMeshProUGUI>().text = npcLastResponse2;
+            playerResponse1.GetComponent<TextMeshProUGUI>().text = lastResponse;
+            playerResponse2.SetActive(true);
+            playerResponse2.GetComponent<TextMeshProUGUI>().text = lastResponse2;
+        }
+    }
+
+    private void ClearDialogue()
+    {
+        npcStatement2.GetComponent<TextMeshProUGUI>().text = "";
+        npcStatement2.SetActive(false);
+        playerResponse1.GetComponent<TextMeshProUGUI>().text = "";
+        playerResponse1.SetActive(false);
+        playerResponse2.GetComponent<TextMeshProUGUI>().text = "";
+        playerResponse2.SetActive(false);
+        lastResponse = null;
+        lastResponse2 = null;
+        responseCount = 0;
     }
 }

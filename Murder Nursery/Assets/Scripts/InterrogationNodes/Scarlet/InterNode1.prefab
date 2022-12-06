@@ -67,7 +67,7 @@ MonoBehaviour:
   interrogationNode: 0
   lifeLoss: 0
   exitNode: 0
-  firstPathLocked: 0
+  firstPathLocked: 1
   secondPathLocked: 0
   thirdPathLocked: 0
   nodeVisited: 0
@@ -83,10 +83,11 @@ MonoBehaviour:
   dressUpNode: {fileID: 0}
   requiredOutfit: 
   evidenceToDiscover: {fileID: 0}
-  evidenceCheckNode: 1
+  evidenceCheckNode: 0
   pathARequiredEvidence: Chase is a loser
   pathBRequiredEvidence: 
   pathCRequiredEvidence: 
-  pathAInterrogationEvidenceRequired: 1
+  pathAInterrogationEvidenceRequired: 0
   pathBInterrogationEvidenceRequired: 0
   pathCInterrogationEvidenceRequired: 0
+  nodeEmotion: 0

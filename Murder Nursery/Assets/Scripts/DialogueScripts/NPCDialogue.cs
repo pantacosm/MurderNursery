@@ -53,6 +53,7 @@ public class NPCDialogue : MonoBehaviour
             manager.GetComponent<DialogueManager>().ExitConversation();
             textureToChange.SetTexture("_DetailAlbedoMap", defaultEmotion);
             inConversation = false;
+            interactionMessage.SetActive(true);
         }
         if(inConversation)
         {

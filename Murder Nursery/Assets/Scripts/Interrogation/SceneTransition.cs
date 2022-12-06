@@ -30,16 +30,6 @@ public class SceneTransition : MonoBehaviour
         interrogationActive = false; //Signals that the player is not in an interrogation when they spawn in
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-        if(Input.GetKeyDown(KeyCode.X)) //Testing purposes only
-        {
-            ChangeToMainArea();
-        }
-
-    }
 
     public void ChangeCam(GameObject currentCam, GameObject newCam) //Activates the desired cam and deactivates the previous cam
     {
@@ -65,7 +55,7 @@ public class SceneTransition : MonoBehaviour
             activeInterrogant = coolIntObject;
             interrogationManager.GetComponent<Interrogation>().StartInterrogation(activeInterrogant.GetComponent<NPCDialogue>().dialogueTree[0], activeInterrogant);
         }
-        if(npc.name == "JuiceBox")
+        if(npc.name == "Juice Box")
         {
             juiceIntObject.SetActive(true);
             activeInterrogant=juiceIntObject;

@@ -57,7 +57,7 @@ MonoBehaviour:
   repLevelOption2: -10
   repLevelOption3: -10
   nodeID: 
-  nodeActive: 1
+  nodeActive: 0
   repGainResponse1: 0
   repGainResponse2: 0
   repGainResponse3: 0
@@ -67,7 +67,7 @@ MonoBehaviour:
   firstPathLocked: 0
   secondPathLocked: 0
   thirdPathLocked: 0
-  nodeVisited: 0
+  nodeVisited: 1
   lockingNode: 0
   briberyAvailable: 0
   triggerTrueEnd: 0
@@ -79,7 +79,7 @@ MonoBehaviour:
   fitCheck: 0
   dressUpNode: {fileID: 0}
   requiredOutfit: 
-  evidenceToDiscover: {fileID: 2720912505709134154, guid: 3bc0f372be527c44a90ead8cd51e6982, type: 3}
+  evidenceToDiscover: {fileID: 0}
   evidenceCheckNode: 0
   pathARequiredEvidence: 
   pathBRequiredEvidence: 

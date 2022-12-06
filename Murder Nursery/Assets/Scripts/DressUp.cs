@@ -143,11 +143,10 @@ public class DressUp : MonoBehaviour
 
     public void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.name == "DetectiveDrew")
-        {
+        
             interactable = false;
             interactableText.SetActive(false);
-        }
+        
     }
 
     public void ExitDressUp()

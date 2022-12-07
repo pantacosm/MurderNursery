@@ -10,6 +10,9 @@ public class PinboardManager : MonoBehaviour
 {
     public static PinboardManager pinboard;
 
+    [HideInInspector]
+    public string objectNameBeingReplaced;
+
     public Transform GoonLikes;
     public Transform GoonDislikes;
     public Transform GoonEvents;
@@ -32,6 +35,8 @@ public class PinboardManager : MonoBehaviour
 
     [SerializeField]
     GameObject CharacterTraitsUI;
+
+    
 
     [Header( "Pin-board Content")]
     [Header( "Goon")]

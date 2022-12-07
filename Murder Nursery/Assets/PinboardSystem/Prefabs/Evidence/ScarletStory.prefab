@@ -148,7 +148,89 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29b07a4dd108fb34780854838a7211c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  relationshipUI: {fileID: 0}
+  storyContent: {fileID: 0}
+  storyEvidenceContent: {fileID: 0}
+  scarletOne: {fileID: 0}
+  scarletTwo: {fileID: 0}
+  scarletThree: {fileID: 0}
+  scarletFour: {fileID: 0}
+  scarletFive: {fileID: 0}
+  scarletSix: {fileID: 0}
+  scarletSeven: {fileID: 0}
+  scarletEight: {fileID: 0}
+  scarletNine: {fileID: 0}
+  scarletTen: {fileID: 0}
+  scarletEleven: {fileID: 0}
+  scarletTwelve: {fileID: 0}
+  scarletThirteen: {fileID: 0}
+  scarletFourteen: {fileID: 0}
+  scarletFifteen: {fileID: 0}
+  juiceBoxOne: {fileID: 0}
+  juiceBoxTwo: {fileID: 0}
+  juiceBoxThree: {fileID: 0}
+  juiceBoxFour: {fileID: 0}
+  juiceBoxFive: {fileID: 0}
+  juiceBoxSix: {fileID: 0}
+  juiceBoxSeven: {fileID: 0}
+  juiceBoxEight: {fileID: 0}
+  juiceBoxNine: {fileID: 0}
+  juiceBoxTen: {fileID: 0}
+  juiceBoxEleven: {fileID: 0}
+  juiceBoxTwelve: {fileID: 0}
+  juiceBoxThirteen: {fileID: 0}
+  juiceBoxFourteen: {fileID: 0}
+  juiceBoxFifteen: {fileID: 0}
+  juiceBoxSixteen: {fileID: 0}
+  juiceBoxSeventeen: {fileID: 0}
+  juiceBoxEighteen: {fileID: 0}
+  juiceBoxNineteen: {fileID: 0}
+  chaseOne: {fileID: 0}
+  chaseTwo: {fileID: 0}
+  chaseThree: {fileID: 0}
+  chaseFour: {fileID: 0}
+  chaseFive: {fileID: 0}
+  chaseSix: {fileID: 0}
+  chaseSeven: {fileID: 0}
+  chaseEight: {fileID: 0}
+  chaseNine: {fileID: 0}
+  chaseTen: {fileID: 0}
+  chaseEleven: {fileID: 0}
+  chaseTwelve: {fileID: 0}
+  chaseThirteen: {fileID: 0}
+  chaseFourteen: {fileID: 0}
+  eddieOne: {fileID: 0}
+  eddieTwo: {fileID: 0}
+  eddieThree: {fileID: 0}
+  eddieFour: {fileID: 0}
+  eddieFive: {fileID: 0}
+  eddieSix: {fileID: 0}
+  eddieSeven: {fileID: 0}
+  eddieEight: {fileID: 0}
+  eddiexNine: {fileID: 0}
+  eddieTen: {fileID: 0}
+  eddieEleven: {fileID: 0}
+  eddieTwelve: {fileID: 0}
+  eddieThirteen: {fileID: 0}
+  eddieFourteen: {fileID: 0}
+  eddieFifteen: {fileID: 0}
+  eddieSixteen: {fileID: 0}
+  graceOne: {fileID: 0}
+  graceTwo: {fileID: 0}
+  graceThree: {fileID: 0}
+  graceFour: {fileID: 0}
+  graceFive: {fileID: 0}
+  graceSix: {fileID: 0}
+  graceSeven: {fileID: 0}
+  graceEight: {fileID: 0}
+  graceNine: {fileID: 0}
+  graceTen: {fileID: 0}
+  graceEleven: {fileID: 0}
+  graceTwelve: {fileID: 0}
+  graceThirteen: {fileID: 0}
+  graceFourteen: {fileID: 0}
+  graceFifteen: {fileID: 0}
+  graceSixteen: {fileID: 0}
+  graceSeventeen: {fileID: 0}
 --- !u!1 &607291210393432094
 GameObject:
   m_ObjectHideFlags: 0
@@ -437,7 +519,89 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29b07a4dd108fb34780854838a7211c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  relationshipUI: {fileID: 0}
+  storyContent: {fileID: 0}
+  storyEvidenceContent: {fileID: 0}
+  scarletOne: {fileID: 0}
+  scarletTwo: {fileID: 0}
+  scarletThree: {fileID: 0}
+  scarletFour: {fileID: 0}
+  scarletFive: {fileID: 0}
+  scarletSix: {fileID: 0}
+  scarletSeven: {fileID: 0}
+  scarletEight: {fileID: 0}
+  scarletNine: {fileID: 0}
+  scarletTen: {fileID: 0}
+  scarletEleven: {fileID: 0}
+  scarletTwelve: {fileID: 0}
+  scarletThirteen: {fileID: 0}
+  scarletFourteen: {fileID: 0}
+  scarletFifteen: {fileID: 0}
+  juiceBoxOne: {fileID: 0}
+  juiceBoxTwo: {fileID: 0}
+  juiceBoxThree: {fileID: 0}
+  juiceBoxFour: {fileID: 0}
+  juiceBoxFive: {fileID: 0}
+  juiceBoxSix: {fileID: 0}
+  juiceBoxSeven: {fileID: 0}
+  juiceBoxEight: {fileID: 0}
+  juiceBoxNine: {fileID: 0}
+  juiceBoxTen: {fileID: 0}
+  juiceBoxEleven: {fileID: 0}
+  juiceBoxTwelve: {fileID: 0}
+  juiceBoxThirteen: {fileID: 0}
+  juiceBoxFourteen: {fileID: 0}
+  juiceBoxFifteen: {fileID: 0}
+  juiceBoxSixteen: {fileID: 0}
+  juiceBoxSeventeen: {fileID: 0}
+  juiceBoxEighteen: {fileID: 0}
+  juiceBoxNineteen: {fileID: 0}
+  chaseOne: {fileID: 0}
+  chaseTwo: {fileID: 0}
+  chaseThree: {fileID: 0}
+  chaseFour: {fileID: 0}
+  chaseFive: {fileID: 0}
+  chaseSix: {fileID: 0}
+  chaseSeven: {fileID: 0}
+  chaseEight: {fileID: 0}
+  chaseNine: {fileID: 0}
+  chaseTen: {fileID: 0}
+  chaseEleven: {fileID: 0}
+  chaseTwelve: {fileID: 0}
+  chaseThirteen: {fileID: 0}
+  chaseFourteen: {fileID: 0}
+  eddieOne: {fileID: 0}
+  eddieTwo: {fileID: 0}
+  eddieThree: {fileID: 0}
+  eddieFour: {fileID: 0}
+  eddieFive: {fileID: 0}
+  eddieSix: {fileID: 0}
+  eddieSeven: {fileID: 0}
+  eddieEight: {fileID: 0}
+  eddiexNine: {fileID: 0}
+  eddieTen: {fileID: 0}
+  eddieEleven: {fileID: 0}
+  eddieTwelve: {fileID: 0}
+  eddieThirteen: {fileID: 0}
+  eddieFourteen: {fileID: 0}
+  eddieFifteen: {fileID: 0}
+  eddieSixteen: {fileID: 0}
+  graceOne: {fileID: 0}
+  graceTwo: {fileID: 0}
+  graceThree: {fileID: 0}
+  graceFour: {fileID: 0}
+  graceFive: {fileID: 0}
+  graceSix: {fileID: 0}
+  graceSeven: {fileID: 0}
+  graceEight: {fileID: 0}
+  graceNine: {fileID: 0}
+  graceTen: {fileID: 0}
+  graceEleven: {fileID: 0}
+  graceTwelve: {fileID: 0}
+  graceThirteen: {fileID: 0}
+  graceFourteen: {fileID: 0}
+  graceFifteen: {fileID: 0}
+  graceSixteen: {fileID: 0}
+  graceSeventeen: {fileID: 0}
 --- !u!1 &1857474355732053403
 GameObject:
   m_ObjectHideFlags: 0
@@ -474,7 +638,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -130, y: -25}
+  m_AnchoredPosition: {x: -144.2, y: -25}
   m_SizeDelta: {x: 253.2, y: 37.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6703123366846909361
@@ -586,7 +750,89 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29b07a4dd108fb34780854838a7211c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  relationshipUI: {fileID: 0}
+  storyContent: {fileID: 0}
+  storyEvidenceContent: {fileID: 0}
+  scarletOne: {fileID: 0}
+  scarletTwo: {fileID: 0}
+  scarletThree: {fileID: 0}
+  scarletFour: {fileID: 0}
+  scarletFive: {fileID: 0}
+  scarletSix: {fileID: 0}
+  scarletSeven: {fileID: 0}
+  scarletEight: {fileID: 0}
+  scarletNine: {fileID: 0}
+  scarletTen: {fileID: 0}
+  scarletEleven: {fileID: 0}
+  scarletTwelve: {fileID: 0}
+  scarletThirteen: {fileID: 0}
+  scarletFourteen: {fileID: 0}
+  scarletFifteen: {fileID: 0}
+  juiceBoxOne: {fileID: 0}
+  juiceBoxTwo: {fileID: 0}
+  juiceBoxThree: {fileID: 0}
+  juiceBoxFour: {fileID: 0}
+  juiceBoxFive: {fileID: 0}
+  juiceBoxSix: {fileID: 0}
+  juiceBoxSeven: {fileID: 0}
+  juiceBoxEight: {fileID: 0}
+  juiceBoxNine: {fileID: 0}
+  juiceBoxTen: {fileID: 0}
+  juiceBoxEleven: {fileID: 0}
+  juiceBoxTwelve: {fileID: 0}
+  juiceBoxThirteen: {fileID: 0}
+  juiceBoxFourteen: {fileID: 0}
+  juiceBoxFifteen: {fileID: 0}
+  juiceBoxSixteen: {fileID: 0}
+  juiceBoxSeventeen: {fileID: 0}
+  juiceBoxEighteen: {fileID: 0}
+  juiceBoxNineteen: {fileID: 0}
+  chaseOne: {fileID: 0}
+  chaseTwo: {fileID: 0}
+  chaseThree: {fileID: 0}
+  chaseFour: {fileID: 0}
+  chaseFive: {fileID: 0}
+  chaseSix: {fileID: 0}
+  chaseSeven: {fileID: 0}
+  chaseEight: {fileID: 0}
+  chaseNine: {fileID: 0}
+  chaseTen: {fileID: 0}
+  chaseEleven: {fileID: 0}
+  chaseTwelve: {fileID: 0}
+  chaseThirteen: {fileID: 0}
+  chaseFourteen: {fileID: 0}
+  eddieOne: {fileID: 0}
+  eddieTwo: {fileID: 0}
+  eddieThree: {fileID: 0}
+  eddieFour: {fileID: 0}
+  eddieFive: {fileID: 0}
+  eddieSix: {fileID: 0}
+  eddieSeven: {fileID: 0}
+  eddieEight: {fileID: 0}
+  eddiexNine: {fileID: 0}
+  eddieTen: {fileID: 0}
+  eddieEleven: {fileID: 0}
+  eddieTwelve: {fileID: 0}
+  eddieThirteen: {fileID: 0}
+  eddieFourteen: {fileID: 0}
+  eddieFifteen: {fileID: 0}
+  eddieSixteen: {fileID: 0}
+  graceOne: {fileID: 0}
+  graceTwo: {fileID: 0}
+  graceThree: {fileID: 0}
+  graceFour: {fileID: 0}
+  graceFive: {fileID: 0}
+  graceSix: {fileID: 0}
+  graceSeven: {fileID: 0}
+  graceEight: {fileID: 0}
+  graceNine: {fileID: 0}
+  graceTen: {fileID: 0}
+  graceEleven: {fileID: 0}
+  graceTwelve: {fileID: 0}
+  graceThirteen: {fileID: 0}
+  graceFourteen: {fileID: 0}
+  graceFifteen: {fileID: 0}
+  graceSixteen: {fileID: 0}
+  graceSeventeen: {fileID: 0}
 --- !u!1 &4090867941309896646
 GameObject:
   m_ObjectHideFlags: 0
@@ -623,8 +869,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 112.8, y: -25}
-  m_SizeDelta: {x: 199.2, y: 37.4}
+  m_AnchoredPosition: {x: 171.5, y: -25}
+  m_SizeDelta: {x: 363, y: 37.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7042504608712170038
 CanvasRenderer:
@@ -735,7 +981,89 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29b07a4dd108fb34780854838a7211c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  relationshipUI: {fileID: 0}
+  storyContent: {fileID: 0}
+  storyEvidenceContent: {fileID: 0}
+  scarletOne: {fileID: 0}
+  scarletTwo: {fileID: 0}
+  scarletThree: {fileID: 0}
+  scarletFour: {fileID: 0}
+  scarletFive: {fileID: 0}
+  scarletSix: {fileID: 0}
+  scarletSeven: {fileID: 0}
+  scarletEight: {fileID: 0}
+  scarletNine: {fileID: 0}
+  scarletTen: {fileID: 0}
+  scarletEleven: {fileID: 0}
+  scarletTwelve: {fileID: 0}
+  scarletThirteen: {fileID: 0}
+  scarletFourteen: {fileID: 0}
+  scarletFifteen: {fileID: 0}
+  juiceBoxOne: {fileID: 0}
+  juiceBoxTwo: {fileID: 0}
+  juiceBoxThree: {fileID: 0}
+  juiceBoxFour: {fileID: 0}
+  juiceBoxFive: {fileID: 0}
+  juiceBoxSix: {fileID: 0}
+  juiceBoxSeven: {fileID: 0}
+  juiceBoxEight: {fileID: 0}
+  juiceBoxNine: {fileID: 0}
+  juiceBoxTen: {fileID: 0}
+  juiceBoxEleven: {fileID: 0}
+  juiceBoxTwelve: {fileID: 0}
+  juiceBoxThirteen: {fileID: 0}
+  juiceBoxFourteen: {fileID: 0}
+  juiceBoxFifteen: {fileID: 0}
+  juiceBoxSixteen: {fileID: 0}
+  juiceBoxSeventeen: {fileID: 0}
+  juiceBoxEighteen: {fileID: 0}
+  juiceBoxNineteen: {fileID: 0}
+  chaseOne: {fileID: 0}
+  chaseTwo: {fileID: 0}
+  chaseThree: {fileID: 0}
+  chaseFour: {fileID: 0}
+  chaseFive: {fileID: 0}
+  chaseSix: {fileID: 0}
+  chaseSeven: {fileID: 0}
+  chaseEight: {fileID: 0}
+  chaseNine: {fileID: 0}
+  chaseTen: {fileID: 0}
+  chaseEleven: {fileID: 0}
+  chaseTwelve: {fileID: 0}
+  chaseThirteen: {fileID: 0}
+  chaseFourteen: {fileID: 0}
+  eddieOne: {fileID: 0}
+  eddieTwo: {fileID: 0}
+  eddieThree: {fileID: 0}
+  eddieFour: {fileID: 0}
+  eddieFive: {fileID: 0}
+  eddieSix: {fileID: 0}
+  eddieSeven: {fileID: 0}
+  eddieEight: {fileID: 0}
+  eddiexNine: {fileID: 0}
+  eddieTen: {fileID: 0}
+  eddieEleven: {fileID: 0}
+  eddieTwelve: {fileID: 0}
+  eddieThirteen: {fileID: 0}
+  eddieFourteen: {fileID: 0}
+  eddieFifteen: {fileID: 0}
+  eddieSixteen: {fileID: 0}
+  graceOne: {fileID: 0}
+  graceTwo: {fileID: 0}
+  graceThree: {fileID: 0}
+  graceFour: {fileID: 0}
+  graceFive: {fileID: 0}
+  graceSix: {fileID: 0}
+  graceSeven: {fileID: 0}
+  graceEight: {fileID: 0}
+  graceNine: {fileID: 0}
+  graceTen: {fileID: 0}
+  graceEleven: {fileID: 0}
+  graceTwelve: {fileID: 0}
+  graceThirteen: {fileID: 0}
+  graceFourteen: {fileID: 0}
+  graceFifteen: {fileID: 0}
+  graceSixteen: {fileID: 0}
+  graceSeventeen: {fileID: 0}
 --- !u!1 &4703651444596865235
 GameObject:
   m_ObjectHideFlags: 0
@@ -884,7 +1212,89 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29b07a4dd108fb34780854838a7211c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  relationshipUI: {fileID: 0}
+  storyContent: {fileID: 0}
+  storyEvidenceContent: {fileID: 0}
+  scarletOne: {fileID: 0}
+  scarletTwo: {fileID: 0}
+  scarletThree: {fileID: 0}
+  scarletFour: {fileID: 0}
+  scarletFive: {fileID: 0}
+  scarletSix: {fileID: 0}
+  scarletSeven: {fileID: 0}
+  scarletEight: {fileID: 0}
+  scarletNine: {fileID: 0}
+  scarletTen: {fileID: 0}
+  scarletEleven: {fileID: 0}
+  scarletTwelve: {fileID: 0}
+  scarletThirteen: {fileID: 0}
+  scarletFourteen: {fileID: 0}
+  scarletFifteen: {fileID: 0}
+  juiceBoxOne: {fileID: 0}
+  juiceBoxTwo: {fileID: 0}
+  juiceBoxThree: {fileID: 0}
+  juiceBoxFour: {fileID: 0}
+  juiceBoxFive: {fileID: 0}
+  juiceBoxSix: {fileID: 0}
+  juiceBoxSeven: {fileID: 0}
+  juiceBoxEight: {fileID: 0}
+  juiceBoxNine: {fileID: 0}
+  juiceBoxTen: {fileID: 0}
+  juiceBoxEleven: {fileID: 0}
+  juiceBoxTwelve: {fileID: 0}
+  juiceBoxThirteen: {fileID: 0}
+  juiceBoxFourteen: {fileID: 0}
+  juiceBoxFifteen: {fileID: 0}
+  juiceBoxSixteen: {fileID: 0}
+  juiceBoxSeventeen: {fileID: 0}
+  juiceBoxEighteen: {fileID: 0}
+  juiceBoxNineteen: {fileID: 0}
+  chaseOne: {fileID: 0}
+  chaseTwo: {fileID: 0}
+  chaseThree: {fileID: 0}
+  chaseFour: {fileID: 0}
+  chaseFive: {fileID: 0}
+  chaseSix: {fileID: 0}
+  chaseSeven: {fileID: 0}
+  chaseEight: {fileID: 0}
+  chaseNine: {fileID: 0}
+  chaseTen: {fileID: 0}
+  chaseEleven: {fileID: 0}
+  chaseTwelve: {fileID: 0}
+  chaseThirteen: {fileID: 0}
+  chaseFourteen: {fileID: 0}
+  eddieOne: {fileID: 0}
+  eddieTwo: {fileID: 0}
+  eddieThree: {fileID: 0}
+  eddieFour: {fileID: 0}
+  eddieFive: {fileID: 0}
+  eddieSix: {fileID: 0}
+  eddieSeven: {fileID: 0}
+  eddieEight: {fileID: 0}
+  eddiexNine: {fileID: 0}
+  eddieTen: {fileID: 0}
+  eddieEleven: {fileID: 0}
+  eddieTwelve: {fileID: 0}
+  eddieThirteen: {fileID: 0}
+  eddieFourteen: {fileID: 0}
+  eddieFifteen: {fileID: 0}
+  eddieSixteen: {fileID: 0}
+  graceOne: {fileID: 0}
+  graceTwo: {fileID: 0}
+  graceThree: {fileID: 0}
+  graceFour: {fileID: 0}
+  graceFive: {fileID: 0}
+  graceSix: {fileID: 0}
+  graceSeven: {fileID: 0}
+  graceEight: {fileID: 0}
+  graceNine: {fileID: 0}
+  graceTen: {fileID: 0}
+  graceEleven: {fileID: 0}
+  graceTwelve: {fileID: 0}
+  graceThirteen: {fileID: 0}
+  graceFourteen: {fileID: 0}
+  graceFifteen: {fileID: 0}
+  graceSixteen: {fileID: 0}
+  graceSeventeen: {fileID: 0}
 --- !u!1 &5348769196896371038
 GameObject:
   m_ObjectHideFlags: 0
@@ -1033,7 +1443,89 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29b07a4dd108fb34780854838a7211c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  relationshipUI: {fileID: 0}
+  storyContent: {fileID: 0}
+  storyEvidenceContent: {fileID: 0}
+  scarletOne: {fileID: 0}
+  scarletTwo: {fileID: 0}
+  scarletThree: {fileID: 0}
+  scarletFour: {fileID: 0}
+  scarletFive: {fileID: 0}
+  scarletSix: {fileID: 0}
+  scarletSeven: {fileID: 0}
+  scarletEight: {fileID: 0}
+  scarletNine: {fileID: 0}
+  scarletTen: {fileID: 0}
+  scarletEleven: {fileID: 0}
+  scarletTwelve: {fileID: 0}
+  scarletThirteen: {fileID: 0}
+  scarletFourteen: {fileID: 0}
+  scarletFifteen: {fileID: 0}
+  juiceBoxOne: {fileID: 0}
+  juiceBoxTwo: {fileID: 0}
+  juiceBoxThree: {fileID: 0}
+  juiceBoxFour: {fileID: 0}
+  juiceBoxFive: {fileID: 0}
+  juiceBoxSix: {fileID: 0}
+  juiceBoxSeven: {fileID: 0}
+  juiceBoxEight: {fileID: 0}
+  juiceBoxNine: {fileID: 0}
+  juiceBoxTen: {fileID: 0}
+  juiceBoxEleven: {fileID: 0}
+  juiceBoxTwelve: {fileID: 0}
+  juiceBoxThirteen: {fileID: 0}
+  juiceBoxFourteen: {fileID: 0}
+  juiceBoxFifteen: {fileID: 0}
+  juiceBoxSixteen: {fileID: 0}
+  juiceBoxSeventeen: {fileID: 0}
+  juiceBoxEighteen: {fileID: 0}
+  juiceBoxNineteen: {fileID: 0}
+  chaseOne: {fileID: 0}
+  chaseTwo: {fileID: 0}
+  chaseThree: {fileID: 0}
+  chaseFour: {fileID: 0}
+  chaseFive: {fileID: 0}
+  chaseSix: {fileID: 0}
+  chaseSeven: {fileID: 0}
+  chaseEight: {fileID: 0}
+  chaseNine: {fileID: 0}
+  chaseTen: {fileID: 0}
+  chaseEleven: {fileID: 0}
+  chaseTwelve: {fileID: 0}
+  chaseThirteen: {fileID: 0}
+  chaseFourteen: {fileID: 0}
+  eddieOne: {fileID: 0}
+  eddieTwo: {fileID: 0}
+  eddieThree: {fileID: 0}
+  eddieFour: {fileID: 0}
+  eddieFive: {fileID: 0}
+  eddieSix: {fileID: 0}
+  eddieSeven: {fileID: 0}
+  eddieEight: {fileID: 0}
+  eddiexNine: {fileID: 0}
+  eddieTen: {fileID: 0}
+  eddieEleven: {fileID: 0}
+  eddieTwelve: {fileID: 0}
+  eddieThirteen: {fileID: 0}
+  eddieFourteen: {fileID: 0}
+  eddieFifteen: {fileID: 0}
+  eddieSixteen: {fileID: 0}
+  graceOne: {fileID: 0}
+  graceTwo: {fileID: 0}
+  graceThree: {fileID: 0}
+  graceFour: {fileID: 0}
+  graceFive: {fileID: 0}
+  graceSix: {fileID: 0}
+  graceSeven: {fileID: 0}
+  graceEight: {fileID: 0}
+  graceNine: {fileID: 0}
+  graceTen: {fileID: 0}
+  graceEleven: {fileID: 0}
+  graceTwelve: {fileID: 0}
+  graceThirteen: {fileID: 0}
+  graceFourteen: {fileID: 0}
+  graceFifteen: {fileID: 0}
+  graceSixteen: {fileID: 0}
+  graceSeventeen: {fileID: 0}
 --- !u!1 &5431225640759392833
 GameObject:
   m_ObjectHideFlags: 0
@@ -1182,7 +1674,89 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29b07a4dd108fb34780854838a7211c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  relationshipUI: {fileID: 0}
+  storyContent: {fileID: 0}
+  storyEvidenceContent: {fileID: 0}
+  scarletOne: {fileID: 0}
+  scarletTwo: {fileID: 0}
+  scarletThree: {fileID: 0}
+  scarletFour: {fileID: 0}
+  scarletFive: {fileID: 0}
+  scarletSix: {fileID: 0}
+  scarletSeven: {fileID: 0}
+  scarletEight: {fileID: 0}
+  scarletNine: {fileID: 0}
+  scarletTen: {fileID: 0}
+  scarletEleven: {fileID: 0}
+  scarletTwelve: {fileID: 0}
+  scarletThirteen: {fileID: 0}
+  scarletFourteen: {fileID: 0}
+  scarletFifteen: {fileID: 0}
+  juiceBoxOne: {fileID: 0}
+  juiceBoxTwo: {fileID: 0}
+  juiceBoxThree: {fileID: 0}
+  juiceBoxFour: {fileID: 0}
+  juiceBoxFive: {fileID: 0}
+  juiceBoxSix: {fileID: 0}
+  juiceBoxSeven: {fileID: 0}
+  juiceBoxEight: {fileID: 0}
+  juiceBoxNine: {fileID: 0}
+  juiceBoxTen: {fileID: 0}
+  juiceBoxEleven: {fileID: 0}
+  juiceBoxTwelve: {fileID: 0}
+  juiceBoxThirteen: {fileID: 0}
+  juiceBoxFourteen: {fileID: 0}
+  juiceBoxFifteen: {fileID: 0}
+  juiceBoxSixteen: {fileID: 0}
+  juiceBoxSeventeen: {fileID: 0}
+  juiceBoxEighteen: {fileID: 0}
+  juiceBoxNineteen: {fileID: 0}
+  chaseOne: {fileID: 0}
+  chaseTwo: {fileID: 0}
+  chaseThree: {fileID: 0}
+  chaseFour: {fileID: 0}
+  chaseFive: {fileID: 0}
+  chaseSix: {fileID: 0}
+  chaseSeven: {fileID: 0}
+  chaseEight: {fileID: 0}
+  chaseNine: {fileID: 0}
+  chaseTen: {fileID: 0}
+  chaseEleven: {fileID: 0}
+  chaseTwelve: {fileID: 0}
+  chaseThirteen: {fileID: 0}
+  chaseFourteen: {fileID: 0}
+  eddieOne: {fileID: 0}
+  eddieTwo: {fileID: 0}
+  eddieThree: {fileID: 0}
+  eddieFour: {fileID: 0}
+  eddieFive: {fileID: 0}
+  eddieSix: {fileID: 0}
+  eddieSeven: {fileID: 0}
+  eddieEight: {fileID: 0}
+  eddiexNine: {fileID: 0}
+  eddieTen: {fileID: 0}
+  eddieEleven: {fileID: 0}
+  eddieTwelve: {fileID: 0}
+  eddieThirteen: {fileID: 0}
+  eddieFourteen: {fileID: 0}
+  eddieFifteen: {fileID: 0}
+  eddieSixteen: {fileID: 0}
+  graceOne: {fileID: 0}
+  graceTwo: {fileID: 0}
+  graceThree: {fileID: 0}
+  graceFour: {fileID: 0}
+  graceFive: {fileID: 0}
+  graceSix: {fileID: 0}
+  graceSeven: {fileID: 0}
+  graceEight: {fileID: 0}
+  graceNine: {fileID: 0}
+  graceTen: {fileID: 0}
+  graceEleven: {fileID: 0}
+  graceTwelve: {fileID: 0}
+  graceThirteen: {fileID: 0}
+  graceFourteen: {fileID: 0}
+  graceFifteen: {fileID: 0}
+  graceSixteen: {fileID: 0}
+  graceSeventeen: {fileID: 0}
 --- !u!1 &5591020648966318902
 GameObject:
   m_ObjectHideFlags: 0
@@ -1331,7 +1905,89 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29b07a4dd108fb34780854838a7211c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  relationshipUI: {fileID: 0}
+  storyContent: {fileID: 0}
+  storyEvidenceContent: {fileID: 0}
+  scarletOne: {fileID: 0}
+  scarletTwo: {fileID: 0}
+  scarletThree: {fileID: 0}
+  scarletFour: {fileID: 0}
+  scarletFive: {fileID: 0}
+  scarletSix: {fileID: 0}
+  scarletSeven: {fileID: 0}
+  scarletEight: {fileID: 0}
+  scarletNine: {fileID: 0}
+  scarletTen: {fileID: 0}
+  scarletEleven: {fileID: 0}
+  scarletTwelve: {fileID: 0}
+  scarletThirteen: {fileID: 0}
+  scarletFourteen: {fileID: 0}
+  scarletFifteen: {fileID: 0}
+  juiceBoxOne: {fileID: 0}
+  juiceBoxTwo: {fileID: 0}
+  juiceBoxThree: {fileID: 0}
+  juiceBoxFour: {fileID: 0}
+  juiceBoxFive: {fileID: 0}
+  juiceBoxSix: {fileID: 0}
+  juiceBoxSeven: {fileID: 0}
+  juiceBoxEight: {fileID: 0}
+  juiceBoxNine: {fileID: 0}
+  juiceBoxTen: {fileID: 0}
+  juiceBoxEleven: {fileID: 0}
+  juiceBoxTwelve: {fileID: 0}
+  juiceBoxThirteen: {fileID: 0}
+  juiceBoxFourteen: {fileID: 0}
+  juiceBoxFifteen: {fileID: 0}
+  juiceBoxSixteen: {fileID: 0}
+  juiceBoxSeventeen: {fileID: 0}
+  juiceBoxEighteen: {fileID: 0}
+  juiceBoxNineteen: {fileID: 0}
+  chaseOne: {fileID: 0}
+  chaseTwo: {fileID: 0}
+  chaseThree: {fileID: 0}
+  chaseFour: {fileID: 0}
+  chaseFive: {fileID: 0}
+  chaseSix: {fileID: 0}
+  chaseSeven: {fileID: 0}
+  chaseEight: {fileID: 0}
+  chaseNine: {fileID: 0}
+  chaseTen: {fileID: 0}
+  chaseEleven: {fileID: 0}
+  chaseTwelve: {fileID: 0}
+  chaseThirteen: {fileID: 0}
+  chaseFourteen: {fileID: 0}
+  eddieOne: {fileID: 0}
+  eddieTwo: {fileID: 0}
+  eddieThree: {fileID: 0}
+  eddieFour: {fileID: 0}
+  eddieFive: {fileID: 0}
+  eddieSix: {fileID: 0}
+  eddieSeven: {fileID: 0}
+  eddieEight: {fileID: 0}
+  eddiexNine: {fileID: 0}
+  eddieTen: {fileID: 0}
+  eddieEleven: {fileID: 0}
+  eddieTwelve: {fileID: 0}
+  eddieThirteen: {fileID: 0}
+  eddieFourteen: {fileID: 0}
+  eddieFifteen: {fileID: 0}
+  eddieSixteen: {fileID: 0}
+  graceOne: {fileID: 0}
+  graceTwo: {fileID: 0}
+  graceThree: {fileID: 0}
+  graceFour: {fileID: 0}
+  graceFive: {fileID: 0}
+  graceSix: {fileID: 0}
+  graceSeven: {fileID: 0}
+  graceEight: {fileID: 0}
+  graceNine: {fileID: 0}
+  graceTen: {fileID: 0}
+  graceEleven: {fileID: 0}
+  graceTwelve: {fileID: 0}
+  graceThirteen: {fileID: 0}
+  graceFourteen: {fileID: 0}
+  graceFifteen: {fileID: 0}
+  graceSixteen: {fileID: 0}
+  graceSeventeen: {fileID: 0}
 --- !u!1 &5686312492958159341
 GameObject:
   m_ObjectHideFlags: 0
@@ -1480,7 +2136,89 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29b07a4dd108fb34780854838a7211c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  relationshipUI: {fileID: 0}
+  storyContent: {fileID: 0}
+  storyEvidenceContent: {fileID: 0}
+  scarletOne: {fileID: 0}
+  scarletTwo: {fileID: 0}
+  scarletThree: {fileID: 0}
+  scarletFour: {fileID: 0}
+  scarletFive: {fileID: 0}
+  scarletSix: {fileID: 0}
+  scarletSeven: {fileID: 0}
+  scarletEight: {fileID: 0}
+  scarletNine: {fileID: 0}
+  scarletTen: {fileID: 0}
+  scarletEleven: {fileID: 0}
+  scarletTwelve: {fileID: 0}
+  scarletThirteen: {fileID: 0}
+  scarletFourteen: {fileID: 0}
+  scarletFifteen: {fileID: 0}
+  juiceBoxOne: {fileID: 0}
+  juiceBoxTwo: {fileID: 0}
+  juiceBoxThree: {fileID: 0}
+  juiceBoxFour: {fileID: 0}
+  juiceBoxFive: {fileID: 0}
+  juiceBoxSix: {fileID: 0}
+  juiceBoxSeven: {fileID: 0}
+  juiceBoxEight: {fileID: 0}
+  juiceBoxNine: {fileID: 0}
+  juiceBoxTen: {fileID: 0}
+  juiceBoxEleven: {fileID: 0}
+  juiceBoxTwelve: {fileID: 0}
+  juiceBoxThirteen: {fileID: 0}
+  juiceBoxFourteen: {fileID: 0}
+  juiceBoxFifteen: {fileID: 0}
+  juiceBoxSixteen: {fileID: 0}
+  juiceBoxSeventeen: {fileID: 0}
+  juiceBoxEighteen: {fileID: 0}
+  juiceBoxNineteen: {fileID: 0}
+  chaseOne: {fileID: 0}
+  chaseTwo: {fileID: 0}
+  chaseThree: {fileID: 0}
+  chaseFour: {fileID: 0}
+  chaseFive: {fileID: 0}
+  chaseSix: {fileID: 0}
+  chaseSeven: {fileID: 0}
+  chaseEight: {fileID: 0}
+  chaseNine: {fileID: 0}
+  chaseTen: {fileID: 0}
+  chaseEleven: {fileID: 0}
+  chaseTwelve: {fileID: 0}
+  chaseThirteen: {fileID: 0}
+  chaseFourteen: {fileID: 0}
+  eddieOne: {fileID: 0}
+  eddieTwo: {fileID: 0}
+  eddieThree: {fileID: 0}
+  eddieFour: {fileID: 0}
+  eddieFive: {fileID: 0}
+  eddieSix: {fileID: 0}
+  eddieSeven: {fileID: 0}
+  eddieEight: {fileID: 0}
+  eddiexNine: {fileID: 0}
+  eddieTen: {fileID: 0}
+  eddieEleven: {fileID: 0}
+  eddieTwelve: {fileID: 0}
+  eddieThirteen: {fileID: 0}
+  eddieFourteen: {fileID: 0}
+  eddieFifteen: {fileID: 0}
+  eddieSixteen: {fileID: 0}
+  graceOne: {fileID: 0}
+  graceTwo: {fileID: 0}
+  graceThree: {fileID: 0}
+  graceFour: {fileID: 0}
+  graceFive: {fileID: 0}
+  graceSix: {fileID: 0}
+  graceSeven: {fileID: 0}
+  graceEight: {fileID: 0}
+  graceNine: {fileID: 0}
+  graceTen: {fileID: 0}
+  graceEleven: {fileID: 0}
+  graceTwelve: {fileID: 0}
+  graceThirteen: {fileID: 0}
+  graceFourteen: {fileID: 0}
+  graceFifteen: {fileID: 0}
+  graceSixteen: {fileID: 0}
+  graceSeventeen: {fileID: 0}
 --- !u!1 &5723875247399827275
 GameObject:
   m_ObjectHideFlags: 0
@@ -1629,7 +2367,89 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29b07a4dd108fb34780854838a7211c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  relationshipUI: {fileID: 0}
+  storyContent: {fileID: 0}
+  storyEvidenceContent: {fileID: 0}
+  scarletOne: {fileID: 0}
+  scarletTwo: {fileID: 0}
+  scarletThree: {fileID: 0}
+  scarletFour: {fileID: 0}
+  scarletFive: {fileID: 0}
+  scarletSix: {fileID: 0}
+  scarletSeven: {fileID: 0}
+  scarletEight: {fileID: 0}
+  scarletNine: {fileID: 0}
+  scarletTen: {fileID: 0}
+  scarletEleven: {fileID: 0}
+  scarletTwelve: {fileID: 0}
+  scarletThirteen: {fileID: 0}
+  scarletFourteen: {fileID: 0}
+  scarletFifteen: {fileID: 0}
+  juiceBoxOne: {fileID: 0}
+  juiceBoxTwo: {fileID: 0}
+  juiceBoxThree: {fileID: 0}
+  juiceBoxFour: {fileID: 0}
+  juiceBoxFive: {fileID: 0}
+  juiceBoxSix: {fileID: 0}
+  juiceBoxSeven: {fileID: 0}
+  juiceBoxEight: {fileID: 0}
+  juiceBoxNine: {fileID: 0}
+  juiceBoxTen: {fileID: 0}
+  juiceBoxEleven: {fileID: 0}
+  juiceBoxTwelve: {fileID: 0}
+  juiceBoxThirteen: {fileID: 0}
+  juiceBoxFourteen: {fileID: 0}
+  juiceBoxFifteen: {fileID: 0}
+  juiceBoxSixteen: {fileID: 0}
+  juiceBoxSeventeen: {fileID: 0}
+  juiceBoxEighteen: {fileID: 0}
+  juiceBoxNineteen: {fileID: 0}
+  chaseOne: {fileID: 0}
+  chaseTwo: {fileID: 0}
+  chaseThree: {fileID: 0}
+  chaseFour: {fileID: 0}
+  chaseFive: {fileID: 0}
+  chaseSix: {fileID: 0}
+  chaseSeven: {fileID: 0}
+  chaseEight: {fileID: 0}
+  chaseNine: {fileID: 0}
+  chaseTen: {fileID: 0}
+  chaseEleven: {fileID: 0}
+  chaseTwelve: {fileID: 0}
+  chaseThirteen: {fileID: 0}
+  chaseFourteen: {fileID: 0}
+  eddieOne: {fileID: 0}
+  eddieTwo: {fileID: 0}
+  eddieThree: {fileID: 0}
+  eddieFour: {fileID: 0}
+  eddieFive: {fileID: 0}
+  eddieSix: {fileID: 0}
+  eddieSeven: {fileID: 0}
+  eddieEight: {fileID: 0}
+  eddiexNine: {fileID: 0}
+  eddieTen: {fileID: 0}
+  eddieEleven: {fileID: 0}
+  eddieTwelve: {fileID: 0}
+  eddieThirteen: {fileID: 0}
+  eddieFourteen: {fileID: 0}
+  eddieFifteen: {fileID: 0}
+  eddieSixteen: {fileID: 0}
+  graceOne: {fileID: 0}
+  graceTwo: {fileID: 0}
+  graceThree: {fileID: 0}
+  graceFour: {fileID: 0}
+  graceFive: {fileID: 0}
+  graceSix: {fileID: 0}
+  graceSeven: {fileID: 0}
+  graceEight: {fileID: 0}
+  graceNine: {fileID: 0}
+  graceTen: {fileID: 0}
+  graceEleven: {fileID: 0}
+  graceTwelve: {fileID: 0}
+  graceThirteen: {fileID: 0}
+  graceFourteen: {fileID: 0}
+  graceFifteen: {fileID: 0}
+  graceSixteen: {fileID: 0}
+  graceSeventeen: {fileID: 0}
 --- !u!1 &6132947918559328519
 GameObject:
   m_ObjectHideFlags: 0
@@ -1778,7 +2598,89 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29b07a4dd108fb34780854838a7211c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  relationshipUI: {fileID: 0}
+  storyContent: {fileID: 0}
+  storyEvidenceContent: {fileID: 0}
+  scarletOne: {fileID: 0}
+  scarletTwo: {fileID: 0}
+  scarletThree: {fileID: 0}
+  scarletFour: {fileID: 0}
+  scarletFive: {fileID: 0}
+  scarletSix: {fileID: 0}
+  scarletSeven: {fileID: 0}
+  scarletEight: {fileID: 0}
+  scarletNine: {fileID: 0}
+  scarletTen: {fileID: 0}
+  scarletEleven: {fileID: 0}
+  scarletTwelve: {fileID: 0}
+  scarletThirteen: {fileID: 0}
+  scarletFourteen: {fileID: 0}
+  scarletFifteen: {fileID: 0}
+  juiceBoxOne: {fileID: 0}
+  juiceBoxTwo: {fileID: 0}
+  juiceBoxThree: {fileID: 0}
+  juiceBoxFour: {fileID: 0}
+  juiceBoxFive: {fileID: 0}
+  juiceBoxSix: {fileID: 0}
+  juiceBoxSeven: {fileID: 0}
+  juiceBoxEight: {fileID: 0}
+  juiceBoxNine: {fileID: 0}
+  juiceBoxTen: {fileID: 0}
+  juiceBoxEleven: {fileID: 0}
+  juiceBoxTwelve: {fileID: 0}
+  juiceBoxThirteen: {fileID: 0}
+  juiceBoxFourteen: {fileID: 0}
+  juiceBoxFifteen: {fileID: 0}
+  juiceBoxSixteen: {fileID: 0}
+  juiceBoxSeventeen: {fileID: 0}
+  juiceBoxEighteen: {fileID: 0}
+  juiceBoxNineteen: {fileID: 0}
+  chaseOne: {fileID: 0}
+  chaseTwo: {fileID: 0}
+  chaseThree: {fileID: 0}
+  chaseFour: {fileID: 0}
+  chaseFive: {fileID: 0}
+  chaseSix: {fileID: 0}
+  chaseSeven: {fileID: 0}
+  chaseEight: {fileID: 0}
+  chaseNine: {fileID: 0}
+  chaseTen: {fileID: 0}
+  chaseEleven: {fileID: 0}
+  chaseTwelve: {fileID: 0}
+  chaseThirteen: {fileID: 0}
+  chaseFourteen: {fileID: 0}
+  eddieOne: {fileID: 0}
+  eddieTwo: {fileID: 0}
+  eddieThree: {fileID: 0}
+  eddieFour: {fileID: 0}
+  eddieFive: {fileID: 0}
+  eddieSix: {fileID: 0}
+  eddieSeven: {fileID: 0}
+  eddieEight: {fileID: 0}
+  eddiexNine: {fileID: 0}
+  eddieTen: {fileID: 0}
+  eddieEleven: {fileID: 0}
+  eddieTwelve: {fileID: 0}
+  eddieThirteen: {fileID: 0}
+  eddieFourteen: {fileID: 0}
+  eddieFifteen: {fileID: 0}
+  eddieSixteen: {fileID: 0}
+  graceOne: {fileID: 0}
+  graceTwo: {fileID: 0}
+  graceThree: {fileID: 0}
+  graceFour: {fileID: 0}
+  graceFive: {fileID: 0}
+  graceSix: {fileID: 0}
+  graceSeven: {fileID: 0}
+  graceEight: {fileID: 0}
+  graceNine: {fileID: 0}
+  graceTen: {fileID: 0}
+  graceEleven: {fileID: 0}
+  graceTwelve: {fileID: 0}
+  graceThirteen: {fileID: 0}
+  graceFourteen: {fileID: 0}
+  graceFifteen: {fileID: 0}
+  graceSixteen: {fileID: 0}
+  graceSeventeen: {fileID: 0}
 --- !u!1 &6235772685061863180
 GameObject:
   m_ObjectHideFlags: 0
@@ -1927,7 +2829,89 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29b07a4dd108fb34780854838a7211c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  relationshipUI: {fileID: 0}
+  storyContent: {fileID: 0}
+  storyEvidenceContent: {fileID: 0}
+  scarletOne: {fileID: 0}
+  scarletTwo: {fileID: 0}
+  scarletThree: {fileID: 0}
+  scarletFour: {fileID: 0}
+  scarletFive: {fileID: 0}
+  scarletSix: {fileID: 0}
+  scarletSeven: {fileID: 0}
+  scarletEight: {fileID: 0}
+  scarletNine: {fileID: 0}
+  scarletTen: {fileID: 0}
+  scarletEleven: {fileID: 0}
+  scarletTwelve: {fileID: 0}
+  scarletThirteen: {fileID: 0}
+  scarletFourteen: {fileID: 0}
+  scarletFifteen: {fileID: 0}
+  juiceBoxOne: {fileID: 0}
+  juiceBoxTwo: {fileID: 0}
+  juiceBoxThree: {fileID: 0}
+  juiceBoxFour: {fileID: 0}
+  juiceBoxFive: {fileID: 0}
+  juiceBoxSix: {fileID: 0}
+  juiceBoxSeven: {fileID: 0}
+  juiceBoxEight: {fileID: 0}
+  juiceBoxNine: {fileID: 0}
+  juiceBoxTen: {fileID: 0}
+  juiceBoxEleven: {fileID: 0}
+  juiceBoxTwelve: {fileID: 0}
+  juiceBoxThirteen: {fileID: 0}
+  juiceBoxFourteen: {fileID: 0}
+  juiceBoxFifteen: {fileID: 0}
+  juiceBoxSixteen: {fileID: 0}
+  juiceBoxSeventeen: {fileID: 0}
+  juiceBoxEighteen: {fileID: 0}
+  juiceBoxNineteen: {fileID: 0}
+  chaseOne: {fileID: 0}
+  chaseTwo: {fileID: 0}
+  chaseThree: {fileID: 0}
+  chaseFour: {fileID: 0}
+  chaseFive: {fileID: 0}
+  chaseSix: {fileID: 0}
+  chaseSeven: {fileID: 0}
+  chaseEight: {fileID: 0}
+  chaseNine: {fileID: 0}
+  chaseTen: {fileID: 0}
+  chaseEleven: {fileID: 0}
+  chaseTwelve: {fileID: 0}
+  chaseThirteen: {fileID: 0}
+  chaseFourteen: {fileID: 0}
+  eddieOne: {fileID: 0}
+  eddieTwo: {fileID: 0}
+  eddieThree: {fileID: 0}
+  eddieFour: {fileID: 0}
+  eddieFive: {fileID: 0}
+  eddieSix: {fileID: 0}
+  eddieSeven: {fileID: 0}
+  eddieEight: {fileID: 0}
+  eddiexNine: {fileID: 0}
+  eddieTen: {fileID: 0}
+  eddieEleven: {fileID: 0}
+  eddieTwelve: {fileID: 0}
+  eddieThirteen: {fileID: 0}
+  eddieFourteen: {fileID: 0}
+  eddieFifteen: {fileID: 0}
+  eddieSixteen: {fileID: 0}
+  graceOne: {fileID: 0}
+  graceTwo: {fileID: 0}
+  graceThree: {fileID: 0}
+  graceFour: {fileID: 0}
+  graceFive: {fileID: 0}
+  graceSix: {fileID: 0}
+  graceSeven: {fileID: 0}
+  graceEight: {fileID: 0}
+  graceNine: {fileID: 0}
+  graceTen: {fileID: 0}
+  graceEleven: {fileID: 0}
+  graceTwelve: {fileID: 0}
+  graceThirteen: {fileID: 0}
+  graceFourteen: {fileID: 0}
+  graceFifteen: {fileID: 0}
+  graceSixteen: {fileID: 0}
+  graceSeventeen: {fileID: 0}
 --- !u!1 &6586082873428801429
 GameObject:
   m_ObjectHideFlags: 0
@@ -2076,7 +3060,89 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29b07a4dd108fb34780854838a7211c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  relationshipUI: {fileID: 0}
+  storyContent: {fileID: 0}
+  storyEvidenceContent: {fileID: 0}
+  scarletOne: {fileID: 0}
+  scarletTwo: {fileID: 0}
+  scarletThree: {fileID: 0}
+  scarletFour: {fileID: 0}
+  scarletFive: {fileID: 0}
+  scarletSix: {fileID: 0}
+  scarletSeven: {fileID: 0}
+  scarletEight: {fileID: 0}
+  scarletNine: {fileID: 0}
+  scarletTen: {fileID: 0}
+  scarletEleven: {fileID: 0}
+  scarletTwelve: {fileID: 0}
+  scarletThirteen: {fileID: 0}
+  scarletFourteen: {fileID: 0}
+  scarletFifteen: {fileID: 0}
+  juiceBoxOne: {fileID: 0}
+  juiceBoxTwo: {fileID: 0}
+  juiceBoxThree: {fileID: 0}
+  juiceBoxFour: {fileID: 0}
+  juiceBoxFive: {fileID: 0}
+  juiceBoxSix: {fileID: 0}
+  juiceBoxSeven: {fileID: 0}
+  juiceBoxEight: {fileID: 0}
+  juiceBoxNine: {fileID: 0}
+  juiceBoxTen: {fileID: 0}
+  juiceBoxEleven: {fileID: 0}
+  juiceBoxTwelve: {fileID: 0}
+  juiceBoxThirteen: {fileID: 0}
+  juiceBoxFourteen: {fileID: 0}
+  juiceBoxFifteen: {fileID: 0}
+  juiceBoxSixteen: {fileID: 0}
+  juiceBoxSeventeen: {fileID: 0}
+  juiceBoxEighteen: {fileID: 0}
+  juiceBoxNineteen: {fileID: 0}
+  chaseOne: {fileID: 0}
+  chaseTwo: {fileID: 0}
+  chaseThree: {fileID: 0}
+  chaseFour: {fileID: 0}
+  chaseFive: {fileID: 0}
+  chaseSix: {fileID: 0}
+  chaseSeven: {fileID: 0}
+  chaseEight: {fileID: 0}
+  chaseNine: {fileID: 0}
+  chaseTen: {fileID: 0}
+  chaseEleven: {fileID: 0}
+  chaseTwelve: {fileID: 0}
+  chaseThirteen: {fileID: 0}
+  chaseFourteen: {fileID: 0}
+  eddieOne: {fileID: 0}
+  eddieTwo: {fileID: 0}
+  eddieThree: {fileID: 0}
+  eddieFour: {fileID: 0}
+  eddieFive: {fileID: 0}
+  eddieSix: {fileID: 0}
+  eddieSeven: {fileID: 0}
+  eddieEight: {fileID: 0}
+  eddiexNine: {fileID: 0}
+  eddieTen: {fileID: 0}
+  eddieEleven: {fileID: 0}
+  eddieTwelve: {fileID: 0}
+  eddieThirteen: {fileID: 0}
+  eddieFourteen: {fileID: 0}
+  eddieFifteen: {fileID: 0}
+  eddieSixteen: {fileID: 0}
+  graceOne: {fileID: 0}
+  graceTwo: {fileID: 0}
+  graceThree: {fileID: 0}
+  graceFour: {fileID: 0}
+  graceFive: {fileID: 0}
+  graceSix: {fileID: 0}
+  graceSeven: {fileID: 0}
+  graceEight: {fileID: 0}
+  graceNine: {fileID: 0}
+  graceTen: {fileID: 0}
+  graceEleven: {fileID: 0}
+  graceTwelve: {fileID: 0}
+  graceThirteen: {fileID: 0}
+  graceFourteen: {fileID: 0}
+  graceFifteen: {fileID: 0}
+  graceSixteen: {fileID: 0}
+  graceSeventeen: {fileID: 0}
 --- !u!1 &7392041034894732283
 GameObject:
   m_ObjectHideFlags: 0
@@ -2225,7 +3291,89 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29b07a4dd108fb34780854838a7211c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  relationshipUI: {fileID: 0}
+  storyContent: {fileID: 0}
+  storyEvidenceContent: {fileID: 0}
+  scarletOne: {fileID: 0}
+  scarletTwo: {fileID: 0}
+  scarletThree: {fileID: 0}
+  scarletFour: {fileID: 0}
+  scarletFive: {fileID: 0}
+  scarletSix: {fileID: 0}
+  scarletSeven: {fileID: 0}
+  scarletEight: {fileID: 0}
+  scarletNine: {fileID: 0}
+  scarletTen: {fileID: 0}
+  scarletEleven: {fileID: 0}
+  scarletTwelve: {fileID: 0}
+  scarletThirteen: {fileID: 0}
+  scarletFourteen: {fileID: 0}
+  scarletFifteen: {fileID: 0}
+  juiceBoxOne: {fileID: 0}
+  juiceBoxTwo: {fileID: 0}
+  juiceBoxThree: {fileID: 0}
+  juiceBoxFour: {fileID: 0}
+  juiceBoxFive: {fileID: 0}
+  juiceBoxSix: {fileID: 0}
+  juiceBoxSeven: {fileID: 0}
+  juiceBoxEight: {fileID: 0}
+  juiceBoxNine: {fileID: 0}
+  juiceBoxTen: {fileID: 0}
+  juiceBoxEleven: {fileID: 0}
+  juiceBoxTwelve: {fileID: 0}
+  juiceBoxThirteen: {fileID: 0}
+  juiceBoxFourteen: {fileID: 0}
+  juiceBoxFifteen: {fileID: 0}
+  juiceBoxSixteen: {fileID: 0}
+  juiceBoxSeventeen: {fileID: 0}
+  juiceBoxEighteen: {fileID: 0}
+  juiceBoxNineteen: {fileID: 0}
+  chaseOne: {fileID: 0}
+  chaseTwo: {fileID: 0}
+  chaseThree: {fileID: 0}
+  chaseFour: {fileID: 0}
+  chaseFive: {fileID: 0}
+  chaseSix: {fileID: 0}
+  chaseSeven: {fileID: 0}
+  chaseEight: {fileID: 0}
+  chaseNine: {fileID: 0}
+  chaseTen: {fileID: 0}
+  chaseEleven: {fileID: 0}
+  chaseTwelve: {fileID: 0}
+  chaseThirteen: {fileID: 0}
+  chaseFourteen: {fileID: 0}
+  eddieOne: {fileID: 0}
+  eddieTwo: {fileID: 0}
+  eddieThree: {fileID: 0}
+  eddieFour: {fileID: 0}
+  eddieFive: {fileID: 0}
+  eddieSix: {fileID: 0}
+  eddieSeven: {fileID: 0}
+  eddieEight: {fileID: 0}
+  eddiexNine: {fileID: 0}
+  eddieTen: {fileID: 0}
+  eddieEleven: {fileID: 0}
+  eddieTwelve: {fileID: 0}
+  eddieThirteen: {fileID: 0}
+  eddieFourteen: {fileID: 0}
+  eddieFifteen: {fileID: 0}
+  eddieSixteen: {fileID: 0}
+  graceOne: {fileID: 0}
+  graceTwo: {fileID: 0}
+  graceThree: {fileID: 0}
+  graceFour: {fileID: 0}
+  graceFive: {fileID: 0}
+  graceSix: {fileID: 0}
+  graceSeven: {fileID: 0}
+  graceEight: {fileID: 0}
+  graceNine: {fileID: 0}
+  graceTen: {fileID: 0}
+  graceEleven: {fileID: 0}
+  graceTwelve: {fileID: 0}
+  graceThirteen: {fileID: 0}
+  graceFourteen: {fileID: 0}
+  graceFifteen: {fileID: 0}
+  graceSixteen: {fileID: 0}
+  graceSeventeen: {fileID: 0}
 --- !u!1 &8068319945095476525
 GameObject:
   m_ObjectHideFlags: 0
@@ -2235,6 +3383,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4107660225187191562}
+  - component: {fileID: 9100759782553399245}
   m_Layer: 5
   m_Name: ScarletStory
   m_TagString: Untagged
@@ -2278,6 +3427,14 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &9100759782553399245
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8068319945095476525}
+  m_CullTransparentMesh: 1
 --- !u!1 &8871612942803794665
 GameObject:
   m_ObjectHideFlags: 0
@@ -2426,4 +3583,86 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29b07a4dd108fb34780854838a7211c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  relationshipUI: {fileID: 0}
+  storyContent: {fileID: 0}
+  storyEvidenceContent: {fileID: 0}
+  scarletOne: {fileID: 0}
+  scarletTwo: {fileID: 0}
+  scarletThree: {fileID: 0}
+  scarletFour: {fileID: 0}
+  scarletFive: {fileID: 0}
+  scarletSix: {fileID: 0}
+  scarletSeven: {fileID: 0}
+  scarletEight: {fileID: 0}
+  scarletNine: {fileID: 0}
+  scarletTen: {fileID: 0}
+  scarletEleven: {fileID: 0}
+  scarletTwelve: {fileID: 0}
+  scarletThirteen: {fileID: 0}
+  scarletFourteen: {fileID: 0}
+  scarletFifteen: {fileID: 0}
+  juiceBoxOne: {fileID: 0}
+  juiceBoxTwo: {fileID: 0}
+  juiceBoxThree: {fileID: 0}
+  juiceBoxFour: {fileID: 0}
+  juiceBoxFive: {fileID: 0}
+  juiceBoxSix: {fileID: 0}
+  juiceBoxSeven: {fileID: 0}
+  juiceBoxEight: {fileID: 0}
+  juiceBoxNine: {fileID: 0}
+  juiceBoxTen: {fileID: 0}
+  juiceBoxEleven: {fileID: 0}
+  juiceBoxTwelve: {fileID: 0}
+  juiceBoxThirteen: {fileID: 0}
+  juiceBoxFourteen: {fileID: 0}
+  juiceBoxFifteen: {fileID: 0}
+  juiceBoxSixteen: {fileID: 0}
+  juiceBoxSeventeen: {fileID: 0}
+  juiceBoxEighteen: {fileID: 0}
+  juiceBoxNineteen: {fileID: 0}
+  chaseOne: {fileID: 0}
+  chaseTwo: {fileID: 0}
+  chaseThree: {fileID: 0}
+  chaseFour: {fileID: 0}
+  chaseFive: {fileID: 0}
+  chaseSix: {fileID: 0}
+  chaseSeven: {fileID: 0}
+  chaseEight: {fileID: 0}
+  chaseNine: {fileID: 0}
+  chaseTen: {fileID: 0}
+  chaseEleven: {fileID: 0}
+  chaseTwelve: {fileID: 0}
+  chaseThirteen: {fileID: 0}
+  chaseFourteen: {fileID: 0}
+  eddieOne: {fileID: 0}
+  eddieTwo: {fileID: 0}
+  eddieThree: {fileID: 0}
+  eddieFour: {fileID: 0}
+  eddieFive: {fileID: 0}
+  eddieSix: {fileID: 0}
+  eddieSeven: {fileID: 0}
+  eddieEight: {fileID: 0}
+  eddiexNine: {fileID: 0}
+  eddieTen: {fileID: 0}
+  eddieEleven: {fileID: 0}
+  eddieTwelve: {fileID: 0}
+  eddieThirteen: {fileID: 0}
+  eddieFourteen: {fileID: 0}
+  eddieFifteen: {fileID: 0}
+  eddieSixteen: {fileID: 0}
+  graceOne: {fileID: 0}
+  graceTwo: {fileID: 0}
+  graceThree: {fileID: 0}
+  graceFour: {fileID: 0}
+  graceFive: {fileID: 0}
+  graceSix: {fileID: 0}
+  graceSeven: {fileID: 0}
+  graceEight: {fileID: 0}
+  graceNine: {fileID: 0}
+  graceTen: {fileID: 0}
+  graceEleven: {fileID: 0}
+  graceTwelve: {fileID: 0}
+  graceThirteen: {fileID: 0}
+  graceFourteen: {fileID: 0}
+  graceFifteen: {fileID: 0}
+  graceSixteen: {fileID: 0}
+  graceSeventeen: {fileID: 0}

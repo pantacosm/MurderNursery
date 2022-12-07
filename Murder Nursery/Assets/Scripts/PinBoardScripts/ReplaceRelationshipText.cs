@@ -11,15 +11,25 @@ public class ReplaceRelationshipText : MonoBehaviour, IPointerClickHandler
     //[SerializeField]
     //GameObject relationshipOptionsUI;
 
-    //private PinboardManager PM;
+    [SerializeField]
+    Transform content;
+
+    Transform scarletStory;
+    Transform juiceBoxStory;
+    Transform eddieStory;
+    Transform chaseStory;
+    Transform graceStory;
+
+    private PinboardManager PM;
 
     //private RelationshipDetails RD;
 
+    string textToReplace;
     string replacingText;
 
     private void Start()
     {
-        //PM = FindObjectOfType<PinboardManager>();
+        PM = FindObjectOfType<PinboardManager>();
         //RD = PM.GetComponent<RelationshipDetails>();
     }
 
@@ -50,8 +60,123 @@ public class ReplaceRelationshipText : MonoBehaviour, IPointerClickHandler
     //    }
     //}
 
+    void UpdateStoryText(string storyString, Transform story, string objectName)
+    {
+        if(content.Find(storyString))
+        {
+            Debug.Log(storyString);
+            story = content.Find(storyString);
+            foreach (Transform item in story)
+            {
+                if(item.GetComponent<OpenRelationshipOptionsPanel>())
+                {
+                    string name = item.GetComponent<OpenRelationshipOptionsPanel>().name;
+                    if(name == objectName && PM.objectNameBeingReplaced == objectName)
+                    {
+                        textToReplace = item.GetComponent<TextMeshProUGUI>().text;
+                        item.GetComponent<TextMeshProUGUI>().text = item.GetComponent<TextMeshProUGUI>().text.Replace(textToReplace, replacingText);
+                        break;
+                    }
+                }
+            }
+
+        }
+    }
+
+
     public void OnPointerClick(PointerEventData eventData)
     {
+        replacingText = gameObject.GetComponent<TextMeshProUGUI>().text;
+
+        UpdateStoryText("ScarletStory", scarletStory, "One");
+        UpdateStoryText("ScarletStory", scarletStory, "Two");
+        UpdateStoryText("ScarletStory", scarletStory, "Three");
+        UpdateStoryText("ScarletStory", scarletStory, "Four");
+        UpdateStoryText("ScarletStory", scarletStory, "Five");
+        UpdateStoryText("ScarletStory", scarletStory, "Six");
+        UpdateStoryText("ScarletStory", scarletStory, "Seven");
+        UpdateStoryText("ScarletStory", scarletStory, "Eight");
+        UpdateStoryText("ScarletStory", scarletStory, "Nine");
+        UpdateStoryText("ScarletStory", scarletStory, "Ten");
+        UpdateStoryText("ScarletStory", scarletStory, "Eleven");
+        UpdateStoryText("ScarletStory", scarletStory, "Twelve");
+        UpdateStoryText("ScarletStory", scarletStory, "Thirteen");
+        UpdateStoryText("ScarletStory", scarletStory, "Fourteen");
+        UpdateStoryText("ScarletStory", scarletStory, "Fifteen");
+
+        UpdateStoryText("JuiceBoxStory", juiceBoxStory, "One");
+        UpdateStoryText("JuiceBoxStory", juiceBoxStory, "Two");
+        UpdateStoryText("JuiceBoxStory", juiceBoxStory, "Three");
+        UpdateStoryText("JuiceBoxStory", juiceBoxStory, "Four");
+        UpdateStoryText("JuiceBoxStory", juiceBoxStory, "Five");
+        UpdateStoryText("JuiceBoxStory", juiceBoxStory, "Six");
+        UpdateStoryText("JuiceBoxStory", juiceBoxStory, "Seven");
+        UpdateStoryText("JuiceBoxStory", juiceBoxStory, "Eight");
+        UpdateStoryText("JuiceBoxStory", juiceBoxStory, "Nine");
+        UpdateStoryText("JuiceBoxStory", juiceBoxStory, "Ten");
+        UpdateStoryText("JuiceBoxStory", juiceBoxStory, "Eleven");
+        UpdateStoryText("JuiceBoxStory", juiceBoxStory, "Twelve");
+        UpdateStoryText("JuiceBoxStory", juiceBoxStory, "Thirteen");
+        UpdateStoryText("JuiceBoxStory", juiceBoxStory, "Fourteen");
+        UpdateStoryText("JuiceBoxStory", juiceBoxStory, "Fifteen");
+        UpdateStoryText("JuiceBoxStory", juiceBoxStory, "Sixteen");
+        UpdateStoryText("JuiceBoxStory", juiceBoxStory, "Seventeen");
+        UpdateStoryText("JuiceBoxStory", juiceBoxStory, "Eighteen");
+        UpdateStoryText("JuiceBoxStory", juiceBoxStory, "Nineteen");
+
+        UpdateStoryText("ChaseStory", chaseStory, "One");
+        UpdateStoryText("ChaseStory", chaseStory, "Two");
+        UpdateStoryText("ChaseStory", chaseStory, "Three");
+        UpdateStoryText("ChaseStory", chaseStory, "Four");
+        UpdateStoryText("ChaseStory", chaseStory, "Five");
+        UpdateStoryText("ChaseStory", chaseStory, "Six");
+        UpdateStoryText("ChaseStory", chaseStory, "Seven");
+        UpdateStoryText("ChaseStory", chaseStory, "Eight");
+        UpdateStoryText("ChaseStory", chaseStory, "Nine");
+        UpdateStoryText("ChaseStory", chaseStory, "Ten");
+        UpdateStoryText("ChaseStory", chaseStory, "Eleven");
+        UpdateStoryText("ChaseStory", chaseStory, "Twelve");
+        UpdateStoryText("ChaseStory", chaseStory, "Thirteen");
+        UpdateStoryText("ChaseStory", chaseStory, "Fourteen");
+
+        UpdateStoryText("EddieStory", eddieStory, "One");
+        UpdateStoryText("EddieStory", eddieStory, "Two");
+        UpdateStoryText("EddieStory", eddieStory, "Three");
+        UpdateStoryText("EddieStory", eddieStory, "Four");
+        UpdateStoryText("EddieStory", eddieStory, "Five");
+        UpdateStoryText("EddieStory", eddieStory, "Six");
+        UpdateStoryText("EddieStory", eddieStory, "Seven");
+        UpdateStoryText("EddieStory", eddieStory, "Eight");
+        UpdateStoryText("EddieStory", eddieStory, "Nine");
+        UpdateStoryText("EddieStory", eddieStory, "Ten");
+        UpdateStoryText("EddieStory", eddieStory, "Eleven");
+        UpdateStoryText("EddieStory", eddieStory, "Twelve");
+        UpdateStoryText("EddieStory", eddieStory, "Thirteen");
+        UpdateStoryText("EddieStory", eddieStory, "Fourteen");
+        UpdateStoryText("EddieStory", eddieStory, "Fifteen");
+        UpdateStoryText("EddieStory", eddieStory, "Sixteen");
+
+        UpdateStoryText("GraceStory", graceStory, "One");
+        UpdateStoryText("GraceStory", graceStory, "Two");
+        UpdateStoryText("GraceStory", graceStory, "Three");
+        UpdateStoryText("GraceStory", graceStory, "Four");
+        UpdateStoryText("GraceStory", graceStory, "Five");
+        UpdateStoryText("GraceStory", graceStory, "Six");
+        UpdateStoryText("GraceStory", graceStory, "Seven");
+        UpdateStoryText("GraceStory", graceStory, "Eight");
+        UpdateStoryText("GraceStory", graceStory, "Nine");
+        UpdateStoryText("GraceStory", graceStory, "Ten");
+        UpdateStoryText("GraceStory", graceStory, "Eleven");
+        UpdateStoryText("GraceStory", graceStory, "Twelve");
+        UpdateStoryText("GraceStory", graceStory, "Thirteen");
+        UpdateStoryText("GraceStory", graceStory, "Fourteen");
+        UpdateStoryText("GraceStory", graceStory, "Fifteen");
+        UpdateStoryText("GraceStory", graceStory, "Sixteen");
+        UpdateStoryText("GraceStory", graceStory, "Seventeen");
+
+
+
+
         //// Goon : Juice Box
         //ReplaceRelationshipDetails(RD.goonJuiceDetails, RD.goonJuiceList, 0, 0);
         //ReplaceRelationshipDetails(RD.goonJuiceDetails, RD.goonJuiceList, 1, 1);

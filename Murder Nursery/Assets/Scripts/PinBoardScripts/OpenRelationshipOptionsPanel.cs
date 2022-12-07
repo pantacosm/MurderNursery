@@ -9,21 +9,46 @@ using UnityEngine.EventSystems;
 // with the correct text (uncovers the information about the characters relationship)
 public class OpenRelationshipOptionsPanel : MonoBehaviour, IPointerClickHandler
 {
-    [SerializeField]
-    GameObject relationshipUI;
+    //[SerializeField]
+    //GameObject relationshipUI;
 
-    RelationshipDetails RD;
+    //RelationshipDetails RD;
+
+    [HideInInspector]
+    public string objectName;
+
+    [SerializeField]
+    GameObject scarletOne;
 
     private void Start()
     {
-        RD = FindObjectOfType<RelationshipDetails>();
+        //RD = FindObjectOfType<RelationshipDetails>();
+        
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        RD.relationshipOptionsPanel.SetActive(true);
+        //RD.relationshipOptionsPanel.SetActive(true);
         
-        string textToReplace = relationshipUI.transform.Find("RelationshipText").GetComponent<TextMeshProUGUI>().text;
-        RD.textToReplace = textToReplace;
+        //string textToReplace = relationshipUI.transform.Find("RelationshipText").GetComponent<TextMeshProUGUI>().text;
+        //RD.textToReplace = textToReplace;
+
+        //objectName = gameObject.name;
+        objectName = eventData.selectedObject.name;
+        Debug.Log(objectName);
+
+        UpdateScarlet();
+    }
+
+    void UpdateScarlet()
+    {
+        if(objectName == "One")
+        {
+            scarletOne.SetActive(true);
+        }
+        else
+        {
+            scarletOne.SetActive(false);
+        }
     }
 }

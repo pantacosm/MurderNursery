@@ -30,7 +30,7 @@ public class SlotScript : MonoBehaviour, IDropHandler
     public void OnDrop(PointerEventData eventData)
     {
    
-        if(eventData.pointerDrag != null)
+        if(eventData.pointerDrag.GetComponent<DragAndDrop>() != null)
     {
             if(eventData.pointerDrag.GetComponent<DragAndDrop>().itemID == slotID)
             {

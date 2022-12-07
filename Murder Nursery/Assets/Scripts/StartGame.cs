@@ -31,6 +31,7 @@ public class StartGame : MonoBehaviour
                 if(fadeProgress > 0.9999f)
             {
                 SceneManager.LoadScene("MainScene");
+                Cursor.visible = false;
             }
 
                 yield return null;

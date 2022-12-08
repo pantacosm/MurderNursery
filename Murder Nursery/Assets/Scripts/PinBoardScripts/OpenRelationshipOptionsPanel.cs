@@ -213,100 +213,100 @@ public class OpenRelationshipOptionsPanel : MonoBehaviour, IPointerClickHandler
 
         PM.objectNameBeingReplaced = gameObject.name;
 
-        UpdateStory("One", scarletOne, "ScarletStory");
-        //UpdateStory("Two", scarletTwo);
-        //UpdateStory("Three", scarletThree);
-        //UpdateStory("Four", scarletFour);
-        //UpdateStory("Five", scarletFive);
-        //UpdateStory("Six", scarletSix);
-        //UpdateStory("Seven", scarletSeven);
-        //UpdateStory("Eight", scarletEight);
-        //UpdateStory("Nine", scarletNine);
-        //UpdateStory("Ten", scarletTen);
-        //UpdateStory("Eleven", scarletEleven);
-        //UpdateStory("Twelve", scarletTwelve);
-        //UpdateStory("Thirteen", scarletThirteen);
-        //UpdateStory("Fourteen", scarletFourteen);
-        //UpdateStory("Fifteen", scarletFifteen);
+        UpdateStory("ScarletOne", scarletOne);
+        UpdateStory("ScarletTwo", scarletTwo);
+        UpdateStory("ScarletThree", scarletThree);
+        UpdateStory("ScarletFour", scarletFour);
+        UpdateStory("ScarletFive", scarletFive);
+        UpdateStory("ScarletSix", scarletSix);
+        UpdateStory("ScarletSeven", scarletSeven);
+        UpdateStory("ScarletEight", scarletEight);
+        UpdateStory("ScarletNine", scarletNine);
+        UpdateStory("ScarletTen", scarletTen);
+        UpdateStory("ScarletEleven", scarletEleven);
+        UpdateStory("ScarletTwelve", scarletTwelve);
+        UpdateStory("ScarletThirteen", scarletThirteen);
+        UpdateStory("ScarletFourteen", scarletFourteen);
+        UpdateStory("ScarletFifteen", scarletFifteen);
 
-        UpdateStory("One", juiceBoxOne, "JuiceBoxStory");
-        //UpdateStory("Two", juiceBoxTwo);
-        //UpdateStory("Three", juiceBoxThree);
-        //UpdateStory("Four", juiceBoxFour);
-        //UpdateStory("Five", juiceBoxFive);
-        //UpdateStory("Six", juiceBoxSix);
-        //UpdateStory("Seven", juiceBoxSeven);
-        //UpdateStory("Eight", juiceBoxEight);
-        //UpdateStory("Nine", juiceBoxNine);
-        //UpdateStory("Ten", juiceBoxTen);
-        //UpdateStory("Eleven", juiceBoxEleven);
-        //UpdateStory("Twelve", juiceBoxTwelve);
-        //UpdateStory("Thirteen", juiceBoxThirteen);
-        //UpdateStory("Fourteen", juiceBoxFourteen);
-        //UpdateStory("Fifteen", juiceBoxFifteen);
-        //UpdateStory("Sixteen", juiceBoxSixteen);
-        //UpdateStory("Seventeen", juiceBoxSeventeen);
-        //UpdateStory("Eighteen", juiceBoxEighteen);
-        //UpdateStory("Nineteen", juiceBoxNineteen);
+        UpdateStory("JuiceBoxOne", juiceBoxOne);
+        UpdateStory("JuiceBoxTwo", juiceBoxTwo);
+        UpdateStory("JuiceBoxThree", juiceBoxThree);
+        UpdateStory("JuiceBoxFour", juiceBoxFour);
+        UpdateStory("JuiceBoxFive", juiceBoxFive);
+        UpdateStory("JuiceBoxSix", juiceBoxSix);
+        UpdateStory("JuiceBoxSeven", juiceBoxSeven);
+        UpdateStory("JuiceBoxEight", juiceBoxEight);
+        UpdateStory("JuiceBoxNine", juiceBoxNine);
+        UpdateStory("JuiceBoxTen", juiceBoxTen);
+        UpdateStory("JuiceBoxEleven", juiceBoxEleven);
+        UpdateStory("JuiceBoxTwelve", juiceBoxTwelve);
+        UpdateStory("JuiceBoxThirteen", juiceBoxThirteen);
+        UpdateStory("JuiceBoxFourteen", juiceBoxFourteen);
+        UpdateStory("JuiceBoxFifteen", juiceBoxFifteen);
+        UpdateStory("JuiceBoxSixteen", juiceBoxSixteen);
+        UpdateStory("JuiceBoxSeventeen", juiceBoxSeventeen);
+        UpdateStory("JuiceBoxEighteen", juiceBoxEighteen);
+        UpdateStory("JuiceBoxNineteen", juiceBoxNineteen);
 
-        UpdateStory("One", chaseOne, "ChaseStory");
-        //UpdateStory("Two", chaseTwo);
-        //UpdateStory("Three", chaseThree);
-        //UpdateStory("Four", chaseFour);
-        //UpdateStory("Five", chaseFive);
-        //UpdateStory("Six", chaseSix);
-        //UpdateStory("Seven", chaseSeven);
-        //UpdateStory("Eight", chaseEight);
-        //UpdateStory("Nine", chaseNine);
-        //UpdateStory("Ten", chaseTen);
-        //UpdateStory("Eleven", chaseEleven);
-        //UpdateStory("Twelve", chaseTwelve);
-        //UpdateStory("Thirteen", chaseThirteen);
-        //UpdateStory("Fourteen", chaseFourteen);
+        UpdateStory("ChaseOne", chaseOne);
+        UpdateStory("ChaseTwo", chaseTwo);
+        UpdateStory("ChaseThree", chaseThree);
+        UpdateStory("ChaseFour", chaseFour);
+        UpdateStory("ChaseFive", chaseFive);
+        UpdateStory("ChaseSix", chaseSix);
+        UpdateStory("ChaseSeven", chaseSeven);
+        UpdateStory("ChaseEight", chaseEight);
+        UpdateStory("ChaseNine", chaseNine);
+        UpdateStory("ChaseTen", chaseTen);
+        UpdateStory("ChaseEleven", chaseEleven);
+        UpdateStory("ChaseTwelve", chaseTwelve);
+        UpdateStory("ChaseThirteen", chaseThirteen);
+        UpdateStory("ChaseFourteen", chaseFourteen);
 
-        //UpdateStory("One", eddieOne);
-        //UpdateStory("Two", eddieTwo);
-        //UpdateStory("Three", eddieThree);
-        //UpdateStory("Four", eddieFour);
-        //UpdateStory("Five", eddieFive);
-        //UpdateStory("Six", eddieSix);
-        //UpdateStory("Seven", eddieSeven);
-        //UpdateStory("Eight", eddieEight);
-        //UpdateStory("Nine", eddiexNine);
-        //UpdateStory("Ten", eddieTen);
-        //UpdateStory("Eleven", eddieEleven);
-        //UpdateStory("Twelve", eddieTwelve);
-        //UpdateStory("Thirteen", eddieThirteen);
-        //UpdateStory("Fourteen", eddieFourteen);
-        //UpdateStory("Fifteen", eddieFifteen);
-        //UpdateStory("Sixteen", eddieSixteen);
+        UpdateStory("EddieOne", eddieOne);
+        UpdateStory("EddieTwo", eddieTwo);
+        UpdateStory("EddieThree", eddieThree);
+        UpdateStory("EddieFour", eddieFour);
+        UpdateStory("EddieFive", eddieFive);
+        UpdateStory("EddieSix", eddieSix);
+        UpdateStory("EddieSeven", eddieSeven);
+        UpdateStory("EddieEight", eddieEight);
+        UpdateStory("EddieNine", eddiexNine);
+        UpdateStory("EddieTen", eddieTen);
+        UpdateStory("EddieEleven", eddieEleven);
+        UpdateStory("EddieTwelve", eddieTwelve);
+        UpdateStory("EddieThirteen", eddieThirteen);
+        UpdateStory("EddieFourteen", eddieFourteen);
+        UpdateStory("EddieFifteen", eddieFifteen);
+        UpdateStory("EddieSixteen", eddieSixteen);
 
-        //UpdateStory("One", graceOne);
-        //UpdateStory("Two", graceTwo);
-        //UpdateStory("Three", graceThree);
-        //UpdateStory("Four", graceFour);
-        //UpdateStory("Five", graceFive);
-        //UpdateStory("Six", graceSix);
-        //UpdateStory("Seven", graceSeven);
-        //UpdateStory("Eight", graceEight);
-        //UpdateStory("Nine", graceNine);
-        //UpdateStory("Ten", graceTen);
-        //UpdateStory("Eleven", graceEleven);
-        //UpdateStory("Twelve", graceTwelve);
-        //UpdateStory("Thirteen", graceThirteen);
-        //UpdateStory("Fourteen", graceFourteen);
-        //UpdateStory("Fifteen", graceFifteen);
-        //UpdateStory("Sixteen", graceSixteen);
-        //UpdateStory("Seventeen", graceSeventeen);
-        
-        
+        UpdateStory("GraceOne", graceOne);
+        UpdateStory("GraceTwo", graceTwo);
+        UpdateStory("GraceThree", graceThree);
+        UpdateStory("GraceFour", graceFour);
+        UpdateStory("GraceFive", graceFive);
+        UpdateStory("GraceSix", graceSix);
+        UpdateStory("GraceSeven", graceSeven);
+        UpdateStory("GraceEight", graceEight);
+        UpdateStory("GraceNine", graceNine);
+        UpdateStory("GraceTen", graceTen);
+        UpdateStory("GraceEleven", graceEleven);
+        UpdateStory("GraceTwelve", graceTwelve);
+        UpdateStory("GraceThirteen", graceThirteen);
+        UpdateStory("GraceFourteen", graceFourteen);
+        UpdateStory("GraceFifteen", graceFifteen);
+        UpdateStory("GraceSixteen", graceSixteen);
+        UpdateStory("GraceSeventeen", graceSeventeen);
+
+
 
     }
 
     // Sets active object to view & select evidence to slot into the story
-    void UpdateStory(string objectName, GameObject storyEvidence, string storyString)
+    void UpdateStory(string objectName, GameObject storyEvidence)
     {
-        if (gameObject.name == objectName && storyContent.Find(storyString))
+        if (objectName == PM.objectNameBeingReplaced)
         {
             storyEvidence.SetActive(true);
         }

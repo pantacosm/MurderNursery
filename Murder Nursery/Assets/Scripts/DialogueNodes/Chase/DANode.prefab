@@ -49,7 +49,7 @@ MonoBehaviour:
   - {fileID: 3499891356269125111, guid: bac4de9741da0a84ea7a436776fdf9c9, type: 3}
   speech: Gee, noted.
   responses:
-  - 
+  - 'Bye '
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

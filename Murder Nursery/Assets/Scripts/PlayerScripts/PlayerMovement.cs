@@ -20,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 movementInput;
     private bool isMoving;
     private float velocity;
+    public GameObject dressUpManager;
 
 
     [SerializeField]
@@ -71,7 +72,7 @@ public class PlayerMovement : MonoBehaviour
         // stops player movement & disables camera whilst UI open
         if (inventory.UIVisibility.inventoryOpen || inventory.UIVisibility.pinboardOpen 
             || dialogueZone.activeInHierarchy || manager.GetComponent<SceneTransition>().interrogationActive 
-            || inventory.UIVisibility.jotterOpen)
+            || inventory.UIVisibility.jotterOpen || dressUpManager.GetComponent<DressUp>().inDressUp)
         {
             animator.Play("Idle");
             animator.SetFloat("Velocity", 0);

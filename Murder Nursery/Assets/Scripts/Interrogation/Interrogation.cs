@@ -168,21 +168,7 @@ public class Interrogation : MonoBehaviour
         return choice;
     }
 
-    public void UpdateCurrentEmotion(int emotion)
-    {
-        switch(emotion) //Animations will go here when successful
-        {
-            case 0:
-                print("The NPC is smiling too much, get a grip creep");
-                break;
-            case 1:
-                print("The NPC begins to tremble with fear, clearly you look very ugly today");
-                break;
-            case 3:
-                print("The NPC is getting very red in the face, you begin to fear for your life");
-                break;
-        }
-    }
+
     public void SuccessfulEnd()
     {
         manager.GetComponent<SceneTransition>().ChangeToMainArea();

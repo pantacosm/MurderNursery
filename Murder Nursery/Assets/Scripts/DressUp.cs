@@ -40,6 +40,7 @@ public class DressUp : MonoBehaviour
     {
         if (interactable && Input.GetKeyDown(KeyCode.E))
         {
+
             inDressUp = true;
             interactableText.SetActive(false);
             dressUpMenu.SetActive(true);

@@ -68,7 +68,7 @@ MonoBehaviour:
   firstPathLocked: 0
   secondPathLocked: 0
   thirdPathLocked: 0
-  nodeVisited: 0
+  nodeVisited: 1
   lockingNode: 1
   briberyAvailable: 0
   triggerTrueEnd: 0

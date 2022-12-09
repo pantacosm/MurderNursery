@@ -67,7 +67,7 @@ MonoBehaviour:
   firstPathLocked: 0
   secondPathLocked: 0
   thirdPathLocked: 0
-  nodeVisited: 0
+  nodeVisited: 1
   lockingNode: 0
   briberyAvailable: 0
   triggerTrueEnd: 0
@@ -79,7 +79,7 @@ MonoBehaviour:
   fitCheck: 0
   dressUpNode: {fileID: 0}
   requiredOutfit: 
-  evidenceToDiscover: {fileID: 0}
+  evidenceToDiscover: {fileID: 2720912505709134154, guid: 0f33db61da0d822459ed591a801e5673, type: 3}
   evidenceCheckNode: 0
   pathARequiredEvidence: 
   pathBRequiredEvidence: 

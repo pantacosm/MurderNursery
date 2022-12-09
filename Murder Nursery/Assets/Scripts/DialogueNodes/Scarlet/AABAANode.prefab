@@ -77,7 +77,7 @@ MonoBehaviour:
   fitCheck: 0
   dressUpNode: {fileID: 0}
   requiredOutfit: 
-  evidenceToDiscover: {fileID: 0}
+  evidenceToDiscover: {fileID: 2720912505709134154, guid: d119c1ffff51d4f4d8aabd4977f77c00, type: 3}
   evidenceCheckNode: 0
   pathARequiredEvidence: 
   pathBRequiredEvidence: 

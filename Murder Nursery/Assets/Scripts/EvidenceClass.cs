@@ -16,7 +16,7 @@ public class EvidenceClass : MonoBehaviour
     // Start is called before the first frame update
     public void Start()
     {
-        
+        evidenceFound = false;
     }
     public void DiscoverEvidence()
     {

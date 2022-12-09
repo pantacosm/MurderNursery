@@ -144,6 +144,7 @@ public class DialogueManager : MonoBehaviour
                     manager.GetComponent<Conclusion>().blackFade.gameObject.SetActive(true);
                     StartCoroutine(manager.GetComponent<Conclusion>().BlackTransition());
                 }
+                
                 ExitConversation();
             }
         }
@@ -230,7 +231,7 @@ public class DialogueManager : MonoBehaviour
         if (activeNode.evidenceToDiscover != null && !activeNode.nodeVisited)
         {
             pinBoardManager.GetComponent<PinboardManager>().discoveredEvidence.Add(activeNode.evidenceToDiscover);
-            pinBoardManager.GetComponent<PinboardManager>().UpdateEvidenceListUI(activeNode.evidenceToDiscover);
+            //pinBoardManager.GetComponent<PinboardManager>().UpdateEvidenceListUI(activeNode.evidenceToDiscover);
             pinBoardManager.GetComponent<PinboardManager>().UpdateEvidenceImages(activeNode.evidenceToDiscover);
             activeNode.evidenceToDiscover.evidenceFound = true;
         }

@@ -65,7 +65,7 @@ public class PinboardManager : MonoBehaviour
     public string[] deadgirlEvents;
 
     public List<EvidenceClass> discoveredEvidence;
-    public List<EvidenceClass> undiscoveredEvidence;
+    public List<string> threadedEvidence;
     public GameObject evidenceList;
     public GameObject textPrefab;
     public int evidencePiecesPlaced = 0;
@@ -108,16 +108,23 @@ public class PinboardManager : MonoBehaviour
     public List<string> graceThreadedLikes = new List<string>();
     public List<string> graceThreadedDislikes = new List<string>();
     public List<string> graceThreadedEvents = new List<string>();
+    public List<EvidenceClass> evidencePieces;
+
+   
     // Start is called before the first frame update
     void Awake()
     {
         pinboard = this;
+        foreach (EvidenceClass evidence in evidencePieces)
+        {
+            evidence.evidenceFound = false;
+        }
     }
 
     private void Start()
     {
         discoveredEvidence = new List<EvidenceClass>();
-        undiscoveredEvidence = new List<EvidenceClass>();
+        threadedEvidence = new List<string>();
         
         //UpdatePinboard(GoonLikes, goonLikes[0]);
         //UpdatePinboard(GoonLikes, goonLikes[1]);

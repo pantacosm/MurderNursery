@@ -19,11 +19,17 @@ public class ThreadManager : MonoBehaviour
     {
         if (firstThreadItem != null && secondThreadItem != null)
         {
-            this.GetComponent<PinboardThread>().MakeLine(firstThreadItem.transform.position.x, firstThreadItem.transform.position.y, secondThreadItem.transform.position.x, secondThreadItem.transform.position.y, Color.red);
-            print("Line created");
-            CheckThreadStart();
-            firstThreadItem = null;
-            secondThreadItem = null;
+            if (!CheckIfThreaded(secondThreadItem.GetComponent<EvidenceSlot>().evidenceText))
+            {
+                if (secondThreadItem.name != "Likes" && secondThreadItem.name != "Dislikes" && secondThreadItem.name != "Events")
+                {
+                    this.GetComponent<PinboardThread>().MakeLine(firstThreadItem.transform.position.x, firstThreadItem.transform.position.y, secondThreadItem.transform.position.x, secondThreadItem.transform.position.y, Color.red);
+                    print("Line created");
+                    CheckThreadStart();
+                    firstThreadItem = null;
+                    secondThreadItem = null;
+                }
+            }
         }
     }
 
@@ -36,23 +42,27 @@ public class ThreadManager : MonoBehaviour
             if (firstThreadItem.tag == "ChaseSlot")
             {
                 pinBoardManager.GetComponent<PinboardManager>().chaseThreadedLikes.Add(newEvidenceText);
-                pinBoardManager.GetComponent<PinboardManager>().PrintEvidence();
+                pinBoardManager.GetComponent<PinboardManager>().threadedEvidence.Add(newEvidenceText);
             }
             if(firstThreadItem.tag == "ScarletSlot")
             {
                 pinBoardManager.GetComponent<PinboardManager>().scarletThreadedLikes.Add(newEvidenceText);
+                pinBoardManager.GetComponent<PinboardManager>().threadedEvidence.Add(newEvidenceText);
             }
             if(firstThreadItem.tag == "EddieSlot")
             {
                 pinBoardManager.GetComponent<PinboardManager>().eddieThreadedLikes.Add(newEvidenceText);
+                pinBoardManager.GetComponent<PinboardManager>().threadedEvidence.Add(newEvidenceText);
             }
             if(firstThreadItem.tag == "JuiceBoxSlot")
             {
                 pinBoardManager.GetComponent<PinboardManager>().juiceBoxThreadedLikes.Add(newEvidenceText);
+                pinBoardManager.GetComponent<PinboardManager>().threadedEvidence.Add(newEvidenceText);
             }
             if(firstThreadItem.tag == "GraceSlot")
             {
                 pinBoardManager.GetComponent<PinboardManager>().graceThreadedLikes.Add(newEvidenceText);
+                pinBoardManager.GetComponent<PinboardManager>().threadedEvidence.Add(newEvidenceText);
             }
             
         }
@@ -63,23 +73,28 @@ public class ThreadManager : MonoBehaviour
             if (firstThreadItem.tag == "ChaseSlot")
             {
                 pinBoardManager.GetComponent<PinboardManager>().chaseThreadedDislikes.Add(newEvidenceText);
-                pinBoardManager.GetComponent<PinboardManager>().PrintEvidence();
+                pinBoardManager.GetComponent<PinboardManager>().threadedEvidence.Add(newEvidenceText);
+
             }
             if(firstThreadItem.tag == "ScarletSlot")
             {
                 pinBoardManager.GetComponent<PinboardManager>().scarletThreadedDislikes.Add(newEvidenceText);
+                pinBoardManager.GetComponent<PinboardManager>().threadedEvidence.Add(newEvidenceText);
             }
             if(firstThreadItem.tag == "EddieSlot")
             {
                 pinBoardManager.GetComponent<PinboardManager>().eddieThreadedDislikes.Add(newEvidenceText);
+                pinBoardManager.GetComponent<PinboardManager>().threadedEvidence.Add(newEvidenceText);
             }
             if(firstThreadItem.tag == "JuiceBoxSlot")
             {
                 pinBoardManager.GetComponent<PinboardManager>().juiceBoxThreadedDislikes.Add(newEvidenceText);
+                pinBoardManager.GetComponent<PinboardManager>().threadedEvidence.Add(newEvidenceText);
             }
             if(firstThreadItem.tag == "GraceSlot")
             {
                 pinBoardManager.GetComponent<PinboardManager>().graceThreadedDislikes.Add(newEvidenceText);
+                pinBoardManager.GetComponent<PinboardManager>().threadedEvidence.Add(newEvidenceText);
             }
         }
         if(firstThreadItem.gameObject.name == "Events")
@@ -89,24 +104,42 @@ public class ThreadManager : MonoBehaviour
             if (firstThreadItem.tag == "ChaseSlot")
             {
                 pinBoardManager.GetComponent<PinboardManager>().chaseThreadedEvents.Add(newEvidenceText);
-                pinBoardManager.GetComponent<PinboardManager>().PrintEvidence();
+                pinBoardManager.GetComponent<PinboardManager>().threadedEvidence.Add(newEvidenceText);
+
             }
             if(firstThreadItem.tag == "ScarletSlot")
             {
                 pinBoardManager.GetComponent<PinboardManager>().scarletThreadedEvents.Add(newEvidenceText);
+                pinBoardManager.GetComponent<PinboardManager>().threadedEvidence.Add(newEvidenceText);
             }
             if(firstThreadItem.tag == "EddieSlot")
             {
                 pinBoardManager.GetComponent<PinboardManager>().eddieThreadedEvents.Add(newEvidenceText);
+                pinBoardManager.GetComponent<PinboardManager>().threadedEvidence.Add(newEvidenceText);
             }
             if(firstThreadItem.tag == "JuiceBoxSlot")
             {
                 pinBoardManager.GetComponent<PinboardManager>().juiceBoxThreadedEvents.Add(newEvidenceText);
+                pinBoardManager.GetComponent<PinboardManager>().threadedEvidence.Add(newEvidenceText);
             }
             if(firstThreadItem.tag == "GraceSlot")
             {
                 pinBoardManager.GetComponent<PinboardManager>().graceThreadedEvents.Add(newEvidenceText);
+                pinBoardManager.GetComponent<PinboardManager>().threadedEvidence.Add(newEvidenceText);
             }
         }
+    }
+
+    private bool CheckIfThreaded(string evidenceToCheck)
+    {
+        bool evidenceThreaded = false;
+        foreach(string found in pinBoardManager.GetComponent<PinboardManager>().threadedEvidence)
+        {
+            if(evidenceToCheck == found)
+            {
+                return evidenceThreaded = true;
+            }
+        }
+        return evidenceThreaded;
     }
 }

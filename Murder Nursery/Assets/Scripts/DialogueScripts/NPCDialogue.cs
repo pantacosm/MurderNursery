@@ -23,7 +23,10 @@ public class NPCDialogue : MonoBehaviour
     public Texture shockedEmotion;
     public Texture thinkingEmotion;
     public Material textureToChange;
-    
+    public string bribeItem;
+    public DialogueNode bribePath;
+    public DialogueNode bribeFailPath;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -54,6 +57,7 @@ public class NPCDialogue : MonoBehaviour
             textureToChange.SetTexture("_DetailAlbedoMap", defaultEmotion);
             inConversation = false;
             interactionMessage.SetActive(true);
+            manager.GetComponent<DialogueManager>().briberyPanel.SetActive(false);
         }
         if(inConversation)
         {
@@ -80,4 +84,5 @@ public class NPCDialogue : MonoBehaviour
             inConversation = false;
         }
     }
+
 }

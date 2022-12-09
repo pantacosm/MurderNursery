@@ -31,7 +31,7 @@ public class DialogueManager : MonoBehaviour
 
 
     private DialogueNode activeNode;
-    private GameObject activeNPC;
+    public GameObject activeNPC;
     public bool inConvo = false;
     public int pos = 0;
     public int relationship = 0;
@@ -74,6 +74,9 @@ public class DialogueManager : MonoBehaviour
     private string lastResponse2;
     private string npcLastResponse1;
     private string npcLastResponse2;
+    public GameObject inventoryManager;
+    public Image item1;
+    public Image item2;
 
 
     [HideInInspector]
@@ -124,7 +127,7 @@ public class DialogueManager : MonoBehaviour
         {
             if (activeNode.exitNode)
             {
-
+                
                 if (activeNode.triggerTrueEnd)
                 {
                     trueEndingReached = true;
@@ -187,7 +190,7 @@ public class DialogueManager : MonoBehaviour
         player.SetActive(true);
         playerCam.gameObject.SetActive(true);
         currentNPCCam.gameObject.SetActive(false);
-        activeNPC = null;
+        //activeNPC = null;
         dialogueZone.SetActive(false);
         inConvo = false;
         ClearDialogue();
@@ -228,7 +231,7 @@ public class DialogueManager : MonoBehaviour
             
         }
         SwitchEmotion();
-        if (activeNode.evidenceToDiscover != null && !activeNode.nodeVisited)
+        if (activeNode.evidenceToDiscover != null && !activeNode.nodeVisited && !activeNode.evidenceToDiscover.evidenceFound)
         {
             pinBoardManager.GetComponent<PinboardManager>().discoveredEvidence.Add(activeNode.evidenceToDiscover);
             //pinBoardManager.GetComponent<PinboardManager>().UpdateEvidenceListUI(activeNode.evidenceToDiscover);
@@ -564,6 +567,19 @@ public class DialogueManager : MonoBehaviour
     {
         dialogueZone.SetActive(false);
         briberyPanel.SetActive(true);
+        if(inventoryManager.GetComponent<InventoryManager>().items.Count == 3)
+        {
+            inventoryManager.GetComponent<Bribing>().StoreInfo(inventoryManager.GetComponent<InventoryManager>().items[2]);
+            item1.gameObject.SetActive(true);
+            item1.sprite = inventoryManager.GetComponent<InventoryManager>().items[2].icon;
+        }
+        if(inventoryManager.GetComponent<InventoryManager>().items.Count ==4)
+        {
+            item1.gameObject.SetActive(true);
+            item2.gameObject.SetActive(true);
+            item1.sprite = inventoryManager.GetComponent<InventoryManager>().items[2].icon;
+            item2.sprite = inventoryManager.GetComponent<InventoryManager>().items[3].icon;
+        }
     }
 
     public IEnumerator RepFader(Image repSymbol, bool fadeIn, float fadeSpeed = 1f)

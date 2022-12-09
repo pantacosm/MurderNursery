@@ -18,7 +18,7 @@ public class InventoryManager : MonoBehaviour
     public ToggleUIVisibility UIVisibility;
 
     [SerializeField]
-    List<Item> items = new List<Item>();
+    public List<Item> items = new List<Item>();
 
     [SerializeField]
     Transform itemContent;
@@ -26,8 +26,9 @@ public class InventoryManager : MonoBehaviour
     [SerializeField]
     GameObject inventoryItem;
 
-    private ItemManager[] inventoryItems;
+    public ItemManager[] inventoryItems;
     public GameObject blur;
+    public List<GameObject> invItems;
 
     private void Awake()
     {
@@ -62,12 +63,15 @@ public class InventoryManager : MonoBehaviour
     public void RemoveItem(Item item)
     {
         items.Remove(item);
+        
     }
 
-    private void SetInventoryItems(Item item)
+    public void SetInventoryItems(Item item)
     {
+        
         // adds itemUI to Inventory UI (allows us to see the item in inventory) 
         GameObject itemObj = Instantiate(inventoryItem, itemContent);
+        invItems.Add(itemObj);
         var itemIcon = itemObj.transform.Find("ItemIcon").GetComponent<Image>();
         var itemName = itemObj.transform.Find("ItemName").GetComponent<TextMeshProUGUI>();
         itemIcon.sprite = item.icon;
@@ -81,4 +85,9 @@ public class InventoryManager : MonoBehaviour
             inventoryItems[i].AddItem(items[i]);
         }
     }
+
+   
+    
+    
+   
 }

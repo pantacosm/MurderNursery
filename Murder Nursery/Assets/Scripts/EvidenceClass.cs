@@ -12,7 +12,7 @@ public class EvidenceClass : MonoBehaviour
     public GameObject pinBoardManager;
     public GameObject evidenceList;
     public GameObject evidenceImage;
-
+   
     // Start is called before the first frame update
     public void Start()
     {

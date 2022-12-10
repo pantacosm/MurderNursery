@@ -77,6 +77,7 @@ public class DialogueManager : MonoBehaviour
     public GameObject inventoryManager;
     public Image item1;
     public Image item2;
+    public Image singleBribe;
 
 
     [HideInInspector]
@@ -155,6 +156,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartConversation(DialogueNode startNode, GameObject npc, Camera npcCam)
     {
+        Cursor.visible = true;
         player.SetActive(false);
         pos = 0;
         playerSecondResponseBox.GetComponent<Image>().color = unselectedColour;
@@ -187,6 +189,7 @@ public class DialogueManager : MonoBehaviour
 
     public void ExitConversation()
     {
+        Cursor.visible = false;
         player.SetActive(true);
         playerCam.gameObject.SetActive(true);
         currentNPCCam.gameObject.SetActive(false);
@@ -570,8 +573,8 @@ public class DialogueManager : MonoBehaviour
         if(inventoryManager.GetComponent<InventoryManager>().items.Count == 3)
         {
             inventoryManager.GetComponent<Bribing>().StoreInfo(inventoryManager.GetComponent<InventoryManager>().items[2]);
-            item1.gameObject.SetActive(true);
-            item1.sprite = inventoryManager.GetComponent<InventoryManager>().items[2].icon;
+            singleBribe.gameObject.SetActive(true);
+            singleBribe.sprite = inventoryManager.GetComponent<InventoryManager>().items[2].icon;
         }
         if(inventoryManager.GetComponent<InventoryManager>().items.Count ==4)
         {

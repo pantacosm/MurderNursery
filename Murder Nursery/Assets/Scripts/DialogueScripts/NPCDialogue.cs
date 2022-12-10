@@ -27,10 +27,15 @@ public class NPCDialogue : MonoBehaviour
     public DialogueNode bribePath;
     public DialogueNode bribeFailPath;
 
+
+    public void Awake()
+    {
+        
+    }
     // Start is called before the first frame update
     void Start()
     {
-        
+
         manager = GameObject.FindGameObjectWithTag("Manager");
         foreach(DialogueNode node in dialogueTree)
             {
@@ -58,6 +63,7 @@ public class NPCDialogue : MonoBehaviour
             inConversation = false;
             interactionMessage.SetActive(true);
             manager.GetComponent<DialogueManager>().briberyPanel.SetActive(false);
+            Cursor.visible = false;
         }
         if(inConversation)
         {

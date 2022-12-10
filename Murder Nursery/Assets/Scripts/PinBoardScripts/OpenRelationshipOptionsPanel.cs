@@ -5,25 +5,10 @@ using TMPro;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-// allows player to click relationship text to open an options panel for replacing the text
-// with the correct text (uncovers the information about the characters relationship)
+// when the players clicks on [?????] in the story content, it shows a list of evidence which can be chosen to replace the [?????] text with
 public class OpenRelationshipOptionsPanel : MonoBehaviour, IPointerClickHandler
 {
-    //[SerializeField]
-    //GameObject relationshipUI;
-
-    //RelationshipDetails RD;
-
     PinboardManager PM;
-
-    [SerializeField]
-    Transform storyContent;
-
-    [SerializeField]
-    Transform storyEvidenceContent;
-
-    Transform scarletStory;
-    GameObject evidenceObject;
 
     [Header("Scarlet")]
     [SerializeField]
@@ -200,17 +185,12 @@ public class OpenRelationshipOptionsPanel : MonoBehaviour, IPointerClickHandler
 
     private void Start()
     {
-        //RD = FindObjectOfType<RelationshipDetails>();
         PM = FindObjectOfType<PinboardManager>();
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        //RD.relationshipOptionsPanel.SetActive(true);
-        
-        //string textToReplace = relationshipUI.transform.Find("RelationshipText").GetComponent<TextMeshProUGUI>().text;
-        //RD.textToReplace = textToReplace;
-
+        // sets the current object name we clicked on so we know which text to replace in "ReplaceRelationshipText" script
         PM.objectNameBeingReplaced = gameObject.name;
 
         UpdateStory("ScarletOne", scarletOne);
@@ -298,8 +278,6 @@ public class OpenRelationshipOptionsPanel : MonoBehaviour, IPointerClickHandler
         UpdateStory("GraceFifteen", graceFifteen);
         UpdateStory("GraceSixteen", graceSixteen);
         UpdateStory("GraceSeventeen", graceSeventeen);
-
-
 
     }
 

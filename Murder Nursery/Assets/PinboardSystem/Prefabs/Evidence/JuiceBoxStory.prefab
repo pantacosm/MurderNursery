@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6704431638985836638}
   - component: {fileID: 863353003374976086}
   m_Layer: 5
-  m_Name: One
+  m_Name: JuiceBoxOne
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -244,7 +244,7 @@ GameObject:
   - component: {fileID: 433333975276592385}
   - component: {fileID: 3265552685299034401}
   m_Layer: 5
-  m_Name: Seven
+  m_Name: JuiceBoxSeven
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -475,7 +475,7 @@ GameObject:
   - component: {fileID: 694568751464685175}
   - component: {fileID: 7979959777893878841}
   m_Layer: 5
-  m_Name: Eighteen
+  m_Name: JuiceBoxEighteen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -846,7 +846,7 @@ GameObject:
   - component: {fileID: 437959212055100344}
   - component: {fileID: 8025524737749435039}
   m_Layer: 5
-  m_Name: Fifteen
+  m_Name: JuiceBoxFifteen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1077,7 +1077,7 @@ GameObject:
   - component: {fileID: 2582953412923700624}
   - component: {fileID: 1982909054280708235}
   m_Layer: 5
-  m_Name: Two
+  m_Name: JuiceBoxTwo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1308,7 +1308,7 @@ GameObject:
   - component: {fileID: 6008663328618506391}
   - component: {fileID: 5772888900074962864}
   m_Layer: 5
-  m_Name: Seventeen
+  m_Name: JuiceBoxSeventeen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1539,7 +1539,7 @@ GameObject:
   - component: {fileID: 6344312292549469139}
   - component: {fileID: 8381687728536907589}
   m_Layer: 5
-  m_Name: Sixteen
+  m_Name: JuiceBoxSixteen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1770,7 +1770,7 @@ GameObject:
   - component: {fileID: 5507321448048789600}
   - component: {fileID: 1127507054123740185}
   m_Layer: 5
-  m_Name: Four
+  m_Name: JuiceBoxFour
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2001,7 +2001,7 @@ GameObject:
   - component: {fileID: 6918777479797241653}
   - component: {fileID: 6050692102488501553}
   m_Layer: 5
-  m_Name: Twelve
+  m_Name: JuiceBoxTwelve
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2232,7 +2232,7 @@ GameObject:
   - component: {fileID: 7067561025576080887}
   - component: {fileID: 8598942502393997782}
   m_Layer: 5
-  m_Name: Six
+  m_Name: JuiceBoxSix
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2463,7 +2463,7 @@ GameObject:
   - component: {fileID: 6593869081028149633}
   - component: {fileID: 4784373830037544539}
   m_Layer: 5
-  m_Name: Eleven
+  m_Name: JuiceBoxEleven
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2694,7 +2694,7 @@ GameObject:
   - component: {fileID: 4687141691640352320}
   - component: {fileID: 5210492577394970411}
   m_Layer: 5
-  m_Name: Thirteen
+  m_Name: JuiceBoxThirteen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2925,7 +2925,7 @@ GameObject:
   - component: {fileID: 2515882850627271425}
   - component: {fileID: 5262337500071070220}
   m_Layer: 5
-  m_Name: Nine
+  m_Name: JuiceBoxNine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3156,7 +3156,7 @@ GameObject:
   - component: {fileID: 5295055269814198186}
   - component: {fileID: 3781845977072381921}
   m_Layer: 5
-  m_Name: Five
+  m_Name: JuiceBoxFive
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3387,7 +3387,7 @@ GameObject:
   - component: {fileID: 7197542782263251454}
   - component: {fileID: 3127133531550247859}
   m_Layer: 5
-  m_Name: Eight
+  m_Name: JuiceBoxEight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3618,7 +3618,7 @@ GameObject:
   - component: {fileID: 2024481874518290363}
   - component: {fileID: 9047180666405306227}
   m_Layer: 5
-  m_Name: Three
+  m_Name: JuiceBoxThree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3849,7 +3849,7 @@ GameObject:
   - component: {fileID: 7710875712418774183}
   - component: {fileID: 7418246298558367754}
   m_Layer: 5
-  m_Name: Ten
+  m_Name: JuiceBoxTen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4136,7 +4136,7 @@ GameObject:
   - component: {fileID: 4345016501929143125}
   - component: {fileID: 1659191994696245050}
   m_Layer: 5
-  m_Name: Fourteen
+  m_Name: JuiceBoxFourteen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4367,7 +4367,7 @@ GameObject:
   - component: {fileID: 8664021294013377158}
   - component: {fileID: 2047795721051765955}
   m_Layer: 5
-  m_Name: Nineteen
+  m_Name: JuiceBoxNineteen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

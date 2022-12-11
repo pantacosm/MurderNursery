@@ -10,7 +10,12 @@ public class Bribing : MonoBehaviour
     private Item secondBribe = null;
     public GameObject bribePanel;
     public GameObject inventoryManager;
-    
+
+    public void Start()
+    {
+        firstBribe = null;
+        secondBribe = null;
+    }
 
 
     private void Update()

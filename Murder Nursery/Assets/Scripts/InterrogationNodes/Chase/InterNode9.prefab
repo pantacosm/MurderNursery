@@ -46,15 +46,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 3499891356269125111, guid: ff91cbd06f48d66409da78afccff3a78, type: 3}
   children:
-  - {fileID: 3499891356269125111, guid: fdcfd03a45645ce449867a5ccf9adcdd, type: 3}
-  - {fileID: 3499891356269125111, guid: 4ce8c52ba5aa0ab47b9a181b47a94d99, type: 3}
   - {fileID: 3499891356269125111, guid: 97cc668c3e88fb94b996ae15035195db, type: 3}
+  - {fileID: 3499891356269125111, guid: fdcfd03a45645ce449867a5ccf9adcdd, type: 3}
   speech: Scarlet and I are doing just fine, nothing to tell!
   responses:
+  - Talk to the hand buddy, the face ain't listenin'!
   - And yet you seem not to trust her at all! Let me guess, you've been acting real
     suspicious lately and a smart gal like that has caught on!
-  - I spy with my little eye... a LIE!
-  - Talk to the hand buddy, the face ain't listenin'!
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10
@@ -81,3 +79,16 @@ MonoBehaviour:
   fitCheck: 0
   dressUpNode: {fileID: 0}
   requiredOutfit: 
+  evidenceToDiscover: {fileID: 0}
+  evidenceCheckNode: 0
+  pathARequiredEvidence: 
+  pathBRequiredEvidence: 
+  pathCRequiredEvidence: 
+  pathAInterrogationEvidenceRequired: 0
+  pathBInterrogationEvidenceRequired: 0
+  pathCInterrogationEvidenceRequired: 0
+  nodeEmotion: 3
+  evidenceRequired: 
+  evidenceRequiredImage: {fileID: 0}
+  evidenceNeededCheck: 1
+  evImagesGenerated: 0

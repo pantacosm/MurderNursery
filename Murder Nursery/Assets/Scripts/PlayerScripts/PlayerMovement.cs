@@ -43,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
         controller = gameObject.GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
         inventory = FindObjectOfType<InventoryManager>();
-        cameraTransform = Camera.main.transform;
+        //cameraTransform = Camera.main.transform;
 
         // holds a map of inputs for the player
         playerControls = new PlayerControls();
@@ -57,6 +57,10 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        if(cameraTransform == null && !manager.GetComponent<IntroCutscene>().inIntro)
+        {
+            cameraTransform = Camera.main.transform;
+        }
         isMoving = movement != Vector3.zero;
 
         groundedPlayer = controller.isGrounded;
@@ -73,7 +77,7 @@ public class PlayerMovement : MonoBehaviour
         // stops player movement & disables camera whilst UI open
         if (inventory.UIVisibility.inventoryOpen || inventory.UIVisibility.pinboardOpen 
             || dialogueZone.activeInHierarchy || manager.GetComponent<SceneTransition>().interrogationActive 
-            || inventory.UIVisibility.jotterOpen || dressUpManager.GetComponent<DressUp>().inDressUp)
+            || inventory.UIVisibility.jotterOpen || dressUpManager.GetComponent<DressUp>().inDressUp || manager.GetComponent<IntroCutscene>().inIntro)
         {
             animator.Play("Idle");
             animator.SetFloat("Velocity", 0);

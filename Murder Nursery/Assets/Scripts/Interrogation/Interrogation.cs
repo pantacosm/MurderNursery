@@ -32,7 +32,7 @@ public class Interrogation : MonoBehaviour
     public GameObject playerResponse2;
     public GameObject npcStatement1;
     public GameObject npcStatement2;
-    private string lastResponse;
+    private string lastResponse = null;
     private string lastResponse2;
     private string npcLastResponse1;
     private string npcLastResponse2;
@@ -45,6 +45,10 @@ public class Interrogation : MonoBehaviour
     public Image evidencePiece2;
     public Image evidencePiece3;
     public List<Sprite> sprites;
+    public GameObject evButton;
+    public GameObject noEvMessage;
+    private DialogueNode mostRecentNode;
+    private bool firstTry = true;
 
     // Start is called before the first frame update
     void Start()
@@ -52,7 +56,6 @@ public class Interrogation : MonoBehaviour
         manager = GameObject.FindGameObjectWithTag("Manager");
         response1Position = new Vector3(2030.744140625f, 326.246826171875f, 0.0f);
         response2Position = new Vector3(2030.777587890625f, 228.91348266601563f, 0.0f);
-        response3Position = new Vector3(2030.7772216796875f, 126.91357421875f, 0.0f);
     }
 
     // Update is called once per frame
@@ -82,27 +85,15 @@ public class Interrogation : MonoBehaviour
     {
         int j;
         j =  RecordInterrogationResponse();
-        if(j == 0 || j == 1 || j == 2)
+        if(j == 0)
         {
-            if (responseCount >= 1)
-            {
-                lastResponse2 = lastResponse;
-            }
-            switch (j)
-            {
-                case 0:
-                    lastResponse = activeNode.responses[0];
-                    break;
-                case 1:
-                    lastResponse = activeNode.responses[1];
-                    break;
-                //case 2:
-                    lastResponse = activeNode.responses[2];
-                    break;
-            }
-            responseCount++;
+            lastResponse = activeNode.responses[0];
             pos = 0;
             LoadIntNodeInfo(activeNode.children[j]);         
+        }
+        if(j == 1)
+        {
+            EarlyExit();
         }
     }
 
@@ -122,8 +113,7 @@ public class Interrogation : MonoBehaviour
             {
                 
                     choice = 0;
-                    intResponseBox1.GetComponent<Image>().color = Color.gray;
-                    print(choice);
+                    intResponseBox1.GetComponent<Image>().color = Color.gray;                   
                     return choice;
                 
             }
@@ -137,39 +127,18 @@ public class Interrogation : MonoBehaviour
                 pos--;
                 intResponseBox2.GetComponent<Image>().color = Color.gray;
             }
-            //if (Input.GetKeyDown(KeyCode.DownArrow))
-            {
-                pos++;
-                intResponseBox2.GetComponent<Image>().color = Color.gray;
-            }
+            
 
             if (Input.GetKeyUp(KeyCode.Return))
             {
                 
                     choice = 1;
                     intResponseBox2.GetComponent<Image>().color = Color.gray;
-                    print(choice);
                     return choice;
                 
             }
         }
-        //if (pos == 2)
-        {
-            intResponseBox3.GetComponent<Image>().color = Color.white;
-            if (Input.GetKeyUp(KeyCode.UpArrow))
-            {
-                pos--;
-                intResponseBox3.GetComponent<Image>().color = Color.gray;
-            }
-            if (Input.GetKeyUp(KeyCode.Return))
-            {
-                
-                    choice = 2;
-                    intResponseBox3.GetComponent<Image>().color = Color.gray;
-                    print(choice);
-                    return choice;               
-            }
-        }
+        
 
         return choice;
     }
@@ -197,48 +166,30 @@ public class Interrogation : MonoBehaviour
 
     public void LoadIntNodeInfo(DialogueNode newNode)
     {
+        if (lastResponse != null)
+        {
+            playerResponse1.GetComponent<TextMeshProUGUI>().text = "Detective Drew: " + lastResponse;
+        }
         if (activeNode != null)
         {
             activeNode.nodeActive = false;
         }
         activeNode = newNode;
         newNode.nodeActive = true;
-        npcStatement.GetComponent<TextMeshProUGUI>().text = newNode.speech;
-        if(firstNode)
-        {
-            npcLastResponse1 = activeNode.speech;
-        }
-        //if(!firstNode)
-        {
-            npcLastResponse2 = npcLastResponse1;
-            npcLastResponse1 = activeNode.speech;
-
-            UpdateRollingText();
-        }
-
-        
-
-        if (activeNode.responses.Length >= 1)
-            intResponseText1.GetComponent<TextMeshProUGUI>().text = activeNode.responses[0].ToString();
-        if (activeNode.responses.Length >= 2)
-        {
-            intResponseBox2.SetActive(true);
-            intResponseText2.GetComponent<TextMeshProUGUI>().text = activeNode.responses[1].ToString();
-        }
-        if (activeNode.responses.Length == 3)
-        {
-            intResponseBox3.SetActive(true);
-            intResponseText3.GetComponent<TextMeshProUGUI>().text = activeNode.responses[2].ToString();
-        }
+        SwitchEmotion();
+        mostRecentNode = activeNode;
+        npcStatement.GetComponent<TextMeshProUGUI>().text = activeInterrogant.name + ": " + newNode.speech;
+        intResponseText1.GetComponent<TextMeshProUGUI>().text = activeNode.responses[0];
         if (activeNode.lifeLoss > 0)
         {
             interrogationSource.PlayOneShot(lifeLostSound, 0.5f);
             interrogationLives -= activeNode.lifeLoss;
-            print("Life Lost!");
         }
-        
-        MoveOptions();
-        firstNode = false;
+        if (activeNode.evidenceNeededCheck)
+        {
+            evButton.SetActive(true);
+        }
+        else evButton.SetActive(false);
     }
 
     public void StartInterrogation(DialogueNode startNode, GameObject targetNPC)
@@ -249,8 +200,18 @@ public class Interrogation : MonoBehaviour
         intResponseBox2.GetComponent<Image>().color = Color.gray;
         intResponseBox3.GetComponent<Image>().color = Color.gray;
         interrogationLives = 5;
-        LoadIntNodeInfo(startNode);
         activeInterrogant = targetNPC;
+        if (!firstTry)
+        {
+            LoadIntNodeInfo(mostRecentNode);
+        }
+        if (firstTry)
+        {
+            LoadIntNodeInfo(startNode);
+            firstTry = false;
+        }
+        
+        
         npcSprite1.sprite = activeInterrogant.GetComponent<NPCDialogue>().sprite;
         npcSprite2.sprite = activeInterrogant.GetComponent<NPCDialogue>().sprite;
     }
@@ -270,50 +231,7 @@ public class Interrogation : MonoBehaviour
         return evidencePresent = false;
     }
 
-    public void MoveOptions()
-    {
-        
-        if (activeNode.firstPathLocked)
-        {
-            intResponseBox2.transform.position = response1Position;
-            intResponseBox3.transform.position = response2Position;
-        }
-        if (activeNode.secondPathLocked)
-        {
-
-            intResponseBox1.transform.position = response1Position;
-            intResponseBox3.transform.position = response2Position;
-        }
-        if (activeNode.firstPathLocked && activeNode.secondPathLocked)
-        {
-            intResponseBox3.transform.position = response1Position;
-        }
-        if (activeNode.firstPathLocked && activeNode.thirdPathLocked)
-        {
-            intResponseBox2.transform.position = response1Position;
-        }
-    }
-
-    private void UpdateRollingText()
-    {
-        if (responseCount == 1)
-        {
-            npcStatement.SetActive(true);
-            npcStatement.GetComponent<TextMeshProUGUI>().text = npcLastResponse1;
-            npcStatement2.SetActive(true);
-            npcStatement2.GetComponent<TextMeshProUGUI>().text = npcLastResponse2;
-            playerResponse1.SetActive(true);
-            playerResponse1.GetComponent<TextMeshProUGUI>().text = lastResponse;
-        }
-        if (responseCount > 1)
-        {
-            npcStatement.GetComponent<TextMeshProUGUI>().text = npcLastResponse1;
-            npcStatement2.GetComponent<TextMeshProUGUI>().text = npcLastResponse2;
-            playerResponse1.GetComponent<TextMeshProUGUI>().text = lastResponse;
-            playerResponse2.SetActive(true);
-            playerResponse2.GetComponent<TextMeshProUGUI>().text = lastResponse2;
-        }
-    }
+    
 
     private void ClearDialogue()
     {
@@ -346,51 +264,134 @@ public class Interrogation : MonoBehaviour
 
     private void FillEvidenceImages()
     {
-        evidencePiece1.sprite = sprites[Random.Range(0, sprites.Count)];
-        evidencePiece2.sprite = sprites[Random.Range(0, sprites.Count)];
-        evidencePiece3.sprite = sprites[Random.Range(0, sprites.Count)];
         if (activeNode.evidenceNeededCheck)
         {
+            noEvMessage.SetActive(true);
+            evidencePiece1.gameObject.SetActive(false);
+            evidencePiece2.gameObject.SetActive(false);
+            evidencePiece3.gameObject.SetActive(false);
             foreach (string evidence in pinManager.threadedEvidence)
             {
                 if (evidence == activeNode.evidenceRequired)
                 {
+                    evidencePiece1.gameObject.SetActive(true);
+                    evidencePiece2.gameObject.SetActive(true);
+                    evidencePiece3.gameObject.SetActive(true);
+                    noEvMessage.SetActive(false);
                     int evImage = Random.Range(0, 2);
                     switch (evImage)
                     {
                         case 0:
                             evidencePiece1.sprite = activeNode.evidenceRequiredImage;
                             evidencePiece2.sprite = sprites[Random.Range(0, sprites.Count)];
+                            if(evidencePiece2.sprite == activeNode.evidenceRequiredImage)
+                            {
+                                while(evidencePiece2.sprite == activeNode.evidenceRequiredImage)
+                                {
+                                    evidencePiece2.sprite = sprites[Random.Range(0, sprites.Count)];
+                                }
+                            }
                             evidencePiece3.sprite = sprites[Random.Range(0, sprites.Count)];
+                            if (evidencePiece3.sprite == activeNode.evidenceRequiredImage)
+                            {
+                                while (evidencePiece3.sprite == activeNode.evidenceRequiredImage)
+                                {
+                                    evidencePiece3.sprite = sprites[Random.Range(0, sprites.Count)];
+                                }
+                            }
+
                             break;
                         case 1:
                             evidencePiece2.sprite = activeNode.evidenceRequiredImage;
                             evidencePiece1.sprite = sprites[Random.Range(0, sprites.Count)];
+                            if (evidencePiece1.sprite == activeNode.evidenceRequiredImage)
+                            {
+                                while (evidencePiece1.sprite == activeNode.evidenceRequiredImage)
+                                {
+                                    evidencePiece1.sprite = sprites[Random.Range(0, sprites.Count)];
+                                }
+                            }
                             evidencePiece3.sprite = sprites[Random.Range(0, sprites.Count)];
+                            if (evidencePiece3.sprite == activeNode.evidenceRequiredImage)
+                            {
+                                while (evidencePiece3.sprite == activeNode.evidenceRequiredImage)
+                                {
+                                    evidencePiece3.sprite = sprites[Random.Range(0, sprites.Count)];
+                                }
+                            }
                             break;
                         case 2:
                             evidencePiece3.sprite = activeNode.evidenceRequiredImage;
                             evidencePiece2.sprite = sprites[Random.Range(0, sprites.Count)];
-                            evidencePiece3.sprite = sprites[Random.Range(0, sprites.Count)];
+                            if (evidencePiece2.sprite == activeNode.evidenceRequiredImage)
+                            {
+                                while (evidencePiece2.sprite == activeNode.evidenceRequiredImage)
+                                {
+                                    evidencePiece2.sprite = sprites[Random.Range(0, sprites.Count)];
+                                }
+                            }
+                            evidencePiece1.sprite = sprites[Random.Range(0, sprites.Count)];
+                            if (evidencePiece1.sprite == activeNode.evidenceRequiredImage)
+                            {
+                                while (evidencePiece1.sprite == activeNode.evidenceRequiredImage)
+                                {
+                                    evidencePiece1.sprite = sprites[Random.Range(0, sprites.Count)];
+                                }
+                            }
                             break;
                     }
                     activeNode.evImagesGenerated = true;
                 }
+                
             }
         }       
     }
 
     public void CheckImage(GameObject button)
     {
-        if(button.gameObject.GetComponent<Image>().sprite == activeNode.evidenceRequiredImage)
+        if (button.gameObject.GetComponent<Image>().sprite != activeNode.evidenceRequiredImage)
         {
+            lastResponse = activeNode.responses[2];
             LoadIntNodeInfo(activeNode.children[0]);
             ReturnToInterrogationPanel();
         }
-        if(button.gameObject.GetComponent<Image>().sprite != activeNode.evidenceRequiredImage)
+        if (button.gameObject.GetComponent<Image>().sprite == activeNode.evidenceRequiredImage)
         {
+            lastResponse = activeNode.responses[1];
             LoadIntNodeInfo(activeNode.children[1]);
             ReturnToInterrogationPanel();
+        }
+        
+    }
+
+    private void SwitchEmotion()
+    {
+        switch (activeNode.nodeEmotion)
+        {
+            case 0:
+                activeInterrogant.GetComponent<NPCDialogue>().textureToChange.SetTexture("_DetailAlbedoMap", activeInterrogant.GetComponent<NPCDialogue>().defaultEmotion);
+                break;
+            case 1:
+                activeInterrogant.GetComponent<NPCDialogue>().textureToChange.SetTexture("_DetailAlbedoMap", activeInterrogant.GetComponent<NPCDialogue>().angryEmotion);
+                break;
+            case 2:
+                activeInterrogant.GetComponent<NPCDialogue>().textureToChange.SetTexture("_DetailAlbedoMap", activeInterrogant.GetComponent<NPCDialogue>().cryingEmotion);
+                break;
+            case 3:
+                activeInterrogant.GetComponent<NPCDialogue>().textureToChange.SetTexture("_DetailAlbedoMap", activeInterrogant.GetComponent<NPCDialogue>().guiltyEmotion);
+                break;
+            case 4:
+                activeInterrogant.GetComponent<NPCDialogue>().textureToChange.SetTexture("_DetailAlbedoMap", activeInterrogant.GetComponent<NPCDialogue>().playfulEmotion);
+                break;
+            case 5:
+                activeInterrogant.GetComponent<NPCDialogue>().textureToChange.SetTexture("_DetailAlbedoMap", activeInterrogant.GetComponent<NPCDialogue>().sadEmotion);
+                break;
+            case 6:
+                activeInterrogant.GetComponent<NPCDialogue>().textureToChange.SetTexture("_DetailAlbedoMap", activeInterrogant.GetComponent<NPCDialogue>().shockedEmotion);
+                break;
+            case 7:
+                activeInterrogant.GetComponent<NPCDialogue>().textureToChange.SetTexture("_DetailAlbedoMap", activeInterrogant.GetComponent<NPCDialogue>().thinkingEmotion);
+                break;
         }
     }
 }

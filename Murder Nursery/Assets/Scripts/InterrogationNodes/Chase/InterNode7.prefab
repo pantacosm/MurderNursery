@@ -44,15 +44,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b70be5e9440559442826bf7731a6e3b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parent: {fileID: 3499891356269125111, guid: 8f8ecbd1c848037449c274663829e795, type: 3}
+  parent: {fileID: 3499891356269125111, guid: ff91cbd06f48d66409da78afccff3a78, type: 3}
   children:
   - {fileID: 3499891356269125111, guid: ef0f3cb80aee2984d8af23549ee38d28, type: 3}
-  - {fileID: 3499891356269125111, guid: 8f32fc796f7935c49ad1605f2af25e14, type: 3}
-  - {fileID: 3499891356269125111, guid: ff91cbd06f48d66409da78afccff3a78, type: 3}
   speech: Prove it!
   responses:
-  - You can't make me! I just know!
-  - Oh uh... well.. uh...
   - My sleuthin' skills have discovered a glitter paint mark right over there by
     Gracie! Looks real similar to the glitter paint on your shoes! Well I'll tell
     you what Chase, ya can't outrun the law!
@@ -82,3 +78,16 @@ MonoBehaviour:
   fitCheck: 0
   dressUpNode: {fileID: 0}
   requiredOutfit: 
+  evidenceToDiscover: {fileID: 0}
+  evidenceCheckNode: 0
+  pathARequiredEvidence: 
+  pathBRequiredEvidence: 
+  pathCRequiredEvidence: 
+  pathAInterrogationEvidenceRequired: 0
+  pathBInterrogationEvidenceRequired: 0
+  pathCInterrogationEvidenceRequired: 0
+  nodeEmotion: 1
+  evidenceRequired: 
+  evidenceRequiredImage: {fileID: 0}
+  evidenceNeededCheck: 0
+  evImagesGenerated: 0

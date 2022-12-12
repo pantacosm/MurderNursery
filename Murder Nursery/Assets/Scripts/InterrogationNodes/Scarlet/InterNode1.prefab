@@ -47,13 +47,11 @@ MonoBehaviour:
   parent: {fileID: 3499891356269125111, guid: a04b6b0c099f77944b248f8bd0770af4, type: 3}
   children:
   - {fileID: 3499891356269125111, guid: a44b8467b64a7ef4b9d9d0b21bc438c2, type: 3}
-  - {fileID: 3499891356269125111, guid: f1acefc7f6b3dad4791fcf8710db5d12, type: 3}
   - {fileID: 3499891356269125111, guid: ab2272ab9455456439c5b04fbe6c2489, type: 3}
   speech: I don't know nothin'! I keep to myself in these parts, narc! I've never
     even seen the gal!
   responses:
   - Come on, now. You can tell me anythin!
-  - I know you're guilty of something!!
   - Didn't know her? and yet Chase seemed to be under the impression she'd been rufflin'
     feathers! Sounds like you guys HAD been aquainted!
   repLevelOption1: -10
@@ -67,7 +65,7 @@ MonoBehaviour:
   interrogationNode: 0
   lifeLoss: 0
   exitNode: 0
-  firstPathLocked: 1
+  firstPathLocked: 0
   secondPathLocked: 0
   thirdPathLocked: 0
   nodeVisited: 0
@@ -84,10 +82,14 @@ MonoBehaviour:
   requiredOutfit: 
   evidenceToDiscover: {fileID: 0}
   evidenceCheckNode: 0
-  pathARequiredEvidence: Chase is a loser
+  pathARequiredEvidence: 
   pathBRequiredEvidence: 
   pathCRequiredEvidence: 
   pathAInterrogationEvidenceRequired: 0
   pathBInterrogationEvidenceRequired: 0
   pathCInterrogationEvidenceRequired: 0
-  nodeEmotion: 0
+  nodeEmotion: 1
+  evidenceRequired: a mean drawing of Grace
+  evidenceRequiredImage: {fileID: 21300000, guid: 4028d58241ebc904d9aaf0b66c0a7a31, type: 3}
+  evidenceNeededCheck: 1
+  evImagesGenerated: 0

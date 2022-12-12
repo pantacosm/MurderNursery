@@ -47,12 +47,10 @@ MonoBehaviour:
   parent: {fileID: 3499891356269125111, guid: beae97c2ccd05ea4785969319fd363ba, type: 3}
   children:
   - {fileID: 3499891356269125111, guid: c65773716632ab544a745372e81b0632, type: 3}
-  - {fileID: 3499891356269125111, guid: 19f87520192835244a60ed67bf59b50b, type: 3}
   - {fileID: 3499891356269125111, guid: f0036de2b54e14f4daf9c88f315b32a3, type: 3}
   speech: I'm not tellin you SQUAT. I barely even know that kid!
   responses:
   - Why don't we cut to the chase, Chase!
-  - Whatever you say, bozo!
   - Oh, is that so? And yet multiple sources have told me he's been doin' your dirty
     work! Wanna excali... calibrate... uh... ELABORATE on that?
   repLevelOption1: -10
@@ -81,3 +79,16 @@ MonoBehaviour:
   fitCheck: 0
   dressUpNode: {fileID: 0}
   requiredOutfit: 
+  evidenceToDiscover: {fileID: 0}
+  evidenceCheckNode: 0
+  pathARequiredEvidence: 
+  pathBRequiredEvidence: 
+  pathCRequiredEvidence: 
+  pathAInterrogationEvidenceRequired: 0
+  pathBInterrogationEvidenceRequired: 0
+  pathCInterrogationEvidenceRequired: 0
+  nodeEmotion: 1
+  evidenceRequired: works for chase
+  evidenceRequiredImage: {fileID: 21300000, guid: c146e220118d7ce43a857b01cab2a977, type: 3}
+  evidenceNeededCheck: 1
+  evImagesGenerated: 0

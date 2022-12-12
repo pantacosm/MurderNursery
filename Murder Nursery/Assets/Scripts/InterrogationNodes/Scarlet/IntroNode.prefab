@@ -54,7 +54,7 @@ MonoBehaviour:
   repLevelOption2: -10
   repLevelOption3: -10
   nodeID: 
-  nodeActive: 1
+  nodeActive: 0
   repGainResponse1: 0
   repGainResponse2: 0
   repGainResponse3: 0
@@ -85,6 +85,7 @@ MonoBehaviour:
   pathBInterrogationEvidenceRequired: 0
   pathCInterrogationEvidenceRequired: 0
   nodeEmotion: 0
-  evidenceRequired: a mean drawing of Grace
-  evidenceRequiredImage: {fileID: 21300000, guid: 4028d58241ebc904d9aaf0b66c0a7a31, type: 3}
-  evidenceNeededCheck: 1
+  evidenceRequired: 
+  evidenceRequiredImage: {fileID: 0}
+  evidenceNeededCheck: 0
+  evImagesGenerated: 1

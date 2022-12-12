@@ -26,9 +26,9 @@ public class DressUp : MonoBehaviour
     void Start()
     {
         activeOutfit = "Detective Outfit";
-        firstButton = new Vector3(547.3333129882813f, 720.0f, 0.0f);
-        secondButton = new Vector3(1280.0f, 719.9999389648438f, 0.0f);
-        thirdButton = new Vector3(2044.666748046875f, 720.0f, 0.0f);
+        firstButton = new Vector3(410.5f, 540.0f, 0.0f);
+        secondButton = new Vector3(960.0f, 540.0f, 0.0f);
+        thirdButton = new Vector3(1533.5f, 540.0f, 0.0f);
         inactiveButton = detectiveButton;
     }
 

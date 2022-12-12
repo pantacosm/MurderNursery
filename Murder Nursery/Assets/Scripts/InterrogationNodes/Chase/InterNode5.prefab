@@ -46,19 +46,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 3499891356269125111, guid: 36eb4d5c831f4684ca5c1f8429f6f64e, type: 3}
   children:
-  - {fileID: 3499891356269125111, guid: 8f8ecbd1c848037449c274663829e795, type: 3}
   - {fileID: 3499891356269125111, guid: 6c19946ce6f2ab045b997c728a0aafcd, type: 3}
-  - {fileID: 3499891356269125111, guid: 46f86111ed2451544b79f1b9005c85e1, type: 3}
+  - {fileID: 3499891356269125111, guid: 8f8ecbd1c848037449c274663829e795, type: 3}
   speech: Problems?! You think I've got him murderin' people on my orders like Baloney
     Montana or somethin'?! Is this about that art dweeb? He can draw with both hands
     anyway so the tree thing doesn't even matter! I'm not the jealous type so I wouldn't
     call a shot like that anyways you, you, snitch!
   responses:
+  - Who you callin' a snitch, twinkle toes?!
   - Aha! Not the jealous type, eh? Everythin' I've got down here in my trusty jotte-
     I mean, case files says you've been reaaaaal jealous of him talkin' to Scarlet
     and Grace!
-  - Who you callin' a snitch, twinkle toes?!
-  - 'I had a sneaky feelin'' you were holdin'' out on me! '
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10
@@ -85,3 +83,16 @@ MonoBehaviour:
   fitCheck: 0
   dressUpNode: {fileID: 0}
   requiredOutfit: 
+  evidenceToDiscover: {fileID: 0}
+  evidenceCheckNode: 0
+  pathARequiredEvidence: 
+  pathBRequiredEvidence: 
+  pathCRequiredEvidence: 
+  pathAInterrogationEvidenceRequired: 0
+  pathBInterrogationEvidenceRequired: 0
+  pathCInterrogationEvidenceRequired: 0
+  nodeEmotion: 1
+  evidenceRequired: sharing
+  evidenceRequiredImage: {fileID: 21300000, guid: 6f5c71eab7fc6fb4cbe9cf3af0966b7a, type: 3}
+  evidenceNeededCheck: 1
+  evImagesGenerated: 0

@@ -48,12 +48,10 @@ MonoBehaviour:
   children:
   - {fileID: 3499891356269125111, guid: b520018dff403bb41b6570161ca2155b, type: 3}
   - {fileID: 3499891356269125111, guid: 270905a4a260ee4459a8c98d2cc1f122, type: 3}
-  - {fileID: 3499891356269125111, guid: 67f3856c8dd85cf44bd07f97c4eec500, type: 3}
   speech: Don't quit your day job, Detective... I've been at my easel all day!
   responses:
   - C'mon, ain't we pals?
   - You're a kook, kid! For all I know, a criminal mastermind!
-  - Oh, yeah? How'd you explain this evidence I found at our crimescene?
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10
@@ -80,3 +78,16 @@ MonoBehaviour:
   fitCheck: 0
   dressUpNode: {fileID: 0}
   requiredOutfit: 
+  evidenceToDiscover: {fileID: 0}
+  evidenceCheckNode: 0
+  pathARequiredEvidence: 
+  pathBRequiredEvidence: 
+  pathCRequiredEvidence: 
+  pathAInterrogationEvidenceRequired: 0
+  pathBInterrogationEvidenceRequired: 0
+  pathCInterrogationEvidenceRequired: 0
+  nodeEmotion: 0
+  evidenceRequired: 
+  evidenceRequiredImage: {fileID: 0}
+  evidenceNeededCheck: 0
+  evImagesGenerated: 0

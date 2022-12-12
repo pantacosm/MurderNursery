@@ -50,7 +50,7 @@ MonoBehaviour:
   speech: Maybe you should start showin' some evidence before you come in here accusin
     folks of murder, old boy!
   responses:
-  - <Life Lost>
+  - Argh! You got me...
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10
@@ -77,3 +77,16 @@ MonoBehaviour:
   fitCheck: 0
   dressUpNode: {fileID: 0}
   requiredOutfit: 
+  evidenceToDiscover: {fileID: 0}
+  evidenceCheckNode: 0
+  pathARequiredEvidence: 
+  pathBRequiredEvidence: 
+  pathCRequiredEvidence: 
+  pathAInterrogationEvidenceRequired: 0
+  pathBInterrogationEvidenceRequired: 0
+  pathCInterrogationEvidenceRequired: 0
+  nodeEmotion: 1
+  evidenceRequired: 
+  evidenceRequiredImage: {fileID: 0}
+  evidenceNeededCheck: 0
+  evImagesGenerated: 0

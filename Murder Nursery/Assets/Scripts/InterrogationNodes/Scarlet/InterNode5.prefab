@@ -47,13 +47,11 @@ MonoBehaviour:
   parent: {fileID: 3499891356269125111, guid: 8b91dcdd21fc5144097d95396f8ad737, type: 3}
   children:
   - {fileID: 3499891356269125111, guid: dc61ba241c6ebc34fa5a2104c66b3777, type: 3}
-  - {fileID: 3499891356269125111, guid: c5484ca9b4ff82d40abee88a6f2e8a48, type: 3}
   - {fileID: 3499891356269125111, guid: 8bc6a9d10318fec44906c3e5a9d53326, type: 3}
   speech: I didn't, I'm not that kinda gal! I don't even like Chase that much, we're
     not close at all! He doesn't tell me anythin' these days!
   responses:
   - Thought you guys were the king and queen round these parts?
-  - You ain't fooling me!
   - Not close, huh? From what I've heard, you and Chase been close for a while now!
     But for a moll who loves the attention..  why hide that...? Trouble in paradise?
   repLevelOption1: -10
@@ -82,3 +80,16 @@ MonoBehaviour:
   fitCheck: 0
   dressUpNode: {fileID: 0}
   requiredOutfit: 
+  evidenceToDiscover: {fileID: 0}
+  evidenceCheckNode: 0
+  pathARequiredEvidence: 
+  pathBRequiredEvidence: 
+  pathCRequiredEvidence: 
+  pathAInterrogationEvidenceRequired: 0
+  pathBInterrogationEvidenceRequired: 0
+  pathCInterrogationEvidenceRequired: 0
+  nodeEmotion: 3
+  evidenceRequired: a lovely drawing of Scarlet
+  evidenceRequiredImage: {fileID: 21300000, guid: 10bc2e083231eae47bf194de656b791c, type: 3}
+  evidenceNeededCheck: 1
+  evImagesGenerated: 0

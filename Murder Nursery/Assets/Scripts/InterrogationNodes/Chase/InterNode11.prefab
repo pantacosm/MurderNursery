@@ -46,12 +46,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 3499891356269125111, guid: fdcfd03a45645ce449867a5ccf9adcdd, type: 3}
   children:
-  - {fileID: 3499891356269125111, guid: ba607d62bb3af0c49a0d47639b04b586, type: 3}
   - {fileID: 3499891356269125111, guid: 85944329c996a584baa8ef726986a9d3, type: 3}
   - {fileID: 3499891356269125111, guid: 10df22b1e258daa4ab7d161c1476ea14, type: 3}
   speech: Well... what are you saying?
   responses:
-  - You know what I'm getting at here, right?
   - Oh... I forgot. Can we start again?
   - This lock of hair was in a real lovey-dovey little locket, and I'm no forensic
     but it sure looks blonde! Wouldn't ya agree?
@@ -81,3 +79,16 @@ MonoBehaviour:
   fitCheck: 0
   dressUpNode: {fileID: 0}
   requiredOutfit: 
+  evidenceToDiscover: {fileID: 0}
+  evidenceCheckNode: 0
+  pathARequiredEvidence: 
+  pathBRequiredEvidence: 
+  pathCRequiredEvidence: 
+  pathAInterrogationEvidenceRequired: 0
+  pathBInterrogationEvidenceRequired: 0
+  pathCInterrogationEvidenceRequired: 0
+  nodeEmotion: 3
+  evidenceRequired: 
+  evidenceRequiredImage: {fileID: 0}
+  evidenceNeededCheck: 0
+  evImagesGenerated: 0

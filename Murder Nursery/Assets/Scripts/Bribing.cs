@@ -36,15 +36,31 @@ public class Bribing : MonoBehaviour
         bribePanel.SetActive(false);
     }
 
+    public void AttemptBribeButton2()
+    {
+        if(secondBribe.itemName == activeNPC.GetComponent<NPCDialogue>().bribeItem)
+        {
+            manager.GetComponent<DialogueManager>().StartConversation(activeNPC.GetComponent<NPCDialogue>().bribePath, activeNPC, activeNPC.GetComponent<NPCDialogue>().npcCam);
+            bribePanel.SetActive(false);
+            inventoryManager.GetComponent<InventoryManager>().RemoveItem(inventoryManager.GetComponent<InventoryManager>().items[3]);
+            Destroy(inventoryManager.GetComponent<InventoryManager>().invItems[3]);
+
+        }
+        else manager.GetComponent<DialogueManager>().StartConversation(activeNPC.GetComponent<NPCDialogue>().bribeFailPath, activeNPC, activeNPC.GetComponent<NPCDialogue>().npcCam);
+        bribePanel.SetActive(false);
+    
+    }
+
     public void StoreInfo(Item item)
     {
-        if(firstBribe == null)
+        if (firstBribe != null && secondBribe == null)
+        {
+            secondBribe = item;
+        }
+        if (firstBribe == null)
         {
             firstBribe = item;
         }
-        if(firstBribe != null && secondBribe)
-        {
-            secondBribe = item; 
-        }
+        
     }
 }

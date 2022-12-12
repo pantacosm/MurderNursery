@@ -46,12 +46,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 0}
   children:
-  - {fileID: 3499891356269125111, guid: 126ae1006fd2d874bac601212655b922, type: 3}
   - {fileID: 3499891356269125111, guid: 5fb4e4ffb23fd7441822fbd2cd6289b2, type: 3}
   speech: W-WOAH! IS THAT A CANDY BAR? Aw man, can I have it? Puh-LEEZ!
   responses:
-  - Go soak your head!
-  - Uh, sure?
+  - Uh sure
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10
@@ -87,3 +85,7 @@ MonoBehaviour:
   pathBInterrogationEvidenceRequired: 0
   pathCInterrogationEvidenceRequired: 0
   nodeEmotion: 6
+  evidenceRequired: 
+  evidenceRequiredImage: {fileID: 0}
+  evidenceNeededCheck: 0
+  evImagesGenerated: 0

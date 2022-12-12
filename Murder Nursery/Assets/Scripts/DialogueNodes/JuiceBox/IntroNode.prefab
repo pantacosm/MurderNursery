@@ -68,7 +68,7 @@ MonoBehaviour:
   firstPathLocked: 0
   secondPathLocked: 0
   thirdPathLocked: 0
-  nodeVisited: 1
+  nodeVisited: 0
   lockingNode: 1
   briberyAvailable: 0
   triggerTrueEnd: 0
@@ -89,3 +89,7 @@ MonoBehaviour:
   pathBInterrogationEvidenceRequired: 0
   pathCInterrogationEvidenceRequired: 0
   nodeEmotion: 3
+  evidenceRequired: 
+  evidenceRequiredImage: {fileID: 0}
+  evidenceNeededCheck: 0
+  evImagesGenerated: 0

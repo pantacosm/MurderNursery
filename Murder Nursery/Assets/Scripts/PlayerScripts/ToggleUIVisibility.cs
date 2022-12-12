@@ -57,10 +57,7 @@ public class ToggleUIVisibility : MonoBehaviour
         {
             inventoryUI.SetActive(false);
             inventoryOpen = false;
-            Cursor.visible=false;
-
-            
-            
+            Cursor.visible=false;            
         }
 
         if(pinboardOpen)
@@ -115,7 +112,6 @@ public class ToggleUIVisibility : MonoBehaviour
             jotterUI.SetActive(true);
             blur.SetActive(true);
             jotterOpen = true;
-
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
         }
@@ -124,10 +120,7 @@ public class ToggleUIVisibility : MonoBehaviour
             jotterUI.SetActive(false);
             blur.SetActive(false);
             jotterOpen = false;
-            Cursor.visible = false;
-
-            
-            
+            Cursor.visible = false;            
         }
 
         if(inventoryOpen)

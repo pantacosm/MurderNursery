@@ -56,7 +56,7 @@ MonoBehaviour:
   repLevelOption2: -10
   repLevelOption3: -10
   nodeID: 
-  nodeActive: 0
+  nodeActive: 1
   repGainResponse1: -2
   repGainResponse2: 2
   repGainResponse3: 0
@@ -87,3 +87,7 @@ MonoBehaviour:
   pathBInterrogationEvidenceRequired: 0
   pathCInterrogationEvidenceRequired: 0
   nodeEmotion: 0
+  evidenceRequired: 
+  evidenceRequiredImage: {fileID: 0}
+  evidenceNeededCheck: 0
+  evImagesGenerated: 0

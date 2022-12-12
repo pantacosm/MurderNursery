@@ -46,14 +46,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 3499891356269125111, guid: 455c8c7f2eaed9845899318f5cf1c9cf, type: 3}
   children:
-  - {fileID: 3499891356269125111, guid: 79a5944512b9c4e458cd90aa32805fce, type: 3}
   - {fileID: 3499891356269125111, guid: ace76e746acdf5b4cbe849a1a59e419b, type: 3}
+  - {fileID: 3499891356269125111, guid: 79a5944512b9c4e458cd90aa32805fce, type: 3}
   speech: 'She was a doll. Didn''t harm nobody. And lemme tell ya, some folks need
     harmin'' round here. '
   responses:
-  - Tell me about these folks. <Fail>
-  - Tell me about these folks. <Success>
-  repLevelOption1: -10
+  - Tell me about these folks.
+  - Ummm.... wanna spill?
+  repLevelOption1: 2
   repLevelOption2: -10
   repLevelOption3: -10
   nodeID: 
@@ -67,7 +67,7 @@ MonoBehaviour:
   firstPathLocked: 0
   secondPathLocked: 0
   thirdPathLocked: 0
-  nodeVisited: 1
+  nodeVisited: 0
   lockingNode: 0
   briberyAvailable: 0
   triggerTrueEnd: 0
@@ -88,3 +88,7 @@ MonoBehaviour:
   pathBInterrogationEvidenceRequired: 0
   pathCInterrogationEvidenceRequired: 0
   nodeEmotion: 5
+  evidenceRequired: 
+  evidenceRequiredImage: {fileID: 0}
+  evidenceNeededCheck: 0
+  evImagesGenerated: 0

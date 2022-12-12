@@ -46,13 +46,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 3499891356269125111, guid: e5bc21eef83378e49b78c9429498c9a0, type: 3}
   children:
-  - {fileID: 3499891356269125111, guid: 28db32b5e09196044bba12eba20427df, type: 3}
   - {fileID: 3499891356269125111, guid: 9bca328180c2ef441abd692ecfb06e86, type: 3}
   speech: I'll say! Hey... you're not so bad for an uggo. Maybe I'll throw ya a bone
     if ya stop dressing like such a goof!
   responses:
-  - Dress Up Required
-  - Come back later
+  - Thanks, smell ya!
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10
@@ -76,9 +74,9 @@ MonoBehaviour:
   lockingFirstPath: 0
   lockingSecondPath: 0
   lockingThirdPath: 0
-  fitCheck: 0
-  dressUpNode: {fileID: 0}
-  requiredOutfit: 
+  fitCheck: 1
+  dressUpNode: {fileID: 3499891356269125111, guid: 28db32b5e09196044bba12eba20427df, type: 3}
+  requiredOutfit: Gangster Outfit
   evidenceToDiscover: {fileID: 0}
   evidenceCheckNode: 0
   pathARequiredEvidence: 
@@ -88,3 +86,7 @@ MonoBehaviour:
   pathBInterrogationEvidenceRequired: 0
   pathCInterrogationEvidenceRequired: 0
   nodeEmotion: 4
+  evidenceRequired: 
+  evidenceRequiredImage: {fileID: 0}
+  evidenceNeededCheck: 0
+  evImagesGenerated: 0

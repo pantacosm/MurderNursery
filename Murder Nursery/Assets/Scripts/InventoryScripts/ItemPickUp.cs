@@ -24,6 +24,7 @@ public class ItemPickUp : MonoBehaviour
         if(Input.GetKeyUp(KeyCode.E) && canPickUp)
         {
             PickUp();
+            text.SetActive(false);
         }
     }
 

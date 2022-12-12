@@ -78,6 +78,9 @@ public class DialogueManager : MonoBehaviour
     public Image item1;
     public Image item2;
     public Image singleBribe;
+    public GameObject repLockResponse1;
+    public GameObject repLockResponse2;
+    public GameObject repLockResponse3;
 
 
     [HideInInspector]
@@ -204,7 +207,23 @@ public class DialogueManager : MonoBehaviour
 
     public void LoadNodeInfo(DialogueNode newNode)
     {
-        
+        repLockResponse1.SetActive(false);
+        repLockResponse2.SetActive(false);
+        repLockResponse3.SetActive(false);
+
+        if (newNode.repLevelOption1 > 0)
+        {
+            repLockResponse1.SetActive(true);
+        }
+        if (newNode.repLevelOption2 > 0)
+        {
+            repLockResponse2.SetActive(true);
+        }
+        if (newNode.repLevelOption3 > 0)
+        {
+            repLockResponse3.SetActive(true);
+        }
+
         if (activeNode != null)
         {
             activeNode.nodeActive = false;
@@ -213,11 +232,13 @@ public class DialogueManager : MonoBehaviour
         
         if (newNode.fitCheck)
         {
-            if (dressUpBox.GetComponent<DressUp>().CheckOutfit(activeNode.requiredOutfit))
+            if (dressUpBox.GetComponent<DressUp>().CheckOutfit(newNode.requiredOutfit))
             {
                 playerAudio.PlayOneShot(passOutfitCheckSound, 0.5f);
                 activeNode = newNode.dressUpNode;
             }
+            else activeNode = newNode;
+            
         }
         else if (!newNode.fitCheck || !dressUpBox.GetComponent<DressUp>().CheckOutfit(activeNode.requiredOutfit))
         {
@@ -316,6 +337,7 @@ public class DialogueManager : MonoBehaviour
             briberyOption.SetActive(true);
         }
         else briberyOption.SetActive(false);
+        
         
 
     }
@@ -574,6 +596,9 @@ public class DialogueManager : MonoBehaviour
     {
         dialogueZone.SetActive(false);
         briberyPanel.SetActive(true);
+        singleBribe.gameObject.SetActive(false);
+        item1.gameObject.SetActive(false);
+        item2.gameObject.SetActive(false);
         if(inventoryManager.GetComponent<InventoryManager>().items.Count == 3)
         {
             inventoryManager.GetComponent<Bribing>().StoreInfo(inventoryManager.GetComponent<InventoryManager>().items[2]);
@@ -582,6 +607,8 @@ public class DialogueManager : MonoBehaviour
         }
         if(inventoryManager.GetComponent<InventoryManager>().items.Count ==4)
         {
+            inventoryManager.GetComponent<Bribing>().StoreInfo(inventoryManager.GetComponent<InventoryManager>().items[2]);
+            inventoryManager.GetComponent<Bribing>().StoreInfo(inventoryManager.GetComponent<InventoryManager>().items[3]);
             item1.gameObject.SetActive(true);
             item2.gameObject.SetActive(true);
             item1.sprite = inventoryManager.GetComponent<InventoryManager>().items[2].icon;

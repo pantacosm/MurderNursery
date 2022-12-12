@@ -47,12 +47,10 @@ MonoBehaviour:
   parent: {fileID: 3499891356269125111, guid: 1e2eb28ef3a1de949a6b39588867b7f8, type: 3}
   children:
   - {fileID: 3499891356269125111, guid: a864f79422d4d314cbb4e2e1b42c479b, type: 3}
-  - {fileID: 3499891356269125111, guid: 2df41a3fe44bd2946900b1beaa0799c9, type: 3}
   - {fileID: 3499891356269125111, guid: b83dd51810a3e3d4c92954763cd6b37d, type: 3}
   speech: I don't have any choice! He was - my good sir, I cannot say another word!
   responses:
   - Liar! You don't have any friends!
-  - How about two words? "I'm, GUILTY!"
   - It's Chase, isn't it? He doesn't like you... and he doesn't like you talking
     to his friends!
   repLevelOption1: -10
@@ -81,3 +79,16 @@ MonoBehaviour:
   fitCheck: 0
   dressUpNode: {fileID: 0}
   requiredOutfit: 
+  evidenceToDiscover: {fileID: 0}
+  evidenceCheckNode: 0
+  pathARequiredEvidence: 
+  pathBRequiredEvidence: 
+  pathCRequiredEvidence: 
+  pathAInterrogationEvidenceRequired: 0
+  pathBInterrogationEvidenceRequired: 0
+  pathCInterrogationEvidenceRequired: 0
+  nodeEmotion: 0
+  evidenceRequired: a mean drawing of Juice Box
+  evidenceRequiredImage: {fileID: 21300000, guid: df185475ec4679f438c6cb9fd9adfc5c, type: 3}
+  evidenceNeededCheck: 1
+  evImagesGenerated: 0

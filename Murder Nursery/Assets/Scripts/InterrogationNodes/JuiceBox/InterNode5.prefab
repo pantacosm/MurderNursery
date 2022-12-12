@@ -46,13 +46,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 3499891356269125111, guid: a62adddfc1254a14f9ed93cce8d8e68a, type: 3}
   children:
-  - {fileID: 3499891356269125111, guid: 4c57b35c564360f4dadf3a428ae06db5, type: 3}
   - {fileID: 3499891356269125111, guid: b850b34982c0d404298f72625ab16db4, type: 3}
   - {fileID: 3499891356269125111, guid: 342b46ae2f1c9a8449de9aab47eeff6d, type: 3}
   speech: Well, exCUUUUSE me! Maybe my memory isn't so good. But I certainly don't
     remember me and Grace ever talking!
   responses:
-  - You kiddin'? I heard you were a regular Don Joo-ann!
   - Seems like you don't remember a lot of things...
   - Is that so? Turns out a lotta kids say quite the opposite, pal... seems like
     you two  were close!
@@ -82,3 +80,16 @@ MonoBehaviour:
   fitCheck: 0
   dressUpNode: {fileID: 0}
   requiredOutfit: 
+  evidenceToDiscover: {fileID: 0}
+  evidenceCheckNode: 0
+  pathARequiredEvidence: 
+  pathBRequiredEvidence: 
+  pathCRequiredEvidence: 
+  pathAInterrogationEvidenceRequired: 0
+  pathBInterrogationEvidenceRequired: 0
+  pathCInterrogationEvidenceRequired: 0
+  nodeEmotion: 3
+  evidenceRequired: a lovely drawing of Juice Box
+  evidenceRequiredImage: {fileID: 21300000, guid: 3116ae332299744478b38871b95eb50f, type: 3}
+  evidenceNeededCheck: 1
+  evImagesGenerated: 0

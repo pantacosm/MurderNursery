@@ -50,7 +50,7 @@ MonoBehaviour:
   speech: "Even I can tell you\u2019re lying, buddy. And my dad says I ain't got
     no emotional intelligence."
   responses:
-  - <Life Lost>
+  - Oh, that's nice of him...
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10
@@ -77,3 +77,16 @@ MonoBehaviour:
   fitCheck: 0
   dressUpNode: {fileID: 0}
   requiredOutfit: 
+  evidenceToDiscover: {fileID: 0}
+  evidenceCheckNode: 0
+  pathARequiredEvidence: 
+  pathBRequiredEvidence: 
+  pathCRequiredEvidence: 
+  pathAInterrogationEvidenceRequired: 0
+  pathBInterrogationEvidenceRequired: 0
+  pathCInterrogationEvidenceRequired: 0
+  nodeEmotion: 0
+  evidenceRequired: 
+  evidenceRequiredImage: {fileID: 0}
+  evidenceNeededCheck: 0
+  evImagesGenerated: 0

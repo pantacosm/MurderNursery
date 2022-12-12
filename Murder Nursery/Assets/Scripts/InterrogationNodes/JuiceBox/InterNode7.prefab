@@ -46,17 +46,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 3499891356269125111, guid: 342b46ae2f1c9a8449de9aab47eeff6d, type: 3}
   children:
-  - {fileID: 3499891356269125111, guid: 1e2eb28ef3a1de949a6b39588867b7f8, type: 3}
   - {fileID: 3499891356269125111, guid: fab3aebddf5708143ab0315113c65ea6, type: 3}
-  - {fileID: 3499891356269125111, guid: 8bd1bd2ce5b7a2846a102acddd2c6098, type: 3}
+  - {fileID: 3499891356269125111, guid: 1e2eb28ef3a1de949a6b39588867b7f8, type: 3}
   speech: Uh, uh... Lemme think... Okay! If we were close, why would I want to murder
     her? HA! I got you now!
   responses:
+  - Because you're a cold-hearted killer, that's why!
   - Did I stutter? I said WERE! Those same kids spotted you two havin' an argument!
     Seems Grace didn't like how many juice boxes you were goin' through... she cared
     about you, Juice Box!
-  - Because you're a cold-hearted killer, that's why!
-  - Because you're a cold-hearted killer, that's why!
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10
@@ -83,3 +81,16 @@ MonoBehaviour:
   fitCheck: 0
   dressUpNode: {fileID: 0}
   requiredOutfit: 
+  evidenceToDiscover: {fileID: 0}
+  evidenceCheckNode: 0
+  pathARequiredEvidence: 
+  pathBRequiredEvidence: 
+  pathCRequiredEvidence: 
+  pathAInterrogationEvidenceRequired: 0
+  pathBInterrogationEvidenceRequired: 0
+  pathCInterrogationEvidenceRequired: 0
+  nodeEmotion: 7
+  evidenceRequired: a plea to stop drinking
+  evidenceRequiredImage: {fileID: 21300000, guid: 24c4710c3697eef47b43ca0740a8e9d3, type: 3}
+  evidenceNeededCheck: 1
+  evImagesGenerated: 0

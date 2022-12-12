@@ -46,16 +46,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 3499891356269125111, guid: 452b48ca4e76a5747b36456ef9c04aa2, type: 3}
   children:
-  - {fileID: 3499891356269125111, guid: 8fb028910b6c07242b0cbb777093310b, type: 3}
-  - {fileID: 3499891356269125111, guid: 20dbcc95654c9ec438d549078c41e662, type: 3}
   - {fileID: 3499891356269125111, guid: 7b9e49bf13797024898f08ce152ef160, type: 3}
+  - {fileID: 3499891356269125111, guid: 8fb028910b6c07242b0cbb777093310b, type: 3}
   speech: Shucks pal, thanks. But don't think you can flatter your way out of this
     one! Why else would I push that crazy outta tree?
   responses:
+  - You were jealous of his art skills!
   - How about because you were "just following orders", buddy? The whole class knows
     you work for Chase!
-  - Just for the thrill?
-  - You were jealous of his art skills!
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10
@@ -82,3 +80,16 @@ MonoBehaviour:
   fitCheck: 0
   dressUpNode: {fileID: 0}
   requiredOutfit: 
+  evidenceToDiscover: {fileID: 0}
+  evidenceCheckNode: 0
+  pathARequiredEvidence: 
+  pathBRequiredEvidence: 
+  pathCRequiredEvidence: 
+  pathAInterrogationEvidenceRequired: 0
+  pathBInterrogationEvidenceRequired: 0
+  pathCInterrogationEvidenceRequired: 0
+  nodeEmotion: 0
+  evidenceRequired: works for chase
+  evidenceRequiredImage: {fileID: 21300000, guid: c146e220118d7ce43a857b01cab2a977, type: 3}
+  evidenceNeededCheck: 1
+  evImagesGenerated: 0

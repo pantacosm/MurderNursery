@@ -36,6 +36,8 @@ public class Conclusion : MonoBehaviour
     public GameObject drewMain;
     public GameObject chaseMain;
     public GameObject tempText;
+    public bool endingReady = false;
+    public GameObject endingText;
     // Start is called before the first frame update
     void Start()
     {
@@ -46,7 +48,7 @@ public class Conclusion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.C))
+        if(Input.GetKeyDown(KeyCode.C) && endingReady)
         {
             StartConclusion();
         }
@@ -211,4 +213,7 @@ public class Conclusion : MonoBehaviour
         graceChosen = true;
         SuspectChosen();
     }
+
+   
+
 }

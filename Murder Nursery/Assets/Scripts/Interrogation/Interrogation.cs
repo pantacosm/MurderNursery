@@ -39,6 +39,12 @@ public class Interrogation : MonoBehaviour
     private bool firstNode = true;
     public Image npcSprite1;
     public Image npcSprite2;
+    public GameObject evidencePanel;
+    public PinboardManager pinManager;
+    public Image evidencePiece1;
+    public Image evidencePiece2;
+    public Image evidencePiece3;
+    public List<Sprite> sprites;
 
     // Start is called before the first frame update
     void Start()
@@ -90,7 +96,7 @@ public class Interrogation : MonoBehaviour
                 case 1:
                     lastResponse = activeNode.responses[1];
                     break;
-                case 2:
+                //case 2:
                     lastResponse = activeNode.responses[2];
                     break;
             }
@@ -131,7 +137,7 @@ public class Interrogation : MonoBehaviour
                 pos--;
                 intResponseBox2.GetComponent<Image>().color = Color.gray;
             }
-            if (Input.GetKeyDown(KeyCode.DownArrow))
+            //if (Input.GetKeyDown(KeyCode.DownArrow))
             {
                 pos++;
                 intResponseBox2.GetComponent<Image>().color = Color.gray;
@@ -147,7 +153,7 @@ public class Interrogation : MonoBehaviour
                 
             }
         }
-        if (pos == 2)
+        //if (pos == 2)
         {
             intResponseBox3.GetComponent<Image>().color = Color.white;
             if (Input.GetKeyUp(KeyCode.UpArrow))
@@ -168,7 +174,12 @@ public class Interrogation : MonoBehaviour
         return choice;
     }
 
-
+    public void EarlyExit()
+    {
+        manager.GetComponent<SceneTransition>().ChangeToMainArea();
+        interrogationPanel.SetActive(false);
+        
+    }
     public void SuccessfulEnd()
     {
         manager.GetComponent<SceneTransition>().ChangeToMainArea();
@@ -197,7 +208,7 @@ public class Interrogation : MonoBehaviour
         {
             npcLastResponse1 = activeNode.speech;
         }
-        if(!firstNode)
+        //if(!firstNode)
         {
             npcLastResponse2 = npcLastResponse1;
             npcLastResponse1 = activeNode.speech;
@@ -205,21 +216,7 @@ public class Interrogation : MonoBehaviour
             UpdateRollingText();
         }
 
-        if (activeNode.responses.Length == 0)
-        {
-            intResponseText1.GetComponent<TextMeshProUGUI>().text = "Press Escape To Leave Conversation";
-            intResponseBox2.SetActive(false);
-            intResponseBox3.SetActive(false);
-        }
-        if (activeNode.responses.Length == 1)
-        {
-            intResponseBox2.SetActive(false);
-            intResponseBox3.SetActive(false);
-        }
-        if (activeNode.responses.Length == 2)
-        {
-            intResponseBox3.SetActive(false);
-        }
+        
 
         if (activeNode.responses.Length >= 1)
             intResponseText1.GetComponent<TextMeshProUGUI>().text = activeNode.responses[0].ToString();
@@ -239,25 +236,15 @@ public class Interrogation : MonoBehaviour
             interrogationLives -= activeNode.lifeLoss;
             print("Life Lost!");
         }
-        if(activeNode.evidenceCheckNode)
-        {
-            if(activeNode.pathAInterrogationEvidenceRequired)
-            {
-                intResponseBox1.SetActive(false);
-                activeNode.firstPathLocked = true;
-                if(CheckNodeEvidence())
-                {
-                    intResponseBox1.SetActive(true);
-                    activeNode.firstPathLocked = false;
-                }
-            }
-        }
+        
         MoveOptions();
         firstNode = false;
     }
 
     public void StartInterrogation(DialogueNode startNode, GameObject targetNPC)
     {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
         pos = 0;
         intResponseBox2.GetComponent<Image>().color = Color.gray;
         intResponseBox3.GetComponent<Image>().color = Color.gray;
@@ -339,5 +326,71 @@ public class Interrogation : MonoBehaviour
         lastResponse = null;
         lastResponse2 = null;
         responseCount = 0;
+    }
+
+    public void BringUpEvidencePanel()
+    {
+        evidencePanel.SetActive(true);
+        interrogationPanel.SetActive(false);
+        if (!activeNode.evImagesGenerated)
+        {
+            FillEvidenceImages();
+        }
+    }
+
+    public void ReturnToInterrogationPanel()
+    {
+        interrogationPanel.SetActive(true);
+        evidencePanel.SetActive(false);
+    }
+
+    private void FillEvidenceImages()
+    {
+        evidencePiece1.sprite = sprites[Random.Range(0, sprites.Count)];
+        evidencePiece2.sprite = sprites[Random.Range(0, sprites.Count)];
+        evidencePiece3.sprite = sprites[Random.Range(0, sprites.Count)];
+        if (activeNode.evidenceNeededCheck)
+        {
+            foreach (string evidence in pinManager.threadedEvidence)
+            {
+                if (evidence == activeNode.evidenceRequired)
+                {
+                    int evImage = Random.Range(0, 2);
+                    switch (evImage)
+                    {
+                        case 0:
+                            evidencePiece1.sprite = activeNode.evidenceRequiredImage;
+                            evidencePiece2.sprite = sprites[Random.Range(0, sprites.Count)];
+                            evidencePiece3.sprite = sprites[Random.Range(0, sprites.Count)];
+                            break;
+                        case 1:
+                            evidencePiece2.sprite = activeNode.evidenceRequiredImage;
+                            evidencePiece1.sprite = sprites[Random.Range(0, sprites.Count)];
+                            evidencePiece3.sprite = sprites[Random.Range(0, sprites.Count)];
+                            break;
+                        case 2:
+                            evidencePiece3.sprite = activeNode.evidenceRequiredImage;
+                            evidencePiece2.sprite = sprites[Random.Range(0, sprites.Count)];
+                            evidencePiece3.sprite = sprites[Random.Range(0, sprites.Count)];
+                            break;
+                    }
+                    activeNode.evImagesGenerated = true;
+                }
+            }
+        }       
+    }
+
+    public void CheckImage(GameObject button)
+    {
+        if(button.gameObject.GetComponent<Image>().sprite == activeNode.evidenceRequiredImage)
+        {
+            LoadIntNodeInfo(activeNode.children[0]);
+            ReturnToInterrogationPanel();
+        }
+        if(button.gameObject.GetComponent<Image>().sprite != activeNode.evidenceRequiredImage)
+        {
+            LoadIntNodeInfo(activeNode.children[1]);
+            ReturnToInterrogationPanel();
+        }
     }
 }

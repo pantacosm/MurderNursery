@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class ItemPickUp : MonoBehaviour
 {
     [SerializeField]
     Item item;
+    public GameObject text;
 
     private bool canPickUp;
 
@@ -19,7 +21,7 @@ public class ItemPickUp : MonoBehaviour
     private void Update()
     {
         // once we are in range of an items trigger & press R, the item is added to the players inventory
-        if(Input.GetKeyUp(KeyCode.R) && canPickUp)
+        if(Input.GetKeyUp(KeyCode.E) && canPickUp)
         {
             PickUp();
         }
@@ -30,6 +32,8 @@ public class ItemPickUp : MonoBehaviour
         if(other.gameObject.tag == "Player")
         {
             canPickUp = true;
+            text.GetComponent<TextMeshProUGUI>().text = "Press [E] to pick up " + item.name;
+            text.SetActive(true);
         }
     }
 
@@ -38,6 +42,7 @@ public class ItemPickUp : MonoBehaviour
         if(other.gameObject.tag == "Player")
         {
             canPickUp = false;
+            text.SetActive(false);
         }
     }
 }

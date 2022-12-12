@@ -33,7 +33,14 @@ public class ToggleUIVisibility : MonoBehaviour
     public AudioClip openJotterSound;
     public GameObject blur;
 
-  
+    public void Update()
+    {
+        if (inventoryOpen)
+        {
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
+        }
+    }
     public void ToggleInventory()
     {
         
@@ -50,9 +57,10 @@ public class ToggleUIVisibility : MonoBehaviour
         {
             inventoryUI.SetActive(false);
             inventoryOpen = false;
+            Cursor.visible=false;
 
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
+            
+            
         }
 
         if(pinboardOpen)
@@ -86,9 +94,10 @@ public class ToggleUIVisibility : MonoBehaviour
             pinboardUI.SetActive(false);
             blur.SetActive(false);
             pinboardOpen = false;
-
-            Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
+
+            
+            
         }
 
         if(inventoryOpen)
@@ -115,9 +124,10 @@ public class ToggleUIVisibility : MonoBehaviour
             jotterUI.SetActive(false);
             blur.SetActive(false);
             jotterOpen = false;
-
-            Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
+
+            
+            
         }
 
         if(inventoryOpen)

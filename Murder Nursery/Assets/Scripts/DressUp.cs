@@ -45,6 +45,7 @@ public class DressUp : MonoBehaviour
             interactableText.SetActive(false);
             dressUpMenu.SetActive(true);
             Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
             playerAudio.PlayOneShot(openBoxSound, 0.5f);
         }
 
@@ -52,6 +53,7 @@ public class DressUp : MonoBehaviour
         {
             ExitDressUp();
             playerAudio.PlayOneShot(openBoxSound, 0.5f);
+            Cursor.visible = false;
         }
 
     }

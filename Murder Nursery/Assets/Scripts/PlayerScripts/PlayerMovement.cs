@@ -52,6 +52,7 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         manager = GameObject.FindGameObjectWithTag("Manager");
+        Cursor.visible = false;
     }
 
     void Update()
@@ -130,13 +131,5 @@ public class PlayerMovement : MonoBehaviour
         playerControls.PlayerInputMap.Disable();
     }
 
-    // hide mouse cursor when player is focus
-    private void OnApplicationFocus(bool focus)
-    {
-        if (focus)
-        {
-            //Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-        }
-    }
+   
 }

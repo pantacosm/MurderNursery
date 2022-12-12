@@ -43,6 +43,10 @@ public class DialogueNode : MonoBehaviour
     public bool pathBInterrogationEvidenceRequired;
     public bool pathCInterrogationEvidenceRequired;
     public int nodeEmotion;
+    public string evidenceRequired;
+    public Sprite evidenceRequiredImage;
+    public bool evidenceNeededCheck = false;
+    public bool evImagesGenerated = false;
 
    
 

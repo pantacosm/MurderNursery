@@ -95,9 +95,10 @@ public class DialogueManager : MonoBehaviour
     {
         manager = GameObject.FindGameObjectWithTag("Manager");
         RM = repManager.GetComponent<ReputationManager>();
-        response1Position = new Vector3(1963.9716796875f, 329.7158203125f, 0.0f);
-        response2Position = new Vector3(1963.9686279296875f, 232.59219360351563f, 0.0f);
-        response3Position = new Vector3(1963.975341796875f, 136.84246826171876f, 0.0f);
+        response1Position = new Vector3(1472.978759765625f, 247.28692626953126f, 0.0f);
+        response2Position = new Vector3 (1472.9764404296875f,174.4442138671875f, 0.0f);
+        response3Position = new Vector3(1472.9814453125f, 102.63192749023438f, 0.0f);
+
     } 
 
     // Update is called once per frame
@@ -106,6 +107,8 @@ public class DialogueManager : MonoBehaviour
         if(inConvo)
         {
             ContinueConversation();
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
         }
         if(gainingRep)
         {
@@ -189,7 +192,7 @@ public class DialogueManager : MonoBehaviour
 
     public void ExitConversation()
     {
-        Cursor.visible = false;
+        ;
         player.SetActive(true);
         playerCam.gameObject.SetActive(true);
         currentNPCCam.gameObject.SetActive(false);
@@ -312,6 +315,7 @@ public class DialogueManager : MonoBehaviour
         {
             briberyOption.SetActive(true);
         }
+        else briberyOption.SetActive(false);
         
 
     }
@@ -716,5 +720,55 @@ public class DialogueManager : MonoBehaviour
             case 7: activeNPC.GetComponent<NPCDialogue>().textureToChange.SetTexture("_DetailAlbedoMap", activeNPC.GetComponent<NPCDialogue>().thinkingEmotion);
                 break;
         }
+    }
+
+    public void ClickChoice1()
+    {
+        
+        responseCount++;
+       
+        if (responseCount >= 1)
+        {
+            lastResponse2 = lastResponse;
+        }
+        lastResponse = activeNode.responses[0];
+        npcLastResponse2 = npcLastResponse1;     
+        npcLastResponse1 = activeNode.speech;
+        
+        UpdateRollingText();
+        LoadNodeInfo(activeNode.children[0]);
+    }
+    public void ClickChoice2()
+    {
+        
+        responseCount++;
+
+        if (responseCount >= 1)
+        {
+            lastResponse2 = lastResponse;
+        }
+        lastResponse = activeNode.responses[1];
+        npcLastResponse2 = npcLastResponse1;
+        npcLastResponse1 = activeNode.speech;
+
+        UpdateRollingText();
+        LoadNodeInfo(activeNode.children[1]);
+    }
+
+    public void ClickChoice3()
+    {
+        
+        responseCount++;
+
+        if (responseCount >= 1)
+        {
+            lastResponse2 = lastResponse;
+        }
+        lastResponse = activeNode.responses[2];
+        npcLastResponse2 = npcLastResponse1;
+        npcLastResponse1 = activeNode.speech;
+
+        UpdateRollingText();
+        LoadNodeInfo(activeNode.children[2]);
     }
 }

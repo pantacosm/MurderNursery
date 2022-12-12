@@ -23,8 +23,8 @@ public class PinboardThread : MonoBehaviour
         rect.SetParent(transform);
         rect.localScale = Vector3.one;
 
-        Vector3 a = new Vector3(ax *1.5f +offsetX, ay *1.5f +offsetY, 0);
-        Vector3 b = new Vector3(bx *1.5f +offsetX , by *1.5f +offsetY, 0);
+        Vector3 a = new Vector3(ax *2f +offsetX, ay *2f +offsetY, 0);
+        Vector3 b = new Vector3(bx *2f +offsetX , by *2f +offsetY, 0);
 
 
         rect.localPosition = (a + b) / 2;

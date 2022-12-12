@@ -43,6 +43,7 @@ public class NPCDialogue : MonoBehaviour
             node.secondPathLocked = false;
             node.thirdPathLocked = false;
             node.nodeVisited = false;
+            node.evImagesGenerated = false;
             }
         textureToChange.SetTexture("_DetailAlbedoMap", defaultEmotion);
     }
@@ -55,6 +56,7 @@ public class NPCDialogue : MonoBehaviour
             manager.GetComponent<DialogueManager>().StartConversation(dialogueTree[0], this.gameObject, npcCam);
             inConversation = true;
             isInteractable = false;
+            
         }
         if(inConversation && Input.GetKeyDown(KeyCode.Escape) && !isInteractable && !interrogationManager.GetComponent<Interrogation>().interrogationUnderway)
         {
@@ -63,7 +65,7 @@ public class NPCDialogue : MonoBehaviour
             inConversation = false;
             interactionMessage.SetActive(true);
             manager.GetComponent<DialogueManager>().briberyPanel.SetActive(false);
-            Cursor.visible = false;
+            
         }
         if(inConversation)
         {

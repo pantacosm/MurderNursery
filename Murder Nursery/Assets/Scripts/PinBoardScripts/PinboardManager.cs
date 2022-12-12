@@ -115,14 +115,15 @@ public class PinboardManager : MonoBehaviour
     void Awake()
     {
         pinboard = this;
-        foreach (EvidenceClass evidence in evidencePieces)
-        {
-            evidence.evidenceFound = false;
-        }
+        
     }
 
     private void Start()
     {
+        foreach (EvidenceClass evidence in evidencePieces)
+        {
+            evidence.evidenceFound = false;
+        }
         discoveredEvidence = new List<EvidenceClass>();
         threadedEvidence = new List<string>();
         
@@ -288,7 +289,7 @@ public class PinboardManager : MonoBehaviour
         juiceBoxSectionZoom.SetActive(false);
         graceSectionZoom.SetActive(false);
     }
-
+    
     
 
 }

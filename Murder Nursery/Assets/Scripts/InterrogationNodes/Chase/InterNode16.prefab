@@ -44,13 +44,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b70be5e9440559442826bf7731a6e3b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parent: {fileID: 3499891356269125111, guid: bcd95d7e6f981b34e9972f4f460fc82f, type: 3}
+  parent: {fileID: 3499891356269125111, guid: 70997eb65c453a947842ae9bc93097d9, type: 3}
   children:
-  - {fileID: 3499891356269125111, guid: 6e1123f3db0af3e40905db8b408ee901, type: 3}
-  speech: Well, yeah, he ended up stiffing me on the candybar bonus... but he said
-    it was good enough. Main issue is I only get two playdates now.
+  - {fileID: 3499891356269125111, guid: 28a7e66733950e74993bd36bb58a79cf, type: 3}
+  speech: I had Eddie over there push him outta that tree in the playground so that
+    he wouldn't be impressin' her with his art no more, but that kid can draw with
+    BOTH HANDS! I mean, come on!
   responses:
-  - "I\u2019m devastated for you."
+  - I wouldn't have seen that coming either
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10
@@ -85,7 +86,7 @@ MonoBehaviour:
   pathAInterrogationEvidenceRequired: 0
   pathBInterrogationEvidenceRequired: 0
   pathCInterrogationEvidenceRequired: 0
-  nodeEmotion: 7
+  nodeEmotion: 0
   evidenceRequired: 
   evidenceRequiredImage: {fileID: 0}
   evidenceNeededCheck: 0

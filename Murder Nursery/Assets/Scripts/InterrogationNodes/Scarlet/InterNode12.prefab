@@ -46,19 +46,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 3499891356269125111, guid: c7f9ab44149e53c4093b18ce1fc08481, type: 3}
   children:
-  - {fileID: 3499891356269125111, guid: 2dcae2dafb233c0489f4d6bbfc6f5c40, type: 3}
-  speech: ' I tried to be friends with her first, you know! I sent her a card on
-    her first day, and, and, and, and I used my favourite glitter pens and I asked
-    to be friends and she binned it detective!! I found it in in the bin, you gotta
-    understand where I''m comin from here!'
+  - {fileID: 3499891356269125111, guid: 99cd55768e337d940aff4eb871e367d1, type: 3}
+  speech: I don't know what they were talkin about and Chase wouldn't tell me a thing!
+    We had a real tiff over it but I'm certain she was gonna steal him from me, detective!
   responses:
-  - 'INTERROGATION EVIDENCE RECIEVED:                               Scarlet says
-    she saw Chase chatting to Grace on the morning of the murder. They were acting
-    real secretive and Chase wouldn''t spill anything with Scarlet.  What were they
-    secretely discussing? Was Chase getting closer with Grace than Scarlet? Did she
-    know someone was after her? Scarlet also claims she TRIED to be friends with
-    Grace but it was Grace who rejected that. I''ll have to have a real hard think
-    about this one. '
+  - Very interesting... go on
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

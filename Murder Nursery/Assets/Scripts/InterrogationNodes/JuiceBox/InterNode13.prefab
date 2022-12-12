@@ -47,13 +47,10 @@ MonoBehaviour:
   parent: {fileID: 3499891356269125111, guid: 83370be7fe1b0fb4e9b5845d6bfc89fd, type: 3}
   children:
   - {fileID: 3499891356269125111, guid: 43312bb7d5b4fde448d7668fb170cd17, type: 3}
-  speech: ' Okay, it''s Chase, I''m totally talking about Chase! He''s a huge meanie!
-    He thinks I''m weird and he CALLS me weird and he doesn''t like it when I talk
-    to Grace or Scarlet but like, he''s not even DATING Grace, he''s dating SCARLET,
-    plus Scarlet gives me juice boxes so how can I stop talking to HER? He''s the
-    biggest bully EVER!'
+  speech: Dry your eyes, Detective. It may sound a touching friendship, but it was
+    not to be. There are unseen forces at work in this nursery... unseen forces...
   responses:
-  - <Go to Conclusion>
+  - You're being a tad dramatic
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10
@@ -88,7 +85,7 @@ MonoBehaviour:
   pathAInterrogationEvidenceRequired: 0
   pathBInterrogationEvidenceRequired: 0
   pathCInterrogationEvidenceRequired: 0
-  nodeEmotion: 2
+  nodeEmotion: 5
   evidenceRequired: 
   evidenceRequiredImage: {fileID: 0}
   evidenceNeededCheck: 0

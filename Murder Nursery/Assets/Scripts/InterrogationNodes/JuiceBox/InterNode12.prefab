@@ -47,10 +47,12 @@ MonoBehaviour:
   parent: {fileID: 3499891356269125111, guid: 696bdf811d178b1489d791e4cc3d2be1, type: 3}
   children:
   - {fileID: 3499891356269125111, guid: 9213b5892137be94aada083ccb2d5a56, type: 3}
-  speech: Dry your eyes, Detective. It may sound a touching friendship, but it was
-    not to be. There are unseen forces at work in this nursery... unseen forces...
+  speech: After I broke my arm, I was scared that I wouldn't be able to draw anymore,
+    and she wouldn't want to be my friend! But, turns out, I have a rare gift. I'm
+    ambrodentius. That's right, I can draw with both hands! Maybe that's not super
+    relevant... my point is, she knew what a good fingerpainting looked like.
   responses:
-  - I see....
+  - Go on
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10
@@ -85,7 +87,7 @@ MonoBehaviour:
   pathAInterrogationEvidenceRequired: 0
   pathBInterrogationEvidenceRequired: 0
   pathCInterrogationEvidenceRequired: 0
-  nodeEmotion: 5
+  nodeEmotion: 7
   evidenceRequired: 
   evidenceRequiredImage: {fileID: 0}
   evidenceNeededCheck: 0

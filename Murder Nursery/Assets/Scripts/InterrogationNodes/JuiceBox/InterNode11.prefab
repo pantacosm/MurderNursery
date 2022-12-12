@@ -49,13 +49,9 @@ MonoBehaviour:
   - {fileID: 3499891356269125111, guid: 83370be7fe1b0fb4e9b5845d6bfc89fd, type: 3}
   speech: Listen to me carefully. You may have heard rumours, you may have heard
     tales, but the real truth is... Grace was my friend. She loved my art. Personally,
-    I think the turkey-hand really stood out to her from a creative standpoint. After
-    I broke my arm, I was scared that I wouldn't be able to draw anymore, and she
-    wouldn't want to be my friend! But, turns out, I have a rare gift. I'm ambrodentius.
-    That's right, I can draw with both hands! Maybe that's not super relevant...
-    my point is, she knew what a good fingerpainting looked like.
+    I think the turkey-hand really stood out to her from a creative standpoint.
   responses:
-  - Uh huh
+  - It stood out to me as well.
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

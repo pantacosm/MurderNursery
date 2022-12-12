@@ -47,10 +47,10 @@ MonoBehaviour:
   parent: {fileID: 3499891356269125111, guid: 448fa94d8a338d34f95e473d96204d61, type: 3}
   children:
   - {fileID: 3499891356269125111, guid: bcd95d7e6f981b34e9972f4f460fc82f, type: 3}
-  speech: Well, yeah, he ended up stiffing me on the candybar bonus... but he said
-    it was good enough. Main issue is I only get two playdates now.
+  speech: "You don\u2019t get it, pal! Maybe you'll understand when you're older.
+    At least that's what my mom says. "
   responses:
-  - "I\u2019m devastated for you."
+  - Want to get to the point?
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

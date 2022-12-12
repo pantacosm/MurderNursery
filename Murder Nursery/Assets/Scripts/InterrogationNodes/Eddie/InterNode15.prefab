@@ -47,10 +47,11 @@ MonoBehaviour:
   parent: {fileID: 3499891356269125111, guid: 336e4a3c5ab023145b13658c59e43320, type: 3}
   children:
   - {fileID: 3499891356269125111, guid: 65639b2d3de10e341979fa69af0af1ce, type: 3}
-  speech: "Thanks pal, you\u2019re a real one."
+  speech: Anyway, I met up with Juice Box and stepped on his hand when he was climbin'
+    that tree. I assumed that would be enough, but the guy got up like a champ and
+    laughed it off. I was impressive, I'll give him that.
   responses:
-  - Hey, one last thing, was jealousy the only reason he wanted Juice Box outta the
-    picture?
+  - But I thought Chase wanted him gone?
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10
@@ -77,3 +78,16 @@ MonoBehaviour:
   fitCheck: 0
   dressUpNode: {fileID: 0}
   requiredOutfit: 
+  evidenceToDiscover: {fileID: 0}
+  evidenceCheckNode: 0
+  pathARequiredEvidence: 
+  pathBRequiredEvidence: 
+  pathCRequiredEvidence: 
+  pathAInterrogationEvidenceRequired: 0
+  pathBInterrogationEvidenceRequired: 0
+  pathCInterrogationEvidenceRequired: 0
+  nodeEmotion: 0
+  evidenceRequired: 
+  evidenceRequiredImage: {fileID: 0}
+  evidenceNeededCheck: 0
+  evImagesGenerated: 0

@@ -49,12 +49,9 @@ MonoBehaviour:
   - {fileID: 3499891356269125111, guid: 7f782665d6c3bb04eb6270e1f336f94f, type: 3}
   speech: "Fine. Ya got me pal, not bad. It\u2019s like I said, Chase and Juice Box,
     well they never saw eye to eye, undeniably rivals. Chase hit me up for a secret
-    meeting. I assumed it was another one of his classic jobs, and well, not to brag,
-    but I was right. Though this one was a little different... he wanted me to take
-    Juice Box out. I mean, I\u2019m used to fightin', I got sisters over 4 foot -
-    but this was on a 'nother level."
+    meeting. "
   responses:
-  - So why did you do it?
+  - A meeting about what?
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

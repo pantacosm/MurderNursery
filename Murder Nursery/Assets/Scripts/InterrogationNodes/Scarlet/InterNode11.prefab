@@ -49,9 +49,7 @@ MonoBehaviour:
   - {fileID: 3499891356269125111, guid: 6712f16e68c10dc41b21308ef9aa3f87, type: 3}
   speech: This mornin'... before we'd found little goody two shoes over there on
     the ground, I'd seen her talkin to Chase about something reeeeaaal secretive
-    over by the Library. I don't know what they were talkin about and Chase wouldn't
-    tell me a thing! We had a real tiff over it but I'm certain she was gonna steal
-    him from me, detective!
+    over by the Library.
   responses:
   - Go on....
   repLevelOption1: -10
@@ -80,3 +78,16 @@ MonoBehaviour:
   fitCheck: 0
   dressUpNode: {fileID: 0}
   requiredOutfit: 
+  evidenceToDiscover: {fileID: 0}
+  evidenceCheckNode: 0
+  pathARequiredEvidence: 
+  pathBRequiredEvidence: 
+  pathCRequiredEvidence: 
+  pathAInterrogationEvidenceRequired: 0
+  pathBInterrogationEvidenceRequired: 0
+  pathCInterrogationEvidenceRequired: 0
+  nodeEmotion: 0
+  evidenceRequired: 
+  evidenceRequiredImage: {fileID: 0}
+  evidenceNeededCheck: 0
+  evImagesGenerated: 0

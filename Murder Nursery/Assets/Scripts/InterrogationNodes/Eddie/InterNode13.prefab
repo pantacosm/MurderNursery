@@ -47,13 +47,10 @@ MonoBehaviour:
   parent: {fileID: 3499891356269125111, guid: 7f782665d6c3bb04eb6270e1f336f94f, type: 3}
   children:
   - {fileID: 3499891356269125111, guid: 336e4a3c5ab023145b13658c59e43320, type: 3}
-  speech: "You don\u2019t get it, pal! Maybe you'll understand when you're older.
-    At least that's what my mom says. Anyway, I met up with Juice Box and stepped
-    on his hand when he was climbin' that tree. I assumed that would be enough, but
-    the guy got up like a champ and laughed it off. I was impressive, I'll give him
-    that."
+  speech: "Chase gave me an offer I couldn\u2019t resist\u2026 Five playdates with
+    Scarlet."
   responses:
-  - But I thought Chase wanted him gone?
+  - "Really? That\u2019s all it took?"
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

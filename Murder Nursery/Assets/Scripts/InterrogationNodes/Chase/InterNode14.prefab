@@ -46,22 +46,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 3499891356269125111, guid: 6d9ba17bb6a491647acc149fef995d01, type: 3}
   children:
-  - {fileID: 3499891356269125111, guid: 3ef3898535231f040ab94b012cd3ce9c, type: 3}
+  - {fileID: 3499891356269125111, guid: 70997eb65c453a947842ae9bc93097d9, type: 3}
   speech: 'Grace cut her hair and gave me that lock of hair as a gift... we''re closer
     than I''ve been letting on. I know you''re no fool and you''re catchin'' on to
-    the Juice Box thing. I''m not a bad kid, I swear! He was talking to Grace so
-    much it just grinds my gears! She wasn''t happy with him drinking cause she found
-    out Scarlet was the one giving him the boxes, creepo like that shouldn''t be
-    anywhere near my girl in the first place, ya hear?! I had Eddie over there push
-    him outta that tree in the playground so that he wouldn''t be impressin'' her
-    with his art no more, but that kid can draw with BOTH HANDS! I mean, come on!
-    Scarlet and Grace haven''t been getting on at ALL since Grace arrived and this
-    new secret girlfriend thing has been makin'' her real suspicious of me. Truth
-    is, I''d do anythin for Grace and Scarlet has slipped right down my list. Grace
-    is my favourite thing... right after running, that is. '
+    the Juice Box thing. I''m not a bad kid, I swear! '
   responses:
-  - I see... thanks for your honesty with me, Chase. Makes my job a whole lot easier.
-    I appreciate the co-operation.
+  - Okay I believe you
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10
@@ -88,3 +78,16 @@ MonoBehaviour:
   fitCheck: 0
   dressUpNode: {fileID: 0}
   requiredOutfit: 
+  evidenceToDiscover: {fileID: 0}
+  evidenceCheckNode: 0
+  pathARequiredEvidence: 
+  pathBRequiredEvidence: 
+  pathCRequiredEvidence: 
+  pathAInterrogationEvidenceRequired: 0
+  pathBInterrogationEvidenceRequired: 0
+  pathCInterrogationEvidenceRequired: 0
+  nodeEmotion: 0
+  evidenceRequired: 
+  evidenceRequiredImage: {fileID: 0}
+  evidenceNeededCheck: 0
+  evImagesGenerated: 0

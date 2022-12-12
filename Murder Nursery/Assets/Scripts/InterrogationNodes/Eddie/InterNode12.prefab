@@ -47,10 +47,12 @@ MonoBehaviour:
   parent: {fileID: 3499891356269125111, guid: c44ac893019f52847bf2d41e4dbecf04, type: 3}
   children:
   - {fileID: 3499891356269125111, guid: 448fa94d8a338d34f95e473d96204d61, type: 3}
-  speech: "Chase gave me an offer I couldn\u2019t resist\u2026 Five playdates with
-    Scarlet."
+  speech: "I assumed it was another one of his classic jobs, and well, not to brag,
+    but I was right. Though this one was a little different... he wanted me to take
+    Juice Box out. I mean, I\u2019m used to fightin', I got sisters over 4 foot -
+    but this was on a 'nother level."
   responses:
-  - "Really? That\u2019s all it took?"
+  - So why did you do it?
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

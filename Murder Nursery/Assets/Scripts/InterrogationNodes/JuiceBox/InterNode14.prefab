@@ -46,24 +46,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 3499891356269125111, guid: 9213b5892137be94aada083ccb2d5a56, type: 3}
   children:
-  - {fileID: 3499891356269125111, guid: c83490f1feee80244a6e412485cc097e, type: 3}
-  speech: "INTERROGATION EVIDENCE RECIEVED:  Whew, I better let this guy take a breather.
-    Looks like our inspired artist relies on a little more than just creative juices...
-    and Scarlet is the one feeding his little addiction! What could be her motive?
-    Speaking of motive - howsabout little Gracie and JB being pals after all? Or
-    so he says. Why would Chase be so keen on keeping him away from the ladies? Is
-    he just greedy, or is there something to these rumours about JB? Guess Juice
-    Box is quite the artist after all... he's painting a real picture that this nursery
-    ain't all it seems to be.   INTERROGATION EVIDENCE RECIEVED:  \LWhew, I better
-    let this guy take a breather. Looks like our inspired artist relies on a little
-    more than just creative juices... and Scarlet is the one feeding his little addiction!
-    What could be her motive? Speaking of motive - howsabout little Gracie and JB
-    being pals after all? Or so he says. Why would Chase be so keen on keeping him
-    away from the ladies? Is he just greedy, or is there something to these rumours
-    about JB? Guess Juice Box is quite the artist after all... he's painting a real
-    picture that this nursery ain't all it seems to be.   "
+  - {fileID: 3499891356269125111, guid: 03d791e71ae40304bb14e8bf83cb91a7, type: 3}
+  speech: Okay, it's Chase, I'm totally talking about Chase! He's a huge meanie!
+    He thinks I'm weird and he CALLS me weird and he doesn't like it when I talk
+    to Grace or Scarlet
   responses:
-  - <Finish Interrogation>
+  - Keep going
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10
@@ -90,3 +78,16 @@ MonoBehaviour:
   fitCheck: 0
   dressUpNode: {fileID: 0}
   requiredOutfit: 
+  evidenceToDiscover: {fileID: 0}
+  evidenceCheckNode: 0
+  pathARequiredEvidence: 
+  pathBRequiredEvidence: 
+  pathCRequiredEvidence: 
+  pathAInterrogationEvidenceRequired: 0
+  pathBInterrogationEvidenceRequired: 0
+  pathCInterrogationEvidenceRequired: 0
+  nodeEmotion: 2
+  evidenceRequired: 
+  evidenceRequiredImage: {fileID: 0}
+  evidenceNeededCheck: 0
+  evImagesGenerated: 0

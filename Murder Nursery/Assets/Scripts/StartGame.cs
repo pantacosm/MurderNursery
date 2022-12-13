@@ -9,6 +9,7 @@ public class StartGame : MonoBehaviour
     int timeToFade = 1;
     public AudioSource cam;
     public AudioClip selectChoice;
+    public GameObject settingsMenu;
     public void Begin()
     {
         blackFade.gameObject.SetActive(true);
@@ -38,5 +39,17 @@ public class StartGame : MonoBehaviour
             }
         
         
+    }
+
+    public void Settings()
+    {
+        settingsMenu.SetActive(true);
+        cam.PlayOneShot(selectChoice, 0.4f);
+    }
+
+    public void CloseSettings()
+    {
+        settingsMenu.SetActive(false);
+        cam.PlayOneShot(selectChoice, 0.4f);
     }
 }

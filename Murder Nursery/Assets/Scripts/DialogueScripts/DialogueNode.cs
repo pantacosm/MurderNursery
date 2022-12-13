@@ -25,6 +25,7 @@ public class DialogueNode : MonoBehaviour
     public bool nodeVisited = false;
     public bool lockingNode = false;
     public bool briberyAvailable = false;
+    public bool bribeGiven = false;
     public bool triggerTrueEnd = false;
     public bool triggerGoodEnd = false;
     public bool triggerBadEnd = false;

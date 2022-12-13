@@ -51,8 +51,8 @@ MonoBehaviour:
   speech: This is the last time I'll say this, Detective. You're givin' me the heebie
     jeebies! Scram, before things get messy...
   responses:
-  - Interrogate Scarlet
-  - Leave Conversation
+  - <Interrogate Scarlet>
+  - <Leave Conversation>
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10
@@ -88,3 +88,7 @@ MonoBehaviour:
   pathBInterrogationEvidenceRequired: 0
   pathCInterrogationEvidenceRequired: 0
   nodeEmotion: 1
+  evidenceRequired: 
+  evidenceRequiredImage: {fileID: 0}
+  evidenceNeededCheck: 0
+  evImagesGenerated: 0

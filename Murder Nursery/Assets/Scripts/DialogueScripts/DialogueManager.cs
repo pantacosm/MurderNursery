@@ -30,7 +30,7 @@ public class DialogueManager : MonoBehaviour
     public GameObject CoolGuy;
 
 
-    private DialogueNode activeNode;
+    public DialogueNode activeNode;
     public GameObject activeNPC;
     public bool inConvo = false;
     public int pos = 0;
@@ -332,7 +332,7 @@ public class DialogueManager : MonoBehaviour
         }
         MoveOptions();
         firstNode = false;
-        if (activeNode.briberyAvailable)
+        if (activeNode.briberyAvailable && !activeNode.bribeGiven)
         {
             briberyOption.SetActive(true);
         }

@@ -26,6 +26,7 @@ public class Bribing : MonoBehaviour
     {
         if(firstBribe.itemName == activeNPC.GetComponent<NPCDialogue>().bribeItem)
         {
+            manager.GetComponent<DialogueManager>().activeNode.bribeGiven = true;
             manager.GetComponent<DialogueManager>().StartConversation(activeNPC.GetComponent<NPCDialogue>().bribePath, activeNPC, activeNPC.GetComponent<NPCDialogue>().npcCam);
             bribePanel.SetActive(false);
             inventoryManager.GetComponent<InventoryManager>().RemoveItem(inventoryManager.GetComponent<InventoryManager>().items[2]);
@@ -40,6 +41,7 @@ public class Bribing : MonoBehaviour
     {
         if(secondBribe.itemName == activeNPC.GetComponent<NPCDialogue>().bribeItem)
         {
+            manager.GetComponent<DialogueManager>().activeNode.bribeGiven = true;
             manager.GetComponent<DialogueManager>().StartConversation(activeNPC.GetComponent<NPCDialogue>().bribePath, activeNPC, activeNPC.GetComponent<NPCDialogue>().npcCam);
             bribePanel.SetActive(false);
             inventoryManager.GetComponent<InventoryManager>().RemoveItem(inventoryManager.GetComponent<InventoryManager>().items[3]);

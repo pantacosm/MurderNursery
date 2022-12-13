@@ -87,7 +87,7 @@ MonoBehaviour:
   pathAInterrogationEvidenceRequired: 0
   pathBInterrogationEvidenceRequired: 0
   pathCInterrogationEvidenceRequired: 0
-  nodeEmotion: 6
+  nodeEmotion: 7
   evidenceRequired: 
   evidenceRequiredImage: {fileID: 0}
   evidenceNeededCheck: 0

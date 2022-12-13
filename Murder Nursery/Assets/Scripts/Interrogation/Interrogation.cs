@@ -47,8 +47,11 @@ public class Interrogation : MonoBehaviour
     public List<Sprite> sprites;
     public GameObject evButton;
     public GameObject noEvMessage;
-    private DialogueNode mostRecentNode;
+    private DialogueNode mostRecentChaseNode;
     private bool firstTry = true;
+    private DialogueNode mostRecentEddieNode;
+    private DialogueNode mostRecentJuiceBoxNode;
+    private DialogueNode mostRecentScarletNode;
 
     // Start is called before the first frame update
     void Start()
@@ -177,7 +180,22 @@ public class Interrogation : MonoBehaviour
         activeNode = newNode;
         newNode.nodeActive = true;
         SwitchEmotion();
-        mostRecentNode = activeNode;
+        if(activeInterrogant.name == "JuiceBox (The Artiste)")
+        {
+            mostRecentJuiceBoxNode = activeNode;
+        }
+        if(activeInterrogant.name == "Scarlet (The Femme Fatale)")
+        {
+            mostRecentScarletNode = activeNode;
+        }
+        if(activeInterrogant.name == "Chase (The Cool Guy)")
+        {
+            mostRecentChaseNode = activeNode;
+        }
+        if(activeInterrogant.name == "Eddie (The Goon)")
+        {
+            mostRecentEddieNode = activeNode;
+        }
         npcStatement.GetComponent<TextMeshProUGUI>().text = activeInterrogant.name + ": " + newNode.speech;
         intResponseText1.GetComponent<TextMeshProUGUI>().text = activeNode.responses[0];
         if (activeNode.lifeLoss > 0)
@@ -203,7 +221,42 @@ public class Interrogation : MonoBehaviour
         activeInterrogant = targetNPC;
         if (!firstTry)
         {
-            LoadIntNodeInfo(mostRecentNode);
+            if(activeInterrogant.name == "JuiceBox (The Artiste)")
+            {
+                if(mostRecentJuiceBoxNode == null)
+                {
+                    LoadIntNodeInfo(startNode);
+                }
+                else
+                LoadIntNodeInfo(mostRecentJuiceBoxNode);
+            }
+            if(activeInterrogant.name == "Scarlet (The Femme Fatale)")
+            {
+                if(mostRecentScarletNode == null)
+                {
+                    LoadIntNodeInfo(startNode);
+                }
+                else
+                LoadIntNodeInfo(mostRecentScarletNode);
+            }
+            if(activeInterrogant.name == "Eddie (The Goon)")
+            {
+                if(mostRecentEddieNode == null)
+                {
+                    LoadIntNodeInfo(startNode);
+                }
+                else
+                LoadIntNodeInfo(mostRecentEddieNode);
+            }
+            if(activeInterrogant.name == "Chase (The Cool Guy)")
+            {
+                if (mostRecentChaseNode == null)
+                {
+                    LoadIntNodeInfo(startNode);
+                }
+                else
+                LoadIntNodeInfo(mostRecentChaseNode);
+            }
         }
         if (firstTry)
         {

@@ -139,8 +139,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.23026817, y: 0.55712736, z: 0.32874572}
-  m_Center: {x: -0.07938533, y: 0.2214387, z: 0.06522081}
+  m_Size: {x: 0.23026817, y: 0.41, z: 0.32874572}
+  m_Center: {x: -0.07938533, y: -0.02, z: 0.06522081}
 --- !u!1001 &3206639
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -212,6 +212,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
       propertyPath: m_Name
       value: Book (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -1376,6 +1380,10 @@ PrefabInstance:
       value: Chalk_Board (2)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 6477ce2c17130da4481934ea429582b2, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6477ce2c17130da4481934ea429582b2, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -1594,6 +1602,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ef66c4c6424b0134ba69aae09e2c94c2, type: 3}
       propertyPath: m_Name
       value: Prop_Cube (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ef66c4c6424b0134ba69aae09e2c94c2, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ef66c4c6424b0134ba69aae09e2c94c2, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -2397,6 +2409,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
       propertyPath: m_Name
       value: Book (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -3487,6 +3503,10 @@ PrefabInstance:
       value: Book (35)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -3701,6 +3721,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Toy_Car_2 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d3d018d3a053953469ec6746f3c8b00c, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: d3d018d3a053953469ec6746f3c8b00c, type: 3}
@@ -3771,6 +3795,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: a05470fa853740e439024ae8fec84394, type: 3}
       propertyPath: m_Name
       value: Prop_Cylinder (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a05470fa853740e439024ae8fec84394, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a05470fa853740e439024ae8fec84394, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -3931,6 +3959,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
       propertyPath: m_Name
       value: Book (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -4123,6 +4155,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 1421be020a1ad9345ab67b96fb6648af, type: 3}
       propertyPath: m_Name
       value: Comfy_Chair (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1421be020a1ad9345ab67b96fb6648af, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1421be020a1ad9345ab67b96fb6648af, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -4755,6 +4791,10 @@ PrefabInstance:
       value: Circular_Chair
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 44f05b58397cb0745a1998b9c1f46611, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 44f05b58397cb0745a1998b9c1f46611, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -4985,6 +5025,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: a05470fa853740e439024ae8fec84394, type: 3}
       propertyPath: m_Name
       value: Prop_Cylinder
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a05470fa853740e439024ae8fec84394, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a05470fa853740e439024ae8fec84394, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -5289,6 +5333,10 @@ PrefabInstance:
       value: Book (14)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -5371,6 +5419,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ac30968291ab22b45ba6bd8bb0e54555, type: 3}
       propertyPath: m_Name
       value: Blue_Chair (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ac30968291ab22b45ba6bd8bb0e54555, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ac30968291ab22b45ba6bd8bb0e54555, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -5698,6 +5750,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
       propertyPath: m_Name
       value: Book (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -6104,6 +6160,10 @@ PrefabInstance:
       value: Circular_Chair (2)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 44f05b58397cb0745a1998b9c1f46611, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 44f05b58397cb0745a1998b9c1f46611, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -6182,6 +6242,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7eba6941202117f4e9ede9215dfa3214, type: 3}
       propertyPath: m_Name
       value: Prop_Jenga (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7eba6941202117f4e9ede9215dfa3214, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7eba6941202117f4e9ede9215dfa3214, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -6435,6 +6499,10 @@ PrefabInstance:
       value: Shelf_with_Drawers (1)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 75cb9c28196071841a791bdbe61e79ce, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 75cb9c28196071841a791bdbe61e79ce, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -6587,6 +6655,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
       propertyPath: m_Name
       value: Book (26)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -7513,6 +7585,10 @@ PrefabInstance:
       value: Shelf (4)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9a4e677653ac40d46be9cbf77b7a0c25, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9a4e677653ac40d46be9cbf77b7a0c25, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -7762,6 +7838,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
       propertyPath: m_Name
       value: Book (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -8260,6 +8340,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ac30968291ab22b45ba6bd8bb0e54555, type: 3}
       propertyPath: m_Name
       value: Blue_Chair (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ac30968291ab22b45ba6bd8bb0e54555, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ac30968291ab22b45ba6bd8bb0e54555, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -9048,6 +9132,10 @@ PrefabInstance:
       value: Shelf_with_Drawers (4)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 75cb9c28196071841a791bdbe61e79ce, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 75cb9c28196071841a791bdbe61e79ce, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -9541,6 +9629,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
       propertyPath: m_Name
       value: Book (36)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -10388,6 +10480,10 @@ PrefabInstance:
       value: Book (31)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -10410,7 +10506,7 @@ GameObject:
   - component: {fileID: 326916738}
   - component: {fileID: 326916741}
   - component: {fileID: 326916740}
-  - component: {fileID: 326916739}
+  - component: {fileID: 326916742}
   m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
@@ -10433,33 +10529,6 @@ Transform:
   m_Father: {fileID: 887190579}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &326916739
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 326916737}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4044717213e31446939f7bd49c896ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_TrackedObjectOffset: {x: 0, y: 0.45, z: 0}
-  m_LookaheadTime: 0
-  m_LookaheadSmoothing: 0
-  m_LookaheadIgnoreY: 0
-  m_HorizontalDamping: 0
-  m_VerticalDamping: 0
-  m_ScreenX: 0.5
-  m_ScreenY: 0.5
-  m_DeadZoneWidth: 0
-  m_DeadZoneHeight: 0
-  m_SoftZoneWidth: 0.8
-  m_SoftZoneHeight: 0.8
-  m_BiasX: 0
-  m_BiasY: 0
-  m_CenterOnActivate: 1
 --- !u!114 &326916740
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -10472,8 +10541,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9384ab8608cdc3d479fe89cd51eed48f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_BindingMode: 4
-  m_FollowOffset: {x: 0, y: 1, z: -0.75}
+  m_BindingMode: 0
+  m_FollowOffset: {x: 0, y: 0.7, z: -2}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -10484,7 +10553,7 @@ MonoBehaviour:
   m_AngularDamping: 0
   m_Heading:
     m_Definition: 2
-    m_VelocityFilterStrength: 4
+    m_VelocityFilterStrength: 10
     m_Bias: 0
   m_RecenterToTargetHeading:
     m_enabled: 0
@@ -10526,6 +10595,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &326916742
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326916737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4044717213e31446939f7bd49c896ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TrackedObjectOffset: {x: 0, y: 0, z: 0}
+  m_LookaheadTime: 0
+  m_LookaheadSmoothing: 0
+  m_LookaheadIgnoreY: 0
+  m_HorizontalDamping: 0.5
+  m_VerticalDamping: 0.5
+  m_ScreenX: 0.5
+  m_ScreenY: 0.5
+  m_DeadZoneWidth: 0
+  m_DeadZoneHeight: 0
+  m_SoftZoneWidth: 0.5
+  m_SoftZoneHeight: 0.5
+  m_BiasX: 0
+  m_BiasY: 0
+  m_CenterOnActivate: 1
 --- !u!1001 &331056562
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10701,6 +10797,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ac30968291ab22b45ba6bd8bb0e54555, type: 3}
       propertyPath: m_Name
       value: Blue_Chair (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ac30968291ab22b45ba6bd8bb0e54555, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ac30968291ab22b45ba6bd8bb0e54555, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -11151,6 +11251,10 @@ PrefabInstance:
       value: Lunch_Chair (5)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: efc15967754a7b04799e9f51d80a9b0d, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: efc15967754a7b04799e9f51d80a9b0d, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -11382,6 +11486,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7833d9469687d71459539f0ea667910e, type: 3}
       propertyPath: m_Name
       value: Nursery_Enviornment
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7833d9469687d71459539f0ea667910e, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7833d9469687d71459539f0ea667910e, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -12809,6 +12917,10 @@ PrefabInstance:
       value: Prop_Cylinder (3)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a05470fa853740e439024ae8fec84394, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a05470fa853740e439024ae8fec84394, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -13328,6 +13440,10 @@ PrefabInstance:
       value: Chalk_Board
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 6477ce2c17130da4481934ea429582b2, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6477ce2c17130da4481934ea429582b2, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -13578,6 +13694,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 1421be020a1ad9345ab67b96fb6648af, type: 3}
       propertyPath: m_Name
       value: Comfy_Chair (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1421be020a1ad9345ab67b96fb6648af, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1421be020a1ad9345ab67b96fb6648af, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -13967,6 +14087,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
       propertyPath: m_Name
       value: Book (34)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -15326,6 +15450,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Toy_Car_2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d3d018d3a053953469ec6746f3c8b00c, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: d3d018d3a053953469ec6746f3c8b00c, type: 3}
@@ -16684,6 +16812,10 @@ PrefabInstance:
       value: Prop_Cube (1)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ef66c4c6424b0134ba69aae09e2c94c2, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ef66c4c6424b0134ba69aae09e2c94c2, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -16775,6 +16907,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 6477ce2c17130da4481934ea429582b2, type: 3}
       propertyPath: m_Name
       value: Chalk_Board (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6477ce2c17130da4481934ea429582b2, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 6477ce2c17130da4481934ea429582b2, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -17109,6 +17245,10 @@ PrefabInstance:
       value: Play_Table_Blue (1)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 6711169d1e1aa7c478021fa79eb11bd9, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6711169d1e1aa7c478021fa79eb11bd9, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -17374,6 +17514,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: efc15967754a7b04799e9f51d80a9b0d, type: 3}
       propertyPath: m_Name
       value: Lunch_Chair
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: efc15967754a7b04799e9f51d80a9b0d, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: efc15967754a7b04799e9f51d80a9b0d, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -18117,6 +18261,10 @@ PrefabInstance:
       value: Book (17)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -18342,6 +18490,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Toy_Car_1 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2dca8e24cb5df814a8812ff033e086c6, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 2dca8e24cb5df814a8812ff033e086c6, type: 3}
@@ -18361,7 +18513,7 @@ GameObject:
   - component: {fileID: 593922277}
   - component: {fileID: 593922280}
   - component: {fileID: 593922279}
-  - component: {fileID: 593922278}
+  - component: {fileID: 593922281}
   m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
@@ -18384,33 +18536,6 @@ Transform:
   m_Father: {fileID: 1254365695}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &593922278
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 593922276}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4044717213e31446939f7bd49c896ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_TrackedObjectOffset: {x: 0, y: -0.09, z: 0}
-  m_LookaheadTime: 0
-  m_LookaheadSmoothing: 0
-  m_LookaheadIgnoreY: 0
-  m_HorizontalDamping: 0
-  m_VerticalDamping: 0
-  m_ScreenX: 0.5
-  m_ScreenY: 0.55
-  m_DeadZoneWidth: 0
-  m_DeadZoneHeight: 0
-  m_SoftZoneWidth: 0.8
-  m_SoftZoneHeight: 0.8
-  m_BiasX: 0
-  m_BiasY: 0
-  m_CenterOnActivate: 1
 --- !u!114 &593922279
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -18423,8 +18548,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9384ab8608cdc3d479fe89cd51eed48f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_BindingMode: 4
-  m_FollowOffset: {x: 0, y: 1, z: -0.75}
+  m_BindingMode: 0
+  m_FollowOffset: {x: 0, y: 0.7, z: -2}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -18435,7 +18560,7 @@ MonoBehaviour:
   m_AngularDamping: 0
   m_Heading:
     m_Definition: 2
-    m_VelocityFilterStrength: 4
+    m_VelocityFilterStrength: 10
     m_Bias: 0
   m_RecenterToTargetHeading:
     m_enabled: 0
@@ -18477,6 +18602,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &593922281
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 593922276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4044717213e31446939f7bd49c896ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TrackedObjectOffset: {x: 0, y: 0, z: 0}
+  m_LookaheadTime: 0
+  m_LookaheadSmoothing: 0
+  m_LookaheadIgnoreY: 0
+  m_HorizontalDamping: 0.5
+  m_VerticalDamping: 0.5
+  m_ScreenX: 0.5
+  m_ScreenY: 0.5
+  m_DeadZoneWidth: 0
+  m_DeadZoneHeight: 0
+  m_SoftZoneWidth: 0.5
+  m_SoftZoneHeight: 0.5
+  m_BiasX: 0
+  m_BiasY: 0
+  m_CenterOnActivate: 1
 --- !u!1 &594099685
 GameObject:
   m_ObjectHideFlags: 0
@@ -19078,6 +19230,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chase
       objectReference: {fileID: 0}
+    - target: {fileID: 1247166577472143930, guid: 0ccfe2584ae8d3348baa971558f62141, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
     - target: {fileID: 1247166577472143931, guid: 0ccfe2584ae8d3348baa971558f62141, type: 3}
       propertyPath: npcCam
       value: 
@@ -19232,6 +19388,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
       propertyPath: m_Name
       value: Book (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -19646,8 +19806,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.36699396, y: 0.18170671, z: 0.35575694}
-  m_Center: {x: 0, y: 1.7981796e-15, z: 0.14161773}
+  m_Size: {x: 0.37, y: 0.18, z: 0.06}
+  m_Center: {x: 0, y: 1.7981796e-15, z: 0.01}
 --- !u!1 &648806971 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9a4e677653ac40d46be9cbf77b7a0c25, type: 3}
@@ -20148,6 +20308,10 @@ PrefabInstance:
       value: Kitchen (1)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c57f674e717e91f44a4bb411580ddd6e, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c57f674e717e91f44a4bb411580ddd6e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -20369,6 +20533,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
       propertyPath: m_Name
       value: Book (27)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -20708,6 +20876,10 @@ PrefabInstance:
       value: Shelf (3)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9a4e677653ac40d46be9cbf77b7a0c25, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9a4e677653ac40d46be9cbf77b7a0c25, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -21016,6 +21188,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
       propertyPath: m_Name
       value: Book (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -21631,6 +21807,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ball
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ce00d284232d8994d80d5603068d114b, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: ce00d284232d8994d80d5603068d114b, type: 3}
@@ -21753,6 +21933,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
       propertyPath: m_Name
       value: Book (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -22387,6 +22571,10 @@ PrefabInstance:
       value: Lunch_Chair (4)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: efc15967754a7b04799e9f51d80a9b0d, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: efc15967754a7b04799e9f51d80a9b0d, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -22471,6 +22659,10 @@ PrefabInstance:
       value: Book (22)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -22551,6 +22743,10 @@ PrefabInstance:
       value: Prop_Jenga
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7eba6941202117f4e9ede9215dfa3214, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7eba6941202117f4e9ede9215dfa3214, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -22629,6 +22825,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ball (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ce00d284232d8994d80d5603068d114b, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: ce00d284232d8994d80d5603068d114b, type: 3}
@@ -22703,6 +22903,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
       propertyPath: m_Name
       value: Book (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -22789,6 +22993,10 @@ PrefabInstance:
       value: Cardboard_Boxes_Bashed
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: cd9e753075b112247b88f197330e5f9b, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cd9e753075b112247b88f197330e5f9b, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -22871,6 +23079,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: efc15967754a7b04799e9f51d80a9b0d, type: 3}
       propertyPath: m_Name
       value: Lunch_Chair (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: efc15967754a7b04799e9f51d80a9b0d, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: efc15967754a7b04799e9f51d80a9b0d, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -23711,6 +23923,10 @@ PrefabInstance:
       value: Round_Table (1)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 949273c6034405b40b9bfef9e4140cbf, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 949273c6034405b40b9bfef9e4140cbf, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -24105,6 +24321,10 @@ PrefabInstance:
       value: Prop_Jenga (3)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7eba6941202117f4e9ede9215dfa3214, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7eba6941202117f4e9ede9215dfa3214, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -24427,6 +24647,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ef66c4c6424b0134ba69aae09e2c94c2, type: 3}
       propertyPath: m_Name
       value: Prop_Cube (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ef66c4c6424b0134ba69aae09e2c94c2, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ef66c4c6424b0134ba69aae09e2c94c2, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -25162,6 +25386,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ball (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ce00d284232d8994d80d5603068d114b, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: ce00d284232d8994d80d5603068d114b, type: 3}
@@ -25255,6 +25483,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 204cbe5ae69f5b244b33da2005addd34, type: 3}
       propertyPath: m_Name
       value: Prop_Triangle (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 204cbe5ae69f5b244b33da2005addd34, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 204cbe5ae69f5b244b33da2005addd34, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -25500,6 +25732,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 1421be020a1ad9345ab67b96fb6648af, type: 3}
       propertyPath: m_Name
       value: Comfy_Chair (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1421be020a1ad9345ab67b96fb6648af, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1421be020a1ad9345ab67b96fb6648af, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -25832,6 +26068,10 @@ PrefabInstance:
       value: Book (15)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -25859,7 +26099,7 @@ GameObject:
   - component: {fileID: 872235936}
   - component: {fileID: 872235939}
   - component: {fileID: 872235938}
-  - component: {fileID: 872235937}
+  - component: {fileID: 872235940}
   m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
@@ -25882,33 +26122,6 @@ Transform:
   m_Father: {fileID: 1707626075}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &872235937
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 872235935}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4044717213e31446939f7bd49c896ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_TrackedObjectOffset: {x: 0, y: -0.02, z: 0}
-  m_LookaheadTime: 0
-  m_LookaheadSmoothing: 0
-  m_LookaheadIgnoreY: 0
-  m_HorizontalDamping: 0
-  m_VerticalDamping: 0
-  m_ScreenX: 0.5
-  m_ScreenY: 0.6
-  m_DeadZoneWidth: 0
-  m_DeadZoneHeight: 0
-  m_SoftZoneWidth: 0.8
-  m_SoftZoneHeight: 0.8
-  m_BiasX: 0
-  m_BiasY: 0
-  m_CenterOnActivate: 1
 --- !u!114 &872235938
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -25921,8 +26134,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9384ab8608cdc3d479fe89cd51eed48f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_BindingMode: 4
-  m_FollowOffset: {x: 0, y: 1, z: -0.75}
+  m_BindingMode: 0
+  m_FollowOffset: {x: 0, y: 0.7, z: -2}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -25933,7 +26146,7 @@ MonoBehaviour:
   m_AngularDamping: 0
   m_Heading:
     m_Definition: 2
-    m_VelocityFilterStrength: 4
+    m_VelocityFilterStrength: 10
     m_Bias: 0
   m_RecenterToTargetHeading:
     m_enabled: 0
@@ -25975,6 +26188,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &872235940
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 872235935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4044717213e31446939f7bd49c896ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TrackedObjectOffset: {x: 0, y: 0, z: 0}
+  m_LookaheadTime: 0
+  m_LookaheadSmoothing: 0
+  m_LookaheadIgnoreY: 0
+  m_HorizontalDamping: 0.5
+  m_VerticalDamping: 0.5
+  m_ScreenX: 0.5
+  m_ScreenY: 0.5
+  m_DeadZoneWidth: 0
+  m_DeadZoneHeight: 0
+  m_SoftZoneWidth: 0.5
+  m_SoftZoneHeight: 0.5
+  m_BiasX: 0
+  m_BiasY: 0
+  m_CenterOnActivate: 1
 --- !u!1 &878701132 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1421be020a1ad9345ab67b96fb6648af, type: 3}
@@ -26034,11 +26274,11 @@ MonoBehaviour:
   m_LockStageInInspector: 00000000
   m_StreamingVersion: 20170927
   m_Priority: 10
-  m_StandbyUpdate: 2
+  m_StandbyUpdate: 1
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
   m_Lens:
-    FieldOfView: 60
+    FieldOfView: 40
     OrthographicSize: 10
     NearClipPlane: 0.1
     FarClipPlane: 5000
@@ -26062,7 +26302,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 887190577}
-  m_LocalRotation: {x: -0.13510035, y: -0.000000033014533, z: -0.000000004501546, w: 0.9908319}
+  m_LocalRotation: {x: 0.063610874, y: -1e-45, z: -0, w: 0.9979748}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -31490,6 +31730,10 @@ PrefabInstance:
       value: Prop_Triangle (2)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 204cbe5ae69f5b244b33da2005addd34, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 204cbe5ae69f5b244b33da2005addd34, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -31577,6 +31821,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ac30968291ab22b45ba6bd8bb0e54555, type: 3}
       propertyPath: m_Name
       value: Blue_Chair
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ac30968291ab22b45ba6bd8bb0e54555, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ac30968291ab22b45ba6bd8bb0e54555, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -32006,6 +32254,10 @@ PrefabInstance:
       value: Prop_Cylinder (1)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a05470fa853740e439024ae8fec84394, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a05470fa853740e439024ae8fec84394, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -32130,6 +32382,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 204cbe5ae69f5b244b33da2005addd34, type: 3}
       propertyPath: m_Name
       value: Prop_Triangle
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 204cbe5ae69f5b244b33da2005addd34, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 204cbe5ae69f5b244b33da2005addd34, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -32583,6 +32839,10 @@ PrefabInstance:
       value: Play_Table_Blue
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 6711169d1e1aa7c478021fa79eb11bd9, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6711169d1e1aa7c478021fa79eb11bd9, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -32660,6 +32920,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
       propertyPath: m_Name
       value: Book (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -32744,6 +33008,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
       propertyPath: m_Name
       value: Book (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -33143,6 +33411,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 09555e77f5e9dd447b9a72a24bfe300c, type: 3}
       propertyPath: m_Name
       value: Dresser_Box
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 09555e77f5e9dd447b9a72a24bfe300c, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 09555e77f5e9dd447b9a72a24bfe300c, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -33589,7 +33861,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!81 &963194226
 AudioListener:
   m_ObjectHideFlags: 0
@@ -33623,7 +33895,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 60
+  field of view: 40
   orthographic: 0
   orthographic size: 10
   m_Depth: -1
@@ -33648,8 +33920,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.17835146, y: 0, z: 0, w: 0.9839669}
-  m_LocalPosition: {x: 29.245, y: 1.004, z: 3.3200002}
+  m_LocalRotation: {x: 0.063610874, y: 0, z: 0, w: 0.9979748}
+  m_LocalPosition: {x: 29.245, y: 0.704, z: 2.0700002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -33841,6 +34113,10 @@ PrefabInstance:
       value: Book (29)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -33941,6 +34217,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 3771e32b3e970944fbd6ec0f28289f3c, type: 3}
       propertyPath: m_Name
       value: Small_Table
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3771e32b3e970944fbd6ec0f28289f3c, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -34635,6 +34915,10 @@ PrefabInstance:
       value: Shelf (5)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9a4e677653ac40d46be9cbf77b7a0c25, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9a4e677653ac40d46be9cbf77b7a0c25, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -35197,6 +35481,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Toy_Car_1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2dca8e24cb5df814a8812ff033e086c6, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 2dca8e24cb5df814a8812ff033e086c6, type: 3}
@@ -35276,6 +35564,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
       propertyPath: m_Name
       value: Book (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -35360,6 +35652,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 75cb9c28196071841a791bdbe61e79ce, type: 3}
       propertyPath: m_Name
       value: Shelf_with_Drawers (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 75cb9c28196071841a791bdbe61e79ce, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 75cb9c28196071841a791bdbe61e79ce, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -35464,6 +35760,10 @@ PrefabInstance:
       value: Book (30)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -35512,12 +35812,12 @@ MonoBehaviour:
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
   m_Priority: 10
-  m_StandbyUpdate: 2
+  m_StandbyUpdate: 1
   m_LookAt: {fileID: 1577941008}
   m_Follow: {fileID: 543450652967694277}
   m_CommonLens: 1
   m_Lens:
-    FieldOfView: 60
+    FieldOfView: 40
     OrthographicSize: 10
     NearClipPlane: 0.1
     FarClipPlane: 5000
@@ -35541,7 +35841,7 @@ MonoBehaviour:
     m_DecelTime: 0.1
     m_InputAxisName: Mouse Y
     m_InputAxisValue: 0
-    m_InvertInput: 1
+    m_InvertInput: 0
     m_MinValue: 0
     m_MaxValue: 1
     m_Wrap: 0
@@ -35560,7 +35860,7 @@ MonoBehaviour:
   m_XAxis:
     Value: 0
     m_SpeedMode: 0
-    m_MaxSpeed: 150
+    m_MaxSpeed: 200
     m_AccelTime: 0.1
     m_DecelTime: 0.1
     m_InputAxisName: Mouse X
@@ -35577,7 +35877,7 @@ MonoBehaviour:
       m_LegacyVelocityFilterStrength: -1
   m_Heading:
     m_Definition: 2
-    m_VelocityFilterStrength: 4
+    m_VelocityFilterStrength: 10
     m_Bias: 0
   m_RecenterToTargetHeading:
     m_enabled: 0
@@ -35585,15 +35885,15 @@ MonoBehaviour:
     m_RecenteringTime: 2
     m_LegacyHeadingDefinition: -1
     m_LegacyVelocityFilterStrength: -1
-  m_BindingMode: 4
+  m_BindingMode: 0
   m_SplineCurvature: 0.2
   m_Orbits:
-  - m_Height: 2
+  - m_Height: 1.5
+    m_Radius: 4
+  - m_Height: 0.7
+    m_Radius: 2
+  - m_Height: 0.1
     m_Radius: 1
-  - m_Height: 1
-    m_Radius: 0.75
-  - m_Height: 0.75
-    m_Radius: 1.5
   m_LegacyHeadingBias: 3.4028235e+38
   m_Rigs:
   - {fileID: 887190578}
@@ -35607,7 +35907,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1031444027}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 29.245, y: 1.004, z: 3.3200002}
+  m_LocalPosition: {x: 29.245, y: 0.704, z: 2.0700002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -35632,15 +35932,15 @@ MonoBehaviour:
   m_CollideAgainst:
     serializedVersion: 2
     m_Bits: 1
-  m_IgnoreTag: 
+  m_IgnoreTag: IgnoreCameraCollision
   m_TransparentLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_MinimumDistanceFromTarget: 0.1
+  m_MinimumDistanceFromTarget: 0.2
   m_AvoidObstacles: 1
   m_DistanceLimit: 0
   m_MinimumOcclusionTime: 0
-  m_CameraRadius: 0.1
+  m_CameraRadius: 0
   m_Strategy: 0
   m_MaximumEffort: 4
   m_SmoothingTime: 0
@@ -35758,6 +36058,10 @@ PrefabInstance:
       value: Green_Chair (1)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 3dd1b3236a8caf449b248bcbe9bb11ae, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3dd1b3236a8caf449b248bcbe9bb11ae, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -35781,7 +36085,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.08897446, y: 0.20306727, z: 0.17862776}
-  m_Center: {x: -0.00000019347074, y: -0.06146998, z: 0.0000000098171595}
+  m_Center: {x: -0.00000019347074, y: 0.06, z: 0}
 --- !u!1001 &1038482675
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35853,6 +36157,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
       propertyPath: m_Name
       value: Book (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -35937,6 +36245,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: cd9e753075b112247b88f197330e5f9b, type: 3}
       propertyPath: m_Name
       value: Cardboard_Boxes_Bashed (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cd9e753075b112247b88f197330e5f9b, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: cd9e753075b112247b88f197330e5f9b, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -36041,6 +36353,10 @@ PrefabInstance:
       value: Book
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -36122,6 +36438,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 6477ce2c17130da4481934ea429582b2, type: 3}
       propertyPath: m_Name
       value: Chalk_Board (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6477ce2c17130da4481934ea429582b2, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 6477ce2c17130da4481934ea429582b2, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -37459,6 +37779,10 @@ PrefabInstance:
       value: Comfy_Chair (1)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1421be020a1ad9345ab67b96fb6648af, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1421be020a1ad9345ab67b96fb6648af, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -38421,6 +38745,10 @@ PrefabInstance:
       value: Shelf_with_Drawers (6)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 75cb9c28196071841a791bdbe61e79ce, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 75cb9c28196071841a791bdbe61e79ce, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -38641,6 +38969,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 949273c6034405b40b9bfef9e4140cbf, type: 3}
       propertyPath: m_Name
       value: Round_Table
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 949273c6034405b40b9bfef9e4140cbf, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 949273c6034405b40b9bfef9e4140cbf, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -40146,6 +40478,10 @@ PrefabInstance:
       value: Book (3)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -40962,6 +41298,10 @@ PrefabInstance:
       value: Book (18)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -41433,11 +41773,11 @@ MonoBehaviour:
   m_LockStageInInspector: 00000000
   m_StreamingVersion: 20170927
   m_Priority: 10
-  m_StandbyUpdate: 2
+  m_StandbyUpdate: 1
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
   m_Lens:
-    FieldOfView: 60
+    FieldOfView: 40
     OrthographicSize: 10
     NearClipPlane: 0.1
     FarClipPlane: 5000
@@ -41461,7 +41801,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1254365693}
-  m_LocalRotation: {x: 0.17835145, y: -0, z: -0, w: 0.9839669}
+  m_LocalRotation: {x: 0.063610874, y: -0, z: -0, w: 0.9979748}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -41853,6 +42193,10 @@ PrefabInstance:
       value: Comfy_Chair (6)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1421be020a1ad9345ab67b96fb6648af, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1421be020a1ad9345ab67b96fb6648af, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -41876,7 +42220,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.13759553, y: 0.31061718, z: 0.18996896}
-  m_Center: {x: -0.0012976147, y: -0.07663339, z: 0.00014077935}
+  m_Center: {x: -0.0012976147, y: 0.07, z: 0}
 --- !u!1001 &1281981566
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41948,6 +42292,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 9a4e677653ac40d46be9cbf77b7a0c25, type: 3}
       propertyPath: m_Name
       value: Shelf (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9a4e677653ac40d46be9cbf77b7a0c25, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9a4e677653ac40d46be9cbf77b7a0c25, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -42045,6 +42393,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 09555e77f5e9dd447b9a72a24bfe300c, type: 3}
       propertyPath: m_Name
       value: Dresser_Box (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 09555e77f5e9dd447b9a72a24bfe300c, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 09555e77f5e9dd447b9a72a24bfe300c, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -42593,6 +42945,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Toy_Car_2 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d3d018d3a053953469ec6746f3c8b00c, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: d3d018d3a053953469ec6746f3c8b00c, type: 3}
@@ -42754,6 +43110,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 3dd1b3236a8caf449b248bcbe9bb11ae, type: 3}
       propertyPath: m_Name
       value: Green_Chair
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3dd1b3236a8caf449b248bcbe9bb11ae, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 3dd1b3236a8caf449b248bcbe9bb11ae, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -43212,6 +43572,10 @@ PrefabInstance:
       value: Comfy_Chair (5)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1421be020a1ad9345ab67b96fb6648af, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1421be020a1ad9345ab67b96fb6648af, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -43481,6 +43845,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: efc15967754a7b04799e9f51d80a9b0d, type: 3}
       propertyPath: m_Name
       value: Lunch_Chair (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: efc15967754a7b04799e9f51d80a9b0d, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: efc15967754a7b04799e9f51d80a9b0d, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -44009,6 +44377,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
       propertyPath: m_Name
       value: Book (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -45549,6 +45921,10 @@ PrefabInstance:
       value: Play_table_Red
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9e7369cc24f5639439dfa5c201db8a08, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9e7369cc24f5639439dfa5c201db8a08, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -45941,6 +46317,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ef66c4c6424b0134ba69aae09e2c94c2, type: 3}
       propertyPath: m_Name
       value: Prop_Cube (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ef66c4c6424b0134ba69aae09e2c94c2, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ef66c4c6424b0134ba69aae09e2c94c2, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -46916,6 +47296,10 @@ PrefabInstance:
       value: Grace
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 43411ad154b6c744e8783b95aa19e0fc, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 43411ad154b6c744e8783b95aa19e0fc, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -47148,6 +47532,10 @@ PrefabInstance:
       value: Prop_Cube (4)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ef66c4c6424b0134ba69aae09e2c94c2, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ef66c4c6424b0134ba69aae09e2c94c2, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -47226,6 +47614,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d3d018d3a053953469ec6746f3c8b00c, type: 3}
       propertyPath: m_Name
       value: Toy_Car_2 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d3d018d3a053953469ec6746f3c8b00c, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -47315,6 +47707,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2dca8e24cb5df814a8812ff033e086c6, type: 3}
       propertyPath: m_Name
       value: Toy_Car_1 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2dca8e24cb5df814a8812ff033e086c6, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -47819,6 +48215,10 @@ PrefabInstance:
       value: Prop_Triangle (1)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 204cbe5ae69f5b244b33da2005addd34, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 204cbe5ae69f5b244b33da2005addd34, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -47901,6 +48301,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
       propertyPath: m_Name
       value: Book (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -48637,6 +49041,10 @@ PrefabInstance:
       value: Shelf_with_Drawers (5)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 75cb9c28196071841a791bdbe61e79ce, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 75cb9c28196071841a791bdbe61e79ce, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -48741,6 +49149,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 6477ce2c17130da4481934ea429582b2, type: 3}
       propertyPath: m_Name
       value: Chalk_Board (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6477ce2c17130da4481934ea429582b2, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 6477ce2c17130da4481934ea429582b2, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -48927,6 +49339,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
       propertyPath: m_Name
       value: Book (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -49337,6 +49753,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 3dd1b3236a8caf449b248bcbe9bb11ae, type: 3}
       propertyPath: m_Name
       value: Red_Chair (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3dd1b3236a8caf449b248bcbe9bb11ae, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 3dd1b3236a8caf449b248bcbe9bb11ae, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -49937,6 +50357,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Toy_Car_1 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2dca8e24cb5df814a8812ff033e086c6, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 2dca8e24cb5df814a8812ff033e086c6, type: 3}
@@ -50159,6 +50583,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
       propertyPath: m_Name
       value: Book (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -51226,6 +51654,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Toy_Car_2 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d3d018d3a053953469ec6746f3c8b00c, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: d3d018d3a053953469ec6746f3c8b00c, type: 3}
@@ -51302,6 +51734,10 @@ PrefabInstance:
       value: Pen_Board
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 569c87f044deeb34db9ec0d45f9c79b6, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 569c87f044deeb34db9ec0d45f9c79b6, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -51354,11 +51790,11 @@ MonoBehaviour:
   m_LockStageInInspector: 00000000
   m_StreamingVersion: 20170927
   m_Priority: 10
-  m_StandbyUpdate: 2
+  m_StandbyUpdate: 1
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
   m_Lens:
-    FieldOfView: 60
+    FieldOfView: 40
     OrthographicSize: 10
     NearClipPlane: 0.1
     FarClipPlane: 5000
@@ -51382,7 +51818,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1707626073}
-  m_LocalRotation: {x: 0.11009848, y: 3e-45, z: -0, w: 0.9939207}
+  m_LocalRotation: {x: 0.063610874, y: -0, z: -0, w: 0.9979748}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -52264,6 +52700,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Eddie
       objectReference: {fileID: 0}
+    - target: {fileID: 6433059971483124852, guid: 54b16d245329ed24fb0d7ed65d2f5cff, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
     - target: {fileID: 6433059971483124854, guid: 54b16d245329ed24fb0d7ed65d2f5cff, type: 3}
       propertyPath: npcCam
       value: 
@@ -52724,6 +53164,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scarlet
       objectReference: {fileID: 0}
+    - target: {fileID: 8639815407638529140, guid: ec29c44ed3bb89647840c47cd92a3f03, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
     - target: {fileID: 8639815407638529142, guid: ec29c44ed3bb89647840c47cd92a3f03, type: 3}
       propertyPath: npcCam
       value: 
@@ -52915,6 +53359,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Juice Box
       objectReference: {fileID: 0}
+    - target: {fileID: 4202205716510092986, guid: 8515c6d86e2cdba4782ae54b6572276a, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
     - target: {fileID: 4202205716510092987, guid: 8515c6d86e2cdba4782ae54b6572276a, type: 3}
       propertyPath: npcCam
       value: 
@@ -53057,6 +53505,10 @@ PrefabInstance:
       value: Prop_Jenga (1)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 7eba6941202117f4e9ede9215dfa3214, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7eba6941202117f4e9ede9215dfa3214, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -53135,6 +53587,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2dca8e24cb5df814a8812ff033e086c6, type: 3}
       propertyPath: m_Name
       value: Toy_Car_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2dca8e24cb5df814a8812ff033e086c6, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -53767,6 +54223,10 @@ PrefabInstance:
       value: Book (24)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -53933,6 +54393,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 1421be020a1ad9345ab67b96fb6648af, type: 3}
       propertyPath: m_Name
       value: Comfy_Chair (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1421be020a1ad9345ab67b96fb6648af, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1421be020a1ad9345ab67b96fb6648af, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -55732,6 +56196,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
       propertyPath: m_Name
       value: Book (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -62842,6 +63310,10 @@ PrefabInstance:
       value: Circular_Chair (1)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 44f05b58397cb0745a1998b9c1f46611, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 44f05b58397cb0745a1998b9c1f46611, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -63501,6 +63973,10 @@ PrefabInstance:
       value: Comfy_Chair (7)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1421be020a1ad9345ab67b96fb6648af, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1421be020a1ad9345ab67b96fb6648af, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -63524,7 +64000,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.13759556, y: 0.3308488, z: 0.18996897}
-  m_Center: {x: -0.0012976145, y: -0.08674947, z: 0.00014268675}
+  m_Center: {x: -0.0012976145, y: 0.07, z: 0}
 --- !u!1 &1969150304
 GameObject:
   m_ObjectHideFlags: 0
@@ -63674,6 +64150,10 @@ PrefabInstance:
       value: Shelf_with_Drawers (3)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 75cb9c28196071841a791bdbe61e79ce, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 75cb9c28196071841a791bdbe61e79ce, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -63769,6 +64249,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ef66c4c6424b0134ba69aae09e2c94c2, type: 3}
       propertyPath: m_Name
       value: Prop_Cube (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ef66c4c6424b0134ba69aae09e2c94c2, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ef66c4c6424b0134ba69aae09e2c94c2, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -63931,6 +64415,10 @@ PrefabInstance:
       value: Book (11)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -64009,6 +64497,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: d3d018d3a053953469ec6746f3c8b00c, type: 3}
       propertyPath: m_Name
       value: Toy_Car_2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d3d018d3a053953469ec6746f3c8b00c, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -64765,6 +65257,10 @@ PrefabInstance:
       value: Kitchen
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c57f674e717e91f44a4bb411580ddd6e, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c57f674e717e91f44a4bb411580ddd6e, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -64958,6 +65454,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 6477ce2c17130da4481934ea429582b2, type: 3}
       propertyPath: m_Name
       value: Chalk_Board (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 6477ce2c17130da4481934ea429582b2, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 6477ce2c17130da4481934ea429582b2, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -65390,6 +65890,10 @@ PrefabInstance:
       value: Comfy_Chair (3)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1421be020a1ad9345ab67b96fb6648af, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1421be020a1ad9345ab67b96fb6648af, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -65485,6 +65989,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
       propertyPath: m_Name
       value: Book (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -66043,6 +66551,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Small_Table (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3771e32b3e970944fbd6ec0f28289f3c, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 3771e32b3e970944fbd6ec0f28289f3c, type: 3}
@@ -66113,6 +66625,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2dca8e24cb5df814a8812ff033e086c6, type: 3}
       propertyPath: m_Name
       value: Toy_Car_1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2dca8e24cb5df814a8812ff033e086c6, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -66188,6 +66704,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: cd9e753075b112247b88f197330e5f9b, type: 3}
       propertyPath: m_Name
       value: Cardboard_Boxes_Bashed (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: cd9e753075b112247b88f197330e5f9b, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: cd9e753075b112247b88f197330e5f9b, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -66420,6 +66940,10 @@ PrefabInstance:
       value: Lunch_Chair (3)
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: efc15967754a7b04799e9f51d80a9b0d, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: efc15967754a7b04799e9f51d80a9b0d, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -66511,6 +67035,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: ef66c4c6424b0134ba69aae09e2c94c2, type: 3}
       propertyPath: m_Name
       value: Prop_Cube
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ef66c4c6424b0134ba69aae09e2c94c2, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ef66c4c6424b0134ba69aae09e2c94c2, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -67262,6 +67790,10 @@ PrefabInstance:
       value: Red_Chair
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 3dd1b3236a8caf449b248bcbe9bb11ae, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3dd1b3236a8caf449b248bcbe9bb11ae, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -67427,6 +67959,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2dca8e24cb5df814a8812ff033e086c6, type: 3}
       propertyPath: m_Name
       value: Toy_Car_1 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2dca8e24cb5df814a8812ff033e086c6, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
@@ -68266,6 +68802,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
       propertyPath: m_Name
       value: Book (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
+      propertyPath: m_TagString
+      value: IgnoreCameraCollision
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 46ebcda94e43bee4b981dee6e16e4d5c, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -92241,6 +92781,10 @@ PrefabInstance:
       propertyPath: cameraTransform
       value: 
       objectReference: {fileID: 963194228}
+    - target: {fileID: 8199988418148646562, guid: c858cac0aa9299c49a653595c47f7dcd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.185
+      objectReference: {fileID: 0}
     - target: {fileID: 8199988418148646589, guid: c858cac0aa9299c49a653595c47f7dcd, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647

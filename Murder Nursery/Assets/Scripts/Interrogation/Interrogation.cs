@@ -274,7 +274,7 @@ public class Interrogation : MonoBehaviour
         bool evidencePresent;
         foreach(string evidence in PinboardManager.GetComponent<PinboardManager>().chaseThreadedLikes)
         {
-            if (activeNode.pathARequiredEvidence == evidence)
+            if (activeNode.evidenceRequired == evidence)
             {
                 evidencePresent = true;
                 return evidencePresent;

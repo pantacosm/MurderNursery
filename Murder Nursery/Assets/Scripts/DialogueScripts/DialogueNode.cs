@@ -4,56 +4,66 @@ using UnityEngine;
 
 public class DialogueNode : MonoBehaviour
 {
+    
+    [Header("Node Structure")]
     public DialogueNode parent; //Stores the previous node
     public DialogueNode[] children; //Stores the connected child nodes
     public string speech; //Stores the npc statement
     public string[] responses; //Stores the players possible responses
+
+    [Header("Reputation Modifiers")]
     public int repLevelOption1; //Rep Level Checker
     public int repLevelOption2; //''
     public int repLevelOption3; //'' 
-    public string nodeID;
-    public bool nodeActive = false; //Used to indicate if node is active
     public int repGainResponse1; //Rep gained by response
     public int repGainResponse2; //''
     public int repGainResponse3; //'' 
-    public bool interrogationNode = false;
-    public int lifeLoss = 0;
-    public bool exitNode = false;
-    public bool firstPathLocked = false;
-    public bool secondPathLocked = false;
-    public bool thirdPathLocked = false;
-    public bool nodeVisited = false;
-    public bool lockingNode = false;
-    public bool briberyAvailable = false;
-    public bool bribeGiven = false;
-    public bool triggerTrueEnd = false;
-    public bool triggerGoodEnd = false;
-    public bool triggerBadEnd = false;
-    public bool lockingFirstPath = false;
-    public bool lockingSecondPath = false;
-    public bool lockingThirdPath= false;
-    public bool fitCheck = false;
-    public DialogueNode dressUpNode;
-    public string requiredOutfit;
-    public EvidenceClass evidenceToDiscover = null;
-    public bool evidenceCheckNode = false;
-    public string pathARequiredEvidence = null;
-    public string pathBRequiredEvidence = null;
-    public string pathCRequiredEvidence = null;
-    public bool pathAInterrogationEvidenceRequired;
-    public bool pathBInterrogationEvidenceRequired;
-    public bool pathCInterrogationEvidenceRequired;
-    public int nodeEmotion;
-    public string evidenceRequired;
-    public Sprite evidenceRequiredImage;
-    public bool evidenceNeededCheck = false;
-    public bool evImagesGenerated = false;
 
+    [Header("Node Identifiers")]
+    public bool nodeActive = false; //Used to indicate if node is active
+    public bool interrogationNode = false; //Indicates if node triggers interrogation
+    public bool exitNode = false; //Indicates if interaction is finished
+    public bool nodeVisited = false; //Records if node has been visited before
+    public bool briberyAvailable = false; //Indicates if bribery is available
+    public bool fitCheck = false; //Indicates if a dress up check is available
+    public EvidenceClass evidenceToDiscover = null; //Stores the evidence to be discovered from the node
+
+
+    [Header("Node Locking Variables")]
+    public bool lockingNode = false; //Indicates if node can be locked off
+    public bool firstPathLocked = false; //Signals that first path is locked
+    public bool secondPathLocked = false; //Signals that second path is locked
+    public bool thirdPathLocked = false; //Signals that third path is locked 
+    public bool lockingFirstPath = false; //Signals that path will be locked after moving on 
+    public bool lockingSecondPath = false; //''
+    public bool lockingThirdPath = false;//''
+
+    [Header("Conclusion Variables")]  
+    public bool triggerTrueEnd = false; //Indicates that player has chosen the true ending
+    public bool triggerGoodEnd = false; //Indicates that player has chosen the good ending
+    public bool triggerBadEnd = false; //Indicates that the player has chosen the bad ending
+
+    [Header("Dress Up Variables")]
+    public DialogueNode dressUpNode; //Stores the dialogue node locked behind a dress up check
+    public string requiredOutfit; //Stores the outfit required to pass the dress up check
+
+    [Header("Interrogation Variables")]
+    public int lifeLoss = 0; //Used to remove a life from the player in the event of an incorrect interrogation guess
+    public string evidenceRequired; //Evidence required to proceed
+    public Sprite evidenceRequiredImage; //Evidence piece image
+    public bool evidenceNeededCheck = false; //Checks if evidence is required
+    public bool evImagesGenerated = false; //Checks if fake evidence pieces have been generated
+
+    [Header("Node Emotion")]
+    public int nodeEmotion; //Emotion displayed by node
+
+    [Header("Bribery")]
+    public bool bribeGiven = false; //Indicates if a bribe has been given
    
 
     private void Start()
     {
-        firstPathLocked = false;
+        firstPathLocked = false; //Sets all the paths to unlocked at the beginning of play
         secondPathLocked = false;
         thirdPathLocked = false;
     }

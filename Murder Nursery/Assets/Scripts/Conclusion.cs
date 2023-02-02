@@ -8,26 +8,21 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class Conclusion : MonoBehaviour
 {
+    [Header("General Variables")]
     public GameObject mainScene;
-    public GameObject suspectSelectionCam;
-    public GameObject goodEndingCam;
-    public GameObject badEndingCam;
-    public GameObject trueEndingCam;
     public GameObject manager;
     public Image blackFade;
-    public bool eddieChosen = false;
-    public bool chaseChosen = false;
-    public bool scarletChosen = false;
-    public bool juiceboxChosen = false;
-    public bool graceChosen = false;
-    public GameObject eddie;
-    public GameObject chase;
-    public GameObject juicebox;
-    public GameObject grace;
-    public GameObject scarlet;
-    public GameObject trueEndingText;
-    public GameObject goodEndingText;
-    public GameObject badEndingText;
+    public bool endingReady = false;
+    public bool dialogueActive;
+    private int progress = 0;
+    private bool eddieChosen = false;
+    private bool chaseChosen = false;
+    private bool scarletChosen = false;
+    private bool juiceboxChosen = false;
+    private bool graceChosen = false;
+    
+
+    [Header("Character objects")]
     public GameObject scarletEnd;
     public GameObject eddieEnd;
     public GameObject juiceBoxEnd;
@@ -40,24 +35,39 @@ public class Conclusion : MonoBehaviour
     public GameObject drewMain;
     public GameObject chaseMain;
     public GameObject graceMain;
+    public GameObject eddie; //UPDATE! THESE VARIABLES ARE INVALID
+    public GameObject chase;
+    public GameObject juicebox;
+    public GameObject grace;
+    public GameObject scarlet;
+
+    [Header("UI Objects")]
     public GameObject tempText;
-    public bool endingReady = false;
     public GameObject endingText;
-    public bool dialogueActive;
-    private int progress = 0;
     public GameObject hintMessage;
+    public GameObject trueEndingText;
+    public GameObject goodEndingText;
+    public GameObject badEndingText;
+
+    [Header("Cameras")]
     public GameObject eddieCam;
     public GameObject scarletCam;
     public GameObject chaseCam;
     public GameObject juiceBoxCam;
     public GameObject drewCam;
     public GameObject graceCam;
+    public GameObject suspectSelectionCam;
+    public GameObject goodEndingCam;
+    public GameObject badEndingCam;
+    public GameObject trueEndingCam;
 
+    //Bad ending dialogue
     private string badEnd1 = "It... It... It wasn't me!";
     private string badEnd2 = "I was… wrong? No - surely not… but I swore I had it all right here! Looks like I really flunked this case! Ohhh boy, the boss won’t be happy with me now that I’ve thrown an innocent in the can! Teach… take my badge, I don’t deserve it. Put me in time-out while you’re at it, I’ve failed you all!";
     private string badEnd3 = "Well, that won’t be necessary! But why don’t you change out of your little costume so you and I can go and have a little chat about being nice to our peers?";
     private string badEnd4 = "You got it, boss! Catch you on the flip side fellas... it was real nice while it lasted.";
 
+    //Good ending dialogue
     private string goodEnd1 = "It was me... I'm sorry class, I let you all down!";
     private string goodEnd2 = "But why?";
     private string goodEnd3 = "Love makes us do crazy things, friend. I was real selfish watchin' other folks go down for what I did.";
@@ -74,6 +84,7 @@ public class Conclusion : MonoBehaviour
     private string goodEnd14 = "YEAH!!!";
     private string goodEnd15 = "Well well well... looks I didn't quite crack the case this time. We got a culprit, but somebody's out there getting away with murder. Wonder what woulda happened if I'd done things a little differently? Maybe it ain't time to hang up the ol' trenchcoat after all...";
 
+    //True ending dialogue
     private string trueEnd1 = "It was me... I'm sorry class, I let you all down!";
     private string trueEnd2 = "But why?";
     private string trueEnd3 = "Love makes us do crazy things, friend. I was real selfish watchin' other folks go down for what I did. I didn't want to, I swear!";
@@ -97,14 +108,14 @@ public class Conclusion : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        manager = GameObject.FindGameObjectWithTag("Manager");
-        SwitchEmotion(0, drewEnd);
+        manager = GameObject.FindGameObjectWithTag("Manager"); //Retrieves the game manager object
+        SwitchEmotion(0, drewEnd); //Resets the emotions of ending drew
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.C) && endingReady)
+        if(Input.GetKeyDown(KeyCode.C) && endingReady) //Temporary ending trigger
         {
             StartConclusion();
             hintMessage.SetActive(false);
@@ -114,7 +125,7 @@ public class Conclusion : MonoBehaviour
         {
             if(eddieChosen)
             {
-                switch (progress)
+                switch (progress) //Triggers the bad ending progress with Eddie
                 {
                     
                     case 1:
@@ -138,7 +149,7 @@ public class Conclusion : MonoBehaviour
                         break;
                 }
             }
-            if(scarletChosen)
+            if(scarletChosen) //Triggers the bad ending progress with Scarlet
             {
                 switch (progress)
                 {
@@ -164,7 +175,7 @@ public class Conclusion : MonoBehaviour
                         break;
                 }
             }
-            if(juiceboxChosen)
+            if(juiceboxChosen) //Triggers the bad ending progress with Juice Box
             {
                 switch (progress)
                 {
@@ -193,9 +204,9 @@ public class Conclusion : MonoBehaviour
                 }
             }
 
-            if(chaseChosen)
+            if(chaseChosen) //Triggers the good ending progress
             {
-                switch(progress)
+                switch(progress) 
                 {
                     
                         
@@ -275,7 +286,7 @@ public class Conclusion : MonoBehaviour
                         
                 }
             }
-            if(graceChosen)
+            if(graceChosen) //Triggers the true ending dialogue
             {
                 switch(progress)
                 {
@@ -369,7 +380,7 @@ public class Conclusion : MonoBehaviour
         }
     }
 
-    public void StartConclusion()
+    public void StartConclusion() //Begins the conclusion sequence
     {
         blackFade.gameObject.SetActive(true);
         StartCoroutine(BlackTransition(mainScene, suspectSelectionCam));
@@ -382,7 +393,7 @@ public class Conclusion : MonoBehaviour
         SwitchEmotion(0, drewEnd);
     }
 
-    public void SuspectChosen()
+    public void SuspectChosen() //Indicates that the player has chosen a suspect and begins the ending cutscene
     {
         if(eddieChosen)
         {
@@ -511,7 +522,7 @@ public class Conclusion : MonoBehaviour
 
     }
 
-    public IEnumerator BlackTransition(GameObject currentCam = null, GameObject desiredCam = null, GameObject npcTalking = null, bool startDialogue = false, bool transitionToBlack = true, float fadeSpeed = 1)
+    public IEnumerator BlackTransition(GameObject currentCam = null, GameObject desiredCam = null, GameObject npcTalking = null, bool startDialogue = false, bool transitionToBlack = true, float fadeSpeed = 1) //Fades or unfades the screen to/from black
     {
         Color screenColour = blackFade.color;
         float fadeProgress;
@@ -586,7 +597,7 @@ public class Conclusion : MonoBehaviour
         }
     }
 
-    public IEnumerator WaitThenFadeIn(GameObject npcTalking = null, bool startDialogue = false, float countdownValue = 2)
+    public IEnumerator WaitThenFadeIn(GameObject npcTalking = null, bool startDialogue = false, float countdownValue = 2) //Used to wait and visually transition to new area
     {
         float currentCountdown = countdownValue;
         while (currentCountdown > 0)
@@ -597,43 +608,43 @@ public class Conclusion : MonoBehaviour
         StartCoroutine(BlackTransition(null, null, npcTalking, startDialogue, false));
     }
 
-    public void EddieChosen()
+    public void EddieChosen() //Signals that the player has accused Eddie
     {
         eddieChosen = true;
         SuspectChosen();
     }
 
-    public void ScarletChosen()
+    public void ScarletChosen() //Signals that the player has accused Scarlet
     {
         scarletChosen = true;
         SuspectChosen();
     }
 
-    public void JuiceBoxChosen()
+    public void JuiceBoxChosen() //Signals that the player has accused Juice Box
     {
         juiceboxChosen = true;
         SuspectChosen();
     }
 
-    public void ChaseChosen()
+    public void ChaseChosen() //Signals that the player has accused Chase
     {
         chaseChosen = true;
         SuspectChosen();
     }
 
-    public void GraceChosen()
+    public void GraceChosen() //Signals that the player has accused Grace
     {
         graceChosen = true;
         SuspectChosen();
     }
 
-   public void ChangeCams(GameObject oldCam, GameObject newCam)
+   public void ChangeCams(GameObject oldCam, GameObject newCam) //Changes the active camera
     {
         oldCam.SetActive(false);
         newCam.SetActive(true);
     }
 
-    private void SwitchEmotion(int emotionNumber, GameObject npcTalking)
+    private void SwitchEmotion(int emotionNumber, GameObject npcTalking) //Method responsible for updating the displayed emotions of the NPCs
     {
         switch (emotionNumber)
         {

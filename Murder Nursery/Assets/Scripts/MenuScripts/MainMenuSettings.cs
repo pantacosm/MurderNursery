@@ -20,8 +20,8 @@ public class MainMenuSettings : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        quality = "High";
-        index = "3";
+        //quality = "High";
+        //index = "3";
     }
 
     private void Update()
@@ -95,6 +95,7 @@ public class MainMenuSettings : MonoBehaviour
         }
     }
 
+    // Toggles menu during gameplay (Escape key)
     public void ToggleMenu()
     {
         if(menuOpen = !menuOpen)

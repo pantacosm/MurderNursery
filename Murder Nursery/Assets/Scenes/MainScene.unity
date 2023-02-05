@@ -17547,7 +17547,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1745976416139509123, guid: f2ef3b592f3443f4face91ed7867a6cf, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.28
+      value: 0.549
       objectReference: {fileID: 0}
     - target: {fileID: 1745976416139509123, guid: f2ef3b592f3443f4face91ed7867a6cf, type: 3}
       propertyPath: m_LocalRotation.w
@@ -17580,6 +17580,10 @@ PrefabInstance:
     - target: {fileID: 1745976416139509126, guid: f2ef3b592f3443f4face91ed7867a6cf, type: 3}
       propertyPath: m_Name
       value: IndoorLight (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745976416139509127, guid: f2ef3b592f3443f4face91ed7867a6cf, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1745976416139509127, guid: f2ef3b592f3443f4face91ed7867a6cf, type: 3}
       propertyPath: m_Shadows.m_Strength
@@ -39660,7 +39664,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1745976416139509123, guid: f2ef3b592f3443f4face91ed7867a6cf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 23.44
+      value: 23.08
       objectReference: {fileID: 0}
     - target: {fileID: 1745976416139509123, guid: f2ef3b592f3443f4face91ed7867a6cf, type: 3}
       propertyPath: m_LocalPosition.y
@@ -39701,6 +39705,14 @@ PrefabInstance:
     - target: {fileID: 1745976416139509126, guid: f2ef3b592f3443f4face91ed7867a6cf, type: 3}
       propertyPath: m_Name
       value: IndoorLight (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745976416139509126, guid: f2ef3b592f3443f4face91ed7867a6cf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745976416139509127, guid: f2ef3b592f3443f4face91ed7867a6cf, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1745976416139509127, guid: f2ef3b592f3443f4face91ed7867a6cf, type: 3}
       propertyPath: m_Shadows.m_Strength
@@ -66545,7 +66557,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1745976416139509123, guid: f2ef3b592f3443f4face91ed7867a6cf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 28.69
+      value: 28.905
       objectReference: {fileID: 0}
     - target: {fileID: 1745976416139509123, guid: f2ef3b592f3443f4face91ed7867a6cf, type: 3}
       propertyPath: m_LocalPosition.y

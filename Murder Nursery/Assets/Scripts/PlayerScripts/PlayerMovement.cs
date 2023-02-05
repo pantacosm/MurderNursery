@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private PlayerControls playerControls;
     private Animator animator;
     private InventoryManager inventory;
+    private MainMenuSettings menu;
 
     [HideInInspector]
     public GameObject manager;
@@ -43,6 +44,7 @@ public class PlayerMovement : MonoBehaviour
         controller = gameObject.GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
         inventory = FindObjectOfType<InventoryManager>();
+        menu = FindObjectOfType<MainMenuSettings>();
         //cameraTransform = Camera.main.transform;
 
         // holds a map of inputs for the player
@@ -77,7 +79,8 @@ public class PlayerMovement : MonoBehaviour
         // stops player movement & disables camera whilst UI open
         if (inventory.UIVisibility.inventoryOpen || inventory.UIVisibility.pinboardOpen 
             || dialogueZone.activeInHierarchy || manager.GetComponent<SceneTransition>().interrogationActive 
-            || inventory.UIVisibility.jotterOpen || dressUpManager.GetComponent<DressUp>().inDressUp || manager.GetComponent<IntroCutscene>().inIntro)
+            || inventory.UIVisibility.jotterOpen || dressUpManager.GetComponent<DressUp>().inDressUp || manager.GetComponent<IntroCutscene>().inIntro
+            || menu.menuOpen)
         {
             animator.Play("Idle");
             animator.SetFloat("Velocity", 0);

@@ -16,6 +16,10 @@ public class StartGame : MonoBehaviour
         cam.PlayOneShot(selectChoice, 0.4f);
         StartCoroutine(FadeToBlack());
         
+        if(settingsMenu.activeInHierarchy)
+        {
+            CloseSettings();
+        }
         
     }
 
@@ -51,5 +55,18 @@ public class StartGame : MonoBehaviour
     {
         settingsMenu.SetActive(false);
         cam.PlayOneShot(selectChoice, 0.4f);
+    }
+
+    public void QuitGame()
+    {
+        cam.PlayOneShot(selectChoice, 0.4f);
+        if(UnityEngine.Application.isEditor)
+        {
+            UnityEditor.EditorApplication.isPlaying = false;
+        }
+        else
+        {
+            Application.Quit();
+        }
     }
 }

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FirstPersonController : MonoBehaviour
+public class FirstPersonController : MonoBehaviour //Basic first person controller script //CURRENTLY INACTIVE 
 {
     public float minX = -60f;
     public float maxX = 60f;

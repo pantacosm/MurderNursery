@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EndingChecker : MonoBehaviour
+public class EndingChecker : MonoBehaviour //THIS SCRIPT WILL BE REWORKED SOON 
 {
-    public GameObject conclusionManager;
-    public GameObject endingText;
+    public GameObject conclusionManager; //Stores the game manager
+    public GameObject endingText; //Stores the ending method 
 
     private void OnTriggerEnter(Collider other)
     {

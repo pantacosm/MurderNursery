@@ -7,22 +7,29 @@ using UnityEngine.UI;
 
 public class SceneTransition : MonoBehaviour
 {
-    public Image blackFade;
-    public bool toBlack;
-    public bool screenBlack;
-    private GameObject manager;
-    public GameObject mainCamera;
-    public GameObject interrogationCam;
-    public GameObject currentCam;
-    public bool interrogationActive;
-    private float currentCountdownValue;
-    public GameObject noirFilter;
-    public GameObject femmeIntObject;
-    public GameObject juiceIntObject;
-    public GameObject goonIntObject;
-    public GameObject coolIntObject;
-    public GameObject activeInterrogant;
-    public GameObject interrogationManager;
+    public Image blackFade; //Image used to fade the screen toblack 
+    public bool toBlack; //Signal for screen fading 
+    public bool screenBlack; //Signals that the screen is black
+    private GameObject manager; //Stores the game manager 
+
+    [Header("Cameras")]
+    public GameObject mainCamera; //Main scene camera
+    public GameObject interrogationCam; //Interrogation scene camera
+    public GameObject currentCam; //Currently active cam 
+
+    [Header("ST Variables")]
+    public bool interrogationActive; //Signals that the interrogation is underway
+    private float currentCountdownValue; //Used to determine the speed of the black fade
+    public GameObject noirFilter; //The PP filter active in interrogation
+    public GameObject activeInterrogant; //Stores the active interrogant 
+    public GameObject interrogationManager; //Stores the interrogation manager 
+
+    [Header("NPC Objects")]
+    public GameObject femmeIntObject;//Stores an NPC object
+    public GameObject juiceIntObject;//''
+    public GameObject goonIntObject;//''
+    public GameObject coolIntObject; //''
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,7 +45,7 @@ public class SceneTransition : MonoBehaviour
         currentCam = newCam;
     }
 
-    public void ChangeToInterrogation(GameObject npc) //Check here for detective outfit //This method is called when the player is transitioned from dialogue to an interrogation
+    public void ChangeToInterrogation(GameObject npc) //This method is called when the player is transitioned from dialogue to an interrogation
     {
         blackFade.gameObject.SetActive(true); //Activates the image which serves as our fade to black
         StartCoroutine(BlackTransitionToInterrogation(mainCamera, interrogationCam)); //Activates the gradual fade to black
@@ -116,7 +123,7 @@ public class SceneTransition : MonoBehaviour
         }
     }
 
-    public IEnumerator BlackTransitionToMainArea(GameObject currentCam, GameObject desiredCam, bool transitionToBlack = true, int timeToFade = 1)
+    public IEnumerator BlackTransitionToMainArea(GameObject currentCam, GameObject desiredCam, bool transitionToBlack = true, int timeToFade = 1) //This method is similiar to the one above but is used for fading to main area
     {
         Color screenColour = blackFade.color;
         float fadeProgress;
@@ -157,7 +164,7 @@ public class SceneTransition : MonoBehaviour
         }
     }
 
-    public IEnumerator WaitForSeconds(float countdownValue = 2)
+    public IEnumerator WaitForSeconds(float countdownValue = 2) //Waits for a specified period of time 
     {
         currentCountdownValue = countdownValue;
         while (currentCountdownValue > 0)
@@ -168,7 +175,7 @@ public class SceneTransition : MonoBehaviour
         StartCoroutine(BlackTransitionToInterrogation(mainCamera, interrogationCam, false));
     }
 
-    public IEnumerator WaitForSecondsMain(float countdownValue = 2)
+    public IEnumerator WaitForSecondsMain(float countdownValue = 2) //''
     {
         currentCountdownValue = countdownValue;
         while (currentCountdownValue > 0)

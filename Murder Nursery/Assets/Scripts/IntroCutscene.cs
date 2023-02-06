@@ -5,19 +5,27 @@ using UnityEngine;
 
 public class IntroCutscene : MonoBehaviour
 {
-    public GameObject introTextBox;
-    public GameObject introTextBox2;
-    public GameObject dialoguePanel1;
-    public GameObject dialoguePanel2;
-    public GameObject initialCam;
-    public GameObject eddieCam;
-    public GameObject juiceBoxCam;
-    public GameObject scarletCam;
-    public GameObject chaseCam;
-    public GameObject mainGameCam;
-    public GameObject player;
-    public bool inIntro = true;
-    private int progress = 0;
+    [Header("UI Elements")]
+    public GameObject introTextBox; //Text object for dialogue
+    public GameObject introTextBox2;//''
+    public GameObject dialoguePanel1; //Panel to contain dialogue
+    public GameObject dialoguePanel2;//''
+
+    [Header("Cameras")]
+    public GameObject initialCam; //Camera's for different perspectives 
+    public GameObject eddieCam;//''
+    public GameObject juiceBoxCam;//''
+    public GameObject scarletCam;//''
+    public GameObject chaseCam;//''
+    public GameObject mainGameCam; //Main game camera used by the player
+
+    [Header("Intro Variables")]
+    public GameObject manager; //Stores the game manager
+    public GameObject player; //Stores the player game object
+    public bool inIntro = true; //Signals that the player is in the intro
+    private int progress = 0; //Tracks the player's progress through the intro
+    
+    //Intro Dialogue 
     private string playerStatement1 = "There I was, only one day into this new nursery gig, and naptime was callin’ my name somethin’ awful";
     private string playerStatement2 = "But really, my name was Drew. Detective Drew, if we’re friends. And Detective Drew if we ain’t.";
     private string playerStatement3 = "Point was, I was one sleepy bye-bye away from retirement. I barely knew these bozos, and yet there Grace was… dead.";
@@ -29,22 +37,23 @@ public class IntroCutscene : MonoBehaviour
     private string playerStatement9 = "I mean, uh, his outfit. Yeah, I guess he’s in disguise. Classic Chase. As slick as they come. Definitely a man with somethin’ to hide…";
     private string playerStatement10 = "I guess the boss is giving me free reign on this one. Time to look around and start putting the pressure on these kids. I gotta figure out whodunnit by the time she comes back…";
     private string teacherStatement = "Okay kids, I’m popping into the staff room to grab your lunches! I’ll be back in ten minutes, so play nice and get to know your new friend Drew, alright?";
-    public GameObject manager;
-    public AudioSource introCam;
-    public AudioClip introMusic;
+
+    [Header("Audio")]
+    public AudioSource introCam;//Audio source for the intro
+    public AudioClip introMusic; //Music track for the intro 
 
     // Start is called before the first frame update
     void Start()
     {
-        dialoguePanel1.SetActive(true);
-        introTextBox.GetComponent<TextMeshProUGUI>().text = playerStatement1;
-        introCam.Play();
+        dialoguePanel1.SetActive(true);//Activates the intro dialogue UI 
+        introTextBox.GetComponent<TextMeshProUGUI>().text = playerStatement1; //Loads the first dialogue piece
+        introCam.Play();//Plays the intro music 
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyUp(KeyCode.Return) && inIntro)
+        if(Input.GetKeyUp(KeyCode.Return) && inIntro) //Allows the player to navigate through the intro dialogue 
         {
             switch(progress)
             {
@@ -98,7 +107,7 @@ public class IntroCutscene : MonoBehaviour
         }
     }
 
-    public void ChangeCams(GameObject currentCam, GameObject newCam)
+    public void ChangeCams(GameObject currentCam, GameObject newCam) //Changes the camera which is currently active
     {
         currentCam.SetActive(false);
         newCam.SetActive(true);

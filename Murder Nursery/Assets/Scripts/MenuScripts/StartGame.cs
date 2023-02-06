@@ -5,25 +5,25 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class StartGame : MonoBehaviour
 {
-    public Image blackFade;
-    int timeToFade = 1;
-    public AudioSource cam;
-    public AudioClip selectChoice;
-    public GameObject settingsMenu;
-    public void Begin()
+    public Image blackFade; //Image used as a fader for transition to main game 
+    int timeToFade = 1; //Time to fade to black
+    public AudioSource cam; //Audio source for start menu
+    public AudioClip selectChoice; //Sound used for choosing an option
+    public GameObject settingsMenu; //UI element for settings menu
+    public void Begin() //Used when the player starts the game
     {
-        blackFade.gameObject.SetActive(true);
-        cam.PlayOneShot(selectChoice, 0.4f);
-        StartCoroutine(FadeToBlack());
+        blackFade.gameObject.SetActive(true); 
+        cam.PlayOneShot(selectChoice, 0.4f); //Plays relevant sound 
+        StartCoroutine(FadeToBlack()); //Begins black fade
         
         if(settingsMenu.activeInHierarchy)
         {
-            CloseSettings();
+            CloseSettings(); //Closes settings menu
         }
         
     }
 
-    public IEnumerator FadeToBlack()
+    public IEnumerator FadeToBlack() //Coroutine similiar to scene transition one //Used to fade the screen to black
     {
         Color screenColour = blackFade.color;
         float fadeProgress;
@@ -45,19 +45,19 @@ public class StartGame : MonoBehaviour
         
     }
 
-    public void Settings()
+    public void Settings() //Opens settings menu
     {
         settingsMenu.SetActive(true);
         cam.PlayOneShot(selectChoice, 0.4f);
     }
 
-    public void CloseSettings()
+    public void CloseSettings() //Closes settings menu
     {
         settingsMenu.SetActive(false);
         cam.PlayOneShot(selectChoice, 0.4f);
     }
 
-    public void QuitGame()
+    public void QuitGame() //Quirs the game 
     {
         cam.PlayOneShot(selectChoice, 0.4f);
         if(UnityEngine.Application.isEditor)

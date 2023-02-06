@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ThreadButtons : MonoBehaviour
+public class ThreadButtons : MonoBehaviour //NEED TO REVISIT AND REWORK SCRIPT 
 {
-    public GameObject threadManager;
-    public GameObject firstObject;
-    public GameObject secondObject;
-    public Button firstButton;
-    public Button secondButton;
+    public GameObject threadManager; //Stores the thread manager
+    public GameObject firstObject; //Stores the object on first end of thread
+    public GameObject secondObject; //Stores the object on second end of thread
+    public Button firstButton; //Thread buttons
+    public Button secondButton; // 
     public void SetThreadPosition()
     {
          if (threadManager.GetComponent<ThreadManager>().firstThreadItem != null)

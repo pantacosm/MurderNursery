@@ -4,15 +4,15 @@ using UnityEngine;
 using UnityEngine.UI;
 public class PinboardThread : MonoBehaviour
 {
-    public Sprite lineImage;
-    public GameObject pointA;
-    public GameObject pointB;
-    private float graphScale = 1;
-    private float lineWidth = 10;
-    public float offsetX;
-    public float offsetY;
+    public Sprite lineImage; //Stores the line sprite 
+    public GameObject pointA; //The first point of the line
+    public GameObject pointB; //The second point of the line
+    private float graphScale = 1; //Scale of the line
+    private float lineWidth = 10; // Width of the line
+    public float offsetX; //X axis offset
+    public float offsetY; //Y axis offset
     
-    public void MakeLine(float ax, float ay, float bx, float by, Color col)
+    public void MakeLine(float ax, float ay, float bx, float by, Color col) //Method creates a line betweeen two evidence pieces on the pinboard
     {
         GameObject NewObj = new GameObject();
         NewObj.name = "line from " + ax + " to " + bx;

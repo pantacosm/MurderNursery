@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class EvidenceSlot : MonoBehaviour
 {
-    public bool slotFilled = false;
-    public Image evidenceImage = null;
-    public string evidenceText = null;
+    public bool slotFilled = false; //Checks if the evidence slot is currently filled
+    public Image evidenceImage = null; //The evidence image stored in the slot
+    public string evidenceText = null; //The evidence text stored in the slot
     // Start is called before the first frame update
     void Start()
     {

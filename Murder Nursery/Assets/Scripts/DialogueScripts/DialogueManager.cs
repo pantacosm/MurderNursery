@@ -9,69 +9,69 @@ using UnityEngine.UI;
 public class DialogueManager : MonoBehaviour
 {
     [Header("General UI Objects")]
-    public GameObject dialogueZone;
-    public GameObject briberyOption;
-    public GameObject briberyPanel;
-    public Image repGainSprite;
-    public Image repLossSprite;
-    public Image item1;
-    public Image item2;
-    public Image singleBribe;
+    public GameObject dialogueZone; //Canvas object containing all dialogue UI elements
+    public GameObject briberyOption; //UI object for the briber button
+    public GameObject briberyPanel; //Canvas object containing all bribery UI elements
+    public Image repGainSprite; //Sprite displayed when reputation is gained
+    public Image repLossSprite; //Sprite displayed when reputation is lost
+    public Image item1; //Image for first possible bribe
+    public Image item2; //Image for second possible bribe
+    public Image singleBribe; //Image used when only a single bribe is available
 
     [Header("Player Dialogue Objects")]
-    public GameObject playerFirstResponse;
-    public GameObject playerSecondResponse;
-    public GameObject playerThirdResponse;
-    public GameObject playerFirstResponseBox;
-    public GameObject playerSecondResponseBox;
-    public GameObject playerThirdResponseBox;
-    public GameObject playerResponse1;
-    public GameObject playerResponse2;
-    public GameObject playerResponse3;
-    public GameObject playerResponse4;
+    public GameObject playerFirstResponse; //Text containing player's response
+    public GameObject playerSecondResponse;//''
+    public GameObject playerThirdResponse;//''
+    public GameObject playerFirstResponseBox;//Panel containing text for player's response
+    public GameObject playerSecondResponseBox; //''
+    public GameObject playerThirdResponseBox;//''
+    public GameObject playerResponse1; //UI element used to display previous player responses
+    public GameObject playerResponse2;//''
+    public GameObject playerResponse3;//''
+    public GameObject playerResponse4;//''
 
 
     [Header("NPC Dialogue Objects")]
-    public GameObject npcNameArea;
-    public Image npcSprite1;
-    public Image npcSprite2;
-    public Image npcSprite3;
-    public Image npcSprite4;
-    public GameObject npcStatement;
-    public GameObject npcStatement2;
-    public GameObject npcStatement3;
-    public GameObject npcStatement4;
+    public GameObject npcNameArea; //UI element displayed current active npc name
+    public Image npcSprite1;//Sprite used to display active npc in dialogue zone
+    public Image npcSprite2;//''
+    public Image npcSprite3;//''
+    public Image npcSprite4;//''
+    public GameObject npcStatement; //UI element used to store previous NPC statement
+    public GameObject npcStatement2; //''
+    public GameObject npcStatement3;//''
+    public GameObject npcStatement4;//''
 
     [Header("Characters")]
-    public GameObject Femme;
-    public GameObject JuiceBox;
-    public GameObject Goon;
-    public GameObject CoolGuy;
+    public GameObject scarlet; //Scarlet's game object
+    public GameObject juiceBox; //Juice Box's game object
+    public GameObject eddie; //Eddie's game object
+    public GameObject chase; //Chase's game object
 
     [Header("Audio")]
-    public AudioSource playerAudio;
-    public AudioClip repLossSound;
-    public AudioClip repGainSound;
-    public AudioClip selectOptionSound;
-    public AudioClip changeOptionSound;
-    public AudioClip passOutfitCheckSound;
+    public AudioSource playerAudio; //Audio source for the player
+    public AudioClip repLossSound; //Sound played upon repuation loss
+    public AudioClip repGainSound; //Sound played upon reputation gain
+    public AudioClip selectOptionSound; //Sound played when selecting options
+    public AudioClip changeOptionSound;//Sound played when navigating options
+    public AudioClip passOutfitCheckSound; //Sound played upon passing an outfit check
 
     [Header("Reputation Variables")]
-    public int relationship = 0;
-    public bool gainingRep = false;
-    public bool losingRep = false;
-    public GameObject repLockResponse1;
-    public GameObject repLockResponse2;
-    public GameObject repLockResponse3;
+    public int relationship = 0; //Default value for player relationships
+    public bool gainingRep = false; //Signals that the player is gaining reputation
+    public bool losingRep = false; //Signals that the player is losing reputation
+    public GameObject repLockResponse1; //Response issued when the player does not have enough reputation to proceed
+    public GameObject repLockResponse2; //''
+    public GameObject repLockResponse3; //''
 
     [HideInInspector]
-    public int pos = 0;
+    public int pos = 0; //Private variable used to store the player's current selected option
     [HideInInspector]
-    public bool inConvo = false;
+    public bool inConvo = false; //Signals that the player is speaking to an NPC
     [HideInInspector]
-    public DialogueNode activeNode;
+    public DialogueNode activeNode; //Stores the currently displayed node
     [HideInInspector]
-    public GameObject activeNPC;
+    public GameObject activeNPC; //Stores the currently active NPC
 
     //Position vectors for player response UI elements
     private Vector3 response1Position;
@@ -87,18 +87,18 @@ public class DialogueManager : MonoBehaviour
     public bool badEndingReached = false;
 
     [Header("Game Objects and Cameras")]
-    public GameObject dressUpBox;
-    public Camera currentNPCCam;
-    public Camera playerCam;
-    public GameObject player;
-    public GameObject inventoryManager;
+    public GameObject dressUpBox; //Stores the dress up box game object
+    public Camera currentNPCCam; //The current NPC camera being used
+    public Camera playerCam; //The player's camera
+    public GameObject player; //The player game object
+    public GameObject inventoryManager; //The inventory manager game object
 
     [Header("Colours")]
-    public Color unselectedColour;
+    public Color unselectedColour; //Colours used for option selection
     public Color selectedColour;
 
     //Variables for recording player responses
-    private int responseCount = 0;
+    private int responseCount = 0; 
     private bool lastResponsePlayer = false;
     private int lastResponseID;
     private bool firstNode = true;
@@ -373,7 +373,7 @@ public class DialogueManager : MonoBehaviour
 
     void UpdateRep(int repGain) //Called when the reputation levels require updating
     {
-        if (activeNPC == Goon) //Updates rep for Eddie
+        if (activeNPC == eddie) //Updates rep for Eddie
         {
             if (repGain > 0)
             {
@@ -388,7 +388,7 @@ public class DialogueManager : MonoBehaviour
             RM.UpdateReputation(RM.goonPoints += repGain);
             RM.UpdateGoon();
         }
-        if (activeNPC == Femme) //Updates rep for Scarlet
+        if (activeNPC == scarlet) //Updates rep for Scarlet
         {
             if (repGain > 0)
             {
@@ -403,7 +403,7 @@ public class DialogueManager : MonoBehaviour
             RM.UpdateReputation(RM.femmePoints += repGain);
             RM.UpdateFemme();
         }
-        if (activeNPC == JuiceBox) //Updates rep for JuiceBox
+        if (activeNPC == juiceBox) //Updates rep for JuiceBox
         {
             if (repGain > 0)
             {
@@ -420,7 +420,7 @@ public class DialogueManager : MonoBehaviour
             RM.UpdateJuiceBox();
 
         }
-        if (activeNPC == CoolGuy) //Updates rep for Chase
+        if (activeNPC == chase) //Updates rep for Chase
         {
             if (repGain > 0)
             {

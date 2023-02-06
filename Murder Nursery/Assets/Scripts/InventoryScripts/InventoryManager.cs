@@ -9,16 +9,16 @@ public class InventoryManager : MonoBehaviour
     public static InventoryManager inventory;
 
     [SerializeField]
-    Item pinboard;
+    Item pinboard; //Stores the pinboard for the player inventory
 
     [SerializeField]
-    Item jotter;
+    Item jotter; //Stores the jotter for the player inventory
 
     [HideInInspector]
-    public ToggleUIVisibility UIVisibility;
+    public ToggleUIVisibility UIVisibility; 
 
     [SerializeField]
-    public List<Item> items = new List<Item>();
+    public List<Item> items = new List<Item>();//List of items present 
 
     [SerializeField]
     Transform itemContent;
@@ -26,9 +26,9 @@ public class InventoryManager : MonoBehaviour
     [SerializeField]
     GameObject inventoryItem;
 
-    public ItemManager[] inventoryItems;
-    public GameObject blur;
-    public List<GameObject> invItems;
+    public ItemManager[] inventoryItems; //Stores items present in player inventory
+    public GameObject blur; //Background blur object
+    public List<GameObject> invItems; 
 
     private void Awake()
     {
@@ -38,13 +38,13 @@ public class InventoryManager : MonoBehaviour
 
     private void Start()
     {
-        AddItem(pinboard);
-        AddItem(jotter);
+        AddItem(pinboard); //Adds the fundamental items to the player's inventory
+        AddItem(jotter); //''
     }
 
     private void Update()
     {
-        if(Input.GetKeyUp(KeyCode.I))
+        if(Input.GetKeyUp(KeyCode.I))//Used to open and close the player's inventory
         {
             UIVisibility.ToggleInventory();
             if(blur.activeSelf)
@@ -54,13 +54,13 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    public void AddItem(Item item)
+    public void AddItem(Item item) //Called when an item is collected and added to the player's inventory 
     {
         items.Add(item);
         SetInventoryItems(item);
     }
 
-    public void RemoveItem(Item item)
+    public void RemoveItem(Item item) //Called when an item is removed from the player inventory
     {
         items.Remove(item);
         

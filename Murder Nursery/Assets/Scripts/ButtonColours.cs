@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class ButtonColours : MonoBehaviour
+public class ButtonColours : MonoBehaviour //THIS SCRIPT IS CURRENTLY UNUSED AND IS A WORK IN PROGRESS
 {
     public GameObject button1;
     public GameObject button2; 

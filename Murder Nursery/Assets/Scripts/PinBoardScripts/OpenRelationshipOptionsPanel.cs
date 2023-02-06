@@ -130,7 +130,7 @@ public class OpenRelationshipOptionsPanel : MonoBehaviour, IPointerClickHandler
     [SerializeField]
     GameObject eddieEight;
     [SerializeField]
-    GameObject eddiexNine;
+    GameObject eddieNine;
     [SerializeField]
     GameObject eddieTen;
     [SerializeField]
@@ -188,6 +188,7 @@ public class OpenRelationshipOptionsPanel : MonoBehaviour, IPointerClickHandler
         PM = FindObjectOfType<PinboardManager>();
     }
 
+    // Called when ????? is clicked from story section on the pinboard
     public void OnPointerClick(PointerEventData eventData)
     {
         // sets the current object name we clicked on so we know which text to replace in "ReplaceRelationshipText" script
@@ -252,7 +253,7 @@ public class OpenRelationshipOptionsPanel : MonoBehaviour, IPointerClickHandler
         UpdateStory("EddieSix", eddieSix);
         UpdateStory("EddieSeven", eddieSeven);
         UpdateStory("EddieEight", eddieEight);
-        UpdateStory("EddieNine", eddiexNine);
+        UpdateStory("EddieNine", eddieNine);
         UpdateStory("EddieTen", eddieTen);
         UpdateStory("EddieEleven", eddieEleven);
         UpdateStory("EddieTwelve", eddieTwelve);

@@ -12,6 +12,7 @@ public class Item : ScriptableObject
     public Sprite icon;
     public ItemType itemType;
 
+    // determines what the items use function will be
     public enum ItemType
     {
         Bribery,

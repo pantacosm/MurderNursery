@@ -5,9 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuSettings : MonoBehaviour
 {
-    string quality;
-    string index;
-
     public AudioSource cam;
     public AudioClip selectChoice;
 
@@ -16,13 +13,6 @@ public class MainMenuSettings : MonoBehaviour
 
     [HideInInspector]
     public bool menuOpen;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        //quality = "High";
-        //index = "3";
-    }
 
     private void Update()
     {
@@ -49,7 +39,7 @@ public class MainMenuSettings : MonoBehaviour
     // switch case selected based on selected objects name
     void ChangeQualityLevel()
     {
-        quality =  UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name;
+        string quality =  UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name;
 
         switch (quality)
         {
@@ -73,7 +63,7 @@ public class MainMenuSettings : MonoBehaviour
     // switch case selected based on selected objects name
     void ChangeResolution()
     {
-        index = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name;
+        string index = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name;
 
         switch (index)
         {

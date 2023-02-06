@@ -80,6 +80,8 @@ public class InventoryManager : MonoBehaviour
         // sets the item in ItemManager so we can access its UseItem() function
         inventoryItems = itemContent.GetComponentsInChildren<ItemManager>();
 
+        // loops through each item in the inventory to add to the item manager
+        // item manager allows us to get the items type which is required when using the item
         for (int i = 0; i < items.Count; i++)
         {
             inventoryItems[i].AddItem(items[i]);

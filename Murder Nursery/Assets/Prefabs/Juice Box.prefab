@@ -222,7 +222,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3470219180017552491}
   - component: {fileID: 3470219180017552485}
-  - component: {fileID: 3470219180017552490}
   m_Layer: 0
   m_Name: JBCam
   m_TagString: Untagged
@@ -288,14 +287,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &3470219180017552490
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3470219180017552484}
-  m_Enabled: 1
 --- !u!1001 &3470219179318714600
 PrefabInstance:
   m_ObjectHideFlags: 0

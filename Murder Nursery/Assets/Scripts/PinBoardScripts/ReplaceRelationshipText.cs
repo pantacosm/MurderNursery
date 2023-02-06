@@ -28,8 +28,10 @@ public class ReplaceRelationshipText : MonoBehaviour, IPointerClickHandler
         PM = FindObjectOfType<PinboardManager>();
     }
 
+    // Updates unknown story text (?????) with the text clicked on from the story evidence panel
     void UpdateStoryText(string storyString, Transform story, string objectName)
     {
+        // finds the child content relating to the string passed in & checks that object text being replaced is the same as the objectName passed in
         if(content.Find(storyString) && PM.objectNameBeingReplaced == objectName)
         {
             Debug.Log(storyString);
@@ -42,6 +44,8 @@ public class ReplaceRelationshipText : MonoBehaviour, IPointerClickHandler
                     if(name == objectName)
                     {
                         textToReplace = item.GetComponent<TextMeshProUGUI>().text;
+
+                        // updates the text clicked on from the story with the text clicked on from the story evidence panel
                         item.GetComponent<TextMeshProUGUI>().text = item.GetComponent<TextMeshProUGUI>().text.Replace(textToReplace, replacingText);
                         break;
                     }
@@ -51,7 +55,7 @@ public class ReplaceRelationshipText : MonoBehaviour, IPointerClickHandler
         }
     }
 
-
+    // Called when text is clicked from story evidence panel
     public void OnPointerClick(PointerEventData eventData)
     {
         replacingText = gameObject.GetComponent<TextMeshProUGUI>().text;

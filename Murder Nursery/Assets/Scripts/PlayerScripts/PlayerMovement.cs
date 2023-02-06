@@ -45,7 +45,6 @@ public class PlayerMovement : MonoBehaviour
         animator = GetComponent<Animator>();
         inventory = FindObjectOfType<InventoryManager>();
         menu = FindObjectOfType<MainMenuSettings>();
-        //cameraTransform = Camera.main.transform;
 
         // holds a map of inputs for the player
         playerControls = new PlayerControls();
@@ -63,6 +62,7 @@ public class PlayerMovement : MonoBehaviour
         {
             cameraTransform = Camera.main.transform;
         }
+
         isMoving = movement != Vector3.zero;
 
         groundedPlayer = controller.isGrounded;
@@ -99,13 +99,16 @@ public class PlayerMovement : MonoBehaviour
     // Called when we want the player to be able to move (character moves forward in direction camera is facing)
     void HandleMovement()
     {
+        // gets movement input from the input map (keys assigned in Move)
         movementInput = playerControls.PlayerInputMap.Move.ReadValue<Vector2>();
         movement = new Vector3(movementInput.x, 0, movementInput.y);
         movement = cameraTransform.forward * movement.z + cameraTransform.transform.right * movement.x;
         movement.y = 0;
 
+        // adds movement to the players controller transform
         controller.Move(movement * Time.deltaTime * playerSpeed);
 
+        // allows the player to fall from height
         playerVelocity.y += gravityValue * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);
     }

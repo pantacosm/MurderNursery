@@ -77,8 +77,10 @@ public class ReputationManager : MonoBehaviour
     public string[] juiceboxNotes;
     public string[] coolguyNotes;
 
+    // determines our reputation with the character
     public enum FriendshipTier {Bully, Stranger, Classmates, Friends, BestFriends};
 
+    // default rep set to stranger for each character
     [HideInInspector]
     public FriendshipTier goonTier = FriendshipTier.Stranger;
 
@@ -97,8 +99,6 @@ public class ReputationManager : MonoBehaviour
         coolguyNotesContent.gameObject.SetActive(false);
         femmeNotesContent.gameObject.SetActive(false);
         juiceboxNotesContent.gameObject.SetActive(false);
-
-
     }
 
     private void Update()
@@ -262,6 +262,8 @@ public class ReputationManager : MonoBehaviour
     void HandleRep(Transform content, int points)
     {
         // Handles gaining / losing Skull & updating Friendship Tier enum
+
+        // friendship tier set to bully if points are less than 0
         if (points == -1 && content.childCount == 0)
         {
             UpdateRepTier(content, skullPrefab);
@@ -296,6 +298,7 @@ public class ReputationManager : MonoBehaviour
             }
         }
 
+        // Gain a friendship tier depending on amount of points we have with each character
         if(points >= 0 && points < 3)
         {
             if(goonPoints == points)

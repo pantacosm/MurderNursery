@@ -6,11 +6,13 @@ public class ItemManager : MonoBehaviour
 {
     private Item item;
 
+    // Called from inventory manager when an item is picked up
     public void AddItem(Item newItem)
     {
         item = newItem;
     }
 
+    // Destroys the item and removes it from inventory
     public void RemoveItem()
     {
         InventoryManager.inventory.RemoveItem(item);

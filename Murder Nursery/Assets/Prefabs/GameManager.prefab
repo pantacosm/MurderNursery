@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6586933808422567713}
-  - component: {fileID: 6586933808422567712}
   - component: {fileID: 1906126973}
   - component: {fileID: 1906126964}
   - component: {fileID: 1906126965}
@@ -37,19 +36,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6586933808422567712
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6586933808422567719}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d3216afcfe5f3d46b83d534b02b408c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  coolMeter: 0
 --- !u!82 &1906126973
 AudioSource:
   m_ObjectHideFlags: 0
@@ -166,12 +152,12 @@ MonoBehaviour:
   currentCam: {fileID: 0}
   interrogationActive: 0
   noirFilter: {fileID: 0}
+  activeInterrogant: {fileID: 0}
+  interrogationManager: {fileID: 0}
   femmeIntObject: {fileID: 0}
   juiceIntObject: {fileID: 0}
   goonIntObject: {fileID: 0}
   coolIntObject: {fileID: 0}
-  activeInterrogant: {fileID: 0}
-  interrogationManager: {fileID: 0}
 --- !u!114 &1906126965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -261,10 +247,10 @@ MonoBehaviour:
   npcStatement2: {fileID: 0}
   npcStatement3: {fileID: 0}
   npcStatement4: {fileID: 0}
-  Femme: {fileID: 0}
-  JuiceBox: {fileID: 0}
-  Goon: {fileID: 0}
-  CoolGuy: {fileID: 0}
+  scarlet: {fileID: 0}
+  juiceBox: {fileID: 0}
+  eddie: {fileID: 0}
+  chase: {fileID: 0}
   playerAudio: {fileID: 0}
   repLossSound: {fileID: 8300000, guid: d97aa4c972505914191e36449d736f9f, type: 3}
   repGainSound: {fileID: 8300000, guid: 2aa3a4a3d52cd4b41b6a98b2e43bca9e, type: 3}
@@ -316,8 +302,8 @@ MonoBehaviour:
   scarletCam: {fileID: 0}
   chaseCam: {fileID: 0}
   mainGameCam: {fileID: 0}
+  manager: {fileID: 6586933808422567719}
   player: {fileID: 0}
   inIntro: 1
-  manager: {fileID: 6586933808422567719}
   introCam: {fileID: 0}
   introMusic: {fileID: 0}

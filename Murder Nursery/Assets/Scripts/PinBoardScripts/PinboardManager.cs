@@ -10,6 +10,7 @@ public class PinboardManager : MonoBehaviour
 {
     public static PinboardManager pinboard;
 
+    // Used in the sentence completion scripts
     [HideInInspector]
     public string objectNameBeingReplaced;
 

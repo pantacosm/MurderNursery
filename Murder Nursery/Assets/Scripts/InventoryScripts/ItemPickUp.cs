@@ -11,6 +11,7 @@ public class ItemPickUp : MonoBehaviour
 
     private bool canPickUp;
 
+    // adds the item ui to the inventory & destroys its gameObject
     void PickUp()
     {
         InventoryManager.inventory.AddItem(item);
@@ -20,7 +21,7 @@ public class ItemPickUp : MonoBehaviour
 
     private void Update()
     {
-        // once we are in range of an items trigger & press R, the item is added to the players inventory
+        // once we are in range of an items trigger & press E, the item is added to the players inventory
         if(Input.GetKeyUp(KeyCode.E) && canPickUp)
         {
             PickUp();

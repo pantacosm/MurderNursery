@@ -8,13 +8,11 @@ using UnityEngine.UI;
 
 public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
-    [SerializeField]
-    public GameObject itemPrefab;
+    
+    public GameObject itemPrefab; // the item we wish to drag
 
     RectTransform rectTrans;
-
     Canvas myCanvas;
-
     CanvasGroup canvasGroup;
     
     public int itemID;
@@ -30,6 +28,7 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
         
     }
 
+    // Called when object is clicked on
     public void OnBeginDrag(PointerEventData eventData)
     {
         itemPrefab = this.gameObject;
@@ -38,12 +37,14 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
         originalPos = transform.position;
     }
 
+    // Objects transform position follows mouse position
     public void OnDrag(PointerEventData eventData)
     {
         //rectTrans.anchoredPosition += eventData.delta / myCanvas.scaleFactor;
         gameObject.transform.position = Input.mousePosition;
     }
 
+    // Called when mouse click is released
     public void OnEndDrag(PointerEventData eventData)
     {
         canvasGroup.blocksRaycasts = true;
@@ -66,6 +67,7 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
         hoverOverText.SetActive(false);
     }
 
+    // objects position is set back to original position before being dragged
     public void ResetPosition()
     {
         transform.position = originalPos;

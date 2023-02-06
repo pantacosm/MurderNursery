@@ -41,6 +41,8 @@ public class ToggleUIVisibility : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
         }
     }
+
+    // booleans used to determines if UI elements are visible - if so, hide them & vise versa
     public void ToggleInventory()
     {
         
@@ -74,7 +76,7 @@ public class ToggleUIVisibility : MonoBehaviour
         }
     }
 
-    public void TogglePinboard()
+    public void TogglePinboard() // Called when pinboard item clicked from inventory or when X clicked on pinboard
     {
         if(pinboardOpen = !pinboardOpen)
         {
@@ -104,7 +106,7 @@ public class ToggleUIVisibility : MonoBehaviour
         }
     }
 
-    public void ToggleJotter()
+    public void ToggleJotter() // Called when jotter item clicked from inventory or when X clicked on jotter
     {
         if(jotterOpen = !jotterOpen)
         {

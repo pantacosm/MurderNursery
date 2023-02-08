@@ -757,6 +757,14 @@ PrefabInstance:
       value: IndoorLight
       objectReference: {fileID: 0}
     - target: {fileID: 1745976416139509127, guid: f2ef3b592f3443f4face91ed7867a6cf, type: 3}
+      propertyPath: m_Color.b
+      value: 0.7647059
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745976416139509127, guid: f2ef3b592f3443f4face91ed7867a6cf, type: 3}
+      propertyPath: m_Color.g
+      value: 0.9894562
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745976416139509127, guid: f2ef3b592f3443f4face91ed7867a6cf, type: 3}
       propertyPath: m_Shadows.m_Strength
       value: 0.3
       objectReference: {fileID: 0}
@@ -943,6 +951,14 @@ PrefabInstance:
     - target: {fileID: 1745976416139509126, guid: f2ef3b592f3443f4face91ed7867a6cf, type: 3}
       propertyPath: m_Name
       value: IndoorLight (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745976416139509127, guid: f2ef3b592f3443f4face91ed7867a6cf, type: 3}
+      propertyPath: m_Color.b
+      value: 0.7647059
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745976416139509127, guid: f2ef3b592f3443f4face91ed7867a6cf, type: 3}
+      propertyPath: m_Color.g
+      value: 0.9894562
       objectReference: {fileID: 0}
     - target: {fileID: 1745976416139509127, guid: f2ef3b592f3443f4face91ed7867a6cf, type: 3}
       propertyPath: m_Shadows.m_Strength
@@ -1268,6 +1284,14 @@ PrefabInstance:
     - target: {fileID: 1745976416139509126, guid: f2ef3b592f3443f4face91ed7867a6cf, type: 3}
       propertyPath: m_Name
       value: IndoorLight (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745976416139509127, guid: f2ef3b592f3443f4face91ed7867a6cf, type: 3}
+      propertyPath: m_Color.b
+      value: 0.7647059
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745976416139509127, guid: f2ef3b592f3443f4face91ed7867a6cf, type: 3}
+      propertyPath: m_Color.g
+      value: 0.9894562
       objectReference: {fileID: 0}
     - target: {fileID: 1745976416139509127, guid: f2ef3b592f3443f4face91ed7867a6cf, type: 3}
       propertyPath: m_Shadows.m_Strength

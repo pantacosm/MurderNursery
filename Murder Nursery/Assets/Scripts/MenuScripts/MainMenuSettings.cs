@@ -10,6 +10,7 @@ public class MainMenuSettings : MonoBehaviour
 
     public GameObject menuObject;
     public GameObject settingsMenu;
+    public GameObject controlsUI;
 
     [HideInInspector]
     public bool menuOpen;
@@ -85,7 +86,7 @@ public class MainMenuSettings : MonoBehaviour
         }
     }
 
-    // Toggles menu during gameplay (Escape key)
+    // Toggles menu during gameplay (Escape key / Resume Game Button)
     public void ToggleMenu()
     {
         if(menuOpen = !menuOpen)
@@ -103,6 +104,21 @@ public class MainMenuSettings : MonoBehaviour
             Cursor.visible = false;
         }
 
+        if(settingsMenu.activeInHierarchy)
+        {
+            settingsMenu.SetActive(false);
+        }
+
+        if(controlsUI.activeInHierarchy)
+        {
+            controlsUI.SetActive(false);
+        }
+    }
+
+    public void OpenControlsUI()
+    {
+        controlsUI.SetActive(true);
+        
         if(settingsMenu.activeInHierarchy)
         {
             settingsMenu.SetActive(false);

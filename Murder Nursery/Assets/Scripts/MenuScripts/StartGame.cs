@@ -10,6 +10,8 @@ public class StartGame : MonoBehaviour
     public AudioSource cam; //Audio source for start menu
     public AudioClip selectChoice; //Sound used for choosing an option
     public GameObject settingsMenu; //UI element for settings menu
+    public GameObject controlsUI; // UI image of controls
+
     public void Begin() //Used when the player starts the game
     {
         blackFade.gameObject.SetActive(true); 
@@ -49,6 +51,11 @@ public class StartGame : MonoBehaviour
     {
         settingsMenu.SetActive(true);
         cam.PlayOneShot(selectChoice, 0.4f);
+
+        if(controlsUI.activeInHierarchy)
+        {
+            controlsUI.SetActive(false);
+        }
     }
 
     public void CloseSettings() //Closes settings menu
@@ -57,7 +64,7 @@ public class StartGame : MonoBehaviour
         cam.PlayOneShot(selectChoice, 0.4f);
     }
 
-    public void QuitGame() //Quirs the game 
+    public void QuitGame() //Quits the game 
     {
         cam.PlayOneShot(selectChoice, 0.4f);
         if(UnityEngine.Application.isEditor)

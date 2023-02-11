@@ -18,6 +18,15 @@ public class DialogueManager : MonoBehaviour
     public Image item2; //Image for second possible bribe
     public Image singleBribe; //Image used when only a single bribe is available
 
+    [Header("Summary Panel")]
+    public GameObject summaryPanel;
+    public GameObject tick1;
+    public GameObject tick2;
+    public GameObject tick3;    
+    public Image npcSprite;
+    public GameObject npcName;
+    public GameObject npcDescription;
+
     [Header("Player Dialogue Objects")]
     public GameObject playerFirstResponse; //Text containing player's response
     public GameObject playerSecondResponse;//''
@@ -827,5 +836,49 @@ public class DialogueManager : MonoBehaviour
 
         UpdateRollingText();
         LoadNodeInfo(activeNode.children[2]);
+    }
+
+    public void EnterInterrogation()
+    {
+        LoadNodeInfo(activeNPC.GetComponent<NPCDialogue>().interrogationNode);
+        summaryPanel.SetActive(false);
+        
+    }
+
+    public void ToggleSummary()
+    {
+        summaryPanel.SetActive(!summaryPanel.activeSelf);
+        npcName.GetComponent<TextMeshProUGUI>().text = activeNPC.gameObject.name;
+        npcSprite.sprite = activeNPC.GetComponent<NPCDialogue>().sprite;
+        npcDescription.GetComponent<TextMeshProUGUI>().text = activeNPC.GetComponent<NPCDialogue>().description;
+
+        foreach (string evidence in pinBoardManager.GetComponent<PinboardManager>().threadedEvidence)
+        {
+            if (activeNPC.GetComponent<NPCDialogue>().requiredEvidence1 == evidence )
+            {
+                tick1.SetActive(true);
+                
+            }
+            else
+            {
+                tick1.SetActive(false);
+            }
+            if(activeNPC.GetComponent<NPCDialogue>().requiredEvidence2 == evidence )
+            {
+                tick2.SetActive(true);
+            }
+            else
+            {
+                tick2.SetActive(false);
+            }
+            if(activeNPC.GetComponent<NPCDialogue>().requiredEvidence2 == evidence)
+            {
+                tick3.SetActive(true);
+            }
+            else
+            {
+                tick3.SetActive(false);
+            }
+        }
     }
 }

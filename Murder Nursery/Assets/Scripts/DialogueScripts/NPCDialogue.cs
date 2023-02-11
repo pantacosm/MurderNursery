@@ -31,6 +31,13 @@ public class NPCDialogue : MonoBehaviour
     public DialogueNode bribePath; //Successful bribe dialogue path
     public DialogueNode bribeFailPath; //Unsuccessful bribe dialogue path
 
+    public DialogueNode interrogationNode;
+    public string requiredEvidence1;
+    public string requiredEvidence2;
+    public string requiredEvidence3;
+    public string description;
+
+
 
     public void Awake()
     {

@@ -26,6 +26,7 @@ public class Interrogation : MonoBehaviour
     public GameObject npcStatement2;//''
     public Image npcSprite1; //Sprite to display the NPC currently being interrogated
     public Image npcSprite2; //''
+    public GameObject summaryPanel;
 
     [Header("Evidence UI Objects")]
     public GameObject evButton; //UI object holding the evidence screen select button
@@ -465,4 +466,8 @@ public class Interrogation : MonoBehaviour
                 break;
         }
     }
+
+
+
+    
 }

@@ -106,6 +106,9 @@ public class DialogueManager : MonoBehaviour
     public Color unselectedColour; //Colours used for option selection
     public Color selectedColour;
 
+    //Dialogue nodes for saving progress
+    private DialogueNode chaseLastNode = null;
+
     //Variables for recording player responses
     private int responseCount = 0; 
     private bool lastResponsePlayer = false;
@@ -203,8 +206,16 @@ public class DialogueManager : MonoBehaviour
         currentNPCCam.gameObject.SetActive(true); //Changes camera to NPC cam
         playerCam.gameObject.SetActive(false);
         activeNPC = npc;//Updates the active NPC
-        activeNode = startNode; //Updates the active node to the start node of the conversation
-        LoadNodeInfo(startNode); //Loads the node information to the UI elements
+        //if (activeNPC == chase && chaseLastNode != null)
+        {
+            activeNode = chaseLastNode;
+            LoadNodeInfo(chaseLastNode);
+        }
+        //else
+        
+            activeNode = startNode; //Updates the active node to the start node of the conversation
+            LoadNodeInfo(startNode); //Loads the node information to the UI elements
+        
         npcStatement.SetActive(true);
         npcStatement.GetComponent<TextMeshProUGUI>().text = activeNode.speech;
         npcLastResponse1 = activeNode.speech;
@@ -268,13 +279,25 @@ public class DialogueManager : MonoBehaviour
             {
                 playerAudio.PlayOneShot(passOutfitCheckSound, 0.5f);
                 activeNode = newNode.dressUpNode;
+                //if (activeNPC == chase)
+                {
+                    chaseLastNode = activeNode;
+                }
             }
             else activeNode = newNode;
-            
+           // if (activeNPC == chase)
+            {
+                chaseLastNode = activeNode;
+            }
+
         }
         else if (!newNode.fitCheck || !dressUpBox.GetComponent<DressUp>().CheckOutfit(activeNode.requiredOutfit)) //Activates the default node if an outfit check is not present or not passed
         {
             activeNode = newNode;
+           // if (activeNPC == chase)
+            {
+                chaseLastNode = activeNode;
+            }
             
         }
         if (firstNode) //Checks if the node being loaded is the first node of the conversation

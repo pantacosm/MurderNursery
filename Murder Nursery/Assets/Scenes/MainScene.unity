@@ -42095,6 +42095,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 860058438}
     - target: {fileID: 1906126969, guid: 04709edae85b29045bb20e108e46a170, type: 3}
+      propertyPath: chase
+      value: 
+      objectReference: {fileID: 61037226}
+    - target: {fileID: 1906126969, guid: 04709edae85b29045bb20e108e46a170, type: 3}
       propertyPath: item1
       value: 
       objectReference: {fileID: 1116566759}

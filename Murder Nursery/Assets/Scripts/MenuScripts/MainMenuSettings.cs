@@ -12,14 +12,24 @@ public class MainMenuSettings : MonoBehaviour
     public GameObject settingsMenu;
     public GameObject controlsUI;
 
+    DialogueManager DM;
+
     [HideInInspector]
     public bool menuOpen;
+
+    private void Start()
+    {
+        DM = FindObjectOfType<DialogueManager>();
+    }
 
     private void Update()
     {
         if(Input.GetKeyUp(KeyCode.Escape) && SceneManager.GetActiveScene().name == "MainScene")
         {
-            ToggleMenu();
+            if(!DM.dialogueZone.activeInHierarchy)
+            {
+                ToggleMenu();
+            }
         }
     }
 
@@ -115,6 +125,7 @@ public class MainMenuSettings : MonoBehaviour
         }
     }
 
+    // Shows controls image when clicking on "Controls" in the gameplay menu
     public void OpenControlsUI()
     {
         controlsUI.SetActive(true);

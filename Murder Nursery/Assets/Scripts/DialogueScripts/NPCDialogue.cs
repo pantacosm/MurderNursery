@@ -8,7 +8,7 @@ public class NPCDialogue : MonoBehaviour
 {
     public DialogueNode[] dialogueTree = new DialogueNode[27]; //Creates the dialogue tree used to store nodes
     public bool isInteractable = false; //Used to signal if NPC is interactable
-    public bool inConversation = false; //Signals if player is in conversation
+    public bool inConversation; //Signals if player is in conversation
     public GameObject interactionMessage; //The message displayed to the player when in NPC interaction range 
     public GameObject manager;//Stores game manager
     public Camera npcCam; //NPC specific camera 
@@ -46,7 +46,6 @@ public class NPCDialogue : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
         manager = GameObject.FindGameObjectWithTag("Manager"); //Stores manager
         foreach(DialogueNode node in dialogueTree) //Resets dialogue tree locking
             {
@@ -62,25 +61,15 @@ public class NPCDialogue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(isInteractable && Input.GetKeyDown(KeyCode.E) &&!inConversation) //Allows the player to interact with the NPCs
+        if(Input.GetKeyDown(KeyCode.E) && isInteractable)
         {
-            manager.GetComponent<DialogueManager>().StartConversation(dialogueTree[0], this.gameObject, npcCam); //Enters dialogue with chosen NPC
-            inConversation = true;
-            isInteractable = false;
-            
+            ToggleConversation();
         }
-        if(inConversation && Input.GetKeyDown(KeyCode.Escape) && !isInteractable && !interrogationManager.GetComponent<Interrogation>().interrogationUnderway) //Allows the player to leave conversation 
+
+        // reset inConversation boolean when convo ends (useful for when convo ends due to a dialogue option)
+        if(interactionMessage.activeInHierarchy)
         {
-            manager.GetComponent<DialogueManager>().ExitConversation(); //Exits conversation with chosen NPC
-            textureToChange.SetTexture("_DetailAlbedoMap", defaultEmotion);
             inConversation = false;
-            interactionMessage.SetActive(true);
-            manager.GetComponent<DialogueManager>().briberyPanel.SetActive(false);
-            
-        }
-        if(inConversation)
-        {
-            interactionMessage.SetActive(false);
         }
     }
 
@@ -100,7 +89,30 @@ public class NPCDialogue : MonoBehaviour
         {
             isInteractable = false;
             interactionMessage.SetActive(false); //Deactivates NPC interavtion messages 
-            inConversation = false;
+            //inConversation = false;
+        }
+    }
+
+    public void ToggleConversation() // toggles dialogue when interacting with an npc (E key / Return icon button)
+    {
+        if(!inConversation && isInteractable) // start convo
+        {
+            manager.GetComponent<DialogueManager>().StartConversation(dialogueTree[0], this.gameObject, npcCam); //Enters dialogue with chosen NPC
+            inConversation = true;
+            isInteractable = false;
+            interactionMessage.SetActive(false);
+        }
+        else if(inConversation) // end convo
+        {
+            if(!isInteractable && !interrogationManager.GetComponent<Interrogation>().interrogationUnderway) //Allows the player to leave conversation 
+            {
+                manager.GetComponent<DialogueManager>().ExitConversation(); //Exits conversation with chosen NPC
+                textureToChange.SetTexture("_DetailAlbedoMap", defaultEmotion);
+                inConversation = false;
+                interactionMessage.SetActive(true);
+                manager.GetComponent<DialogueManager>().briberyPanel.SetActive(false);
+                Cursor.visible = false;
+            }
         }
     }
 

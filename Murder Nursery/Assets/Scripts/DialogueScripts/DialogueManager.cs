@@ -74,8 +74,6 @@ public class DialogueManager : MonoBehaviour
     public GameObject repLockResponse3; //''
 
     [HideInInspector]
-    public int pos = 0; //Private variable used to store the player's current selected option
-    [HideInInspector]
     public bool inConvo = false; //Signals that the player is speaking to an NPC
     [HideInInspector]
     public DialogueNode activeNode; //Stores the currently displayed node
@@ -118,6 +116,7 @@ public class DialogueManager : MonoBehaviour
     private string lastResponse2;
     private string npcLastResponse1;
     private string npcLastResponse2;
+    private int playerChoice;
 
     //Manager Objects
     [HideInInspector]
@@ -144,7 +143,7 @@ public class DialogueManager : MonoBehaviour
     {
         if(inConvo) //Checks if the player is currently speaking to NPC
         {
-            ContinueConversation(); //Allows the conversation to continue
+            
             Cursor.visible = true; //CURSOR STUFF
             Cursor.lockState = CursorLockMode.None;
         }
@@ -199,9 +198,6 @@ public class DialogueManager : MonoBehaviour
     {
         Cursor.visible = true; //CURSOR STUFF
         player.SetActive(false); //Deactivates the player object for camera reasons
-        pos = 0; //Resets the dialogue selection position indicator
-        playerSecondResponseBox.GetComponent<Image>().color = unselectedColour;
-        playerThirdResponseBox.GetComponent<Image>().color = unselectedColour;
         currentNPCCam = npcCam; 
         currentNPCCam.gameObject.SetActive(true); //Changes camera to NPC cam
         playerCam.gameObject.SetActive(false);
@@ -212,20 +208,12 @@ public class DialogueManager : MonoBehaviour
     
         
         
-            activeNode = startNode; //Updates the active node to the start node of the conversation
-            LoadNodeInfo(startNode); //Loads the node information to the UI elements
+        activeNode = startNode; //Updates the active node to the start node of the conversation
+        LoadNodeInfo(startNode); //Loads the node information to the UI elements
         
         npcStatement.SetActive(true);
         npcStatement.GetComponent<TextMeshProUGUI>().text = activeNode.speech;
         npcLastResponse1 = activeNode.speech;
-        if (startNode.firstPathLocked) //Updates the response selction position if the paths have been moved
-        {
-            pos = 1;
-        }
-        if(startNode.firstPathLocked && startNode.secondPathLocked) //''
-        {
-            pos = 2;
-        }
         dialogueZone.SetActive(true); //Activates the dialogue zone
         npcNameArea.GetComponent<TextMeshProUGUI>().text = npc.name;
         inConvo = true; //Signals that the player is in a conversation
@@ -266,12 +254,12 @@ public class DialogueManager : MonoBehaviour
             repLockResponse3.SetActive(true);
         }
 
-        if (activeNode != null)  
+        if (activeNode != null)
         {
             activeNode.nodeActive = false; //Sets the previous node as inactive
-            
+
         }
-        
+
         if (newNode.fitCheck) //Checks if there is an outfit check on the new node
         {
             if (dressUpBox.GetComponent<DressUp>().CheckOutfit(newNode.requiredOutfit))
@@ -284,7 +272,7 @@ public class DialogueManager : MonoBehaviour
                 }
             }
             else activeNode = newNode;
-           // if (activeNPC == chase)
+            // if (activeNPC == chase)
             {
                 chaseLastNode = activeNode;
             }
@@ -293,11 +281,11 @@ public class DialogueManager : MonoBehaviour
         else if (!newNode.fitCheck || !dressUpBox.GetComponent<DressUp>().CheckOutfit(activeNode.requiredOutfit)) //Activates the default node if an outfit check is not present or not passed
         {
             activeNode = newNode;
-           // if (activeNPC == chase)
+            // if (activeNPC == chase)
             {
                 chaseLastNode = activeNode;
             }
-            
+
         }
         if (firstNode) //Checks if the node being loaded is the first node of the conversation
         {
@@ -307,9 +295,9 @@ public class DialogueManager : MonoBehaviour
         {
             npcLastResponse2 = npcLastResponse1;
             npcLastResponse1 = activeNode.speech;
-            
+
             UpdateRollingText(); //Updates the UI to create the text rolling effect
-            
+
         }
         SwitchEmotion(); //Updates the displayed emotion of the NPC
 
@@ -327,45 +315,40 @@ public class DialogueManager : MonoBehaviour
         {
             playerFirstResponseBox.SetActive(true);
         }
-        if(!activeNode.secondPathLocked) //''
+        if (!activeNode.secondPathLocked) //''
         {
             playerSecondResponseBox.SetActive(true);
         }
-        if(!activeNode.thirdPathLocked) //''
+        if (!activeNode.thirdPathLocked) //''
         {
             playerThirdResponseBox.SetActive(true);
         }
 
-        //UPDATE TO SWITCH STATEMENT
-        if (activeNode.responses.Length == 0) //Updates the UI depending on the number of responses available to the player
+        switch (activeNode.responses.Length) //Updates the UI depending on the number of responses available to the player 
         {
-            playerFirstResponse.GetComponent<TextMeshProUGUI>().text = "Press Escape To Leave Conversation";
-            playerSecondResponseBox.SetActive(false);
-            playerThirdResponseBox.SetActive(false);
-        }
-        if (activeNode.responses.Length == 1) //''
-        {
-            playerSecondResponseBox.SetActive(false);
-            playerThirdResponseBox.SetActive(false);
-        }
-        if (activeNode.responses.Length == 2) //''
-        {
-            playerThirdResponseBox.SetActive(false);
-        }
-        //UPDATE TO SWITCH STATEMENT
-        if (activeNode.responses.Length >= 1) //Updates the player responses displayed depending on the number of responses available and updates the UI 
-        {
-            playerFirstResponse.GetComponent<TextMeshProUGUI>().text = activeNode.responses[0].ToString();
-        }
-        if (activeNode.responses.Length >= 2) //''
-        {
-            playerSecondResponseBox.SetActive(true);
-            playerSecondResponse.GetComponent<TextMeshProUGUI>().text = activeNode.responses[1].ToString();
-        }
-        if (activeNode.responses.Length == 3) //''
-        {
-            playerThirdResponseBox.SetActive(true);
-            playerThirdResponse.GetComponent<TextMeshProUGUI>().text = activeNode.responses[2].ToString();
+            case 0:                                   
+                playerFirstResponse.GetComponent<TextMeshProUGUI>().text = "Press Escape To Leave Conversation";
+                playerSecondResponseBox.SetActive(false);
+                playerThirdResponseBox.SetActive(false);
+                break;
+            case 1:
+                playerSecondResponseBox.SetActive(false);
+                playerThirdResponseBox.SetActive(false);
+                playerFirstResponse.GetComponent<TextMeshProUGUI>().text = activeNode.responses[0].ToString();
+                break;
+            case 2:
+                playerThirdResponseBox.SetActive(false);
+                playerSecondResponseBox.SetActive(true);
+                playerFirstResponse.GetComponent<TextMeshProUGUI>().text = activeNode.responses[0].ToString();
+                playerSecondResponse.GetComponent<TextMeshProUGUI>().text = activeNode.responses[1].ToString();
+                break;
+            case 3:
+                playerFirstResponse.GetComponent<TextMeshProUGUI>().text = activeNode.responses[0].ToString();
+                playerSecondResponseBox.SetActive(true);
+                playerSecondResponse.GetComponent<TextMeshProUGUI>().text = activeNode.responses[1].ToString();
+                playerThirdResponseBox.SetActive(true);
+                playerThirdResponse.GetComponent<TextMeshProUGUI>().text = activeNode.responses[2].ToString();
+                break;
         }
 
         if(activeNode.lockingNode) //Checks if the current node locks responses and updates the UI depending on which nodes are locked
@@ -470,8 +453,6 @@ public class DialogueManager : MonoBehaviour
 
     public void ContinueConversation() //Is called while the player is mid conversation
     {
-        int playerChoice = 4;
-        playerChoice = RecordResponse(); //Records input from the player
 
         if (playerChoice == 0 && activeNode.lockingFirstPath) //Updates the locked status of a node after visiting
         {
@@ -507,7 +488,7 @@ public class DialogueManager : MonoBehaviour
         if(playerChoice == 0|| playerChoice == 1 || playerChoice == 2) // Checks if the player has chosen a response
         {
 
-            pos = 0; //Resets the selection position variable
+            //pos =0; //Resets the selection position variable
             if(activeNode.children.Length > 0)
             {
                 activeNode.nodeVisited = true; //Marks that the node has been visited
@@ -535,123 +516,11 @@ public class DialogueManager : MonoBehaviour
     }
 
     public void EnterInterrogation(GameObject targetNPC) //Enters an interrogation 
-    {
-        
+    {       
         ExitConversation();
         manager.GetComponent<SceneTransition>().ChangeToInterrogation(targetNPC);
-
     }
 
-    public int RecordResponse() //Records the response from the player via keyboard input
-    {
-        int choice = 4;
-        if(pos == 0)
-        {
-            playerFirstResponseBox.GetComponent<Image>().color = Color.green;
-            if (Input.GetKeyUp(KeyCode.DownArrow) && activeNode.responses.Length > 1)
-            {
-                if (activeNode.secondPathLocked)
-                {
-                    pos = pos + 2;
-                    playerAudio.PlayOneShot(changeOptionSound, 0.5f);
-                }
-                else
-                {
-                    pos++;
-                    playerAudio.PlayOneShot(changeOptionSound, 0.5f);
-                }
-                playerFirstResponseBox.GetComponent<Image>().color = unselectedColour;
-            }
-            if(Input.GetKeyUp(KeyCode.Return))
-            {
-                if (relationship >= activeNode.repLevelOption1)
-                {
-                    choice = 0;
-                    lastResponseID = choice;
-                    playerFirstResponseBox.GetComponent<Image>().color = unselectedColour;
-                    print(choice);
-                    return choice;
-                }
-                else if(relationship < activeNode.repLevelOption1)
-                {
-                    print("Rep Level Not High Enough");
-                }
-            }
-        }
-        if (pos == 1)
-        {
-            playerSecondResponseBox.GetComponent<Image>().color = Color.green; ;
-            if (Input.GetKeyDown(KeyCode.UpArrow))
-            {
-                if (!activeNode.firstPathLocked)
-                {
-                    pos--;
-                    playerAudio.PlayOneShot(changeOptionSound, 0.5f);
-                    playerSecondResponseBox.GetComponent<Image>().color = unselectedColour;
-                }
-            }
-            if (Input.GetKeyDown(KeyCode.DownArrow))
-                {
-                if (!activeNode.thirdPathLocked)
-                {
-                    pos++;
-                    playerAudio.PlayOneShot(changeOptionSound, 0.5f);
-                    playerSecondResponseBox.GetComponent<Image>().color = unselectedColour;
-                }
-            }
-            
-            if(Input.GetKeyUp(KeyCode.Return))
-            {
-                if (relationship >= activeNode.repLevelOption2)
-                {
-                    choice = 1;
-                    lastResponseID = choice;
-                    playerSecondResponseBox.GetComponent<Image>().color = unselectedColour;
-                    print(choice);
-                    return choice;
-                }
-                else if (relationship < activeNode.repLevelOption2)
-                {
-                    print("Rep Level Not High Enough");
-                }
-            }
-        }
-        if(pos == 2)
-        {
-            playerThirdResponseBox.GetComponent<Image>().color = Color.green;
-            if(Input.GetKeyUp(KeyCode.UpArrow))
-            {
-                if (activeNode.secondPathLocked)
-                {
-                    pos = pos - 2;
-                    playerAudio.PlayOneShot(changeOptionSound, 0.5f);
-                }
-                else
-                {
-                    pos--;
-                    playerAudio.PlayOneShot(changeOptionSound, 0.5f);
-                }
-                playerThirdResponseBox.GetComponent<Image>().color = unselectedColour;
-            }
-            if (Input.GetKeyUp(KeyCode.Return))
-            {
-                if (relationship >= activeNode.repLevelOption3)
-                {
-                    choice = 2;
-                    lastResponseID = choice;
-                    playerThirdResponseBox.GetComponent<Image>().color = unselectedColour;
-                    print(choice);
-                    return choice;
-                 }
-            else if (relationship < activeNode.repLevelOption3)
-            {
-                print("Rep Level Not High Enough");
-            }
-            }
-        }
-        
-        return choice;
-    }
 
     public void Bribery() // Activates the bribery panel and updates it depending on what items the player possesses
     {
@@ -813,51 +682,22 @@ public class DialogueManager : MonoBehaviour
     public void ClickChoice1() //Allows the player to use mouse for response selection
     {
         
-        responseCount++;
-       
-        if (responseCount >= 1)
-        {
-            lastResponse2 = lastResponse;
-        }
-        lastResponse = activeNode.responses[0];
-        npcLastResponse2 = npcLastResponse1;     
-        npcLastResponse1 = activeNode.speech;
+        playerChoice = 0;
+        ContinueConversation(); //Allows the conversation to continue
         
-        UpdateRollingText();
-        LoadNodeInfo(activeNode.children[0]);
     }
     public void ClickChoice2() //''
     {
+        playerChoice = 1;
+        ContinueConversation(); //Allows the conversation to continue
         
-        responseCount++;
-
-        if (responseCount >= 1)
-        {
-            lastResponse2 = lastResponse;
-        }
-        lastResponse = activeNode.responses[1];
-        npcLastResponse2 = npcLastResponse1;
-        npcLastResponse1 = activeNode.speech;
-
-        UpdateRollingText();
-        LoadNodeInfo(activeNode.children[1]);
     }
 
     public void ClickChoice3() //''
     {
+        playerChoice = 2;
+        ContinueConversation(); //Allows the conversation to continue
         
-        responseCount++;
-
-        if (responseCount >= 1)
-        {
-            lastResponse2 = lastResponse;
-        }
-        lastResponse = activeNode.responses[2];
-        npcLastResponse2 = npcLastResponse1;
-        npcLastResponse1 = activeNode.speech;
-
-        UpdateRollingText();
-        LoadNodeInfo(activeNode.children[2]);
     }
 
     public void EnterInterrogation()

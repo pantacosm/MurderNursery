@@ -674,7 +674,7 @@ MonoBehaviour:
   dialogueTree: []
   isInteractable: 0
   inConversation: 0
-  interactionMessage: {fileID: 0}
+  interactionMessage: {fileID: 1730785441}
   manager: {fileID: 0}
   npcCam: {fileID: 0}
   interrogationManager: {fileID: 0}
@@ -1867,7 +1867,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 8948470476645474874}
+  m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &68178589
@@ -31986,7 +31986,7 @@ MonoBehaviour:
   dialogueTree: []
   isInteractable: 0
   inConversation: 0
-  interactionMessage: {fileID: 0}
+  interactionMessage: {fileID: 1730785441}
   manager: {fileID: 0}
   npcCam: {fileID: 0}
   interrogationManager: {fileID: 0}
@@ -33455,7 +33455,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -79026,7 +79026,6 @@ GameObject:
   - component: {fileID: 8948470475635141536}
   - component: {fileID: 8948470475635141551}
   - component: {fileID: 8948470475635141550}
-  - component: {fileID: 8948470475635141552}
   - component: {fileID: 8948470475635141553}
   m_Layer: 5
   m_Name: PlayerResponse2
@@ -79072,14 +79071,14 @@ MonoBehaviour:
   m_Navigation:
     m_Mode: 0
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 8948470476645474875}
-    m_SelectOnDown: {fileID: 8948470476262730249}
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 0.86666673, g: 0.7686275, b: 0.5764706, a: 1}
+    m_HighlightedColor: {r: 0.6509804, g: 0.5882353, b: 0.46666667, a: 1}
     m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
@@ -79126,7 +79125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9622642, g: 0.9622642, b: 0.9622642, a: 0.5529412}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5529412}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -79143,22 +79142,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &8948470475635141552
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8948470475635141548}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a6aa11500324c845ab5d5204ee3e51c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  button1: {fileID: 8948470476645474874}
-  button2: {fileID: 8948470475635141548}
-  button3: {fileID: 8948470476262730263}
-  manager: {fileID: 1906126960}
 --- !u!61 &8948470475635141553
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -79492,14 +79475,14 @@ MonoBehaviour:
   m_Navigation:
     m_Mode: 0
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 8948470475635141550}
-    m_SelectOnDown: {fileID: 8948470476645474875}
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 0.86274517, g: 0.76470596, b: 0.57254905, a: 1}
+    m_HighlightedColor: {r: 0.6509434, g: 0.58766645, b: 0.46364364, a: 1}
     m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
@@ -79583,7 +79566,6 @@ GameObject:
   - component: {fileID: 8948470476262730251}
   - component: {fileID: 8948470476262730250}
   - component: {fileID: 8948470476262730249}
-  - component: {fileID: 8948470476262730264}
   - component: {fileID: 8948470476262730265}
   m_Layer: 5
   m_Name: PlayerResponse3
@@ -79592,22 +79574,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &8948470476262730264
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8948470476262730263}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a6aa11500324c845ab5d5204ee3e51c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  button1: {fileID: 8948470476645474874}
-  button2: {fileID: 8948470475635141548}
-  button3: {fileID: 8948470476262730263}
-  manager: {fileID: 1906126960}
 --- !u!61 &8948470476262730265
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -79739,7 +79705,6 @@ GameObject:
   - component: {fileID: 8948470476645474877}
   - component: {fileID: 8948470476645474876}
   - component: {fileID: 8948470476645474875}
-  - component: {fileID: 8948470476645474879}
   - component: {fileID: 8948470476645474880}
   m_Layer: 5
   m_Name: PlayerResponse1
@@ -79761,18 +79726,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: -1
+    m_Mode: 0
     m_WrapAround: 0
-    m_SelectOnUp: {fileID: 8948470476262730249}
-    m_SelectOnDown: {fileID: 8948470475635141550}
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_NormalColor: {r: 0.86274517, g: 0.76470596, b: 0.57254905, a: 1}
+    m_HighlightedColor: {r: 0.6509804, g: 0.5882353, b: 0.46666667, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
     m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -79817,7 +79782,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9215687, g: 0.9215687, b: 0.9215687, a: 0.5686275}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5686275}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -79864,22 +79829,6 @@ RectTransform:
   m_AnchoredPosition: {x: 973.5147, y: -636.41223}
   m_SizeDelta: {x: 1479.9785, y: 136.3105}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &8948470476645474879
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8948470476645474874}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a6aa11500324c845ab5d5204ee3e51c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  button1: {fileID: 8948470476645474874}
-  button2: {fileID: 8948470475635141548}
-  button3: {fileID: 8948470476262730263}
-  manager: {fileID: 1906126960}
 --- !u!61 &8948470476645474880
 BoxCollider2D:
   m_ObjectHideFlags: 0

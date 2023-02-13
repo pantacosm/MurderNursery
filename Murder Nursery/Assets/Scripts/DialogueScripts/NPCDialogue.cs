@@ -95,16 +95,9 @@ public class NPCDialogue : MonoBehaviour
 
     public void ToggleConversation() // toggles dialogue when interacting with an npc (E key / Return icon button)
     {
-        if(!inConversation && isInteractable) // start convo
+        if (inConversation) // end convo
         {
-            manager.GetComponent<DialogueManager>().StartConversation(dialogueTree[0], this.gameObject, npcCam); //Enters dialogue with chosen NPC
-            inConversation = true;
-            isInteractable = false;
-            interactionMessage.SetActive(false);
-        }
-        else if(inConversation) // end convo
-        {
-            if(!isInteractable && !interrogationManager.GetComponent<Interrogation>().interrogationUnderway) //Allows the player to leave conversation 
+            if (!isInteractable && !interrogationManager.GetComponent<Interrogation>().interrogationUnderway) //Allows the player to leave conversation 
             {
                 manager.GetComponent<DialogueManager>().ExitConversation(); //Exits conversation with chosen NPC
                 textureToChange.SetTexture("_DetailAlbedoMap", defaultEmotion);
@@ -113,6 +106,13 @@ public class NPCDialogue : MonoBehaviour
                 manager.GetComponent<DialogueManager>().briberyPanel.SetActive(false);
                 Cursor.visible = false;
             }
+        }
+        else if (!inConversation && isInteractable) // start convo
+        {
+            manager.GetComponent<DialogueManager>().StartConversation(dialogueTree[0], this.gameObject, npcCam); //Enters dialogue with chosen NPC
+            inConversation = true;
+            isInteractable = false;
+            interactionMessage.SetActive(false);
         }
     }
 

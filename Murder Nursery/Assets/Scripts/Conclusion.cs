@@ -35,11 +35,6 @@ public class Conclusion : MonoBehaviour
     public GameObject drewMain;
     public GameObject chaseMain;
     public GameObject graceMain;
-    public GameObject eddie; //UPDATE! THESE VARIABLES ARE INVALID
-    public GameObject chase;
-    public GameObject juicebox;
-    public GameObject grace;
-    public GameObject scarlet;
 
     [Header("UI Objects")]
     public GameObject tempText;
@@ -400,7 +395,7 @@ public class Conclusion : MonoBehaviour
             
             blackFade.gameObject.SetActive(true);
             StartCoroutine(BlackTransition(suspectSelectionCam, badEndingCam));
-            StartCoroutine(WaitThenFadeIn(eddie, true));
+            StartCoroutine(WaitThenFadeIn(true));
             eddieMain.SetActive(false);
             scarletMain.SetActive(false);
             drewMain.SetActive(false);
@@ -426,7 +421,7 @@ public class Conclusion : MonoBehaviour
             print("Chase ending here");
             blackFade.gameObject.SetActive(true);
             StartCoroutine(BlackTransition(suspectSelectionCam, badEndingCam));
-            StartCoroutine(WaitThenFadeIn(chase, true));
+            StartCoroutine(WaitThenFadeIn(true));
             eddieMain.SetActive(false);
             scarletMain.SetActive(false);
             drewMain.SetActive(false);
@@ -451,7 +446,7 @@ public class Conclusion : MonoBehaviour
             print("Scarlet ending here");
             blackFade.gameObject.SetActive(true);
             StartCoroutine(BlackTransition(suspectSelectionCam, badEndingCam));
-            StartCoroutine(WaitThenFadeIn(scarlet, true));
+            StartCoroutine(WaitThenFadeIn(true));
             eddieMain.SetActive(false);
             scarletMain.SetActive(false);
             drewMain.SetActive(false);
@@ -475,7 +470,7 @@ public class Conclusion : MonoBehaviour
             print("Juice Box ending here");
             blackFade.gameObject.SetActive(true);
             StartCoroutine(BlackTransition(suspectSelectionCam, badEndingCam));
-            StartCoroutine(WaitThenFadeIn(juicebox, true));
+            StartCoroutine(WaitThenFadeIn(true));
             eddieMain.SetActive(false);
             scarletMain.SetActive(false);
             drewMain.SetActive(false);
@@ -500,7 +495,7 @@ public class Conclusion : MonoBehaviour
             print("Grace ending here");
             blackFade.gameObject.SetActive(true);
             StartCoroutine(BlackTransition(suspectSelectionCam, badEndingCam));
-            StartCoroutine(WaitThenFadeIn(grace, true));
+            StartCoroutine(WaitThenFadeIn(true));
             eddieMain.SetActive(false);
             scarletMain.SetActive(false);
             drewMain.SetActive(false);
@@ -522,7 +517,7 @@ public class Conclusion : MonoBehaviour
 
     }
 
-    public IEnumerator BlackTransition(GameObject currentCam = null, GameObject desiredCam = null, GameObject npcTalking = null, bool startDialogue = false, bool transitionToBlack = true, float fadeSpeed = 1) //Fades or unfades the screen to/from black
+    public IEnumerator BlackTransition(GameObject currentCam = null, GameObject desiredCam = null,  bool startDialogue = false, bool transitionToBlack = true, float fadeSpeed = 1) //Fades or unfades the screen to/from black
     {
         Color screenColour = blackFade.color;
         float fadeProgress;
@@ -597,7 +592,7 @@ public class Conclusion : MonoBehaviour
         }
     }
 
-    public IEnumerator WaitThenFadeIn(GameObject npcTalking = null, bool startDialogue = false, float countdownValue = 2) //Used to wait and visually transition to new area
+    public IEnumerator WaitThenFadeIn(bool startDialogue = false, float countdownValue = 2) //Used to wait and visually transition to new area
     {
         float currentCountdown = countdownValue;
         while (currentCountdown > 0)
@@ -605,7 +600,7 @@ public class Conclusion : MonoBehaviour
             yield return new WaitForSeconds(1);
             currentCountdown--;
         }
-        StartCoroutine(BlackTransition(null, null, npcTalking, startDialogue, false));
+        StartCoroutine(BlackTransition(null, null,  startDialogue, false));
     }
 
     public void EddieChosen() //Signals that the player has accused Eddie

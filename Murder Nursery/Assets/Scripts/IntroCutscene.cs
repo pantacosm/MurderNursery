@@ -24,6 +24,10 @@ public class IntroCutscene : MonoBehaviour
     public GameObject player; //Stores the player game object
     public bool inIntro = true; //Signals that the player is in the intro
     private int progress = 0; //Tracks the player's progress through the intro
+
+    public GameObject initialPos, chasePos, scarletPos, jBPos, eddiePos; // positions for camera to transition to
+
+    readonly List<GameObject> positions = new(); // list of all possible positions
     
     //Intro Dialogue 
     private string playerStatement1 = "There I was, only one day into this new nursery gig, and naptime was callin’ my name somethin’ awful";
@@ -48,6 +52,7 @@ public class IntroCutscene : MonoBehaviour
         dialoguePanel1.SetActive(true);//Activates the intro dialogue UI 
         introTextBox.GetComponent<TextMeshProUGUI>().text = playerStatement1; //Loads the first dialogue piece
         introCam.Play();//Plays the intro music 
+        positions.Add(initialPos);
     }
 
     // Update is called once per frame
@@ -66,19 +71,19 @@ public class IntroCutscene : MonoBehaviour
                 case 2: introTextBox.GetComponent<TextMeshProUGUI>().text = playerStatement4;
                     progress++;
                     break;
-                case 3: ChangeCams(initialCam, eddieCam);
+                case 3: ChangePosition(1); //ChangeCams(initialCam, eddieCam);
                     introTextBox.GetComponent<TextMeshProUGUI>().text = playerStatement5;
                     progress++;
                     break;
-                case 4: ChangeCams(eddieCam, juiceBoxCam);
+                case 4: ChangePosition(4); //ChangeCams(eddieCam, juiceBoxCam);
                     introTextBox.GetComponent<TextMeshProUGUI>().text = playerStatement6;
                     progress++;
                     break;
-                case 5: ChangeCams(juiceBoxCam, scarletCam);
+                case 5: ChangePosition(3); //ChangeCams(juiceBoxCam, scarletCam);
                     introTextBox.GetComponent<TextMeshProUGUI>().text = playerStatement7;
                     progress++;
                     break;
-                case 6: ChangeCams(scarletCam, chaseCam);
+                case 6: ChangePosition(2);//ChangeCams(scarletCam, chaseCam);
                     introTextBox.GetComponent<TextMeshProUGUI>().text = playerStatement8;
                     progress++;
                     break;
@@ -90,7 +95,7 @@ public class IntroCutscene : MonoBehaviour
                     introTextBox2.GetComponent<TextMeshProUGUI>().text = "Teacher: " + teacherStatement;
                     progress++;
                     break;
-                case 9: ChangeCams(chaseCam, initialCam);
+                case 9: ChangePosition(0);//ChangeCams(chaseCam, initialCam);
                     dialoguePanel2.SetActive(false);
                     dialoguePanel1.SetActive(true);
                     introTextBox.GetComponent<TextMeshProUGUI>().text = playerStatement10;
@@ -102,14 +107,52 @@ public class IntroCutscene : MonoBehaviour
                     introCam.Stop();
                     manager.GetComponent<AudioSource>().Play();
                     break;
-
             }
         }
+        MoveCameraPosition();
     }
 
     public void ChangeCams(GameObject currentCam, GameObject newCam) //Changes the camera which is currently active
     {
         currentCam.SetActive(false);
         newCam.SetActive(true);
+    }
+
+    public void ChangePosition(int index)
+    {
+        positions.RemoveAt(0);
+
+        switch(index)
+        {
+            case 0:
+                positions.Add(initialPos);
+                break;
+            case 1:
+                positions.Add(eddiePos);
+                break;
+            case 2:
+                positions.Add(chasePos);
+                break;
+            case 3:
+                positions.Add(scarletPos);
+                break;
+            case 4:
+                positions.Add(jBPos);
+                break;
+        }
+    }
+
+    void MoveCameraPosition()
+    {
+        if(positions.Count > 0 && inIntro)
+        {
+            transform.SetPositionAndRotation(Vector3.Lerp(transform.position,
+                    positions[0].transform.position, 1.5f * Time.deltaTime), Quaternion.Lerp(transform.rotation,
+                    positions[0].transform.rotation, 1.5f * Time.deltaTime));
+        }
+        else
+        {
+            inIntro = false;
+        }
     }
 }

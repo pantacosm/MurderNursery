@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     private Animator animator;
     private InventoryManager inventory;
     private MainMenuSettings menu;
+    IntroCutscene introCam; // allows access to inIntro boolean 
 
     [HideInInspector]
     public GameObject manager;
@@ -45,6 +46,7 @@ public class PlayerMovement : MonoBehaviour
         animator = GetComponent<Animator>();
         inventory = FindObjectOfType<InventoryManager>();
         menu = FindObjectOfType<MainMenuSettings>();
+        introCam = FindObjectOfType<IntroCutscene>();
 
         // holds a map of inputs for the player
         playerControls = new PlayerControls();
@@ -58,7 +60,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if(cameraTransform == null && !manager.GetComponent<IntroCutscene>().inIntro)
+        if(cameraTransform == null && !introCam.inIntro)
         {
             cameraTransform = Camera.main.transform;
         }
@@ -79,7 +81,7 @@ public class PlayerMovement : MonoBehaviour
         // stops player movement & disables camera whilst UI open
         if (inventory.UIVisibility.inventoryOpen || inventory.UIVisibility.pinboardOpen 
             || dialogueZone.activeInHierarchy || manager.GetComponent<SceneTransition>().interrogationActive 
-            || inventory.UIVisibility.jotterOpen || dressUpManager.GetComponent<DressUp>().inDressUp || manager.GetComponent<IntroCutscene>().inIntro
+            || inventory.UIVisibility.jotterOpen || dressUpManager.GetComponent<DressUp>().inDressUp || introCam.inIntro
             || menu.menuOpen)
         {
             animator.Play("Idle");

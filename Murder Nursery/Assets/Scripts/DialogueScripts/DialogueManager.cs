@@ -206,12 +206,11 @@ public class DialogueManager : MonoBehaviour
         currentNPCCam.gameObject.SetActive(true); //Changes camera to NPC cam
         playerCam.gameObject.SetActive(false);
         activeNPC = npc;//Updates the active NPC
-        //if (activeNPC == chase && chaseLastNode != null)
-        {
-            activeNode = chaseLastNode;
-            LoadNodeInfo(chaseLastNode);
-        }
-        //else
+    
+       // activeNode = chaseLastNode;
+       // LoadNodeInfo(chaseLastNode);
+    
+        
         
             activeNode = startNode; //Updates the active node to the start node of the conversation
             LoadNodeInfo(startNode); //Loads the node information to the UI elements

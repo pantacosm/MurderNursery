@@ -13,10 +13,6 @@ public class IntroCutscene : MonoBehaviour
 
     [Header("Cameras")]
     public GameObject initialCam; //Camera's for different perspectives 
-    public GameObject eddieCam;//''
-    public GameObject juiceBoxCam;//''
-    public GameObject scarletCam;//''
-    public GameObject chaseCam;//''
     public GameObject mainGameCam; //Main game camera used by the player
 
     [Header("Intro Variables")]
@@ -43,7 +39,7 @@ public class IntroCutscene : MonoBehaviour
     private string teacherStatement = "Okay kids, I’m popping into the staff room to grab your lunches! I’ll be back in ten minutes, so play nice and get to know your new friend Drew, alright?";
 
     [Header("Audio")]
-    public AudioSource introCam;//Audio source for the intro
+    public AudioSource introAudioSource;//Audio source for the intro
     public AudioClip introMusic; //Music track for the intro 
 
     // Start is called before the first frame update
@@ -51,7 +47,7 @@ public class IntroCutscene : MonoBehaviour
     {
         dialoguePanel1.SetActive(true);//Activates the intro dialogue UI 
         introTextBox.GetComponent<TextMeshProUGUI>().text = playerStatement1; //Loads the first dialogue piece
-        introCam.Play();//Plays the intro music 
+        introAudioSource.Play();//Plays the intro music 
         positions.Add(initialPos);
     }
 
@@ -71,19 +67,19 @@ public class IntroCutscene : MonoBehaviour
                 case 2: introTextBox.GetComponent<TextMeshProUGUI>().text = playerStatement4;
                     progress++;
                     break;
-                case 3: ChangePosition(1); //ChangeCams(initialCam, eddieCam);
+                case 3: ChangePosition(1);
                     introTextBox.GetComponent<TextMeshProUGUI>().text = playerStatement5;
                     progress++;
                     break;
-                case 4: ChangePosition(4); //ChangeCams(eddieCam, juiceBoxCam);
+                case 4: ChangePosition(4); 
                     introTextBox.GetComponent<TextMeshProUGUI>().text = playerStatement6;
                     progress++;
                     break;
-                case 5: ChangePosition(3); //ChangeCams(juiceBoxCam, scarletCam);
+                case 5: ChangePosition(3);
                     introTextBox.GetComponent<TextMeshProUGUI>().text = playerStatement7;
                     progress++;
                     break;
-                case 6: ChangePosition(2);//ChangeCams(scarletCam, chaseCam);
+                case 6: ChangePosition(2);
                     introTextBox.GetComponent<TextMeshProUGUI>().text = playerStatement8;
                     progress++;
                     break;
@@ -95,7 +91,7 @@ public class IntroCutscene : MonoBehaviour
                     introTextBox2.GetComponent<TextMeshProUGUI>().text = "Teacher: " + teacherStatement;
                     progress++;
                     break;
-                case 9: ChangePosition(0);//ChangeCams(chaseCam, initialCam);
+                case 9: ChangePosition(0);
                     dialoguePanel2.SetActive(false);
                     dialoguePanel1.SetActive(true);
                     introTextBox.GetComponent<TextMeshProUGUI>().text = playerStatement10;
@@ -104,7 +100,7 @@ public class IntroCutscene : MonoBehaviour
                 case 10: dialoguePanel1.SetActive(false);
                     inIntro = false;
                     ChangeCams(initialCam, mainGameCam);
-                    introCam.Stop();
+                    introAudioSource.Stop();
                     manager.GetComponent<AudioSource>().Play();
                     break;
             }
@@ -118,6 +114,7 @@ public class IntroCutscene : MonoBehaviour
         newCam.SetActive(true);
     }
 
+    // Changes which transform position the camera will move to based on the index passed in
     public void ChangePosition(int index)
     {
         positions.RemoveAt(0);
@@ -142,6 +139,7 @@ public class IntroCutscene : MonoBehaviour
         }
     }
 
+    // Lerps the position of the camera to the transform position which matches the first element of the positions array
     void MoveCameraPosition()
     {
         if(positions.Count > 0 && inIntro)

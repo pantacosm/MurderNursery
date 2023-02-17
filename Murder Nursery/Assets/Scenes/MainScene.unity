@@ -42566,6 +42566,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 61037226}
     - target: {fileID: 1906126969, guid: 04709edae85b29045bb20e108e46a170, type: 3}
+      propertyPath: eddie
+      value: 
+      objectReference: {fileID: 768203110}
+    - target: {fileID: 1906126969, guid: 04709edae85b29045bb20e108e46a170, type: 3}
       propertyPath: item1
       value: 
       objectReference: {fileID: 1116566759}
@@ -42598,7 +42602,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1154528667}
     - target: {fileID: 1906126969, guid: 04709edae85b29045bb20e108e46a170, type: 3}
+      propertyPath: scarlet
+      value: 
+      objectReference: {fileID: 860058438}
+    - target: {fileID: 1906126969, guid: 04709edae85b29045bb20e108e46a170, type: 3}
       propertyPath: JuiceBox
+      value: 
+      objectReference: {fileID: 4202205716887427193}
+    - target: {fileID: 1906126969, guid: 04709edae85b29045bb20e108e46a170, type: 3}
+      propertyPath: juiceBox
       value: 
       objectReference: {fileID: 4202205716887427193}
     - target: {fileID: 1906126969, guid: 04709edae85b29045bb20e108e46a170, type: 3}

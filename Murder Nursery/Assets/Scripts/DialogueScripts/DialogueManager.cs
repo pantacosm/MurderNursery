@@ -106,6 +106,13 @@ public class DialogueManager : MonoBehaviour
 
     //Dialogue nodes for saving progress
     private DialogueNode chaseLastNode = null;
+    private DialogueNode eddieLastNode = null;
+    private DialogueNode scarletLastNode = null;
+    private DialogueNode juiceBoxLastNode = null;
+    private bool chaseMidConvo = false;
+    private bool eddieMidConvo = false;
+    private bool scarletMidConvo = false;
+    private bool juiceBoxMidConvo = false;
 
     //Variables for recording player responses
     private int responseCount = 0; 
@@ -189,6 +196,27 @@ public class DialogueManager : MonoBehaviour
                     StartCoroutine(manager.GetComponent<Conclusion>().BlackTransition());
                 }
                 
+                
+                if(activeNPC == chase)
+                {
+                    chaseLastNode = null;
+                    chaseMidConvo = false;
+                }
+                if(activeNPC == eddie)
+                {
+                    eddieLastNode = null;
+                    eddieMidConvo = false;
+                }
+                if(activeNPC == scarlet)
+                {
+                    scarletLastNode = null;
+                    scarletMidConvo = false;
+                }
+                if(activeNPC == juiceBox)
+                {
+                    juiceBoxLastNode = null;
+                    juiceBoxMidConvo = false;
+                }
                 ExitConversation(); //Exits the conversation
             }
         }
@@ -202,14 +230,46 @@ public class DialogueManager : MonoBehaviour
         currentNPCCam.gameObject.SetActive(true); //Changes camera to NPC cam
         playerCam.gameObject.SetActive(false);
         activeNPC = npc;//Updates the active NPC
-    
-       // activeNode = chaseLastNode;
-       // LoadNodeInfo(chaseLastNode);
-    
-        
-        
-        activeNode = startNode; //Updates the active node to the start node of the conversation
-        LoadNodeInfo(startNode); //Loads the node information to the UI elements
+        if (activeNPC == chase && chaseLastNode != null)
+        {
+            activeNode = chaseLastNode;
+            LoadNodeInfo(chaseLastNode);
+        }
+        else if (activeNPC == chase && !chaseMidConvo)
+        {
+            activeNode = startNode; //Updates the active node to the start node of the conversation
+            LoadNodeInfo(startNode); //Loads the node information to the UI elements
+        }
+        if (activeNPC == eddie && eddieLastNode != null)
+        {
+            activeNode = eddieLastNode;
+            LoadNodeInfo(eddieLastNode);
+        }
+        else if (activeNPC == eddie && !eddieMidConvo)
+        {
+            activeNode = startNode; //Updates the active node to the start node of the conversation
+            LoadNodeInfo(startNode); //Loads the node information to the UI elements
+        }
+        if(activeNPC == scarlet && scarletLastNode != null)
+        {
+            activeNode = scarletLastNode;
+            LoadNodeInfo(scarletLastNode);
+        }
+        else if (activeNPC == scarlet && !scarletMidConvo)
+        {
+            activeNode = startNode; //Updates the active node to the start node of the conversation
+            LoadNodeInfo(startNode); //Loads the node information to the UI elements
+        }
+        if (activeNPC == juiceBox && juiceBoxLastNode != null)
+        {
+            activeNode = juiceBoxLastNode;
+            LoadNodeInfo(juiceBoxLastNode);
+        }
+        else if (activeNPC == juiceBox && !juiceBoxMidConvo)
+        {
+            activeNode = startNode; //Updates the active node to the start node of the conversation
+            LoadNodeInfo(startNode); //Loads the node information to the UI elements
+        }
         
         npcStatement.SetActive(true);
         npcStatement.GetComponent<TextMeshProUGUI>().text = activeNode.speech;
@@ -224,8 +284,7 @@ public class DialogueManager : MonoBehaviour
     }
 
     public void ExitConversation() //Is called when the conversation is exited
-    {
-        
+    {       
         player.SetActive(true);
         playerCam.gameObject.SetActive(true);
         currentNPCCam.gameObject.SetActive(false);
@@ -266,24 +325,72 @@ public class DialogueManager : MonoBehaviour
             {
                 playerAudio.PlayOneShot(passOutfitCheckSound, 0.5f);
                 activeNode = newNode.dressUpNode;
-                //if (activeNPC == chase)
+                if (activeNPC == chase)
                 {
                     chaseLastNode = activeNode;
+                    chaseMidConvo = true;
+                }
+                if (activeNPC == eddie)
+                {
+                    eddieLastNode = activeNode;
+                    eddieMidConvo = true;
+                }
+                if(activeNPC == scarlet)
+                {
+                    scarletLastNode = activeNode;
+                    scarletMidConvo = true;
+                }
+                if(activeNPC == juiceBox)
+                {
+                    juiceBoxLastNode = activeNode;
+                    juiceBoxMidConvo = true;
                 }
             }
             else activeNode = newNode;
-            // if (activeNPC == chase)
+            if (activeNPC == chase)
             {
                 chaseLastNode = activeNode;
+                chaseMidConvo = true;
+            }
+            if (activeNPC == eddie)
+            {
+                eddieLastNode = activeNode;
+                eddieMidConvo = true;
+            }
+            if (activeNPC == scarlet)
+            {
+                scarletLastNode = activeNode;
+                scarletMidConvo = true;
+            }
+            if (activeNPC == juiceBox)
+            {
+                juiceBoxLastNode = activeNode;
+                juiceBoxMidConvo = true;
             }
 
         }
         else if (!newNode.fitCheck || !dressUpBox.GetComponent<DressUp>().CheckOutfit(activeNode.requiredOutfit)) //Activates the default node if an outfit check is not present or not passed
         {
             activeNode = newNode;
-            // if (activeNPC == chase)
+            if (activeNPC == chase)
             {
                 chaseLastNode = activeNode;
+                chaseMidConvo = true;
+            }
+            if(activeNPC == eddie)
+            {
+                eddieLastNode = activeNode;
+                eddieMidConvo = true;
+            }
+            if(activeNPC == scarlet)
+            {
+                scarletLastNode = activeNode;
+                scarletMidConvo = true;
+            }
+            if (activeNPC == juiceBox)
+            {
+                juiceBoxLastNode = activeNode;
+                juiceBoxMidConvo = true;
             }
 
         }
@@ -487,8 +594,6 @@ public class DialogueManager : MonoBehaviour
 
         if(playerChoice == 0|| playerChoice == 1 || playerChoice == 2) // Checks if the player has chosen a response
         {
-
-            //pos =0; //Resets the selection position variable
             if(activeNode.children.Length > 0)
             {
                 activeNode.nodeVisited = true; //Marks that the node has been visited

@@ -96,6 +96,7 @@ MonoBehaviour:
   itemPrefab: {fileID: 0}
   itemID: 0
   hoverOverText: {fileID: 0}
+  displayText: 
 --- !u!225 &1714450319437036808
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -122,7 +123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   evidenceText: a lovely drawing of Chase
   evidenceFound: 0
-  evidenceID: 0
+  evidenceID: 14
   pinBoardManager: {fileID: 0}
   evidenceList: {fileID: 0}
   evidenceImage: {fileID: 8463248180559462931}

@@ -12,7 +12,7 @@ public class PinboardThread : MonoBehaviour
     public float offsetX; //X axis offset
     public float offsetY; //Y axis offset
 
-    public void MakeLine(float ax, float ay, float bx, float by, Color col) //Method creates a line betweeen two evidence pieces on the pinboard
+    public GameObject MakeLine(float ax, float ay, float bx, float by, Color col) //Method creates a line betweeen two evidence pieces on the pinboard
     {
         GameObject NewObj = new GameObject();
         NewObj.name = "line from " + ax + " to " + bx;
@@ -33,5 +33,6 @@ public class PinboardThread : MonoBehaviour
         rect.rotation = Quaternion.Euler(new Vector3(0, 0, 180 * Mathf.Atan(dif.y / dif.x) / Mathf.PI));
         rect.anchorMin = Vector2.zero;
         rect.anchorMax = Vector2.zero;
+        return NewObj;
     }
 }

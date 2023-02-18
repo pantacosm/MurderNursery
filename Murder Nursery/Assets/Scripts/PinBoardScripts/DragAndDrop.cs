@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
+public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
     
     public GameObject itemPrefab; // the item we wish to drag
@@ -17,7 +17,7 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
     
     public int itemID;
     public GameObject hoverOverText;
-
+    public string displayText;
     private Vector2 originalPos;
 
     private void Start()
@@ -25,16 +25,23 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
         rectTrans = GetComponent<RectTransform>();
         myCanvas = FindObjectOfType<Canvas>();
         canvasGroup = GetComponent<CanvasGroup>();
-        
+        hoverOverText = GameObject.FindGameObjectWithTag("TestText");
     }
 
     // Called when object is clicked on
     public void OnBeginDrag(PointerEventData eventData)
     {
-        itemPrefab = this.gameObject;
-        canvasGroup.blocksRaycasts = false;
-        itemPrefab.GetComponent<Image>().maskable = false;
-        originalPos = transform.position;
+        if (eventData.button == PointerEventData.InputButton.Left)
+        {
+            itemPrefab = this.gameObject;
+            canvasGroup.blocksRaycasts = false;
+            itemPrefab.GetComponent<Image>().maskable = false;
+            originalPos = transform.position;
+            hoverOverText.SetActive(true);
+            hoverOverText.GetComponent<TextMeshProUGUI>().text = displayText;
+            //hoverOverText.transform.position = this.transform.position;
+        }
+        
     }
 
     // Objects transform position follows mouse position
@@ -42,34 +49,30 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
     {
         //rectTrans.anchoredPosition += eventData.delta / myCanvas.scaleFactor;
         gameObject.transform.position = Input.mousePosition;
+       // hoverOverText.transform.position = Input.mousePosition;
     }
 
     // Called when mouse click is released
     public void OnEndDrag(PointerEventData eventData)
     {
+        hoverOverText.SetActive(false);
         canvasGroup.blocksRaycasts = true;
         itemPrefab.GetComponent<Image>().maskable = true;
+        eventData.Reset();
         ResetPosition();
     }
 
-    public void OnPointerDown(PointerEventData eventData)
-    {
-    }
-
-    public void OnMouseOver()
-    {
-        hoverOverText.SetActive(true);
-        hoverOverText.GetComponent<TextMeshProUGUI>().text = this.GetComponent<EvidenceClass>().evidenceText;
-    }
 
     public void OnMouseExit()
     {
-        hoverOverText.SetActive(false);
+        //hoverOverText.SetActive(false);
     }
+
 
     // objects position is set back to original position before being dragged
     public void ResetPosition()
     {
         transform.position = originalPos;
     }
+
 }

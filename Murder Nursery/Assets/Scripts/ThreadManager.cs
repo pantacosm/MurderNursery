@@ -22,9 +22,10 @@ public class ThreadManager : MonoBehaviour
             {
                 if (secondThreadItem.name != "Likes" && secondThreadItem.name != "Dislikes" && secondThreadItem.name != "Events") //Checks if the second item is valid and not a category 
                 {
-                    this.GetComponent<PinboardThread>().MakeLine(firstThreadItem.transform.position.x, firstThreadItem.transform.position.y, secondThreadItem.transform.position.x, secondThreadItem.transform.position.y, Color.red); //Creates the thread
+                    GameObject newThread = this.GetComponent<PinboardThread>().MakeLine(firstThreadItem.transform.position.x, firstThreadItem.transform.position.y, secondThreadItem.transform.position.x, secondThreadItem.transform.position.y, Color.red); //Creates the thread
                     print("Line created");
                     CheckThreadStart(); //Stores the evidence 
+                    secondThreadItem.GetComponent<EvidenceSlot>().thread = newThread;
                     firstThreadItem = null; //Resets the selected items 
                     secondThreadItem = null; //Resets the selected items
                 }

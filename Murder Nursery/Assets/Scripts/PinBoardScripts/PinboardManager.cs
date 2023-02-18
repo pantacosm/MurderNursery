@@ -106,7 +106,7 @@ public class PinboardManager : MonoBehaviour
         newEvidence.GetComponent<DragAndDrop>().itemID = evidence.evidenceID;         
     }
 
-    public void UpdateEvidenceImages(EvidenceClass evidence) //Updates the evidence piboard visually after player interaction
+    public void UpdateEvidenceImages(EvidenceClass evidence) //Updates the evidence pinboard visually after player interaction
     {
         GameObject newImage = Instantiate(evidence.evidenceImage, evidenceList.transform);
         newImage.GetComponent<DragAndDrop>().itemID = evidence.evidenceID;

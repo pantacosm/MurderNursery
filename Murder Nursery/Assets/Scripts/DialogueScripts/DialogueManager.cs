@@ -116,7 +116,7 @@ public class DialogueManager : MonoBehaviour
 
     //Variables for recording player responses
     private int responseCount = 0; 
-    private bool lastResponsePlayer = false;
+    //private bool lastResponsePlayer = false;
     private int lastResponseID;
     private bool firstNode = true;
     private string lastResponse;
@@ -154,6 +154,9 @@ public class DialogueManager : MonoBehaviour
             Cursor.visible = true; //CURSOR STUFF
             Cursor.lockState = CursorLockMode.None;
         }
+
+
+
         if(gainingRep) //Checks if the player is gaining rep and displays the rep increase sprite
         {
             for (int i = 0; i < 1; i++)
@@ -292,6 +295,7 @@ public class DialogueManager : MonoBehaviour
         dialogueZone.SetActive(false);
         inConvo = false;
         ClearDialogue();
+        Cursor.visible = false;
     }
 
     public void LoadNodeInfo(DialogueNode newNode) //Loads the information of the new node

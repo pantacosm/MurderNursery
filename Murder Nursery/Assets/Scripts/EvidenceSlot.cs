@@ -15,7 +15,7 @@ public class EvidenceSlot : MonoBehaviour
     public GameObject prefab;
     public GameObject thread;
 
-    private bool clearing = false;
+    //private bool clearing = false;
     // Start is called before the first frame update
     void Start()
     {

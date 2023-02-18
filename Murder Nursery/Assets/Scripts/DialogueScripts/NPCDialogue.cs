@@ -47,6 +47,7 @@ public class NPCDialogue : MonoBehaviour
     void Start()
     {
         manager = GameObject.FindGameObjectWithTag("Manager"); //Stores manager
+
         foreach(DialogueNode node in dialogueTree) //Resets dialogue tree locking
             {
             node.firstPathLocked = false;
@@ -67,7 +68,7 @@ public class NPCDialogue : MonoBehaviour
         }
 
         // reset inConversation boolean when convo ends (useful for when convo ends due to a dialogue option)
-        if(interactionMessage.activeInHierarchy)
+        if(interactionMessage && interactionMessage.activeInHierarchy)
         {
             inConversation = false;
         }

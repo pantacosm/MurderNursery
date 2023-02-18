@@ -54,12 +54,12 @@ public class Interrogation : MonoBehaviour
     private Vector3 response3Position;
 
     //Variables for recording player responses
-    private int responseCount = 0;
+    //private int responseCount = 0;
     private string lastResponse = null;
-    private string lastResponse2;
+    //private string lastResponse2;
     private string npcLastResponse1;
     private string npcLastResponse2;
-    private bool firstNode = true;
+    //private bool firstNode = true;
     private DialogueNode mostRecentChaseNode;
     private bool firstTry = true;
     private DialogueNode mostRecentEddieNode;
@@ -314,8 +314,8 @@ public class Interrogation : MonoBehaviour
         playerResponse2.GetComponent<TextMeshProUGUI>().text = "";
         playerResponse2.SetActive(false);
         lastResponse = null;
-        lastResponse2 = null;
-        responseCount = 0;
+        //lastResponse2 = null;
+        //responseCount = 0;
     }
 
     public void BringUpEvidencePanel() //Activates the evidence panel UI elements

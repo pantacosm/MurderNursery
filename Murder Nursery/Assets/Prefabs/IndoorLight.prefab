@@ -33,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1745976416139509122
 MeshFilter:
@@ -109,9 +109,9 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.9510961, b: 0.7647059, a: 1}
   m_Intensity: 1
-  m_Range: 10
+  m_Range: 9.98
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -119,9 +119,9 @@ Light:
     m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 0.3
-    m_Bias: 0.05
-    m_NormalBias: 0.4
+    m_Strength: 0.2
+    m_Bias: 0
+    m_NormalBias: 1.26
     m_NearPlane: 0.1
     m_CullingMatrixOverride:
       e00: 1

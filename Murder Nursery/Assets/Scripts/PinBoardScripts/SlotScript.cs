@@ -52,10 +52,10 @@ public class SlotScript : MonoBehaviour, IDropHandler
                         print("Chase Evidence Placed");
                         for (chaseCount = 0; chaseCount < 8; chaseCount++)
                         {
-                            if (pinboardManager.GetComponent<PinboardManager>().chaseEvidenceSlots[chaseCount].GetComponent<EvidenceSlot>().slotFilled)
-                            {
-                                return;
-                            }
+                       //     if (pinboardManager.GetComponent<PinboardManager>().chaseEvidenceSlots[chaseCount].GetComponent<EvidenceSlot>().slotFilled)
+                      //      {
+                      //          return;
+                      //      }
                             if (!pinboardManager.GetComponent<PinboardManager>().chaseEvidenceSlots[chaseCount].GetComponent<EvidenceSlot>().slotFilled)
                             {
                                 pinboardManager.GetComponent<PinboardManager>().chaseEvidenceSlots[chaseCount].GetComponent<Image>().sprite = eventData.pointerDrag.GetComponent<Image>().sprite;
@@ -73,10 +73,10 @@ public class SlotScript : MonoBehaviour, IDropHandler
                         print("Scarlet Evidence Placed");
                         for (scarletCount = 0; scarletCount < 8; scarletCount++)
                         {
-                            if (pinboardManager.GetComponent<PinboardManager>().scarletEvidenceSlots[scarletCount].GetComponent<EvidenceSlot>().slotFilled)
-                            {
-                                return;
-                            }
+                         //   if (pinboardManager.GetComponent<PinboardManager>().scarletEvidenceSlots[scarletCount].GetComponent<EvidenceSlot>().slotFilled)
+                        //    {
+                        //        return;
+                        //    }
                             if (!pinboardManager.GetComponent<PinboardManager>().scarletEvidenceSlots[scarletCount].GetComponent<EvidenceSlot>().slotFilled)
                             {
                                 pinboardManager.GetComponent<PinboardManager>().scarletEvidenceSlots[scarletCount].GetComponent<Image>().sprite = eventData.pointerDrag.GetComponent<Image>().sprite;
@@ -94,10 +94,10 @@ public class SlotScript : MonoBehaviour, IDropHandler
                         print("Eddie Evidence Placed");
                         for (eddieCount = 0; eddieCount < 8; eddieCount++)
                         {
-                            if (pinboardManager.GetComponent<PinboardManager>().eddieEvidenceSlots[eddieCount].GetComponent<EvidenceSlot>().slotFilled)
-                            {
-                                return;
-                            }
+                        //    if (pinboardManager.GetComponent<PinboardManager>().eddieEvidenceSlots[eddieCount].GetComponent<EvidenceSlot>().slotFilled)
+                      //      {
+                       //         return;
+                         //   }
                             if (!pinboardManager.GetComponent<PinboardManager>().eddieEvidenceSlots[eddieCount].GetComponent<EvidenceSlot>().slotFilled)
                             {
                                 pinboardManager.GetComponent<PinboardManager>().eddieEvidenceSlots[eddieCount].GetComponent<Image>().sprite = eventData.pointerDrag.GetComponent<Image>().sprite;
@@ -115,10 +115,10 @@ public class SlotScript : MonoBehaviour, IDropHandler
                         print("Juice Box Evidence Placed");
                         for (juiceBoxCount = 0; juiceBoxCount < 8; juiceBoxCount++)
                         {
-                            if (pinboardManager.GetComponent<PinboardManager>().juiceBoxEvidenceSlots[juiceBoxCount].GetComponent<EvidenceSlot>().slotFilled)
-                            {
-                                return;
-                            }
+                          //  if (pinboardManager.GetComponent<PinboardManager>().juiceBoxEvidenceSlots[juiceBoxCount].GetComponent<EvidenceSlot>().slotFilled)
+                          //  {
+                          //      return;
+                          //  }
                             if (!pinboardManager.GetComponent<PinboardManager>().juiceBoxEvidenceSlots[juiceBoxCount].GetComponent<EvidenceSlot>().slotFilled)
                             {
                                 pinboardManager.GetComponent<PinboardManager>().juiceBoxEvidenceSlots[juiceBoxCount].GetComponent<Image>().sprite = eventData.pointerDrag.GetComponent<Image>().sprite;
@@ -136,10 +136,10 @@ public class SlotScript : MonoBehaviour, IDropHandler
                         print("Grace Evidence Placed");
                         for (graceCount = 0; graceCount < 8; graceCount++)
                         {
-                            if (pinboardManager.GetComponent<PinboardManager>().graceEvidenceSlots[graceCount].GetComponent<EvidenceSlot>().slotFilled)
-                            {
-                                return;
-                            }
+                         //   if (pinboardManager.GetComponent<PinboardManager>().graceEvidenceSlots[graceCount].GetComponent<EvidenceSlot>().slotFilled)
+                         //   {
+                          //      return;
+                          //  }
                             if (!pinboardManager.GetComponent<PinboardManager>().graceEvidenceSlots[graceCount].GetComponent<EvidenceSlot>().slotFilled)
                             {
                                 pinboardManager.GetComponent<PinboardManager>().graceEvidenceSlots[graceCount].GetComponent<Image>().sprite = eventData.pointerDrag.GetComponent<Image>().sprite;
@@ -170,10 +170,10 @@ public class SlotScript : MonoBehaviour, IDropHandler
                         print("Chase Evidence Placed");
                         for (chaseCount = 0; chaseCount < 8; chaseCount++)
                         {
-                            if (pinboardManager.GetComponent<PinboardManager>().chaseEvidenceSlots[chaseCount].GetComponent<EvidenceSlot>().slotFilled)
-                            {
-                                return;
-                            }
+                          //  if (pinboardManager.GetComponent<PinboardManager>().chaseEvidenceSlots[chaseCount].GetComponent<EvidenceSlot>().slotFilled)
+                           // {
+                           //     return;
+                           // }
                             if (!pinboardManager.GetComponent<PinboardManager>().chaseEvidenceSlots[chaseCount].GetComponent<EvidenceSlot>().slotFilled)
                             {
                                 pinboardManager.GetComponent<PinboardManager>().chaseEvidenceSlots[chaseCount].GetComponent<Image>().sprite = eventData.pointerDrag.GetComponent<Image>().sprite;
@@ -191,10 +191,10 @@ public class SlotScript : MonoBehaviour, IDropHandler
                         print("Scarlet Evidence Placed");
                         for (scarletCount = 0; scarletCount < 8; scarletCount++)
                         {
-                            if (pinboardManager.GetComponent<PinboardManager>().scarletEvidenceSlots[scarletCount].GetComponent<EvidenceSlot>().slotFilled)
-                            {
-                                return;
-                            }
+                           // if (pinboardManager.GetComponent<PinboardManager>().scarletEvidenceSlots[scarletCount].GetComponent<EvidenceSlot>().slotFilled)
+                           // {
+                          //      return;
+                          //  }
                             if (!pinboardManager.GetComponent<PinboardManager>().scarletEvidenceSlots[scarletCount].GetComponent<EvidenceSlot>().slotFilled)
                             {
                                 pinboardManager.GetComponent<PinboardManager>().scarletEvidenceSlots[scarletCount].GetComponent<Image>().sprite = eventData.pointerDrag.GetComponent<Image>().sprite;
@@ -213,31 +213,34 @@ public class SlotScript : MonoBehaviour, IDropHandler
                         print("Eddie Evidence Placed");
                         for (eddieCount = 0; eddieCount < 8; eddieCount++)
                         {
-                            if (pinboardManager.GetComponent<PinboardManager>().eddieEvidenceSlots[eddieCount].GetComponent<EvidenceSlot>().slotFilled)
-                            {
-                                return;
-                            }
+                            //if (pinboardManager.GetComponent<PinboardManager>().eddieEvidenceSlots[eddieCount].GetComponent<EvidenceSlot>().slotFilled)
+                          //  {
+                               // return;
+                         //   }
                             if (!pinboardManager.GetComponent<PinboardManager>().eddieEvidenceSlots[eddieCount].GetComponent<EvidenceSlot>().slotFilled)
                             {
                                 pinboardManager.GetComponent<PinboardManager>().eddieEvidenceSlots[eddieCount].GetComponent<Image>().sprite = eventData.pointerDrag.GetComponent<Image>().sprite;
                                 pinboardManager.GetComponent<PinboardManager>().eddieEvidenceSlots[eddieCount].GetComponent<EvidenceSlot>().slotFilled = true;
                                 pinboardManager.GetComponent<PinboardManager>().eddieEvidenceSlots[eddieCount].GetComponent<EvidenceSlot>().evidenceText = eventData.pointerDrag.GetComponent<EvidenceClass>().evidenceText;
                                 pinboardManager.GetComponent<PinboardManager>().eddieEvidenceSlots[eddieCount].GetComponent<EvidenceSlot>().evidenceID = eventData.pointerDrag.GetComponent<EvidenceClass>().evidenceID;
+                                print("Placing 2nd");
                                 placedEddiePieces.Add(Instantiate(eventData.pointerDrag.GetComponent<DragAndDrop>().itemPrefab, content));
+                                
                                 pinboardManager.GetComponent<PinboardManager>().eddieEvidenceSlots[eddieCount].GetComponent<EvidenceSlot>().prefab = placedEddiePieces[eddiePlacedCount];
                                 eddiePlacedCount++;
                                 break;
                             }
+                            
                         }
                         break;
                     case 3:
                         print("Juice Box Evidence Placed");
                         for (juiceBoxCount = 0; juiceBoxCount < 8; juiceBoxCount++)
                         {
-                            if (pinboardManager.GetComponent<PinboardManager>().juiceBoxEvidenceSlots[juiceBoxCount].GetComponent<EvidenceSlot>().slotFilled)
-                            {
-                                return;
-                            }
+                           // if (pinboardManager.GetComponent<PinboardManager>().juiceBoxEvidenceSlots[juiceBoxCount].GetComponent<EvidenceSlot>().slotFilled)
+                            //{
+                             //   return;
+                           // }
                             if (!pinboardManager.GetComponent<PinboardManager>().juiceBoxEvidenceSlots[juiceBoxCount].GetComponent<EvidenceSlot>().slotFilled)
                             {
                                 pinboardManager.GetComponent<PinboardManager>().juiceBoxEvidenceSlots[juiceBoxCount].GetComponent<Image>().sprite = eventData.pointerDrag.GetComponent<Image>().sprite;
@@ -256,10 +259,10 @@ public class SlotScript : MonoBehaviour, IDropHandler
                         print("Grace Evidence Placed");
                         for (graceCount = 0; graceCount < 8; graceCount++)
                         {
-                            if (pinboardManager.GetComponent<PinboardManager>().graceEvidenceSlots[graceCount].GetComponent<EvidenceSlot>().slotFilled)
-                            {
-                                return;
-                            }
+                          //  if (pinboardManager.GetComponent<PinboardManager>().graceEvidenceSlots[graceCount].GetComponent<EvidenceSlot>().slotFilled)
+                           // {
+                           //     return;
+                          //  }
                             if (!pinboardManager.GetComponent<PinboardManager>().graceEvidenceSlots[graceCount].GetComponent<EvidenceSlot>().slotFilled)
                             {
                                 pinboardManager.GetComponent<PinboardManager>().graceEvidenceSlots[graceCount].GetComponent<Image>().sprite = eventData.pointerDrag.GetComponent<Image>().sprite;

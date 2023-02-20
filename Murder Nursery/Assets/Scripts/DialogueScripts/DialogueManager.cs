@@ -22,7 +22,9 @@ public class DialogueManager : MonoBehaviour
     public GameObject summaryPanel;
     public GameObject tick1;
     public GameObject tick2;
-    public GameObject tick3;    
+    public GameObject tick3;  
+    public GameObject tick4;
+    public GameObject tick5;
     public Image npcSprite;
     public GameObject npcName;
     public GameObject npcDescription;
@@ -295,7 +297,6 @@ public class DialogueManager : MonoBehaviour
         dialogueZone.SetActive(false);
         inConvo = false;
         ClearDialogue();
-        Cursor.visible = false;
     }
 
     public void LoadNodeInfo(DialogueNode newNode) //Loads the information of the new node
@@ -842,13 +843,29 @@ public class DialogueManager : MonoBehaviour
             {
                 tick2.SetActive(false);
             }
-            if(activeNPC.GetComponent<NPCDialogue>().requiredEvidence2 == evidence)
+            if(activeNPC.GetComponent<NPCDialogue>().requiredEvidence3 == evidence)
             {
                 tick3.SetActive(true);
             }
             else
             {
                 tick3.SetActive(false);
+            }
+            if(activeNPC.GetComponent<NPCDialogue>().requiredEvidence4 == evidence)
+            {
+                tick4.SetActive(true);
+            }
+            else
+            {
+                tick4.SetActive(false);
+            }
+            if(activeNPC.GetComponent<NPCDialogue>().requiredEvidence5 == evidence)
+            {
+                tick5.SetActive(true);
+            }
+            else
+            {
+                tick5.SetActive(false);
             }
         }
     }

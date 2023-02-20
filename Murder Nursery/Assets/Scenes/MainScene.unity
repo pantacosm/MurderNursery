@@ -590,6 +590,8 @@ MonoBehaviour:
   requiredEvidence1: 
   requiredEvidence2: 
   requiredEvidence3: 
+  requiredEvidence4: 
+  requiredEvidence5: 
   description: Chase is a real jock but I bet he's not as dumb as he looks. He coud
     be hiding something!
 --- !u!1001 &27609086
@@ -10015,6 +10017,8 @@ MonoBehaviour:
   requiredEvidence1: 
   requiredEvidence2: 
   requiredEvidence3: 
+  requiredEvidence4: 
+  requiredEvidence5: 
   description: Chase is a real jock but I bet he's not as dumb as he looks. He coud
     be hiding something!
 --- !u!136 &361309824
@@ -14452,6 +14456,82 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 527249527}
   m_CullTransparentMesh: 1
+--- !u!1 &528173243
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 528173244}
+  - component: {fileID: 528173246}
+  - component: {fileID: 528173245}
+  m_Layer: 5
+  m_Name: Tick
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &528173244
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528173243}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1591536931}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 25, y: 21}
+  m_SizeDelta: {x: 250, y: 300}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &528173245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528173243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 3fe91702e213d324c8859b5d22a356d4, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &528173246
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528173243}
+  m_CullTransparentMesh: 1
 --- !u!1 &530614541
 GameObject:
   m_ObjectHideFlags: 0
@@ -15868,6 +15948,8 @@ RectTransform:
   - {fileID: 2063650920}
   - {fileID: 862204380}
   - {fileID: 32574933}
+  - {fileID: 794258071}
+  - {fileID: 1591536931}
   m_Father: {fileID: 1430613555}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -16081,6 +16163,14 @@ PrefabInstance:
       objectReference: {fileID: 3499891356269125111, guid: a7bbfebf2c57a63458b87cd95fa130b7, type: 3}
     - target: {fileID: 1247166577472143931, guid: 0ccfe2584ae8d3348baa971558f62141, type: 3}
       propertyPath: requiredEvidence1
+      value: works for chase
+      objectReference: {fileID: 0}
+    - target: {fileID: 1247166577472143931, guid: 0ccfe2584ae8d3348baa971558f62141, type: 3}
+      propertyPath: requiredEvidence2
+      value: sharing
+      objectReference: {fileID: 0}
+    - target: {fileID: 1247166577472143931, guid: 0ccfe2584ae8d3348baa971558f62141, type: 3}
+      propertyPath: requiredEvidence4
       value: a picture of Scarlet with question marks
       objectReference: {fileID: 0}
     - target: {fileID: 1247166577472143931, guid: 0ccfe2584ae8d3348baa971558f62141, type: 3}
@@ -19524,6 +19614,83 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ad0d89bc64a26a438160ff1e1e465db, type: 3}
+--- !u!1 &794258070
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 794258071}
+  - component: {fileID: 794258073}
+  - component: {fileID: 794258072}
+  m_Layer: 5
+  m_Name: EvidencePiece4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &794258071
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 794258070}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1125345126}
+  m_Father: {fileID: 611140189}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 750, y: 0}
+  m_SizeDelta: {x: 300, y: 300}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &794258072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 794258070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 2131738506, guid: 15eb79f67c166dc42a2a7c1bfeea5976, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &794258073
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 794258070}
+  m_CullTransparentMesh: 1
 --- !u!1 &795160831
 GameObject:
   m_ObjectHideFlags: 0
@@ -34263,6 +34430,82 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1122971300}
   m_CullTransparentMesh: 1
+--- !u!1 &1125345125
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1125345126}
+  - component: {fileID: 1125345128}
+  - component: {fileID: 1125345127}
+  m_Layer: 5
+  m_Name: Tick
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1125345126
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1125345125}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 794258071}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 25, y: 21}
+  m_SizeDelta: {x: 250, y: 300}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1125345127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1125345125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 3fe91702e213d324c8859b5d22a356d4, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1125345128
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1125345125}
+  m_CullTransparentMesh: 1
 --- !u!1 &1127861290
 GameObject:
   m_ObjectHideFlags: 0
@@ -35551,6 +35794,8 @@ MonoBehaviour:
   requiredEvidence1: 
   requiredEvidence2: 
   requiredEvidence3: 
+  requiredEvidence4: 
+  requiredEvidence5: 
   description: Chase is a real jock but I bet he's not as dumb as he looks. He coud
     be hiding something!
 --- !u!1 &1188349438
@@ -45505,7 +45750,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 938, y: 358}
+  m_AnchoredPosition: {x: 1000, y: 358}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1531746058
@@ -46188,6 +46433,83 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8199988418148646562, guid: c858cac0aa9299c49a653595c47f7dcd, type: 3}
   m_PrefabInstance: {fileID: 8199988416706528946}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1591536930
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1591536931}
+  - component: {fileID: 1591536933}
+  - component: {fileID: 1591536932}
+  m_Layer: 5
+  m_Name: EvidencePiece5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1591536931
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1591536930}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 528173244}
+  m_Father: {fileID: 611140189}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1250, y: 0}
+  m_SizeDelta: {x: 300, y: 300}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1591536932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1591536930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 2131738506, guid: 15eb79f67c166dc42a2a7c1bfeea5976, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1591536933
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1591536930}
+  m_CullTransparentMesh: 1
 --- !u!1 &1597744526
 GameObject:
   m_ObjectHideFlags: 0
@@ -47148,7 +47470,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 493, y: 358}
+  m_AnchoredPosition: {x: 500, y: 358}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1661148275
@@ -47272,6 +47594,8 @@ MonoBehaviour:
   requiredEvidence1: 
   requiredEvidence2: 
   requiredEvidence3: 
+  requiredEvidence4: 
+  requiredEvidence5: 
   description: Chase is a real jock but I bet he's not as dumb as he looks. He coud
     be hiding something!
 --- !u!136 &1661519763
@@ -49902,6 +50226,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1914109020}
     - target: {fileID: 1906126969, guid: 04709edae85b29045bb20e108e46a170, type: 3}
+      propertyPath: tick4
+      value: 
+      objectReference: {fileID: 1125345125}
+    - target: {fileID: 1906126969, guid: 04709edae85b29045bb20e108e46a170, type: 3}
+      propertyPath: tick5
+      value: 
+      objectReference: {fileID: 528173243}
+    - target: {fileID: 1906126969, guid: 04709edae85b29045bb20e108e46a170, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 993592945}
@@ -50510,6 +50842,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2800000, guid: cfd4ac54342fbc34fa19d77afacbb6a0, type: 3}
     - target: {fileID: 6433059971483124854, guid: 54b16d245329ed24fb0d7ed65d2f5cff, type: 3}
+      propertyPath: description
+      value: A goon
+      objectReference: {fileID: 0}
+    - target: {fileID: 6433059971483124854, guid: 54b16d245329ed24fb0d7ed65d2f5cff, type: 3}
       propertyPath: angryEmotion
       value: 
       objectReference: {fileID: 2800000, guid: f85a103815dd78e489917a7fc49a39ba, type: 3}
@@ -50545,6 +50881,26 @@ PrefabInstance:
       propertyPath: thinkingEmotion
       value: 
       objectReference: {fileID: 2800000, guid: ae734ffab6377814db52c450eb5e128a, type: 3}
+    - target: {fileID: 6433059971483124854, guid: 54b16d245329ed24fb0d7ed65d2f5cff, type: 3}
+      propertyPath: requiredEvidence1
+      value: a broken arm
+      objectReference: {fileID: 0}
+    - target: {fileID: 6433059971483124854, guid: 54b16d245329ed24fb0d7ed65d2f5cff, type: 3}
+      propertyPath: requiredEvidence2
+      value: witness to an accident
+      objectReference: {fileID: 0}
+    - target: {fileID: 6433059971483124854, guid: 54b16d245329ed24fb0d7ed65d2f5cff, type: 3}
+      propertyPath: requiredEvidence3
+      value: in an on-off relationship
+      objectReference: {fileID: 0}
+    - target: {fileID: 6433059971483124854, guid: 54b16d245329ed24fb0d7ed65d2f5cff, type: 3}
+      propertyPath: requiredEvidence4
+      value: works for chase
+      objectReference: {fileID: 0}
+    - target: {fileID: 6433059971483124854, guid: 54b16d245329ed24fb0d7ed65d2f5cff, type: 3}
+      propertyPath: requiredEvidence5
+      value: a mean drawing of Chase
+      objectReference: {fileID: 0}
     - target: {fileID: 6433059971483124854, guid: 54b16d245329ed24fb0d7ed65d2f5cff, type: 3}
       propertyPath: interactionMessage
       value: 
@@ -51023,6 +51379,26 @@ PrefabInstance:
       propertyPath: thinkingEmotion
       value: 
       objectReference: {fileID: 2800000, guid: 12bae63f9c23b6d4c87e60a5ef72d236, type: 3}
+    - target: {fileID: 8639815407638529142, guid: ec29c44ed3bb89647840c47cd92a3f03, type: 3}
+      propertyPath: requiredEvidence1
+      value: a mean drawing of Grace
+      objectReference: {fileID: 0}
+    - target: {fileID: 8639815407638529142, guid: ec29c44ed3bb89647840c47cd92a3f03, type: 3}
+      propertyPath: requiredEvidence2
+      value: devil horns on a picture of Grace
+      objectReference: {fileID: 0}
+    - target: {fileID: 8639815407638529142, guid: ec29c44ed3bb89647840c47cd92a3f03, type: 3}
+      propertyPath: requiredEvidence3
+      value: a lovely drawing of Scarlet
+      objectReference: {fileID: 0}
+    - target: {fileID: 8639815407638529142, guid: ec29c44ed3bb89647840c47cd92a3f03, type: 3}
+      propertyPath: requiredEvidence4
+      value: being the favourite
+      objectReference: {fileID: 0}
+    - target: {fileID: 8639815407638529142, guid: ec29c44ed3bb89647840c47cd92a3f03, type: 3}
+      propertyPath: requiredEvidence5
+      value: not violent
+      objectReference: {fileID: 0}
     - target: {fileID: 8639815407638529142, guid: ec29c44ed3bb89647840c47cd92a3f03, type: 3}
       propertyPath: interactionMessage
       value: 
@@ -64558,7 +64934,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1382, y: 358}
+  m_AnchoredPosition: {x: 1500, y: 358}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2063650921
@@ -80313,6 +80689,26 @@ PrefabInstance:
       propertyPath: menu
       value: 
       objectReference: {fileID: 38231812}
+    - target: {fileID: 754786286120696362, guid: 2807d3a4f81fe0a4f80ccff67f7ff649, type: 3}
+      propertyPath: description
+      value: An artist
+      objectReference: {fileID: 0}
+    - target: {fileID: 754786286120696362, guid: 2807d3a4f81fe0a4f80ccff67f7ff649, type: 3}
+      propertyPath: requiredEvidence2
+      value: a broken arm
+      objectReference: {fileID: 0}
+    - target: {fileID: 754786286120696362, guid: 2807d3a4f81fe0a4f80ccff67f7ff649, type: 3}
+      propertyPath: requiredEvidence3
+      value: a lovely drawing of Juice Box
+      objectReference: {fileID: 0}
+    - target: {fileID: 754786286120696362, guid: 2807d3a4f81fe0a4f80ccff67f7ff649, type: 3}
+      propertyPath: requiredEvidence4
+      value: a plea to stop drinking
+      objectReference: {fileID: 0}
+    - target: {fileID: 754786286120696362, guid: 2807d3a4f81fe0a4f80ccff67f7ff649, type: 3}
+      propertyPath: requiredEvidence5
+      value: a mean drawing of Juice Box
+      objectReference: {fileID: 0}
     - target: {fileID: 754786286120696362, guid: 2807d3a4f81fe0a4f80ccff67f7ff649, type: 3}
       propertyPath: interactionMessage
       value: 

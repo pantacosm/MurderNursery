@@ -35,6 +35,8 @@ public class NPCDialogue : MonoBehaviour
     public string requiredEvidence1;
     public string requiredEvidence2;
     public string requiredEvidence3;
+    public string requiredEvidence4;
+    public string requiredEvidence5;
     public string description;
 
 

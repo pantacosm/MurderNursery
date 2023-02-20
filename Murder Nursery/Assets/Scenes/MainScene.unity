@@ -16118,8 +16118,10 @@ PrefabInstance:
       objectReference: {fileID: 2800000, guid: 82ccbc2eb3e31ce48bedfa6d44853a77, type: 3}
     - target: {fileID: 1247166577472143931, guid: 0ccfe2584ae8d3348baa971558f62141, type: 3}
       propertyPath: description
-      value: Chase is a real jock but I bet he's not as dumb as he looks. He coud
-        be hiding something
+      value: Chase is the stereotypical jock. Strong, silent type who isn't easy
+        to get talking. One thing's for sure though, he's not as dumb as he looks.
+        There's a fierce competitive spirit in there and the right questions might
+        just get him to say something he shouldn't.
       objectReference: {fileID: 0}
     - target: {fileID: 1247166577472143931, guid: 0ccfe2584ae8d3348baa971558f62141, type: 3}
       propertyPath: angryEmotion
@@ -50843,7 +50845,10 @@ PrefabInstance:
       objectReference: {fileID: 2800000, guid: cfd4ac54342fbc34fa19d77afacbb6a0, type: 3}
     - target: {fileID: 6433059971483124854, guid: 54b16d245329ed24fb0d7ed65d2f5cff, type: 3}
       propertyPath: description
-      value: A goon
+      value: This is a real nasty piece of work. Suited up and ready to crack heads,
+        Eddie doesn't mess around and doesn't appreciate questions. He follows orders
+        well, but struggles to come up with an original thought. That might be for
+        the best.
       objectReference: {fileID: 0}
     - target: {fileID: 6433059971483124854, guid: 54b16d245329ed24fb0d7ed65d2f5cff, type: 3}
       propertyPath: angryEmotion
@@ -51343,9 +51348,11 @@ PrefabInstance:
       objectReference: {fileID: 2800000, guid: d8f5ecb49ce60e74dae16387f2b377c3, type: 3}
     - target: {fileID: 8639815407638529142, guid: ec29c44ed3bb89647840c47cd92a3f03, type: 3}
       propertyPath: description
-      value: Scarlet is Scarlet who is Scarlet whilst also being Scarlet who does
-        a fantastic impression of Scarlet playing at being Scarlet reacting to Scarlet's
-        joke about two Scarlet's walking into a bar.
+      value: Scarlet is the self-crowned queen bee of the classroom, and isn't too
+        willing to share the spotlight. She takes a lot of pride in her appearance
+        and ability to charm boys, but her nastier side is never too far from appearing.
+        Infamously the gossip of the nursery, she's probably the first to ask for
+        any potential leads. You just never know if it's going to be true...
       objectReference: {fileID: 0}
     - target: {fileID: 8639815407638529142, guid: ec29c44ed3bb89647840c47cd92a3f03, type: 3}
       propertyPath: angryEmotion
@@ -80691,7 +80698,10 @@ PrefabInstance:
       objectReference: {fileID: 38231812}
     - target: {fileID: 754786286120696362, guid: 2807d3a4f81fe0a4f80ccff67f7ff649, type: 3}
       propertyPath: description
-      value: An artist
+      value: First name Juice, last name Box. Nobody knows this kid's real name,
+        but then, nobody needs to. He's the loner, the outcast of the class, with
+        a strong and unpredicable personality that many find offputting. Maybe all
+        he needs is a friend to start talking?
       objectReference: {fileID: 0}
     - target: {fileID: 754786286120696362, guid: 2807d3a4f81fe0a4f80ccff67f7ff649, type: 3}
       propertyPath: requiredEvidence2

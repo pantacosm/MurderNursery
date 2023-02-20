@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     private Animator animator;
     private InventoryManager inventory;
     private MainMenuSettings menu;
+    private MagnifyingGlass MG;
 
     public GameObject introCam; // allows access to inIntro boolean 
 
@@ -47,6 +48,7 @@ public class PlayerMovement : MonoBehaviour
         animator = GetComponent<Animator>();
         inventory = FindObjectOfType<InventoryManager>();
         menu = FindObjectOfType<MainMenuSettings>();
+        MG = GetComponent<MagnifyingGlass>();
 
         // holds a map of inputs for the player
         playerControls = new PlayerControls();
@@ -108,11 +110,16 @@ public class PlayerMovement : MonoBehaviour
         movement.y = 0;
 
         // adds movement to the players controller transform
-        controller.Move(movement * Time.deltaTime * playerSpeed);
+        controller.Move(playerSpeed * Time.deltaTime * movement);
 
         // allows the player to fall from height
         playerVelocity.y += gravityValue * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);
+
+        if(MG.usingMagnifyingGlass)
+        {
+            HandleFirstPersonMovement();
+        }
     }
 
     void HandleAnimation()
@@ -129,7 +136,18 @@ public class PlayerMovement : MonoBehaviour
             velocity = Mathf.Clamp(velocity, 0, 1);
         }
 
-        animator.SetFloat("Velocity", velocity);
+        if(!MG.usingMagnifyingGlass)
+        {
+            animator.SetFloat("Velocity", velocity);
+        }
+    }
+
+    void HandleFirstPersonMovement()
+    {
+        Quaternion rotation = cameraTransform.rotation;
+        rotation.x = 0;
+        rotation.z = 0;
+        transform.SetLocalPositionAndRotation(movement, rotation);
     }
 
     // enables / disables input system
@@ -142,6 +160,8 @@ public class PlayerMovement : MonoBehaviour
     {
         playerControls.PlayerInputMap.Disable();
     }
+
+    
 
    
 }

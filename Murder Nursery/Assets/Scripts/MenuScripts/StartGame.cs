@@ -67,13 +67,14 @@ public class StartGame : MonoBehaviour
     public void QuitGame() //Quits the game 
     {
         cam.PlayOneShot(selectChoice, 0.4f);
-        if(UnityEngine.Application.isEditor)
-        {
-            UnityEditor.EditorApplication.isPlaying = false;
-        }
-        else
-        {
+       // if(UnityEngine.Application.isEditor)
+      //  {
+       //     UnityEditor.EditorApplication.isPlaying = false;
+            
+      //  }
+       // else
+       // {
             Application.Quit();
-        }
+       // }
     }
 }

@@ -6,6 +6,8 @@ public class ItemManager : MonoBehaviour
 {
     private Item item;
 
+
+
     // Called from inventory manager when an item is picked up
     public void AddItem(Item newItem)
     {
@@ -35,7 +37,7 @@ public class ItemManager : MonoBehaviour
                 RemoveItem();
                 break;
             case Item.ItemType.MagnifyingGlass:
-                // Used for investigating
+                InventoryManager.inventory.MG.GetComponent<MagnifyingGlass>().ToggleMagnifyingGlass();
                 break;
             case Item.ItemType.PinBoard:
                 InventoryManager.inventory.UIVisibility.TogglePinboard();

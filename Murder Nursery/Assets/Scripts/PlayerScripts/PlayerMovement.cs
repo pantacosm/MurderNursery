@@ -10,7 +10,9 @@ public class PlayerMovement : MonoBehaviour
     private Animator animator;
     private InventoryManager inventory;
     private MainMenuSettings menu;
-    private MagnifyingGlass MG;
+
+
+    public GameObject MG; // magnifying glass object
 
     public GameObject introCam; // allows access to inIntro boolean 
 
@@ -48,7 +50,6 @@ public class PlayerMovement : MonoBehaviour
         animator = GetComponent<Animator>();
         inventory = FindObjectOfType<InventoryManager>();
         menu = FindObjectOfType<MainMenuSettings>();
-        MG = GetComponent<MagnifyingGlass>();
 
         // holds a map of inputs for the player
         playerControls = new PlayerControls();
@@ -116,7 +117,7 @@ public class PlayerMovement : MonoBehaviour
         playerVelocity.y += gravityValue * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);
 
-        if(MG.usingMagnifyingGlass)
+        if(MG.GetComponent<MagnifyingGlass>().usingMagnifyingGlass)
         {
             HandleFirstPersonMovement();
         }
@@ -136,7 +137,7 @@ public class PlayerMovement : MonoBehaviour
             velocity = Mathf.Clamp(velocity, 0, 1);
         }
 
-        if(!MG.usingMagnifyingGlass)
+        if(!MG.GetComponent<MagnifyingGlass>().usingMagnifyingGlass)
         {
             animator.SetFloat("Velocity", velocity);
         }

@@ -8,11 +8,17 @@ public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager inventory;
 
+    
+    public GameObject MG; // allows access to magnifying glass script
+
     [SerializeField]
     Item pinboard; //Stores the pinboard for the player inventory
 
     [SerializeField]
     Item jotter; //Stores the jotter for the player inventory
+
+    [SerializeField]
+    Item mGlass; // Stores the magnifying glass in the player inventory
 
     [HideInInspector]
     public ToggleUIVisibility UIVisibility; 
@@ -40,6 +46,7 @@ public class InventoryManager : MonoBehaviour
     {
         AddItem(pinboard); //Adds the fundamental items to the player's inventory
         AddItem(jotter); //''
+        AddItem(mGlass); //''
     }
 
     private void Update()

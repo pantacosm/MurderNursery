@@ -5,6 +5,8 @@ using TMPro;
 
 public class MagnifyingGlass : MonoBehaviour
 {
+    PinboardManager PM;
+
     public bool usingMagnifyingGlass;
 
     [SerializeField]
@@ -15,14 +17,29 @@ public class MagnifyingGlass : MonoBehaviour
     [SerializeField]
     GameObject storeItemText; // text pop up to inform player they can pick up the evidence
 
-    GameObject itemToDestroy; // destroy item when player picks it up
+    GameObject evidenceItem; // item the player is currently viewing through the magnifying glass
+
+    private void Start()
+    {
+        PM = FindObjectOfType<PinboardManager>();
+    }
 
     private void Update()
     {
-        if(Input.GetKeyUp(KeyCode.E) && itemToDestroy)
+        if(Input.GetKeyUp(KeyCode.E) && evidenceItem)
         {
-            Destroy(itemToDestroy);
+            GameObject evidenceUI = evidenceItem.GetComponent<EvidenceItem>().evidenceToAdd; // evidence to add to pinboard
+
+            if(!evidenceUI.GetComponent<EvidenceClass>().evidenceFound) // check the evidence hasnt already been found
+            {
+                // update the pinboard with new evidence
+                PM.discoveredEvidence.Add(evidenceUI.GetComponent<EvidenceClass>());
+                PM.UpdateEvidenceImages(evidenceUI.GetComponent<EvidenceClass>());
+                evidenceUI.GetComponent<EvidenceClass>().evidenceFound = true;
+            }
+
             storeItemText.SetActive(false);
+            Destroy(evidenceItem);
         }
     }
 
@@ -56,7 +73,7 @@ public class MagnifyingGlass : MonoBehaviour
             storeItemText.GetComponent<TextMeshProUGUI>().text = "Press [E] to store evidence " + other.name;
             storeItemText.SetActive(true);
 
-            itemToDestroy = other.gameObject;
+            evidenceItem = other.gameObject;
         }
     }
 
@@ -68,6 +85,8 @@ public class MagnifyingGlass : MonoBehaviour
             other.gameObject.GetComponent<ParticleSystem>().Stop();
 
             storeItemText.SetActive(false);
+
+            evidenceItem = null;
         }
     }
 

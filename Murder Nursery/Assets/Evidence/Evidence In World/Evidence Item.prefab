@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 1265591977806494592}
   - component: {fileID: 1308399098}
   - component: {fileID: 1308399099}
+  - component: {fileID: -7882060813803703008}
   m_Layer: 0
   m_Name: Evidence Item
   m_TagString: Evidence Item
@@ -4885,3 +4886,16 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &-7882060813803703008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4530571163519529081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77d894158e640df4d81fec0abc20166c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  evidenceToAdd: {fileID: 0}

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class MagnifyingGlass : MonoBehaviour
 {
@@ -9,12 +10,21 @@ public class MagnifyingGlass : MonoBehaviour
     [SerializeField]
     GameObject thirdPersonCam;
 
-    [SerializeField]
-    GameObject magGlassCam; // first person camera
+    public GameObject magGlassCam; // first person camera
 
     [SerializeField]
-    GameObject magGlassLens; // mag glass object
+    GameObject storeItemText; // text pop up to inform player they can pick up the evidence
 
+    GameObject itemToDestroy; // destroy item when player picks it up
+
+    private void Update()
+    {
+        if(Input.GetKeyUp(KeyCode.E) && itemToDestroy)
+        {
+            Destroy(itemToDestroy);
+            storeItemText.SetActive(false);
+        }
+    }
 
     // transitions between third person / first person camera &
     // toggles a magnifying lens to be used for finding evidence
@@ -25,14 +35,12 @@ public class MagnifyingGlass : MonoBehaviour
             usingMagnifyingGlass = true;
             thirdPersonCam.SetActive(false);
             magGlassCam.SetActive(true);
-            magGlassLens.SetActive(true);
             
         }
         else
         {
             usingMagnifyingGlass = false;
             magGlassCam.SetActive(false);
-            magGlassLens.SetActive(false);
             thirdPersonCam.SetActive(true);
         }
     }
@@ -42,8 +50,13 @@ public class MagnifyingGlass : MonoBehaviour
         
         if(other.gameObject.CompareTag("Evidence Item") && usingMagnifyingGlass)
         {
-            other.gameObject.GetComponent<MeshRenderer>().enabled = true;
-            other.gameObject.GetComponent<ParticleSystem>().Play();
+            other.gameObject.GetComponent<MeshRenderer>().enabled = true; // allows player to see the item
+            other.gameObject.GetComponent<ParticleSystem>().Play(); // plays the particle effect attached to item
+
+            storeItemText.GetComponent<TextMeshProUGUI>().text = "Press [E] to store evidence " + other.name;
+            storeItemText.SetActive(true);
+
+            itemToDestroy = other.gameObject;
         }
     }
 
@@ -53,6 +66,10 @@ public class MagnifyingGlass : MonoBehaviour
         {
             other.gameObject.GetComponent<MeshRenderer>().enabled = false;
             other.gameObject.GetComponent<ParticleSystem>().Stop();
+
+            storeItemText.SetActive(false);
         }
     }
+
+    
 }

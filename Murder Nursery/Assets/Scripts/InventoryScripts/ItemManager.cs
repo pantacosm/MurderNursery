@@ -38,6 +38,8 @@ public class ItemManager : MonoBehaviour
                 break;
             case Item.ItemType.MagnifyingGlass:
                 InventoryManager.inventory.MG.GetComponent<MagnifyingGlass>().ToggleMagnifyingGlass();
+                InventoryManager.inventory.Player.GetComponent<PlayerMovement>().StartMGCamTransition(); // starts a coroutine which stops player movement whilst active
+                InventoryManager.inventory.UIVisibility.ToggleInventory();
                 break;
             case Item.ItemType.PinBoard:
                 InventoryManager.inventory.UIVisibility.TogglePinboard();

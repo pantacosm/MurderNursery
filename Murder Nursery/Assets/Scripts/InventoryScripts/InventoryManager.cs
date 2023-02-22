@@ -10,6 +10,7 @@ public class InventoryManager : MonoBehaviour
 
     
     public GameObject MG; // allows access to magnifying glass script
+    public GameObject Player; // used for stopping movement whilst toggling mag glass
 
     [SerializeField]
     Item pinboard; //Stores the pinboard for the player inventory

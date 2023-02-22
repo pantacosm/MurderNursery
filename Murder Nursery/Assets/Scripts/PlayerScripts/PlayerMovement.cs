@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
 
 
     public GameObject MG; // magnifying glass object
+    private bool mgCamTransitioning = false; // stops player movement whilst true
 
     public GameObject introCam; // allows access to inIntro boolean 
 
@@ -85,7 +86,7 @@ public class PlayerMovement : MonoBehaviour
         if (inventory.UIVisibility.inventoryOpen || inventory.UIVisibility.pinboardOpen 
             || dialogueZone.activeInHierarchy || manager.GetComponent<SceneTransition>().interrogationActive 
             || inventory.UIVisibility.jotterOpen || dressUpManager.GetComponent<DressUp>().inDressUp || introCam.GetComponent<IntroCutscene>().inIntro
-            || menu.menuOpen)
+            || menu.menuOpen || mgCamTransitioning)
         {
             animator.Play("Idle");
             animator.SetFloat("Velocity", 0);
@@ -162,7 +163,18 @@ public class PlayerMovement : MonoBehaviour
         playerControls.PlayerInputMap.Disable();
     }
 
-    
+    // Called when magnifying glass is toggled
+    public void StartMGCamTransition()
+    {
+        StartCoroutine(StopPlayerMovement());
+    }
+
+    IEnumerator StopPlayerMovement() // stop player movement whilst MG cam is transitioning
+    {
+        mgCamTransitioning = true;
+        yield return new WaitForSeconds(2);
+        mgCamTransitioning = false;
+    }
 
    
 }

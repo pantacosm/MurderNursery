@@ -43,6 +43,7 @@ public class MagnifyingGlass : MonoBehaviour
         if(other.gameObject.CompareTag("Evidence Item") && usingMagnifyingGlass)
         {
             other.gameObject.GetComponent<MeshRenderer>().enabled = true;
+            other.gameObject.GetComponent<ParticleSystem>().Play();
         }
     }
 
@@ -51,6 +52,7 @@ public class MagnifyingGlass : MonoBehaviour
         if(other.gameObject.CompareTag("Evidence Item") && usingMagnifyingGlass)
         {
             other.gameObject.GetComponent<MeshRenderer>().enabled = false;
+            other.gameObject.GetComponent<ParticleSystem>().Stop();
         }
     }
 }

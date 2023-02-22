@@ -40,16 +40,15 @@ public class MagnifyingGlass : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         
-        if(other.gameObject.CompareTag("Item") && usingMagnifyingGlass)
+        if(other.gameObject.CompareTag("Evidence Item") && usingMagnifyingGlass)
         {
             other.gameObject.GetComponent<MeshRenderer>().enabled = true;
-            print("evidence");
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if(other.gameObject.CompareTag("Item") && usingMagnifyingGlass)
+        if(other.gameObject.CompareTag("Evidence Item") && usingMagnifyingGlass)
         {
             other.gameObject.GetComponent<MeshRenderer>().enabled = false;
         }

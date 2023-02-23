@@ -56144,7 +56144,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 2219632351478016209, guid: d0cb675e33a19c44e83d23d11a6859c0, type: 3}
-      insertIndex: -1
+      insertIndex: 0
       addedObject: {fileID: 1797970013}
   m_SourcePrefab: {fileID: 100100000, guid: d0cb675e33a19c44e83d23d11a6859c0, type: 3}
 --- !u!1 &1873391620 stripped
@@ -82839,6 +82839,34 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 1308525473}
     m_Modifications:
+    - target: {fileID: 1978919353746036269, guid: 24964ee1c952c4b418e7b8586cb9c783, type: 3}
+      propertyPath: evidenceToAdd
+      value: 
+      objectReference: {fileID: 8463248180559462931, guid: 525bde82cde0e924a8e6da4a48f75428, type: 3}
+    - target: {fileID: 5059985825607622502, guid: 24964ee1c952c4b418e7b8586cb9c783, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.b
+      value: 0.16509432
+      objectReference: {fileID: 0}
+    - target: {fileID: 5059985825607622502, guid: 24964ee1c952c4b418e7b8586cb9c783, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5059985825607622502, guid: 24964ee1c952c4b418e7b8586cb9c783, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key0.r
+      value: 0.96725863
+      objectReference: {fileID: 0}
+    - target: {fileID: 5059985825607622502, guid: 24964ee1c952c4b418e7b8586cb9c783, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.b
+      value: 0.88237596
+      objectReference: {fileID: 0}
+    - target: {fileID: 5059985825607622502, guid: 24964ee1c952c4b418e7b8586cb9c783, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5059985825607622502, guid: 24964ee1c952c4b418e7b8586cb9c783, type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.r
+      value: 0.4669811
+      objectReference: {fileID: 0}
     - target: {fileID: 6723354065088942320, guid: 24964ee1c952c4b418e7b8586cb9c783, type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -88927,6 +88955,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8199988417337413248, guid: c858cac0aa9299c49a653595c47f7dcd, type: 3}
+      propertyPath: m_Radius
+      value: 0.12
+      objectReference: {fileID: 0}
     - target: {fileID: 8199988417337413251, guid: c858cac0aa9299c49a653595c47f7dcd, type: 3}
       propertyPath: MG
       value: 

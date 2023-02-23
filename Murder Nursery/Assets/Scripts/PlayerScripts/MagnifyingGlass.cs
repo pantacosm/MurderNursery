@@ -44,7 +44,7 @@ public class MagnifyingGlass : MonoBehaviour
     }
 
     // transitions between third person / first person camera &
-    // toggles a magnifying lens to be used for finding evidence
+    // toggles a magnifying glass to be used for finding evidence
     public void ToggleMagnifyingGlass() 
     {
         if(usingMagnifyingGlass = !usingMagnifyingGlass)

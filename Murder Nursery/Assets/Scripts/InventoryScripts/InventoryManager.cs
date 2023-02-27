@@ -11,6 +11,8 @@ public class InventoryManager : MonoBehaviour
     
     public GameObject MG; // allows access to magnifying glass script
     public GameObject Player; // used for stopping movement whilst toggling mag glass
+    GameObject itemObj;
+
 
     [SerializeField]
     Item pinboard; //Stores the pinboard for the player inventory
@@ -28,14 +30,13 @@ public class InventoryManager : MonoBehaviour
     public List<Item> items = new List<Item>();//List of items present 
 
     [SerializeField]
-    Transform itemContent;
+    Transform itemContent; // transform the ui items are added to (player inventory ui)
 
-    [SerializeField]
-    GameObject inventoryItem;
+    [HideInInspector]
+    public GameObject inventoryItem; // ui sprite which gets instantiated to inventory
 
-    public ItemManager[] inventoryItems; //Stores items present in player inventory
+    public List<ItemManager> inventoryItems; //Stores items present in player inventory
     public GameObject blur; //Background blur object
-    public List<GameObject> invItems; 
 
     private void Awake()
     {
@@ -71,22 +72,27 @@ public class InventoryManager : MonoBehaviour
     public void RemoveItem(Item item) //Called when an item is removed from the player inventory
     {
         items.Remove(item);
-        
+        if(itemObj.name == item.itemName)
+        {
+            inventoryItems.Remove(itemObj.GetComponent<ItemManager>());
+            Destroy(itemObj);
+        }
     }
 
     public void SetInventoryItems(Item item)
     {
-        
+
         // adds itemUI to Inventory UI (allows us to see the item in inventory) 
-        GameObject itemObj = Instantiate(inventoryItem, itemContent);
-        invItems.Add(itemObj);
+        itemObj = Instantiate(inventoryItem, itemContent);
+
         var itemIcon = itemObj.transform.Find("ItemIcon").GetComponent<Image>();
         var itemName = itemObj.transform.Find("ItemName").GetComponent<TextMeshProUGUI>();
         itemIcon.sprite = item.icon;
         itemName.text = item.itemName;
+        itemObj.name = itemName.text;
 
         // sets the item in ItemManager so we can access its UseItem() function
-        inventoryItems = itemContent.GetComponentsInChildren<ItemManager>();
+        inventoryItems.Add(itemObj.GetComponent<ItemManager>());
 
         // loops through each item in the inventory to add to the item manager
         // item manager allows us to get the items type which is required when using the item

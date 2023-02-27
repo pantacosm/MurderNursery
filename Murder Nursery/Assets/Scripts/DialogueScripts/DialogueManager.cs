@@ -14,9 +14,16 @@ public class DialogueManager : MonoBehaviour
     public GameObject briberyPanel; //Canvas object containing all bribery UI elements
     public Image repGainSprite; //Sprite displayed when reputation is gained
     public Image repLossSprite; //Sprite displayed when reputation is lost
-    public Image item1; //Image for first possible bribe
-    public Image item2; //Image for second possible bribe
-    public Image singleBribe; //Image used when only a single bribe is available
+    //public Image item1; //Image for first possible bribe
+    //public Image item2; //Image for second possible bribe
+
+    public GameObject bribe; // Image used when storing bribery items
+
+    [HideInInspector]
+    public GameObject bribeItem; // item to remove when bribe is successful
+
+    public Transform briberyContent; // transform to hold bribery items in the UI
+
 
     [Header("Summary Panel")]
     public GameObject summaryPanel;
@@ -491,7 +498,10 @@ public class DialogueManager : MonoBehaviour
         {
             briberyOption.SetActive(true);
         }
-        else briberyOption.SetActive(false);
+        else 
+        {
+            briberyOption.SetActive(false);
+        }
         
         
 
@@ -636,24 +646,35 @@ public class DialogueManager : MonoBehaviour
     {
         dialogueZone.SetActive(false);
         briberyPanel.SetActive(true);
-        singleBribe.gameObject.SetActive(false);
-        item1.gameObject.SetActive(false);
-        item2.gameObject.SetActive(false);
-        if(inventoryManager.GetComponent<InventoryManager>().items.Count == 3)
+        //bribe.gameObject.SetActive(false);
+        //item1.gameObject.SetActive(false);
+        //item2.gameObject.SetActive(false);
+
+        // loop through all items in inventory & check if they are a bribery item, if so: add to bribery items panel
+        for (int i = 0; i < inventoryManager.GetComponent<InventoryManager>().items.Count ; i++)
         {
-            inventoryManager.GetComponent<Bribing>().StoreInfo(inventoryManager.GetComponent<InventoryManager>().items[2]);
-            singleBribe.gameObject.SetActive(true);
-            singleBribe.sprite = inventoryManager.GetComponent<InventoryManager>().items[2].icon;
+            if(inventoryManager.GetComponent<InventoryManager>().items[i].itemType == Item.ItemType.Bribery)
+            {
+                if(!briberyContent.Find(inventoryManager.GetComponent<InventoryManager>().items[i].itemName))
+                {
+                    bribeItem = Instantiate(bribe, briberyContent);
+                    bribeItem.GetComponent<Image>().sprite = inventoryManager.GetComponent<InventoryManager>().items[i].icon;
+                    bribeItem.name = inventoryManager.GetComponent<InventoryManager>().items[i].itemName;
+                    bribeItem.GetComponent<Bribing>().StoreInfo(inventoryManager.GetComponent<InventoryManager>().items[i]);
+                    bribeItem.SetActive(true);
+                }
+            }
         }
-        if(inventoryManager.GetComponent<InventoryManager>().items.Count ==4)
-        {
-            inventoryManager.GetComponent<Bribing>().StoreInfo(inventoryManager.GetComponent<InventoryManager>().items[2]);
-            inventoryManager.GetComponent<Bribing>().StoreInfo(inventoryManager.GetComponent<InventoryManager>().items[3]);
-            item1.gameObject.SetActive(true);
-            item2.gameObject.SetActive(true);
-            item1.sprite = inventoryManager.GetComponent<InventoryManager>().items[2].icon;
-            item2.sprite = inventoryManager.GetComponent<InventoryManager>().items[3].icon;
-        }
+        
+        //if(inventoryManager.GetComponent<InventoryManager>().items.Count == 4)
+        //{
+        //    inventoryManager.GetComponent<Bribing>().StoreInfo(inventoryManager.GetComponent<InventoryManager>().items[2]);
+        //    inventoryManager.GetComponent<Bribing>().StoreInfo(inventoryManager.GetComponent<InventoryManager>().items[3]);
+        //    item1.gameObject.SetActive(true);
+        //    item2.gameObject.SetActive(true);
+        //    item1.sprite = inventoryManager.GetComponent<InventoryManager>().items[2].icon;
+        //    item2.sprite = inventoryManager.GetComponent<InventoryManager>().items[3].icon;
+        //}
     }
 
     public IEnumerator RepFader(Image repSymbol, bool fadeIn, float fadeSpeed = 1f) //Fades in or out the desired rep symbol

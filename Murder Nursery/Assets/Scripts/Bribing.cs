@@ -1,20 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Bribing : MonoBehaviour
+public class Bribing : MonoBehaviour // Script is added to SingleBribe UI OBject
 {
     public GameObject manager; //Stores the game manager
     private GameObject activeNPC; //Stores the active NPC
-    private Item firstBribe = null; //First bribe slot
-    private Item secondBribe = null; //Second bribe slot
+    //private Item firstBribe = null; //First bribe slot
+    //private Item secondBribe = null; //Second bribe slot
+
+    private List<Item> briberyItems = new(); // used in StoreInfo() bribery items are added to it so we know which items to remove during a successful bribe
+
     public GameObject bribePanel; //UI element which stores the bribe panel
     public GameObject inventoryManager; //Stores the inventory manager for easy access to held items
 
     public void Start()
     {
-        firstBribe = null; //Ensures that the bribes are reset at the start of play
-        secondBribe = null;
+        //firstBribe = null; //Ensures that the bribes are reset at the start of play
+        //secondBribe = null;
     }
 
 
@@ -22,47 +26,66 @@ public class Bribing : MonoBehaviour
     {
         activeNPC = manager.GetComponent<DialogueManager>().activeNPC; //Stores the active NPC
     }
-    public void AttemptBribeButton1() //Called when the player attempts to bribe an NPC using the first bribe slot 
+    public void AttemptBribeButton() //Called when the player attempts to bribe an NPC using the first bribe slot 
     {
-        if(firstBribe.itemName == activeNPC.GetComponent<NPCDialogue>().bribeItem) //Checks if the bribe is the correct item 
+
+        if(gameObject.name == activeNPC.GetComponent<NPCDialogue>().bribeItem)
         {
             manager.GetComponent<DialogueManager>().activeNode.bribeGiven = true; //Signals that the bribe has been accepted
             manager.GetComponent<DialogueManager>().StartConversation(activeNPC.GetComponent<NPCDialogue>().bribePath, activeNPC, activeNPC.GetComponent<NPCDialogue>().npcCam);//Loads the relevant dialogue node 
             bribePanel.SetActive(false); //Deactivates the bribe panel
-            inventoryManager.GetComponent<InventoryManager>().RemoveItem(inventoryManager.GetComponent<InventoryManager>().items[2]); //Removes the item from the player's inventory
-            Destroy(inventoryManager.GetComponent<InventoryManager>().invItems[2]); //Destroys the bribe item
-            
-        }
-         else manager.GetComponent<DialogueManager>().StartConversation(activeNPC.GetComponent<NPCDialogue>().bribeFailPath,activeNPC, activeNPC.GetComponent<NPCDialogue>().npcCam); //Triggers a bribery fail scenario
-        bribePanel.SetActive(false); //Deactivates the bribe panel
-    }
 
-    public void AttemptBribeButton2() //Same as previous method but with different slot
-    {
-        if(secondBribe.itemName == activeNPC.GetComponent<NPCDialogue>().bribeItem)
+            // remove item from bribery items panel
+            for (int i = 0; i < briberyItems.Count; i++)
+            {
+                if(briberyItems[i].name == gameObject.name)
+                {
+                    inventoryManager.GetComponent<InventoryManager>().RemoveItem(briberyItems[i]); //Removes the item from the player's inventory
+                    Destroy(gameObject);
+                }
+            }
+        }
+        else 
         {
-            manager.GetComponent<DialogueManager>().activeNode.bribeGiven = true;
-            manager.GetComponent<DialogueManager>().StartConversation(activeNPC.GetComponent<NPCDialogue>().bribePath, activeNPC, activeNPC.GetComponent<NPCDialogue>().npcCam);
-            bribePanel.SetActive(false);
-            inventoryManager.GetComponent<InventoryManager>().RemoveItem(inventoryManager.GetComponent<InventoryManager>().items[3]);
-            Destroy(inventoryManager.GetComponent<InventoryManager>().invItems[3]);
-
+            manager.GetComponent<DialogueManager>().StartConversation(activeNPC.GetComponent<NPCDialogue>().bribeFailPath, activeNPC, activeNPC.GetComponent<NPCDialogue>().npcCam); //Triggers a bribery fail scenario
+            bribePanel.SetActive(false); //Deactivates the bribe panel
         }
-        else manager.GetComponent<DialogueManager>().StartConversation(activeNPC.GetComponent<NPCDialogue>().bribeFailPath, activeNPC, activeNPC.GetComponent<NPCDialogue>().npcCam);
-        bribePanel.SetActive(false);
-    
     }
+
+    //public void AttemptBribeButton2() //Same as previous method but with different slot
+    //{
+    //    if(secondBribe.itemName == activeNPC.GetComponent<NPCDialogue>().bribeItem)
+    //    {
+    //        manager.GetComponent<DialogueManager>().activeNode.bribeGiven = true;
+    //        manager.GetComponent<DialogueManager>().StartConversation(activeNPC.GetComponent<NPCDialogue>().bribePath, activeNPC, activeNPC.GetComponent<NPCDialogue>().npcCam);
+    //        bribePanel.SetActive(false);
+    //        for (int i = 0; i < inventoryManager.GetComponent<InventoryManager>().items.Count; i++)
+    //        {
+    //            if(inventoryManager.GetComponent<InventoryManager>().items[i] == secondBribe)
+    //            {
+    //                inventoryManager.GetComponent<InventoryManager>().RemoveItem(inventoryManager.GetComponent<InventoryManager>().items[i]);
+    //                //Destroy(inventoryManager.GetComponent<InventoryManager>().invItems[i]);
+    //            }
+    //        }
+
+    //    }
+    //    else manager.GetComponent<DialogueManager>().StartConversation(activeNPC.GetComponent<NPCDialogue>().bribeFailPath, activeNPC, activeNPC.GetComponent<NPCDialogue>().npcCam);
+    //    bribePanel.SetActive(false);
+    
+    //}
 
     public void StoreInfo(Item item) //Stores the potential bribes when relevant items are collected
     {
-        if (firstBribe != null && secondBribe == null)
-        {
-            secondBribe = item;
-        }
-        if (firstBribe == null)
-        {
-            firstBribe = item;
-        }
+        //if (firstBribe != null && secondBribe == null)
+        //{
+        //    secondBribe = item;
+        //}
+        //if (firstBribe == null)
+        //{
+        //    firstBribe = item;
+        //}
+
+        briberyItems.Add(item);
         
     }
 }

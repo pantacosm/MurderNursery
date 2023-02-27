@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ItemManager : MonoBehaviour
 {
-    private Item item;
+    public Item item;
 
 
 
@@ -27,10 +27,6 @@ public class ItemManager : MonoBehaviour
         switch (item.itemType)
         {
             case Item.ItemType.Bribery:
-                if(item.itemName == ("Candy"))
-                {
-                    Debug.Log("I can bribe someone with this half eaten candy.");
-                }
                 break;
             case Item.ItemType.Gift:
                 Debug.Log(item.itemName);

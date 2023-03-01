@@ -32,6 +32,8 @@ public class ToggleUIVisibility : MonoBehaviour
     public AudioClip openPinBoardSound;
     public AudioClip openJotterSound;
     public GameObject blur;
+    public GameObject interrogationManager;
+    public GameObject interrogationUI;
 
     public void Update()
     {
@@ -78,31 +80,40 @@ public class ToggleUIVisibility : MonoBehaviour
 
     public void TogglePinboard() // Called when pinboard item clicked from inventory or when X clicked on pinboard
     {
-        if(pinboardOpen = !pinboardOpen)
+        if (!interrogationManager.GetComponent<Interrogation>().inInterrogation)
         {
-            playerAudioSource.PlayOneShot(openPinBoardSound, 0.5f);
-            pinboardUI.SetActive(true);
-            blur.SetActive(true);
-            pinboardOpen = true;
+            if (pinboardOpen = !pinboardOpen)
+            {
+                playerAudioSource.PlayOneShot(openPinBoardSound, 0.5f);
+                pinboardUI.SetActive(true);
+                blur.SetActive(true);
+                pinboardOpen = true;
 
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+            }
+            else
+            {
+                pinboardUI.SetActive(false);
+                blur.SetActive(false);
+                pinboardOpen = false;
+                Cursor.visible = false;
+
+
+
+            }
+
+            if (inventoryOpen)
+            {
+                inventoryUI.SetActive(false);
+                inventoryOpen = false;
+            }
         }
-        else
+        if(interrogationManager.GetComponent<Interrogation>().inInterrogation)
         {
             pinboardUI.SetActive(false);
-            blur.SetActive(false);
             pinboardOpen = false;
-            Cursor.visible = false;
-
-            
-            
-        }
-
-        if(inventoryOpen)
-        {
-            inventoryUI.SetActive(false);
-            inventoryOpen = false;
+            interrogationUI.SetActive(true);
         }
     }
 

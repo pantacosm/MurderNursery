@@ -11,31 +11,40 @@ public class ThreadManager : MonoBehaviour
     public Image newEvidenceImage; //Stores a new evidence image
     public string newEvidenceText; //Stores a new evidence text
     public GameObject pinBoardManager; //Stores the pinboard manager
-    
+    public GameObject interrogationManager;
 
     // Update is called once per frame
     void Update()
     {
-        if (firstThreadItem != null && secondThreadItem != null) //Checks if the player has selected two items to thread
+        if(interrogationManager == null)
+        {
+            interrogationManager = GameObject.FindGameObjectWithTag("InterrogationManager");
+        }
+        if (firstThreadItem != null && secondThreadItem != null && !interrogationManager.GetComponent<Interrogation>().inInterrogation) //Checks if the player has selected two items to thread
         {
             if (!CheckIfThreaded(secondThreadItem.GetComponent<EvidenceSlot>().evidenceText)) //Checks if the evidence has already been threaded
             {
-                if (secondThreadItem.name != "Likes" && secondThreadItem.name != "Dislikes" && secondThreadItem.name != "Events") //Checks if the second item is valid and not a category 
+                if (secondThreadItem.name != "Evidence") //Checks if the second item is valid and not a category 
                 {
+                    CheckThreadStart();
                     GameObject newThread = this.GetComponent<PinboardThread>().MakeLine(firstThreadItem.transform.position.x, firstThreadItem.transform.position.y, secondThreadItem.transform.position.x, secondThreadItem.transform.position.y, Color.red); //Creates the thread
+                    secondThreadItem.GetComponent<EvidenceSlot>().threads.Add(newThread);
                     print("Line created");
-                    CheckThreadStart(); //Stores the evidence 
-                    secondThreadItem.GetComponent<EvidenceSlot>().thread = newThread;
-                    firstThreadItem = null; //Resets the selected items 
-                    secondThreadItem = null; //Resets the selected items
+                    
+                        firstThreadItem = null; //Resets the selected items 
+                        secondThreadItem = null; //Resets the selected items
+                    
                 }
+                
             }
+            firstThreadItem = null;
+            secondThreadItem = null;
         }
     }
 
     public void CheckThreadStart() //Checks and stores the evidence piece threaded //CHANGE FOR EFFICICENCY 
     {
-        if(firstThreadItem.gameObject.name == "Likes") //Stores the likes for each character 
+        if(firstThreadItem.gameObject.name == "Evidence") //Stores the likes for each character 
         {
             newEvidenceImage = secondThreadItem.GetComponent<EvidenceSlot>().evidenceImage;
             newEvidenceText = secondThreadItem.GetComponent<EvidenceSlot>().evidenceText;

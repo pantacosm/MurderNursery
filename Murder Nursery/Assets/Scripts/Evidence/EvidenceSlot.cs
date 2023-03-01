@@ -13,7 +13,7 @@ public class EvidenceSlot : MonoBehaviour
     public GameObject pinboardManager;
     public int evidenceID;
     public GameObject prefab;
-    public GameObject thread;
+    public List<GameObject> threads = new List<GameObject>();
 
     //private bool clearing = false;
     // Start is called before the first frame update
@@ -55,7 +55,10 @@ public class EvidenceSlot : MonoBehaviour
                 if (evidenceText == evidence)
                 {
                     pinboardManager.GetComponent<PinboardManager>().threadedEvidence.Remove(evidence);
-                    Destroy(thread);
+                    foreach (GameObject thread in threads)
+                    {
+                        Destroy(thread);
+                    }
                 }
             }
         }

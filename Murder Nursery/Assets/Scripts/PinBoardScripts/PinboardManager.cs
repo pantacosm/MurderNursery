@@ -9,6 +9,7 @@ using UnityEditor;
 public class PinboardManager : MonoBehaviour
 {
     public static PinboardManager pinboard;
+    public GameObject interrogationManager;
 
     // Used in the sentence completion scripts
     [HideInInspector]
@@ -76,7 +77,8 @@ public class PinboardManager : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        pinboard = this;        
+        pinboard = this;
+        interrogationManager = GameObject.FindGameObjectWithTag("InterrogationManager");
     }
 
     private void Start()
@@ -136,6 +138,7 @@ public class PinboardManager : MonoBehaviour
         }
         pinBoard.SetActive(false);
         chaseSectionZoom.SetActive(true);
+        interrogationManager.GetComponent<Interrogation>().activeZoomIn = chaseSectionZoom;
     }
 
     public void TransitionToScarletArea() //Transitions to the zoomed in Scarlet pinboard area
@@ -149,6 +152,7 @@ public class PinboardManager : MonoBehaviour
         }
         pinBoard.SetActive(false);
         scarletSectionZoom.SetActive(true);
+        interrogationManager.GetComponent<Interrogation>().activeZoomIn = scarletSectionZoom;
     }
 
     public void TransitionToEddieArea() //Transitions to the zoomed in Eddie pinboard area
@@ -162,6 +166,7 @@ public class PinboardManager : MonoBehaviour
         }
         pinBoard.SetActive(false);
         eddieSectionZoom.SetActive(true);
+        interrogationManager.GetComponent<Interrogation>().activeZoomIn = eddieSectionZoom;
     }
 
     public void TransitionToJuiceBox() //Transitions to the zoomed in Juice Box pinboard area
@@ -175,6 +180,7 @@ public class PinboardManager : MonoBehaviour
         }
         pinBoard.SetActive(false);
         juiceBoxSectionZoom.SetActive(true);
+        interrogationManager.GetComponent<Interrogation>().activeZoomIn = juiceBoxSectionZoom;
     }
 
     public void TransitionToGraceArea() //Transitions to the zoomed in Grace area
@@ -188,7 +194,9 @@ public class PinboardManager : MonoBehaviour
         }
             pinBoard.SetActive(false);
             graceSectionZoom.SetActive(true);
-        
+        interrogationManager.GetComponent<Interrogation>().activeZoomIn = graceSectionZoom;
+
+
     }
 
     public void TransitionToPinboard() //Transitions back to the main pinboard
@@ -199,6 +207,7 @@ public class PinboardManager : MonoBehaviour
         eddieSectionZoom.SetActive(false);
         juiceBoxSectionZoom.SetActive(false);
         graceSectionZoom.SetActive(false);
+        interrogationManager.GetComponent<Interrogation>().activeZoomIn = null;
     }
     
     

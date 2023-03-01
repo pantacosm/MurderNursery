@@ -48,6 +48,11 @@ public class Interrogation : MonoBehaviour
     public AudioSource interrogationSource; //Audio source for interrogation
     public AudioClip lifeLostSound; //Sound played when the player makes a wrong decision
 
+    [Header("Interrogation Pinboards")]
+    public GameObject pinboard;
+    public GameObject activeZoomIn;
+    
+
     //Vectors storing response box positions 
     private Vector3 response1Position;
     private Vector3 response2Position;
@@ -67,6 +72,8 @@ public class Interrogation : MonoBehaviour
     private DialogueNode mostRecentScarletNode;
     private int pos = 0;
 
+    [HideInInspector]
+    public bool inInterrogation = false;
    
 
 
@@ -167,12 +174,14 @@ public class Interrogation : MonoBehaviour
 
     public void EarlyExit() //Called when a player wants to leave interrogation
     {
+        inInterrogation = false;
         manager.GetComponent<SceneTransition>().ChangeToMainArea();//Transitions the player back to the main area
         interrogationPanel.SetActive(false); //Deactivates the interrogation UI
         
     }
     public void SuccessfulEnd() //Called when a player succeeds in an interrogation
     {
+        inInterrogation = false;
         manager.GetComponent<SceneTransition>().ChangeToMainArea(); //Transitions the player back to the main area
         interrogationPanel.SetActive(false);
         ClearDialogue(); //Clears the last interrogation's data
@@ -180,6 +189,7 @@ public class Interrogation : MonoBehaviour
 
     public void BadEnd(int repLoss, int chosenRepLevel) //Is called when a player runs out of lives and fails an interrogation
     {
+        inInterrogation = false;
         chosenRepLevel -= repLoss; //Reputation is lost
         manager.GetComponent<SceneTransition>().ChangeToMainArea(); //Transitions the player back to the main area
         interrogationPanel.SetActive(false);
@@ -231,6 +241,7 @@ public class Interrogation : MonoBehaviour
 
     public void StartInterrogation(DialogueNode startNode, GameObject targetNPC) //Is called at the beginning of an interrogation 
     {
+        inInterrogation = true;
         Cursor.visible = true; //CURSOR STUFF - UPDATE
         Cursor.lockState = CursorLockMode.None;
         pos = 0; //Resets selection position
@@ -320,18 +331,15 @@ public class Interrogation : MonoBehaviour
 
     public void BringUpEvidencePanel() //Activates the evidence panel UI elements
     {
-        evidencePanel.SetActive(true);
+        pinboard.SetActive(true);
         interrogationPanel.SetActive(false);
-        if (!activeNode.evImagesGenerated)
-        {
-            FillEvidenceImages(); //Fills the evidence screen with decoy images and the correct evidence image
-        }
+        
     }
 
     public void ReturnToInterrogationPanel() //Transitions the player back to the interrogation panel
     {
         interrogationPanel.SetActive(true);
-        evidencePanel.SetActive(false);
+        pinboard.SetActive(false);
     }
 
     private void FillEvidenceImages() //Fills the evidence screen with decoy images and the correct evidence image
@@ -464,6 +472,43 @@ public class Interrogation : MonoBehaviour
             case 7:
                 activeInterrogant.GetComponent<NPCDialogue>().textureToChange.SetTexture("_DetailAlbedoMap", activeInterrogant.GetComponent<NPCDialogue>().thinkingEmotion);
                 break;
+        }
+    }
+
+    public void CheckEvidence(GameObject pressedButton)
+    {
+        if(inInterrogation)
+        {
+            if(pressedButton.GetComponent<EvidenceSlot>().evidenceText == activeNode.evidenceRequired)
+            {
+                playerResponse1.GetComponent<TextMeshProUGUI>().text = activeNode.responses[1];
+                LoadIntNodeInfo(activeNode.children[1]);
+                interrogationPanel.SetActive(true);
+                if (activeZoomIn != null)
+                {
+                    activeZoomIn.SetActive(false);
+                    activeZoomIn = null;
+                }
+                else
+                {
+                    pinboard.SetActive(false);
+                }
+            }
+            else if(pressedButton.GetComponent<EvidenceSlot>().evidenceText != activeNode.evidenceRequired)
+            {
+                playerResponse1.GetComponent<TextMeshProUGUI>().text = activeNode.responses[0];
+                LoadIntNodeInfo(activeNode.children[0]);
+                interrogationPanel.SetActive(true);
+                if (activeZoomIn != null)
+                {
+                    activeZoomIn.SetActive(false);
+                    activeZoomIn = null;
+                }
+                else
+                {
+                    pinboard.SetActive(false);
+                }
+            }
         }
     }
 

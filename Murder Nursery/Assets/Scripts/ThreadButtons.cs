@@ -10,19 +10,31 @@ public class ThreadButtons : MonoBehaviour //NEED TO REVISIT AND REWORK SCRIPT
     public GameObject secondObject; //Stores the object on second end of thread
     public Button firstButton; //Thread buttons
     public Button secondButton; // 
+    public GameObject interrogationManager;
+
+    public void Update()
+    {
+        if (interrogationManager == null)
+        {
+            interrogationManager = GameObject.FindGameObjectWithTag("InterrogationManager");
+        }
+    }
     public void SetThreadPosition()
     {
-         if (threadManager.GetComponent<ThreadManager>().firstThreadItem != null)
+        if (!interrogationManager.GetComponent<Interrogation>().inInterrogation)
         {
-            threadManager.GetComponent<ThreadManager>().secondThreadItem = this.gameObject;
-        }
-        if (threadManager.GetComponent<ThreadManager>().firstThreadItem == null)
-        {
-            if (this.gameObject.name == "Likes" || this.gameObject.name == "Dislikes" || this.gameObject.name == "Events")
+            if (threadManager.GetComponent<ThreadManager>().firstThreadItem != null)
             {
-                threadManager.GetComponent<ThreadManager>().firstThreadItem = this.gameObject;
+                threadManager.GetComponent<ThreadManager>().secondThreadItem = this.gameObject;
             }
-            
+            if (threadManager.GetComponent<ThreadManager>().firstThreadItem == null)
+            {
+                if (this.gameObject.name == "Evidence")
+                {
+                    threadManager.GetComponent<ThreadManager>().firstThreadItem = this.gameObject;
+                }
+
+            }
         }
     }
 

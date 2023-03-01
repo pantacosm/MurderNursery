@@ -246,6 +246,8 @@ public class DialogueManager : MonoBehaviour
         {
             activeNode = chaseLastNode;
             LoadNodeInfo(chaseLastNode);
+
+            LoadBribeDialogue(startNode);
         }
         else if (activeNPC == chase && !chaseMidConvo)
         {
@@ -256,6 +258,8 @@ public class DialogueManager : MonoBehaviour
         {
             activeNode = eddieLastNode;
             LoadNodeInfo(eddieLastNode);
+
+            LoadBribeDialogue(startNode);
         }
         else if (activeNPC == eddie && !eddieMidConvo)
         {
@@ -266,6 +270,8 @@ public class DialogueManager : MonoBehaviour
         {
             activeNode = scarletLastNode;
             LoadNodeInfo(scarletLastNode);
+
+            LoadBribeDialogue(startNode);
         }
         else if (activeNPC == scarlet && !scarletMidConvo)
         {
@@ -276,6 +282,8 @@ public class DialogueManager : MonoBehaviour
         {
             activeNode = juiceBoxLastNode;
             LoadNodeInfo(juiceBoxLastNode);
+
+            LoadBribeDialogue(startNode);
         }
         else if (activeNPC == juiceBox && !juiceBoxMidConvo)
         {
@@ -293,6 +301,22 @@ public class DialogueManager : MonoBehaviour
         npcSprite2.sprite = npc.GetComponent<NPCDialogue>().sprite;//''
         npcSprite3.sprite = npc.GetComponent<NPCDialogue>().sprite;//''
         npcSprite4.sprite = npc.GetComponent<NPCDialogue>().sprite;//''
+    }
+
+    // Called after attempting to bribe an NPC (StartConversation)
+    void LoadBribeDialogue(DialogueNode bribeNode)
+    {
+        if (bribeNode == activeNPC.GetComponent<NPCDialogue>().bribePath) // load bribe successful dialogue
+        {
+            activeNode = bribeNode;
+            LoadNodeInfo(bribeNode);
+        }
+
+        if (bribeNode == activeNPC.GetComponent<NPCDialogue>().bribeFailPath) // load bribe failed dialogue
+        {
+            activeNode = bribeNode;
+            LoadNodeInfo(bribeNode);
+        }
     }
 
     public void ExitConversation() //Is called when the conversation is exited

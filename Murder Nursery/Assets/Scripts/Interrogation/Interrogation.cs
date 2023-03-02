@@ -27,6 +27,7 @@ public class Interrogation : MonoBehaviour
     public Image npcSprite1; //Sprite to display the NPC currently being interrogated
     public Image npcSprite2; //''
     public GameObject summaryPanel;
+    public GameObject interactMessage;
 
     [Header("Evidence UI Objects")]
     public GameObject evButton; //UI object holding the evidence screen select button
@@ -107,7 +108,10 @@ public class Interrogation : MonoBehaviour
             }
         }
         
-        
+        if(inInterrogation)
+        {
+            interactMessage.SetActive(false);
+        }
     }
 
     public void ContinueInterrogation() //Used for continuing the interrogation sequence

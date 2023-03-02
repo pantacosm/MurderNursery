@@ -332,6 +332,10 @@ public class DialogueManager : MonoBehaviour
 
     public void LoadNodeInfo(DialogueNode newNode) //Loads the information of the new node
     {
+        if(summaryPanel.activeInHierarchy)
+        {
+            summaryPanel.SetActive(false);
+        }
         repLockResponse1.SetActive(false); //Preemptively resets the player response positions to prevent overspawning issues
         repLockResponse2.SetActive(false);
         repLockResponse3.SetActive(false);
@@ -858,6 +862,7 @@ public class DialogueManager : MonoBehaviour
     public void EnterInterrogation()
     {
         LoadNodeInfo(activeNPC.GetComponent<NPCDialogue>().interrogationNode);
+        npcStatement.GetComponent<TextMeshProUGUI>().text = activeNode.speech;
         summaryPanel.SetActive(false);
         
     }

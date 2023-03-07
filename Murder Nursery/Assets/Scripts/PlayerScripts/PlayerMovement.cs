@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
 
 
     [SerializeField]
-    private float playerSpeed = 4.0f;
+    private float playerSpeed = 2.5f;
 
     [SerializeField]
     private float acceleration = 2.0f;
@@ -121,6 +121,11 @@ public class PlayerMovement : MonoBehaviour
         if(MG.GetComponent<MagnifyingGlass>().usingMagnifyingGlass)
         {
             HandleFirstPersonMovement();
+            playerSpeed = 1.0f;
+        }
+        else
+        {
+            playerSpeed = 2.5f;
         }
     }
 

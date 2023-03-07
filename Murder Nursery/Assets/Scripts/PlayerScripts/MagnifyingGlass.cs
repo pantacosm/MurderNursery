@@ -10,6 +10,9 @@ public class MagnifyingGlass : MonoBehaviour
     public bool usingMagnifyingGlass;
 
     [SerializeField]
+    GameObject magnifyingBlur; // activates a blur effect whilst using the MG
+
+    [SerializeField]
     GameObject thirdPersonCam;
 
     public GameObject magGlassCam; // first person camera
@@ -52,6 +55,7 @@ public class MagnifyingGlass : MonoBehaviour
             usingMagnifyingGlass = true;
             thirdPersonCam.SetActive(false);
             magGlassCam.SetActive(true);
+            magnifyingBlur.SetActive(true);
             
         }
         else
@@ -59,6 +63,7 @@ public class MagnifyingGlass : MonoBehaviour
             usingMagnifyingGlass = false;
             magGlassCam.SetActive(false);
             thirdPersonCam.SetActive(true);
+            magnifyingBlur.SetActive(false);
         }
     }
 

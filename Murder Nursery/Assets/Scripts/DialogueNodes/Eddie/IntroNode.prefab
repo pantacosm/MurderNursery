@@ -49,7 +49,7 @@ MonoBehaviour:
   - {fileID: 3499891356269125111, guid: 1a6e2014742ccba42b20f925372f9190, type: 3}
   - {fileID: 3499891356269125111, guid: 58789240138336e46b61d70b3375ecab, type: 3}
   - {fileID: 3499891356269125111, guid: 6ca9a29a08c9ca84bbfe3ca085adb719, type: 3}
-  speech: How's it goin', new kid?
+  speech: How's it goin', <wave>new kid</wave>?
   responses:
   - Where were you when Grace bit the bullet?
   - Tell me about yourself, pal.
@@ -57,39 +57,32 @@ MonoBehaviour:
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10
-  nodeID: 
-  nodeActive: 0
   repGainResponse1: -2
   repGainResponse2: 2
   repGainResponse3: 0
+  nodeActive: 0
   interrogationNode: 0
-  lifeLoss: 0
   exitNode: 0
+  nodeVisited: 0
+  briberyAvailable: 1
+  fitCheck: 0
+  evidenceToDiscover: {fileID: 0}
+  lockingNode: 1
   firstPathLocked: 0
   secondPathLocked: 0
   thirdPathLocked: 0
-  nodeVisited: 1
-  lockingNode: 1
-  briberyAvailable: 1
-  triggerTrueEnd: 0
-  triggerGoodEnd: 0
-  triggerBadEnd: 0
   lockingFirstPath: 1
   lockingSecondPath: 0
   lockingThirdPath: 0
-  fitCheck: 0
+  triggerTrueEnd: 0
+  triggerGoodEnd: 0
+  triggerBadEnd: 0
   dressUpNode: {fileID: 0}
   requiredOutfit: 
-  evidenceToDiscover: {fileID: 0}
-  evidenceCheckNode: 0
-  pathARequiredEvidence: 
-  pathBRequiredEvidence: 
-  pathCRequiredEvidence: 
-  pathAInterrogationEvidenceRequired: 0
-  pathBInterrogationEvidenceRequired: 0
-  pathCInterrogationEvidenceRequired: 0
-  nodeEmotion: 1
+  lifeLoss: 0
   evidenceRequired: 
   evidenceRequiredImage: {fileID: 0}
   evidenceNeededCheck: 0
   evImagesGenerated: 0
+  nodeEmotion: 1
+  bribeGiven: 0

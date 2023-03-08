@@ -49,7 +49,7 @@ MonoBehaviour:
   - {fileID: 3499891356269125111, guid: 8b0993842799ecc4a8d118e4f6965aea, type: 3}
   - {fileID: 3499891356269125111, guid: 8b0993842799ecc4a8d118e4f6965aea, type: 3}
   - {fileID: 3499891356269125111, guid: 7e7e37b8afceb3a4ca9acd25fc00f88c, type: 3}
-  speech: Verily my good sir, what an excellent choice of attire!
+  speech: Verily my good sir, what an <wave>excellent</wave> choice of attire!
   responses:
   - Uh, what the what now?
   - Me not talk good.
@@ -57,35 +57,32 @@ MonoBehaviour:
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10
-  nodeID: 
-  nodeActive: 0
   repGainResponse1: -2
   repGainResponse2: -2
   repGainResponse3: 2
+  nodeActive: 1
   interrogationNode: 0
-  lifeLoss: 0
   exitNode: 0
+  nodeVisited: 0
+  briberyAvailable: 0
+  fitCheck: 0
+  evidenceToDiscover: {fileID: 0}
+  lockingNode: 1
   firstPathLocked: 0
   secondPathLocked: 0
   thirdPathLocked: 0
-  nodeVisited: 0
-  lockingNode: 1
-  briberyAvailable: 0
-  triggerTrueEnd: 0
-  triggerGoodEnd: 0
-  triggerBadEnd: 0
   lockingFirstPath: 1
   lockingSecondPath: 1
   lockingThirdPath: 0
-  fitCheck: 0
+  triggerTrueEnd: 0
+  triggerGoodEnd: 0
+  triggerBadEnd: 0
   dressUpNode: {fileID: 0}
   requiredOutfit: 
-  evidenceToDiscover: {fileID: 0}
-  evidenceCheckNode: 0
-  pathARequiredEvidence: 
-  pathBRequiredEvidence: 
-  pathCRequiredEvidence: 
-  pathAInterrogationEvidenceRequired: 0
-  pathBInterrogationEvidenceRequired: 0
-  pathCInterrogationEvidenceRequired: 0
+  lifeLoss: 0
+  evidenceRequired: 
+  evidenceRequiredImage: {fileID: 0}
+  evidenceNeededCheck: 0
+  evImagesGenerated: 0
   nodeEmotion: 6
+  bribeGiven: 0

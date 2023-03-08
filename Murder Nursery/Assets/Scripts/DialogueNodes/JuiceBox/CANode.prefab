@@ -49,7 +49,7 @@ MonoBehaviour:
   - {fileID: 3499891356269125111, guid: 0da3a4b56dca9cc49ac9673472c1cf86, type: 3}
   - {fileID: 3499891356269125111, guid: 12d41ddad6794f747a5bebe5d177f8f3, type: 3}
   - {fileID: 3499891356269125111, guid: 3ed06df5a122eb74e94bfec2c86cb131, type: 3}
-  speech: '*sluuuuuuurp* All right, I''m listening. What do you want?'
+  speech: <wave>*sluuuuuuurp*</wave> All right, I'm listening. What do you want?
   responses:
   - 'Had a few questions for ya. '
   - A confession.

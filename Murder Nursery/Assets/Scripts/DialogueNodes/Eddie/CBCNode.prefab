@@ -48,42 +48,40 @@ MonoBehaviour:
   children:
   - {fileID: 3499891356269125111, guid: 507ba51448698ce41966451d7016c5fb, type: 3}
   - {fileID: 3499891356269125111, guid: 97375db3281ecaf4fbe4ff49b3401ee9, type: 3}
-  speech: 'Whatta square. I ain''t a snitch, but if anybody did it, it was him. '
+  speech: 'Whatta square. I ain''t a snitch, but if anybody did it, <shake>it was
+    him</shake>. '
   responses:
   - You two don't like each other?
   - What makes you think that?
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10
-  nodeID: 
-  nodeActive: 0
   repGainResponse1: 0
   repGainResponse2: 0
   repGainResponse3: 0
+  nodeActive: 0
   interrogationNode: 0
-  lifeLoss: 0
   exitNode: 0
+  nodeVisited: 0
+  briberyAvailable: 0
+  fitCheck: 0
+  evidenceToDiscover: {fileID: 0}
+  lockingNode: 0
   firstPathLocked: 0
   secondPathLocked: 0
   thirdPathLocked: 0
-  nodeVisited: 0
-  lockingNode: 0
-  briberyAvailable: 0
-  triggerTrueEnd: 0
-  triggerGoodEnd: 0
-  triggerBadEnd: 0
   lockingFirstPath: 0
   lockingSecondPath: 0
   lockingThirdPath: 0
-  fitCheck: 0
+  triggerTrueEnd: 0
+  triggerGoodEnd: 0
+  triggerBadEnd: 0
   dressUpNode: {fileID: 0}
   requiredOutfit: 
-  evidenceToDiscover: {fileID: 0}
-  evidenceCheckNode: 0
-  pathARequiredEvidence: 
-  pathBRequiredEvidence: 
-  pathCRequiredEvidence: 
-  pathAInterrogationEvidenceRequired: 0
-  pathBInterrogationEvidenceRequired: 0
-  pathCInterrogationEvidenceRequired: 0
+  lifeLoss: 0
+  evidenceRequired: 
+  evidenceRequiredImage: {fileID: 0}
+  evidenceNeededCheck: 0
+  evImagesGenerated: 0
   nodeEmotion: 1
+  bribeGiven: 0

@@ -49,42 +49,39 @@ MonoBehaviour:
   - {fileID: 3499891356269125111, guid: a75b003dceffb994fa5219a726b88885, type: 3}
   - {fileID: 3499891356269125111, guid: 17207b427ae97194884faf4b0d77d19c, type: 3}
   speech: Scarlet didn't like us talkin' much. Thought there was somethin' fishy
-    goin' on. Like Gracie was gonna steal her boy or somethin'.
+    goin' on. Like Gracie was gonna <wave>steal her boy</wave> or somethin'.
   responses:
   - Any truth in that?
   - She the jealous type?
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10
-  nodeID: 
-  nodeActive: 0
   repGainResponse1: 0
   repGainResponse2: 0
   repGainResponse3: 0
+  nodeActive: 0
   interrogationNode: 0
-  lifeLoss: 0
   exitNode: 0
+  nodeVisited: 0
+  briberyAvailable: 0
+  fitCheck: 0
+  evidenceToDiscover: {fileID: 2720912505709134154, guid: 9432adda6cf68514089ecdf262ad2e39, type: 3}
+  lockingNode: 1
   firstPathLocked: 0
   secondPathLocked: 0
   thirdPathLocked: 0
-  nodeVisited: 0
-  lockingNode: 1
-  briberyAvailable: 0
-  triggerTrueEnd: 0
-  triggerGoodEnd: 0
-  triggerBadEnd: 0
   lockingFirstPath: 0
   lockingSecondPath: 1
   lockingThirdPath: 0
-  fitCheck: 0
+  triggerTrueEnd: 0
+  triggerGoodEnd: 0
+  triggerBadEnd: 0
   dressUpNode: {fileID: 0}
   requiredOutfit: 
-  evidenceToDiscover: {fileID: 2720912505709134154, guid: 9432adda6cf68514089ecdf262ad2e39, type: 3}
-  evidenceCheckNode: 0
-  pathARequiredEvidence: 
-  pathBRequiredEvidence: 
-  pathCRequiredEvidence: 
-  pathAInterrogationEvidenceRequired: 0
-  pathBInterrogationEvidenceRequired: 0
-  pathCInterrogationEvidenceRequired: 0
+  lifeLoss: 0
+  evidenceRequired: 
+  evidenceRequiredImage: {fileID: 0}
+  evidenceNeededCheck: 0
+  evImagesGenerated: 0
   nodeEmotion: 0
+  bribeGiven: 0

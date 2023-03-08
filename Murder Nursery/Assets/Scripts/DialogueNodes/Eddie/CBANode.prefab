@@ -48,42 +48,39 @@ MonoBehaviour:
   children:
   - {fileID: 3499891356269125111, guid: ece55be20f0658b4395459ee33df7035, type: 3}
   - {fileID: 3499891356269125111, guid: 717fb53dd26551e498a712cf081bb61f, type: 3}
-  speech: How do you know her? You tryin' to make a move on my gal?
+  speech: How do you know her? You tryin' to make a <wave>move</wave> on my gal?
   responses:
   - So what if I am?
   - Not interested. Just tryin' to figure out who's who.
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10
-  nodeID: 
-  nodeActive: 0
   repGainResponse1: -2
   repGainResponse2: 2
   repGainResponse3: 0
+  nodeActive: 0
   interrogationNode: 0
-  lifeLoss: 0
   exitNode: 0
+  nodeVisited: 0
+  briberyAvailable: 0
+  fitCheck: 0
+  evidenceToDiscover: {fileID: 2720912505709134154, guid: f3a593bd9bbb97d4ca19e8ab907d0cc6, type: 3}
+  lockingNode: 0
   firstPathLocked: 0
   secondPathLocked: 0
   thirdPathLocked: 0
-  nodeVisited: 1
-  lockingNode: 0
-  briberyAvailable: 0
-  triggerTrueEnd: 0
-  triggerGoodEnd: 0
-  triggerBadEnd: 0
   lockingFirstPath: 0
   lockingSecondPath: 0
   lockingThirdPath: 0
-  fitCheck: 0
+  triggerTrueEnd: 0
+  triggerGoodEnd: 0
+  triggerBadEnd: 0
   dressUpNode: {fileID: 0}
   requiredOutfit: 
-  evidenceToDiscover: {fileID: 2720912505709134154, guid: f3a593bd9bbb97d4ca19e8ab907d0cc6, type: 3}
-  evidenceCheckNode: 0
-  pathARequiredEvidence: 
-  pathBRequiredEvidence: 
-  pathCRequiredEvidence: 
-  pathAInterrogationEvidenceRequired: 0
-  pathBInterrogationEvidenceRequired: 0
-  pathCInterrogationEvidenceRequired: 0
+  lifeLoss: 0
+  evidenceRequired: 
+  evidenceRequiredImage: {fileID: 0}
+  evidenceNeededCheck: 0
+  evImagesGenerated: 0
   nodeEmotion: 6
+  bribeGiven: 0

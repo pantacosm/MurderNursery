@@ -47,43 +47,40 @@ MonoBehaviour:
   parent: {fileID: 3499891356269125111, guid: dd7729fda4edc9c4f973d3b57884d2cc, type: 3}
   children:
   - {fileID: 3499891356269125111, guid: 2c0bc6fd7742c0342b41719966627fe3, type: 3}
-  speech: 'Oooooh, where do I begin Detective Drew! Well, the first time I met ''er
-    I sent her a real nice card askin'' if she wanted to be friends. Used my favourite
-    glitter pens too! '
+  speech: 'Oooooh, where do I <wave>begin</wave> Detective Drew! Well, the first
+    time I met ''er I sent her a real nice card askin'' if she wanted to be friends.
+    Used my favourite glitter pens too! '
   responses:
   - Go on....
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10
-  nodeID: 
-  nodeActive: 0
   repGainResponse1: 0
   repGainResponse2: 0
   repGainResponse3: 0
+  nodeActive: 0
   interrogationNode: 0
-  lifeLoss: 0
   exitNode: 0
+  nodeVisited: 0
+  briberyAvailable: 0
+  fitCheck: 0
+  evidenceToDiscover: {fileID: 2720912505709134154, guid: 1f79ca35b6781084ba211fbc96351d06, type: 3}
+  lockingNode: 0
   firstPathLocked: 0
   secondPathLocked: 0
   thirdPathLocked: 0
-  nodeVisited: 0
-  lockingNode: 0
-  briberyAvailable: 0
-  triggerTrueEnd: 0
-  triggerGoodEnd: 0
-  triggerBadEnd: 0
   lockingFirstPath: 0
   lockingSecondPath: 0
   lockingThirdPath: 0
-  fitCheck: 0
+  triggerTrueEnd: 0
+  triggerGoodEnd: 0
+  triggerBadEnd: 0
   dressUpNode: {fileID: 0}
   requiredOutfit: 
-  evidenceToDiscover: {fileID: 2720912505709134154, guid: 1f79ca35b6781084ba211fbc96351d06, type: 3}
-  evidenceCheckNode: 0
-  pathARequiredEvidence: 
-  pathBRequiredEvidence: 
-  pathCRequiredEvidence: 
-  pathAInterrogationEvidenceRequired: 0
-  pathBInterrogationEvidenceRequired: 0
-  pathCInterrogationEvidenceRequired: 0
+  lifeLoss: 0
+  evidenceRequired: 
+  evidenceRequiredImage: {fileID: 0}
+  evidenceNeededCheck: 0
+  evImagesGenerated: 0
   nodeEmotion: 7
+  bribeGiven: 0

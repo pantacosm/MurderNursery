@@ -500,6 +500,7 @@ public class Interrogation : MonoBehaviour
             }
             else if(pressedButton.GetComponent<EvidenceSlot>().evidenceText != activeNode.evidenceRequired)
             {
+                
                 playerResponse1.GetComponent<TextMeshProUGUI>().text = activeNode.responses[0];
                 LoadIntNodeInfo(activeNode.children[0]);
                 interrogationPanel.SetActive(true);

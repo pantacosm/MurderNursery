@@ -59,7 +59,7 @@ MonoBehaviour:
   repGainResponse1: 0
   repGainResponse2: 0
   repGainResponse3: 0
-  nodeActive: 1
+  nodeActive: 0
   interrogationNode: 0
   exitNode: 0
   nodeVisited: 0
@@ -79,7 +79,7 @@ MonoBehaviour:
   dressUpNode: {fileID: 0}
   requiredOutfit: 
   lifeLoss: 0
-  evidenceRequired: a picture of Scarlet with question marks
+  evidenceRequired: works for chase
   evidenceRequiredImage: {fileID: 21300000, guid: c146e220118d7ce43a857b01cab2a977, type: 3}
   evidenceNeededCheck: 1
   evImagesGenerated: 0

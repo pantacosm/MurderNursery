@@ -47,7 +47,7 @@ public class InventoryManager : MonoBehaviour
     private void Start()
     {
         AddItem(pinboard); //Adds the fundamental items to the player's inventory
-        AddItem(jotter); //''
+        //AddItem(jotter); //''
         AddItem(mGlass); //''
     }
 

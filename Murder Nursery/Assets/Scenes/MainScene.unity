@@ -729,6 +729,11 @@ MonoBehaviour:
   requiredEvidence5: 
   description: Chase is a real jock but I bet he's not as dumb as he looks. He coud
     be hiding something!
+  reEv1Found: 0
+  reEv2Found: 0
+  reEv3Found: 0
+  reEv4Found: 0
+  reEv5Found: 0
 --- !u!1001 &27609086
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2859,7 +2864,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &115638088
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3444,6 +3449,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 508265365}
+        m_TargetAssemblyTypeName: Interrogation, Assembly-CSharp
+        m_MethodName: CheckEvidence
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 171703091}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -4848,7 +4865,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &248447798
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5309,7 +5326,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &252818529
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5844,6 +5861,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 508265365}
+        m_TargetAssemblyTypeName: Interrogation, Assembly-CSharp
+        m_MethodName: CheckEvidence
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 261144116}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &261144121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6184,6 +6213,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 508265365}
+        m_TargetAssemblyTypeName: Interrogation, Assembly-CSharp
+        m_MethodName: CheckEvidence
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 270772800}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &270772805
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6462,6 +6503,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 508265365}
+        m_TargetAssemblyTypeName: Interrogation, Assembly-CSharp
+        m_MethodName: CheckEvidence
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 275888745}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -8384,6 +8437,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 508265365}
+        m_TargetAssemblyTypeName: Interrogation, Assembly-CSharp
+        m_MethodName: CheckEvidence
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 327130573}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &327130578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9361,6 +9426,11 @@ MonoBehaviour:
   requiredEvidence5: 
   description: Chase is a real jock but I bet he's not as dumb as he looks. He coud
     be hiding something!
+  reEv1Found: 0
+  reEv2Found: 0
+  reEv3Found: 0
+  reEv4Found: 0
+  reEv5Found: 0
 --- !u!136 &361309824
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -9656,6 +9726,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 508265365}
+        m_TargetAssemblyTypeName: Interrogation, Assembly-CSharp
+        m_MethodName: CheckEvidence
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 365413125}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -10553,7 +10635,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &421991598
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10686,7 +10768,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &422012646
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11559,7 +11641,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &454299646
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12436,6 +12518,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 508265365}
+        m_TargetAssemblyTypeName: Interrogation, Assembly-CSharp
+        m_MethodName: CheckEvidence
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 487941606}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &487941611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12733,7 +12827,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &507703258
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14037,6 +14131,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 508265365}
+        m_TargetAssemblyTypeName: Interrogation, Assembly-CSharp
+        m_MethodName: CheckEvidence
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 563995862}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &563995865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14602,6 +14708,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 508265365}
+        m_TargetAssemblyTypeName: Interrogation, Assembly-CSharp
+        m_MethodName: CheckEvidence
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 595111550}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -15976,7 +16094,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &665633343
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16658,6 +16776,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 508265365}
+        m_TargetAssemblyTypeName: Interrogation, Assembly-CSharp
+        m_MethodName: CheckEvidence
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 682864230}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -17431,7 +17561,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &738991799
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17570,7 +17700,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &767919225
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17871,7 +18001,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &774980323
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18185,6 +18315,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 508265365}
+        m_TargetAssemblyTypeName: Interrogation, Assembly-CSharp
+        m_MethodName: CheckEvidence
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 775929153}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -19744,7 +19886,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &826823327
 RectTransform:
   m_ObjectHideFlags: 0
@@ -20688,6 +20830,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 508265365}
+        m_TargetAssemblyTypeName: Interrogation, Assembly-CSharp
+        m_MethodName: CheckEvidence
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 835706671}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &835706676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20986,7 +21140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &855411971
 RectTransform:
   m_ObjectHideFlags: 0
@@ -21513,6 +21667,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 508265365}
+        m_TargetAssemblyTypeName: Interrogation, Assembly-CSharp
+        m_MethodName: CheckEvidence
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 863811547}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &863811552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21650,7 +21816,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &872209408
 RectTransform:
   m_ObjectHideFlags: 0
@@ -26859,6 +27025,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 508265365}
+        m_TargetAssemblyTypeName: Interrogation, Assembly-CSharp
+        m_MethodName: CheckEvidence
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 892035140}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &892035145
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27303,6 +27481,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 508265365}
+        m_TargetAssemblyTypeName: Interrogation, Assembly-CSharp
+        m_MethodName: CheckEvidence
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 899368607}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &899368612
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27549,7 +27739,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &918362525
 RectTransform:
   m_ObjectHideFlags: 0
@@ -28035,7 +28225,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &935472928
 RectTransform:
   m_ObjectHideFlags: 0
@@ -28597,7 +28787,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &946820171
 RectTransform:
   m_ObjectHideFlags: 0
@@ -28937,7 +29127,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &966624405
 RectTransform:
   m_ObjectHideFlags: 0
@@ -29885,7 +30075,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1004921420
 RectTransform:
   m_ObjectHideFlags: 0
@@ -30029,7 +30219,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1029186147
 RectTransform:
   m_ObjectHideFlags: 0
@@ -30587,6 +30777,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 508265365}
+        m_TargetAssemblyTypeName: Interrogation, Assembly-CSharp
+        m_MethodName: CheckEvidence
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1055012698}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -31642,7 +31844,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1088111737
 RectTransform:
   m_ObjectHideFlags: 0
@@ -32044,8 +32246,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 183.631, y: -119.575}
-  m_SizeDelta: {x: 567.261, y: 289.15}
+  m_AnchoredPosition: {x: 1922.9109, y: 496.47}
+  m_SizeDelta: {x: 882.511, y: 992.93}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1091015125
 MonoBehaviour:
@@ -32094,10 +32296,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
+  m_fontSize: 72
   m_fontSizeBase: 50
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -32834,6 +33036,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 508265365}
+        m_TargetAssemblyTypeName: Interrogation, Assembly-CSharp
+        m_MethodName: CheckEvidence
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1129105239}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1129105242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32930,7 +33144,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1147294813
 RectTransform:
   m_ObjectHideFlags: 0
@@ -33522,7 +33736,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1178514794
 RectTransform:
   m_ObjectHideFlags: 0
@@ -33831,6 +34045,11 @@ MonoBehaviour:
   requiredEvidence5: 
   description: Chase is a real jock but I bet he's not as dumb as he looks. He coud
     be hiding something!
+  reEv1Found: 0
+  reEv2Found: 0
+  reEv3Found: 0
+  reEv4Found: 0
+  reEv5Found: 0
 --- !u!1 &1188349438
 GameObject:
   m_ObjectHideFlags: 0
@@ -34250,6 +34469,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 508265365}
+        m_TargetAssemblyTypeName: Interrogation, Assembly-CSharp
+        m_MethodName: CheckEvidence
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1206904075}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -34798,7 +35029,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1220695005
 RectTransform:
   m_ObjectHideFlags: 0
@@ -34931,7 +35162,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1224335690
 RectTransform:
   m_ObjectHideFlags: 0
@@ -35278,7 +35509,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1234281950
 RectTransform:
   m_ObjectHideFlags: 0
@@ -36427,6 +36658,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 508265365}
+        m_TargetAssemblyTypeName: Interrogation, Assembly-CSharp
+        m_MethodName: CheckEvidence
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1275061185}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1275061190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36483,7 +36726,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1279236287
 RectTransform:
   m_ObjectHideFlags: 0
@@ -37259,6 +37502,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 508265365}
+        m_TargetAssemblyTypeName: Interrogation, Assembly-CSharp
+        m_MethodName: CheckEvidence
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1310554246}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1310554251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37569,6 +37824,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 508265365}
+        m_TargetAssemblyTypeName: Interrogation, Assembly-CSharp
+        m_MethodName: CheckEvidence
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1315300879}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1315300884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37819,6 +38086,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 508265365}
+        m_TargetAssemblyTypeName: Interrogation, Assembly-CSharp
+        m_MethodName: CheckEvidence
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1323538738}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -38182,6 +38461,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 508265365}
+        m_TargetAssemblyTypeName: Interrogation, Assembly-CSharp
+        m_MethodName: CheckEvidence
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1340193818}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -39471,7 +39762,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1386269840
 RectTransform:
   m_ObjectHideFlags: 0
@@ -40307,6 +40598,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 508265365}
+        m_TargetAssemblyTypeName: Interrogation, Assembly-CSharp
+        m_MethodName: CheckEvidence
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1406687005}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1406687010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40967,6 +41270,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 508265365}
+        m_TargetAssemblyTypeName: Interrogation, Assembly-CSharp
+        m_MethodName: CheckEvidence
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1435705465}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1435705470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41214,6 +41529,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 508265365}
+        m_TargetAssemblyTypeName: Interrogation, Assembly-CSharp
+        m_MethodName: CheckEvidence
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1439145839}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -42019,7 +42346,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1499859180
 RectTransform:
   m_ObjectHideFlags: 0
@@ -42624,6 +42951,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 508265365}
+        m_TargetAssemblyTypeName: Interrogation, Assembly-CSharp
+        m_MethodName: CheckEvidence
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1514058039}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -43515,7 +43854,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1565177380
 RectTransform:
   m_ObjectHideFlags: 0
@@ -43781,7 +44120,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1572149789
 RectTransform:
   m_ObjectHideFlags: 0
@@ -44427,6 +44766,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 508265365}
+        m_TargetAssemblyTypeName: Interrogation, Assembly-CSharp
+        m_MethodName: CheckEvidence
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1631989985}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1631989990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44640,7 +44991,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1658368741
 RectTransform:
   m_ObjectHideFlags: 0
@@ -44924,6 +45275,11 @@ MonoBehaviour:
   requiredEvidence5: 
   description: Chase is a real jock but I bet he's not as dumb as he looks. He coud
     be hiding something!
+  reEv1Found: 0
+  reEv2Found: 0
+  reEv3Found: 0
+  reEv4Found: 0
+  reEv5Found: 0
 --- !u!136 &1661519763
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -45118,6 +45474,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 508265365}
+        m_TargetAssemblyTypeName: Interrogation, Assembly-CSharp
+        m_MethodName: CheckEvidence
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1666659419}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -46325,6 +46693,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 508265365}
+        m_TargetAssemblyTypeName: Interrogation, Assembly-CSharp
+        m_MethodName: CheckEvidence
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1686563944}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1686563949
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46993,6 +47373,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 508265365}
+        m_TargetAssemblyTypeName: Interrogation, Assembly-CSharp
+        m_MethodName: CheckEvidence
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1714226078}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -49111,7 +49503,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1778013580
 RectTransform:
   m_ObjectHideFlags: 0
@@ -50133,6 +50525,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 508265365}
+        m_TargetAssemblyTypeName: Interrogation, Assembly-CSharp
+        m_MethodName: CheckEvidence
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1812182742}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1812182747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50189,7 +50593,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1813307027
 RectTransform:
   m_ObjectHideFlags: 0
@@ -51097,7 +51501,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1868768040
 RectTransform:
   m_ObjectHideFlags: 0
@@ -58044,7 +58448,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1915821951
 RectTransform:
   m_ObjectHideFlags: 0
@@ -58389,7 +58793,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1947007262
 RectTransform:
   m_ObjectHideFlags: 0
@@ -59276,6 +59680,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 508265365}
+        m_TargetAssemblyTypeName: Interrogation, Assembly-CSharp
+        m_MethodName: CheckEvidence
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1980674147}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1980674152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59520,6 +59936,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 508265365}
+        m_TargetAssemblyTypeName: Interrogation, Assembly-CSharp
+        m_MethodName: CheckEvidence
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1981611335}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -59799,6 +60227,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 508265365}
+        m_TargetAssemblyTypeName: Interrogation, Assembly-CSharp
+        m_MethodName: CheckEvidence
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1991290026}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1991290031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60058,6 +60498,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 508265365}
+        m_TargetAssemblyTypeName: Interrogation, Assembly-CSharp
+        m_MethodName: CheckEvidence
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1997398912}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -60379,6 +60831,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 508265365}
+        m_TargetAssemblyTypeName: Interrogation, Assembly-CSharp
+        m_MethodName: CheckEvidence
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2000785479}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -60716,7 +61180,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2024814680
 RectTransform:
   m_ObjectHideFlags: 0
@@ -61589,7 +62053,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2061790157
 RectTransform:
   m_ObjectHideFlags: 0
@@ -61911,6 +62375,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 508265365}
+        m_TargetAssemblyTypeName: Interrogation, Assembly-CSharp
+        m_MethodName: CheckEvidence
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2068531370}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -62614,6 +63090,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 508265365}
+        m_TargetAssemblyTypeName: Interrogation, Assembly-CSharp
+        m_MethodName: CheckEvidence
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2102545660}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -74869,7 +75357,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2873506898117971537, guid: fa8344d6ae8a15843a5dcc00dfa06657, type: 3}
       propertyPath: m_Name
-      value: ReputationManager
+      value: REP MANAGER (REDUNDANT)
       objectReference: {fileID: 0}
     - target: {fileID: 2873506898117971542, guid: fa8344d6ae8a15843a5dcc00dfa06657, type: 3}
       propertyPath: JotterUI

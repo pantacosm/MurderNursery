@@ -39,7 +39,11 @@ public class NPCDialogue : MonoBehaviour
     public string requiredEvidence5;
     public string description;
 
-
+    public bool reEv1Found = false;
+    public bool reEv2Found = false;
+    public bool reEv3Found = false;
+    public bool reEv4Found = false;
+    public bool reEv5Found = false;
 
     public void Awake()
     {
@@ -57,6 +61,7 @@ public class NPCDialogue : MonoBehaviour
             node.thirdPathLocked = false;
             node.nodeVisited = false;
             node.evImagesGenerated = false;
+            node.bribeGiven = false;
             }
         textureToChange.SetTexture("_DetailAlbedoMap", defaultEmotion); //Sets default emotion active 
     }

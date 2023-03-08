@@ -66,5 +66,6 @@ public class DialogueNode : MonoBehaviour
         firstPathLocked = false; //Sets all the paths to unlocked at the beginning of play
         secondPathLocked = false;
         thirdPathLocked = false;
+        
     }
 }

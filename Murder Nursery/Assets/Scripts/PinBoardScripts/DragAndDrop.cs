@@ -37,8 +37,8 @@ public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, ID
             canvasGroup.blocksRaycasts = false;
             itemPrefab.GetComponent<Image>().maskable = false;
             originalPos = transform.position;
-            //hoverOverText.SetActive(true);
-            //hoverOverText.GetComponent<TextMeshProUGUI>().text = displayText;
+            hoverOverText.SetActive(true);
+            hoverOverText.GetComponent<TextMeshProUGUI>().text = this.GetComponent<EvidenceClass>().evidenceText;
             //hoverOverText.transform.position = this.transform.position;
         }
         
@@ -55,7 +55,7 @@ public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, ID
     // Called when mouse click is released
     public void OnEndDrag(PointerEventData eventData)
     {
-        //hoverOverText.SetActive(false);
+        hoverOverText.SetActive(false);
         canvasGroup.blocksRaycasts = true;
         itemPrefab.GetComponent<Image>().maskable = true;
         eventData.Reset();

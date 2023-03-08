@@ -29,7 +29,6 @@ public class ThreadManager : MonoBehaviour
                     CheckThreadStart();
                     GameObject newThread = this.GetComponent<PinboardThread>().MakeLine(firstThreadItem.transform.position.x, firstThreadItem.transform.position.y, secondThreadItem.transform.position.x, secondThreadItem.transform.position.y, Color.red); //Creates the thread
                     secondThreadItem.GetComponent<EvidenceSlot>().threads.Add(newThread);
-                    print("Line created");
                     
                         firstThreadItem = null; //Resets the selected items 
                         secondThreadItem = null; //Resets the selected items

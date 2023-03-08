@@ -166,23 +166,23 @@ public class DialogueManager : MonoBehaviour
 
 
 
-        if(gainingRep) //Checks if the player is gaining rep and displays the rep increase sprite
-        {
-            for (int i = 0; i < 1; i++)
-            {
+        //if(gainingRep) //Checks if the player is gaining rep and displays the rep increase sprite
+      //  {
+        //    for (int i = 0; i < 1; i++)
+         //   {
                 
-                StartCoroutine(RepFader(repGainSprite, true)); 
-                StartCoroutine(WaitForSeconds(gainingRep, repGainSprite, 1.5f));
-            }
-        }
-        if(losingRep) //Checks if the player is losing rep and displays the rep decrease sprite
-        {
-            for(int i = 0; i < 1; i++)
-            {
-                StartCoroutine(RepFader(repLossSprite, true));
-                StartCoroutine(WaitForSeconds(losingRep, repLossSprite, 1.5f));
-            }
-        }
+         //       StartCoroutine(RepFader(repGainSprite, true)); 
+         //       StartCoroutine(WaitForSeconds(gainingRep, repGainSprite, 1.5f));
+         //   }
+      //  }
+      //  if(losingRep) //Checks if the player is losing rep and displays the rep decrease sprite
+      //  {
+      //      for(int i = 0; i < 1; i++)
+      //      {
+       //         StartCoroutine(RepFader(repLossSprite, true));
+       //         StartCoroutine(WaitForSeconds(losingRep, repLossSprite, 1.5f));
+      //      }
+      //  }
         if (activeNode != null) 
         {
             if (activeNode.exitNode) //Checks if there is an exit node present 
@@ -336,22 +336,22 @@ public class DialogueManager : MonoBehaviour
         {
             summaryPanel.SetActive(false);
         }
-        repLockResponse1.SetActive(false); //Preemptively resets the player response positions to prevent overspawning issues
-        repLockResponse2.SetActive(false);
-        repLockResponse3.SetActive(false);
+      //  repLockResponse1.SetActive(false); //REPUTATION STUFF// NOT IN CURRENT BUILD
+      //  repLockResponse2.SetActive(false);
+      //  repLockResponse3.SetActive(false);
 
-        if (newNode.repLevelOption1 > 0) //Checks if a response is locked behind a reputation check
-        {
-            repLockResponse1.SetActive(true);
-        }
-        if (newNode.repLevelOption2 > 0) //''
-        {
-            repLockResponse2.SetActive(true);
-        }
-        if (newNode.repLevelOption3 > 0) //''
-        {
-            repLockResponse3.SetActive(true);
-        }
+       // if (newNode.repLevelOption1 > 0) //Checks if a response is locked behind a reputation check
+       // {
+       //     repLockResponse1.SetActive(true);
+       // }
+       // if (newNode.repLevelOption2 > 0) //''
+       // {
+       //     repLockResponse2.SetActive(true);
+      //  }
+      //  if (newNode.repLevelOption3 > 0) //''
+      //  {
+      //      repLockResponse3.SetActive(true);
+      //  }
 
         if (activeNode != null)
         {
@@ -535,7 +535,7 @@ public class DialogueManager : MonoBehaviour
 
     }
 
-    void UpdateRep(int repGain) //Called when the reputation levels require updating
+    void UpdateRep(int repGain) //Called when the reputation levels require updating // CURRENTLY REMOVED FROM GAME
     {
         if (activeNPC == eddie) //Updates rep for Eddie
         {
@@ -621,19 +621,19 @@ public class DialogueManager : MonoBehaviour
             EnterInterrogation(activeNPC);
             inConvo = false;
         }
-        if(playerChoice == 0 && activeNode.repGainResponse1 != 0) //Triggers reputation update if required
-        {
-            UpdateRep(activeNode.repGainResponse1);
+        //if(playerChoice == 0 && activeNode.repGainResponse1 != 0) //Triggers reputation update if required
+        //{
+          //  UpdateRep(activeNode.repGainResponse1);
 
-        }
-        if(playerChoice == 1 && activeNode.repGainResponse2 != 0) //''
-        {
-            UpdateRep(activeNode.repGainResponse2);
-        }
-        if(playerChoice == 2 && activeNode.repGainResponse3 != 0)//''
-        {
-            UpdateRep(activeNode.repGainResponse3);
-        }
+//        }
+       // if(playerChoice == 1 && activeNode.repGainResponse2 != 0) //''
+        //{
+        //    UpdateRep(activeNode.repGainResponse2);
+        //}
+       // if(playerChoice == 2 && activeNode.repGainResponse3 != 0)//''
+       /// {
+       //     UpdateRep(activeNode.repGainResponse3);
+       // }
 
         if(playerChoice == 0|| playerChoice == 1 || playerChoice == 2) // Checks if the player has chosen a response
         {
@@ -747,7 +747,7 @@ public class DialogueManager : MonoBehaviour
             yield return new WaitForSeconds(1);
             currentCountdownValue--;
         }
-        StartCoroutine(RepFader(sprite, false));
+        //StartCoroutine(RepFader(sprite, false));
         signal = false;
     }
 
@@ -870,53 +870,50 @@ public class DialogueManager : MonoBehaviour
     public void ToggleSummary()
     {
         summaryPanel.SetActive(!summaryPanel.activeSelf);
+        if(summaryPanel.activeSelf)
+        {
+            tick1.SetActive(false);
+            tick2.SetActive(false);
+            tick3.SetActive(false);
+            tick4.SetActive(false);
+            tick5.SetActive(false);
+        }
         npcName.GetComponent<TextMeshProUGUI>().text = activeNPC.gameObject.name;
         npcSprite.sprite = activeNPC.GetComponent<NPCDialogue>().sprite;
         npcDescription.GetComponent<TextMeshProUGUI>().text = activeNPC.GetComponent<NPCDialogue>().description;
 
         foreach (string evidence in pinBoardManager.GetComponent<PinboardManager>().threadedEvidence)
         {
-            if (activeNPC.GetComponent<NPCDialogue>().requiredEvidence1 == evidence )
+            if (activeNPC.GetComponent<NPCDialogue>().requiredEvidence1 == evidence)
             {
-                tick1.SetActive(true);
-                
+                tick1.SetActive(true);;
+                continue;
             }
-            else
-            {
-                tick1.SetActive(false);
-            }
+            
             if(activeNPC.GetComponent<NPCDialogue>().requiredEvidence2 == evidence )
             {
                 tick2.SetActive(true);
+                continue;
             }
-            else
-            {
-                tick2.SetActive(false);
-            }
+         
             if(activeNPC.GetComponent<NPCDialogue>().requiredEvidence3 == evidence)
             {
                 tick3.SetActive(true);
+                continue;
             }
-            else
-            {
-                tick3.SetActive(false);
-            }
+        
             if(activeNPC.GetComponent<NPCDialogue>().requiredEvidence4 == evidence)
             {
                 tick4.SetActive(true);
+                continue;
             }
-            else
-            {
-                tick4.SetActive(false);
-            }
+           
             if(activeNPC.GetComponent<NPCDialogue>().requiredEvidence5 == evidence)
             {
                 tick5.SetActive(true);
+                continue;
             }
-            else
-            {
-                tick5.SetActive(false);
-            }
+           
         }
     }
 }

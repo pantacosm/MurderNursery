@@ -97,13 +97,13 @@ public class DressUp : MonoBehaviour
         UpdateOutfitChoices(artistButton);
         ExitDressUp();
         playerAudio.PlayOneShot(changeOutfitSound, 0.5f); //Plays the outfit change sound
-        playerPosition = currentOutfit.transform;
+        //playerPosition = currentOutfit.transform;
         currentOutfit.SetActive(false);        
         currentOutfit = artistOutfit;
         artistOutfit.SetActive(true);
-        artistOutfit.transform.position = playerPosition.position;
-        playerCam.GetComponent<CinemachineVirtualCamera>().Follow = artistOutfit.transform;
-        playerCam.GetComponent<CinemachineVirtualCamera>().LookAt = artistOutfit.transform;
+        //artistOutfit.transform.position = playerPosition.position;
+        //playerCam.GetComponent<CinemachineVirtualCamera>().Follow = artistOutfit.transform;
+        //playerCam.GetComponent<CinemachineVirtualCamera>().LookAt = artistOutfit.transform;
 
     }
 
@@ -114,12 +114,12 @@ public class DressUp : MonoBehaviour
         UpdateOutfitChoices(punkButton);
         ExitDressUp();
         playerAudio.PlayOneShot(changeOutfitSound, 0.5f); //Plays the outfit change sound
-        playerPosition = currentOutfit.transform;
+        //playerPosition = currentOutfit.transform;
         currentOutfit.SetActive(false);
         currentOutfit = punkOutfit;
         punkOutfit.SetActive(true);
-        punkOutfit.transform.position = playerPosition.position;
-        playerCam.GetComponent<CinemachineVirtualCamera>().Follow = punkOutfit.transform;
+        //punkOutfit.transform.position = playerPosition.position;
+        //playerCam.GetComponent<CinemachineVirtualCamera>().Follow = punkOutfit.transform;
     }
 
     public void ChangeToGangsterOutfit() //Changes the player's current outfit to the gangster outfit
@@ -129,11 +129,11 @@ public class DressUp : MonoBehaviour
         UpdateOutfitChoices(gangsterButton);
         ExitDressUp();
         playerAudio.PlayOneShot(changeOutfitSound, 0.5f); //Plays the outfit change sound
-        playerPosition = currentOutfit.transform;
+        //playerPosition = currentOutfit.transform;
         currentOutfit.SetActive(false);
         currentOutfit = gangsterOutfit;
         gangsterOutfit.SetActive(true);
-        gangsterOutfit.transform.position = playerPosition.position;
+        //gangsterOutfit.transform.position = playerPosition.position;
     }
 
     public void ChangeToDetectiveOutfit() //Changes the player's current outfit to the detective outfit 
@@ -143,11 +143,11 @@ public class DressUp : MonoBehaviour
         UpdateOutfitChoices(detectiveButton);
         ExitDressUp();
         playerAudio.PlayOneShot(changeOutfitSound, 0.5f); //Plays the outfit change sound
-        playerPosition = currentOutfit.transform;
+        //playerPosition = currentOutfit.transform;
         currentOutfit.SetActive(false);
-        currentOutfit= detectiveOutfit;
+        currentOutfit = detectiveOutfit;
         detectiveOutfit.SetActive(true);
-        detectiveOutfit.transform.position = playerPosition.position;
+        //detectiveOutfit.transform.position = playerPosition.position;
     }
 
     private void UpdateOutfitChoices(GameObject buttonClicked) //Updates the dress up menu UI to display the current available outfits

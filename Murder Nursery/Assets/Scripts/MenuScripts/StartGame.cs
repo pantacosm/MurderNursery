@@ -9,8 +9,14 @@ public class StartGame : MonoBehaviour
     int timeToFade = 1; //Time to fade to black
     public AudioSource cam; //Audio source for start menu
     public AudioClip selectChoice; //Sound used for choosing an option
-    public GameObject settingsMenu; //UI element for settings menu
+
+    public GameObject optionsMenu; // shows after clicking options/settings
+    public GameObject graphicsMenu; //UI element for graphics settings menu
+    public GameObject resMenu; // shows resolution menu
+    public GameObject audioMenu; // open audio menu
     public GameObject controlsUI; // UI image of controls
+
+    bool optionsOpen;
 
     public void Begin() //Used when the player starts the game
     {
@@ -18,9 +24,19 @@ public class StartGame : MonoBehaviour
         cam.PlayOneShot(selectChoice, 0.4f); //Plays relevant sound 
         StartCoroutine(FadeToBlack()); //Begins black fade
         
-        if(settingsMenu.activeInHierarchy)
+        if(graphicsMenu.activeInHierarchy)
         {
-            CloseSettings(); //Closes settings menu
+            CloseGraphics(); //Closes settings menu
+        }
+
+        if(resMenu.activeInHierarchy)
+        {
+            CloseResMenu();
+        }
+
+        if(audioMenu.activeInHierarchy)
+        {
+            CloseAudioMenu();
         }
         
     }
@@ -47,20 +63,123 @@ public class StartGame : MonoBehaviour
         
     }
 
-    public void Settings() //Opens settings menu
+    public void ToggleOptions()
     {
-        settingsMenu.SetActive(true);
         cam.PlayOneShot(selectChoice, 0.4f);
-
-        if(controlsUI.activeInHierarchy)
+        if(optionsOpen = !optionsOpen)
         {
-            controlsUI.SetActive(false);
+            optionsOpen = true;
+            optionsMenu.SetActive(true);
+        }
+        else
+        {
+            optionsOpen = false;
+            optionsMenu.SetActive(false);
+        }
+
+        if(graphicsMenu.activeInHierarchy)
+        {
+            graphicsMenu.SetActive(false);
+        }
+
+        if(resMenu.activeInHierarchy)
+        {
+            resMenu.SetActive(false);
+        }
+
+        if(audioMenu.activeInHierarchy)
+        {
+            audioMenu.SetActive(false);
         }
     }
 
-    public void CloseSettings() //Closes settings menu
+    public void OpenResolutionMenu()
     {
-        settingsMenu.SetActive(false);
+        cam.PlayOneShot(selectChoice, 0.4f);
+        resMenu.SetActive(true);
+
+        if(controlsUI)
+        {
+            if(controlsUI.activeInHierarchy)
+            {
+                controlsUI.SetActive(false);
+            }
+        }
+
+        if(graphicsMenu.activeInHierarchy)
+        {
+            graphicsMenu.SetActive(false);
+        }
+
+        if(audioMenu.activeInHierarchy)
+        {
+            audioMenu.SetActive(false);
+        }
+    }
+
+    public void CloseResMenu()
+    {
+        cam.PlayOneShot(selectChoice, 0.4f);
+        resMenu.SetActive(false);
+    }
+
+    public void OpenAudioMenu()
+    {
+        cam.PlayOneShot(selectChoice, 0.4f);
+        audioMenu.SetActive(true);
+
+        if(controlsUI)
+        {
+            if(controlsUI.activeInHierarchy)
+            {
+                controlsUI.SetActive(false);
+            }
+        }
+
+        if(graphicsMenu.activeInHierarchy)
+        {
+            graphicsMenu.SetActive(false);
+        }
+
+        if(resMenu.activeInHierarchy)
+        {
+            resMenu.SetActive(false);
+        }
+    }
+
+    public void CloseAudioMenu()
+    {
+        cam.PlayOneShot(selectChoice, 0.4f);
+        audioMenu.SetActive(false);
+    }
+
+    public void Graphics() //Opens graphics settings menu
+    {
+        graphicsMenu.SetActive(true);
+        cam.PlayOneShot(selectChoice, 0.4f);
+
+        if(controlsUI)
+        {
+            if(controlsUI.activeInHierarchy)
+            {
+                controlsUI.SetActive(false);
+            }
+        }
+
+        if(resMenu.activeInHierarchy)
+        {
+            resMenu.SetActive(false);
+        }
+
+        if(audioMenu.activeInHierarchy)
+        {
+            audioMenu.SetActive(false);
+        }
+    }
+
+    public void CloseGraphics() //Closes graphics settings menu
+    {
+        graphicsMenu.SetActive(false);
         cam.PlayOneShot(selectChoice, 0.4f);
     }
 

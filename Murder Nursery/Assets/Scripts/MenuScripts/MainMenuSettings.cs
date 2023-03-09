@@ -2,14 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class MainMenuSettings : MonoBehaviour
 {
     public AudioSource cam;
     public AudioClip selectChoice;
+    public AudioMixer musicMixer;
+    public AudioMixer sfxMixer;
 
     public GameObject menuObject;
-    public GameObject settingsMenu;
+    public GameObject optionsMenu;
+    public GameObject graphicsMenu;
+    public GameObject resMenu;
+    public GameObject audioMenu;
     public GameObject controlsUI;
 
     DialogueManager DM;
@@ -31,6 +37,16 @@ public class MainMenuSettings : MonoBehaviour
                 ToggleMenu();
             }
         }
+    }
+
+    public void SetVolume(float sliderValue)
+    {
+        musicMixer.SetFloat("MusicVolume", Mathf.Log10(sliderValue) * 20);
+    }
+
+    public void SetSFXVolume(float sliderValue)
+    {
+        sfxMixer.SetFloat("SFXVolume", Mathf.Log10(sliderValue) * 20);
     }
 
     // Called as an OnClick() Event
@@ -114,9 +130,24 @@ public class MainMenuSettings : MonoBehaviour
             Cursor.visible = false;
         }
 
-        if(settingsMenu.activeInHierarchy)
+        if(optionsMenu.activeInHierarchy)
         {
-            settingsMenu.SetActive(false);
+            optionsMenu.SetActive(false);
+        }
+
+        if(graphicsMenu.activeInHierarchy)
+        {
+            graphicsMenu.SetActive(false);
+        }
+
+        if(resMenu.activeInHierarchy)
+        {
+            resMenu.SetActive(false);
+        }
+
+        if(audioMenu.activeInHierarchy)
+        {
+            audioMenu.SetActive(false);
         }
 
         if(controlsUI.activeInHierarchy)
@@ -130,9 +161,24 @@ public class MainMenuSettings : MonoBehaviour
     {
         controlsUI.SetActive(true);
         
-        if(settingsMenu.activeInHierarchy)
+        if(graphicsMenu.activeInHierarchy)
         {
-            settingsMenu.SetActive(false);
+            graphicsMenu.SetActive(false);
+        }
+
+        if(resMenu.activeInHierarchy)
+        {
+            resMenu.SetActive(false);
+        }
+
+        if(audioMenu.activeInHierarchy)
+        {
+            audioMenu.SetActive(false);
+        }
+
+        if(optionsMenu.activeInHierarchy)
+        {
+            optionsMenu.SetActive(false);
         }
     }
 

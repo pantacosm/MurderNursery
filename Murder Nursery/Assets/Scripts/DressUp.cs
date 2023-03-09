@@ -1,3 +1,4 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,7 +15,7 @@ public class DressUp : MonoBehaviour
     public GameObject interactableText; //Text that is displayed when the player is within range of the dress up box
     public GameObject dressUpMenu; //UI element containing all of the dress up menu components 
     public GameObject artistButton; //Button used for changing outfits
-    public GameObject wizardButton; //''
+    public GameObject punkButton; //''
     public GameObject gangsterButton; //''
     public GameObject detectiveButton;//''
     private GameObject inactiveButton;//Stores button which contains the outfit the player is currently wearing
@@ -28,6 +29,17 @@ public class DressUp : MonoBehaviour
     public AudioSource playerAudio; //Audio heard by the player
     public AudioClip openBoxSound; //Sound played when entering dress up menu
     public AudioClip changeOutfitSound; //Sound played when changing an outfit
+
+    [Header("Character Outfits")]
+    public GameObject gangsterOutfit;
+    public GameObject detectiveOutfit;
+    public GameObject artistOutfit;
+    public GameObject currentOutfit;
+    public GameObject punkOutfit;
+
+    private Transform playerPosition;
+    private Vector3 yOffset = new Vector3(0f, 0.3876f, 0f);
+    public GameObject playerCam;
     
     // Start is called before the first frame update
     void Start()
@@ -37,6 +49,7 @@ public class DressUp : MonoBehaviour
         secondButton = new Vector3(960.0f, 540.0f, 0.0f);//''
         thirdButton = new Vector3(1533.5f, 540.0f, 0.0f);//''
         inactiveButton = detectiveButton; //Sets the inactive button as the detective button
+        currentOutfit = detectiveOutfit;
     }
 
     
@@ -84,17 +97,29 @@ public class DressUp : MonoBehaviour
         UpdateOutfitChoices(artistButton);
         ExitDressUp();
         playerAudio.PlayOneShot(changeOutfitSound, 0.5f); //Plays the outfit change sound
-        //Add code here for visual changes
+        playerPosition = currentOutfit.transform;
+        currentOutfit.SetActive(false);        
+        currentOutfit = artistOutfit;
+        artistOutfit.SetActive(true);
+        artistOutfit.transform.position = playerPosition.position;
+        playerCam.GetComponent<CinemachineVirtualCamera>().Follow = artistOutfit.transform;
+        playerCam.GetComponent<CinemachineVirtualCamera>().LookAt = artistOutfit.transform;
+
     }
 
-    public void ChangeToWizardOutfit() //Changes the player's current outfit to the wizard outfit 
+    public void ChangeToPunkOutfit() //Changes the player's current outfit to the wizard outfit 
     {
-        activeOutfit = "Wizard Outfit";
+        activeOutfit = "Punk Outfit";
         print("You are now wearing the " + activeOutfit);
-        UpdateOutfitChoices(wizardButton);
+        UpdateOutfitChoices(punkButton);
         ExitDressUp();
         playerAudio.PlayOneShot(changeOutfitSound, 0.5f); //Plays the outfit change sound
-        //Add code here for visual changes
+        playerPosition = currentOutfit.transform;
+        currentOutfit.SetActive(false);
+        currentOutfit = punkOutfit;
+        punkOutfit.SetActive(true);
+        punkOutfit.transform.position = playerPosition.position;
+        playerCam.GetComponent<CinemachineVirtualCamera>().Follow = punkOutfit.transform;
     }
 
     public void ChangeToGangsterOutfit() //Changes the player's current outfit to the gangster outfit
@@ -104,7 +129,11 @@ public class DressUp : MonoBehaviour
         UpdateOutfitChoices(gangsterButton);
         ExitDressUp();
         playerAudio.PlayOneShot(changeOutfitSound, 0.5f); //Plays the outfit change sound
-        //Add code here for visual changes;
+        playerPosition = currentOutfit.transform;
+        currentOutfit.SetActive(false);
+        currentOutfit = gangsterOutfit;
+        gangsterOutfit.SetActive(true);
+        gangsterOutfit.transform.position = playerPosition.position;
     }
 
     public void ChangeToDetectiveOutfit() //Changes the player's current outfit to the detective outfit 
@@ -114,7 +143,11 @@ public class DressUp : MonoBehaviour
         UpdateOutfitChoices(detectiveButton);
         ExitDressUp();
         playerAudio.PlayOneShot(changeOutfitSound, 0.5f); //Plays the outfit change sound
-        //Add code here for visual changes
+        playerPosition = currentOutfit.transform;
+        currentOutfit.SetActive(false);
+        currentOutfit= detectiveOutfit;
+        detectiveOutfit.SetActive(true);
+        detectiveOutfit.transform.position = playerPosition.position;
     }
 
     private void UpdateOutfitChoices(GameObject buttonClicked) //Updates the dress up menu UI to display the current available outfits

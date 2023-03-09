@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 3499891356269125111, guid: f6754b6aac0a1c841ae1a2180d746162, type: 3}
   children: []
-  speech: Hmmph fine, the class will be outraged you know
+  speech: Hmmph, fine... the class will be outraged you know!
   responses:
   - Outraged that I haven't done this sooner probably
   repLevelOption1: -10

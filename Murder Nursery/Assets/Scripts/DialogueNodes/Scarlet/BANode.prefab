@@ -48,7 +48,7 @@ MonoBehaviour:
   children:
   - {fileID: 3499891356269125111, guid: 9bca328180c2ef441abd692ecfb06e86, type: 3}
   - {fileID: 3499891356269125111, guid: f6754b6aac0a1c841ae1a2180d746162, type: 3}
-  speech: No can do, creepo! Get outta here!
+  speech: No can do, <shake>creepo</shake>! Get outta here!
   responses:
   - Alright, alright. I hear ya. Take my card and give me a holler if you think of
     anythin'.
@@ -57,35 +57,32 @@ MonoBehaviour:
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10
-  nodeID: 
-  nodeActive: 0
   repGainResponse1: -2
   repGainResponse2: 0
   repGainResponse3: 0
+  nodeActive: 0
   interrogationNode: 0
-  lifeLoss: 0
   exitNode: 0
+  nodeVisited: 0
+  briberyAvailable: 0
+  fitCheck: 0
+  evidenceToDiscover: {fileID: 0}
+  lockingNode: 1
   firstPathLocked: 0
   secondPathLocked: 0
   thirdPathLocked: 0
-  nodeVisited: 0
-  lockingNode: 1
-  briberyAvailable: 0
-  triggerTrueEnd: 0
-  triggerGoodEnd: 0
-  triggerBadEnd: 0
   lockingFirstPath: 1
   lockingSecondPath: 0
   lockingThirdPath: 0
-  fitCheck: 0
+  triggerTrueEnd: 0
+  triggerGoodEnd: 0
+  triggerBadEnd: 0
   dressUpNode: {fileID: 0}
   requiredOutfit: 
-  evidenceToDiscover: {fileID: 0}
-  evidenceCheckNode: 0
-  pathARequiredEvidence: 
-  pathBRequiredEvidence: 
-  pathCRequiredEvidence: 
-  pathAInterrogationEvidenceRequired: 0
-  pathBInterrogationEvidenceRequired: 0
-  pathCInterrogationEvidenceRequired: 0
+  lifeLoss: 0
+  evidenceRequired: 
+  evidenceRequiredImage: {fileID: 0}
+  evidenceNeededCheck: 0
+  evImagesGenerated: 0
   nodeEmotion: 1
+  bribeGiven: 0

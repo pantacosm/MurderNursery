@@ -49,7 +49,7 @@ MonoBehaviour:
   - {fileID: 3499891356269125111, guid: 7fc2fe255c0276346852646880cbe97e, type: 3}
   - {fileID: 3499891356269125111, guid: 8e7e2bb32c59fea489574307444b36d7, type: 3}
   - {fileID: 3499891356269125111, guid: 57b867fdbe5acea488e0d973dfd70dd7, type: 3}
-  speech: Need somethin', mouth-breather?
+  speech: Need somethin', <wave>mouth-breather</wave>?
   responses:
   - Whaddya make of ol' Grace here kickin the bucket?
   - Anything I should know  about your friends over yonder?
@@ -63,7 +63,7 @@ MonoBehaviour:
   nodeActive: 1
   interrogationNode: 0
   exitNode: 0
-  nodeVisited: 1
+  nodeVisited: 0
   briberyAvailable: 1
   fitCheck: 0
   evidenceToDiscover: {fileID: 0}

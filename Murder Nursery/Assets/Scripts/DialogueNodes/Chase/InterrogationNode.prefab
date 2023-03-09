@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 3499891356269125111, guid: f661a047bb74ecb48abea995ea3d5394, type: 3}
   children: []
-  speech: You want to interrogate me? Fine let's do it
+  speech: You want to interrogate me? Fine, let's do it.
   responses:
   - I'll say what goes around here punk! But yes I would like to interrogate you...
   repLevelOption1: -10

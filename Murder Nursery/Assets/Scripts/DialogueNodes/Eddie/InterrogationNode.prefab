@@ -46,7 +46,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 0}
   children: []
-  speech: This is a beach of my human rights! Hmmm beach doesn't sound quite right...
+  speech: This is a beach of my human rights! Hmm, beach doesn't sound quite right...
   responses:
   - Why don't you paddle on over to the interrogation room junior
   repLevelOption1: -10

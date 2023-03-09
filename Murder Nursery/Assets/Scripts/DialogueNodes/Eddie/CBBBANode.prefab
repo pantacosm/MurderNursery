@@ -47,42 +47,39 @@ MonoBehaviour:
   parent: {fileID: 3499891356269125111, guid: e18584293564c4f4e841d8f539266ca2, type: 3}
   children:
   - {fileID: 3499891356269125111, guid: 126ae1006fd2d874bac601212655b922, type: 3}
-  speech: 'Aw, you know. Make sure anybody in his way is... taken care of. Nothin''
-    crazy. '
+  speech: 'Aw, you know. Make sure anybody in his way is... taken <wiggle>care</wiggle>
+    of. Nothin'' crazy. '
   responses:
   - I better not mess with this guy...
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10
-  nodeID: 
-  nodeActive: 0
   repGainResponse1: 0
   repGainResponse2: 0
   repGainResponse3: 0
+  nodeActive: 0
   interrogationNode: 0
-  lifeLoss: 0
   exitNode: 0
+  nodeVisited: 0
+  briberyAvailable: 0
+  fitCheck: 0
+  evidenceToDiscover: {fileID: 2720912505709134154, guid: a76bff3d6c9b41947b05af6212d664b8, type: 3}
+  lockingNode: 0
   firstPathLocked: 0
   secondPathLocked: 0
   thirdPathLocked: 0
-  nodeVisited: 0
-  lockingNode: 0
-  briberyAvailable: 0
-  triggerTrueEnd: 0
-  triggerGoodEnd: 0
-  triggerBadEnd: 0
   lockingFirstPath: 0
   lockingSecondPath: 0
   lockingThirdPath: 0
-  fitCheck: 0
+  triggerTrueEnd: 0
+  triggerGoodEnd: 0
+  triggerBadEnd: 0
   dressUpNode: {fileID: 0}
   requiredOutfit: 
-  evidenceToDiscover: {fileID: 2720912505709134154, guid: a76bff3d6c9b41947b05af6212d664b8, type: 3}
-  evidenceCheckNode: 0
-  pathARequiredEvidence: 
-  pathBRequiredEvidence: 
-  pathCRequiredEvidence: 
-  pathAInterrogationEvidenceRequired: 0
-  pathBInterrogationEvidenceRequired: 0
-  pathCInterrogationEvidenceRequired: 0
+  lifeLoss: 0
+  evidenceRequired: 
+  evidenceRequiredImage: {fileID: 0}
+  evidenceNeededCheck: 0
+  evImagesGenerated: 0
   nodeEmotion: 3
+  bribeGiven: 0

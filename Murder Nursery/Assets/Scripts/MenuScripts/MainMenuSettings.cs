@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
+using UnityEngine.UI;
 
 public class MainMenuSettings : MonoBehaviour
 {
-    public AudioSource cam;
+    public static MainMenuSettings settingsInstance;
+
+    public AudioSource sfxManager;
     public AudioClip selectChoice;
     public AudioMixer musicMixer;
     public AudioMixer sfxMixer;
@@ -26,6 +29,7 @@ public class MainMenuSettings : MonoBehaviour
     private void Start()
     {
         DM = FindObjectOfType<DialogueManager>();
+
     }
 
     private void Update()
@@ -53,14 +57,14 @@ public class MainMenuSettings : MonoBehaviour
     public void SetQuality()
     {
         ChangeQualityLevel();
-        cam.PlayOneShot(selectChoice, 0.4f);
+        sfxManager.PlayOneShot(selectChoice, 0.4f);
     }
 
     // Called as an OnClick() Event
     public void SetResolution()
     {
         ChangeResolution();
-        cam.PlayOneShot(selectChoice, 0.4f);
+        sfxManager.PlayOneShot(selectChoice, 0.4f);
     }
 
     // switch case selected based on selected objects name
@@ -153,32 +157,6 @@ public class MainMenuSettings : MonoBehaviour
         if(controlsUI.activeInHierarchy)
         {
             controlsUI.SetActive(false);
-        }
-    }
-
-    // Shows controls image when clicking on "Controls" in the gameplay menu
-    public void OpenControlsUI()
-    {
-        controlsUI.SetActive(true);
-        
-        if(graphicsMenu.activeInHierarchy)
-        {
-            graphicsMenu.SetActive(false);
-        }
-
-        if(resMenu.activeInHierarchy)
-        {
-            resMenu.SetActive(false);
-        }
-
-        if(audioMenu.activeInHierarchy)
-        {
-            audioMenu.SetActive(false);
-        }
-
-        if(optionsMenu.activeInHierarchy)
-        {
-            optionsMenu.SetActive(false);
         }
     }
 

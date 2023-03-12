@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+
 public class StartGame : MonoBehaviour
 {
     public Image blackFade; //Image used as a fader for transition to main game 
     int timeToFade = 1; //Time to fade to black
-    public AudioSource cam; //Audio source for start menu
+    public AudioSource sfxManager; //Audio source for start menu
     public AudioClip selectChoice; //Sound used for choosing an option
 
     public GameObject optionsMenu; // shows after clicking options/settings
@@ -21,8 +22,13 @@ public class StartGame : MonoBehaviour
     public void Begin() //Used when the player starts the game
     {
         blackFade.gameObject.SetActive(true); 
-        cam.PlayOneShot(selectChoice, 0.4f); //Plays relevant sound 
+        sfxManager.PlayOneShot(selectChoice, 0.4f); //Plays relevant sound 
         StartCoroutine(FadeToBlack()); //Begins black fade
+
+        if(optionsMenu.activeInHierarchy)
+        {
+            ToggleOptions();
+        }
         
         if(graphicsMenu.activeInHierarchy)
         {
@@ -65,7 +71,12 @@ public class StartGame : MonoBehaviour
 
     public void ToggleOptions()
     {
-        cam.PlayOneShot(selectChoice, 0.4f);
+        sfxManager.PlayOneShot(selectChoice, 0.4f);
+        if(!optionsMenu.activeInHierarchy)
+        {
+            optionsOpen = false;
+        }
+
         if(optionsOpen = !optionsOpen)
         {
             optionsOpen = true;
@@ -91,11 +102,20 @@ public class StartGame : MonoBehaviour
         {
             audioMenu.SetActive(false);
         }
+
+        if(controlsUI)
+        {
+            if(controlsUI.activeInHierarchy && optionsOpen == true)
+            {
+                controlsUI.SetActive(false);
+            }
+        }
+
     }
 
     public void OpenResolutionMenu()
     {
-        cam.PlayOneShot(selectChoice, 0.4f);
+        sfxManager.PlayOneShot(selectChoice, 0.4f);
         resMenu.SetActive(true);
 
         if(controlsUI)
@@ -119,13 +139,13 @@ public class StartGame : MonoBehaviour
 
     public void CloseResMenu()
     {
-        cam.PlayOneShot(selectChoice, 0.4f);
+        sfxManager.PlayOneShot(selectChoice, 0.4f);
         resMenu.SetActive(false);
     }
 
     public void OpenAudioMenu()
     {
-        cam.PlayOneShot(selectChoice, 0.4f);
+        sfxManager.PlayOneShot(selectChoice, 0.4f);
         audioMenu.SetActive(true);
 
         if(controlsUI)
@@ -149,14 +169,14 @@ public class StartGame : MonoBehaviour
 
     public void CloseAudioMenu()
     {
-        cam.PlayOneShot(selectChoice, 0.4f);
+        sfxManager.PlayOneShot(selectChoice, 0.4f);
         audioMenu.SetActive(false);
     }
 
     public void Graphics() //Opens graphics settings menu
     {
         graphicsMenu.SetActive(true);
-        cam.PlayOneShot(selectChoice, 0.4f);
+        sfxManager.PlayOneShot(selectChoice, 0.4f);
 
         if(controlsUI)
         {
@@ -180,12 +200,38 @@ public class StartGame : MonoBehaviour
     public void CloseGraphics() //Closes graphics settings menu
     {
         graphicsMenu.SetActive(false);
-        cam.PlayOneShot(selectChoice, 0.4f);
+        sfxManager.PlayOneShot(selectChoice, 0.4f);
+    }
+
+    // Shows controls image when clicking on "Controls" in the gameplay menu
+    public void OpenControlsUI()
+    {
+        controlsUI.SetActive(true);
+        
+        if(graphicsMenu.activeInHierarchy)
+        {
+            graphicsMenu.SetActive(false);
+        }
+
+        if(resMenu.activeInHierarchy)
+        {
+            resMenu.SetActive(false);
+        }
+
+        if(audioMenu.activeInHierarchy)
+        {
+            audioMenu.SetActive(false);
+        }
+
+        if(optionsMenu.activeInHierarchy)
+        {
+            ToggleOptions();
+        }
     }
 
     public void QuitGame() //Quits the game 
     {
-        cam.PlayOneShot(selectChoice, 0.4f);
+        sfxManager.PlayOneShot(selectChoice, 0.4f);
        // if(UnityEngine.Application.isEditor)
       //  {
        //     UnityEditor.EditorApplication.isPlaying = false;

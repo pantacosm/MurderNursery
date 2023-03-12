@@ -40,13 +40,15 @@ public class IntroCutscene : MonoBehaviour
 
     [Header("Audio")]
     public AudioSource introAudioSource;//Audio source for the intro
-    public AudioClip introMusic; //Music track for the intro 
+    public AudioClip introMusic; //Music track for the intro
+    public AudioClip gameplayMusic;
 
     // Start is called before the first frame update
     void Start()
     {
         dialoguePanel1.SetActive(true);//Activates the intro dialogue UI 
         introTextBox.GetComponent<TextMeshProUGUI>().text = playerStatement1; //Loads the first dialogue piece
+        introAudioSource.clip = introMusic;
         introAudioSource.Play();//Plays the intro music 
         positions.Add(initialPos);
     }
@@ -101,6 +103,7 @@ public class IntroCutscene : MonoBehaviour
                     inIntro = false;
                     ChangeCams(initialCam, mainGameCam);
                     introAudioSource.Stop();
+                    manager.GetComponent<AudioSource>().clip = gameplayMusic;
                     manager.GetComponent<AudioSource>().Play();
                     break;
             }

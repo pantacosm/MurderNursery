@@ -99622,11 +99622,43 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 162801781577212822, guid: c858cac0aa9299c49a653595c47f7dcd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 317431044058081157, guid: c858cac0aa9299c49a653595c47f7dcd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1454726604801408245, guid: c858cac0aa9299c49a653595c47f7dcd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3316277056896388078, guid: c858cac0aa9299c49a653595c47f7dcd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3951263968764288259, guid: c858cac0aa9299c49a653595c47f7dcd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6301700775819146072, guid: c858cac0aa9299c49a653595c47f7dcd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120810829310217551, guid: c858cac0aa9299c49a653595c47f7dcd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7431307434026397633, guid: c858cac0aa9299c49a653595c47f7dcd, type: 3}
       propertyPath: m_Name
       value: DetectiveOutfit
       objectReference: {fileID: 0}
     - target: {fileID: 7431307434026397633, guid: c858cac0aa9299c49a653595c47f7dcd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7528215220142443330, guid: c858cac0aa9299c49a653595c47f7dcd, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}

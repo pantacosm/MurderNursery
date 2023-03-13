@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class MainMenuSettings : MonoBehaviour
 {
-    public static MainMenuSettings settingsInstance;
+    DialogueManager DM;
 
     public AudioSource sfxManager;
     public AudioClip selectChoice;
@@ -26,7 +26,9 @@ public class MainMenuSettings : MonoBehaviour
     public GameObject audioMenu;
     public GameObject controlsUI;
 
-    DialogueManager DM;
+    // update graphics quality / resolution settings
+    private string quality;
+    private string index;
 
     [HideInInspector]
     public bool menuOpen;
@@ -39,6 +41,13 @@ public class MainMenuSettings : MonoBehaviour
         sfxVolume = PlayerPrefs.GetFloat("sfxVolume", sfxVolume);
         musicSlider.value = musicVolume;
         sfxSlider.value = sfxVolume;
+
+        quality = PlayerPrefs.GetString("quality");
+        index = PlayerPrefs.GetString("res");
+
+
+        ChangeQualityLevel();
+        ChangeResolution();
 
     }
 
@@ -55,6 +64,11 @@ public class MainMenuSettings : MonoBehaviour
         // save slider volume value between sessions / scenes
         PlayerPrefs.SetFloat("volume", musicVolume);
         PlayerPrefs.SetFloat("sfxVolume", sfxVolume);
+
+        // save quality / resoution settings
+        PlayerPrefs.SetString("res", index);
+        PlayerPrefs.SetString("quality", quality);
+
     }
 
     public void SetVolume(float sliderValue)
@@ -86,8 +100,12 @@ public class MainMenuSettings : MonoBehaviour
     // switch case selected based on selected objects name
     void ChangeQualityLevel()
     {
-        string quality =  UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name;
-
+        if(UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject)
+        {
+            quality =  UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name;
+        }
+        
+        
         switch (quality)
         {
             case "Low":
@@ -110,7 +128,10 @@ public class MainMenuSettings : MonoBehaviour
     // switch case selected based on selected objects name
     void ChangeResolution()
     {
-        string index = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name;
+        if(UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject)
+        {
+            index =  UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name;
+        }
 
         switch (index)
         {

@@ -49,26 +49,27 @@ public class SlotScript : MonoBehaviour, IDropHandler
                 switch (slotID) //SWITCH STATEMENT REUIRED MAJOR REWORKING FOR EFFICIENCY
                 {
                     case 0:
-                        print("Chase Evidence Placed");
-                        for (chaseCount = 0; chaseCount < 8; chaseCount++)
-                        {
+
+                        //print("Chase Evidence Placed");
+                       // for (chaseCount = 0; chaseCount < 8; chaseCount++)
+                        //{
                        //     if (pinboardManager.GetComponent<PinboardManager>().chaseEvidenceSlots[chaseCount].GetComponent<EvidenceSlot>().slotFilled)
                       //      {
                       //          return;
                       //      }
-                            if (!pinboardManager.GetComponent<PinboardManager>().chaseEvidenceSlots[chaseCount].GetComponent<EvidenceSlot>().slotFilled)
-                            {
-                                pinboardManager.GetComponent<PinboardManager>().chaseEvidenceSlots[chaseCount].GetComponent<Image>().sprite = eventData.pointerDrag.GetComponent<Image>().sprite;
-                                pinboardManager.GetComponent<PinboardManager>().chaseEvidenceSlots[chaseCount].GetComponent<EvidenceSlot>().slotFilled = true;
-                                pinboardManager.GetComponent<PinboardManager>().chaseEvidenceSlots[chaseCount].GetComponent<EvidenceSlot>().evidenceText = eventData.pointerDrag.GetComponent<EvidenceClass>().evidenceText;
-                                pinboardManager.GetComponent<PinboardManager>().chaseEvidenceSlots[chaseCount].GetComponent<EvidenceSlot>().evidenceID = eventData.pointerDrag.GetComponent<EvidenceClass>().evidenceID;
-                                placedChasePieces.Add(Instantiate(eventData.pointerDrag.GetComponent<DragAndDrop>().itemPrefab, content));
-                                pinboardManager.GetComponent<PinboardManager>().chaseEvidenceSlots[chaseCount].GetComponent<EvidenceSlot>().prefab = placedChasePieces[chasePlacedCount];
-                                chasePlacedCount++;
-                                break;
-                            }
-                        }
-                        break;
+                           // if (!pinboardManager.GetComponent<PinboardManager>().chaseEvidenceSlots[chaseCount].GetComponent<EvidenceSlot>().slotFilled)
+                           // {
+                            //    pinboardManager.GetComponent<PinboardManager>().chaseEvidenceSlots[chaseCount].GetComponent<Image>().sprite = eventData.pointerDrag.GetComponent<Image>().sprite;
+                            //    pinboardManager.GetComponent<PinboardManager>().chaseEvidenceSlots[chaseCount].GetComponent<EvidenceSlot>().slotFilled = true;
+                            //    pinboardManager.GetComponent<PinboardManager>().chaseEvidenceSlots[chaseCount].GetComponent<EvidenceSlot>().evidenceText = eventData.pointerDrag.GetComponent<EvidenceClass>().evidenceText;
+                            //    pinboardManager.GetComponent<PinboardManager>().chaseEvidenceSlots[chaseCount].GetComponent<EvidenceSlot>().evidenceID = eventData.pointerDrag.GetComponent<EvidenceClass>().evidenceID;
+                            //    placedChasePieces.Add(Instantiate(eventData.pointerDrag.GetComponent<DragAndDrop>().itemPrefab, content));
+                            //    pinboardManager.GetComponent<PinboardManager>().chaseEvidenceSlots[chaseCount].GetComponent<EvidenceSlot>().prefab = placedChasePieces[chasePlacedCount];
+                            //    chasePlacedCount++;
+                            //    break;
+                          //  }
+                      //  }
+                       // break;
                     case 1:
                         print("Scarlet Evidence Placed");
                         for (scarletCount = 0; scarletCount < 8; scarletCount++)

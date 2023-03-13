@@ -72,6 +72,7 @@ public class PinboardManager : MonoBehaviour
     public List<string> graceThreadedEvents = new List<string>();
 
     public List<EvidenceClass> evidencePieces; //Stores evidence pieces
+    public GameObject[] slots;
 
    
     // Start is called before the first frame update

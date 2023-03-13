@@ -29,10 +29,10 @@ public class ThreadButtons : MonoBehaviour //NEED TO REVISIT AND REWORK SCRIPT
             }
             if (threadManager.GetComponent<ThreadManager>().firstThreadItem == null)
             {
-                if (this.gameObject.name == "Evidence")
-                {
+                //if (this.gameObject.name == "Evidence")
+                
                     threadManager.GetComponent<ThreadManager>().firstThreadItem = this.gameObject;
-                }
+                
 
             }
         }

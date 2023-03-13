@@ -19,6 +19,9 @@ public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, ID
     public GameObject hoverOverText;
     public string displayText;
     private Vector2 originalPos;
+    public GameObject slotPrefab;
+    public GameObject pinboardManager;
+    private int i = 0;
 
     private void Start()
     {
@@ -26,6 +29,7 @@ public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, ID
         myCanvas = FindObjectOfType<Canvas>();
         canvasGroup = GetComponent<CanvasGroup>();
         hoverOverText = GameObject.FindGameObjectWithTag("TestText");
+        pinboardManager = GameObject.FindGameObjectWithTag("PinBoard Manager");
     }
 
     // Called when object is clicked on
@@ -37,8 +41,8 @@ public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, ID
             canvasGroup.blocksRaycasts = false;
             itemPrefab.GetComponent<Image>().maskable = false;
             originalPos = transform.position;
-            hoverOverText.SetActive(true);
-            hoverOverText.GetComponent<TextMeshProUGUI>().text = this.GetComponent<EvidenceClass>().evidenceText;
+            //hoverOverText.SetActive(true);
+            //hoverOverText.GetComponent<TextMeshProUGUI>().text = this.GetComponent<EvidenceClass>().evidenceText;
             //hoverOverText.transform.position = this.transform.position;
         }
         
@@ -55,11 +59,20 @@ public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, ID
     // Called when mouse click is released
     public void OnEndDrag(PointerEventData eventData)
     {
-        hoverOverText.SetActive(false);
+        //hoverOverText.SetActive(false);
         canvasGroup.blocksRaycasts = true;
         itemPrefab.GetComponent<Image>().maskable = true;
+        pinboardManager.GetComponent<PinboardManager>().slots[i].SetActive(true);
+        pinboardManager.GetComponent<PinboardManager>().slots[i].transform.position = eventData.position;
+        pinboardManager.GetComponent<PinboardManager>().slots[i].GetComponent<Image>().sprite = eventData.pointerDrag.GetComponent<Image>().sprite;
+        pinboardManager.GetComponent <PinboardManager>().slots[i].GetComponent<EvidenceSlot>().slotFilled = true;
+        pinboardManager.GetComponent<PinboardManager>().slots[i].GetComponent<EvidenceSlot>().evidenceText = eventData.pointerDrag.GetComponent<EvidenceClass>().evidenceText;
+        pinboardManager.GetComponent<PinboardManager>().slots[i].GetComponent<EvidenceSlot>().evidenceID = eventData.pointerDrag.GetComponent<EvidenceClass>().evidenceID;
+        i++;
         eventData.Reset();
         ResetPosition();
+
+
     }
 
 

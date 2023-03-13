@@ -131,6 +131,10 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2144354360793123446, guid: 5c991066b9ecad84685906fb8a7adec4, type: 3}
+      propertyPath: m_Volume
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 4616047447456129481, guid: 5c991066b9ecad84685906fb8a7adec4, type: 3}
       propertyPath: m_Name
       value: SFXAudioManager
@@ -1603,6 +1607,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5784351030811161589, guid: 4d9c5fa7567cc5342a1f683293399cd6, type: 3}
+      propertyPath: m_Volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5784351030811161589, guid: 4d9c5fa7567cc5342a1f683293399cd6, type: 3}
       propertyPath: m_PlayOnAwake
       value: 1
       objectReference: {fileID: 0}
@@ -2058,6 +2066,10 @@ PrefabInstance:
       propertyPath: sfxManager
       value: 
       objectReference: {fileID: 1961110536}
+    - target: {fileID: 8088754662644865359, guid: f1c51c8b1d2a3ba4c854d5d621627ee1, type: 3}
+      propertyPath: musicSlider
+      value: 
+      objectReference: {fileID: 2132365709}
     - target: {fileID: 8088754662644865359, guid: f1c51c8b1d2a3ba4c854d5d621627ee1, type: 3}
       propertyPath: optionsMenu
       value: 

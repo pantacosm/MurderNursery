@@ -14,6 +14,11 @@ public class MainMenuSettings : MonoBehaviour
     public AudioMixer musicMixer;
     public AudioMixer sfxMixer;
 
+    public Slider musicSlider;
+    public Slider sfxSlider;
+    private float musicVolume = 1f;
+    private float sfxVolume = 1f;
+
     public GameObject menuObject;
     public GameObject optionsMenu;
     public GameObject graphicsMenu;
@@ -30,6 +35,11 @@ public class MainMenuSettings : MonoBehaviour
     {
         DM = FindObjectOfType<DialogueManager>();
 
+        musicVolume = PlayerPrefs.GetFloat("volume");
+        sfxVolume = PlayerPrefs.GetFloat("sfxVolume", sfxVolume);
+        musicSlider.value = musicVolume;
+        sfxSlider.value = sfxVolume;
+
     }
 
     private void Update()
@@ -41,16 +51,22 @@ public class MainMenuSettings : MonoBehaviour
                 ToggleMenu();
             }
         }
+
+        // save slider volume value between sessions / scenes
+        PlayerPrefs.SetFloat("volume", musicVolume);
+        PlayerPrefs.SetFloat("sfxVolume", sfxVolume);
     }
 
     public void SetVolume(float sliderValue)
     {
         musicMixer.SetFloat("MusicVolume", Mathf.Log10(sliderValue) * 20);
+        musicVolume = sliderValue;
     }
 
     public void SetSFXVolume(float sliderValue)
     {
         sfxMixer.SetFloat("SFXVolume", Mathf.Log10(sliderValue) * 20);
+        sfxVolume = sliderValue;
     }
 
     // Called as an OnClick() Event

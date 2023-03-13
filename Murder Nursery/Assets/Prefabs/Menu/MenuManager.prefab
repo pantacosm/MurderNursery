@@ -31,7 +31,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8088754662644865359
 MonoBehaviour:
@@ -45,11 +45,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 219729feb192c4e4eb03ee31e6c77b7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
+  sfxManager: {fileID: 0}
   selectChoice: {fileID: 8300000, guid: 74823cfda4aeec64eacf0b3a13c661d1, type: 3}
   musicMixer: {fileID: 24100000, guid: 0f56eede37586c242992deb28afa5e0f, type: 2}
   sfxMixer: {fileID: 24100000, guid: 43d6440971dda6f4c82206e25ec7e9fa, type: 2}
-  slider: {fileID: 0}
+  musicSlider: {fileID: 0}
   sfxSlider: {fileID: 0}
   menuObject: {fileID: 0}
   optionsMenu: {fileID: 0}
@@ -71,7 +71,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blackFade: {fileID: 0}
-  cam: {fileID: 0}
+  sfxManager: {fileID: 0}
   selectChoice: {fileID: 8300000, guid: 74823cfda4aeec64eacf0b3a13c661d1, type: 3}
   optionsMenu: {fileID: 0}
   graphicsMenu: {fileID: 0}

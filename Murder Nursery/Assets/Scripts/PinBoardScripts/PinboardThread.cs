@@ -8,7 +8,7 @@ public class PinboardThread : MonoBehaviour
     public GameObject pointA; //The first point of the line
     public GameObject pointB; //The second point of the line
     //private float graphScale = 1; //Scale of the line
-    private float lineWidth = 10; // Width of the line
+    private float lineWidth = 15; // Width of the line
     public float offsetX; //X axis offset
     public float offsetY; //Y axis offset
 
@@ -23,8 +23,8 @@ public class PinboardThread : MonoBehaviour
         rect.SetParent(transform);
         rect.localScale = Vector3.one;
 
-        Vector3 a = new Vector3(ax *2f +offsetX, ay *2f +offsetY, 0);
-        Vector3 b = new Vector3(bx *2f +offsetX , by *2f +offsetY, 0);
+        Vector3 a = new Vector3(ax *2.15f +offsetX, ay *2.15f +offsetY, 0);
+        Vector3 b = new Vector3(bx *2.15f +offsetX , by *2.15f +offsetY, 0);
 
 
         rect.localPosition = (a + b) / 2;

@@ -14,7 +14,7 @@ public class ThreadManager : MonoBehaviour
     public GameObject interrogationManager;
 
     // Update is called once per frame
-    void Update()
+    void Update() 
     {
         if(interrogationManager == null)
         {
@@ -22,17 +22,36 @@ public class ThreadManager : MonoBehaviour
         }
         if (firstThreadItem != null && secondThreadItem != null && !interrogationManager.GetComponent<Interrogation>().inInterrogation) //Checks if the player has selected two items to thread
         {
-            if (!CheckIfThreaded(secondThreadItem.GetComponent<EvidenceSlot>().evidenceText)) //Checks if the evidence has already been threaded
+            if (secondThreadItem.name != "Chase" && secondThreadItem.name != "Scarlet" && secondThreadItem.name != "Grace" && secondThreadItem.name != "Eddie" && secondThreadItem.name != "JuiceBox") //Checks if the evidence has already been threaded
             {
-                if (secondThreadItem.name != "Evidence") //Checks if the second item is valid and not a category 
+                if (!CheckIfThreaded(secondThreadItem.GetComponent<EvidenceSlot>().evidenceText)) //Checks if the second item is valid and not a category 
                 {
                     CheckThreadStart();
-                    GameObject newThread = this.GetComponent<PinboardThread>().MakeLine(firstThreadItem.transform.position.x, firstThreadItem.transform.position.y, secondThreadItem.transform.position.x, secondThreadItem.transform.position.y, Color.red); //Creates the thread
+                    GameObject newThread = null;
+                    if (firstThreadItem.name == "Scarlet")
+                    {
+                         newThread = this.GetComponent<PinboardThread>().MakeLine(firstThreadItem.transform.position.x, firstThreadItem.transform.position.y, secondThreadItem.transform.position.x, secondThreadItem.transform.position.y, Color.red); //Creates the thread
+                    }
+                    if(firstThreadItem.name == "Chase")
+                    {
+                        newThread = this.GetComponent<PinboardThread>().MakeLine(firstThreadItem.transform.position.x, firstThreadItem.transform.position.y, secondThreadItem.transform.position.x, secondThreadItem.transform.position.y, Color.yellow);
+                    }
+                    if(firstThreadItem.name == "Grace")
+                    {
+                        newThread = this.GetComponent<PinboardThread>().MakeLine(firstThreadItem.transform.position.x, firstThreadItem.transform.position.y, secondThreadItem.transform.position.x, secondThreadItem.transform.position.y, Color.cyan);
+                    }
+                    if(firstThreadItem.name == "Eddie")
+                    {
+                        newThread = this.GetComponent<PinboardThread>().MakeLine(firstThreadItem.transform.position.x, firstThreadItem.transform.position.y, secondThreadItem.transform.position.x, secondThreadItem.transform.position.y, Color.blue);
+                    }
+                    if(firstThreadItem.name == "JuiceBox")
+                    {
+                        newThread = this.GetComponent<PinboardThread>().MakeLine(firstThreadItem.transform.position.x, firstThreadItem.transform.position.y, secondThreadItem.transform.position.x, secondThreadItem.transform.position.y, Color.green);
+                    }
                     secondThreadItem.GetComponent<EvidenceSlot>().threads.Add(newThread);
                     
                         firstThreadItem = null; //Resets the selected items 
-                        secondThreadItem = null; //Resets the selected items
-                    
+                        secondThreadItem = null; //Resets the selected items                   
                 }
                 
             }

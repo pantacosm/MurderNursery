@@ -9,8 +9,8 @@ public class EvidenceSlider : MonoBehaviour
     public GameObject evidencePanel;
     float movementProgress;
     float timeToMove = 0.1f;
-    public Vector3 openTransform = new Vector3 (1004.0f, 160.18499755859376f, 0.0f);
-    public Vector3 closeTransform = new Vector3(2616.5f, 160.18499755859376f, 0.0f);
+    public Vector3 openTransform;
+    public Vector3 closeTransform;
     // Start is called before the first frame update
     void Start()
     {

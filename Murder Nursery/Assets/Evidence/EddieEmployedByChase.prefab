@@ -71,7 +71,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c146e220118d7ce43a857b01cab2a977, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 087892dd83e53c74dbe1bffb3523324e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -97,6 +97,8 @@ MonoBehaviour:
   itemID: 0
   hoverOverText: {fileID: 0}
   displayText: 
+  slotPrefab: {fileID: 0}
+  pinboardManager: {fileID: 0}
 --- !u!225 &1714450319437036808
 CanvasGroup:
   m_ObjectHideFlags: 0

@@ -51,6 +51,8 @@ MonoBehaviour:
     that way!
   responses:
   - Ummm sorry...
+  nonAnimatedSpeech: You've got some moxie comin' in and talkin' to the Queen Bee
+    that way!
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

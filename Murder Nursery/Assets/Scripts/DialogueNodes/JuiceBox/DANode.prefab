@@ -51,6 +51,8 @@ MonoBehaviour:
     mine eyes, <shake>posthaste</shake>!
   responses:
   - Let's not get posthasty here, buddy...
+  nonAnimatedSpeech: A fie upon thee, fiend! Take thine crass hide away from mine
+    eyes, posthaste!
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

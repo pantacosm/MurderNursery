@@ -53,6 +53,7 @@ MonoBehaviour:
   responses:
   - Just sayin' it how I hear it.
   - 'Nothin'' of the sort old buddy! '
+  nonAnimatedSpeech: Hey, it ain't ike that. You putting words in my mouth here dweeb?
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

@@ -52,6 +52,9 @@ MonoBehaviour:
     like that commit like 73% of all murders.
   responses:
   - Is that... true?
+  nonAnimatedSpeech: Sure is. Scarlet and I been real close for a while but do me
+    a favour, if you're determined to play the detective role here, keep your eye
+    on her. Girls like that commit like 73% of all murders.
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

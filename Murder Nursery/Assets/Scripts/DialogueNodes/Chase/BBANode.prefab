@@ -52,6 +52,7 @@ MonoBehaviour:
   responses:
   - What's the usual?
   - I'll come back later big man!
+  nonAnimatedSpeech: 'Suspicious? No more than usual. '
   repLevelOption1: 4
   repLevelOption2: -10
   repLevelOption3: -10

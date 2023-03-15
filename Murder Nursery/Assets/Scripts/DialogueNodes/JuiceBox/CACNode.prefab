@@ -53,6 +53,8 @@ MonoBehaviour:
   responses:
   - It seems a little off, don't you think?
   - Well, ain't that just the bee's knees?
+  nonAnimatedSpeech: I'm an artist. See that turkey hand on the wall? That's my greatest
+    masterpiece.
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

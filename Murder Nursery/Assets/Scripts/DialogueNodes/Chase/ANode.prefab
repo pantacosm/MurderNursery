@@ -53,6 +53,8 @@ MonoBehaviour:
   responses:
   - You guys pretty close?
   - Seems like she was real loved.
+  nonAnimatedSpeech: Grace is nicer than most. Kinda chick who really cares... what
+    are you wearing?
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

@@ -50,6 +50,7 @@ MonoBehaviour:
   speech: <shake>W-WOAH</shake>! IS THAT A CANDY BAR? Aw man, can I have it? Puh-<wiggle>LEEZ</wiggle>!
   responses:
   - Uh sure
+  nonAnimatedSpeech: W-WOAH! IS THAT A CANDY BAR? Aw man, can I have it? Puh-LEEZ!
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

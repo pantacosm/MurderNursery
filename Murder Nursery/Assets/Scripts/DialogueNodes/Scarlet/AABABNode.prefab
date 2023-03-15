@@ -51,6 +51,8 @@ MonoBehaviour:
     gals in the class chat to Juice about his art. Ain't that somethin!
   responses:
   - The kids doesn't like sharing his toys... I get it.
+  nonAnimatedSpeech: Rumour has it that Chase gets reaaaal jealous whenever us gals
+    in the class chat to Juice about his art. Ain't that somethin!
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

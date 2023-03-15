@@ -52,6 +52,8 @@ MonoBehaviour:
     don''t like him</shake>! '
   responses:
   - Welp, this was intense.
+  nonAnimatedSpeech: 'UGH<! He''s so MEAN! Uh, or shall I say, a man who cannot appreciate
+    the arts. No, you know what, I just plain don''t like him! '
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

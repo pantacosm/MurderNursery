@@ -52,6 +52,7 @@ MonoBehaviour:
   responses:
   - 'That make us friends now, partner? '
   - I'll keep it in mind.
+  nonAnimatedSpeech: It's a friendly warning.
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

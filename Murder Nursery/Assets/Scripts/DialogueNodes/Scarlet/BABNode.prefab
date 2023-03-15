@@ -53,6 +53,8 @@ MonoBehaviour:
   responses:
   - <Interrogate Scarlet>
   - <Leave Conversation>
+  nonAnimatedSpeech: This is the last time I'll say this, Detective. You're givin'
+    me the heebie jeebies! Scram, before things get messy...
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

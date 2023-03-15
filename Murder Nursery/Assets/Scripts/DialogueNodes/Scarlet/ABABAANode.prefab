@@ -52,6 +52,9 @@ MonoBehaviour:
     when the sugar rush hits. '
   responses:
   - Thanks for the help, Scarlet!
+  nonAnimatedSpeech: 'Thinks he''s playin'' hard to get, I reckon. Maybe if he dropped
+    the giggle juice for half a second he''d know what he''s missin''! Only ever
+    wants to hang when the sugar rush hits. '
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

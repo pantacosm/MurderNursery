@@ -49,6 +49,7 @@ MonoBehaviour:
   speech: You want to interrogate me? Fine, let's do it.
   responses:
   - I'll say what goes around here punk! But yes I would like to interrogate you...
+  nonAnimatedSpeech: You want to interrogate me? Fine, let's do it.
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

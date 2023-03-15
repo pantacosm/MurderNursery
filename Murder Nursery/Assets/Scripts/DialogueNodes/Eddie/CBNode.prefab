@@ -55,6 +55,8 @@ MonoBehaviour:
   - Tell me about Scarlet.
   - Tell me about Chase.
   - Tell me about Juice-Box.
+  nonAnimatedSpeech: You ain't bad for a snoop. Alright, I'll tell you what you wanna
+    know.
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

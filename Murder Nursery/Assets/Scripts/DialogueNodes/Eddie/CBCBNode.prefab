@@ -54,6 +54,9 @@ MonoBehaviour:
   responses:
   - Did he like anyone else?
   - You think he blew his fuse?
+  nonAnimatedSpeech: 'Grace had a soft spot for him. Just friends, ya know. Just
+    about one of the only people he would put up with. But she was tryin'' to get
+    him to give up the juice boxes, and he didn''t like that. '
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

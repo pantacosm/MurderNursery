@@ -53,6 +53,8 @@ MonoBehaviour:
   responses:
   - What, none of em?!
   - I'm Detective Drew, investigating a murder!
+  nonAnimatedSpeech: These kids aren't really my friends. Why are you talking like
+    that?
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

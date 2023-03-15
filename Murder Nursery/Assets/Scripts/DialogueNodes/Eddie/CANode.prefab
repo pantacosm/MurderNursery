@@ -50,6 +50,7 @@ MonoBehaviour:
   speech: Cool your jets, kid. You ain't at my level <wiggle>yet</wiggle>.
   responses:
   - Okay. Rude.
+  nonAnimatedSpeech: Cool your jets, kid. You ain't at my level yet.
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

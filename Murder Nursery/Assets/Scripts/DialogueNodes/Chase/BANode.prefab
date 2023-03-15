@@ -51,6 +51,8 @@ MonoBehaviour:
     just the way the <shake>cookie crumbles</shake>.
   responses:
   - 'Ah, a lone wolf type eh? '
+  nonAnimatedSpeech: You heard me. I don't care for these kids and they don't care
+    for me. That's just the way the cookie crumbles.
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

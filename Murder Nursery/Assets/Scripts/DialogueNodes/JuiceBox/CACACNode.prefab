@@ -51,6 +51,8 @@ MonoBehaviour:
     Get out of here, jughead.
   responses:
   - Gonna take a breather and figure out what he just called me...
+  nonAnimatedSpeech: Looks like you have an eye for art and a brain for mince. Get
+    out of here, jughead.
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

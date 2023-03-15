@@ -53,6 +53,8 @@ MonoBehaviour:
   responses:
   - Any truth in that?
   - She the jealous type?
+  nonAnimatedSpeech: Scarlet didn't like us talkin' much. Thought there was somethin'
+    fishy goin' on. Like Gracie was gonna steal her boy or somethin'.
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

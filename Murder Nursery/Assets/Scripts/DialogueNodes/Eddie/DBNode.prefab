@@ -53,6 +53,8 @@ MonoBehaviour:
   responses:
   - How close are Grace and Scarlet?
   - Are Juice Box and Chase friends?
+  nonAnimatedSpeech: I'll tell you anything you want man, just gimme a second HORF
+    SNORF SNORK okay go.
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

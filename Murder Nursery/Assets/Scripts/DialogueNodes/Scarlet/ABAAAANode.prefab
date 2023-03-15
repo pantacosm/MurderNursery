@@ -53,6 +53,10 @@ MonoBehaviour:
     ... Hey, what are you writing down there?!
   responses:
   - Gotta blast!
+  nonAnimatedSpeech: Tryna incriminate me here, narc?! Listen, I had nothing to do
+    with this no matter what the others tell you, I'm just sad I didn't get to her
+    myself. Once the novelty wears off they'll all come running back to me. Just
+    you wait! ... Hey, what are you writing down there?!
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

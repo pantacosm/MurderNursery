@@ -51,6 +51,8 @@ MonoBehaviour:
     what this little <shake>game</shake> of yours is but I don't fancy takin' part.
   responses:
   - What can I do to win your trust here, pal?
+  nonAnimatedSpeech: No kidding? Well, you're barkin' up the wrong tree here pal,
+    I don't know what this little game of yours is but I don't fancy takin' part.
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

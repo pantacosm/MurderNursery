@@ -54,6 +54,10 @@ MonoBehaviour:
     comes outta her mouth though.
   responses:
   - I'll keep it in mind!
+  nonAnimatedSpeech: Ugh, fine. Scarlet and I got a bit of a thing goin'. I buy her
+    the odd juice box from time to time and get to have a doll on my arm at break,
+    and she gets to feel pretty and have the attention on her. Gal like that likes
+    to be shown off a little. Wouldn't trust a word that comes outta her mouth though.
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

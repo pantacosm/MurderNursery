@@ -51,6 +51,8 @@ MonoBehaviour:
     of. Nothin'' crazy. '
   responses:
   - I better not mess with this guy...
+  nonAnimatedSpeech: 'Aw, you know. Make sure anybody in his way is... taken care
+    of. Nothin'' crazy. '
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

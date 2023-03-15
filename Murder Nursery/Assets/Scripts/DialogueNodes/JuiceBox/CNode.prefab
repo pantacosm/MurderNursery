@@ -50,6 +50,7 @@ MonoBehaviour:
   speech: '*grumble  mumble?*'
   responses:
   - Sorry, guess I'll get out of your hair...
+  nonAnimatedSpeech: '*grumble  mumble?*'
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10
@@ -59,7 +60,7 @@ MonoBehaviour:
   nodeActive: 0
   interrogationNode: 0
   exitNode: 0
-  nodeVisited: 1
+  nodeVisited: 0
   briberyAvailable: 1
   fitCheck: 0
   evidenceToDiscover: {fileID: 0}

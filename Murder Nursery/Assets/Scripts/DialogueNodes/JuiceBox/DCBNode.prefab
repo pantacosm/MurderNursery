@@ -53,6 +53,8 @@ MonoBehaviour:
   responses:
   - Sucks to be you, nerd.
   - What's the story with Scarlet?
+  nonAnimatedSpeech: '''Tis all too true. This past week we had them all confiscated.
+    I heard Scarlet cut a whole chunk outta Grace''s hair!'
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

@@ -51,6 +51,8 @@ MonoBehaviour:
     to hide? That kid'll give anything away as long as you have a candy bar.
   responses:
   - Locate candybar. Noted.
+  nonAnimatedSpeech: Hey, he's my best friend! Fine, you think he's got something
+    to hide? That kid'll give anything away as long as you have a candy bar.
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

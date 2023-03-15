@@ -51,6 +51,8 @@ MonoBehaviour:
     you <wave>buzz off</wave>?
   responses:
   - Gotcha!
+  nonAnimatedSpeech: Hmph. I'm done with the chit chat now detective. Why don't you
+    buzz off?
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

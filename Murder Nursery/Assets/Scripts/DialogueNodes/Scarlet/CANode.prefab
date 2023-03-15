@@ -53,6 +53,8 @@ MonoBehaviour:
   responses:
   - That's ridiculous!
   - How do I get one of those?
+  nonAnimatedSpeech: The kids round here gotta make an appointment to play house
+    with me, new kid!
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

@@ -52,6 +52,7 @@ MonoBehaviour:
   responses:
   - Nope, sorry.
   - Sure is!
+  nonAnimatedSpeech: 'Oh man, I LOVE these! Is it... for me? '
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

@@ -51,6 +51,8 @@ MonoBehaviour:
     it''s naptime for her? <shake>Bop</shake>! <wiggle>Kablammo</wiggle>! '
   responses:
   - How do I get him to talk? He's locked up tighter than the teacher's desk.
+  nonAnimatedSpeech: 'I could see it. The gal hides his juice boxes, he snaps, and
+    suddenly it''s naptime for her? Bop! Kablammo! '
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

@@ -49,6 +49,8 @@ MonoBehaviour:
   speech: You won't break me, I'm as strong as a... uhh... something that's strong!
   responses:
   - Then you'll have no problem opening the interrogation room door for me
+  nonAnimatedSpeech: You won't break me, I'm as strong as a... uhh... something that's
+    strong!
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

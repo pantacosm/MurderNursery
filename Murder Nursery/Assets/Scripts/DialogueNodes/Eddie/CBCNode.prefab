@@ -53,6 +53,8 @@ MonoBehaviour:
   responses:
   - You two don't like each other?
   - What makes you think that?
+  nonAnimatedSpeech: 'Whatta square. I ain''t a snitch, but if anybody did it, it
+    was him. '
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

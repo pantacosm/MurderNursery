@@ -52,6 +52,7 @@ MonoBehaviour:
   responses:
   - Just pullin' your leg, buddy! No hard feelings?
   - You don't scare me big fella!
+  nonAnimatedSpeech: You're making a big mistake here, man.
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

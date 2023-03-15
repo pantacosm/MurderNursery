@@ -51,6 +51,8 @@ MonoBehaviour:
     Can't put down the juice box long enough to finish a finger painting though.
   responses:
   - Yikes.
+  nonAnimatedSpeech: He likes me, but I hate his guts. One of those artist types.
+    Can't put down the juice box long enough to finish a finger painting though.
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

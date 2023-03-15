@@ -50,6 +50,7 @@ MonoBehaviour:
   speech: You trying to bait me into something here, kid? <wiggle>Scram</wiggle>.
   responses:
   - I'll leave you alone now...
+  nonAnimatedSpeech: You trying to bait me into something here, kid? Scram.
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

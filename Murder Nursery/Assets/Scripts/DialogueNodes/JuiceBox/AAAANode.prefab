@@ -50,6 +50,7 @@ MonoBehaviour:
   speech: <shake>GO AWAY.</shake>
   responses:
   - Aw, no fair, you said you'd play!
+  nonAnimatedSpeech: GO AWAY.
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

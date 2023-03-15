@@ -52,6 +52,9 @@ MonoBehaviour:
     Uh, I mean, <shake>narc</shake>? Darn it.
   responses:
   - Heh. You said narp.
+  nonAnimatedSpeech: You know what I love about nursery? Can't catch the kid who
+    stole a cookie unless there's crumbs on his shirt. So, where's the crumbs, >narp?
+    Uh, I mean, narc<? Darn it.
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

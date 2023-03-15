@@ -50,6 +50,7 @@ MonoBehaviour:
   speech: <wiggle>NOPE</wiggle>! Get in line!
   responses:
   - Note taken!
+  nonAnimatedSpeech: NOPE! Get in line!
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

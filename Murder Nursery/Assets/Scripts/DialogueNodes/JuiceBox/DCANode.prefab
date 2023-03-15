@@ -54,6 +54,9 @@ MonoBehaviour:
   responses:
   - Sucks to be you, nerd.
   - What's the story with Chase?
+  nonAnimatedSpeech: And for what, pray tell, do the philistines of this room put
+    it to use? Meaningless drivel! Chase used it all to paint go faster stripes on
+    his sneakers!
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

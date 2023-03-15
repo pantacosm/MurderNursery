@@ -52,6 +52,7 @@ MonoBehaviour:
   responses:
   - So what if I am?
   - Not interested. Just tryin' to figure out who's who.
+  nonAnimatedSpeech: How do you know her? You tryin' to make a move on my gal?
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

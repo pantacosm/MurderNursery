@@ -53,6 +53,8 @@ MonoBehaviour:
   responses:
   - Jealous?
   - You don't approve?
+  nonAnimatedSpeech: Hmph. Where do I even begin. Twerp like that doesn't deserve
+    attention from any of the gals in this class, let alone her.
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

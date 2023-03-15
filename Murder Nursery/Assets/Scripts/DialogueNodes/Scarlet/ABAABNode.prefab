@@ -51,6 +51,8 @@ MonoBehaviour:
     stand a chance against me.
   responses:
   - Sounds like you're real glad she's outta the picture.
+  nonAnimatedSpeech: ME? Jealous? A boring ol' housewife type like that doesn't stand
+    a chance against me.
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

@@ -54,6 +54,9 @@ MonoBehaviour:
   responses:
   - Think they're capable?
   - Loose screws?
+  nonAnimatedSpeech: 'You really wanna know? Keep an eye out for Juice-Box - kid''s
+    too quiet and I think he''s got a few loose screws. Eddie''s similar, but he''s
+    all bark no bite. Kid couldn''t find a prayer in the bible. '
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

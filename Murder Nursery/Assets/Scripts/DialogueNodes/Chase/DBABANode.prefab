@@ -47,11 +47,13 @@ MonoBehaviour:
   parent: {fileID: 3499891356269125111, guid: d53d7bbf4e8b5004a91c6169f88183fa, type: 3}
   children:
   - {fileID: 3499891356269125111, guid: bac4de9741da0a84ea7a436776fdf9c9, type: 3}
-  speech: Me? <shake>NO</shake>. I don't get jealous, he ain't worth the energy.
+  speech: Me? <shake>NO!</shake> I don't get jealous, he ain't worth the energy.
     Looks like she started keepin' her distance in the end anyway, well before...
     you know.
   responses:
   - I hear you. Thanks for all the help, Chase
+  nonAnimatedSpeech: Me? NO! I don't get jealous, he ain't worth the energy. Looks
+    like she started keepin' her distance in the end anyway, well before... you know.
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

@@ -53,6 +53,8 @@ MonoBehaviour:
   responses:
   - Didn't like her?
   - Jealous? Sounds like she stole your thunder.
+  nonAnimatedSpeech: 'Didn''t know her too well. Everyone seemed to think she was
+    the bee''s knees. Looked like a real plain Jane to me though. '
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

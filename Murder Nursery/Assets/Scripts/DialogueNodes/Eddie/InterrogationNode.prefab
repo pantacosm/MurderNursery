@@ -49,6 +49,8 @@ MonoBehaviour:
   speech: This is a beach of my human rights! Hmm, beach doesn't sound quite right...
   responses:
   - Why don't you paddle on over to the interrogation room junior
+  nonAnimatedSpeech: This is a beach of my human rights! Hmm, beach doesn't sound
+    quite right...
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

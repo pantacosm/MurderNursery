@@ -50,6 +50,7 @@ MonoBehaviour:
   speech: Then why don't you make like a tree, and <wave>get outta here</wave>!
   responses:
   - It's leave... it's LEAVE!
+  nonAnimatedSpeech: Then why don't you make like a tree, and get outta here!
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

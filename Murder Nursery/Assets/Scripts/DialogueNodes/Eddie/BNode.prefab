@@ -53,6 +53,8 @@ MonoBehaviour:
   responses:
   - <Interrogate Eddie>
   - <Leave Conversation>
+  nonAnimatedSpeech: Me? I'm just a cat who works for Chase and minds his own business.
+    I don't got much to say unless I know you're to be trusted.
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

@@ -52,6 +52,7 @@ MonoBehaviour:
   responses:
   - What's the deal with that?
   - Tell me about Scarlet.
+  nonAnimatedSpeech: 'Honestly? She sure ruffled a few of Scarlet''s feathers. '
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

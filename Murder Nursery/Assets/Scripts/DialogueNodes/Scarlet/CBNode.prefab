@@ -51,6 +51,7 @@ MonoBehaviour:
     talk!
   responses:
   - Really?!
+  nonAnimatedSpeech: Aww, caught your eye, did I? What do you wanna know! I'll talk!
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

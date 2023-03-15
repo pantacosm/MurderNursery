@@ -53,6 +53,10 @@ MonoBehaviour:
     Women, man. <wiggle>Women</wiggle>.
   responses:
   - 'My mum said traditional values are the sign '
+  nonAnimatedSpeech: Pfft, you really are new here, aren't you? They hate each other!
+    Grace just got here a few weeks ago. Scarlet seemed to like her at first, but
+    next thing I know Grace was saying she cut a chunk out of her hair. Women, man.
+    Women.
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

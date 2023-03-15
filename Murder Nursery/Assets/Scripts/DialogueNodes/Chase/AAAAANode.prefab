@@ -50,6 +50,7 @@ MonoBehaviour:
   speech: Now you're <shake>pushin'</shake> it.
   responses:
   - I'll stick with partner!
+  nonAnimatedSpeech: Now you're pushin' it.
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

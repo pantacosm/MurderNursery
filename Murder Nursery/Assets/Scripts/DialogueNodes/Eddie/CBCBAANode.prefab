@@ -51,6 +51,8 @@ MonoBehaviour:
     milk</wave>.
   responses:
   - 'Bribe received: Juice Box'
+  nonAnimatedSpeech: Just give him one of these... he'll spill like a carton of strawberry
+    milk.
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

@@ -53,6 +53,8 @@ MonoBehaviour:
   responses:
   - Tell me about these folks.
   - Ummm.... wanna spill?
+  nonAnimatedSpeech: 'She was a doll. Didn''t harm nobody. And lemme tell ya, some
+    folks need harmin'' round here. '
   repLevelOption1: 2
   repLevelOption2: -10
   repLevelOption3: -10

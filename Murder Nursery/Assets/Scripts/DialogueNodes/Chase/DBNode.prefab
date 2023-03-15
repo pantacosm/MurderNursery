@@ -50,6 +50,7 @@ MonoBehaviour:
   speech: <wiggle>Eeeee biccies!!!</wiggle> I mean... <shake>*aherm*</shake>
   responses:
   - Ummm....
+  nonAnimatedSpeech: Eeeee biccies!!! I mean... *aherm*.
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

@@ -50,6 +50,7 @@ MonoBehaviour:
   speech: Back off, <shake>creep</shake>. She don't date badges.
   responses:
   - Not even really cute ones?
+  nonAnimatedSpeech: Back off, creep. She don't date badges.
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

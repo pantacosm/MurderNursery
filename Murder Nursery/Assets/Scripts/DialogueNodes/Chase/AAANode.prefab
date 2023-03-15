@@ -53,6 +53,8 @@ MonoBehaviour:
   responses:
   - That a threat?
   - Which kids?
+  nonAnimatedSpeech: Jeez Louise! Well, just be careful who you're messing with here.
+    Kids round these parts don't like being asked questions.
   repLevelOption1: -10
   repLevelOption2: 4
   repLevelOption3: -10

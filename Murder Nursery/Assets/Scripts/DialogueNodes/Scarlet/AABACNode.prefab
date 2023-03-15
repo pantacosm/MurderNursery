@@ -52,6 +52,9 @@ MonoBehaviour:
     Used my favourite glitter pens too! '
   responses:
   - Go on....
+  nonAnimatedSpeech: 'Oooooh, where do I begin Detective Drew! Well, the first time
+    I met ''er I sent her a real nice card askin'' if she wanted to be friends. Used
+    my favourite glitter pens too! '
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

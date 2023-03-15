@@ -53,6 +53,10 @@ MonoBehaviour:
     She couldn't hurt a fly.
   responses:
   - Welp, this was intense.
+  nonAnimatedSpeech: She's like the tide, Drew... my love for her ebbs back and forth
+    under the waning moon. Plus, she brings juice boxes into class on Tuesdays and
+    Thursdays. Scarlet may seem like a cruel mistress, but truly she has a gentle
+    soul. She couldn't hurt a fly.
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

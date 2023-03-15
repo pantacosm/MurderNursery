@@ -50,6 +50,7 @@ MonoBehaviour:
   speech: Don't know if I like your attitude, <shake>buddy<shake>.
   responses:
   - Don't know if I like the baloney you're tryna feed me.
+  nonAnimatedSpeech: Don't know if I like your attitude, buddy.
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

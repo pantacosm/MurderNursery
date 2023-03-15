@@ -54,6 +54,7 @@ MonoBehaviour:
   - Oh yeah? Then what happened?
   - '*mumble grumble mumble*'
   - 'Playin'' hard to get, huh? '
+  nonAnimatedSpeech: '*mumble grumble*'
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10
@@ -63,7 +64,7 @@ MonoBehaviour:
   nodeActive: 1
   interrogationNode: 0
   exitNode: 0
-  nodeVisited: 1
+  nodeVisited: 0
   briberyAvailable: 1
   fitCheck: 1
   evidenceToDiscover: {fileID: 0}
@@ -85,4 +86,4 @@ MonoBehaviour:
   evidenceNeededCheck: 0
   evImagesGenerated: 0
   nodeEmotion: 3
-  bribeGiven: 1
+  bribeGiven: 0

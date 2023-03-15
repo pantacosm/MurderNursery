@@ -55,6 +55,7 @@ MonoBehaviour:
     sheba lying over there?
   - Why, you look a million bucks! Say... think ya could help me with a little sleuthin'?
   - Now, you look pretty as a picture! Tell me about yourself!
+  nonAnimatedSpeech: Whaddaya want, dork?
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

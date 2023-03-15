@@ -51,6 +51,8 @@ MonoBehaviour:
     3 playdates this <shake>month</shake>.
   responses:
   - Tell me about Eddie.
+  nonAnimatedSpeech: No kidding! Ol' Eddie over there is so desperate to be my friend
+    he booked 3 playdates this month.
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

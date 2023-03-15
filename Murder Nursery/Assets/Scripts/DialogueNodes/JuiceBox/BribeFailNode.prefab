@@ -50,6 +50,7 @@ MonoBehaviour:
   speech: Ew, I don't want that!
   responses:
   - Oh sorry...
+  nonAnimatedSpeech: Ew, I don't want that!
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

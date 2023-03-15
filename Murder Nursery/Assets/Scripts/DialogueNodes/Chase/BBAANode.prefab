@@ -53,6 +53,8 @@ MonoBehaviour:
   responses:
   - So... everyone?
   - No-one in particular?
+  nonAnimatedSpeech: You know, Eddie lurkin' around, Scarlet's constant scheming,
+    even Juice-Box gives off the heebie jeebies.
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

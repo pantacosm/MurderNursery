@@ -53,6 +53,10 @@ MonoBehaviour:
     <shake>BOTH</shake> hands? I mean pick one and stick with it, gee <shake>WHIZ</shake>!
   responses:
   - This sure gives me a lot to think about...
+  nonAnimatedSpeech: You know the type. Grace saw somethin' in him. Tried to get
+    him to see it too, but kid's a lost cause. Sometimes I wonder if she was afraid
+    of him with the way she tiptoed around. You know that freak can even draw with
+    BOTH hands? I mean pick one and stick with it, gee WHIZ!
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

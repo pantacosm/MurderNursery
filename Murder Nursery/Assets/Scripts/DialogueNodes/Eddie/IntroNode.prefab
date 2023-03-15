@@ -54,6 +54,7 @@ MonoBehaviour:
   - Where were you when Grace bit the bullet?
   - Tell me about yourself, pal.
   - 'Know anything about that moll decorating the floor? '
+  nonAnimatedSpeech: How's it goin', new kid?
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

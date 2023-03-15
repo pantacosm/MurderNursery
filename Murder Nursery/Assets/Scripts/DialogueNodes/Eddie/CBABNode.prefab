@@ -52,6 +52,8 @@ MonoBehaviour:
     other guys.
   responses:
   - Sure buddy. Sure.
+  nonAnimatedSpeech: Well lemme tell ya, she's not who's who, she's what's what.
+    Oh sure, her and Chase are real close, but she's playin' all those other guys.
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

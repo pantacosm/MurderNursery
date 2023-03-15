@@ -62,8 +62,7 @@ public class ThreadManager : MonoBehaviour
 
     public void CheckThreadStart() //Checks and stores the evidence piece threaded //CHANGE FOR EFFICICENCY 
     {
-        if(firstThreadItem.gameObject.name == "Evidence") //Stores the likes for each character 
-        {
+        
             newEvidenceImage = secondThreadItem.GetComponent<EvidenceSlot>().evidenceImage;
             newEvidenceText = secondThreadItem.GetComponent<EvidenceSlot>().evidenceText;
             if (firstThreadItem.tag == "ChaseSlot")
@@ -92,7 +91,7 @@ public class ThreadManager : MonoBehaviour
                 pinBoardManager.GetComponent<PinboardManager>().threadedEvidence.Add(newEvidenceText);
             }
             
-        }
+        
         if(firstThreadItem.gameObject.name == "Dislikes") //Stores the dislikes for each character 
         {
             newEvidenceImage = secondThreadItem.GetComponent<EvidenceSlot>().evidenceImage;

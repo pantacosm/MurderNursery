@@ -54,6 +54,7 @@ MonoBehaviour:
   - 'Had a few questions for ya. '
   - A confession.
   - Tell me about yourself.
+  nonAnimatedSpeech: '*sluuuuuuurp* All right, I''m listening. What do you want?'
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

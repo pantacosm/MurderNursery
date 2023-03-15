@@ -51,6 +51,8 @@ MonoBehaviour:
     the kisser.
   responses:
   - All right, all right, I'm goin'...
+  nonAnimatedSpeech: Philistine. Get out of here before I smack you right in the
+    kisser.
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

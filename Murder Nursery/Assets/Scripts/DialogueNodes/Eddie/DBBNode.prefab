@@ -52,6 +52,9 @@ MonoBehaviour:
     Grace and Scarlet and - hey wait, what''re you writing that down for? '
   responses:
   - No reason, no reason at all...
+  nonAnimatedSpeech: 'Oh HECK no. Don''t tell teach I said a bad word. But no. They''re
+    like, the opposite of friends. JB won''t quit talking to Grace and Scarlet and
+    - hey wait, what''re you writing that down for? '
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

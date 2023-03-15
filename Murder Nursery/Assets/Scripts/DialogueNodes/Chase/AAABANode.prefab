@@ -52,6 +52,9 @@ MonoBehaviour:
     and there ain''t a man on this earth who isn''t capable of <wiggle>snapping</wiggle>. '
   responses:
   - I'll say...
+  nonAnimatedSpeech: 'Maybe. Who isn''t, really? This class has been one stolen cookie
+    away from catastrophe for longer than I''ve been walkin''. Tensions been runnin
+    high, and there ain''t a man on this earth who isn''t capable of snapping. '
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

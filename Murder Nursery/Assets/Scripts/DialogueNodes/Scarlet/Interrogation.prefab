@@ -49,6 +49,7 @@ MonoBehaviour:
   speech: Hmmph, fine... the class will be outraged you know!
   responses:
   - Outraged that I haven't done this sooner probably
+  nonAnimatedSpeech: Hmmph, fine... the class will be outraged you know!
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

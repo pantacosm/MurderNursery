@@ -50,6 +50,7 @@ MonoBehaviour:
   speech: ' I found it in the <shake>BIN</shake> the next day. Makes ya think, huh?'
   responses:
   - Does it?
+  nonAnimatedSpeech: ' I found it in the BIN the next day. Makes ya think, huh?'
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

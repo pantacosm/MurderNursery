@@ -52,6 +52,9 @@ MonoBehaviour:
     arm is in this blasted cast.
   responses:
   - How did you break your arm?
+  nonAnimatedSpeech: Well, how about that... you noticed, huh? Took a tumble from
+    a tree a few weeks ago... doc said it was touch and go. That's why my right arm
+    is in this blasted cast.
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

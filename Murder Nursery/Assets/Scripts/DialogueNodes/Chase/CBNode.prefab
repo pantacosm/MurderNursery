@@ -52,6 +52,8 @@ MonoBehaviour:
     I give ya a <wiggle>knuckle sandwich</wiggle>!
   responses:
   - Message recieved, good sir!
+  nonAnimatedSpeech: Trust me, punk, you don't wanna mess with me! Why don't you
+    run off back to your little detective game before I give ya a knuckle sandwich!
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

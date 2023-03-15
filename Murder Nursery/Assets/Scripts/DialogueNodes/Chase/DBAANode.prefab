@@ -52,6 +52,9 @@ MonoBehaviour:
     driven a real wedge between me and Scarlet.
   responses:
   - Go on.
+  nonAnimatedSpeech: Ugh, fine. Grace and I have been pretty close lately, it's true.
+    That's not relevant to your little investigation though, chump! It's driven a
+    real wedge between me and Scarlet.
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

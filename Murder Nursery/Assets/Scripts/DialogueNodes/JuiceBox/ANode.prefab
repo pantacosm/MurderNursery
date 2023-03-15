@@ -52,6 +52,7 @@ MonoBehaviour:
   responses:
   - You ate HOW much poop?
   - This is pointless.
+  nonAnimatedSpeech: '*grumble grumble!*'
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

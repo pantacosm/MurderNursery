@@ -54,6 +54,7 @@ MonoBehaviour:
     anythin'.
   - 'Listen, pal. I got a quota to meet and the boss won''t be happy if I don''t
     get some answers. Let''s talk. '
+  nonAnimatedSpeech: No can do, creepo! Get outta here!
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

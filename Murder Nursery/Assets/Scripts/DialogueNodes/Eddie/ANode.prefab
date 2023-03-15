@@ -53,6 +53,7 @@ MonoBehaviour:
   responses:
   - Says the man with farts comin' outta his mouth.
   - Fair's fair, pal. I didn't mean no harm by it.
+  nonAnimatedSpeech: What, you got a head for a butt and a butt for a head?
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

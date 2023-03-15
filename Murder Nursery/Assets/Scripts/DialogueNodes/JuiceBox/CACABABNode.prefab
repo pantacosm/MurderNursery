@@ -51,6 +51,8 @@ MonoBehaviour:
     Teach says I'm <wave>ambydeshtrus</wave>.
   responses:
   - Ambeedestris, huh? Gonna have to go look that one up...
+  nonAnimatedSpeech: Sure was. Well, no big whoop. I can still draw just swell with
+    this one. Teach says I'm ambydeshtrus.
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

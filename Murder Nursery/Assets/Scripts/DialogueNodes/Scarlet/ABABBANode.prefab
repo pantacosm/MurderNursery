@@ -52,6 +52,9 @@ MonoBehaviour:
     real violent and hasn''t been potty trained. '
   responses:
   - Thanks for the help, Scarlet!
+  nonAnimatedSpeech: 'It''s like I said, really. Kid''s obsessed. Suppose I can''t
+    blame him. It''s like being followed around by a little puppy. ''Cept the puppies
+    real violent and hasn''t been potty trained. '
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

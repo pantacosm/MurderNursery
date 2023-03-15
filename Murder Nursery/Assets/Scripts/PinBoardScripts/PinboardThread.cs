@@ -11,15 +11,16 @@ public class PinboardThread : MonoBehaviour
     private float lineWidth = 15; // Width of the line
     public float offsetX; //X axis offset
     public float offsetY; //Y axis offset
+    public GameObject threads;
 
     public GameObject MakeLine(float ax, float ay, float bx, float by, Color col) //Method creates a line betweeen two evidence pieces on the pinboard
     {
-        GameObject NewObj = new GameObject();
-        NewObj.name = "line from " + ax + " to " + bx;
-        Image NewImage = NewObj.AddComponent<Image>();
+        GameObject newThread = new GameObject();
+        newThread.name = "line from " + ax + " to " + bx;
+        Image NewImage = newThread.AddComponent<Image>();
         NewImage.sprite = lineImage;
         NewImage.color = col;
-        RectTransform rect = NewObj.GetComponent<RectTransform>();
+        RectTransform rect = newThread.GetComponent<RectTransform>();
         rect.SetParent(transform);
         rect.localScale = Vector3.one;
 
@@ -33,6 +34,7 @@ public class PinboardThread : MonoBehaviour
         rect.rotation = Quaternion.Euler(new Vector3(0, 0, 180 * Mathf.Atan(dif.y / dif.x) / Mathf.PI));
         rect.anchorMin = Vector2.zero;
         rect.anchorMax = Vector2.zero;
-        return NewObj;
+        newThread.transform.parent = threads.transform;
+        return newThread;
     }
 }

@@ -133,6 +133,7 @@ public class DialogueManager : MonoBehaviour
     private string npcLastResponse1;
     private string npcLastResponse2;
     private int playerChoice;
+    private string nonAnimatedText = null;
 
     //Manager Objects
     [HideInInspector]
@@ -437,11 +438,13 @@ public class DialogueManager : MonoBehaviour
         if (firstNode) //Checks if the node being loaded is the first node of the conversation
         {
             npcLastResponse1 = activeNode.speech;
+            nonAnimatedText = activeNode.nonAnimatedSpeech;
         }
         if (!firstNode)
         {
-            npcLastResponse2 = npcLastResponse1;
+            npcLastResponse2 = nonAnimatedText;
             npcLastResponse1 = activeNode.speech;
+            nonAnimatedText = activeNode.nonAnimatedSpeech;
 
             UpdateRollingText(); //Updates the UI to create the text rolling effect
 

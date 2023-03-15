@@ -73,6 +73,8 @@ public class PinboardManager : MonoBehaviour
 
     public List<EvidenceClass> evidencePieces; //Stores evidence pieces
     public GameObject[] slots;
+    public int slotsProgress = 0;
+    public GameObject threadsParent;
 
    
     // Start is called before the first frame update

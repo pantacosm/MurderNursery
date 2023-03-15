@@ -54,6 +54,7 @@ MonoBehaviour:
   - Whaddya make of ol' Grace here kickin the bucket?
   - Anything I should know  about your friends over yonder?
   - Hey! I don't like your attitude tough guy.
+  nonAnimatedSpeech: Need somethin', mouth-breather>
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

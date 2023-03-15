@@ -42,7 +42,7 @@ public class EvidenceSlot : MonoBehaviour
         {
             if(evidence.evidenceID == evidenceID)
             {
-                print("Calling");
+                
                 Destroy(prefab);
                 pinboardManager.GetComponent<PinboardManager>().UpdateEvidenceImages(evidence);
             }

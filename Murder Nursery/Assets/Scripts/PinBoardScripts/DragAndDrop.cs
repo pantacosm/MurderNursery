@@ -21,7 +21,7 @@ public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, ID
     private Vector2 originalPos;
     public GameObject slotPrefab;
     public GameObject pinboardManager;
-    private int i = 0;
+    public int i = 0;
     private GameObject[] evidencePanels;
 
     private void Start()
@@ -39,12 +39,13 @@ public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, ID
     {
         if (eventData.button == PointerEventData.InputButton.Left)
         {
+            i = pinboardManager.GetComponent<PinboardManager>().slotsProgress;
             itemPrefab = this.gameObject;
             canvasGroup.blocksRaycasts = false;
             itemPrefab.GetComponent<Image>().maskable = false;
             originalPos = transform.position;
             evidencePanels[0].GetComponent<Image>().enabled = false;
-            evidencePanels[0].GetComponentInChildren<TextMeshProUGUI>().enabled = false;
+            evidencePanels[1].GetComponentInChildren<TextMeshProUGUI>().enabled = false;
             evidencePanels[1].GetComponent<Image>().enabled = false;
             
             //hoverOverText.SetActive(true);
@@ -68,7 +69,7 @@ public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, ID
     {
         //hoverOverText.SetActive(false);
         evidencePanels[0].GetComponent<Image>().enabled = true;
-        evidencePanels[0].GetComponentInChildren<TextMeshProUGUI>().enabled = true;
+        evidencePanels[1].GetComponentInChildren<TextMeshProUGUI>().enabled = true;
         evidencePanels[1].GetComponent<Image>().enabled = true;
 
         canvasGroup.blocksRaycasts = true;
@@ -79,7 +80,9 @@ public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, ID
         pinboardManager.GetComponent <PinboardManager>().slots[i].GetComponent<EvidenceSlot>().slotFilled = true;
         pinboardManager.GetComponent<PinboardManager>().slots[i].GetComponent<EvidenceSlot>().evidenceText = eventData.pointerDrag.GetComponent<EvidenceClass>().evidenceText;
         pinboardManager.GetComponent<PinboardManager>().slots[i].GetComponent<EvidenceSlot>().evidenceID = eventData.pointerDrag.GetComponent<EvidenceClass>().evidenceID;
-        i++;
+        pinboardManager.GetComponent<PinboardManager>().slotsProgress++;
+        
+        Destroy(eventData.pointerDrag.gameObject);
         eventData.Reset();
         ResetPosition();
 

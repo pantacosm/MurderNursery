@@ -10,6 +10,7 @@ public class DialogueNode : MonoBehaviour
     public DialogueNode[] children; //Stores the connected child nodes
     public string speech; //Stores the npc statement
     public string[] responses; //Stores the players possible responses
+    public string nonAnimatedSpeech;
 
     [Header("Reputation Modifiers")]
     public int repLevelOption1; //Rep Level Checker

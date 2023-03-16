@@ -5,9 +5,12 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 
+
 public class MainMenuSettings : MonoBehaviour
 {
     DialogueManager DM;
+    Colorblind colourblind;
+    public GameObject colourblindObject; // colourblind script attached to main camera
 
     public AudioSource sfxManager;
     public AudioClip selectChoice;
@@ -24,11 +27,13 @@ public class MainMenuSettings : MonoBehaviour
     public GameObject graphicsMenu;
     public GameObject resMenu;
     public GameObject audioMenu;
+    public GameObject colourblindMenu;
     public GameObject controlsUI;
 
     // update graphics quality / resolution settings
     private string quality;
     private string index;
+    private string colourblindIndex;
 
     [HideInInspector]
     public bool menuOpen;
@@ -37,6 +42,15 @@ public class MainMenuSettings : MonoBehaviour
     {
         DM = FindObjectOfType<DialogueManager>();
 
+        if(GameObject.FindGameObjectWithTag("IntroCam"))
+        {
+            if(GameObject.FindGameObjectWithTag("IntroCam").activeInHierarchy)
+            {
+                colourblindObject = GameObject.FindGameObjectWithTag("IntroCam");
+            }
+        }
+        colourblind = colourblindObject.GetComponent<Colorblind>();
+
         musicVolume = PlayerPrefs.GetFloat("volume");
         sfxVolume = PlayerPrefs.GetFloat("sfxVolume", sfxVolume);
         musicSlider.value = musicVolume;
@@ -44,10 +58,12 @@ public class MainMenuSettings : MonoBehaviour
 
         quality = PlayerPrefs.GetString("quality");
         index = PlayerPrefs.GetString("res");
+        colourblindIndex = PlayerPrefs.GetString("cbIndex");
 
 
         ChangeQualityLevel();
         ChangeResolution();
+        ChangeColourblindMode();
 
     }
 
@@ -61,6 +77,18 @@ public class MainMenuSettings : MonoBehaviour
             }
         }
 
+        if(colourblindObject.GetComponent<IntroCutscene>())
+        {
+            if(!colourblindObject.GetComponent<IntroCutscene>().inIntro)
+            {
+                colourblindObject = GameObject.FindGameObjectWithTag("MainCamera");
+                colourblind = colourblindObject.GetComponent<Colorblind>();
+                colourblindIndex = PlayerPrefs.GetString("cbIndex");
+                ChangeColourblindMode();
+            }
+        }
+
+
         // save slider volume value between sessions / scenes
         PlayerPrefs.SetFloat("volume", musicVolume);
         PlayerPrefs.SetFloat("sfxVolume", sfxVolume);
@@ -68,6 +96,7 @@ public class MainMenuSettings : MonoBehaviour
         // save quality / resoution settings
         PlayerPrefs.SetString("res", index);
         PlayerPrefs.SetString("quality", quality);
+        PlayerPrefs.SetString("cbIndex", colourblindIndex);
 
     }
 
@@ -153,6 +182,30 @@ public class MainMenuSettings : MonoBehaviour
         }
     }
 
+    public void ChangeColourblindMode()
+    {
+        if(UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject)
+        {
+            colourblindIndex =  UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.name;
+        }
+
+        switch (colourblindIndex)
+        {
+            case "0":
+                colourblind.Type = 0;
+                break;
+            case "1":
+                colourblind.Type = 1;
+                break;
+            case "2":
+                colourblind.Type = 2;
+                break;
+            case "3":
+                colourblind.Type = 3;
+                break;
+        }
+    }
+
     // Toggles menu during gameplay (Escape key / Resume Game Button)
     public void ToggleMenu()
     {
@@ -195,6 +248,12 @@ public class MainMenuSettings : MonoBehaviour
         {
             controlsUI.SetActive(false);
         }
+
+        if(colourblindMenu.activeInHierarchy)
+        {
+            colourblindMenu.SetActive(false);
+        }
     }
 
 }
+

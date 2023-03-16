@@ -15,6 +15,7 @@ public class StartGame : MonoBehaviour
     public GameObject graphicsMenu; //UI element for graphics settings menu
     public GameObject resMenu; // shows resolution menu
     public GameObject audioMenu; // open audio menu
+    public GameObject colourblindMenu; // open colourblind menu
     public GameObject controlsUI; // UI image of controls
 
     bool optionsOpen;
@@ -43,6 +44,11 @@ public class StartGame : MonoBehaviour
         if(audioMenu.activeInHierarchy)
         {
             CloseAudioMenu();
+        }
+
+        if(colourblindMenu.activeInHierarchy)
+        {
+            CloseColourblindMenu();
         }
         
     }
@@ -103,6 +109,11 @@ public class StartGame : MonoBehaviour
             audioMenu.SetActive(false);
         }
 
+        if(colourblindMenu.activeInHierarchy)
+        {
+            colourblindMenu.SetActive(false);
+        }
+
         if(controlsUI)
         {
             if(controlsUI.activeInHierarchy && optionsOpen == true)
@@ -135,6 +146,11 @@ public class StartGame : MonoBehaviour
         {
             audioMenu.SetActive(false);
         }
+
+        if(colourblindMenu.activeInHierarchy)
+        {
+            colourblindMenu.SetActive(false);
+        }
     }
 
     public void CloseResMenu()
@@ -164,6 +180,11 @@ public class StartGame : MonoBehaviour
         if(resMenu.activeInHierarchy)
         {
             resMenu.SetActive(false);
+        }
+
+        if(colourblindMenu.activeInHierarchy)
+        {
+            colourblindMenu.SetActive(false);
         }
     }
 
@@ -195,6 +216,11 @@ public class StartGame : MonoBehaviour
         {
             audioMenu.SetActive(false);
         }
+
+        if(colourblindMenu.activeInHierarchy)
+        {
+            colourblindMenu.SetActive(false);
+        }
     }
 
     public void CloseGraphics() //Closes graphics settings menu
@@ -223,10 +249,50 @@ public class StartGame : MonoBehaviour
             audioMenu.SetActive(false);
         }
 
+        if(colourblindMenu.activeInHierarchy)
+        {
+            colourblindMenu.SetActive(false);
+        }
+
         if(optionsMenu.activeInHierarchy)
         {
             ToggleOptions();
         }
+    }
+
+    public void OpenColourblindMenu()
+    {
+        sfxManager.PlayOneShot(selectChoice, 0.4f);
+        colourblindMenu.SetActive(true);
+
+        if(controlsUI)
+        {
+            if(controlsUI.activeInHierarchy)
+            {
+                controlsUI.SetActive(false);
+            }
+        }
+
+        if(graphicsMenu.activeInHierarchy)
+        {
+            graphicsMenu.SetActive(false);
+        }
+
+        if(resMenu.activeInHierarchy)
+        {
+            resMenu.SetActive(false);
+        }
+
+        if(audioMenu.activeInHierarchy)
+        {
+            audioMenu.SetActive(false);
+        }
+    }
+
+    public void CloseColourblindMenu()
+    {
+        sfxManager.PlayOneShot(selectChoice, 0.4f);
+        colourblindMenu.SetActive(false);
     }
 
     public void QuitGame() //Quits the game 

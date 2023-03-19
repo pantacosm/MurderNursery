@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class DressUp : MonoBehaviour
 {
     private bool interactable = false;//Signals that the player is within interaction range
-    private string activeOutfit = null; //Stores the outfit currently worn by the player
+    public string activeOutfit = null; //Stores the outfit currently worn by the player
     [HideInInspector]
     public bool inDressUp = false; //Signals that the player is in the dressup menu
 

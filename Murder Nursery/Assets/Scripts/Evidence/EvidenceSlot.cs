@@ -4,8 +4,9 @@ using System.Linq;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using TMPro;
 
-public class EvidenceSlot : MonoBehaviour 
+public class EvidenceSlot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public bool slotFilled = false; //Checks if the evidence slot is currently filled
     public Image evidenceImage = null; //The evidence image stored in the slot
@@ -15,17 +16,31 @@ public class EvidenceSlot : MonoBehaviour
     public GameObject prefab;
     public List<GameObject> threads = new List<GameObject>();
 
+    public GameObject evidenceTooltip; // shows a description popup of the evidence placed
+
     //private bool clearing = false;
     // Start is called before the first frame update
     void Start()
     {
-        
+        evidenceTooltip = GameObject.FindGameObjectWithTag("Evidence Tooltip");
+        evidenceTooltip.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        evidenceTooltip.SetActive(true);
+        evidenceTooltip.GetComponentInChildren<TextMeshProUGUI>().text = evidenceText;
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        evidenceTooltip.SetActive(false);
     }
 
     public void ClearEvidence()

@@ -42,7 +42,7 @@ public class EvidenceSlider : MonoBehaviour
     public IEnumerator MovePanel()
     {
         float xCoord = evidencePanel.transform.position.x;
-        int i = 0;
+        //int i = 0;
         while(xCoord >1000 ) 
         {
             movementProgress = timeToMove + 0.01f;

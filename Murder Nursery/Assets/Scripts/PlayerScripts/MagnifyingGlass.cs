@@ -7,20 +7,27 @@ public class MagnifyingGlass : MonoBehaviour
 {
     PinboardManager PM;
 
-    public bool usingMagnifyingGlass;
+    [HideInInspector]
+    public bool usingMagnifyingGlass; // used in player movement script for switching from third/first person movement
 
-    [SerializeField]
-    GameObject magnifyingBlur; // activates a blur effect whilst using the MG
+    [HideInInspector]
+    public GameObject evidenceItem; // item the player is currently viewing through the magnifying glass
 
     [SerializeField]
     GameObject thirdPersonCam;
 
-    public GameObject magGlassCam; // first person camera
+    [SerializeField]
+    GameObject firstPersonCam; // first person camera
+
+    public GameObject magnifyingBlur; // activates a blur effect whilst using the MG
+
+    [SerializeField]
+    GameObject magGlass; // hide mag glass when inspecting item
 
     [SerializeField]
     GameObject storeItemText; // text pop up to inform player they can pick up the evidence
 
-    GameObject evidenceItem; // item the player is currently viewing through the magnifying glass
+
 
     private void Start()
     {
@@ -32,6 +39,7 @@ public class MagnifyingGlass : MonoBehaviour
         if(Input.GetKeyUp(KeyCode.E) && evidenceItem)
         {
             GameObject evidenceUI = evidenceItem.GetComponent<EvidenceItem>().evidenceToAdd; // evidence to add to pinboard
+            storeItemText.SetActive(false);
 
             if(!evidenceUI.GetComponent<EvidenceClass>().evidenceFound) // check the evidence hasnt already been found
             {
@@ -41,8 +49,19 @@ public class MagnifyingGlass : MonoBehaviour
                 evidenceUI.GetComponent<EvidenceClass>().evidenceFound = true;
             }
 
-            storeItemText.SetActive(false);
-            Destroy(evidenceItem);
+            // check if item has a fingerprint for inspection
+            if(evidenceItem.GetComponentInChildren<Fingerprint>())
+            {
+                evidenceItem.GetComponent<EvidenceItem>().InspectItem();
+                magnifyingBlur.SetActive(false);
+                evidenceItem.GetComponent<ParticleSystem>().Stop();
+                gameObject.SetActive(false);
+            }
+            else
+            {
+                Destroy(evidenceItem);
+            }
+
         }
     }
 
@@ -50,20 +69,23 @@ public class MagnifyingGlass : MonoBehaviour
     // toggles a magnifying glass to be used for finding evidence
     public void ToggleMagnifyingGlass() 
     {
-        if(usingMagnifyingGlass = !usingMagnifyingGlass)
         {
-            usingMagnifyingGlass = true;
-            thirdPersonCam.SetActive(false);
-            magGlassCam.SetActive(true);
-            magnifyingBlur.SetActive(true);
-            
-        }
-        else
-        {
-            usingMagnifyingGlass = false;
-            magGlassCam.SetActive(false);
-            thirdPersonCam.SetActive(true);
-            magnifyingBlur.SetActive(false);
+            if(usingMagnifyingGlass = !usingMagnifyingGlass)
+            {
+                usingMagnifyingGlass = true;
+                thirdPersonCam.SetActive(false);
+                firstPersonCam.SetActive(true);
+                gameObject.SetActive(true);
+                magnifyingBlur.SetActive(true);   
+            }
+            else
+            {
+                usingMagnifyingGlass = false;
+                firstPersonCam.SetActive(false);
+                thirdPersonCam.SetActive(true);
+                magnifyingBlur.SetActive(false);
+                storeItemText.SetActive(false);
+            }
         }
     }
 
@@ -72,10 +94,16 @@ public class MagnifyingGlass : MonoBehaviour
         
         if(other.gameObject.CompareTag("Evidence Item") && usingMagnifyingGlass)
         {
+            if (other.gameObject.GetComponentInChildren<Fingerprint>())
+            {
+                GameObject fingerprint = other.gameObject.GetComponentInChildren<Fingerprint>().gameObject;
+                fingerprint.GetComponent<SpriteRenderer>().enabled = true;
+            }
+
             other.gameObject.GetComponent<MeshRenderer>().enabled = true; // allows player to see the item
             other.gameObject.GetComponent<ParticleSystem>().Play(); // plays the particle effect attached to item
 
-            storeItemText.GetComponent<TextMeshProUGUI>().text = "Press [E] to store evidence " + other.name;
+            storeItemText.GetComponent<TextMeshProUGUI>().text = "Press [E] to inspect " + other.name;
             storeItemText.SetActive(true);
 
             evidenceItem = other.gameObject;

@@ -45,6 +45,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private GameObject dialogueZone;
 
+    bool inspectingItem;
+
     private void Awake()
     {
         controller = gameObject.GetComponent<CharacterController>();
@@ -82,11 +84,23 @@ public class PlayerMovement : MonoBehaviour
             gameObject.transform.forward = movement;
         }
 
+        if(MG.GetComponent<MagnifyingGlass>().evidenceItem)
+        {
+            if(MG.GetComponent<MagnifyingGlass>().evidenceItem.GetComponent<EvidenceItem>().inspectingItem)
+            {
+                inspectingItem = true;
+            }
+            else
+            {
+                inspectingItem = false;
+            }
+        }
+
         // stops player movement & disables camera whilst UI open
         if (inventory.UIVisibility.inventoryOpen || inventory.UIVisibility.pinboardOpen 
             || dialogueZone.activeInHierarchy || manager.GetComponent<SceneTransition>().interrogationActive 
             || inventory.UIVisibility.jotterOpen || dressUpManager.GetComponent<DressUp>().inDressUp || introCam.GetComponent<IntroCutscene>().inIntro
-            || menu.menuOpen || mgCamTransitioning)
+            || menu.menuOpen || mgCamTransitioning || inspectingItem)
         {
             animator.Play("Idle");
             animator.SetFloat("Velocity", 0);

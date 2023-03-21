@@ -72,6 +72,7 @@ public class Interrogation : MonoBehaviour
     private DialogueNode mostRecentJuiceBoxNode;
     private DialogueNode mostRecentScarletNode;
     private int pos = 0;
+    private int playerChoice = 0;
 
     [HideInInspector]
     public bool inInterrogation = false;
@@ -92,10 +93,8 @@ public class Interrogation : MonoBehaviour
     {
         interrogationUnderway = manager.GetComponent<SceneTransition>().interrogationActive; //Checks if an interrogation is active
 
-        if(interrogationUnderway) //Allows the player to continue their interrogation
-        {
-            ContinueInterrogation();
-        }
+        
+        
         if(interrogationLives == 0 && interrogationUnderway) //Is called when a player fails an interrogation //NEEDS UPDATED
         {
             BadEnd(2, repManager.GetComponent<ReputationManager>().femmePoints);
@@ -116,17 +115,20 @@ public class Interrogation : MonoBehaviour
 
     public void ContinueInterrogation() //Used for continuing the interrogation sequence
     {
-        int j;
-        j =  RecordInterrogationResponse(); //Retrieves a response from the player 
-        if(j == 0)
+        if (!activeNode.evidenceNeededCheck)
         {
-            lastResponse = activeNode.responses[0]; //Stores the last response from the player
-            pos = 0;
-            LoadIntNodeInfo(activeNode.children[j]); //Loads the next node 
-        }
-        if(j == 1)
-        {
-            EarlyExit(); //Allows the player to leave an interrogation at a time of their choosing
+            if (playerChoice == 1)
+            {
+                lastResponse = activeNode.responses[0]; //Stores the last response from the player
+                LoadIntNodeInfo(activeNode.children[0]); //Loads the next node 
+                playerChoice = 0;
+            }
+
+            if (playerChoice == 2)
+            {
+                EarlyExit(); //Allows the player to leave an interrogation at a time of their choosing
+                playerChoice = 0;
+            }
         }
     }
 
@@ -239,8 +241,14 @@ public class Interrogation : MonoBehaviour
         if (activeNode.evidenceNeededCheck)
         {
             evButton.SetActive(true);
+            playerResponse1.SetActive(false);
         }
-        else evButton.SetActive(false);
+        else
+        {
+            evButton.SetActive(false);
+            playerResponse1.SetActive(true);
+        }
+        
     }
 
     public void StartInterrogation(DialogueNode startNode, GameObject targetNPC) //Is called at the beginning of an interrogation 
@@ -249,8 +257,8 @@ public class Interrogation : MonoBehaviour
         Cursor.visible = true; //CURSOR STUFF - UPDATE
         Cursor.lockState = CursorLockMode.None;
         pos = 0; //Resets selection position
-        intResponseBox2.GetComponent<Image>().color = Color.gray; 
-        intResponseBox3.GetComponent<Image>().color = Color.gray;
+      //  intResponseBox2.GetComponent<Image>().color = Color.gray; 
+       // intResponseBox3.GetComponent<Image>().color = Color.gray;
         interrogationLives = 5;
         activeInterrogant = targetNPC;
         if (!firstTry) //Checks if the player has been in this interrogation before
@@ -299,8 +307,7 @@ public class Interrogation : MonoBehaviour
         }
         
         
-        npcSprite1.sprite = activeInterrogant.GetComponent<NPCDialogue>().sprite; //Updates the NPC sprite with the active NPC's sprite
-        npcSprite2.sprite = activeInterrogant.GetComponent<NPCDialogue>().sprite;
+
     }
 
     public bool CheckNodeEvidence() //Method is used to determine if the player has the correct evidence //POSSIBLY REDUNDANT
@@ -485,39 +492,32 @@ public class Interrogation : MonoBehaviour
         {
             if(pressedButton.GetComponent<EvidenceSlot>().evidenceText == activeNode.evidenceRequired)
             {
-                playerResponse1.GetComponent<TextMeshProUGUI>().text = activeNode.responses[1];
-                LoadIntNodeInfo(activeNode.children[1]);
+              //  playerResponse1.GetComponent<TextMeshProUGUI>().text = activeNode.responses[0];
+                LoadIntNodeInfo(activeNode.children[0]);
                 interrogationPanel.SetActive(true);
-                if (activeZoomIn != null)
-                {
-                    activeZoomIn.SetActive(false);
-                    activeZoomIn = null;
-                }
-                else
-                {
-                    pinboard.SetActive(false);
-                }
+                pinboard.SetActive(false);
+                
             }
             else if(pressedButton.GetComponent<EvidenceSlot>().evidenceText != activeNode.evidenceRequired)
             {
                 
-                playerResponse1.GetComponent<TextMeshProUGUI>().text = activeNode.responses[0];
-                LoadIntNodeInfo(activeNode.children[0]);
+               // playerResponse1.GetComponent<TextMeshProUGUI>().text = activeNode.responses[1];
+                LoadIntNodeInfo(activeNode.children[1]);
                 interrogationPanel.SetActive(true);
-                if (activeZoomIn != null)
-                {
-                    activeZoomIn.SetActive(false);
-                    activeZoomIn = null;
-                }
-                else
-                {
-                    pinboard.SetActive(false);
-                }
+                pinboard.SetActive(false);
             }
         }
     }
 
-
-
+    public void ClickOption1()
+    {
+        playerChoice = 1;
+        ContinueInterrogation();
+    }
+    public void ClickOption2()
+    {
+        playerChoice = 2;
+        ContinueInterrogation();
+    }
     
 }

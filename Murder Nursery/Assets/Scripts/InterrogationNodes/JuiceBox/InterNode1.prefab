@@ -46,48 +46,42 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 3499891356269125111, guid: f0751e882a2e84a4db4a55965e7382c9, type: 3}
   children:
-  - {fileID: 3499891356269125111, guid: 270905a4a260ee4459a8c98d2cc1f122, type: 3}
+  - {fileID: 3499891356269125111}
   - {fileID: 3499891356269125111, guid: 67f3856c8dd85cf44bd07f97c4eec500, type: 3}
   speech: Don't quit your day job, Detective... I've been at my easel all day!
   responses:
   - You're a kook, kid! For all I know, a criminal mastermind!
   - Oh, yeah? How'd you explain this evidence I found at our crimescene?#
+  nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10
-  nodeID: 
-  nodeActive: 0
   repGainResponse1: 0
   repGainResponse2: 0
   repGainResponse3: 0
+  nodeActive: 0
   interrogationNode: 0
-  lifeLoss: 0
   exitNode: 0
+  nodeVisited: 0
+  briberyAvailable: 0
+  fitCheck: 0
+  evidenceToDiscover: {fileID: 0}
+  lockingNode: 0
   firstPathLocked: 0
   secondPathLocked: 0
   thirdPathLocked: 0
-  nodeVisited: 0
-  lockingNode: 0
-  briberyAvailable: 0
-  triggerTrueEnd: 0
-  triggerGoodEnd: 0
-  triggerBadEnd: 0
   lockingFirstPath: 0
   lockingSecondPath: 0
   lockingThirdPath: 0
-  fitCheck: 0
+  triggerTrueEnd: 0
+  triggerGoodEnd: 0
+  triggerBadEnd: 0
   dressUpNode: {fileID: 0}
   requiredOutfit: 
-  evidenceToDiscover: {fileID: 0}
-  evidenceCheckNode: 0
-  pathARequiredEvidence: 
-  pathBRequiredEvidence: 
-  pathCRequiredEvidence: 
-  pathAInterrogationEvidenceRequired: 0
-  pathBInterrogationEvidenceRequired: 0
-  pathCInterrogationEvidenceRequired: 0
-  nodeEmotion: 4
+  lifeLoss: 0
   evidenceRequired: 
   evidenceRequiredImage: {fileID: 0}
-  evidenceNeededCheck: 0
+  evidenceNeededCheck: 1
   evImagesGenerated: 0
+  nodeEmotion: 4
+  bribeGiven: 0

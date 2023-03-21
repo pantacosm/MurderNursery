@@ -32,13 +32,20 @@ public class ListeningDevice : MonoBehaviour
     public GameObject fifthNPCText;
     public GameObject sixthNPCText;
     public bool inLD = false;
-    private int progress = 1;
+    private int progress = 0;
+    private int convoProgress = 0;
+    public GameObject player;
+    public GameObject pinboardManager;
+    public EvidenceClass heardEvidence;
+    private bool evidenceAlreadyCollected = false;
     // Start is called before the first frame update
     void Start()
     {
         dressUpManager = GameObject.FindGameObjectWithTag("Dress Up Manager");
         manager = GameObject.FindGameObjectWithTag("Manager");
-        
+        player = GameObject.FindGameObjectWithTag("Player");
+        pinboardManager = GameObject.FindGameObjectWithTag("PinBoard Manager");
+        progress = 0;
     }
 
     // Update is called once per frame
@@ -56,28 +63,44 @@ public class ListeningDevice : MonoBehaviour
             }
         }
 
-        if (inLD && Input.GetKeyDown(KeyCode.Return))
+        if (inLD && Input.GetKeyUp(KeyCode.Return))
         {
             
-            switch(progress)
+            switch(convoProgress)
             {
-                case 1:
+                case 0:
+                    progress++;
                     secondTextBox.SetActive(true);
                     secondNPCText.GetComponent<TextMeshProUGUI>().text = npcStatements[progress];
+                    convoProgress++;
+                    progress++;
+                    break;
+                case 1:
+                    thirdTextBox.SetActive(true);
+                    thirdNPCText.GetComponent<TextMeshProUGUI>().text = npcStatements[progress];
+                    convoProgress++;
                     progress++;
                     break;
                 case 2:
-                    thirdTextBox.SetActive(true);
-                    thirdNPCText.GetComponent<TextMeshProUGUI>().text = npcStatements[progress];
-                    progress++;
-                    break;
-                case 3:
                     if (npcStatements[progress] ==  "BREAK")
                     {
                         ClearDialogue();
                         StartCoroutine(BlackTransition(desiredCam, currentCam, false));
                         StartCoroutine(WaitForSeconds(false));
-                        inLD = true;
+                        inLD = false;
+                        foreach(EvidenceClass evidence in pinboardManager.GetComponent<PinboardManager>().discoveredEvidence)
+                        {
+                            if(evidence == heardEvidence)
+                            {
+                                evidenceAlreadyCollected = true;
+                            }
+                        }
+                        if(!heardEvidence.evidenceFound && !evidenceAlreadyCollected)
+                        {
+                            pinboardManager.GetComponent<PinboardManager>().discoveredEvidence.Add(heardEvidence);
+                            pinboardManager.GetComponent<PinboardManager>().UpdateEvidenceImages(heardEvidence);
+                            heardEvidence.evidenceFound = true;
+                        }
                         break;
                     }
                     firstTextBox.SetActive(false);
@@ -85,6 +108,34 @@ public class ListeningDevice : MonoBehaviour
                     thirdTextBox.SetActive(false);
                     fourthTextBox.SetActive(true);
                     fourthNPCText.GetComponent<TextMeshProUGUI>().text = npcStatements[progress];
+                    convoProgress++;
+                    progress++;
+                    break;
+                case 3:
+                    if (npcStatements[progress] == "BREAK")
+                    {
+                        ClearDialogue();
+                        StartCoroutine(BlackTransition(desiredCam, currentCam, false));
+                        StartCoroutine(WaitForSeconds(false));
+                        inLD = false;
+                        foreach (EvidenceClass evidence in pinboardManager.GetComponent<PinboardManager>().discoveredEvidence)
+                        {
+                            if (evidence == heardEvidence)
+                            {
+                                evidenceAlreadyCollected = true;
+                            }
+                        }
+                        if (!heardEvidence.evidenceFound && !evidenceAlreadyCollected)
+                        {
+                            pinboardManager.GetComponent<PinboardManager>().discoveredEvidence.Add(heardEvidence);
+                            pinboardManager.GetComponent<PinboardManager>().UpdateEvidenceImages(heardEvidence);
+                            heardEvidence.evidenceFound = true;
+                        }
+                        break;
+                    }
+                    fifthTextBox.SetActive(true);
+                    fifthNPCText.GetComponent<TextMeshProUGUI>().text = npcStatements[progress];
+                    convoProgress++;
                     progress++;
                     break;
                 case 4:
@@ -93,11 +144,25 @@ public class ListeningDevice : MonoBehaviour
                         ClearDialogue();
                         StartCoroutine(BlackTransition(desiredCam, currentCam, false));
                         StartCoroutine(WaitForSeconds(false));
-                        inLD = true;
+                        inLD = false;
+                        foreach (EvidenceClass evidence in pinboardManager.GetComponent<PinboardManager>().discoveredEvidence)
+                        {
+                            if (evidence == heardEvidence)
+                            {
+                                evidenceAlreadyCollected = true;
+                            }
+                        }
+                        if (!heardEvidence.evidenceFound && !evidenceAlreadyCollected)
+                        {
+                            pinboardManager.GetComponent<PinboardManager>().discoveredEvidence.Add(heardEvidence);
+                            pinboardManager.GetComponent<PinboardManager>().UpdateEvidenceImages(heardEvidence);
+                            heardEvidence.evidenceFound = true;
+                        }
                         break;
                     }
-                    fifthTextBox.SetActive(true);
-                    fifthNPCText.GetComponent<TextMeshProUGUI>().text = npcStatements[progress];
+                    sixthTextBox.SetActive(true);
+                    sixthNPCText.GetComponent<TextMeshProUGUI>().text = npcStatements[progress];
+                    convoProgress++;
                     progress++;
                     break;
                 case 5:
@@ -106,11 +171,28 @@ public class ListeningDevice : MonoBehaviour
                         ClearDialogue();
                         StartCoroutine(BlackTransition(desiredCam, currentCam, false));
                         StartCoroutine(WaitForSeconds(false));
-                        inLD = true;
+                        inLD = false;
+                        foreach (EvidenceClass evidence in pinboardManager.GetComponent<PinboardManager>().discoveredEvidence)
+                        {
+                            if (evidence == heardEvidence)
+                            {
+                                evidenceAlreadyCollected = true;
+                            }
+                        }
+                        if (!heardEvidence.evidenceFound && !evidenceAlreadyCollected)
+                        {
+                            pinboardManager.GetComponent<PinboardManager>().discoveredEvidence.Add(heardEvidence);
+                            pinboardManager.GetComponent<PinboardManager>().UpdateEvidenceImages(heardEvidence);
+                            heardEvidence.evidenceFound = true;
+                        }
                         break;
                     }
-                    sixthTextBox.SetActive(true);
-                    sixthNPCText.GetComponent<TextMeshProUGUI>().text = npcStatements[progress];
+                    fourthTextBox.SetActive(false);
+                    fifthTextBox.SetActive(false);
+                    sixthTextBox.SetActive(false);
+                    firstTextBox.SetActive(true);
+                    firstNPCText.GetComponent<TextMeshProUGUI>().text = npcStatements[progress];
+                    convoProgress++;
                     progress++;
                     break;
                 case 6:
@@ -119,15 +201,28 @@ public class ListeningDevice : MonoBehaviour
                         ClearDialogue();
                         StartCoroutine(BlackTransition(desiredCam, currentCam, false));
                         StartCoroutine(WaitForSeconds(false));
-                        inLD = true;
+                        inLD = false;
+                        foreach (EvidenceClass evidence in pinboardManager.GetComponent<PinboardManager>().discoveredEvidence)
+                        {
+                            if (evidence == heardEvidence)
+                            {
+                                evidenceAlreadyCollected = true;
+                            }
+                        }
+                        if (!heardEvidence.evidenceFound && !evidenceAlreadyCollected)
+                        {
+                            pinboardManager.GetComponent<PinboardManager>().discoveredEvidence.Add(heardEvidence);
+                            pinboardManager.GetComponent<PinboardManager>().UpdateEvidenceImages(heardEvidence);
+                            heardEvidence.evidenceFound = true;
+                        }
                         break;
                     }
-                    fourthTextBox.SetActive(false);
-                    fifthTextBox.SetActive(false);
-                    sixthTextBox.SetActive(false);
-                    firstTextBox.SetActive(true);
-                    firstNPCText.GetComponent<TextMeshProUGUI>().text = npcStatements[progress];
+                    secondTextBox.SetActive(true);
+                    secondNPCText.GetComponent<TextMeshProUGUI>().text = npcStatements[progress];
+                    convoProgress++;
+                    progress++;
                     break;
+
             }
         }
     }
@@ -156,6 +251,7 @@ public class ListeningDevice : MonoBehaviour
         StartCoroutine(BlackTransition(currentCam, desiredCam, true));
         StartCoroutine(WaitForSeconds(true));
         
+        
     }
 
     public IEnumerator BlackTransition(GameObject currentCam, GameObject desiredCam, bool intoLD, bool transitionToBlack = true, int timeToFade = 1)
@@ -177,9 +273,15 @@ public class ListeningDevice : MonoBehaviour
                     ChangeCam(currentCam, desiredCam);
 
                     noirFilter.GetComponent<PostProcessingActivation>().TurnFilterOn(true);
-                    inLD = true;                   
-                   
-
+                    inLD = true;
+                    if(intoLD)
+                    {
+                        player.SetActive(false);
+                    }
+                    if (!intoLD)
+                    {
+                        player.SetActive(true);
+                    }
                 }
 
                 yield return null;
@@ -200,7 +302,9 @@ public class ListeningDevice : MonoBehaviour
                     {
                         firstTextBox.SetActive(true);
                         firstNPCText.GetComponent<TextMeshProUGUI>().text = npcStatements[progress];
+                        
                     }
+                    
                     yield return null;
 
                 }

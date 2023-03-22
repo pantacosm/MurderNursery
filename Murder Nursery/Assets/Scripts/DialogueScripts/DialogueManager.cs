@@ -675,7 +675,7 @@ public class DialogueManager : MonoBehaviour
 
     public void Bribery() // Activates the bribery panel and updates it depending on what items the player possesses
     {
-        dialogueZone.SetActive(false);
+        //dialogueZone.SetActive(false);
         briberyPanel.SetActive(true);
         //bribe.gameObject.SetActive(false);
         //item1.gameObject.SetActive(false);

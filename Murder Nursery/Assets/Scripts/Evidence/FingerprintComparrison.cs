@@ -22,14 +22,15 @@ public class FingerprintComparrison : MonoBehaviour
     [SerializeField]
     GameObject particleStar;
 
-    GameObject evidenceItem;
+    public AudioSource sfxAudio;
+    public AudioClip sfxAudioClip;
+
+    private GameObject evidenceItem;
 
     public void CloseFingerprintUI()
     {
 
         fingerprintUI.SetActive(false);
-        evidenceItem = GameObject.FindGameObjectWithTag("Evidence Item");
-        evidenceItem.GetComponent<EvidenceItem>().inspectingItem = false;
         evidenceItem.SetActive(false);
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.None;
@@ -78,6 +79,7 @@ public class FingerprintComparrison : MonoBehaviour
         {
             particleLight.GetComponent<ParticleSystem>().Stop();
             particleStar.GetComponent<ParticleSystem>().Play();
+            sfxAudio.PlayOneShot(sfxAudioClip, 0.2f);
             StartCoroutine(StopStarParticle(1f));
             correctMatchText.SetActive(true);
         }
@@ -94,11 +96,14 @@ public class FingerprintComparrison : MonoBehaviour
 
         if(time >= duration)
         {
+            evidenceItem = GameObject.FindGameObjectWithTag("Evidence Item");
+            evidenceItem.GetComponent<EvidenceItem>().inspectingItem = false;
+            InventoryManager.inventory.AddItem(evidenceItem.GetComponent<EvidenceItem>().item);
+            InventoryManager.inventory.MG.GetComponent<MagnifyingGlass>().gameObject.SetActive(true);
+            InventoryManager.inventory.MG.GetComponent<MagnifyingGlass>().magnifyingBlur.SetActive(true);
             particleStar.GetComponent<ParticleSystem>().Stop();
             correctMatchText.SetActive(false);
             CloseFingerprintUI();
-            InventoryManager.inventory.MG.GetComponent<MagnifyingGlass>().gameObject.SetActive(true);
-            InventoryManager.inventory.MG.GetComponent<MagnifyingGlass>().magnifyingBlur.SetActive(true);
         }
     }
 }

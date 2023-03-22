@@ -42,7 +42,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2035986627}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -113,7 +113,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 0.2000001}
+  m_Size: {x: 1.12, y: 1.15, z: 0.2000001}
   m_Center: {x: 0, y: 0, z: 0.000061035156}
 --- !u!54 &2035986632
 Rigidbody:
@@ -286,7 +286,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8712068571063368421}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -5030,7 +5030,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77d894158e640df4d81fec0abc20166c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: 6f45e92407349f541afb6636d20c22c3, type: 2}
   evidenceToAdd: {fileID: 8463248180559462931, guid: 525bde82cde0e924a8e6da4a48f75428, type: 3}
   inspectPos: {fileID: 0}
   rotationSpeed: 0.3
+  helpText: {fileID: 0}
   inspectingItem: 0

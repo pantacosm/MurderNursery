@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 3
   itemName: Pin-board
-  itemDescription: Keep track of character traits discovered
+  itemDescription: View and Connect Evidence Found
   icon: {fileID: 21300044, guid: fea96a0220c344686b40cf9b233701f1, type: 3}
   itemType: 5

@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
+using TMPro;
 
-public class ItemManager : MonoBehaviour
+public class ItemManager : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public Item item;
-
+    public GameObject itemTooltip;
 
 
     // Called from inventory manager when an item is picked up
@@ -19,6 +22,17 @@ public class ItemManager : MonoBehaviour
     {
         InventoryManager.inventory.RemoveItem(item);
         Destroy(gameObject);
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        itemTooltip.SetActive(true);
+        itemTooltip.GetComponentInChildren<TextMeshProUGUI>().text = item.itemDescription;
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        itemTooltip.SetActive(false);
     }
 
     // Called when we click an item in our inventory (item type determines the items use functionality)
@@ -36,9 +50,11 @@ public class ItemManager : MonoBehaviour
                 InventoryManager.inventory.MG.GetComponent<MagnifyingGlass>().ToggleMagnifyingGlass();
                 InventoryManager.inventory.Player.GetComponent<PlayerMovement>().StartMGCamTransition(); // starts a coroutine which stops player movement whilst active
                 InventoryManager.inventory.UIVisibility.ToggleInventory();
+                itemTooltip.SetActive(false);
                 break;
             case Item.ItemType.PinBoard:
                 InventoryManager.inventory.UIVisibility.TogglePinboard();
+                itemTooltip.SetActive(false);
                 break;
             case Item.ItemType.Jotter:
                 InventoryManager.inventory.UIVisibility.ToggleJotter();

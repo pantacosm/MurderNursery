@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 1
   itemName: Candy
-  itemDescription: Mmm candy...
+  itemDescription: Bribery Item
   icon: {fileID: 21300088, guid: fea96a0220c344686b40cf9b233701f1, type: 3}
   itemType: 0

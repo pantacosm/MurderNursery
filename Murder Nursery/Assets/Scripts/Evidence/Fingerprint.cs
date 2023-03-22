@@ -26,6 +26,7 @@ public class Fingerprint : MonoBehaviour
                 {
                     if(hit.transform.name == "Fingerprint")
                     {
+                        EvidenceItem.evidenceItem.helpText.SetActive(false);
                         fingerprintFound.name = ownerFingerprint;
                         Sprite fpSprite = gameObject.GetComponent<SpriteRenderer>().sprite;
                         fingerprintFound.GetComponent<Image>().sprite = fpSprite;

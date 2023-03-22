@@ -5,10 +5,12 @@ using UnityEngine.EventSystems;
 
 public class EvidenceItem : MonoBehaviour
 {
+    public static EvidenceItem evidenceItem;
+    public Item item; // item to add to inventory to check who owns the item (fingerprint)
     public GameObject evidenceToAdd; // evidence to add to pinboard
     public GameObject inspectPos;
-
     public float rotationSpeed;
+    public GameObject helpText;
 
     [HideInInspector]
     public bool inspectingItem;
@@ -21,6 +23,7 @@ public class EvidenceItem : MonoBehaviour
 
     private void Start()
     {
+        evidenceItem = this;
         screenWidth = Screen.width;
         screenHeight = Screen.height;
     }
@@ -50,6 +53,7 @@ public class EvidenceItem : MonoBehaviour
         if(time >= duration)
         {
             lerpStopped = true;
+            helpText.SetActive(true);
         }
             
     }

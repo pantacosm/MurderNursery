@@ -517,6 +517,8 @@ MonoBehaviour:
   correctMatchText: {fileID: 4752348411094831984}
   particleLight: {fileID: 0}
   particleStar: {fileID: 0}
+  sfxAudio: {fileID: 0}
+  sfxAudioClip: {fileID: 8300000, guid: 2aa3a4a3d52cd4b41b6a98b2e43bca9e, type: 3}
 --- !u!1 &4752348410092644752
 GameObject:
   m_ObjectHideFlags: 0
@@ -669,6 +671,8 @@ MonoBehaviour:
   correctMatchText: {fileID: 4752348411094831984}
   particleLight: {fileID: 0}
   particleStar: {fileID: 0}
+  sfxAudio: {fileID: 0}
+  sfxAudioClip: {fileID: 8300000, guid: 2aa3a4a3d52cd4b41b6a98b2e43bca9e, type: 3}
 --- !u!1 &4752348410298724098
 GameObject:
   m_ObjectHideFlags: 0
@@ -821,6 +825,8 @@ MonoBehaviour:
   correctMatchText: {fileID: 4752348411094831984}
   particleLight: {fileID: 0}
   particleStar: {fileID: 0}
+  sfxAudio: {fileID: 0}
+  sfxAudioClip: {fileID: 8300000, guid: 2aa3a4a3d52cd4b41b6a98b2e43bca9e, type: 3}
 --- !u!1 &4752348410352884330
 GameObject:
   m_ObjectHideFlags: 0
@@ -1096,7 +1102,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4752348410360559565
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1727,3 +1733,5 @@ MonoBehaviour:
   correctMatchText: {fileID: 4752348411094831984}
   particleLight: {fileID: 0}
   particleStar: {fileID: 0}
+  sfxAudio: {fileID: 0}
+  sfxAudioClip: {fileID: 8300000, guid: 2aa3a4a3d52cd4b41b6a98b2e43bca9e, type: 3}

@@ -40,6 +40,7 @@ public class InventoryManager : MonoBehaviour
 
     public List<ItemManager> inventoryItems; //Stores items present in player inventory
     public GameObject blur; //Background blur object
+    public GameObject itemTooltip;
 
     private void Awake()
     {
@@ -93,6 +94,7 @@ public class InventoryManager : MonoBehaviour
         itemIcon.sprite = item.icon;
         itemName.text = item.itemName;
         itemObj.name = itemName.text;
+        itemObj.GetComponent<ItemManager>().itemTooltip = itemTooltip;
 
         // sets the item in ItemManager so we can access its UseItem() function
         inventoryItems.Add(itemObj.GetComponent<ItemManager>());

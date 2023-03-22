@@ -47,45 +47,40 @@ MonoBehaviour:
   parent: {fileID: 3499891356269125111, guid: f74d378a9d365414892922b0906eaf87, type: 3}
   children:
   - {fileID: 3499891356269125111, guid: 1bb4724df23eadc449b0a85f07a23e54, type: 3}
-  speech: My hands?!
+  speech: But..I was alone!
   responses:
-  - Your cast, doofus! The white stuff is from your cast!
+  - 'I think you''ve made some real enemies in this classroom, kiddo. Fess up and
+    tell me how ya managed it! '
+  nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10
-  nodeID: 
-  nodeActive: 0
   repGainResponse1: 0
   repGainResponse2: 0
   repGainResponse3: 0
+  nodeActive: 0
   interrogationNode: 0
-  lifeLoss: 0
   exitNode: 0
+  nodeVisited: 0
+  briberyAvailable: 0
+  fitCheck: 0
+  evidenceToDiscover: {fileID: 0}
+  lockingNode: 0
   firstPathLocked: 0
   secondPathLocked: 0
   thirdPathLocked: 0
-  nodeVisited: 0
-  lockingNode: 0
-  briberyAvailable: 0
-  triggerTrueEnd: 0
-  triggerGoodEnd: 0
-  triggerBadEnd: 0
   lockingFirstPath: 0
   lockingSecondPath: 0
   lockingThirdPath: 0
-  fitCheck: 0
+  triggerTrueEnd: 0
+  triggerGoodEnd: 0
+  triggerBadEnd: 0
   dressUpNode: {fileID: 0}
   requiredOutfit: 
-  evidenceToDiscover: {fileID: 0}
-  evidenceCheckNode: 0
-  pathARequiredEvidence: 
-  pathBRequiredEvidence: 
-  pathCRequiredEvidence: 
-  pathAInterrogationEvidenceRequired: 0
-  pathBInterrogationEvidenceRequired: 0
-  pathCInterrogationEvidenceRequired: 0
-  nodeEmotion: 6
+  lifeLoss: 0
   evidenceRequired: 
   evidenceRequiredImage: {fileID: 0}
   evidenceNeededCheck: 0
   evImagesGenerated: 0
+  nodeEmotion: 6
+  bribeGiven: 0

@@ -46,48 +46,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 3499891356269125111, guid: 70997eb65c453a947842ae9bc93097d9, type: 3}
   children:
-  - {fileID: 3499891356269125111, guid: 28a7e66733950e74993bd36bb58a79cf, type: 3}
-  speech: I had Eddie over there push him outta that tree in the playground so that
-    he wouldn't be impressin' her with his art no more, but that kid can draw with
-    BOTH HANDS! I mean, come on!
+  - {fileID: 3499891356269125111, guid: 3ef3898535231f040ab94b012cd3ce9c, type: 3}
+  speech: 'Scarlet and Grace haven''t been getting on at ALL since Grace arrived
+    and this new secret girlfriend thing has been makin'' her real suspicious of
+    me. Truth is, I''d do anythin for Grace and Scarlet has slipped right down my
+    list. Grace is my favourite thing... right after running, that is. '
   responses:
-  - I wouldn't have seen that coming either
+  - Thanks for your honesty, Chase. I'll give you some time..
+  nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10
-  nodeID: 
-  nodeActive: 0
   repGainResponse1: 0
   repGainResponse2: 0
   repGainResponse3: 0
+  nodeActive: 0
   interrogationNode: 0
-  lifeLoss: 0
   exitNode: 0
+  nodeVisited: 0
+  briberyAvailable: 0
+  fitCheck: 0
+  evidenceToDiscover: {fileID: 0}
+  lockingNode: 0
   firstPathLocked: 0
   secondPathLocked: 0
   thirdPathLocked: 0
-  nodeVisited: 0
-  lockingNode: 0
-  briberyAvailable: 0
-  triggerTrueEnd: 0
-  triggerGoodEnd: 0
-  triggerBadEnd: 0
   lockingFirstPath: 0
   lockingSecondPath: 0
   lockingThirdPath: 0
-  fitCheck: 0
+  triggerTrueEnd: 0
+  triggerGoodEnd: 0
+  triggerBadEnd: 0
   dressUpNode: {fileID: 0}
   requiredOutfit: 
-  evidenceToDiscover: {fileID: 0}
-  evidenceCheckNode: 0
-  pathARequiredEvidence: 
-  pathBRequiredEvidence: 
-  pathCRequiredEvidence: 
-  pathAInterrogationEvidenceRequired: 0
-  pathBInterrogationEvidenceRequired: 0
-  pathCInterrogationEvidenceRequired: 0
-  nodeEmotion: 0
+  lifeLoss: 0
   evidenceRequired: 
   evidenceRequiredImage: {fileID: 0}
   evidenceNeededCheck: 0
   evImagesGenerated: 0
+  nodeEmotion: 0
+  bribeGiven: 0

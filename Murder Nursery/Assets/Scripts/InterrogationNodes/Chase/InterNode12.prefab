@@ -47,46 +47,39 @@ MonoBehaviour:
   parent: {fileID: 3499891356269125111, guid: 64db200aa71ea044781a3487f4b38017, type: 3}
   children:
   - {fileID: 3499891356269125111, guid: 6d9ba17bb6a491647acc149fef995d01, type: 3}
-  speech: Well, it's not mine, dummy. My hair is the finest in my family, I never
-    shed.
+  speech: 'OH! Uh, Okay, Okay...I''ll start from the beginnin'' '
   responses:
-  - NO silly, it's Grace's!
+  - Finally!
+  nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10
-  nodeID: 
-  nodeActive: 0
   repGainResponse1: 0
   repGainResponse2: 0
   repGainResponse3: 0
+  nodeActive: 0
   interrogationNode: 0
-  lifeLoss: 0
   exitNode: 0
+  nodeVisited: 0
+  briberyAvailable: 0
+  fitCheck: 0
+  evidenceToDiscover: {fileID: 0}
+  lockingNode: 0
   firstPathLocked: 0
   secondPathLocked: 0
   thirdPathLocked: 0
-  nodeVisited: 0
-  lockingNode: 0
-  briberyAvailable: 0
-  triggerTrueEnd: 0
-  triggerGoodEnd: 0
-  triggerBadEnd: 0
   lockingFirstPath: 0
   lockingSecondPath: 0
   lockingThirdPath: 0
-  fitCheck: 0
+  triggerTrueEnd: 0
+  triggerGoodEnd: 0
+  triggerBadEnd: 0
   dressUpNode: {fileID: 0}
   requiredOutfit: 
-  evidenceToDiscover: {fileID: 0}
-  evidenceCheckNode: 0
-  pathARequiredEvidence: 
-  pathBRequiredEvidence: 
-  pathCRequiredEvidence: 
-  pathAInterrogationEvidenceRequired: 0
-  pathBInterrogationEvidenceRequired: 0
-  pathCInterrogationEvidenceRequired: 0
-  nodeEmotion: 3
+  lifeLoss: 0
   evidenceRequired: 
   evidenceRequiredImage: {fileID: 0}
   evidenceNeededCheck: 0
   evImagesGenerated: 0
+  nodeEmotion: 3
+  bribeGiven: 0

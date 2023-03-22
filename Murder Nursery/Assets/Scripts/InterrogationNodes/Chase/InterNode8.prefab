@@ -47,48 +47,42 @@ MonoBehaviour:
   parent: {fileID: 3499891356269125111, guid: b434b998af2f8464ca45f3e8f98e7f27, type: 3}
   children:
   - {fileID: 3499891356269125111, guid: 3028202cd8f998842bd92d9cf523c9e5, type: 3}
-  speech: FIRST of all, I can outrun anything, and sure I spoke to her this mornin'
-    but it wasn't about anything important! Hey, stop sliding those beads, you're
-    scarin' me!
+  - {fileID: 3499891356269125111, guid: 4ce8c52ba5aa0ab47b9a181b47a94d99, type: 3}
+  speech: Scarlet and I are doing just fine, nothing to tell! Our relationship is
+    built on communication and trust! Grown-ups say that's the key, you know!
   responses:
-  - I don't know what you are, that's what I'm tryna figure out here! Tell me about
-    that relationship you've got with Scarlet, and don't cut any corners neither!
+  - And yet you seem not to trust her at all! Let me guess, you've been acting real
+    suspicious lately and a smart gal like that has caught on!
+  nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10
-  nodeID: 
-  nodeActive: 0
   repGainResponse1: 0
   repGainResponse2: 0
   repGainResponse3: 0
+  nodeActive: 0
   interrogationNode: 0
-  lifeLoss: 0
   exitNode: 0
+  nodeVisited: 0
+  briberyAvailable: 0
+  fitCheck: 0
+  evidenceToDiscover: {fileID: 0}
+  lockingNode: 0
   firstPathLocked: 0
   secondPathLocked: 0
   thirdPathLocked: 0
-  nodeVisited: 0
-  lockingNode: 0
-  briberyAvailable: 0
-  triggerTrueEnd: 0
-  triggerGoodEnd: 0
-  triggerBadEnd: 0
   lockingFirstPath: 0
   lockingSecondPath: 0
   lockingThirdPath: 0
-  fitCheck: 0
+  triggerTrueEnd: 0
+  triggerGoodEnd: 0
+  triggerBadEnd: 0
   dressUpNode: {fileID: 0}
   requiredOutfit: 
-  evidenceToDiscover: {fileID: 0}
-  evidenceCheckNode: 0
-  pathARequiredEvidence: 
-  pathBRequiredEvidence: 
-  pathCRequiredEvidence: 
-  pathAInterrogationEvidenceRequired: 0
-  pathBInterrogationEvidenceRequired: 0
-  pathCInterrogationEvidenceRequired: 0
-  nodeEmotion: 1
-  evidenceRequired: 
+  lifeLoss: 0
+  evidenceRequired: a picture of Scarlet with question marks
   evidenceRequiredImage: {fileID: 0}
-  evidenceNeededCheck: 0
+  evidenceNeededCheck: 1
   evImagesGenerated: 0
+  nodeEmotion: 1
+  bribeGiven: 0

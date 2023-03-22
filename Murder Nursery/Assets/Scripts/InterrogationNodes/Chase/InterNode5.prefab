@@ -46,53 +46,42 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 3499891356269125111, guid: 36eb4d5c831f4684ca5c1f8429f6f64e, type: 3}
   children:
-  - {fileID: 3499891356269125111, guid: 6c19946ce6f2ab045b997c728a0aafcd, type: 3}
   - {fileID: 3499891356269125111, guid: 8f8ecbd1c848037449c274663829e795, type: 3}
-  speech: Problems?! You think I've got him murderin' people on my orders like Baloney
-    Montana or somethin'?! Is this about that art dweeb? He can draw with both hands
-    anyway so the tree thing doesn't even matter! I'm not the jealous type so I wouldn't
-    call a shot like that anyways you, you, snitch!
+  speech: 'What?! Ugh, I mean I''ve already said Grace and I ain''t that close, and
+    Scarlet''s been a real problem lately! Give me a break, he deserved it! '
   responses:
-  - Who you callin' a snitch, twinkle toes?!
-  - Aha! Not the jealous type, eh? Everythin' I've got down here in my trusty jotte-
-    I mean, case files says you've been reaaaaal jealous of him talkin' to Scarlet
-    and Grace!
+  - You're startin to sound like a real piece of work here, Chase ol' chum! If you
+    and Grace ain't close, how come your gal Scarlet's been acting some kinda way?
+  nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10
-  nodeID: 
-  nodeActive: 0
   repGainResponse1: 0
   repGainResponse2: 0
   repGainResponse3: 0
+  nodeActive: 1
   interrogationNode: 0
-  lifeLoss: 0
   exitNode: 0
+  nodeVisited: 0
+  briberyAvailable: 0
+  fitCheck: 0
+  evidenceToDiscover: {fileID: 0}
+  lockingNode: 0
   firstPathLocked: 0
   secondPathLocked: 0
   thirdPathLocked: 0
-  nodeVisited: 0
-  lockingNode: 0
-  briberyAvailable: 0
-  triggerTrueEnd: 0
-  triggerGoodEnd: 0
-  triggerBadEnd: 0
   lockingFirstPath: 0
   lockingSecondPath: 0
   lockingThirdPath: 0
-  fitCheck: 0
+  triggerTrueEnd: 0
+  triggerGoodEnd: 0
+  triggerBadEnd: 0
   dressUpNode: {fileID: 0}
   requiredOutfit: 
-  evidenceToDiscover: {fileID: 0}
-  evidenceCheckNode: 0
-  pathARequiredEvidence: 
-  pathBRequiredEvidence: 
-  pathCRequiredEvidence: 
-  pathAInterrogationEvidenceRequired: 0
-  pathBInterrogationEvidenceRequired: 0
-  pathCInterrogationEvidenceRequired: 0
-  nodeEmotion: 1
-  evidenceRequired: sharing
-  evidenceRequiredImage: {fileID: 21300000, guid: 6f5c71eab7fc6fb4cbe9cf3af0966b7a, type: 3}
-  evidenceNeededCheck: 1
+  lifeLoss: 0
+  evidenceRequired: 
+  evidenceRequiredImage: {fileID: 0}
+  evidenceNeededCheck: 0
   evImagesGenerated: 0
+  nodeEmotion: 1
+  bribeGiven: 0

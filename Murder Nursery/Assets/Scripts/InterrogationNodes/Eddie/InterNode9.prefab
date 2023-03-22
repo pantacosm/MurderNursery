@@ -46,51 +46,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 3499891356269125111, guid: 8fb028910b6c07242b0cbb777093310b, type: 3}
   children:
-  - {fileID: 3499891356269125111, guid: 07f03b18e5b03c6409e6511726a051e1, type: 3}
   - {fileID: 3499891356269125111, guid: 03dc4281e98c7574c9a34caea108c5fe, type: 3}
+  - {fileID: 3499891356269125111, guid: 55658eb173980ef41b2bc534ff4e303d, type: 3}
   speech: Not 'til you can tell me why Chase would wanna see the guy take a fall
     either! Like I said, just 'cus we don't like the guy, doesn't mean we'd wanna
     see him get hurt!
   responses:
-  - "He doesn\u2019t need a motive... you're the real mastermind!"
-  - 'There is no we... Chase sees Juice Box as a direct threat to his social standing!
-    He used you, Eddie! '
+  - 'Oh, we all know you''re no stranger to violence, Eddie!   '
+  nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10
-  nodeID: 
-  nodeActive: 0
   repGainResponse1: 0
   repGainResponse2: 0
   repGainResponse3: 0
+  nodeActive: 0
   interrogationNode: 0
-  lifeLoss: 0
   exitNode: 0
+  nodeVisited: 0
+  briberyAvailable: 0
+  fitCheck: 0
+  evidenceToDiscover: {fileID: 0}
+  lockingNode: 0
   firstPathLocked: 0
   secondPathLocked: 0
   thirdPathLocked: 0
-  nodeVisited: 0
-  lockingNode: 0
-  briberyAvailable: 0
-  triggerTrueEnd: 0
-  triggerGoodEnd: 0
-  triggerBadEnd: 0
   lockingFirstPath: 0
   lockingSecondPath: 0
   lockingThirdPath: 0
-  fitCheck: 0
+  triggerTrueEnd: 0
+  triggerGoodEnd: 0
+  triggerBadEnd: 0
   dressUpNode: {fileID: 0}
   requiredOutfit: 
-  evidenceToDiscover: {fileID: 0}
-  evidenceCheckNode: 0
-  pathARequiredEvidence: 
-  pathBRequiredEvidence: 
-  pathCRequiredEvidence: 
-  pathAInterrogationEvidenceRequired: 0
-  pathBInterrogationEvidenceRequired: 0
-  pathCInterrogationEvidenceRequired: 0
-  nodeEmotion: 1
-  evidenceRequired: a mean drawing of Juice Box
-  evidenceRequiredImage: {fileID: 21300000, guid: df185475ec4679f438c6cb9fd9adfc5c, type: 3}
+  lifeLoss: 0
+  evidenceRequired: can put the hurts on somebody
+  evidenceRequiredImage: {fileID: 0}
   evidenceNeededCheck: 1
   evImagesGenerated: 0
+  nodeEmotion: 1
+  bribeGiven: 0

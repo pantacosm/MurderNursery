@@ -46,49 +46,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 3499891356269125111, guid: 1e2eb28ef3a1de949a6b39588867b7f8, type: 3}
   children:
-  - {fileID: 3499891356269125111, guid: a864f79422d4d314cbb4e2e1b42c479b, type: 3}
   - {fileID: 3499891356269125111, guid: b83dd51810a3e3d4c92954763cd6b37d, type: 3}
+  - {fileID: 3499891356269125111, guid: a864f79422d4d314cbb4e2e1b42c479b, type: 3}
   speech: I don't have any choice! He was - my good sir, I cannot say another word!
   responses:
-  - Liar! You don't have any friends!
   - It's Chase, isn't it? He doesn't like you... and he doesn't like you talking
-    to his friends!
+    to his friends! I know he's got some kinda secret enemy 'round these parts, and
+    I had a sneaky feelin it was you!!
+  nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10
-  nodeID: 
-  nodeActive: 0
   repGainResponse1: 0
   repGainResponse2: 0
   repGainResponse3: 0
+  nodeActive: 0
   interrogationNode: 0
-  lifeLoss: 0
   exitNode: 0
+  nodeVisited: 0
+  briberyAvailable: 0
+  fitCheck: 0
+  evidenceToDiscover: {fileID: 0}
+  lockingNode: 0
   firstPathLocked: 0
   secondPathLocked: 0
   thirdPathLocked: 0
-  nodeVisited: 0
-  lockingNode: 0
-  briberyAvailable: 0
-  triggerTrueEnd: 0
-  triggerGoodEnd: 0
-  triggerBadEnd: 0
   lockingFirstPath: 0
   lockingSecondPath: 0
   lockingThirdPath: 0
-  fitCheck: 0
+  triggerTrueEnd: 0
+  triggerGoodEnd: 0
+  triggerBadEnd: 0
   dressUpNode: {fileID: 0}
   requiredOutfit: 
-  evidenceToDiscover: {fileID: 0}
-  evidenceCheckNode: 0
-  pathARequiredEvidence: 
-  pathBRequiredEvidence: 
-  pathCRequiredEvidence: 
-  pathAInterrogationEvidenceRequired: 0
-  pathBInterrogationEvidenceRequired: 0
-  pathCInterrogationEvidenceRequired: 0
-  nodeEmotion: 0
-  evidenceRequired: a mean drawing of Juice Box
-  evidenceRequiredImage: {fileID: 21300000, guid: df185475ec4679f438c6cb9fd9adfc5c, type: 3}
+  lifeLoss: 0
+  evidenceRequired: is a holding a grudge
+  evidenceRequiredImage: {fileID: 0}
   evidenceNeededCheck: 1
   evImagesGenerated: 0
+  nodeEmotion: 0
+  bribeGiven: 0

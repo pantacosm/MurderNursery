@@ -46,51 +46,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 3499891356269125111, guid: 7dcd6154f7b191547b6fc1fa64e7d238, type: 3}
   children:
+  - {fileID: 3499891356269125111, guid: 874212c554758fe409914e1b913dc82f, type: 3}
   - {fileID: 3499891356269125111, guid: b6a0d39513ba8224abe0256df1c79df0, type: 3}
-  - {fileID: 3499891356269125111}
   speech: Sounds like you're makin up your mind already, detective! You badges are
     all the same! Maybe it was me then, FINE! Would ya leave me alone if it was?!
   responses:
-  - You aren't the type to do somethin like that! Come on now, we're all friends
-    here!
-  - You're alotta things, Princess! But you're no killer so don't try to take the
-    blame! Tell me who you're protectin!
+  - You're alotta things, Princess! But you're no killer, so don't try to take the
+    blame! Tell me who you're protectin'!
+  nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10
-  nodeID: 
-  nodeActive: 0
   repGainResponse1: 0
   repGainResponse2: 0
   repGainResponse3: 0
+  nodeActive: 0
   interrogationNode: 0
-  lifeLoss: 0
   exitNode: 0
+  nodeVisited: 0
+  briberyAvailable: 0
+  fitCheck: 0
+  evidenceToDiscover: {fileID: 0}
+  lockingNode: 0
   firstPathLocked: 0
   secondPathLocked: 0
   thirdPathLocked: 0
-  nodeVisited: 0
-  lockingNode: 0
-  briberyAvailable: 0
-  triggerTrueEnd: 0
-  triggerGoodEnd: 0
-  triggerBadEnd: 0
   lockingFirstPath: 0
   lockingSecondPath: 0
   lockingThirdPath: 0
-  fitCheck: 0
+  triggerTrueEnd: 0
+  triggerGoodEnd: 0
+  triggerBadEnd: 0
   dressUpNode: {fileID: 0}
   requiredOutfit: 
-  evidenceToDiscover: {fileID: 0}
-  evidenceCheckNode: 0
-  pathARequiredEvidence: 
-  pathBRequiredEvidence: 
-  pathCRequiredEvidence: 
-  pathAInterrogationEvidenceRequired: 0
-  pathBInterrogationEvidenceRequired: 0
-  pathCInterrogationEvidenceRequired: 0
-  nodeEmotion: 1
+  lifeLoss: 0
   evidenceRequired: not violent
   evidenceRequiredImage: {fileID: 21300000, guid: d5ec6f3386c4d084cbc0d86cd9d811c9, type: 3}
   evidenceNeededCheck: 1
   evImagesGenerated: 0
+  nodeEmotion: 1
+  bribeGiven: 0

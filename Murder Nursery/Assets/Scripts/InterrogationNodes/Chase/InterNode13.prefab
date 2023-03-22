@@ -47,45 +47,41 @@ MonoBehaviour:
   parent: {fileID: 3499891356269125111, guid: 10df22b1e258daa4ab7d161c1476ea14, type: 3}
   children:
   - {fileID: 3499891356269125111, guid: 44c1c7c9ff11d0448b548b7129b07c02, type: 3}
-  speech: Oh uh... oh man... okay. Let's talk.
+  speech: So, uh, Grace and I are closer than I've been letting on. I know you're
+    no fool and you're catchin' on to the Juice Box thing. I'm not a bad kid, I swear!
+    He was talking to Grace so much it just grinds my gears!
   responses:
-  - Start from the beginning, chum.
+  - Uh huh.
+  nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10
-  nodeID: 
-  nodeActive: 0
   repGainResponse1: 0
   repGainResponse2: 0
   repGainResponse3: 0
+  nodeActive: 0
   interrogationNode: 0
-  lifeLoss: 0
   exitNode: 0
+  nodeVisited: 0
+  briberyAvailable: 0
+  fitCheck: 0
+  evidenceToDiscover: {fileID: 0}
+  lockingNode: 0
   firstPathLocked: 0
   secondPathLocked: 0
   thirdPathLocked: 0
-  nodeVisited: 0
-  lockingNode: 0
-  briberyAvailable: 0
-  triggerTrueEnd: 0
-  triggerGoodEnd: 0
-  triggerBadEnd: 0
   lockingFirstPath: 0
   lockingSecondPath: 0
   lockingThirdPath: 0
-  fitCheck: 0
+  triggerTrueEnd: 0
+  triggerGoodEnd: 0
+  triggerBadEnd: 0
   dressUpNode: {fileID: 0}
   requiredOutfit: 
-  evidenceToDiscover: {fileID: 0}
-  evidenceCheckNode: 0
-  pathARequiredEvidence: 
-  pathBRequiredEvidence: 
-  pathCRequiredEvidence: 
-  pathAInterrogationEvidenceRequired: 0
-  pathBInterrogationEvidenceRequired: 0
-  pathCInterrogationEvidenceRequired: 0
-  nodeEmotion: 3
+  lifeLoss: 0
   evidenceRequired: 
   evidenceRequiredImage: {fileID: 0}
   evidenceNeededCheck: 0
   evImagesGenerated: 0
+  nodeEmotion: 3
+  bribeGiven: 0

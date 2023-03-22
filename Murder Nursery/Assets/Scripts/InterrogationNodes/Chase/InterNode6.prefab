@@ -47,48 +47,41 @@ MonoBehaviour:
   parent: {fileID: 3499891356269125111, guid: 0588bae18b71e4a42a97a9daa36a31e3, type: 3}
   children:
   - {fileID: 3499891356269125111, guid: b434b998af2f8464ca45f3e8f98e7f27, type: 3}
-  speech: 'What?! Ugh, I mean I''ve already said Grace and I ain''t that close, and
-    Scarlet''s been a real problem lately! Give me a break, he deserved it! '
+  - {fileID: 3499891356269125111, guid: ef0f3cb80aee2984d8af23549ee38d28, type: 3}
+  speech: Acting what way? Where's your proof?!
   responses:
-  - You're startin to sound like a real piece of work here, Chase ol' chum! If you
-    and Grace ain't close, what were you doin over there talkin' to her before the
-    murder?
+  - I'm no fool, Chase, and you can't outrun the LAW! Scarlet's been growing real
+    jealous of Grace lately, and I'd bet my bottom dollar you know why!
+  nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10
-  nodeID: 
-  nodeActive: 0
   repGainResponse1: 0
   repGainResponse2: 0
   repGainResponse3: 0
+  nodeActive: 0
   interrogationNode: 0
-  lifeLoss: 0
   exitNode: 0
+  nodeVisited: 0
+  briberyAvailable: 0
+  fitCheck: 0
+  evidenceToDiscover: {fileID: 0}
+  lockingNode: 0
   firstPathLocked: 0
   secondPathLocked: 0
   thirdPathLocked: 0
-  nodeVisited: 0
-  lockingNode: 0
-  briberyAvailable: 0
-  triggerTrueEnd: 0
-  triggerGoodEnd: 0
-  triggerBadEnd: 0
   lockingFirstPath: 0
   lockingSecondPath: 0
   lockingThirdPath: 0
-  fitCheck: 0
+  triggerTrueEnd: 0
+  triggerGoodEnd: 0
+  triggerBadEnd: 0
   dressUpNode: {fileID: 0}
   requiredOutfit: 
-  evidenceToDiscover: {fileID: 0}
-  evidenceCheckNode: 0
-  pathARequiredEvidence: 
-  pathBRequiredEvidence: 
-  pathCRequiredEvidence: 
-  pathAInterrogationEvidenceRequired: 0
-  pathBInterrogationEvidenceRequired: 0
-  pathCInterrogationEvidenceRequired: 0
-  nodeEmotion: 3
-  evidenceRequired: 
+  lifeLoss: 0
+  evidenceRequired: devil horns on a picture of Grace
   evidenceRequiredImage: {fileID: 0}
-  evidenceNeededCheck: 0
+  evidenceNeededCheck: 1
   evImagesGenerated: 0
+  nodeEmotion: 3
+  bribeGiven: 0

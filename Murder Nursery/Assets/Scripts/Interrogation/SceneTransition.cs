@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
 using UnityEngine.SceneManagement;
@@ -29,6 +30,17 @@ public class SceneTransition : MonoBehaviour
     public GameObject juiceIntObject;//''
     public GameObject goonIntObject;//''
     public GameObject coolIntObject; //''
+
+    public bool successfulInterrogation = false;
+    public GameObject jbSummary;
+    public GameObject scarletSummary;
+    public GameObject eddieSummary;
+    public GameObject chaseSummary;
+
+    private bool jbSummaryViewed = false;
+    private bool scarletSummaryViewed = false;
+    private bool eddieSummaryViewed = false;
+    private bool chaseSummaryViewed = false;    
 
     // Start is called before the first frame update
     void Start()
@@ -157,6 +169,30 @@ public class SceneTransition : MonoBehaviour
                 {
                     blackFade.gameObject.SetActive(false);
                     interrogationManager.GetComponent<Interrogation>().interrogationPanel.SetActive(false);
+                    if(successfulInterrogation && interrogationManager.GetComponent<Interrogation>().jbCompleted &&!jbSummaryViewed)
+                    {
+                        jbSummary.SetActive(true);
+                        successfulInterrogation = false;
+                        jbSummaryViewed = true;
+                    }
+                    if(successfulInterrogation && interrogationManager.GetComponent<Interrogation>().scarletCompleted && !scarletSummaryViewed)
+                    {
+                        scarletSummary.SetActive(true);
+                        successfulInterrogation = false;
+                        scarletSummaryViewed = true;
+                    }
+                    if(successfulInterrogation && interrogationManager.GetComponent<Interrogation>().eddieCompleted && !eddieSummaryViewed)
+                    {
+                        eddieSummary.SetActive(true);
+                        successfulInterrogation = false;
+                        eddieSummaryViewed = true;
+                    }
+                    if(successfulInterrogation && interrogationManager.GetComponent<Interrogation>().chaseCompleted && !chaseSummaryViewed)
+                    {
+                        chaseSummary.SetActive(true);
+                        successfulInterrogation = false;
+                        chaseSummaryViewed = true;
+                    }    
                     yield return null;
                 }
                 yield return null;
@@ -187,4 +223,8 @@ public class SceneTransition : MonoBehaviour
 
     }
 
+    public void CloseInterrogationSummary(GameObject summary)
+    {
+        summary.SetActive(false);
+    }
 }

@@ -46,49 +46,42 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 3499891356269125111, guid: 67f3856c8dd85cf44bd07f97c4eec500, type: 3}
   children:
-  - {fileID: 3499891356269125111, guid: a7087cd44b720cd4e96e00757f0aa6f2, type: 3}
   - {fileID: 3499891356269125111, guid: a62adddfc1254a14f9ed93cce8d8e68a, type: 3}
-  speech: Oh, yeah? Well, prove it then! How're you going to pin that white stuff
-    on me?
+  - {fileID: 3499891356269125111, guid: b1ccc22e6a5a52e4cb3148272b838241, type: 3}
+  speech: I got this by myself at  playtime, MISTER. You call this EVIDENCE?
   responses:
-  - It's obviously, uh, uh...  crumbs?
-  - 'You kiddin'' me? It''s attached to you! Attached to your ARM that is! '
+  - Oh it's not the arm I'm interested in here, Juicebox. It's who was with you when
+    ya got it!
+  nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10
-  nodeID: 
-  nodeActive: 0
   repGainResponse1: 0
   repGainResponse2: 0
   repGainResponse3: 0
+  nodeActive: 0
   interrogationNode: 0
-  lifeLoss: 0
   exitNode: 0
+  nodeVisited: 0
+  briberyAvailable: 0
+  fitCheck: 0
+  evidenceToDiscover: {fileID: 0}
+  lockingNode: 0
   firstPathLocked: 0
   secondPathLocked: 0
   thirdPathLocked: 0
-  nodeVisited: 0
-  lockingNode: 0
-  briberyAvailable: 0
-  triggerTrueEnd: 0
-  triggerGoodEnd: 0
-  triggerBadEnd: 0
   lockingFirstPath: 0
   lockingSecondPath: 0
   lockingThirdPath: 0
-  fitCheck: 0
+  triggerTrueEnd: 0
+  triggerGoodEnd: 0
+  triggerBadEnd: 0
   dressUpNode: {fileID: 0}
   requiredOutfit: 
-  evidenceToDiscover: {fileID: 0}
-  evidenceCheckNode: 0
-  pathARequiredEvidence: 
-  pathBRequiredEvidence: 
-  pathCRequiredEvidence: 
-  pathAInterrogationEvidenceRequired: 0
-  pathBInterrogationEvidenceRequired: 0
-  pathCInterrogationEvidenceRequired: 0
-  nodeEmotion: 1
-  evidenceRequired: a broken arm
+  lifeLoss: 0
+  evidenceRequired: witness to an accident
   evidenceRequiredImage: {fileID: 21300000, guid: 65c76977607c03d45bb38e0ea5030fc8, type: 3}
   evidenceNeededCheck: 1
   evImagesGenerated: 0
+  nodeEmotion: 1
+  bribeGiven: 0

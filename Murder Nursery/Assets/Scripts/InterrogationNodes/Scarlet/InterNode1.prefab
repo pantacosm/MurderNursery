@@ -46,50 +46,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 3499891356269125111, guid: a04b6b0c099f77944b248f8bd0770af4, type: 3}
   children:
-  - {fileID: 3499891356269125111, guid: a44b8467b64a7ef4b9d9d0b21bc438c2, type: 3}
   - {fileID: 3499891356269125111, guid: ab2272ab9455456439c5b04fbe6c2489, type: 3}
-  speech: I don't know nothin'! I keep to myself in these parts, narc! I've never
-    even seen the gal!
+  - {fileID: 3499891356269125111, guid: a44b8467b64a7ef4b9d9d0b21bc438c2, type: 3}
+  speech: I don't know nothin'! I keep to myself in these parts, narc! I'm a real
+    quiet type!
   responses:
-  - Come on, now. You can tell me anythin!
-  - Didn't know her? and yet Chase seemed to be under the impression she'd been rufflin'
-    feathers! Sounds like you guys HAD been aquainted!
+  - HA! Now that's a reaaal knee slapper, Scarlet. That sounds like applesauce to
+    me, considerin' you're the biggest gossip in town!!
+  nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10
-  nodeID: 
-  nodeActive: 1
   repGainResponse1: 0
   repGainResponse2: 0
   repGainResponse3: 0
+  nodeActive: 1
   interrogationNode: 0
-  lifeLoss: 0
   exitNode: 0
+  nodeVisited: 0
+  briberyAvailable: 0
+  fitCheck: 0
+  evidenceToDiscover: {fileID: 0}
+  lockingNode: 0
   firstPathLocked: 0
   secondPathLocked: 0
   thirdPathLocked: 0
-  nodeVisited: 0
-  lockingNode: 0
-  briberyAvailable: 0
-  triggerTrueEnd: 0
-  triggerGoodEnd: 0
-  triggerBadEnd: 0
   lockingFirstPath: 0
   lockingSecondPath: 0
   lockingThirdPath: 0
-  fitCheck: 0
+  triggerTrueEnd: 0
+  triggerGoodEnd: 0
+  triggerBadEnd: 0
   dressUpNode: {fileID: 0}
   requiredOutfit: 
-  evidenceToDiscover: {fileID: 0}
-  evidenceCheckNode: 0
-  pathARequiredEvidence: 
-  pathBRequiredEvidence: 
-  pathCRequiredEvidence: 
-  pathAInterrogationEvidenceRequired: 0
-  pathBInterrogationEvidenceRequired: 0
-  pathCInterrogationEvidenceRequired: 0
-  nodeEmotion: 1
-  evidenceRequired: a mean drawing of Grace
+  lifeLoss: 0
+  evidenceRequired: gossip
   evidenceRequiredImage: {fileID: 21300000, guid: 4028d58241ebc904d9aaf0b66c0a7a31, type: 3}
   evidenceNeededCheck: 1
   evImagesGenerated: 0
+  nodeEmotion: 1
+  bribeGiven: 0

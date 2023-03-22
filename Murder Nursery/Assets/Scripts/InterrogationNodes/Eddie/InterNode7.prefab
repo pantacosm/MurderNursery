@@ -46,50 +46,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 3499891356269125111, guid: 452b48ca4e76a5747b36456ef9c04aa2, type: 3}
   children:
-  - {fileID: 3499891356269125111, guid: 7b9e49bf13797024898f08ce152ef160, type: 3}
   - {fileID: 3499891356269125111, guid: 8fb028910b6c07242b0cbb777093310b, type: 3}
+  - {fileID: 3499891356269125111, guid: 20dbcc95654c9ec438d549078c41e662, type: 3}
   speech: Shucks pal, thanks. But don't think you can flatter your way out of this
     one! Why else would I push that crazy outta tree?
   responses:
-  - You were jealous of his art skills!
   - How about because you were "just following orders", buddy? The whole class knows
     you work for Chase!
+  nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10
-  nodeID: 
-  nodeActive: 0
   repGainResponse1: 0
   repGainResponse2: 0
   repGainResponse3: 0
+  nodeActive: 0
   interrogationNode: 0
-  lifeLoss: 0
   exitNode: 0
+  nodeVisited: 0
+  briberyAvailable: 0
+  fitCheck: 0
+  evidenceToDiscover: {fileID: 0}
+  lockingNode: 0
   firstPathLocked: 0
   secondPathLocked: 0
   thirdPathLocked: 0
-  nodeVisited: 0
-  lockingNode: 0
-  briberyAvailable: 0
-  triggerTrueEnd: 0
-  triggerGoodEnd: 0
-  triggerBadEnd: 0
   lockingFirstPath: 0
   lockingSecondPath: 0
   lockingThirdPath: 0
-  fitCheck: 0
+  triggerTrueEnd: 0
+  triggerGoodEnd: 0
+  triggerBadEnd: 0
   dressUpNode: {fileID: 0}
   requiredOutfit: 
-  evidenceToDiscover: {fileID: 0}
-  evidenceCheckNode: 0
-  pathARequiredEvidence: 
-  pathBRequiredEvidence: 
-  pathCRequiredEvidence: 
-  pathAInterrogationEvidenceRequired: 0
-  pathBInterrogationEvidenceRequired: 0
-  pathCInterrogationEvidenceRequired: 0
-  nodeEmotion: 0
+  lifeLoss: 0
   evidenceRequired: works for chase
   evidenceRequiredImage: {fileID: 21300000, guid: c146e220118d7ce43a857b01cab2a977, type: 3}
   evidenceNeededCheck: 1
   evImagesGenerated: 0
+  nodeEmotion: 0
+  bribeGiven: 0

@@ -76,8 +76,12 @@ public class Interrogation : MonoBehaviour
 
     [HideInInspector]
     public bool inInterrogation = false;
-   
+    private bool lastResponsePlayer = false;
 
+    public bool chaseCompleted = false;
+    public bool jbCompleted = false;
+    public bool scarletCompleted = false;
+    public bool eddieCompleted = false;
 
 
     // Start is called before the first frame update
@@ -86,6 +90,7 @@ public class Interrogation : MonoBehaviour
         manager = GameObject.FindGameObjectWithTag("Manager"); //Finds and stores game manager
         response1Position = new Vector3(2030.744140625f, 326.246826171875f, 0.0f); //Stores UI element position
         response2Position = new Vector3(2030.777587890625f, 228.91348266601563f, 0.0f); //''
+        
     }
 
     // Update is called once per frame
@@ -93,7 +98,10 @@ public class Interrogation : MonoBehaviour
     {
         interrogationUnderway = manager.GetComponent<SceneTransition>().interrogationActive; //Checks if an interrogation is active
 
-        
+        if(inInterrogation && lastResponse == null)
+        {
+            lastResponse = activeNode.responses[0];
+        }
         
         if(interrogationLives == 0 && interrogationUnderway) //Is called when a player fails an interrogation //NEEDS UPDATED
         {
@@ -111,17 +119,20 @@ public class Interrogation : MonoBehaviour
         {
             interactMessage.SetActive(false);
         }
+
     }
 
     public void ContinueInterrogation() //Used for continuing the interrogation sequence
     {
-        if (!activeNode.evidenceNeededCheck)
+        if (!activeNode.evidenceNeededCheck && lastResponsePlayer)
         {
             if (playerChoice == 1)
             {
                 lastResponse = activeNode.responses[0]; //Stores the last response from the player
                 LoadIntNodeInfo(activeNode.children[0]); //Loads the next node 
                 playerChoice = 0;
+                lastResponsePlayer = false;
+                return;
             }
 
             if (playerChoice == 2)
@@ -129,6 +140,13 @@ public class Interrogation : MonoBehaviour
                 EarlyExit(); //Allows the player to leave an interrogation at a time of their choosing
                 playerChoice = 0;
             }
+        }
+      
+        if(!lastResponsePlayer)
+        {
+            
+            playerResponse1.GetComponent<TextMeshProUGUI>().text = "Detective Drew: " + activeNode.responses[0];
+            lastResponsePlayer = true;
         }
     }
 
@@ -187,10 +205,28 @@ public class Interrogation : MonoBehaviour
     }
     public void SuccessfulEnd() //Called when a player succeeds in an interrogation
     {
+        if(activeInterrogant.name == "JuiceBox (The Artiste)")
+        {
+            jbCompleted = true;
+        }
+        if(activeInterrogant.name == "Scarlet (The Femme Fatale)")
+        {
+            scarletCompleted = true;
+        }
+        if(activeInterrogant.name == "Chase (The Cool Guy)")
+        {
+            chaseCompleted = true;
+        }
+        if(activeInterrogant.name == "Eddie (The Goon)")
+        {
+            eddieCompleted = true;
+        }
         inInterrogation = false;
+        manager.GetComponent<SceneTransition>().successfulInterrogation = true;
         manager.GetComponent<SceneTransition>().ChangeToMainArea(); //Transitions the player back to the main area
         interrogationPanel.SetActive(false);
         ClearDialogue(); //Clears the last interrogation's data
+        
     }
 
     public void BadEnd(int repLoss, int chosenRepLevel) //Is called when a player runs out of lives and fails an interrogation
@@ -204,10 +240,10 @@ public class Interrogation : MonoBehaviour
 
     public void LoadIntNodeInfo(DialogueNode newNode) //Method is used to load a dialogue node's data and update the UI, similar to the method found in DialogueManager
     {
-        if (lastResponse != null)
-        {
-            playerResponse1.GetComponent<TextMeshProUGUI>().text = "Detective Drew: " + lastResponse;
-        }
+       // if (lastResponse != null)
+       // {
+       //     playerResponse1.GetComponent<TextMeshProUGUI>().text = "Detective Drew: " + lastResponse;
+       // }
         if (activeNode != null)
         {
             activeNode.nodeActive = false;
@@ -241,12 +277,13 @@ public class Interrogation : MonoBehaviour
         if (activeNode.evidenceNeededCheck)
         {
             evButton.SetActive(true);
-            playerResponse1.SetActive(false);
+            intResponseBox1.SetActive(false);
+
         }
         else
         {
             evButton.SetActive(false);
-            playerResponse1.SetActive(true);
+            intResponseBox1.SetActive(true);
         }
         
     }
@@ -438,22 +475,6 @@ public class Interrogation : MonoBehaviour
         }       
     }
 
-    public void CheckImage(GameObject button) //Used to check whether or not the player has selected the correct piece of evidence 
-    {
-        if (button.gameObject.GetComponent<Image>().sprite != activeNode.evidenceRequiredImage) //Called when the player selects the wrong option and loads relevant dialogue
-        {
-            lastResponse = activeNode.responses[2];
-            LoadIntNodeInfo(activeNode.children[0]);
-            ReturnToInterrogationPanel();
-        }
-        if (button.gameObject.GetComponent<Image>().sprite == activeNode.evidenceRequiredImage)//Called when the player selects the correct option and loads relevant dialogue
-        {
-            lastResponse = activeNode.responses[1];
-            LoadIntNodeInfo(activeNode.children[1]);
-            ReturnToInterrogationPanel();
-        }
-        
-    }
 
     private void SwitchEmotion() //Method is used to update the emotions displayed by the NPC characters in the interrogation
     {
@@ -492,7 +513,7 @@ public class Interrogation : MonoBehaviour
         {
             if(pressedButton.GetComponent<EvidenceSlot>().evidenceText == activeNode.evidenceRequired)
             {
-              //  playerResponse1.GetComponent<TextMeshProUGUI>().text = activeNode.responses[0];
+                playerResponse1.GetComponent<TextMeshProUGUI>().text = activeNode.responses[0];
                 LoadIntNodeInfo(activeNode.children[0]);
                 interrogationPanel.SetActive(true);
                 pinboard.SetActive(false);

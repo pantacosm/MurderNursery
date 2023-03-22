@@ -46,51 +46,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 3499891356269125111, guid: 8bc6a9d10318fec44906c3e5a9d53326, type: 3}
   children:
-  - {fileID: 3499891356269125111, guid: ee1caa3b19f341b4e89406799b30427d, type: 3}
   - {fileID: 3499891356269125111, guid: 7dcd6154f7b191547b6fc1fa64e7d238, type: 3}
+  - {fileID: 3499891356269125111, guid: ee1caa3b19f341b4e89406799b30427d, type: 3}
   speech: I don't love the attention either I swear! I hate bein' the centre of attention!
     I don't wanna be anyone's favourite!
   responses:
-  - A Queen Bee who doesn't like being the centre of attention? You must think I'm
-    loco!
   - Don't start eatin' that humble pie now! We all know you're a real diva around
     these parts. So spill on what you're hidin'!
+  nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10
-  nodeID: 
-  nodeActive: 0
   repGainResponse1: 0
   repGainResponse2: 0
   repGainResponse3: 0
+  nodeActive: 0
   interrogationNode: 0
-  lifeLoss: 0
   exitNode: 0
+  nodeVisited: 0
+  briberyAvailable: 0
+  fitCheck: 0
+  evidenceToDiscover: {fileID: 0}
+  lockingNode: 0
   firstPathLocked: 0
   secondPathLocked: 0
   thirdPathLocked: 0
-  nodeVisited: 0
-  lockingNode: 0
-  briberyAvailable: 0
-  triggerTrueEnd: 0
-  triggerGoodEnd: 0
-  triggerBadEnd: 0
   lockingFirstPath: 0
   lockingSecondPath: 0
   lockingThirdPath: 0
-  fitCheck: 0
+  triggerTrueEnd: 0
+  triggerGoodEnd: 0
+  triggerBadEnd: 0
   dressUpNode: {fileID: 0}
   requiredOutfit: 
-  evidenceToDiscover: {fileID: 0}
-  evidenceCheckNode: 0
-  pathARequiredEvidence: 
-  pathBRequiredEvidence: 
-  pathCRequiredEvidence: 
-  pathAInterrogationEvidenceRequired: 0
-  pathBInterrogationEvidenceRequired: 0
-  pathCInterrogationEvidenceRequired: 0
-  nodeEmotion: 2
+  lifeLoss: 0
   evidenceRequired: being the favourite
   evidenceRequiredImage: {fileID: 21300000, guid: b0537a6ece1465d48b3c64ff8e2f8cda, type: 3}
   evidenceNeededCheck: 1
   evImagesGenerated: 0
+  nodeEmotion: 2
+  bribeGiven: 0

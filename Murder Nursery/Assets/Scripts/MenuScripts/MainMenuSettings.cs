@@ -69,7 +69,7 @@ public class MainMenuSettings : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyUp(KeyCode.Escape) && SceneManager.GetActiveScene().name == "MainScene")
+        if(Input.GetKeyUp(KeyCode.Escape) && SceneManager.GetActiveScene().name == "MainScene" && !IntroCutscene.intro.inIntro)
         {
             if(!DM.dialogueZone.activeInHierarchy)
             {

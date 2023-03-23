@@ -102,11 +102,17 @@ public class MagnifyingGlass : MonoBehaviour
 
             other.gameObject.GetComponent<MeshRenderer>().enabled = true; // allows player to see the item
             other.gameObject.GetComponent<ParticleSystem>().Play(); // plays the particle effect attached to item
-
-            storeItemText.GetComponent<TextMeshProUGUI>().text = "Press [E] to inspect " + other.name;
-            storeItemText.SetActive(true);
-
             evidenceItem = other.gameObject;
+
+            if(evidenceItem.GetComponentInChildren<Fingerprint>())
+            {
+                storeItemText.GetComponent<TextMeshProUGUI>().text = "Press [E] to inspect " + other.name;
+            }
+            else
+            {
+                storeItemText.GetComponent<TextMeshProUGUI>().text = "Press [E] to store evidence " + other.name;
+            }
+            storeItemText.SetActive(true);
         }
     }
 

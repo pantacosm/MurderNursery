@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class IntroCutscene : MonoBehaviour
 {
+    public static IntroCutscene intro;
+
     [Header("UI Elements")]
     public GameObject introTextBox; //Text object for dialogue
     public GameObject introTextBox2;//''
@@ -46,6 +48,7 @@ public class IntroCutscene : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        intro = this;
         dialoguePanel1.SetActive(true);//Activates the intro dialogue UI 
         introTextBox.GetComponent<TextMeshProUGUI>().text = playerStatement1; //Loads the first dialogue piece
         introAudioSource.clip = introMusic;

@@ -25,9 +25,9 @@ public class InventoryManager : MonoBehaviour
 
     [SerializeField]
     Item listeningDevice;
-
     [SerializeField]
     Item notebook;
+
     [HideInInspector]
     public ToggleUIVisibility UIVisibility; 
 
@@ -60,7 +60,7 @@ public class InventoryManager : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyUp(KeyCode.I))//Used to open and close the player's inventory
+        if(Input.GetKeyUp(KeyCode.I) && !IntroCutscene.intro.inIntro)//Used to open and close the player's inventory
         {
             UIVisibility.ToggleInventory();
             if(blur.activeSelf)

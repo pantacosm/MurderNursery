@@ -43,6 +43,7 @@ public class InventoryManager : MonoBehaviour
     public List<ItemManager> inventoryItems; //Stores items present in player inventory
     public GameObject blur; //Background blur object
     public GameObject itemTooltip;
+    public GameObject tutorialPanel;
 
     private void Awake()
     {

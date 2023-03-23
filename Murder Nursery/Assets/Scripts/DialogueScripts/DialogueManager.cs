@@ -527,7 +527,7 @@ public class DialogueManager : MonoBehaviour
                 
             }
         }
-        MoveOptions(); //Alters the UI to fit the number of responses available
+       // MoveOptions(); //Alters the UI to fit the number of responses available
         firstNode = false; 
         if (activeNode.briberyAvailable && !activeNode.bribeGiven) //Activates bribery option if applicable
         {

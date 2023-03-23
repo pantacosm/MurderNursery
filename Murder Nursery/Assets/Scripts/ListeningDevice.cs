@@ -245,7 +245,10 @@ public class ListeningDevice : MonoBehaviour
                 tutorialManager.GetComponent<Tutorials>().firstLD = false;
                 Cursor.visible = true;
             }
-            textPrompt.SetActive(true);
+            if (dressUpManager.GetComponent<DressUp>().activeOutfit == requiredOutfit)
+            {
+                textPrompt.SetActive(true);
+            }
             inRange = true;
         }
     }
@@ -369,6 +372,8 @@ public class ListeningDevice : MonoBehaviour
         fourthTextBox.SetActive(false);
         fifthTextBox.SetActive(false);
         sixthTextBox.SetActive(false);
+        convoProgress = 0;
+        progress = 0;
 
     }
     

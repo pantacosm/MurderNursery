@@ -8028,6 +8028,7 @@ MonoBehaviour:
   currentOutfit: {fileID: 0}
   punkOutfit: {fileID: 0}
   playerCam: {fileID: 0}
+  tutorialManager: {fileID: 0}
 --- !u!1001 &6254482070501036754
 PrefabInstance:
   m_ObjectHideFlags: 0

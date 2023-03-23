@@ -17,7 +17,8 @@ public class ItemManager : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
     public void Start()
     {
-        tutorialManager = GameObject.FindGameObjectWithTag("TutorialManager");
+        tutorialManager = InventoryManager.inventory.tutorialPanel;
+
     }
     // Called from inventory manager when an item is picked up
     public void AddItem(Item newItem)

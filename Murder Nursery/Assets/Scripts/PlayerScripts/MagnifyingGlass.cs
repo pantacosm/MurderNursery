@@ -27,6 +27,7 @@ public class MagnifyingGlass : MonoBehaviour
     [SerializeField]
     GameObject storeItemText; // text pop up to inform player they can pick up the evidence
 
+    public GameObject evidenceHelpText;
 
 
     private void Start()
@@ -77,6 +78,7 @@ public class MagnifyingGlass : MonoBehaviour
                 firstPersonCam.SetActive(true);
                 gameObject.SetActive(true);
                 magnifyingBlur.SetActive(true);   
+                evidenceHelpText.SetActive(true);
             }
             else
             {
@@ -85,6 +87,7 @@ public class MagnifyingGlass : MonoBehaviour
                 thirdPersonCam.SetActive(true);
                 magnifyingBlur.SetActive(false);
                 storeItemText.SetActive(false);
+                evidenceHelpText.SetActive(false);
             }
         }
     }

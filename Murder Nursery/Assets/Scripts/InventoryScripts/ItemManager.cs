@@ -11,8 +11,8 @@ public class ItemManager : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     public GameObject itemTooltip;
     public GameObject notebook;
 
-    private bool firstMG = true;
-    private bool firstFP = true;
+    //private bool firstMG = true;
+    //private bool firstFP = true;
     public GameObject tutorialManager;
 
     public void Start()
@@ -56,12 +56,12 @@ public class ItemManager : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
                 RemoveItem();
                 break;
             case Item.ItemType.MagnifyingGlass:
-                if(firstMG)
-                {
-                    Time.timeScale = 0;
-                    tutorialManager.GetComponent<Tutorials>().ActivateTutorial(tutorialManager.GetComponent<Tutorials>().magnifyingGlassTutorial);
-                    firstMG = false;
-                }
+                //if(firstMG)
+                //{
+                //    Time.timeScale = 0;
+                //    tutorialManager.GetComponent<Tutorials>().ActivateTutorial(tutorialManager.GetComponent<Tutorials>().magnifyingGlassTutorial);
+                //    firstMG = false;
+                //}
                 InventoryManager.inventory.MG.GetComponent<MagnifyingGlass>().ToggleMagnifyingGlass();
                 InventoryManager.inventory.Player.GetComponent<PlayerMovement>().StartMGCamTransition(); // starts a coroutine which stops player movement whilst active
                 InventoryManager.inventory.UIVisibility.ToggleInventory();

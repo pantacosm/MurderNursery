@@ -11,39 +11,43 @@ public class ListeningDevice : MonoBehaviour
     public GameObject textPrompt;
     private bool inRange = false;
     public string requiredOutfit;
+
+    [HideInInspector]
     public GameObject dressUpManager;
+    [HideInInspector]
     public GameObject manager;
+
     public GameObject currentCam;
     public GameObject desiredCam;
     public Image blackFade;
     public GameObject noirFilter;
     public float currentCountdownValue;
-    public List<string> npcStatements = new List<string>();
+    public List<string> npcStatements = new();
     public GameObject firstTextBox;
     public GameObject secondTextBox;
     public GameObject thirdTextBox;
     public GameObject fourthTextBox;
     public GameObject fifthTextBox;
     public GameObject sixthTextBox;
-    public GameObject firstNPCText;
-    public GameObject secondNPCText;
-    public GameObject thirdNPCText;
-    public GameObject fourthNPCText;
-    public GameObject fifthNPCText;
-    public GameObject sixthNPCText;
+
     public bool inLD = false;
     private int progress = 0;
     private int convoProgress = 0;
+
+    [HideInInspector]
     public GameObject player;
+
+    [HideInInspector]
     public GameObject pinboardManager;
+
     public EvidenceClass heardEvidence;
     private bool evidenceAlreadyCollected = false;
 
-    private bool firstLD = true;
     public GameObject tutorialManager;
 
     public GameObject notebook;
     public int convoID;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -52,6 +56,7 @@ public class ListeningDevice : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         pinboardManager = GameObject.FindGameObjectWithTag("PinBoard Manager");
         progress = 0;
+        convoProgress = 0;
         
     }
 
@@ -62,6 +67,7 @@ public class ListeningDevice : MonoBehaviour
         {
             if (dressUpManager.GetComponent<DressUp>().activeOutfit == requiredOutfit)
             {
+                inLD = true;
                 StartListening();
             }
             else
@@ -76,16 +82,15 @@ public class ListeningDevice : MonoBehaviour
             switch(convoProgress)
             {
                 case 0:
-                    progress++;
                     secondTextBox.SetActive(true);
-                    secondNPCText.GetComponent<TextMeshProUGUI>().text = npcStatements[progress];
-                    convoProgress++;
+                    secondTextBox.GetComponentInChildren<TextMeshProUGUI>().text = npcStatements[progress];
+                    convoProgress = 1;
                     progress++;
                     break;
                 case 1:
                     thirdTextBox.SetActive(true);
-                    thirdNPCText.GetComponent<TextMeshProUGUI>().text = npcStatements[progress];
-                    convoProgress++;
+                    thirdTextBox.GetComponentInChildren<TextMeshProUGUI>().text = npcStatements[progress];
+                    convoProgress = 2;
                     progress++;
                     break;
                 case 2:
@@ -114,8 +119,8 @@ public class ListeningDevice : MonoBehaviour
                     secondTextBox.SetActive(false);
                     thirdTextBox.SetActive(false);
                     fourthTextBox.SetActive(true);
-                    fourthNPCText.GetComponent<TextMeshProUGUI>().text = npcStatements[progress];
-                    convoProgress++;
+                    fourthTextBox.GetComponentInChildren<TextMeshProUGUI>().text = npcStatements[progress];
+                    convoProgress = 3;
                     progress++;
                     break;
                 case 3:
@@ -141,17 +146,17 @@ public class ListeningDevice : MonoBehaviour
                         break;
                     }
                     fifthTextBox.SetActive(true);
-                    fifthNPCText.GetComponent<TextMeshProUGUI>().text = npcStatements[progress];
-                    convoProgress++;
+                    fifthTextBox.GetComponentInChildren<TextMeshProUGUI>().text = npcStatements[progress];
+                    convoProgress = 4;
                     progress++;
                     break;
                 case 4:
                     if (npcStatements[progress] == "BREAK")
                     {
+                        inLD = false;
                         ClearDialogue();
                         StartCoroutine(BlackTransition(desiredCam, currentCam, false));
                         StartCoroutine(WaitForSeconds(false));
-                        inLD = false;
                         foreach (EvidenceClass evidence in pinboardManager.GetComponent<PinboardManager>().discoveredEvidence)
                         {
                             if (evidence == heardEvidence)
@@ -168,17 +173,17 @@ public class ListeningDevice : MonoBehaviour
                         break;
                     }
                     sixthTextBox.SetActive(true);
-                    sixthNPCText.GetComponent<TextMeshProUGUI>().text = npcStatements[progress];
-                    convoProgress++;
+                    sixthTextBox.GetComponentInChildren<TextMeshProUGUI>().text = npcStatements[progress];
+                    convoProgress = 5;
                     progress++;
                     break;
                 case 5:
                     if (npcStatements[progress] == "BREAK")
                     {
+                        inLD = false;
                         ClearDialogue();
                         StartCoroutine(BlackTransition(desiredCam, currentCam, false));
                         StartCoroutine(WaitForSeconds(false));
-                        inLD = false;
                         foreach (EvidenceClass evidence in pinboardManager.GetComponent<PinboardManager>().discoveredEvidence)
                         {
                             if (evidence == heardEvidence)
@@ -198,17 +203,17 @@ public class ListeningDevice : MonoBehaviour
                     fifthTextBox.SetActive(false);
                     sixthTextBox.SetActive(false);
                     firstTextBox.SetActive(true);
-                    firstNPCText.GetComponent<TextMeshProUGUI>().text = npcStatements[progress];
-                    convoProgress++;
+                    firstTextBox.GetComponentInChildren<TextMeshProUGUI>().text = npcStatements[progress];
+                    convoProgress = 6;
                     progress++;
                     break;
                 case 6:
                     if (npcStatements[progress] == "BREAK")
                     {
+                        inLD = false;
                         ClearDialogue();
                         StartCoroutine(BlackTransition(desiredCam, currentCam, false));
                         StartCoroutine(WaitForSeconds(false));
-                        inLD = false;
                         foreach (EvidenceClass evidence in pinboardManager.GetComponent<PinboardManager>().discoveredEvidence)
                         {
                             if (evidence == heardEvidence)
@@ -224,19 +229,14 @@ public class ListeningDevice : MonoBehaviour
                         }
                         break;
                     }
-                    secondTextBox.SetActive(true);
-                    secondNPCText.GetComponent<TextMeshProUGUI>().text = npcStatements[progress];
-                    convoProgress++;
-                    progress++;
                     break;
-
             }
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.CompareTag("Player"))
         {
             if(tutorialManager.GetComponent<Tutorials>().firstLD)
             {
@@ -255,7 +255,7 @@ public class ListeningDevice : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.CompareTag("Player"))
         {
             textPrompt.SetActive(false);
             inRange = false;
@@ -267,8 +267,6 @@ public class ListeningDevice : MonoBehaviour
         print("calling");
         StartCoroutine(BlackTransition(currentCam, desiredCam, true));
         StartCoroutine(WaitForSeconds(true));
-        
-        
     }
 
     public IEnumerator BlackTransition(GameObject currentCam, GameObject desiredCam, bool intoLD, bool transitionToBlack = true, int timeToFade = 1)
@@ -290,7 +288,6 @@ public class ListeningDevice : MonoBehaviour
                     ChangeCam(currentCam, desiredCam);
 
                     noirFilter.GetComponent<PostProcessingActivation>().TurnFilterOn(true);
-                    inLD = true;
                     if(intoLD)
                     {
                         player.SetActive(false);
@@ -318,8 +315,8 @@ public class ListeningDevice : MonoBehaviour
                     if (intoLD)
                     {
                         firstTextBox.SetActive(true);
-                        firstNPCText.GetComponent<TextMeshProUGUI>().text = npcStatements[progress];
-                        
+                        firstTextBox.GetComponentInChildren<TextMeshProUGUI>().text = npcStatements[0];
+                        progress = 1;
                     }
                     
                     yield return null;
@@ -357,15 +354,11 @@ public class ListeningDevice : MonoBehaviour
             case 1:
                 notebook.GetComponent<Notebook>().scarletEddieComplete = true;
                 break;
-            case 2: notebook.GetComponent<Notebook>().juiceboxChaseComplete = true;
+            case 2: 
+                notebook.GetComponent<Notebook>().juiceboxChaseComplete = true;
                 break;
         }
-        firstNPCText.GetComponent<TextMeshProUGUI>().text = null;
-        secondNPCText.GetComponent<TextMeshProUGUI>().text = null;
-        thirdNPCText.GetComponent<TextMeshProUGUI>().text = null;
-        fourthNPCText.GetComponent<TextMeshProUGUI>().text = null;
-        fifthNPCText.GetComponent<TextMeshProUGUI>().text = null;
-        sixthNPCText.GetComponent<TextMeshProUGUI>().text = null;
+
         firstTextBox.SetActive(false);
         secondTextBox.SetActive(false);
         thirdTextBox.SetActive(false);

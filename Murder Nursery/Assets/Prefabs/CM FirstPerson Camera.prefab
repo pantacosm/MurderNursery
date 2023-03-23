@@ -152,6 +152,7 @@ MonoBehaviour:
   magnifyingBlur: {fileID: 0}
   magGlass: {fileID: 5601234528120775530}
   storeItemText: {fileID: 0}
+  evidenceHelpText: {fileID: 0}
 --- !u!65 &1740462657988029663
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -349,7 +350,7 @@ Transform:
   - {fileID: 1832966646}
   - {fileID: 4304763899913200}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2219632351807409586
 MonoBehaviour:

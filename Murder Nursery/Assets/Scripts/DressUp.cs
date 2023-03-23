@@ -40,6 +40,9 @@ public class DressUp : MonoBehaviour
     private Transform playerPosition;
     private Vector3 yOffset = new Vector3(0f, 0.3876f, 0f);
     public GameObject playerCam;
+
+    private bool firstDressUP = true;
+    public GameObject tutorialManager;
     
     // Start is called before the first frame update
     void Start()
@@ -50,6 +53,7 @@ public class DressUp : MonoBehaviour
         thirdButton = new Vector3(1533.5f, 540.0f, 0.0f);//''
         inactiveButton = detectiveButton; //Sets the inactive button as the detective button
         currentOutfit = detectiveOutfit;
+        
     }
 
     
@@ -60,6 +64,11 @@ public class DressUp : MonoBehaviour
     {
         if (interactable && Input.GetKeyDown(KeyCode.E)) //Allows the player to open the dress up menu 
         {
+            if(firstDressUP)
+            {
+                tutorialManager.GetComponent<Tutorials>().ActivateTutorial(tutorialManager.GetComponent<Tutorials>().dressupTutorial);
+                firstDressUP = false;
+            }
             inDressUp = true; //Signals that the player is in dress up 
             interactableText.SetActive(false); 
             dressUpMenu.SetActive(true); //Activates the dress up menu UI

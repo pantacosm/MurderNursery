@@ -68,7 +68,7 @@ MonoBehaviour:
   briberyAvailable: 0
   fitCheck: 0
   evidenceToDiscover: {fileID: 2720912505709134154, guid: 9432adda6cf68514089ecdf262ad2e39, type: 3}
-  lockingNode: 1
+  lockingNode: 0
   firstPathLocked: 0
   secondPathLocked: 0
   thirdPathLocked: 0

@@ -46,13 +46,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 3499891356269125111, guid: db2c5c67e042ad64388906f1726c9b3f, type: 3}
   children:
-  - {fileID: 3499891356269125111, guid: ead7ec8240f8b6a46a9e9a6314d3e4e7, type: 3}
   - {fileID: 3499891356269125111, guid: 9bca328180c2ef441abd692ecfb06e86, type: 3}
   speech: This is the last time I'll say this, Detective. You're givin' me the <wave>heebie
     jeebies</wave>! Scram, before things get messy...
   responses:
-  - <Interrogate Scarlet>
-  - <Leave Conversation>
+  - I'm scramming, I'm scramming...
   nonAnimatedSpeech: This is the last time I'll say this, Detective. You're givin'
     me the heebie jeebies! Scram, before things get messy...
   repLevelOption1: -10

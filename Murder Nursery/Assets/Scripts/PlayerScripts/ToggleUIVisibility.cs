@@ -13,6 +13,11 @@ public class ToggleUIVisibility : MonoBehaviour
     GameObject jotterUI;
 
     [SerializeField]
+    GameObject notebook;
+
+  
+
+    [SerializeField]
     public GameObject pinboardUI;
 
     [SerializeField]
@@ -27,6 +32,9 @@ public class ToggleUIVisibility : MonoBehaviour
     [HideInInspector]
     public bool jotterOpen = false;
 
+    [HideInInspector]
+    public bool notebookOpen = false;
+
     public AudioSource playerAudioSource;
     public AudioClip openInventorySound;
     public AudioClip openPinBoardSound;
@@ -35,6 +43,18 @@ public class ToggleUIVisibility : MonoBehaviour
     public GameObject interrogationManager;
     public GameObject interrogationUI;
 
+    public bool firstPinboard = true;
+    public bool firstNotebook = true;
+    public bool firstInventory = true;
+
+    public GameObject tutorialManager;
+    public bool scarletEddieComplete = false;
+    public bool chaseEddieComplete = false;
+    public bool juiceboxChaseComplete = false;
+    public void Start()
+    {
+        
+    }
     public void Update()
     {
         if (inventoryOpen)
@@ -50,6 +70,12 @@ public class ToggleUIVisibility : MonoBehaviour
         
         if(inventoryOpen = !inventoryOpen)
         {
+            if(firstInventory)
+            {
+                tutorialManager.GetComponent<Tutorials>().ActivateTutorial(tutorialManager.GetComponent<Tutorials>().inventoryTutorial);
+                firstInventory = false;
+            }
+                
             playerAudioSource.PlayOneShot(openInventorySound, 0.2f) ;
             inventoryUI.SetActive(true);
             inventoryOpen = true;
@@ -84,6 +110,11 @@ public class ToggleUIVisibility : MonoBehaviour
         {
             if (pinboardOpen = !pinboardOpen)
             {
+                if(firstPinboard)
+                {
+                    tutorialManager.GetComponent<Tutorials>().ActivateTutorial(tutorialManager.GetComponent<Tutorials>().pinboardTutorial);
+                    firstPinboard = false;
+                }
                 playerAudioSource.PlayOneShot(openPinBoardSound, 0.5f);
                 pinboardUI.SetActive(true);
                 blur.SetActive(true);
@@ -136,6 +167,44 @@ public class ToggleUIVisibility : MonoBehaviour
             Cursor.visible = false;            
         }
 
+        if(inventoryOpen)
+        {
+            inventoryUI.SetActive(false);
+            inventoryOpen = false;
+        }
+    }
+
+    public void ToggleNotebook()
+    {
+        if(!notebookOpen)
+        {
+            if(firstNotebook)
+            {
+                tutorialManager.GetComponent<Tutorials>().ActivateTutorial(tutorialManager.GetComponent<Tutorials>().notebookTutorial);
+                firstNotebook = false;
+            }
+            notebook.GetComponent<Notebook>().CheckConversationProgress();
+            notebookOpen = true;
+            notebook.SetActive(true);
+            blur.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            if(interrogationManager.GetComponent<Interrogation>().noneCompleted)
+            {
+                notebook.GetComponent<Notebook>().noIntMessage.SetActive(true);
+            }
+            else
+            {
+                notebook.GetComponent<Notebook>().noIntMessage.SetActive(false);
+            }
+        }
+        else
+        {
+            notebook.SetActive(false);
+            blur.SetActive(false);
+            Cursor.visible = false;
+            notebookOpen = false;
+        }
         if(inventoryOpen)
         {
             inventoryUI.SetActive(false);

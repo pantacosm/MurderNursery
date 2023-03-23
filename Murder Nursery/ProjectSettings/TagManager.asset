@@ -11,6 +11,22 @@ TagManager:
   - PinboardUI
   - RelationshipOptions
   - InventoryUI
+  - GraceSlot
+  - EddieSlot
+  - ScarletSlot
+  - JuiceBoxSlot
+  - IntroCam
+  - TestText
+  - Evidence Panel
+  - ChaseSlot
+  - Evidence Tooltip
+  - IgnoreCameraCollision
+  - PinBoard Manager
+  - Evidence Item
+  - Fingerprint
+  - InterrogationManager
+  - Dress Up Manager
+  - TutorialManager
   layers:
   - Default
   - TransparentFX

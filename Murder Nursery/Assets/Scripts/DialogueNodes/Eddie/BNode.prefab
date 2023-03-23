@@ -46,12 +46,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parent: {fileID: 3499891356269125111, guid: 455c8c7f2eaed9845899318f5cf1c9cf, type: 3}
   children:
-  - {fileID: 3499891356269125111, guid: a8fe317a267a2094d94f8b5343da1089, type: 3}
   - {fileID: 3499891356269125111, guid: 126ae1006fd2d874bac601212655b922, type: 3}
   speech: Me? I'm just a cat who works for Chase and minds his own <shake>business</shake>.
     I don't got much to say unless I know you're to be <wiggle>trusted</wiggle>.
   responses:
-  - <Interrogate Eddie>
   - <Leave Conversation>
   nonAnimatedSpeech: Me? I'm just a cat who works for Chase and minds his own business.
     I don't got much to say unless I know you're to be trusted.

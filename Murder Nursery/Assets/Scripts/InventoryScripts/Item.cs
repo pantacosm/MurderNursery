@@ -25,7 +25,8 @@ public class Item : ScriptableObject
         MagnifyingGlass,
         PinBoard,
         Jotter,
-        ListeningDevice
+        ListeningDevice,
+            NoteBook
     }
 
 }

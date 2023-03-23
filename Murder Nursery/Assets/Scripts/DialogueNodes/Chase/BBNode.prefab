@@ -47,7 +47,6 @@ MonoBehaviour:
   parent: {fileID: 3499891356269125111, guid: 8e7e2bb32c59fea489574307444b36d7, type: 3}
   children:
   - {fileID: 3499891356269125111, guid: b24f5b7ed31b44c47babdb21a81de639, type: 3}
-  - {fileID: 3499891356269125111, guid: a7bbfebf2c57a63458b87cd95fa130b7, type: 3}
   speech: Sure you are. Can I help you with something?
   responses:
   - 'Seen anything suspicious lately? '
@@ -63,7 +62,7 @@ MonoBehaviour:
   nodeActive: 0
   interrogationNode: 0
   exitNode: 0
-  nodeVisited: 0
+  nodeVisited: 1
   briberyAvailable: 0
   fitCheck: 0
   evidenceToDiscover: {fileID: 0}

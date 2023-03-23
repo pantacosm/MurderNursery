@@ -68,7 +68,7 @@ MonoBehaviour:
   briberyAvailable: 1
   fitCheck: 1
   evidenceToDiscover: {fileID: 0}
-  lockingNode: 1
+  lockingNode: 0
   firstPathLocked: 0
   secondPathLocked: 0
   thirdPathLocked: 0

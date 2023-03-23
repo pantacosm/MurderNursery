@@ -50,7 +50,7 @@ MonoBehaviour:
   speech: Ugh, <wiggle>fine</wiggle>. Scarlet and I got a bit of a thing goin'. I
     buy her the odd juice box from time to time and get to have a doll on my arm
     at break, and she gets to feel pretty and have the attention on her. Gal like
-    that likes to be shown off a little. Wouldn't trust a </shake>word</shake> that
+    that likes to be shown off a little. Wouldn't trust a <shake>word</shake> that
     comes outta her mouth though.
   responses:
   - I'll keep it in mind!
@@ -64,7 +64,7 @@ MonoBehaviour:
   repGainResponse1: 0
   repGainResponse2: 0
   repGainResponse3: 0
-  nodeActive: 0
+  nodeActive: 1
   interrogationNode: 0
   exitNode: 0
   nodeVisited: 0

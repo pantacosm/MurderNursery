@@ -26,6 +26,8 @@ public class InventoryManager : MonoBehaviour
     [SerializeField]
     Item listeningDevice;
 
+    [SerializeField]
+    Item notebook;
     [HideInInspector]
     public ToggleUIVisibility UIVisibility; 
 
@@ -53,6 +55,7 @@ public class InventoryManager : MonoBehaviour
         AddItem(pinboard); //Adds the fundamental items to the player's inventory
         AddItem(mGlass); //''
         AddItem(listeningDevice);
+        AddItem(notebook);
     }
 
     private void Update()

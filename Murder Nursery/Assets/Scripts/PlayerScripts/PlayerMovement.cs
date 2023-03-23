@@ -100,7 +100,7 @@ public class PlayerMovement : MonoBehaviour
         if (inventory.UIVisibility.inventoryOpen || inventory.UIVisibility.pinboardOpen 
             || dialogueZone.activeInHierarchy || manager.GetComponent<SceneTransition>().interrogationActive 
             || inventory.UIVisibility.jotterOpen || dressUpManager.GetComponent<DressUp>().inDressUp || introCam.GetComponent<IntroCutscene>().inIntro
-            || menu.menuOpen || mgCamTransitioning || inspectingItem)
+            || menu.menuOpen || mgCamTransitioning || inspectingItem || inventory.UIVisibility.notebookOpen)
         {
             animator.Play("Idle");
             animator.SetFloat("Velocity", 0);

@@ -143,6 +143,9 @@ public class DialogueManager : MonoBehaviour
     public GameObject pinBoardManager;
     ReputationManager RM;
 
+    private bool firsrBribe = true;
+    private bool firstInterrogation = true;
+    public GameObject tutorialManager;
 
     // Start is called before the first frame update
     void Start()
@@ -152,6 +155,7 @@ public class DialogueManager : MonoBehaviour
         response1Position = new Vector3(1472.978759765625f, 247.28692626953126f, 0.0f); //Sets the player response UI position
         response2Position = new Vector3 (1472.9764404296875f,174.4442138671875f, 0.0f);//''
         response3Position = new Vector3(1472.9814453125f, 102.63192749023438f, 0.0f); //''
+        
 
     } 
 
@@ -676,6 +680,12 @@ public class DialogueManager : MonoBehaviour
     public void Bribery() // Activates the bribery panel and updates it depending on what items the player possesses
     {
         //dialogueZone.SetActive(false);
+        if(firsrBribe)
+        {
+            Time.timeScale = 0;
+            tutorialManager.GetComponent<Tutorials>().ActivateTutorial(tutorialManager.GetComponent<Tutorials>().bribeTutorial);
+            firsrBribe = false;
+        }
         briberyPanel.SetActive(true);
         //bribe.gameObject.SetActive(false);
         //item1.gameObject.SetActive(false);
@@ -872,6 +882,12 @@ public class DialogueManager : MonoBehaviour
 
     public void ToggleSummary()
     {
+        if(firstInterrogation)
+        {
+            Time.timeScale = 0;
+            tutorialManager.GetComponent<Tutorials>().ActivateTutorial(tutorialManager.GetComponent<Tutorials>().interrogationTutorial);
+            firstInterrogation = false;
+        }
         summaryPanel.SetActive(!summaryPanel.activeSelf);
         if(summaryPanel.activeSelf)
         {

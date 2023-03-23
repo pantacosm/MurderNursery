@@ -38,6 +38,12 @@ public class ListeningDevice : MonoBehaviour
     public GameObject pinboardManager;
     public EvidenceClass heardEvidence;
     private bool evidenceAlreadyCollected = false;
+
+    private bool firstLD = true;
+    public GameObject tutorialManager;
+
+    public GameObject notebook;
+    public int convoID;
     // Start is called before the first frame update
     void Start()
     {
@@ -46,6 +52,7 @@ public class ListeningDevice : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         pinboardManager = GameObject.FindGameObjectWithTag("PinBoard Manager");
         progress = 0;
+        
     }
 
     // Update is called once per frame
@@ -231,6 +238,13 @@ public class ListeningDevice : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            if(tutorialManager.GetComponent<Tutorials>().firstLD)
+            {
+                Time.timeScale = 0;
+                tutorialManager.GetComponent<Tutorials>().ActivateTutorial(tutorialManager.GetComponent<Tutorials>().ldTutorial);
+                tutorialManager.GetComponent<Tutorials>().firstLD = false;
+                Cursor.visible = true;
+            }
             textPrompt.SetActive(true);
             inRange = true;
         }
@@ -332,6 +346,17 @@ public class ListeningDevice : MonoBehaviour
 
     private void ClearDialogue()
     {
+        switch(convoID)
+        {
+            case 0:
+                 notebook.GetComponent<Notebook>().chaseEddieComplete = true;
+                break;
+            case 1:
+                notebook.GetComponent<Notebook>().scarletEddieComplete = true;
+                break;
+            case 2: notebook.GetComponent<Notebook>().juiceboxChaseComplete = true;
+                break;
+        }
         firstNPCText.GetComponent<TextMeshProUGUI>().text = null;
         secondNPCText.GetComponent<TextMeshProUGUI>().text = null;
         thirdNPCText.GetComponent<TextMeshProUGUI>().text = null;
@@ -344,6 +369,7 @@ public class ListeningDevice : MonoBehaviour
         fourthTextBox.SetActive(false);
         fifthTextBox.SetActive(false);
         sixthTextBox.SetActive(false);
+
     }
     
 }

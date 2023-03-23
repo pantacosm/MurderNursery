@@ -82,6 +82,7 @@ public class Interrogation : MonoBehaviour
     public bool jbCompleted = false;
     public bool scarletCompleted = false;
     public bool eddieCompleted = false;
+    public bool noneCompleted = true;
 
 
     // Start is called before the first frame update
@@ -205,6 +206,7 @@ public class Interrogation : MonoBehaviour
     }
     public void SuccessfulEnd() //Called when a player succeeds in an interrogation
     {
+        noneCompleted = false;
         if(activeInterrogant.name == "JuiceBox (The Artiste)")
         {
             jbCompleted = true;

@@ -66,7 +66,7 @@ MonoBehaviour:
   nodeActive: 0
   interrogationNode: 0
   exitNode: 0
-  nodeVisited: 0
+  nodeVisited: 1
   briberyAvailable: 0
   fitCheck: 0
   evidenceToDiscover: {fileID: 2720912505709134154, guid: 7809427563891604089e81ac04e3c627, type: 3}

@@ -7,13 +7,13 @@ using UnityEngine.InputSystem;
 public class ToggleUIVisibility : MonoBehaviour
 {
     [SerializeField]
-    GameObject inventoryUI;
+    public GameObject inventoryUI;
 
     [SerializeField]
-    GameObject jotterUI;
+   public GameObject jotterUI;
 
     [SerializeField]
-    GameObject notebook;
+   public GameObject notebook;
 
   
 
@@ -21,7 +21,7 @@ public class ToggleUIVisibility : MonoBehaviour
     public GameObject pinboardUI;
 
     [SerializeField]
-    GameObject evidenceJotter;
+    public GameObject evidenceJotter;
 
     [HideInInspector]
     public bool inventoryOpen = false;

@@ -147,6 +147,8 @@ public class DialogueManager : MonoBehaviour
     private bool firstInterrogation = true;
     public GameObject tutorialManager;
 
+   
+
     // Start is called before the first frame update
     void Start()
     {
@@ -249,10 +251,18 @@ public class DialogueManager : MonoBehaviour
         activeNPC = npc;//Updates the active NPC
         if (activeNPC == chase && chaseLastNode != null)
         {
-            activeNode = chaseLastNode;
-            LoadNodeInfo(chaseLastNode);
+            if (chaseLastNode != activeNPC.GetComponent<NPCDialogue>().interrogationNode)
+            {
+                activeNode = chaseLastNode;
+                LoadNodeInfo(chaseLastNode);
 
-            LoadBribeDialogue(startNode);
+              //  LoadBribeDialogue(startNode);
+            }
+            else if(chaseLastNode == activeNPC.GetComponent<NPCDialogue>().interrogationNode)
+            {
+                activeNode = activeNPC.GetComponent<NPCDialogue>().introNode;
+                LoadNodeInfo(activeNPC.GetComponent<NPCDialogue>().introNode);
+            }
         }
         else if (activeNPC == chase && !chaseMidConvo)
         {
@@ -261,22 +271,38 @@ public class DialogueManager : MonoBehaviour
         }
         if (activeNPC == eddie && eddieLastNode != null)
         {
-            activeNode = eddieLastNode;
-            LoadNodeInfo(eddieLastNode);
+            if (eddieLastNode != activeNPC.GetComponent<NPCDialogue>().interrogationNode)
+            {
+                activeNode = eddieLastNode;
+                LoadNodeInfo(eddieLastNode);
+            }
+            else if(eddieLastNode == activeNPC.GetComponent<NPCDialogue>().interrogationNode)
+            {
+                activeNode = activeNPC.GetComponent<NPCDialogue>().introNode;
+                LoadNodeInfo(activeNPC.GetComponent<NPCDialogue>().introNode);
+            }
+            }
 
-            LoadBribeDialogue(startNode);
-        }
+           // LoadBribeDialogue(startNode);
+        
         else if (activeNPC == eddie && !eddieMidConvo)
         {
             activeNode = startNode; //Updates the active node to the start node of the conversation
-            LoadNodeInfo(startNode); //Loads the node information to the UI elements
+          //  LoadNodeInfo(startNode); //Loads the node information to the UI elements
         }
         if(activeNPC == scarlet && scarletLastNode != null)
         {
-            activeNode = scarletLastNode;
-            LoadNodeInfo(scarletLastNode);
-
-            LoadBribeDialogue(startNode);
+            if (scarletLastNode != activeNPC.GetComponent<NPCDialogue>().interrogationNode)
+            {
+                activeNode = scarletLastNode;
+                LoadNodeInfo(scarletLastNode);
+            }
+            else if(scarletLastNode == activeNPC.GetComponent<NPCDialogue>().interrogationNode)
+            {
+                activeNode = activeNPC.GetComponent<NPCDialogue>().introNode;
+                LoadNodeInfo(activeNPC.GetComponent<NPCDialogue>().introNode);
+            }
+           // LoadBribeDialogue(startNode);
         }
         else if (activeNPC == scarlet && !scarletMidConvo)
         {
@@ -285,10 +311,17 @@ public class DialogueManager : MonoBehaviour
         }
         if (activeNPC == juiceBox && juiceBoxLastNode != null)
         {
-            activeNode = juiceBoxLastNode;
-            LoadNodeInfo(juiceBoxLastNode);
-
-            LoadBribeDialogue(startNode);
+            if (juiceBoxLastNode != activeNPC.GetComponent<NPCDialogue>().interrogationNode)
+            {
+                activeNode = juiceBoxLastNode;
+                LoadNodeInfo(juiceBoxLastNode);
+            }
+            else if(juiceBoxLastNode == activeNPC.GetComponent<NPCDialogue>().interrogationNode)
+            {
+                activeNode = activeNPC.GetComponent<NPCDialogue>().introNode;
+                LoadNodeInfo(activeNPC.GetComponent<NPCDialogue>().introNode);
+            }
+            //LoadBribeDialogue(startNode);
         }
         else if (activeNPC == juiceBox && !juiceBoxMidConvo)
         {

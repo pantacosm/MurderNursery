@@ -38,6 +38,17 @@ public class MainMenuSettings : MonoBehaviour
     [HideInInspector]
     public bool menuOpen;
 
+    public ToggleUIVisibility inventoryManager;
+    private bool inInventory = false;
+    private bool inDialogue = false;
+    public PinboardManager PM;
+    private bool inPinboard = false;
+    public Interrogation IM;
+    private bool inInterrogation = false;
+    private bool inNotebook = false;
+    public Tutorials TM;
+    private bool inTutorial = false;
+
     private void Start()
     {
         DM = FindObjectOfType<DialogueManager>();
@@ -71,10 +82,47 @@ public class MainMenuSettings : MonoBehaviour
     {
         if(Input.GetKeyUp(KeyCode.Escape) && SceneManager.GetActiveScene().name == "MainScene" && !IntroCutscene.intro.inIntro)
         {
-            if(!DM.dialogueZone.activeInHierarchy)
+            if(!DM.dialogueZone.activeInHierarchy && !PM.pinBoard.activeInHierarchy && !IM.interrogationPanel.activeInHierarchy && !inventoryManager.inventoryUI.activeInHierarchy && !inventoryManager.notebook.activeInHierarchy && !TM.tutorialPanel.activeInHierarchy)
             {
                 ToggleMenu();
             }
+            if(DM.dialogueZone.activeInHierarchy)
+            {
+                inDialogue = true;
+                DM.dialogueZone.SetActive(false);              
+                ToggleMenu();
+            }
+            if(PM.pinBoard.activeInHierarchy)
+            {
+                inPinboard = true;
+                PM.pinBoard.SetActive(false);
+                ToggleMenu();
+            }
+            if(IM.interrogationPanel.activeInHierarchy)
+            {
+                inInterrogation = true;
+                IM.interrogationPanel.SetActive(false);
+                ToggleMenu();
+            }
+            if(inventoryManager.inventoryUI.activeInHierarchy)
+            {
+                inInventory = true;
+                inventoryManager.inventoryUI.SetActive(false);
+                ToggleMenu();
+            }
+            if(inventoryManager.notebook.activeInHierarchy)
+            {
+                inNotebook = true;
+                inventoryManager.notebook.SetActive(false);
+                ToggleMenu();
+            }
+            if(TM.tutorialPanel.activeInHierarchy)
+            {
+                inTutorial = true;
+                TM.tutorialPanel.SetActive(false);
+                ToggleMenu();
+            }
+            
         }
 
         if(colourblindObject.GetComponent<IntroCutscene>())
@@ -209,7 +257,7 @@ public class MainMenuSettings : MonoBehaviour
     // Toggles menu during gameplay (Escape key / Resume Game Button)
     public void ToggleMenu()
     {
-        if(menuOpen = !menuOpen)
+        if (menuOpen = !menuOpen)
         {
             menuObject.SetActive(true);
             menuOpen = true;
@@ -222,6 +270,49 @@ public class MainMenuSettings : MonoBehaviour
             menuObject.SetActive(false);
             menuOpen = false;
             Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
+            if (inDialogue)
+            {
+                DM.dialogueZone.SetActive(true);
+                inDialogue = false;
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
+            }
+            if (inPinboard)
+            {
+                PM.pinBoard.SetActive(true);
+                inPinboard = false;
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
+            }
+            if (inInterrogation)
+            {
+                IM.interrogationPanel.SetActive(true);
+                inInterrogation = false;
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
+            }
+            if (inInventory)
+            {
+                inventoryManager.inventoryUI.SetActive(true);
+                inInventory = false;
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
+            }
+            if (inNotebook)
+            {
+                inventoryManager.notebook.SetActive(true);
+                inNotebook = false;
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
+            }
+            if (inTutorial)
+            {
+                TM.tutorialPanel.SetActive(true);
+                inTutorial = false;
+                Cursor.visible = true;
+                Cursor.lockState = CursorLockMode.None;
+            }
         }
 
         if(optionsMenu.activeInHierarchy)

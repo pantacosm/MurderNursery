@@ -8,10 +8,11 @@ public class NPCDialogue : MonoBehaviour
 {
     public DialogueNode[] dialogueTree = new DialogueNode[27]; //Creates the dialogue tree used to store nodes
     public bool isInteractable = false; //Used to signal if NPC is interactable
-    public bool inConversation; //Signals if player is in conversation
+    public bool inConversation = false; //Signals if player is in conversation
     public GameObject interactionMessage; //The message displayed to the player when in NPC interaction range 
     public GameObject manager;//Stores game manager
-    public Camera npcCam; //NPC specific camera 
+    public Camera npcCam; //NPC specific camera
+    public GameObject mainCam;
     public GameObject interrogationManager; //Stores interrogation manager
     public Sprite sprite; //NPC sprite
 
@@ -108,7 +109,9 @@ public class NPCDialogue : MonoBehaviour
         {
             if (!isInteractable && !interrogationManager.GetComponent<Interrogation>().interrogationUnderway) //Allows the player to leave conversation 
             {
-                manager.GetComponent<DialogueManager>().ExitConversation(); //Exits conversation with chosen NPC
+                //manager.GetComponent<DialogueManager>().ExitConversation(); //Exits conversation with chosen NPC
+               // npcCam.gameObject.SetActive(false);
+               // mainCam.SetActive(true);
                 textureToChange.SetTexture("_DetailAlbedoMap", defaultEmotion);
                 inConversation = false;
                 interactionMessage.SetActive(true);
@@ -119,6 +122,8 @@ public class NPCDialogue : MonoBehaviour
         else if (!inConversation && isInteractable) // start convo
         {
             manager.GetComponent<DialogueManager>().StartConversation(dialogueTree[0], this.gameObject, npcCam); //Enters dialogue with chosen NPC
+          //  mainCam.SetActive(false);
+          //  npcCam.gameObject.SetActive(true);
             inConversation = true;
             isInteractable = false;
             interactionMessage.SetActive(false);

@@ -65,6 +65,11 @@ public class ListeningDevice : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(inLD && currentCam.activeInHierarchy)
+        {
+            print("Turning off cam");
+            currentCam.SetActive(false);
+        }
         if (inRange && Input.GetKeyDown(KeyCode.E) && !inLD)
         {
             if (dressUpManager.GetComponent<DressUp>().activeOutfit == requiredOutfit)
@@ -329,6 +334,7 @@ public class ListeningDevice : MonoBehaviour
                     if(intoLD)
                     {
                         player.SetActive(false);
+                        
                     }
                     if (!intoLD)
                     {
@@ -352,6 +358,7 @@ public class ListeningDevice : MonoBehaviour
                     blackFade.gameObject.SetActive(false);
                     if (intoLD)
                     {
+                        currentCam.SetActive(false);
                         speechReading = true;
                         firstTextBox.SetActive(true);
                         firstTextBox.GetComponentInChildren<TextMeshProUGUI>().text = npcStatements[0];

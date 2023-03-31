@@ -86,7 +86,7 @@ public class DialogueManager : MonoBehaviour
     public bool inConvo = false; //Signals that the player is speaking to an NPC
     [HideInInspector]
     public DialogueNode activeNode; //Stores the currently displayed node
-    [HideInInspector]
+    
     public GameObject activeNPC; //Stores the currently active NPC
 
     //Position vectors for player response UI elements
@@ -269,6 +269,7 @@ public class DialogueManager : MonoBehaviour
             activeNode = startNode; //Updates the active node to the start node of the conversation
             LoadNodeInfo(startNode); //Loads the node information to the UI elements
         }
+
         if (activeNPC == eddie && eddieLastNode != null)
         {
             if (eddieLastNode != activeNPC.GetComponent<NPCDialogue>().interrogationNode)
@@ -288,7 +289,7 @@ public class DialogueManager : MonoBehaviour
         else if (activeNPC == eddie && !eddieMidConvo)
         {
             activeNode = startNode; //Updates the active node to the start node of the conversation
-          //  LoadNodeInfo(startNode); //Loads the node information to the UI elements
+            LoadNodeInfo(startNode); //Loads the node information to the UI elements
         }
         if(activeNPC == scarlet && scarletLastNode != null)
         {
@@ -323,8 +324,9 @@ public class DialogueManager : MonoBehaviour
             }
             //LoadBribeDialogue(startNode);
         }
-        else if (activeNPC == juiceBox && !juiceBoxMidConvo)
+        else if (activeNPC == juiceBox )//&& !juiceBoxMidConvo)
         {
+           //juiceBoxLastNode = startNode;
             activeNode = startNode; //Updates the active node to the start node of the conversation
             LoadNodeInfo(startNode); //Loads the node information to the UI elements
         }
@@ -360,12 +362,17 @@ public class DialogueManager : MonoBehaviour
     public void ExitConversation() //Is called when the conversation is exited
     {       
         player.SetActive(true);
+        activeNPC.GetComponent<NPCDialogue>().ToggleConversation();
+        //activeNPC.GetComponent<NPCDialogue>().inConversation = false;
         playerCam.gameObject.SetActive(true);
         currentNPCCam.gameObject.SetActive(false);
-        activeNPC = null;
+        
+        
         dialogueZone.SetActive(false);
         inConvo = false;
         ClearDialogue();
+        activeNPC = null;
+        activeNode = null;
     }
 
     public void LoadNodeInfo(DialogueNode newNode) //Loads the information of the new node
@@ -562,14 +569,14 @@ public class DialogueManager : MonoBehaviour
         }
        // MoveOptions(); //Alters the UI to fit the number of responses available
         firstNode = false; 
-        if (activeNode.briberyAvailable && !activeNode.bribeGiven) //Activates bribery option if applicable
-        {
-            briberyOption.SetActive(true);
-        }
-        else 
-        {
-            briberyOption.SetActive(false);
-        }
+      //  if (activeNode.briberyAvailable && !activeNode.bribeGiven) //Activates bribery option if applicable
+       // {
+         //   briberyOption.SetActive(true);
+        //}
+        //else 
+        //{
+          //  briberyOption.SetActive(false);
+        //}
         
         
 

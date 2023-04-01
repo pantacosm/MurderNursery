@@ -109,7 +109,7 @@ public class NPCDialogue : MonoBehaviour
         {
             if (!isInteractable && !interrogationManager.GetComponent<Interrogation>().interrogationUnderway) //Allows the player to leave conversation 
             {
-                //manager.GetComponent<DialogueManager>().ExitConversation(); //Exits conversation with chosen NPC
+                
                // npcCam.gameObject.SetActive(false);
                // mainCam.SetActive(true);
                 textureToChange.SetTexture("_DetailAlbedoMap", defaultEmotion);
@@ -117,6 +117,7 @@ public class NPCDialogue : MonoBehaviour
                 interactionMessage.SetActive(true);
                 manager.GetComponent<DialogueManager>().briberyPanel.SetActive(false);
                 Cursor.visible = false;
+                manager.GetComponent<DialogueManager>().ExitConversation(); //Exits conversation with chosen NPC
             }
         }
         else if (!inConversation && isInteractable) // start convo

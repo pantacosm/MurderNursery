@@ -50,6 +50,7 @@ public class ListeningDevice : MonoBehaviour
     public int convoID;
     private bool speechReading = false;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -65,16 +66,16 @@ public class ListeningDevice : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(inLD && currentCam.activeInHierarchy)
-        {
-            print("Turning off cam");
-            currentCam.SetActive(false);
-        }
+       // if(inLD && currentCam.activeInHierarchy)
+        //{
+          //  print("Turning off cam");
+            //currentCam.SetActive(false);
+        //}
         if (inRange && Input.GetKeyDown(KeyCode.E) && !inLD)
         {
             if (dressUpManager.GetComponent<DressUp>().activeOutfit == requiredOutfit)
             {
-                
+                inLD = true;
                 StartListening();
             }
             else
@@ -308,6 +309,7 @@ public class ListeningDevice : MonoBehaviour
     private void StartListening()
     {
         print("calling");
+        player.GetComponent<PlayerMovement>().inLD = true;
         StartCoroutine(BlackTransition(currentCam, desiredCam, true));
         StartCoroutine(WaitForSeconds(true));
     }
@@ -364,7 +366,7 @@ public class ListeningDevice : MonoBehaviour
                         firstTextBox.GetComponentInChildren<TextMeshProUGUI>().text = npcStatements[0];
                         progress = 1;
                         speechReading = false;
-                        inLD = true;
+                        //inLD = true;
                     }
                     
                     yield return null;
@@ -416,6 +418,7 @@ public class ListeningDevice : MonoBehaviour
         convoProgress = 0;
         progress = 0;
         speechReading = false;
+        player.GetComponent<PlayerMovement>().inLD = false;
 
     }
     

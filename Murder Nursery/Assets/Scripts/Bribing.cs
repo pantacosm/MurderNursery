@@ -28,11 +28,16 @@ public class Bribing : MonoBehaviour // Script is added to SingleBribe UI OBject
     }
     public void AttemptBribeButton() //Called when the player attempts to bribe an NPC using the first bribe slot 
     {
-
-        if(gameObject.name == activeNPC.GetComponent<NPCDialogue>().bribeItem)
+        if(manager.GetComponent<DialogueManager>().activeNPC.GetComponent<NPCDialogue>().bribeGiven)
+        {
+            manager.GetComponent<DialogueManager>().LoadBribeDialogue(activeNPC.GetComponent<NPCDialogue>().bribePath);
+            bribePanel.SetActive(false); //Deactivates the bribe panel
+        }
+        if(gameObject.name == activeNPC.GetComponent<NPCDialogue>().bribeItem && !manager.GetComponent<DialogueManager>().activeNPC.GetComponent<NPCDialogue>().bribeGiven)
         {
             manager.GetComponent<DialogueManager>().activeNode.bribeGiven = true; //Signals that the bribe has been accepted
-            manager.GetComponent<DialogueManager>().StartConversation(activeNPC.GetComponent<NPCDialogue>().bribePath, activeNPC, activeNPC.GetComponent<NPCDialogue>().npcCam);//Loads the relevant dialogue node 
+            manager.GetComponent<DialogueManager>().LoadBribeDialogue(activeNPC.GetComponent<NPCDialogue>().bribePath);
+            manager.GetComponent<DialogueManager>().activeNPC.GetComponent<NPCDialogue>().bribeGiven = true;
             bribePanel.SetActive(false); //Deactivates the bribe panel
 
             // remove item from bribery items panel

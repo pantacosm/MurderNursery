@@ -143,7 +143,7 @@ public class DialogueManager : MonoBehaviour
     public GameObject pinBoardManager;
     ReputationManager RM;
 
-    private bool firsrBribe = true;
+    private bool firstBribe = true;
     private bool firstInterrogation = true;
     public GameObject tutorialManager;
 
@@ -344,13 +344,13 @@ public class DialogueManager : MonoBehaviour
     }
 
     // Called after attempting to bribe an NPC (StartConversation)
-    void LoadBribeDialogue(DialogueNode bribeNode)
+    public void LoadBribeDialogue(DialogueNode bribeNode)
     {
-        if (bribeNode == activeNPC.GetComponent<NPCDialogue>().bribePath) // load bribe successful dialogue
-        {
+        npcStatement.GetComponent<TextMeshProUGUI>().text = bribeNode.speech;
             activeNode = bribeNode;
             LoadNodeInfo(bribeNode);
-        }
+       // UpdateRollingText();
+        //}
 
         if (bribeNode == activeNPC.GetComponent<NPCDialogue>().bribeFailPath) // load bribe failed dialogue
         {
@@ -569,10 +569,10 @@ public class DialogueManager : MonoBehaviour
         }
        // MoveOptions(); //Alters the UI to fit the number of responses available
         firstNode = false; 
-      //  if (activeNode.briberyAvailable && !activeNode.bribeGiven) //Activates bribery option if applicable
-       // {
-         //   briberyOption.SetActive(true);
-        //}
+       if (activeNode.briberyAvailable && !activeNode.bribeGiven) //Activates bribery option if applicable
+        {
+           briberyOption.SetActive(true);
+        }
         //else 
         //{
           //  briberyOption.SetActive(false);
@@ -719,32 +719,40 @@ public class DialogueManager : MonoBehaviour
 
     public void Bribery() // Activates the bribery panel and updates it depending on what items the player possesses
     {
-        //dialogueZone.SetActive(false);
-        if(firsrBribe)
+        if (!activeNPC.GetComponent<NPCDialogue>().bribeGiven)
         {
-            Time.timeScale = 0;
-            tutorialManager.GetComponent<Tutorials>().ActivateTutorial(tutorialManager.GetComponent<Tutorials>().bribeTutorial);
-            firsrBribe = false;
-        }
-        briberyPanel.SetActive(true);
-        //bribe.gameObject.SetActive(false);
-        //item1.gameObject.SetActive(false);
-        //item2.gameObject.SetActive(false);
-
-        // loop through all items in inventory & check if they are a bribery item, if so: add to bribery items panel
-        for (int i = 0; i < inventoryManager.GetComponent<InventoryManager>().items.Count ; i++)
-        {
-            if(inventoryManager.GetComponent<InventoryManager>().items[i].itemType == Item.ItemType.Bribery)
+            //dialogueZone.SetActive(false);
+            if (firstBribe)
             {
-                if(!briberyContent.Find(inventoryManager.GetComponent<InventoryManager>().items[i].itemName))
+                Time.timeScale = 0;
+                tutorialManager.GetComponent<Tutorials>().ActivateTutorial(tutorialManager.GetComponent<Tutorials>().bribeTutorial);
+                firstBribe = false;
+            }
+            briberyPanel.SetActive(true);
+            //bribe.gameObject.SetActive(false);
+            //item1.gameObject.SetActive(false);
+            //item2.gameObject.SetActive(false);
+
+            // loop through all items in inventory & check if they are a bribery item, if so: add to bribery items panel
+            for (int i = 0; i < inventoryManager.GetComponent<InventoryManager>().items.Count; i++)
+            {
+                if (inventoryManager.GetComponent<InventoryManager>().items[i].itemType == Item.ItemType.Bribery)
                 {
-                    bribeItem = Instantiate(bribe, briberyContent);
-                    bribeItem.GetComponent<Image>().sprite = inventoryManager.GetComponent<InventoryManager>().items[i].icon;
-                    bribeItem.name = inventoryManager.GetComponent<InventoryManager>().items[i].itemName;
-                    bribeItem.GetComponent<Bribing>().StoreInfo(inventoryManager.GetComponent<InventoryManager>().items[i]);
-                    bribeItem.SetActive(true);
+                    if (!briberyContent.Find(inventoryManager.GetComponent<InventoryManager>().items[i].itemName))
+                    {
+                        bribeItem = Instantiate(bribe, briberyContent);
+                        bribeItem.GetComponent<Image>().sprite = inventoryManager.GetComponent<InventoryManager>().items[i].icon;
+                        bribeItem.name = inventoryManager.GetComponent<InventoryManager>().items[i].itemName;
+                        bribeItem.GetComponent<Bribing>().StoreInfo(inventoryManager.GetComponent<InventoryManager>().items[i]);
+                        bribeItem.SetActive(true);
+                    }
                 }
             }
+        }
+
+        if(activeNPC.GetComponent<NPCDialogue>().bribeGiven)
+        {
+            LoadBribeDialogue(activeNPC.GetComponent<NPCDialogue>().bribePath);
         }
         
         //if(inventoryManager.GetComponent<InventoryManager>().items.Count == 4)

@@ -100,6 +100,8 @@ public class Conclusion : MonoBehaviour
     private string trueEnd18 = "Well what do we say kids, do we forgive 'em?";
     private string trueEnd19 = "Well, I thank ya for your honesty, Grace! I'm sorry to hear about your old friends at the other nursery... but we're nothing like that, see! We're all besties here, really. ";
     private string trueEnd20 = "And we'll all go to the big school together and live happily ever after where there's endless toys and even more new besties to make! Thanks for solvin' the case, detective! Take my hand Grace, let's go get your dress fixed up!!";
+
+    public bool inEnding = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -110,10 +112,11 @@ public class Conclusion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.C) && endingReady) //Temporary ending trigger
+        if(Input.GetKeyDown(KeyCode.C) && endingReady && !inEnding) //Temporary ending trigger
         {
             StartConclusion();
             hintMessage.SetActive(false);
+            inEnding = true;
 
         }
         if(Input.GetKeyUp(KeyCode.Return) && dialogueActive)

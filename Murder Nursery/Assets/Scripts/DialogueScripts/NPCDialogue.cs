@@ -32,6 +32,7 @@ public class NPCDialogue : MonoBehaviour
     public string bribeItem; //Bribe item required
     public DialogueNode bribePath; //Successful bribe dialogue path
     public DialogueNode bribeFailPath; //Unsuccessful bribe dialogue path
+    public bool bribeGiven = false;
 
     public DialogueNode interrogationNode;
     public DialogueNode introNode;
@@ -47,6 +48,8 @@ public class NPCDialogue : MonoBehaviour
     public bool reEv3Found = false;
     public bool reEv4Found = false;
     public bool reEv5Found = false;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -68,7 +71,7 @@ public class NPCDialogue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.E) && isInteractable && !MagnifyingGlass.magnifyingGlass.usingMagnifyingGlass)
+        if(Input.GetKeyDown(KeyCode.E) && isInteractable )//&& !MagnifyingGlass.magnifyingGlass.usingMagnifyingGlass)
         {
             ToggleConversation();
         }
@@ -82,7 +85,7 @@ public class NPCDialogue : MonoBehaviour
 
     public void OnTriggerEnter(Collider other) 
     {
-        if (other.name == "DetectiveDrew" && !MagnifyingGlass.magnifyingGlass.usingMagnifyingGlass)//Detects collison with the player object 
+        if (other.name == "DetectiveDrew" )//&& !MagnifyingGlass.magnifyingGlass.usingMagnifyingGlass)//Detects collison with the player object 
         {
             isInteractable = true;
             interactionMessage.SetActive(true); //Activates NPC interaction messages

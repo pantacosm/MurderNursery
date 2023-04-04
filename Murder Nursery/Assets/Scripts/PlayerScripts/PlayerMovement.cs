@@ -47,6 +47,9 @@ public class PlayerMovement : MonoBehaviour
 
     bool inspectingItem;
 
+    public bool inLD = false;
+    public GameObject conclusionManager;
+
     private void Awake()
     {
         controller = gameObject.GetComponent<CharacterController>();
@@ -100,7 +103,7 @@ public class PlayerMovement : MonoBehaviour
         if (inventory.UIVisibility.inventoryOpen || inventory.UIVisibility.pinboardOpen 
             || dialogueZone.activeInHierarchy || manager.GetComponent<SceneTransition>().interrogationActive 
             || inventory.UIVisibility.jotterOpen || dressUpManager.GetComponent<DressUp>().inDressUp || introCam.GetComponent<IntroCutscene>().inIntro
-            || menu.menuOpen || mgCamTransitioning || inspectingItem || inventory.UIVisibility.notebookOpen)
+            || menu.menuOpen || mgCamTransitioning || inspectingItem || inventory.UIVisibility.notebookOpen || inLD || conclusionManager.GetComponent<Conclusion>().inEnding)
         {
             animator.Play("Idle");
             animator.SetFloat("Velocity", 0);

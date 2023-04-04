@@ -59,7 +59,7 @@ MonoBehaviour:
   interrogationNode: 0
   exitNode: 1
   nodeVisited: 0
-  briberyAvailable: 0
+  briberyAvailable: 1
   fitCheck: 0
   evidenceToDiscover: {fileID: 0}
   lockingNode: 0

@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class NPCDialogue : MonoBehaviour
 {
+
     public DialogueNode[] dialogueTree = new DialogueNode[27]; //Creates the dialogue tree used to store nodes
     public bool isInteractable = false; //Used to signal if NPC is interactable
     public bool inConversation = false; //Signals if player is in conversation
@@ -47,10 +48,6 @@ public class NPCDialogue : MonoBehaviour
     public bool reEv4Found = false;
     public bool reEv5Found = false;
 
-    public void Awake()
-    {
-        
-    }
     // Start is called before the first frame update
     void Start()
     {
@@ -71,7 +68,7 @@ public class NPCDialogue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.E) && isInteractable)
+        if(Input.GetKeyDown(KeyCode.E) && isInteractable && !MagnifyingGlass.magnifyingGlass.usingMagnifyingGlass)
         {
             ToggleConversation();
         }
@@ -85,7 +82,7 @@ public class NPCDialogue : MonoBehaviour
 
     public void OnTriggerEnter(Collider other) 
     {
-        if (other.name == "DetectiveDrew")//Detects collison with the player object 
+        if (other.name == "DetectiveDrew" && !MagnifyingGlass.magnifyingGlass.usingMagnifyingGlass)//Detects collison with the player object 
         {
             isInteractable = true;
             interactionMessage.SetActive(true); //Activates NPC interaction messages

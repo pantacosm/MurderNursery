@@ -6,10 +6,11 @@ public class EndingChecker : MonoBehaviour //THIS SCRIPT WILL BE REWORKED SOON
 {
     public GameObject conclusionManager; //Stores the game manager
     public GameObject endingText; //Stores the ending method 
+    public GameObject magGlass;
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == "DetectiveDrew")
+        if (other.gameObject.name == "DetectiveDrew" && !magGlass.GetComponent<MagnifyingGlass>().usingMagnifyingGlass)
         {
             endingText.SetActive(true);
             conclusionManager.GetComponent<Conclusion>().endingReady = true;

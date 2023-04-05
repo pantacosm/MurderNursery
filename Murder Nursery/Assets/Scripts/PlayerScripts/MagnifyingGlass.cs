@@ -5,7 +5,6 @@ using TMPro;
 
 public class MagnifyingGlass : MonoBehaviour
 {
-    public static MagnifyingGlass magnifyingGlass;
     PinboardManager PM;
 
     [HideInInspector]
@@ -28,17 +27,22 @@ public class MagnifyingGlass : MonoBehaviour
     [SerializeField]
     GameObject storeItemText; // text pop up to inform player they can pick up the evidence
 
+    [SerializeField]
+    GameObject fingerprintUI; // check that it is not currently active before toggling mag glass
+
+    [SerializeField]
+    GameObject dresserBox; // check which outfit is active
+
 
 
     private void Start()
     {
-        magnifyingGlass = this;
         PM = FindObjectOfType<PinboardManager>();
     }
 
     private void Update()
     {
-        if(Input.GetKeyUp(KeyCode.E) && evidenceItem)
+        if(Input.GetKeyUp(KeyCode.E) && evidenceItem && evidenceItem.activeInHierarchy)
         {
             GameObject evidenceUI = evidenceItem.GetComponent<EvidenceItem>().evidenceToAdd; // evidence to add to pinboard
             storeItemText.SetActive(false);
@@ -71,22 +75,48 @@ public class MagnifyingGlass : MonoBehaviour
     // toggles a magnifying glass to be used for finding evidence
     public void ToggleMagnifyingGlass() 
     {
+        if(dresserBox.GetComponent<DressUp>().activeOutfit == "Detective Outfit")
         {
-            if(usingMagnifyingGlass = !usingMagnifyingGlass)
+            if(evidenceItem)
             {
-                usingMagnifyingGlass = true;
-                thirdPersonCam.SetActive(false);
-                firstPersonCam.SetActive(true);
-                gameObject.SetActive(true);
-                magnifyingBlur.SetActive(true);   
+                if(!evidenceItem.GetComponent<EvidenceItem>().inspectingItem)
+                {
+                    if(usingMagnifyingGlass = !usingMagnifyingGlass && !fingerprintUI.activeInHierarchy)
+                    {
+                        usingMagnifyingGlass = true;
+                        thirdPersonCam.SetActive(false);
+                        firstPersonCam.SetActive(true);
+                        gameObject.SetActive(true);
+                        magnifyingBlur.SetActive(true);   
+                    }
+                    else
+                    {
+                        usingMagnifyingGlass = false;
+                        firstPersonCam.SetActive(false);
+                        thirdPersonCam.SetActive(true);
+                        magnifyingBlur.SetActive(false);
+                        storeItemText.SetActive(false);
+                    }
+                }
             }
             else
             {
-                usingMagnifyingGlass = false;
-                firstPersonCam.SetActive(false);
-                thirdPersonCam.SetActive(true);
-                magnifyingBlur.SetActive(false);
-                storeItemText.SetActive(false);
+                if(usingMagnifyingGlass = !usingMagnifyingGlass && !fingerprintUI.activeInHierarchy)
+                {
+                    usingMagnifyingGlass = true;
+                    thirdPersonCam.SetActive(false);
+                    firstPersonCam.SetActive(true);
+                    gameObject.SetActive(true);
+                    magnifyingBlur.SetActive(true);   
+                }
+                else
+                {
+                    usingMagnifyingGlass = false;
+                    firstPersonCam.SetActive(false);
+                    thirdPersonCam.SetActive(true);
+                    magnifyingBlur.SetActive(false);
+                    storeItemText.SetActive(false);
+                }
             }
         }
     }

@@ -11,7 +11,7 @@ public class Fingerprint : MonoBehaviour
 
     public GameObject fingerprintUI; // UI to compare fingerprints
     public GameObject fingerprintFound;
-
+    public GameObject evidenceItem;
 
     // Update is called once per frame
     void Update()
@@ -26,12 +26,11 @@ public class Fingerprint : MonoBehaviour
                 {
                     if(hit.transform.name == "Fingerprint")
                     {
-                        EvidenceItem.evidenceItem.helpText.SetActive(false);
+                        evidenceItem.GetComponentInParent<EvidenceItem>().helpText.SetActive(false);
                         fingerprintFound.name = ownerFingerprint;
                         Sprite fpSprite = gameObject.GetComponent<SpriteRenderer>().sprite;
                         fingerprintFound.GetComponent<Image>().sprite = fpSprite;
                         fingerprintUI.SetActive(true);
-                        //gameObject.GetComponentInParent<EvidenceItem>().gameObject.SetActive(false);
                     }
                 }
             }

@@ -8,6 +8,7 @@ public class ItemPickUp : MonoBehaviour
     [SerializeField]
     Item item;
     public GameObject text;
+    public GameObject magGlass;
 
     private bool canPickUp;
 
@@ -22,7 +23,7 @@ public class ItemPickUp : MonoBehaviour
     private void Update()
     {
         // once we are in range of an items trigger & press E, the item is added to the players inventory
-        if(Input.GetKeyUp(KeyCode.E) && canPickUp)
+        if(Input.GetKeyUp(KeyCode.E) && canPickUp && !magGlass.GetComponent<MagnifyingGlass>().usingMagnifyingGlass)
         {
             PickUp();
             text.SetActive(false);
@@ -31,7 +32,7 @@ public class ItemPickUp : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Player")
+        if(other.gameObject.tag == "Player" && !magGlass.GetComponent<MagnifyingGlass>().usingMagnifyingGlass)
         {
             canPickUp = true;
             text.GetComponent<TextMeshProUGUI>().text = "Press [E] to pick up " + item.name;

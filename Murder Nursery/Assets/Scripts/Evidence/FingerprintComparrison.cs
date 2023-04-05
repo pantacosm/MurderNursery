@@ -26,6 +26,7 @@ public class FingerprintComparrison : MonoBehaviour
     public AudioClip sfxAudioClip;
 
     private GameObject evidenceItem;
+    private bool comparingFingerprint;
 
     public void CloseFingerprintUI()
     {
@@ -38,14 +39,15 @@ public class FingerprintComparrison : MonoBehaviour
 
     public void CompareFingerprints()
     {
-        if(fingerprintFound.name == gameObject.name)
+        if(fingerprintFound.name == gameObject.name && !comparingFingerprint)
         {
-            
+            comparingFingerprint = true;
             particleLight.GetComponent<ParticleSystem>().Play();
             StartCoroutine(StopLightParticle(3f));
         }
-        else
+        else if(!comparingFingerprint)
         {
+            comparingFingerprint = true;
             incorrectMatchText.SetActive(true);
             StartCoroutine(HideText(2f));
         }
@@ -63,6 +65,7 @@ public class FingerprintComparrison : MonoBehaviour
         if(time >= duration)
         {
             incorrectMatchText.SetActive(false);
+            comparingFingerprint = false;
         }
     }
 
@@ -82,6 +85,7 @@ public class FingerprintComparrison : MonoBehaviour
             sfxAudio.PlayOneShot(sfxAudioClip, 0.2f);
             StartCoroutine(StopStarParticle(1f));
             correctMatchText.SetActive(true);
+            comparingFingerprint = false;
         }
     }
 

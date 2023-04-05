@@ -43,6 +43,7 @@ public class DressUp : MonoBehaviour
 
     private bool firstDressUP = true;
     public GameObject tutorialManager;
+    public GameObject magGlass;
     
     // Start is called before the first frame update
     void Start()
@@ -62,7 +63,7 @@ public class DressUp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (interactable && Input.GetKeyDown(KeyCode.E)) //Allows the player to open the dress up menu 
+        if (interactable && Input.GetKeyDown(KeyCode.E) && !magGlass.GetComponent<MagnifyingGlass>().usingMagnifyingGlass) //Allows the player to open the dress up menu 
         {
             if(firstDressUP)
             {
@@ -185,7 +186,7 @@ public class DressUp : MonoBehaviour
     }
     public void OnTriggerEnter(Collider other) //Used to detect if the player is within range of the dress up box
     {
-        if (other.gameObject.name == "DetectiveDrew")
+        if (other.gameObject.name == "DetectiveDrew" && !magGlass.GetComponent<MagnifyingGlass>().usingMagnifyingGlass)
         {
             interactable = true;
             interactableText.SetActive(true);
@@ -194,9 +195,11 @@ public class DressUp : MonoBehaviour
 
     public void OnTriggerExit(Collider other)
     {
-        
+        if(other.gameObject.name == "DetectiveDrew")
+        {
             interactable = false;
             interactableText.SetActive(false);
+        }
         
     }
 

@@ -15,6 +15,7 @@ public class NPCDialogue : MonoBehaviour
     public Camera npcCam; //NPC specific camera
     public GameObject mainCam;
     public GameObject interrogationManager; //Stores interrogation manager
+    public GameObject magnifyingGlass;
     public Sprite sprite; //NPC sprite
 
     [Header("Emotions")]
@@ -71,7 +72,7 @@ public class NPCDialogue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.E) && isInteractable )//&& !MagnifyingGlass.magnifyingGlass.usingMagnifyingGlass)
+        if(Input.GetKeyDown(KeyCode.E) && isInteractable && !magnifyingGlass.GetComponent<MagnifyingGlass>().usingMagnifyingGlass)
         {
             ToggleConversation();
         }
@@ -85,7 +86,7 @@ public class NPCDialogue : MonoBehaviour
 
     public void OnTriggerEnter(Collider other) 
     {
-        if (other.name == "DetectiveDrew" )//&& !MagnifyingGlass.magnifyingGlass.usingMagnifyingGlass)//Detects collison with the player object 
+        if (other.name == "DetectiveDrew" && !magnifyingGlass.GetComponent<MagnifyingGlass>().usingMagnifyingGlass)//Detects collison with the player object 
         {
             isInteractable = true;
             interactionMessage.SetActive(true); //Activates NPC interaction messages

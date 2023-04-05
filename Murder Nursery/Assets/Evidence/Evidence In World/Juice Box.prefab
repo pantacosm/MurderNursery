@@ -5033,6 +5033,6 @@ MonoBehaviour:
   item: {fileID: 11400000, guid: 6f45e92407349f541afb6636d20c22c3, type: 2}
   evidenceToAdd: {fileID: 8463248180559462931, guid: 525bde82cde0e924a8e6da4a48f75428, type: 3}
   inspectPos: {fileID: 0}
-  rotationSpeed: 0.3
+  rotationSpeed: 0.5
   helpText: {fileID: 0}
   inspectingItem: 0

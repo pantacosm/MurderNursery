@@ -12,6 +12,7 @@ public class DialogueManager : MonoBehaviour
     public GameObject dialogueZone; //Canvas object containing all dialogue UI elements
     public GameObject briberyOption; //UI object for the briber button
     public GameObject briberyPanel; //Canvas object containing all bribery UI elements
+    public GameObject dresserBox; // check active outfit
     public Image repGainSprite; //Sprite displayed when reputation is gained
     public Image repLossSprite; //Sprite displayed when reputation is lost
     //public Image item1; //Image for first possible bribe
@@ -711,9 +712,12 @@ public class DialogueManager : MonoBehaviour
     }
 
     public void EnterInterrogation(GameObject targetNPC) //Enters an interrogation 
-    {       
-        ExitConversation();
-        manager.GetComponent<SceneTransition>().ChangeToInterrogation(targetNPC);
+    {   
+        if(dresserBox.GetComponent<DressUp>().activeOutfit == "Detective Outfit")
+        {
+            ExitConversation();
+            manager.GetComponent<SceneTransition>().ChangeToInterrogation(targetNPC);
+        }
     }
 
 

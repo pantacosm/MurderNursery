@@ -44,6 +44,11 @@ public class DressUp : MonoBehaviour
     private bool firstDressUP = true;
     public GameObject tutorialManager;
     public GameObject magGlass;
+
+    public GameObject inventoryManager;
+    public Item magnifyingGlass;
+
+    public bool outfitChanging = false;
     
     // Start is called before the first frame update
     void Start()
@@ -102,6 +107,8 @@ public class DressUp : MonoBehaviour
 
     public void ChangeToArtistOutfit() //Changes the player's current outfit to the artist outfit
     {
+        outfitChanging = true;
+       // inventoryManager.GetComponent<InventoryManager>().RemoveItem(magnifyingGlass);
         activeOutfit = "Artist Outfit";
         print("You are now wearing the " + activeOutfit);
         UpdateOutfitChoices(artistButton);
@@ -119,6 +126,7 @@ public class DressUp : MonoBehaviour
 
     public void ChangeToPunkOutfit() //Changes the player's current outfit to the wizard outfit 
     {
+        
         activeOutfit = "Punk Outfit";
         print("You are now wearing the " + activeOutfit);
         UpdateOutfitChoices(punkButton);
@@ -134,6 +142,7 @@ public class DressUp : MonoBehaviour
 
     public void ChangeToGangsterOutfit() //Changes the player's current outfit to the gangster outfit
     {
+        
         activeOutfit = "Gangster Outfit";
         print("You are now wearing the " + activeOutfit);
         UpdateOutfitChoices(gangsterButton);
@@ -148,6 +157,7 @@ public class DressUp : MonoBehaviour
 
     public void ChangeToDetectiveOutfit() //Changes the player's current outfit to the detective outfit 
     {
+        inventoryManager.GetComponent<InventoryManager>().AddItem(magnifyingGlass);
         activeOutfit = "Detective Outfit";
         print("You are now wearing the " + activeOutfit);
         UpdateOutfitChoices(detectiveButton);

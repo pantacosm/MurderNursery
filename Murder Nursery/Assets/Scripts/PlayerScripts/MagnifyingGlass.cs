@@ -33,7 +33,7 @@ public class MagnifyingGlass : MonoBehaviour
     [SerializeField]
     GameObject dresserBox; // check which outfit is active
 
-
+    
 
     private void Start()
     {
@@ -101,7 +101,7 @@ public class MagnifyingGlass : MonoBehaviour
             }
             else
             {
-                if(usingMagnifyingGlass = !usingMagnifyingGlass && !fingerprintUI.activeInHierarchy)
+                if(!usingMagnifyingGlass && !fingerprintUI.activeInHierarchy)
                 {
                     usingMagnifyingGlass = true;
                     thirdPersonCam.SetActive(false);
@@ -161,5 +161,12 @@ public class MagnifyingGlass : MonoBehaviour
         }
     }
 
-    
+    public bool OutfitCheck()
+    {
+        if (dresserBox.GetComponent<DressUp>().activeOutfit == "Detective Outfit")
+        {
+            return true;
+        }
+        else return false;
+    }
 }

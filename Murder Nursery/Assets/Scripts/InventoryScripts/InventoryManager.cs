@@ -21,7 +21,7 @@ public class InventoryManager : MonoBehaviour
     Item jotter; //Stores the jotter for the player inventory
 
     [SerializeField]
-    Item mGlass; // Stores the magnifying glass in the player inventory
+    public Item mGlass; // Stores the magnifying glass in the player inventory
 
     [SerializeField]
     Item listeningDevice;

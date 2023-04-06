@@ -4,21 +4,47 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using TMPro;
+using Unity.VisualScripting;
 
 public class ItemManager : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public Item item;
     public GameObject itemTooltip;
     public GameObject notebook;
+    
 
     //private bool firstMG = true;
     //private bool firstFP = true;
     public GameObject tutorialManager;
+    public string currentOutfit = null;
+
+    public GameObject dressUp;
+    private bool outfitChanging = false;
 
     public void Start()
     {
         tutorialManager = InventoryManager.inventory.tutorialPanel;
+        dressUp = GameObject.FindGameObjectWithTag("Dress Up Manager");
+        
+    }
 
+    public void Update()
+    {
+        
+        if (dressUp.GetComponent<DressUp>().outfitChanging)
+        {
+            if(dressUp.GetComponent<DressUp>().activeOutfit == "Artist Outfit" && this.gameObject.name == "Magnifying Glass")
+            {
+                RemoveItem();
+                dressUp.GetComponent<DressUp>().outfitChanging = false;
+            }
+            if(dressUp.GetComponent<DressUp>().activeOutfit == "Detective Outfit")
+            {
+                AddItem(InventoryManager.inventory.mGlass);
+                dressUp.GetComponent<DressUp>().outfitChanging = false;
+
+            }
+        }
     }
     // Called from inventory manager when an item is picked up
     public void AddItem(Item newItem)
@@ -31,6 +57,12 @@ public class ItemManager : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
     {
         InventoryManager.inventory.RemoveItem(item);
         Destroy(gameObject);
+    }
+
+    public void RemoveItem(Item toRemove)
+    {
+        InventoryManager.inventory.RemoveItem(toRemove);
+        Destroy(toRemove);
     }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -62,10 +94,14 @@ public class ItemManager : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
                 //    tutorialManager.GetComponent<Tutorials>().ActivateTutorial(tutorialManager.GetComponent<Tutorials>().magnifyingGlassTutorial);
                 //    firstMG = false;
                 //}
-                InventoryManager.inventory.MG.GetComponent<MagnifyingGlass>().ToggleMagnifyingGlass();
-                InventoryManager.inventory.Player.GetComponent<PlayerMovement>().StartMGCamTransition(); // starts a coroutine which stops player movement whilst active
-                InventoryManager.inventory.UIVisibility.ToggleInventory();
-                itemTooltip.SetActive(false);
+                if (InventoryManager.inventory.MG.GetComponent<MagnifyingGlass>().OutfitCheck())
+                {
+                    InventoryManager.inventory.MG.GetComponent<MagnifyingGlass>().ToggleMagnifyingGlass();
+                    InventoryManager.inventory.Player.GetComponent<PlayerMovement>().StartMGCamTransition(); // starts a coroutine which stops player movement whilst active
+                    InventoryManager.inventory.UIVisibility.ToggleInventory();
+                    itemTooltip.SetActive(false);
+                }
+                
                 break;
             case Item.ItemType.PinBoard:
                 InventoryManager.inventory.UIVisibility.TogglePinboard();

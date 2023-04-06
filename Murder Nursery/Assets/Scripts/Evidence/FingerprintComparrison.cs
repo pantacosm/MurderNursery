@@ -39,8 +39,9 @@ public class FingerprintComparrison : MonoBehaviour
 
     public void CompareFingerprints()
     {
-        if(fingerprintFound.name == gameObject.name && !comparingFingerprint)
+        if(fingerprintFound.name == gameObject.name && !comparingFingerprint) // correct match
         {
+            evidenceItem = EvidenceItem.evidenceItem.gameObject;
             comparingFingerprint = true;
             particleLight.GetComponent<ParticleSystem>().Play();
             StartCoroutine(StopLightParticle(3f));
@@ -100,7 +101,6 @@ public class FingerprintComparrison : MonoBehaviour
 
         if(time >= duration)
         {
-            evidenceItem = GameObject.FindGameObjectWithTag("Evidence Item");
             evidenceItem.GetComponent<EvidenceItem>().inspectingItem = false;
             InventoryManager.inventory.AddItem(evidenceItem.GetComponent<EvidenceItem>().item);
             InventoryManager.inventory.MG.GetComponent<MagnifyingGlass>().gameObject.SetActive(true);

@@ -23,7 +23,6 @@ public class EvidenceItem : MonoBehaviour
 
     private void Start()
     {
-        evidenceItem = this;
         screenWidth = Screen.width;
         screenHeight = Screen.height;
     }
@@ -85,6 +84,11 @@ public class EvidenceItem : MonoBehaviour
         {
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.Confined;            
+        }
+
+        if(gameObject.GetComponent<MeshRenderer>().enabled == true && gameObject.activeInHierarchy)
+        {
+            evidenceItem = this;
         }
     }
 }

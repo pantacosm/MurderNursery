@@ -3009,7 +3009,7 @@ PrefabInstance:
       objectReference: {fileID: 1577941008}
     - target: {fileID: 4568034759140132301, guid: ebb90e1548a956b4eb56730de88cc8c1, type: 3}
       propertyPath: m_Transitions.m_BlendHint
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4568034759140132301, guid: ebb90e1548a956b4eb56730de88cc8c1, type: 3}
       propertyPath: m_Transitions.m_InheritPosition
@@ -42060,7 +42060,7 @@ MonoBehaviour:
   m_UpdateMethod: 2
   m_BlendUpdateMethod: 1
   m_DefaultBlend:
-    m_Style: 1
+    m_Style: 0
     m_Time: 2
     m_CustomCurve:
       serializedVersion: 2
@@ -58257,6 +58257,82 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1342983583}
   m_CullTransparentMesh: 1
+--- !u!1 &1344957444
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1344957445}
+  - component: {fileID: 1344957447}
+  - component: {fileID: 1344957446}
+  m_Layer: 5
+  m_Name: BlackFade
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1344957445
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1344957444}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1430613555}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 960.42944, y: 540.005}
+  m_SizeDelta: {x: 3924.0796, y: 2160}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1344957446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1344957444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1344957447
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1344957444}
+  m_CullTransparentMesh: 1
 --- !u!4 &1345471538 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2506754139236650972, guid: 44d7c5b01ec9a2543a99e6deac05f12b, type: 3}
@@ -61383,6 +61459,7 @@ RectTransform:
   - {fileID: 828187132}
   - {fileID: 1850437235}
   - {fileID: 1794931657}
+  - {fileID: 1344957445}
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -78248,6 +78325,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1873391627, guid: d0cb675e33a19c44e83d23d11a6859c0, type: 3}
+      propertyPath: blackFade
+      value: 
+      objectReference: {fileID: 1344957446}
+    - target: {fileID: 1873391627, guid: d0cb675e33a19c44e83d23d11a6859c0, type: 3}
       propertyPath: dresserBox
       value: 
       objectReference: {fileID: 1453228940}
@@ -78329,12 +78410,16 @@ PrefabInstance:
       objectReference: {fileID: 1577941008}
     - target: {fileID: 2219632351807409586, guid: d0cb675e33a19c44e83d23d11a6859c0, type: 3}
       propertyPath: m_Transitions.m_BlendHint
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2219632351807409586, guid: d0cb675e33a19c44e83d23d11a6859c0, type: 3}
       propertyPath: m_Transitions.m_InheritPosition
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2219632351807409587, guid: d0cb675e33a19c44e83d23d11a6859c0, type: 3}
+      propertyPath: XYAxis
+      value: 
+      objectReference: {fileID: 481483000790925577, guid: 535c0d4a4da4a2f4b8ca265bfc88d9d2, type: 3}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: d0cb675e33a19c44e83d23d11a6859c0, type: 3}
@@ -91621,6 +91706,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 508265362}
     - target: {fileID: 5082937854988416734, guid: 5297ee16d3ec6a549a2d975937433394, type: 3}
+      propertyPath: DM
+      value: 
+      objectReference: {fileID: 1906126960}
+    - target: {fileID: 5082937854988416734, guid: 5297ee16d3ec6a549a2d975937433394, type: 3}
       propertyPath: MG
       value: 
       objectReference: {fileID: 1873391620}
@@ -91644,6 +91733,10 @@ PrefabInstance:
       propertyPath: itemTooltip
       value: 
       objectReference: {fileID: 3865871986027254517}
+    - target: {fileID: 5082937854988416734, guid: 5297ee16d3ec6a549a2d975937433394, type: 3}
+      propertyPath: interManager
+      value: 
+      objectReference: {fileID: 508265362}
     - target: {fileID: 5082937854988416734, guid: 5297ee16d3ec6a549a2d975937433394, type: 3}
       propertyPath: drewsNotebook
       value: 
@@ -92744,6 +92837,10 @@ PrefabInstance:
       propertyPath: introCam
       value: 
       objectReference: {fileID: 484519438}
+    - target: {fileID: 8199988417337413251, guid: c858cac0aa9299c49a653595c47f7dcd, type: 3}
+      propertyPath: blackFade
+      value: 
+      objectReference: {fileID: 1344957446}
     - target: {fileID: 8199988417337413251, guid: c858cac0aa9299c49a653595c47f7dcd, type: 3}
       propertyPath: dialogueZone
       value: 

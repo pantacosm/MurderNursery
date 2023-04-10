@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -13,7 +14,6 @@ public class PlayerMovement : MonoBehaviour
 
 
     public GameObject MG; // magnifying glass object
-    private bool mgCamTransitioning = false; // stops player movement whilst true
 
     public GameObject introCam; // allows access to inIntro boolean 
 
@@ -82,7 +82,7 @@ public class PlayerMovement : MonoBehaviour
             playerVelocity.y = 0f;
         }
 
-        if (isMoving)
+        if (isMoving && !MG.GetComponent<MagnifyingGlass>().usingMagnifyingGlass)
         {
             gameObject.transform.forward = movement;
         }
@@ -103,7 +103,7 @@ public class PlayerMovement : MonoBehaviour
         if (inventory.UIVisibility.inventoryOpen || inventory.UIVisibility.pinboardOpen 
             || dialogueZone.activeInHierarchy || manager.GetComponent<SceneTransition>().interrogationActive 
             || inventory.UIVisibility.jotterOpen || dressUpManager.GetComponent<DressUp>().inDressUp || introCam.GetComponent<IntroCutscene>().inIntro
-            || menu.menuOpen || mgCamTransitioning || inspectingItem || inventory.UIVisibility.notebookOpen || inLD || conclusionManager.GetComponent<Conclusion>().inEnding)
+            || menu.menuOpen || inspectingItem || inventory.UIVisibility.notebookOpen || inLD || conclusionManager.GetComponent<Conclusion>().inEnding)
         {
             animator.Play("Idle");
             animator.SetFloat("Velocity", 0);
@@ -168,6 +168,9 @@ public class PlayerMovement : MonoBehaviour
 
     void HandleFirstPersonMovement()
     {
+        animator.Play("Idle");
+        animator.SetFloat("Velocity", 0);
+
         Quaternion rotation = cameraTransform.rotation;
         rotation.x = 0;
         rotation.z = 0;
@@ -183,19 +186,6 @@ public class PlayerMovement : MonoBehaviour
     private void OnDisable()
     {
         playerControls.PlayerInputMap.Disable();
-    }
-
-    // Called when magnifying glass is toggled
-    public void StartMGCamTransition()
-    {
-        StartCoroutine(StopPlayerMovement());
-    }
-
-    IEnumerator StopPlayerMovement() // stop player movement whilst MG cam is transitioning
-    {
-        mgCamTransitioning = true;
-        yield return new WaitForSeconds(2);
-        mgCamTransitioning = false;
     }
 
    

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class MagnifyingGlass : MonoBehaviour
 {
@@ -13,11 +14,11 @@ public class MagnifyingGlass : MonoBehaviour
     [HideInInspector]
     public GameObject evidenceItem; // item the player is currently viewing through the magnifying glass
 
-    [SerializeField]
-    GameObject thirdPersonCam;
+    
+    public GameObject thirdPersonCam;
 
-    [SerializeField]
-    GameObject firstPersonCam; // first person camera
+    
+    public GameObject firstPersonCam; // first person camera
 
     public GameObject magnifyingBlur; // activates a blur effect whilst using the MG
 

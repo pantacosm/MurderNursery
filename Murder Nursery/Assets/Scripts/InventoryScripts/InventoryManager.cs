@@ -8,7 +8,8 @@ public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager inventory;
 
-    
+    public GameObject DM;
+    public GameObject interManager;
     public GameObject MG; // allows access to magnifying glass script
     public GameObject Player; // used for stopping movement whilst toggling mag glass
     GameObject itemObj;
@@ -61,7 +62,7 @@ public class InventoryManager : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyUp(KeyCode.I) && !IntroCutscene.intro.inIntro)//Used to open and close the player's inventory
+        if(Input.GetKeyUp(KeyCode.I) && !IntroCutscene.intro.inIntro && !DM.GetComponent<DialogueManager>().inConvo && !DM.GetComponent<Conclusion>().inEnding && !interManager.GetComponent<Interrogation>().inInterrogation)//Used to open and close the player's inventory
         {
             UIVisibility.ToggleInventory();
             if(blur.activeSelf)

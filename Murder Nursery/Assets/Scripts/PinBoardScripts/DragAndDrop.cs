@@ -45,9 +45,11 @@ public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, ID
             itemPrefab.GetComponent<Image>().maskable = false;
             originalPos = transform.position;
             evidencePanels[0].GetComponent<Image>().enabled = false;
+            evidencePanels[1].GetComponent<EvidenceSlider>().ToggleEvidencePanel();
             evidencePanels[1].GetComponentInChildren<TextMeshProUGUI>().enabled = false;
             evidencePanels[1].GetComponent<Image>().enabled = false;
             
+
             //hoverOverText.SetActive(true);
             //hoverOverText.GetComponent<TextMeshProUGUI>().text = this.GetComponent<EvidenceClass>().evidenceText;
             //hoverOverText.transform.position = this.transform.position;
@@ -69,6 +71,7 @@ public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IEndDragHandler, ID
     {
         //hoverOverText.SetActive(false);
         evidencePanels[0].GetComponent<Image>().enabled = true;
+        evidencePanels[1].GetComponent<EvidenceSlider>().ToggleEvidencePanel();
         evidencePanels[1].GetComponentInChildren<TextMeshProUGUI>().enabled = true;
         evidencePanels[1].GetComponent<Image>().enabled = true;
 

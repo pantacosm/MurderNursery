@@ -148,7 +148,8 @@ public class DialogueManager : MonoBehaviour
     private bool firstInterrogation = true;
     public GameObject tutorialManager;
 
-   
+    public GameObject interrogationManager;
+    public GameObject interrogateButton;
 
     // Start is called before the first frame update
     void Start()
@@ -244,6 +245,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartConversation(DialogueNode startNode, GameObject npc, Camera npcCam) //Begins the dialogue interaction with chosen NPC
     {
+       
         Cursor.visible = true; //CURSOR STUFF
         player.SetActive(false); //Deactivates the player object for camera reasons
         currentNPCCam = npcCam; 
@@ -342,6 +344,15 @@ public class DialogueManager : MonoBehaviour
         npcSprite2.sprite = npc.GetComponent<NPCDialogue>().sprite;//''
         npcSprite3.sprite = npc.GetComponent<NPCDialogue>().sprite;//''
         npcSprite4.sprite = npc.GetComponent<NPCDialogue>().sprite;//''
+
+        if(dresserBox.GetComponent<DressUp>().activeOutfit != "Detective Outfit")
+        {
+            interrogateButton.SetActive(false);
+        }
+        else
+        {
+            interrogateButton.SetActive(true);
+        }
     }
 
     // Called after attempting to bribe an NPC (StartConversation)
@@ -355,6 +366,7 @@ public class DialogueManager : MonoBehaviour
 
         if (bribeNode == activeNPC.GetComponent<NPCDialogue>().bribeFailPath) // load bribe failed dialogue
         {
+            npcStatement.GetComponent <TextMeshProUGUI>().text = bribeNode.speech;
             activeNode = bribeNode;
             LoadNodeInfo(bribeNode);
         }
@@ -666,7 +678,7 @@ public class DialogueManager : MonoBehaviour
         }
         if(activeNode.interrogationNode) //Checks if node triggers an interrogation and enters one if so 
         {
-            EnterInterrogation(activeNPC);
+            EnterInterrogation();
             inConvo = false;
         }
         //if(playerChoice == 0 && activeNode.repGainResponse1 != 0) //Triggers reputation update if required
@@ -685,39 +697,46 @@ public class DialogueManager : MonoBehaviour
 
         if(playerChoice == 0|| playerChoice == 1 || playerChoice == 2) // Checks if the player has chosen a response
         {
-            if(activeNode.children.Length > 0)
+            if(!interrogationManager.GetComponent<Interrogation>().inInterrogation)
             {
-                activeNode.nodeVisited = true; //Marks that the node has been visited
-                playerAudio.PlayOneShot(selectOptionSound, 0.5f);
-                if (responseCount >= 1)
+                if (activeNode.children.Length > 0)
                 {
-                    lastResponse2 = lastResponse;
+                    activeNode.nodeVisited = true; //Marks that the node has been visited
+                    playerAudio.PlayOneShot(selectOptionSound, 0.5f);
+                    if (responseCount >= 1)
+                    {
+                        lastResponse2 = lastResponse;
+                    }
+                    switch (playerChoice) //Stores the player's last response for UI purposes
+                    {
+                        case 0:
+                            lastResponse = activeNode.responses[0];
+                            break;
+                        case 1:
+                            lastResponse = activeNode.responses[1];
+                            break;
+                        case 2:
+                            lastResponse = activeNode.responses[2];
+                            break;
+                    }
+
+                    responseCount++;
+                    LoadNodeInfo(activeNode.children[playerChoice]); //Loads the next relevant node
                 }
-                switch (playerChoice) //Stores the player's last response for UI purposes
-                {
-                    case 0: lastResponse = activeNode.responses[0];
-                        break;
-                    case 1: lastResponse = activeNode.responses[1];
-                        break;
-                    case 2: lastResponse = activeNode.responses[2];
-                        break;
-                }
-                
-                responseCount++;
-                LoadNodeInfo(activeNode.children[playerChoice]); //Loads the next relevant node
                 
 
             }
         }
     }
 
-    public void EnterInterrogation(GameObject targetNPC) //Enters an interrogation 
-    {   
-        if(dresserBox.GetComponent<DressUp>().activeOutfit == "Detective Outfit")
-        {
+    public void EnterInterrogation() //Enters an interrogation 
+    {
+            GameObject interrogatedNPC = activeNPC;
+        
             ExitConversation();
-            manager.GetComponent<SceneTransition>().ChangeToInterrogation(targetNPC);
-        }
+            manager.GetComponent<SceneTransition>().ChangeToInterrogation(interrogatedNPC);
+        summaryPanel.SetActive(false);
+        
     }
 
 
@@ -924,7 +943,7 @@ public class DialogueManager : MonoBehaviour
         
     }
 
-    public void EnterInterrogation()
+    public void EnterInterrogation2()
     {
         LoadNodeInfo(activeNPC.GetComponent<NPCDialogue>().interrogationNode);
         npcStatement.GetComponent<TextMeshProUGUI>().text = activeNode.speech;

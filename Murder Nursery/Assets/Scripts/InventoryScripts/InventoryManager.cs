@@ -24,7 +24,7 @@ public class InventoryManager : MonoBehaviour
     public Item mGlass; // Stores the magnifying glass in the player inventory
 
     [SerializeField]
-    Item listeningDevice;
+    public Item listeningDevice;
     [SerializeField]
     Item notebook;
 
@@ -55,7 +55,7 @@ public class InventoryManager : MonoBehaviour
     {
         AddItem(pinboard); //Adds the fundamental items to the player's inventory
         AddItem(mGlass); //''
-        AddItem(listeningDevice);
+      //  AddItem(listeningDevice);
         AddItem(notebook);
     }
 

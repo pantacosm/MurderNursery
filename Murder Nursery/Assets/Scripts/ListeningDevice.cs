@@ -34,6 +34,7 @@ public class ListeningDevice : MonoBehaviour
     public bool inLD = false;
     private int progress = 0;
     private int convoProgress = 0;
+    private bool fadeComplete = false;
 
     [HideInInspector]
     public GameObject player;
@@ -49,6 +50,7 @@ public class ListeningDevice : MonoBehaviour
     public GameObject notebook;
     public int convoID;
     private bool speechReading = false;
+    
 
 
     // Start is called before the first frame update
@@ -84,7 +86,7 @@ public class ListeningDevice : MonoBehaviour
             }
         }
 
-        if (inLD && Input.GetKeyUp(KeyCode.Return))
+        if (inLD && Input.GetKeyUp(KeyCode.Return) && fadeComplete)
         {
             
             switch(convoProgress)
@@ -282,6 +284,8 @@ public class ListeningDevice : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            
+            
             if(tutorialManager.GetComponent<Tutorials>().firstLD)
             {
                 Time.timeScale = 0;
@@ -289,11 +293,31 @@ public class ListeningDevice : MonoBehaviour
                 tutorialManager.GetComponent<Tutorials>().firstLD = false;
                 Cursor.visible = true;
             }
-            if (dressUpManager.GetComponent<DressUp>().activeOutfit == requiredOutfit)
+            if (convoID == 0 && !notebook.GetComponent<Notebook>().chaseEddieComplete)
             {
-                textPrompt.SetActive(true);
+                if (dressUpManager.GetComponent<DressUp>().activeOutfit == requiredOutfit)
+                {
+                    textPrompt.SetActive(true);
+                }
+                inRange = true;
             }
-            inRange = true;
+            if(convoID == 1 && !notebook.GetComponent<Notebook>().scarletEddieComplete)
+            {
+                if (dressUpManager.GetComponent<DressUp>().activeOutfit == requiredOutfit)
+                {
+                    textPrompt.SetActive(true);
+                }
+                inRange = true;
+            }
+            if (convoID == 2 && !notebook.GetComponent<Notebook>().juiceboxChaseComplete)
+            {
+                if (dressUpManager.GetComponent<DressUp>().activeOutfit == requiredOutfit)
+                {
+                    textPrompt.SetActive(true);
+                }
+                inRange = true;
+            }
+
         }
     }
 
@@ -366,7 +390,7 @@ public class ListeningDevice : MonoBehaviour
                         firstTextBox.GetComponentInChildren<TextMeshProUGUI>().text = npcStatements[0];
                         progress = 1;
                         speechReading = false;
-                        //inLD = true;
+                        fadeComplete = true;
                     }
                     
                     yield return null;
@@ -419,6 +443,7 @@ public class ListeningDevice : MonoBehaviour
         progress = 0;
         speechReading = false;
         player.GetComponent<PlayerMovement>().inLD = false;
+        fadeComplete = false;
 
     }
     

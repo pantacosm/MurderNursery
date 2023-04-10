@@ -126,7 +126,7 @@ public class DressUp : MonoBehaviour
 
     public void ChangeToPunkOutfit() //Changes the player's current outfit to the wizard outfit 
     {
-        
+        outfitChanging=true;
         activeOutfit = "Punk Outfit";
         print("You are now wearing the " + activeOutfit);
         UpdateOutfitChoices(punkButton);
@@ -142,7 +142,7 @@ public class DressUp : MonoBehaviour
 
     public void ChangeToGangsterOutfit() //Changes the player's current outfit to the gangster outfit
     {
-        
+        outfitChanging = true;
         activeOutfit = "Gangster Outfit";
         print("You are now wearing the " + activeOutfit);
         UpdateOutfitChoices(gangsterButton);
@@ -157,6 +157,7 @@ public class DressUp : MonoBehaviour
 
     public void ChangeToDetectiveOutfit() //Changes the player's current outfit to the detective outfit 
     {
+        outfitChanging = true;
         inventoryManager.GetComponent<InventoryManager>().AddItem(magnifyingGlass);
         activeOutfit = "Detective Outfit";
         print("You are now wearing the " + activeOutfit);

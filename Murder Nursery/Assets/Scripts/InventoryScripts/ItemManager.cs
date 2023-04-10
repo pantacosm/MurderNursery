@@ -33,14 +33,20 @@ public class ItemManager : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         
         if (dressUp.GetComponent<DressUp>().outfitChanging)
         {
-            if(dressUp.GetComponent<DressUp>().activeOutfit == "Artist Outfit" && this.gameObject.name == "Magnifying Glass")
+            if(dressUp.GetComponent<DressUp>().activeOutfit != "Detective Outfit" && this.gameObject.name == "Magnifying Glass")
             {
                 RemoveItem();
                 dressUp.GetComponent<DressUp>().outfitChanging = false;
             }
-            if(dressUp.GetComponent<DressUp>().activeOutfit == "Detective Outfit")
+           // if (dressUp.GetComponent<DressUp>().activeOutfit != "Detective Outfit" && this.gameObject.name == "Listening Device")
+            //{
+              //  RemoveItem();
+                //dressUp.GetComponent<DressUp>().outfitChanging = false;
+            //}
+            if (dressUp.GetComponent<DressUp>().activeOutfit == "Detective Outfit")
             {
                 AddItem(InventoryManager.inventory.mGlass);
+                //AddItem(InventoryManager.inventory.listeningDevice);
                 dressUp.GetComponent<DressUp>().outfitChanging = false;
 
             }

@@ -52,7 +52,7 @@ public class Bribing : MonoBehaviour // Script is added to SingleBribe UI OBject
         }
         else 
         {
-            manager.GetComponent<DialogueManager>().StartConversation(activeNPC.GetComponent<NPCDialogue>().bribeFailPath, activeNPC, activeNPC.GetComponent<NPCDialogue>().npcCam); //Triggers a bribery fail scenario
+            manager.GetComponent<DialogueManager>().LoadBribeDialogue(activeNPC.GetComponent<NPCDialogue>().bribeFailPath); //Triggers a bribery fail scenario
             bribePanel.SetActive(false); //Deactivates the bribe panel
         }
     }

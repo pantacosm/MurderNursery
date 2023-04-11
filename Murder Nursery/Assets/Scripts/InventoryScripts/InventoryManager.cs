@@ -70,6 +70,26 @@ public class InventoryManager : MonoBehaviour
                 blur.SetActive(false);
             }
         }
+
+        // close inventory if open & should not be accessible
+        if(DM.GetComponent<DialogueManager>().inConvo || DM.GetComponent<Conclusion>().inEnding && UIVisibility.inventoryOpen)
+        {
+            UIVisibility.ToggleInventory();
+        }
+
+        // Toggle Magnifying Glass
+        if(Input.GetKeyUp(KeyCode.M))
+        {
+            if (MG.GetComponent<MagnifyingGlass>().OutfitCheck())
+            {
+                MG.GetComponent<MagnifyingGlass>().ToggleMagnifyingGlass();
+                if(UIVisibility.inventoryOpen)
+                {
+                    UIVisibility.ToggleInventory();
+                    itemTooltip.SetActive(false);
+                }
+            }
+        }
     }
 
     public void AddItem(Item item) //Called when an item is collected and added to the player's inventory 

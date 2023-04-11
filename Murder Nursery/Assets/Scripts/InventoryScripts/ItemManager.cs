@@ -52,15 +52,7 @@ public class ItemManager : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
             }
         }
 
-        if(Input.GetKeyUp(KeyCode.M))
-        {
-            if (InventoryManager.inventory.MG.GetComponent<MagnifyingGlass>().OutfitCheck())
-            {
-                InventoryManager.inventory.MG.GetComponent<MagnifyingGlass>().ToggleMagnifyingGlass();
-                InventoryManager.inventory.UIVisibility.ToggleInventory();
-                itemTooltip.SetActive(false);
-            }
-        }
+        
     }
     // Called from inventory manager when an item is picked up
     public void AddItem(Item newItem)

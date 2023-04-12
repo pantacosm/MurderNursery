@@ -76,33 +76,12 @@ public class MagnifyingGlass : MonoBehaviour
     // toggles a magnifying glass to be used for finding evidence
     public void ToggleMagnifyingGlass() 
     {
-        if(dresserBox.GetComponent<DressUp>().activeOutfit == "Detective Outfit")
+
+        if(evidenceItem)
         {
-            if(evidenceItem)
+            if(!evidenceItem.GetComponent<EvidenceItem>().inspectingItem)
             {
-                if(!evidenceItem.GetComponent<EvidenceItem>().inspectingItem)
-                {
-                    if(usingMagnifyingGlass = !usingMagnifyingGlass && !fingerprintUI.activeInHierarchy)
-                    {
-                        usingMagnifyingGlass = true;
-                        thirdPersonCam.SetActive(false);
-                        firstPersonCam.SetActive(true);
-                        gameObject.SetActive(true);
-                        magnifyingBlur.SetActive(true);   
-                    }
-                    else
-                    {
-                        usingMagnifyingGlass = false;
-                        firstPersonCam.SetActive(false);
-                        thirdPersonCam.SetActive(true);
-                        magnifyingBlur.SetActive(false);
-                        storeItemText.SetActive(false);
-                    }
-                }
-            }
-            else
-            {
-                if(!usingMagnifyingGlass && !fingerprintUI.activeInHierarchy)
+                if(usingMagnifyingGlass = !usingMagnifyingGlass && !fingerprintUI.activeInHierarchy)
                 {
                     usingMagnifyingGlass = true;
                     thirdPersonCam.SetActive(false);
@@ -120,6 +99,26 @@ public class MagnifyingGlass : MonoBehaviour
                 }
             }
         }
+        else
+        {
+            if(!usingMagnifyingGlass && !fingerprintUI.activeInHierarchy)
+            {
+                usingMagnifyingGlass = true;
+                thirdPersonCam.SetActive(false);
+                firstPersonCam.SetActive(true);
+                gameObject.SetActive(true);
+                magnifyingBlur.SetActive(true);   
+            }
+            else
+            {
+                usingMagnifyingGlass = false;
+                firstPersonCam.SetActive(false);
+                thirdPersonCam.SetActive(true);
+                magnifyingBlur.SetActive(false);
+                storeItemText.SetActive(false);
+            }
+        }
+        
     }
 
     private void OnTriggerEnter(Collider other)

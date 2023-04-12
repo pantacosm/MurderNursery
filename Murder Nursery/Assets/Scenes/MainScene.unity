@@ -5652,6 +5652,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MagnifyingGlass-Blur
       objectReference: {fileID: 0}
+    - target: {fileID: 1006047556365487810, guid: 64f20b1251fcc1c4fbaed50985e11cfc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1006047556365487814, guid: 64f20b1251fcc1c4fbaed50985e11cfc, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -5740,6 +5744,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 963194227}
+    - target: {fileID: 1006047556365487815, guid: 64f20b1251fcc1c4fbaed50985e11cfc, type: 3}
+      propertyPath: m_PlaneDistance
+      value: 0.28
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 64f20b1251fcc1c4fbaed50985e11cfc, type: 3}
@@ -80035,9 +80043,37 @@ PrefabInstance:
       propertyPath: evidenceHelpText
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 2219632351478016209, guid: d0cb675e33a19c44e83d23d11a6859c0, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 2219632351478016209, guid: d0cb675e33a19c44e83d23d11a6859c0, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.0011176473
+      objectReference: {fileID: 0}
+    - target: {fileID: 2219632351478016209, guid: d0cb675e33a19c44e83d23d11a6859c0, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 2219632351478016209, guid: d0cb675e33a19c44e83d23d11a6859c0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2219632351478016209, guid: d0cb675e33a19c44e83d23d11a6859c0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.2885
+      objectReference: {fileID: 0}
+    - target: {fileID: 2219632351478016209, guid: d0cb675e33a19c44e83d23d11a6859c0, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2219632351807409580, guid: d0cb675e33a19c44e83d23d11a6859c0, type: 3}
       propertyPath: m_Name
       value: CM FirstPerson Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 2219632351807409580, guid: d0cb675e33a19c44e83d23d11a6859c0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2219632351807409585, guid: d0cb675e33a19c44e83d23d11a6859c0, type: 3}
       propertyPath: m_RootOrder
@@ -80103,6 +80139,14 @@ PrefabInstance:
       propertyPath: XYAxis
       value: 
       objectReference: {fileID: 481483000790925577, guid: 535c0d4a4da4a2f4b8ca265bfc88d9d2, type: 3}
+    - target: {fileID: 2219632352997348234, guid: d0cb675e33a19c44e83d23d11a6859c0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -265
+      objectReference: {fileID: 0}
+    - target: {fileID: 2219632352997348234, guid: d0cb675e33a19c44e83d23d11a6859c0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: d0cb675e33a19c44e83d23d11a6859c0, type: 3}

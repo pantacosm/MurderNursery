@@ -3207,10 +3207,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GraphicsOptions
       objectReference: {fileID: 0}
-    - target: {fileID: 8232418879146375463, guid: d8eb9d65f4a6a2149a5f318ab845ee1d, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: d8eb9d65f4a6a2149a5f318ab845ee1d, type: 3}

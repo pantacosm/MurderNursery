@@ -45,12 +45,14 @@ public class InventoryManager : MonoBehaviour
     public GameObject blur; //Background blur object
     public GameObject itemTooltip;
     public GameObject tutorialPanel;
+    GameObject dressUp;
 
     public bool inventoryToggled = false;
     private void Awake()
     {
         inventory = this;
         UIVisibility = GetComponent<ToggleUIVisibility>();
+        dressUp = GameObject.FindGameObjectWithTag("Dress Up Manager");
     }
 
     private void Start()
@@ -84,7 +86,7 @@ public class InventoryManager : MonoBehaviour
         }
 
         // Toggle Magnifying Glass
-        if(Input.GetKeyUp(KeyCode.M))
+        if(Input.GetKeyUp(KeyCode.M) && !IntroCutscene.intro.inIntro && !DM.GetComponent<DialogueManager>().inConvo && !DM.GetComponent<Conclusion>().inEnding && !interManager.GetComponent<Interrogation>().inInterrogation && !dressUp.GetComponent<DressUp>().inDressUp)
         {
             if (MG.GetComponent<MagnifyingGlass>().OutfitCheck())
             {
@@ -93,6 +95,21 @@ public class InventoryManager : MonoBehaviour
                 {
                     UIVisibility.ToggleInventory();
                     itemTooltip.SetActive(false);
+                }
+            }
+        }
+
+        if (dressUp.GetComponent<DressUp>().outfitChanging)
+        {
+            if(dressUp.GetComponent<DressUp>().activeOutfit != "Detective Outfit")
+            {
+                for (int i = 0; i < inventoryItems.Count; i++)
+                {
+                    if(inventoryItems[i].name == "Magnifying Glass")
+                    {
+                        inventoryItems[i].RemoveItem();
+                        dressUp.GetComponent<DressUp>().outfitChanging = false;
+                    }
                 }
             }
         }
@@ -106,12 +123,15 @@ public class InventoryManager : MonoBehaviour
 
     public void RemoveItem(Item item) //Called when an item is removed from the player inventory
     {
-        items.Remove(item);
-        if(itemObj.name == item.itemName)
+        for (int i = 0; i < inventoryItems.Count; i++)
         {
-            inventoryItems.Remove(itemObj.GetComponent<ItemManager>());
-            Destroy(itemObj);
+            if(inventoryItems[i].name == item.itemName)
+            {
+                items.Remove(item);
+                inventoryItems.Remove(inventoryItems[i]);
+            }
         }
+        
     }
 
     public void SetInventoryItems(Item item)

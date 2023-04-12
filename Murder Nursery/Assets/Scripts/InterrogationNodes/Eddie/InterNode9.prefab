@@ -52,7 +52,7 @@ MonoBehaviour:
     either! Like I said, just 'cus we don't like the guy, doesn't mean we'd wanna
     see him get hurt!
   responses:
-  - 'Oh, we all know you''re no stranger to violence, Eddie!   '
+  - 'Detective Drew: Oh, we all know you''re no stranger to violence, Eddie!   '
   nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10

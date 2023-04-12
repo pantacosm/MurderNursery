@@ -49,7 +49,7 @@ MonoBehaviour:
   - {fileID: 3499891356269125111, guid: bee95612fb706984183668491a30c5b0, type: 3}
   speech: You lost me there detective.
   responses:
-  - Eep! Not that one.
+  - 'Detective Drew: Eep! Not that one.'
   nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10

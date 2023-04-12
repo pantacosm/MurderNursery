@@ -49,7 +49,7 @@ MonoBehaviour:
   - {fileID: 3499891356269125111, guid: 36eb4d5c831f4684ca5c1f8429f6f64e, type: 3}
   speech: Huh? Want to start making sense buddy?
   responses:
-  - Blast it! I don't think that's the right evidence!
+  - 'Detective Drew: Blast it! I don''t think that''s the right evidence!'
   nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10

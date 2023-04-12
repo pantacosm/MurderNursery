@@ -50,8 +50,8 @@ MonoBehaviour:
   speech: Well... okay... that's true but... I cared about her too, okay? She was
     my friend!
   responses:
-  - Oh yeah? If you liked her so much, why are you trying to act like you didn't
-    know her?
+  - 'Detective Drew: Oh yeah? If you liked her so much, why are you trying to act
+    like you didn''t know her?'
   nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10

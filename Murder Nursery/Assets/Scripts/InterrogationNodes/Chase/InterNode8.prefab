@@ -51,8 +51,8 @@ MonoBehaviour:
   speech: Scarlet and I are doing just fine, nothing to tell! Our relationship is
     built on communication and trust! Grown-ups say that's the key, you know!
   responses:
-  - And yet you seem not to trust her at all! Let me guess, you've been acting real
-    suspicious lately and a smart gal like that has caught on!
+  - 'Detective Drew: And yet you seem not to trust her at all! Let me guess, you''ve
+    been acting real suspicious lately and a smart gal like that has caught on!'
   nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10

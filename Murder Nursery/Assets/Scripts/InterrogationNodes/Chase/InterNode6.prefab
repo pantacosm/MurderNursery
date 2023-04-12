@@ -50,8 +50,9 @@ MonoBehaviour:
   - {fileID: 3499891356269125111, guid: ef0f3cb80aee2984d8af23549ee38d28, type: 3}
   speech: Acting what way? Where's your proof?!
   responses:
-  - I'm no fool, Chase, and you can't outrun the LAW! Scarlet's been growing real
-    jealous of Grace lately, and I'd bet my bottom dollar you know why!
+  - 'Detective Drew: I''m no fool, Chase, and you can''t outrun the LAW! Scarlet''s
+    been growing real jealous of Grace lately, and I''d bet my bottom dollar you
+    know why!'
   nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10

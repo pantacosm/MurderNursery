@@ -50,7 +50,7 @@ MonoBehaviour:
   speech: "Wh-what? That ain\u2019t got nothin' to do with the murder or me buddy,
     drop it!"
   responses:
-  - Don't play hard ball with me, knucklehead!
+  - 'Detective Drew: Don''t play hard ball with me, knucklehead!'
   nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10

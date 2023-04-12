@@ -50,8 +50,8 @@ MonoBehaviour:
   speech: FIRST of all, I can outrun anything, and sure I spoke to her this mornin'
     but it wasn't about anything important!
   responses:
-  - Tell me about this relationship you've got with Scarlet, and don't cut any corners
-    neither!
+  - 'Detective Drew: Tell me about this relationship you''ve got with Scarlet, and
+    don''t cut any corners neither!'
   nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10

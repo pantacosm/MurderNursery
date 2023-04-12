@@ -64,24 +64,51 @@ public class SceneTransition : MonoBehaviour
         StartCoroutine(WaitForSeconds()); //Waits for a few seconds and activates the reverse fade
         if(npc.name == "Scarlet") //Checks which npc the player is talking to and moves them to the interrogation.
         {
+            interrogationManager.GetComponent<Interrogation>().playerResponse1 = interrogationManager.GetComponent<Interrogation>().scarletPlayerResponseText;
+            interrogationManager.GetComponent<Interrogation>().npcStatement = interrogationManager.GetComponent<Interrogation>().scarletStatementText;
+            interrogationManager.GetComponent<Interrogation>().scarletPlayerResponseBox.SetActive(true);
+            interrogationManager.GetComponent<Interrogation>().scarletStatementBox.SetActive(true);
+            //interrogationManager.GetComponent<Interrogation>().playerResponse1.GetComponent<TextMeshProUGUI>().text = "Detective Drew:";
+          //  interrogationManager.GetComponent<Interrogation>().npcStatement.GetComponent < TextMeshProUGUI>().text = "Scarlet: ";
+            
             femmeIntObject.SetActive(true);
             activeInterrogant = femmeIntObject;
             interrogationManager.GetComponent<Interrogation>().StartInterrogation(activeInterrogant.GetComponent<NPCDialogue>().dialogueTree[0], activeInterrogant);
         }
         if(npc.name == "Chase")
         {
+            interrogationManager.GetComponent<Interrogation>().playerResponse1 = interrogationManager.GetComponent<Interrogation>().chasePlayerResponseText;
+            interrogationManager.GetComponent<Interrogation>().npcStatement = interrogationManager.GetComponent<Interrogation>().chaseStatementText;
+            interrogationManager.GetComponent<Interrogation>().chasePlayerResponseBox.SetActive(true);
+            interrogationManager.GetComponent<Interrogation>().chaseStatementBox.SetActive(true);
+           // interrogationManager.GetComponent<Interrogation>().playerResponse1.GetComponent<TextMeshProUGUI>().text = "Detective Drew:";
+          //  interrogationManager.GetComponent<Interrogation>().npcStatement.GetComponent<TextMeshProUGUI>().text = "Chase: ";
             coolIntObject.SetActive(true);
             activeInterrogant = coolIntObject;
             interrogationManager.GetComponent<Interrogation>().StartInterrogation(activeInterrogant.GetComponent<NPCDialogue>().dialogueTree[0], activeInterrogant);
+
         }
         if(npc.name == "Juice Box")
         {
+            interrogationManager.GetComponent<Interrogation>().playerResponse1 = interrogationManager.GetComponent<Interrogation>().juiceBoxPlayerResponseText;
+            interrogationManager.GetComponent<Interrogation>().npcStatement = interrogationManager.GetComponent<Interrogation>().juiceBoxStatementText;
+            interrogationManager.GetComponent<Interrogation>().juiceBoxPlayerResponseBox.SetActive(true);
+            interrogationManager.GetComponent<Interrogation>().juiceBoxStatementBox.SetActive(true);
+          //  interrogationManager.GetComponent<Interrogation>().playerResponse1.GetComponent<TextMeshProUGUI>().text = "Detective Drew:";
+          //  interrogationManager.GetComponent<Interrogation>().npcStatement.GetComponent<TextMeshProUGUI>().text = "Juice Box:";
             juiceIntObject.SetActive(true);
             activeInterrogant=juiceIntObject;
             interrogationManager.GetComponent<Interrogation>().StartInterrogation(activeInterrogant.GetComponent<NPCDialogue>().dialogueTree[0], activeInterrogant);
+            
         }
         if(npc.name == "Eddie")
         {
+            interrogationManager.GetComponent<Interrogation>().playerResponse1 = interrogationManager.GetComponent<Interrogation>().eddiePlayerResponseText;
+            interrogationManager.GetComponent<Interrogation>().npcStatement = interrogationManager.GetComponent<Interrogation>().eddieStatementText;
+            interrogationManager.GetComponent<Interrogation>().juiceBoxPlayerResponseBox.SetActive(true);
+            interrogationManager.GetComponent<Interrogation>().juiceBoxStatementBox.SetActive(true);
+          //  interrogationManager.GetComponent<Interrogation>().playerResponse1.GetComponent<TextMeshProUGUI>().text = "Detective Drew:";
+          //  interrogationManager.GetComponent<Interrogation>().npcStatement.GetComponent<TextMeshProUGUI>().text = "Eddie: ";
             goonIntObject.SetActive(true);
             activeInterrogant = goonIntObject;
             interrogationManager.GetComponent<Interrogation>().StartInterrogation(activeInterrogant.GetComponent<NPCDialogue>().dialogueTree[0], activeInterrogant);

@@ -49,7 +49,8 @@ MonoBehaviour:
   - {fileID: 3499891356269125111, guid: beae97c2ccd05ea4785969319fd363ba, type: 3}
   speech: What's up, Drew?
   responses:
-  - Alright, pal. I hate to have to do this but I know you've got somethin for me!
+  - 'Detective Drew: Alright, pal. I hate to have to do this but I know you''ve got
+    somethin for me!'
   nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10

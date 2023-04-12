@@ -50,9 +50,9 @@ MonoBehaviour:
   - {fileID: 3499891356269125111, guid: a864f79422d4d314cbb4e2e1b42c479b, type: 3}
   speech: I don't have any choice! He was - my good sir, I cannot say another word!
   responses:
-  - It's Chase, isn't it? He doesn't like you... and he doesn't like you talking
-    to his friends! I know he's got some kinda secret enemy 'round these parts, and
-    I had a sneaky feelin it was you!!
+  - 'Detective Drew: It''s Chase, isn''t it? He doesn''t like you... and he doesn''t
+    like you talking to his friends! I know he''s got some kinda secret enemy ''round
+    these parts, and I had a sneaky feelin it was you!!'
   nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10

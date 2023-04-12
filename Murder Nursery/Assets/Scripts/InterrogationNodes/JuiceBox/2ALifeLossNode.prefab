@@ -49,7 +49,7 @@ MonoBehaviour:
   - {fileID: 3499891356269125111, guid: f74d378a9d365414892922b0906eaf87, type: 3}
   speech: It seems you are confusing fact with fiction my good friend.
   responses:
-  - ' Alright...let''s think about this..'
+  - 'Detective Drew: Alright...let''s think about this..'
   nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10

@@ -49,7 +49,7 @@ MonoBehaviour:
   - {fileID: 3499891356269125111, guid: 5bdc7bcfcf020b840bb30fa156dd399c, type: 3}
   speech: Your conclusions are as lame as your style.
   responses:
-  - Better have another try.
+  - 'Detective Drew: Better have another try.'
   nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10

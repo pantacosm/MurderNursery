@@ -50,8 +50,9 @@ MonoBehaviour:
   - {fileID: 3499891356269125111, guid: c65773716632ab544a745372e81b0632, type: 3}
   speech: I'm not tellin you SQUAT. I barely even know that kid!
   responses:
-  - Oh, is that so? And yet multiple sources have told me he's been doin' your dirty
-    work! Wanna excali... calibrate... uh... ELABORATE on that?
+  - 'Detective Drew: Oh, is that so? And yet multiple sources have told me he''s
+    been doin'' your dirty work! Wanna excali... calibrate... uh... ELABORATE on
+    that?'
   nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10

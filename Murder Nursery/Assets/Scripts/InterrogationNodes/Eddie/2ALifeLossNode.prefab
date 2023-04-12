@@ -49,7 +49,7 @@ MonoBehaviour:
   - {fileID: 3499891356269125111, guid: 214cf0e4263a6c94893229f26cfae6de, type: 3}
   speech: You lost me there detective.
   responses:
-  - Let me take another swing at it.
+  - 'Detective Drew: Let me take another swing at it.'
   nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10

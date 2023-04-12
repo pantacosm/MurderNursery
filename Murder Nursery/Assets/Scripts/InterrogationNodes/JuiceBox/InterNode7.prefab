@@ -50,9 +50,9 @@ MonoBehaviour:
   - {fileID: 3499891356269125111, guid: fab3aebddf5708143ab0315113c65ea6, type: 3}
   speech: 
   responses:
-  - Did I stutter? I said WERE!  But my sources round here spotted you two havin'
-    an argument! Seems Grace didn't like how many juice boxes you were goin' through...
-    she cared about you, Juice Box!
+  - 'Detective Drew: Did I stutter? I said WERE!  But my sources round here spotted
+    you two havin'' an argument! Seems Grace didn''t like how many juice boxes you
+    were goin'' through... she cared about you, Juice Box!'
   nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10

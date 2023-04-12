@@ -50,7 +50,7 @@ public class ListeningDevice : MonoBehaviour
     public GameObject notebook;
     public int convoID;
     private bool speechReading = false;
-    
+    private bool ePressed = false;
 
 
     // Start is called before the first frame update
@@ -73,8 +73,9 @@ public class ListeningDevice : MonoBehaviour
           //  print("Turning off cam");
             //currentCam.SetActive(false);
         //}
-        if (inRange && Input.GetKeyDown(KeyCode.E) && !inLD)
+        if (inRange && Input.GetKeyDown(KeyCode.E) && !inLD && !ePressed)
         {
+            ePressed = true;
             if (dressUpManager.GetComponent<DressUp>().activeOutfit == requiredOutfit)
             {
                 inLD = true;
@@ -444,7 +445,7 @@ public class ListeningDevice : MonoBehaviour
         speechReading = false;
         player.GetComponent<PlayerMovement>().inLD = false;
         fadeComplete = false;
-
+        ePressed = false;
     }
     
 }

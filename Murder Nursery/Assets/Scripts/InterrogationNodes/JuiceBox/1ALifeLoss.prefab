@@ -49,7 +49,7 @@ MonoBehaviour:
   - {fileID: 3499891356269125111, guid: 2933783c11f0bed4e8d56b1079fb713a, type: 3}
   speech: It seems you are confusing fact with fiction my good friend.
   responses:
-  - Hmmm..I don't think that's right!
+  - 'Detective Drew: Hmmm..I don''t think that''s right!'
   nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10

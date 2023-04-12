@@ -49,7 +49,7 @@ MonoBehaviour:
   - {fileID: 3499891356269125111, guid: df8b9eb2f43bd7a43a856bf4e7dcf85b, type: 3}
   speech: You lost me there detective.
   responses:
-  - Hmmmm... not quite right
+  - 'Detective Drew: Hmmmm... not quite right'
   nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10

@@ -49,7 +49,8 @@ MonoBehaviour:
   - {fileID: 3499891356269125111, guid: 03c0042b0bddc6a4d889dd973b022ac5, type: 3}
   speech: What's wrong with voicing my opinion huh?!
   responses:
-  - Nothing at all, why don't you tell me your true opinion of Grace?
+  - 'Detective Drew: Nothing at all, why don''t you tell me your true opinion of
+    Grace?'
   nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10

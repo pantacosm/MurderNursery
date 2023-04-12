@@ -53,8 +53,9 @@ MonoBehaviour:
     so the tree thing doesn''t even matter! I''m not the jealous type so I wouldn''t
     call a shot like that anyways you, you, snitch!'
   responses:
-  - Aha! Not the jealous type, eh? Everythin' I've got down here in my trusty jotte-
-    I mean, case files says otherwise! We all know you don't like sharing, Chase!
+  - 'Detective Drew: Aha! Not the jealous type, eh? Everythin'' I''ve got down here
+    in my trusty jotte- I mean, case files says otherwise! We all know you don''t
+    like sharing, Chase!'
   nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10

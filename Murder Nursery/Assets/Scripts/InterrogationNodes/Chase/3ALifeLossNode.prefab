@@ -49,7 +49,7 @@ MonoBehaviour:
   - {fileID: 3499891356269125111, guid: 8f8ecbd1c848037449c274663829e795, type: 3}
   speech: Huh? Want to start making sense buddy?
   responses:
-  - Nuh huh!
+  - 'Detective Drew: Nuh huh!'
   nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10

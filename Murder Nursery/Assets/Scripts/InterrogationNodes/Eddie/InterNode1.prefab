@@ -51,8 +51,8 @@ MonoBehaviour:
   speech: "Pffft, help you out? Now why would I do that? You\u2019re the detective,
     you don\u2019t need me cause I ain\u2019t done nothin' wrong."
   responses:
-  - "Nothin' wrong, huh? Man, sure is a shame about Juice Box\u2019s arm... It\u2019s
-    reeeeeal unfortunate what happened to him..."
+  - "Detective Drew: Nothin' wrong, huh? Man, sure is a shame about Juice Box\u2019s
+    arm... It\u2019s reeeeeal unfortunate what happened to him..."
   nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10

@@ -20,7 +20,7 @@ public class Interrogation : MonoBehaviour
     public GameObject intResponseText2;//''
     public GameObject intResponseText3;//''
     public GameObject npcStatement; //NPC response text
-    public GameObject playerResponse1; //Player response option
+    public GameObject playerResponse1 = null; //Player response option
     public GameObject playerResponse2; //''
     public GameObject npcStatement1; //NPC response text
     public GameObject npcStatement2;//''
@@ -61,16 +61,19 @@ public class Interrogation : MonoBehaviour
 
     //Variables for recording player responses
     //private int responseCount = 0;
-    private string lastResponse = null;
+    private string lastResponseJB = null;
+    private string lastResponseScarlet = null;
+    private string lastResponseEddie = null;
+    private string lastResponseChase = null;
     //private string lastResponse2;
     private string npcLastResponse1;
     private string npcLastResponse2;
     //private bool firstNode = true;
-    private DialogueNode mostRecentChaseNode;
+    public DialogueNode mostRecentChaseNode;
     private bool firstTry = true;
-    private DialogueNode mostRecentEddieNode;
-    private DialogueNode mostRecentJuiceBoxNode;
-    private DialogueNode mostRecentScarletNode;
+    public DialogueNode mostRecentEddieNode;
+    public DialogueNode mostRecentJuiceBoxNode;
+    public DialogueNode mostRecentScarletNode;
     private int pos = 0;
     private int playerChoice = 0;
 
@@ -84,7 +87,32 @@ public class Interrogation : MonoBehaviour
     public bool eddieCompleted = false;
     public bool noneCompleted = true;
 
+    [Header("Player Response Objects")]
+    public GameObject juiceBoxPlayerResponseText;
+    public GameObject chasePlayerResponseText;
+    public GameObject scarletPlayerResponseText;
+    public GameObject eddiePlayerResponseText;
 
+    public GameObject juiceBoxPlayerResponseBox;
+    public GameObject chasePlayerResponseBox;
+    public GameObject eddiePlayerResponseBox;
+    public GameObject scarletPlayerResponseBox;
+
+    [Header("NPC Response Objects")]
+    public GameObject juiceBoxStatementText;
+    public GameObject scarletStatementText;
+    public GameObject eddieStatementText;
+    public GameObject chaseStatementText;
+
+    public GameObject juiceBoxStatementBox;
+    public GameObject scarletStatementBox;
+    public GameObject eddieStatementBox;
+    public GameObject chaseStatementBox;
+
+    private string npcLastResponseJB;
+    private string npcLastResponseChase;
+    private string npcLastResponseScarlet;
+    private string npcLastResponseEddie;
     // Start is called before the first frame update
     void Start()
     {
@@ -99,10 +127,10 @@ public class Interrogation : MonoBehaviour
     {
         interrogationUnderway = manager.GetComponent<SceneTransition>().interrogationActive; //Checks if an interrogation is active
 
-        if(inInterrogation && lastResponse == null)
-        {
-            lastResponse = activeNode.responses[0];
-        }
+        //if(inInterrogation && lastResponse == null)
+       // {
+       //     lastResponse = activeNode.responses[0];
+      //  }
         
         if(interrogationLives == 0 && interrogationUnderway) //Is called when a player fails an interrogation //NEEDS UPDATED
         {
@@ -128,8 +156,24 @@ public class Interrogation : MonoBehaviour
         if (!activeNode.evidenceNeededCheck && lastResponsePlayer)
         {
             if (playerChoice == 1)
-            {
-                lastResponse = activeNode.responses[0]; //Stores the last response from the player
+            { 
+                    if(activeInterrogant.name == "Juice Box (The Artiste)")
+                    {
+                        lastResponseJB = activeNode.responses[0];
+                    }
+                    if(activeInterrogant.name == "Scarlet (The Femme Fatale)")
+                    {
+                        lastResponseScarlet = activeNode.responses[0];
+                    }
+                if(activeInterrogant.name == "Eddie (The Goon")
+                    {
+                        lastResponseEddie = activeNode.responses[0];
+                    }
+                if(activeInterrogant.name == "Chase (The Cool Guy)")
+                    {
+                        lastResponseChase = activeNode.responses[0];
+                    }
+                //lastResponse = activeNode.responses[0]; //Stores the last response from the player
                 LoadIntNodeInfo(activeNode.children[0]); //Loads the next node 
                 playerChoice = 0;
                 lastResponsePlayer = false;
@@ -200,8 +244,11 @@ public class Interrogation : MonoBehaviour
     public void EarlyExit() //Called when a player wants to leave interrogation
     {
         inInterrogation = false;
+        ClearDialogue();
         manager.GetComponent<SceneTransition>().ChangeToMainArea();//Transitions the player back to the main area
+        
         interrogationPanel.SetActive(false); //Deactivates the interrogation UI
+        
         
     }
     public void SuccessfulEnd() //Called when a player succeeds in an interrogation
@@ -255,6 +302,7 @@ public class Interrogation : MonoBehaviour
         SwitchEmotion();
         if(activeInterrogant.name == "JuiceBox (The Artiste)")
         {
+            
             mostRecentJuiceBoxNode = activeNode;
         }
         if(activeInterrogant.name == "Scarlet (The Femme Fatale)")
@@ -300,50 +348,71 @@ public class Interrogation : MonoBehaviour
        // intResponseBox3.GetComponent<Image>().color = Color.gray;
         interrogationLives = 5;
         activeInterrogant = targetNPC;
-        if (!firstTry) //Checks if the player has been in this interrogation before
-        {
+       // if (!firstTry) //Checks if the player has been in this interrogation before
+        //{
             if(activeInterrogant.name == "JuiceBox (The Artiste)") 
             {
-                if(mostRecentJuiceBoxNode == null)
+                if (mostRecentJuiceBoxNode == null)
                 {
+                    playerResponse1.GetComponent<TextMeshProUGUI>().text = "Detective Drew:";
                     LoadIntNodeInfo(startNode);
+
                 }
-                else
-                LoadIntNodeInfo(mostRecentJuiceBoxNode); //Loads the node that was visited in the last interrogation
+                else if(mostRecentJuiceBoxNode != null)
+                {
+                    LoadIntNodeInfo(mostRecentJuiceBoxNode); //Loads the node that was visited in the last interrogation
+                    playerResponse1.GetComponent<TextMeshProUGUI>().text =  lastResponseJB;
+                }
+
             }
             if(activeInterrogant.name == "Scarlet (The Femme Fatale)")
             {
-                if(mostRecentScarletNode == null)
+                if (mostRecentScarletNode == null)
                 {
+                    playerResponse1.GetComponent<TextMeshProUGUI>().text = "Detective Drew:";
                     LoadIntNodeInfo(startNode);
+
                 }
-                else
-                LoadIntNodeInfo(mostRecentScarletNode); //Loads the node that was visited in the last interrogation
+                else if(mostRecentScarletNode !=null)
+                {
+                    LoadIntNodeInfo(mostRecentScarletNode); //Loads the node that was visited in the last interrogation
+                    playerResponse1.GetComponent<TextMeshProUGUI>().text =  lastResponseScarlet;
+                }
             }
             if(activeInterrogant.name == "Eddie (The Goon)")
             {
-                if(mostRecentEddieNode == null)
+                if (mostRecentEddieNode == null)
                 {
+                    playerResponse1.GetComponent<TextMeshProUGUI>().text = "Detective Drew:";
                     LoadIntNodeInfo(startNode);
+
                 }
-                else
-                LoadIntNodeInfo(mostRecentEddieNode); //Loads the node that was visited in the last interrogation
+                else if(mostRecentEddieNode != null)
+                {
+                    LoadIntNodeInfo(mostRecentEddieNode); //Loads the node that was visited in the last interrogation
+                    playerResponse1.GetComponent<TextMeshProUGUI>().text =  lastResponseEddie;
+                }
             }
             if(activeInterrogant.name == "Chase (The Cool Guy)")
             {
-                if (mostRecentChaseNode == null)
-                {
-                    LoadIntNodeInfo(startNode);
-                }
-                else
-                LoadIntNodeInfo(mostRecentChaseNode); //Loads the node that was visited in the last interrogation
+            if (mostRecentChaseNode == null)
+            {
+                playerResponse1.GetComponent<TextMeshProUGUI>().text = "Detective Drew:";
+                LoadIntNodeInfo(startNode);
+
             }
-        }
-        if (firstTry)
-        {
-            LoadIntNodeInfo(startNode); //Loads the start node of the interrogation
-            firstTry = false; //Signals that the player has attempted the interrogation at least once
-        }
+            else if (mostRecentChaseNode != null)
+                {
+                    LoadIntNodeInfo(mostRecentChaseNode); //Loads the node that was visited in the last interrogation
+                    playerResponse1.GetComponent<TextMeshProUGUI>().text =  lastResponseChase;
+                }
+            }
+      //  }
+      //  if (firstTry)
+      //  {
+        //    LoadIntNodeInfo(startNode); //Loads the start node of the interrogation
+        //    firstTry = false; //Signals that the player has attempted the interrogation at least once
+     //   }
         
         
 
@@ -368,13 +437,25 @@ public class Interrogation : MonoBehaviour
 
     private void ClearDialogue() //Clears the dialogue from the UI elements and resets the response count 
     {
-        npcStatement2.GetComponent<TextMeshProUGUI>().text = "";
-        npcStatement2.SetActive(false);
-        playerResponse1.GetComponent<TextMeshProUGUI>().text = "";
-        playerResponse1.SetActive(false);
-        playerResponse2.GetComponent<TextMeshProUGUI>().text = "";
-        playerResponse2.SetActive(false);
-        lastResponse = null;
+        // npcStatement.GetComponent<TextMeshProUGUI>().text = "";
+        // npcStatement.SetActive(false);
+        // playerResponse1.GetComponent<TextMeshProUGUI>().text = "";
+        lastResponseJB = juiceBoxPlayerResponseText.GetComponent<TextMeshProUGUI>().text;
+        lastResponseChase = chasePlayerResponseText.GetComponent<TextMeshProUGUI>().text;
+        lastResponseEddie = eddiePlayerResponseText.GetComponent<TextMeshProUGUI>().text;
+        lastResponseScarlet = scarletPlayerResponseText.GetComponent<TextMeshProUGUI>().text;
+        juiceBoxStatementBox.SetActive(false);
+        juiceBoxPlayerResponseBox.SetActive(false);
+        chaseStatementBox.SetActive(false);
+        chasePlayerResponseBox.SetActive(false);
+        scarletStatementBox.SetActive(false);
+        scarletPlayerResponseBox.SetActive(false);
+        eddiePlayerResponseBox.SetActive(false);
+        eddieStatementBox.SetActive(false);
+        playerResponse1 = null;
+        npcStatement = null;
+       // playerResponse1.SetActive(false);
+        //lastResponse = null;
         //lastResponse2 = null;
         //responseCount = 0;
     }

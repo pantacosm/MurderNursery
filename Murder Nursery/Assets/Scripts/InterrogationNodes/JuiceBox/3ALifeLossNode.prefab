@@ -49,7 +49,7 @@ MonoBehaviour:
   - {fileID: 3499891356269125111, guid: 1bb4724df23eadc449b0a85f07a23e54, type: 3}
   speech: It seems you are confusing fact with fiction my good friend.
   responses:
-  - 'Nope, that doesn''t feel right! '
+  - 'Detective Drew: Nope, that doesn''t feel right! '
   nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10

@@ -50,7 +50,8 @@ MonoBehaviour:
   - {fileID: 3499891356269125111, guid: 949d01146ec25014796f194c32ab7ea0, type: 3}
   speech: I don't even play sports! And, I don't got nothin' to do with it!
   responses:
-  - I don't think so, buddy... sources tell me that you were with him at the time!
+  - 'Detective Drew: I don''t think so, buddy... sources tell me that you were with
+    him at the time!'
   nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10

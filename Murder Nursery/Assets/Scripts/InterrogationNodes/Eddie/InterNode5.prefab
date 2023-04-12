@@ -51,9 +51,9 @@ MonoBehaviour:
   speech: Y-yeah! Maybe I don't like him, but I ain't holdin' nothin' personal against
     the guy! What could he be doin' that I'd wanna break his arm for?
   responses:
-  - Uh, duh! He's got a little on and off again thing goin' with Scarlet... yanno,
-    that sheba ya adore? Reckon that's more than enough proof you'd try to paint
-    him out the picture!
+  - 'Detective Drew: Uh, duh! He''s got a little on and off again thing goin'' with
+    Scarlet... yanno, that sheba ya adore? Reckon that''s more than enough proof
+    you''d try to paint him out the picture!'
   nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10

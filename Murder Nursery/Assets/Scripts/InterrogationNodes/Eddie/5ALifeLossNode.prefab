@@ -49,7 +49,7 @@ MonoBehaviour:
   - {fileID: 3499891356269125111, guid: 25ebefaf017eb4a46a9cca8924a6f23e, type: 3}
   speech: You lost me there detective.
   responses:
-  - I better think real hard about this one.
+  - 'Detective Drew: I better think real hard about this one.'
   nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10

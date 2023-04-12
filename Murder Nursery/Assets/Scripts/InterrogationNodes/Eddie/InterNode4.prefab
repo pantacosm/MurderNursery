@@ -50,7 +50,7 @@ MonoBehaviour:
   speech: S-sources?! Wh-whatever! So what? Why would I want to break Mr Capri DUMB's
     arm?
   responses:
-  - Oh, you want me to pick just one?
+  - 'Detective Drew: Oh, you want me to pick just one?'
   nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10

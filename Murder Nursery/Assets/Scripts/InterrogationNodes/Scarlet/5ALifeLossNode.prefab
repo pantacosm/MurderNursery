@@ -49,7 +49,7 @@ MonoBehaviour:
   - {fileID: 3499891356269125111, guid: 20b3d2827290add4b96387349b1bd516, type: 3}
   speech: Your conclusions are as lame as your style.
   responses:
-  - Hmm, not that one...but I've almost got her!
+  - 'Detective Drew: Hmm, not that one...but I''ve almost got her!'
   nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10

@@ -49,8 +49,8 @@ MonoBehaviour:
   - {fileID: 3499891356269125111, guid: 1bb4724df23eadc449b0a85f07a23e54, type: 3}
   speech: But..I was alone!
   responses:
-  - 'I think you''ve made some real enemies in this classroom, kiddo. Fess up and
-    tell me how ya managed it! '
+  - 'Detective Drew: I think you''ve made some real enemies in this classroom, kiddo.
+    Fess up and tell me how ya managed it! '
   nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10

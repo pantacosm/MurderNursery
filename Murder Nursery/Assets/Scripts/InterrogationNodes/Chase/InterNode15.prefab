@@ -51,7 +51,7 @@ MonoBehaviour:
     that he wouldn''t be impressin'' her with his art no more, but that kid can draw
     with BOTH HANDS! I mean, come on!'
   responses:
-  - That seems like a stroke of bad luck.
+  - 'Detective Drew: That seems like a stroke of bad luck.'
   nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10

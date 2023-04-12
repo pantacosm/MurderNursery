@@ -50,7 +50,7 @@ MonoBehaviour:
   - {fileID: 3499891356269125111, guid: b520018dff403bb41b6570161ca2155b, type: 3}
   speech: Don't quit your day job, Detective... I've been at my easel all day!
   responses:
-  - Oh, yeah? How'd you explain THAT?
+  - 'Detective Drew: Oh, yeah? How''d you explain THAT?'
   nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10
@@ -58,7 +58,7 @@ MonoBehaviour:
   repGainResponse1: 0
   repGainResponse2: 0
   repGainResponse3: 0
-  nodeActive: 0
+  nodeActive: 1
   interrogationNode: 0
   exitNode: 0
   nodeVisited: 0

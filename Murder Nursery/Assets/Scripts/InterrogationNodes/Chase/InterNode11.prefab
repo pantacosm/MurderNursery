@@ -49,7 +49,7 @@ MonoBehaviour:
   - {fileID: 3499891356269125111, guid: 10df22b1e258daa4ab7d161c1476ea14, type: 3}
   speech: Wait, you lost me...what's the question?
   responses:
-  - UGH! It's Grace! It's always been Grace, not Scarlet!
+  - 'Detective Drew: UGH! It''s Grace! It''s always been Grace, not Scarlet!'
   nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10

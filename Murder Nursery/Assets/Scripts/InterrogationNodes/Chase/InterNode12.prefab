@@ -49,7 +49,7 @@ MonoBehaviour:
   - {fileID: 3499891356269125111, guid: 6d9ba17bb6a491647acc149fef995d01, type: 3}
   speech: 'OH! Uh, Okay, Okay...I''ll start from the beginnin'' '
   responses:
-  - Finally!
+  - 'Detective Drew: Finally!'
   nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10

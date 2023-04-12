@@ -49,9 +49,9 @@ MonoBehaviour:
   - {fileID: 3499891356269125111, guid: fdcfd03a45645ce449867a5ccf9adcdd, type: 3}
   speech: I want to go back to running around now, I don't like this game anymore!
   responses:
-  - But we're just getting to the good part, Chase! So we know you're a lot closer
-    to Grace than you're letting on. Tell me one last thing, pal. The whole shebang
-    with Juice Box was never about Scarlet, was it?
+  - 'Detective Drew: But we''re just getting to the good part, Chase! So we know
+    you''re a lot closer to Grace than you''re letting on. Tell me one last thing,
+    pal. The whole shebang with Juice Box was never about Scarlet, was it?'
   nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10

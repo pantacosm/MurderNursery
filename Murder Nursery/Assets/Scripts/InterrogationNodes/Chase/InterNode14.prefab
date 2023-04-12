@@ -51,7 +51,7 @@ MonoBehaviour:
     one giving him the boxes, creepo like that shouldn't be anywhere near my girl
     in the first place, ya hear?!
   responses:
-  - Seems a little harsh, but go on.
+  - 'Detective Drew: Seems a little harsh, but go on.'
   nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10

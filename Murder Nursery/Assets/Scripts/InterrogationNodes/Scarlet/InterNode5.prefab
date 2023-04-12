@@ -51,9 +51,9 @@ MonoBehaviour:
   speech: I didn't, I'm not that kinda gal! I don't even like Chase that much, we're
     not close at all! He doesn't tell me anythin' these days!
   responses:
-  - Not close, huh? From what I've heard, you and Chase been close for a while now! 
-    But for a moll who loves the attention..  why hide that...? Trouble in paradise?
-    Trust issues perhaps? How does that...make you feel?
+  - 'Detective Drew: Not close, huh? From what I''ve heard, you and Chase been close
+    for a while now!  But for a moll who loves the attention..  why hide that...?
+    Trouble in paradise? Trust issues perhaps? How does that...make you feel?'
   nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10

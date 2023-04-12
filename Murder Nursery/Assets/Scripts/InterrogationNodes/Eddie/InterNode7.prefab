@@ -51,8 +51,8 @@ MonoBehaviour:
   speech: Shucks pal, thanks. But don't think you can flatter your way out of this
     one! Why else would I push that crazy outta tree?
   responses:
-  - How about because you were "just following orders", buddy? The whole class knows
-    you work for Chase!
+  - 'Detective Drew: How about because you were "just following orders", buddy? The
+    whole class knows you work for Chase!'
   nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10

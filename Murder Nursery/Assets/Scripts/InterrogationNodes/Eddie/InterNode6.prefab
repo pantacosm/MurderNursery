@@ -51,8 +51,8 @@ MonoBehaviour:
     over heels for the gal. But so is my best buddy Chase! If I'd push a guy out
     a tree for her, why would I be best pals with him?
   responses:
-  - ... As much as I hate to say it, you could be right for the first time in your
-    life, Eddie.
+  - 'Detective Drew: ... As much as I hate to say it, you could be right for the
+    first time in your life, Eddie.'
   nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10

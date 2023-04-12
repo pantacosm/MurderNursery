@@ -50,8 +50,9 @@ MonoBehaviour:
   speech: 'What?! Ugh, I mean I''ve already said Grace and I ain''t that close, and
     Scarlet''s been a real problem lately! Give me a break, he deserved it! '
   responses:
-  - You're startin to sound like a real piece of work here, Chase ol' chum! If you
-    and Grace ain't close, how come your gal Scarlet's been acting some kinda way?
+  - 'Detective Drew: You''re startin to sound like a real piece of work here, Chase
+    ol'' chum! If you and Grace ain''t close, how come your gal Scarlet''s been acting
+    some kinda way?'
   nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10

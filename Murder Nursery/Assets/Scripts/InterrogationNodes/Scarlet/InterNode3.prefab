@@ -51,8 +51,8 @@ MonoBehaviour:
   speech: I mean, I didn't have a problem with her! Not like I felt any sort of way
     about 'er!
   responses:
-  - Still tryna play dumb now, Scarlet? I got the receipts of you talkin' smack right
-    here! Sounded like you were reaaal jealous of her!
+  - 'Detective Drew: Still tryna play dumb now, Scarlet? I got the receipts of you
+    talkin'' smack right here! Sounded like you were reaaal jealous of her!'
   nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10

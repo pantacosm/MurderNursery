@@ -49,7 +49,7 @@ MonoBehaviour:
   - {fileID: 3499891356269125111, guid: ff91cbd06f48d66409da78afccff3a78, type: 3}
   speech: Huh? Want to start making sense buddy?
   responses:
-  - Hmmmm.. nope, not that one!
+  - 'Detective Drew: Hmmmm.. nope, not that one!'
   nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10

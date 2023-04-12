@@ -49,7 +49,7 @@ MonoBehaviour:
   - {fileID: 3499891356269125111, guid: fc019aca0086caf41a07b90f8b967b09, type: 3}
   speech: You lost me there detective.
   responses:
-  - I got a bit lost too with that one.
+  - 'Detective Drew: I got a bit lost too with that one.'
   nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10

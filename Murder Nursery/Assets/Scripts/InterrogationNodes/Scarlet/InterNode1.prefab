@@ -51,8 +51,8 @@ MonoBehaviour:
   speech: I don't know nothin'! I keep to myself in these parts, narc! I'm a real
     quiet type!
   responses:
-  - HA! Now that's a reaaal knee slapper, Scarlet. That sounds like applesauce to
-    me, considerin' you're the biggest gossip in town!!
+  - 'Detective Drew: HA! Now that''s a reaaal knee slapper, Scarlet. That sounds
+    like applesauce to me, considerin'' you''re the biggest gossip in town!!'
   nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10

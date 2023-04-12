@@ -49,7 +49,7 @@ MonoBehaviour:
   - {fileID: 3499891356269125111, guid: 163ccfb877118f44da1432847b9678ec, type: 3}
   speech: It seems you are confusing fact with fiction my good friend.
   responses:
-  - Hmm...nuh uh!
+  - 'Detective Drew: Hmm...nuh uh!'
   nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10

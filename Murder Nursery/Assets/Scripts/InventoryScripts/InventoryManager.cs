@@ -46,6 +46,7 @@ public class InventoryManager : MonoBehaviour
     public GameObject itemTooltip;
     public GameObject tutorialPanel;
 
+    public bool inventoryToggled = false;
     private void Awake()
     {
         inventory = this;
@@ -72,7 +73,12 @@ public class InventoryManager : MonoBehaviour
         }
 
         // close inventory if open & should not be accessible
-        if(DM.GetComponent<DialogueManager>().inConvo || DM.GetComponent<Conclusion>().inEnding && UIVisibility.inventoryOpen)
+        if(DM.GetComponent<Conclusion>().inEnding && UIVisibility.inventoryOpen)
+        {
+            UIVisibility.ToggleInventory();
+        }
+
+        if(DM.GetComponent<DialogueManager>().inConvo && UIVisibility.inventoryOpen)
         {
             UIVisibility.ToggleInventory();
         }

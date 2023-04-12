@@ -51,7 +51,7 @@ MonoBehaviour:
     no fool and you're catchin' on to the Juice Box thing. I'm not a bad kid, I swear!
     He was talking to Grace so much it just grinds my gears!
   responses:
-  - Uh huh.
+  - 'Detective Drew: Uh huh.'
   nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10

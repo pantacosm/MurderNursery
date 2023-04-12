@@ -49,7 +49,7 @@ MonoBehaviour:
   - {fileID: 3499891356269125111, guid: 52baa75e9d55c3048a838ca6a2dd793f, type: 3}
   speech: Huh? Want to start making sense buddy?
   responses:
-  - I don't think that's correct
+  - 'Detective Drew: I don''t think that''s correct'
   nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10

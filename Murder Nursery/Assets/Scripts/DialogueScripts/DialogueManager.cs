@@ -731,10 +731,10 @@ public class DialogueManager : MonoBehaviour
 
     public void EnterInterrogation() //Enters an interrogation 
     {
-            GameObject interrogatedNPC = activeNPC;
-        
-            ExitConversation();
-            manager.GetComponent<SceneTransition>().ChangeToInterrogation(interrogatedNPC);
+        GameObject interrogatedNPC = activeNPC;
+        interrogationManager.GetComponent<Interrogation>().inInterrogation = true;
+        ExitConversation();
+        manager.GetComponent<SceneTransition>().ChangeToInterrogation(interrogatedNPC);
         summaryPanel.SetActive(false);
         
     }

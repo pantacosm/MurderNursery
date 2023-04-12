@@ -49,7 +49,7 @@ MonoBehaviour:
   - {fileID: 3499891356269125111, guid: 36eb4d5c831f4684ca5c1f8429f6f64e, type: 3}
   speech: Hmph! You some kinda stalker?
   responses:
-  - Just a stalker of justice.
+  - 'Detective Drew: Just a stalker of justice.'
   nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10

@@ -49,7 +49,7 @@ MonoBehaviour:
   - {fileID: 3499891356269125111, guid: 08a9fac8894207c49af8f1939a912b1d, type: 3}
   speech: It seems you are confusing fact with fiction my good friend.
   responses:
-  - 'So close! '
+  - 'Detective Drew: So close! '
   nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10

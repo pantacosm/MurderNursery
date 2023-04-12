@@ -49,6 +49,7 @@ public class PlayerMovement : MonoBehaviour
 
     public bool inLD = false;
     public GameObject conclusionManager;
+    public GameObject interrogationManager;
 
     private void Awake()
     {
@@ -103,7 +104,8 @@ public class PlayerMovement : MonoBehaviour
         if (inventory.UIVisibility.inventoryOpen || inventory.UIVisibility.pinboardOpen 
             || dialogueZone.activeInHierarchy || manager.GetComponent<SceneTransition>().interrogationActive 
             || inventory.UIVisibility.jotterOpen || dressUpManager.GetComponent<DressUp>().inDressUp || introCam.GetComponent<IntroCutscene>().inIntro
-            || menu.menuOpen || inspectingItem || inventory.UIVisibility.notebookOpen || inLD || conclusionManager.GetComponent<Conclusion>().inEnding)
+            || menu.menuOpen || inspectingItem || inventory.UIVisibility.notebookOpen || inLD || conclusionManager.GetComponent<Conclusion>().inEnding || 
+            interrogationManager.GetComponent<Interrogation>().inInterrogation)
         {
             animator.Play("Idle");
             animator.SetFloat("Velocity", 0);

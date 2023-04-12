@@ -51,8 +51,8 @@ MonoBehaviour:
   speech: I don't love the attention either I swear! I hate bein' the centre of attention!
     I don't wanna be anyone's favourite!
   responses:
-  - Don't start eatin' that humble pie now! We all know you're a real diva around
-    these parts. So spill on what you're hidin'!
+  - 'Detective Drew: Don''t start eatin'' that humble pie now! We all know you''re
+    a real diva around these parts. So spill on what you''re hidin''!'
   nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10

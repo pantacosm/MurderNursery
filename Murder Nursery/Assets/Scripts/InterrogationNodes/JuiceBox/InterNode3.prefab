@@ -50,8 +50,8 @@ MonoBehaviour:
   - {fileID: 3499891356269125111, guid: b1ccc22e6a5a52e4cb3148272b838241, type: 3}
   speech: I got this by myself at  playtime, MISTER. You call this EVIDENCE?
   responses:
-  - Oh it's not the arm I'm interested in here, Juicebox. It's who was with you when
-    ya got it!
+  - 'Detective Drew: Oh it''s not the arm I''m interested in here, Juicebox. It''s
+    who was with you when ya got it!'
   nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10

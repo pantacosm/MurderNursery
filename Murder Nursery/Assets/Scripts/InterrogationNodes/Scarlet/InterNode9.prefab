@@ -51,8 +51,8 @@ MonoBehaviour:
   speech: Sounds like you're makin up your mind already, detective! You badges are
     all the same! Maybe it was me then, FINE! Would ya leave me alone if it was?!
   responses:
-  - You're alotta things, Princess! But you're no killer, so don't try to take the
-    blame! Tell me who you're protectin'!
+  - 'Detective Drew: You''re alotta things, Princess! But you''re no killer, so don''t
+    try to take the blame! Tell me who you''re protectin''!'
   nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10

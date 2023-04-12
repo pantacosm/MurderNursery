@@ -47,10 +47,10 @@ MonoBehaviour:
   parent: {fileID: 3499891356269125111, guid: 24e16e5ff0c75144793ad82b638d8ad0, type: 3}
   children:
   - {fileID: 3499891356269125111, guid: 24e16e5ff0c75144793ad82b638d8ad0, type: 3}
-  speech: 
+  speech: Your conclusions are as lame as your style.
   responses:
-  - Your conclusions are as lame as your style.
-  nonAnimatedSpeech: Maybe I should take another run at this.
+  - 'Detective Drew: Maybe I should take another run at this.'
+  nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10
   repLevelOption3: -10

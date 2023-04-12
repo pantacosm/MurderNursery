@@ -52,9 +52,9 @@ MonoBehaviour:
     doesn't make me a MURDER SUSPECT.  And I don't recall ever speaking to Grace
     either!
   responses:
-  - I find that real hard to believe, JB. From what I've heard, Gracie was popular
-    amongst all the boys in the class. Are you really tellin me you've NEVER spoken?
-    I think you WERE close
+  - 'Detective Drew: I find that real hard to believe, JB. From what I''ve heard,
+    Gracie was popular amongst all the boys in the class. Are you really tellin me
+    you''ve NEVER spoken? I think you WERE close'
   nonAnimatedSpeech: 
   repLevelOption1: -10
   repLevelOption2: -10

@@ -393,6 +393,10 @@ public class ListeningDevice : MonoBehaviour
                         speechReading = false;
                         fadeComplete = true;
                     }
+                     if(!intoLD)
+                    {
+                        ePressed = false;
+                    }
                     
                     yield return null;
 
@@ -445,7 +449,8 @@ public class ListeningDevice : MonoBehaviour
         speechReading = false;
         player.GetComponent<PlayerMovement>().inLD = false;
         fadeComplete = false;
-        ePressed = false;
+        inRange = false;
+        
     }
     
 }

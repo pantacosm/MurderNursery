@@ -40,7 +40,9 @@ public class SceneTransition : MonoBehaviour
     private bool jbSummaryViewed = false;
     private bool scarletSummaryViewed = false;
     private bool eddieSummaryViewed = false;
-    private bool chaseSummaryViewed = false;    
+    private bool chaseSummaryViewed = false;
+
+    
 
     // Start is called before the first frame update
     void Start()
@@ -105,8 +107,8 @@ public class SceneTransition : MonoBehaviour
         {
             interrogationManager.GetComponent<Interrogation>().playerResponse1 = interrogationManager.GetComponent<Interrogation>().eddiePlayerResponseText;
             interrogationManager.GetComponent<Interrogation>().npcStatement = interrogationManager.GetComponent<Interrogation>().eddieStatementText;
-            interrogationManager.GetComponent<Interrogation>().juiceBoxPlayerResponseBox.SetActive(true);
-            interrogationManager.GetComponent<Interrogation>().juiceBoxStatementBox.SetActive(true);
+            interrogationManager.GetComponent<Interrogation>().eddiePlayerResponseBox.SetActive(true);
+            interrogationManager.GetComponent<Interrogation>().eddieStatementBox.SetActive(true);
           //  interrogationManager.GetComponent<Interrogation>().playerResponse1.GetComponent<TextMeshProUGUI>().text = "Detective Drew:";
           //  interrogationManager.GetComponent<Interrogation>().npcStatement.GetComponent<TextMeshProUGUI>().text = "Eddie: ";
             goonIntObject.SetActive(true);

@@ -109,10 +109,7 @@ public class Interrogation : MonoBehaviour
     public GameObject eddieStatementBox;
     public GameObject chaseStatementBox;
 
-    private string npcLastResponseJB;
-    private string npcLastResponseChase;
-    private string npcLastResponseScarlet;
-    private string npcLastResponseEddie;
+    private bool chaseStartNode = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -171,8 +168,9 @@ public class Interrogation : MonoBehaviour
                     }
                 if(activeInterrogant.name == "Chase (The Cool Guy)")
                     {
-                        lastResponseChase = activeNode.responses[0];
-                    }
+                    lastResponseChase = activeNode.responses[0];
+                   
+                }
                 //lastResponse = activeNode.responses[0]; //Stores the last response from the player
                 LoadIntNodeInfo(activeNode.children[0]); //Loads the next node 
                 playerChoice = 0;
@@ -190,7 +188,7 @@ public class Interrogation : MonoBehaviour
         if(!lastResponsePlayer)
         {
             
-            playerResponse1.GetComponent<TextMeshProUGUI>().text = "Detective Drew: " + activeNode.responses[0];
+            playerResponse1.GetComponent<TextMeshProUGUI>().text =  activeNode.responses[0];
             lastResponsePlayer = true;
         }
     }
@@ -354,12 +352,13 @@ public class Interrogation : MonoBehaviour
             {
                 if (mostRecentJuiceBoxNode == null)
                 {
-                    playerResponse1.GetComponent<TextMeshProUGUI>().text = "Detective Drew:";
+                  //  playerResponse1.GetComponent<TextMeshProUGUI>().text = "Detective Drew:";
                     LoadIntNodeInfo(startNode);
 
                 }
                 else if(mostRecentJuiceBoxNode != null)
                 {
+                    
                     LoadIntNodeInfo(mostRecentJuiceBoxNode); //Loads the node that was visited in the last interrogation
                     playerResponse1.GetComponent<TextMeshProUGUI>().text =  lastResponseJB;
                 }
@@ -369,7 +368,7 @@ public class Interrogation : MonoBehaviour
             {
                 if (mostRecentScarletNode == null)
                 {
-                    playerResponse1.GetComponent<TextMeshProUGUI>().text = "Detective Drew:";
+                    //playerResponse1.GetComponent<TextMeshProUGUI>().text = "Detective Drew:";
                     LoadIntNodeInfo(startNode);
 
                 }
@@ -383,7 +382,7 @@ public class Interrogation : MonoBehaviour
             {
                 if (mostRecentEddieNode == null)
                 {
-                    playerResponse1.GetComponent<TextMeshProUGUI>().text = "Detective Drew:";
+                   // playerResponse1.GetComponent<TextMeshProUGUI>().text = "Detective Drew:";
                     LoadIntNodeInfo(startNode);
 
                 }
@@ -397,7 +396,7 @@ public class Interrogation : MonoBehaviour
             {
             if (mostRecentChaseNode == null)
             {
-                playerResponse1.GetComponent<TextMeshProUGUI>().text = "Detective Drew:";
+               // playerResponse1.GetComponent<TextMeshProUGUI>().text = "Detective Drew:";
                 LoadIntNodeInfo(startNode);
 
             }

@@ -109,13 +109,19 @@ public class Interrogation : MonoBehaviour
     public GameObject eddieStatementBox;
     public GameObject chaseStatementBox;
 
-    private bool chaseStartNode = true;
+    [Header("Pop Ups")]
+    public GameObject popUpManager;
+    public Image successIcon;
+    public GameObject successText;
+    public Image failIcon;
+    public GameObject failText;
     // Start is called before the first frame update
     void Start()
     {
         manager = GameObject.FindGameObjectWithTag("Manager"); //Finds and stores game manager
         response1Position = new Vector3(2030.744140625f, 326.246826171875f, 0.0f); //Stores UI element position
         response2Position = new Vector3(2030.777587890625f, 228.91348266601563f, 0.0f); //''
+        popUpManager = GameObject.FindGameObjectWithTag("PUManager");
         
     }
 
@@ -273,6 +279,7 @@ public class Interrogation : MonoBehaviour
         manager.GetComponent<SceneTransition>().ChangeToMainArea(); //Transitions the player back to the main area
         interrogationPanel.SetActive(false);
         ClearDialogue(); //Clears the last interrogation's data
+        popUpManager.GetComponent<PopUpManager>().FadeImage(successIcon, successText);
         
     }
 
@@ -283,6 +290,7 @@ public class Interrogation : MonoBehaviour
         manager.GetComponent<SceneTransition>().ChangeToMainArea(); //Transitions the player back to the main area
         interrogationPanel.SetActive(false);
         ClearDialogue(); //Clears the last interrogation's data
+        popUpManager.GetComponent<PopUpManager>().FadeImage(failIcon, failText);
     }
 
     public void LoadIntNodeInfo(DialogueNode newNode) //Method is used to load a dialogue node's data and update the UI, similar to the method found in DialogueManager

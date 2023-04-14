@@ -49,6 +49,18 @@ public class DressUp : MonoBehaviour
     public Item magnifyingGlass;
 
     public bool outfitChanging = false;
+
+    [Header("Pop Ups")]
+    public GameObject popUpManager;
+    public Image artistEquipped;
+    public GameObject artistPUText;
+    public Image punkEquipped;
+    public GameObject punkText;
+    public Image detectiveEquipped;
+    public GameObject detectiveText;
+    public Image gangsterEquipped;
+    public GameObject gangsterText;
+
     
     // Start is called before the first frame update
     void Start()
@@ -59,7 +71,7 @@ public class DressUp : MonoBehaviour
         thirdButton = new Vector3(1533.5f, 540.0f, 0.0f);//''
         inactiveButton = detectiveButton; //Sets the inactive button as the detective button
         currentOutfit = detectiveOutfit;
-        
+        popUpManager = GameObject.FindGameObjectWithTag("PUManager");
     }
 
     
@@ -118,6 +130,7 @@ public class DressUp : MonoBehaviour
         currentOutfit.SetActive(false);        
         currentOutfit = artistOutfit;
         artistOutfit.SetActive(true);
+        popUpManager.GetComponent<PopUpManager>().FadeImage(artistEquipped, artistPUText);
         //artistOutfit.transform.position = playerPosition.position;
         //playerCam.GetComponent<CinemachineVirtualCamera>().Follow = artistOutfit.transform;
         //playerCam.GetComponent<CinemachineVirtualCamera>().LookAt = artistOutfit.transform;
@@ -136,6 +149,7 @@ public class DressUp : MonoBehaviour
         currentOutfit.SetActive(false);
         currentOutfit = punkOutfit;
         punkOutfit.SetActive(true);
+        popUpManager.GetComponent<PopUpManager>().FadeImage(punkEquipped, punkText);
         //punkOutfit.transform.position = playerPosition.position;
         //playerCam.GetComponent<CinemachineVirtualCamera>().Follow = punkOutfit.transform;
     }
@@ -152,6 +166,7 @@ public class DressUp : MonoBehaviour
         currentOutfit.SetActive(false);
         currentOutfit = gangsterOutfit;
         gangsterOutfit.SetActive(true);
+        popUpManager.GetComponent<PopUpManager>().FadeImage(gangsterEquipped, gangsterText);
         //gangsterOutfit.transform.position = playerPosition.position;
     }
 
@@ -168,6 +183,7 @@ public class DressUp : MonoBehaviour
         currentOutfit.SetActive(false);
         currentOutfit = detectiveOutfit;
         detectiveOutfit.SetActive(true);
+        popUpManager.GetComponent<PopUpManager>().FadeImage(detectiveEquipped, detectiveText);
         //detectiveOutfit.transform.position = playerPosition.position;
     }
 

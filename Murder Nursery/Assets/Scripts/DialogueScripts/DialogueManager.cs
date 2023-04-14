@@ -150,6 +150,7 @@ public class DialogueManager : MonoBehaviour
 
     public GameObject interrogationManager;
     public GameObject interrogateButton;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -513,6 +514,7 @@ public class DialogueManager : MonoBehaviour
             pinBoardManager.GetComponent<PinboardManager>().discoveredEvidence.Add(activeNode.evidenceToDiscover);
             //pinBoardManager.GetComponent<PinboardManager>().UpdateEvidenceListUI(activeNode.evidenceToDiscover);
             pinBoardManager.GetComponent<PinboardManager>().UpdateEvidenceImages(activeNode.evidenceToDiscover);
+
             activeNode.evidenceToDiscover.evidenceFound = true;
         }
         activeNode.nodeActive = true;

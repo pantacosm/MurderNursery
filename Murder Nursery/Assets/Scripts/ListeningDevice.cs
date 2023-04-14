@@ -52,6 +52,9 @@ public class ListeningDevice : MonoBehaviour
     private bool speechReading = false;
     private bool ePressed = false;
 
+    public GameObject popUpManager;
+    public Image ldIcon;
+    public GameObject ldText;
 
     // Start is called before the first frame update
     void Start()
@@ -62,6 +65,7 @@ public class ListeningDevice : MonoBehaviour
         pinboardManager = GameObject.FindGameObjectWithTag("PinBoard Manager");
         progress = 0;
         convoProgress = 0;
+        popUpManager = GameObject.FindGameObjectWithTag("PUManager");
         
     }
 
@@ -80,6 +84,7 @@ public class ListeningDevice : MonoBehaviour
             {
                 inLD = true;
                 StartListening();
+                popUpManager.GetComponent<PopUpManager>().FadeImage(ldIcon, ldText);
             }
             else
             {

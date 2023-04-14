@@ -76,7 +76,9 @@ public class PinboardManager : MonoBehaviour
     public int slotsProgress = 0;
     public GameObject threadsParent;
 
-   
+    public GameObject popUpManager;
+    public Image evidenceIcon;
+    public GameObject evidenceText;
     // Start is called before the first frame update
     void Awake()
     {
@@ -86,6 +88,7 @@ public class PinboardManager : MonoBehaviour
 
     private void Start()
     {
+        popUpManager = GameObject.FindGameObjectWithTag("PUManager");
         foreach (EvidenceClass evidence in evidencePieces)
         {
             evidence.evidenceFound = false; //Marks each evidence piece as undiscovered at the start of the game 
@@ -113,6 +116,7 @@ public class PinboardManager : MonoBehaviour
 
     public void UpdateEvidenceImages(EvidenceClass evidence) //Updates the evidence pinboard visually after player interaction
     {
+        popUpManager.GetComponent<PopUpManager>().FadeImage(evidenceIcon, evidenceText);
         GameObject newImage = Instantiate(evidence.evidenceImage, evidenceList.transform);
         newImage.GetComponent<DragAndDrop>().itemID = evidence.evidenceID;
     }

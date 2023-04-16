@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 662fa5a23676a0b4498de9021e57aa64, type: 3}
-  m_Color: {r: 0.4433962, g: 0.4433962, b: 0.4433962, a: 0.19215687}
+  m_Color: {r: 0.46226418, g: 0.46226418, b: 0.46226418, a: 0.09803922}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -102,6 +102,7 @@ MonoBehaviour:
   ownerFingerprint: JuiceBox_FP
   fingerprintUI: {fileID: 0}
   fingerprintFound: {fileID: 0}
+  evidenceItem: {fileID: 8712068571063368421}
 --- !u!65 &2035986631
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -12,6 +12,8 @@ public class InventoryManager : MonoBehaviour
     public GameObject interManager;
     public GameObject MG; // allows access to magnifying glass script
     public GameObject Player; // used for stopping movement whilst toggling mag glass
+    public GameObject menuManager;
+    MainMenuSettings menuUI;
     GameObject itemObj;
 
 
@@ -26,8 +28,10 @@ public class InventoryManager : MonoBehaviour
 
     [SerializeField]
     public Item listeningDevice;
+
     [SerializeField]
     Item notebook;
+
 
     [HideInInspector]
     public ToggleUIVisibility UIVisibility; 
@@ -48,11 +52,13 @@ public class InventoryManager : MonoBehaviour
     GameObject dressUp;
 
     public bool inventoryToggled = false;
+    private bool canToggleMGlass = true;
     private void Awake()
     {
         inventory = this;
         UIVisibility = GetComponent<ToggleUIVisibility>();
         dressUp = GameObject.FindGameObjectWithTag("Dress Up Manager");
+        menuUI = menuManager.GetComponent<MainMenuSettings>();
     }
 
     private void Start()
@@ -65,7 +71,7 @@ public class InventoryManager : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyUp(KeyCode.I) && !IntroCutscene.intro.inIntro && !DM.GetComponent<DialogueManager>().inConvo && !DM.GetComponent<Conclusion>().inEnding && !interManager.GetComponent<Interrogation>().inInterrogation)//Used to open and close the player's inventory
+        if(Input.GetKeyUp(KeyCode.I) && !IntroCutscene.intro.inIntro && !DM.GetComponent<DialogueManager>().inConvo && !DM.GetComponent<Conclusion>().inEnding && !interManager.GetComponent<Interrogation>().inInterrogation && !menuUI.menuOpen)  //Used to open and close the player's inventory
         {
             UIVisibility.ToggleInventory();
             if(blur.activeSelf)
@@ -86,10 +92,11 @@ public class InventoryManager : MonoBehaviour
         }
 
         // Toggle Magnifying Glass
-        if(Input.GetKeyUp(KeyCode.M) && !IntroCutscene.intro.inIntro && !DM.GetComponent<DialogueManager>().inConvo && !DM.GetComponent<Conclusion>().inEnding && !interManager.GetComponent<Interrogation>().inInterrogation && !dressUp.GetComponent<DressUp>().inDressUp)
+        if(Input.GetKeyUp(KeyCode.M) && !IntroCutscene.intro.inIntro && !DM.GetComponent<DialogueManager>().inConvo && !DM.GetComponent<Conclusion>().inEnding && !interManager.GetComponent<Interrogation>().inInterrogation && !dressUp.GetComponent<DressUp>().inDressUp && canToggleMGlass && !menuUI.menuOpen)
         {
             if (MG.GetComponent<MagnifyingGlass>().OutfitCheck())
             {
+                StartCoroutine(MagnifyingGlassCooldown(1.0f));
                 MG.GetComponent<MagnifyingGlass>().ToggleMagnifyingGlass();
                 if(UIVisibility.inventoryOpen)
                 {
@@ -158,7 +165,21 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-   
+    IEnumerator MagnifyingGlassCooldown(float duration)
+    {
+        float time = 0;
+        while(time < duration)
+        {
+            canToggleMGlass = false;
+            time += Time.deltaTime;
+            yield return null;
+        }
+
+        if(time >= duration)
+        {
+            canToggleMGlass = true;
+        }
+    }
     
     
    

@@ -66,7 +66,7 @@ public class DressUp : MonoBehaviour
     void Start()
     {
         activeOutfit = "Detective Outfit"; //Sets the active outfit to the detective outfit at the start of the game 
-        firstButton = new Vector3(410.5f, 540.0f, 0.0f); //Sets the initial positions of the buttons
+        firstButton = new Vector3(386.5f, 540.0f, 0.0f); //Sets the initial positions of the buttons
         secondButton = new Vector3(960.0f, 540.0f, 0.0f);//''
         thirdButton = new Vector3(1533.5f, 540.0f, 0.0f);//''
         inactiveButton = detectiveButton; //Sets the inactive button as the detective button

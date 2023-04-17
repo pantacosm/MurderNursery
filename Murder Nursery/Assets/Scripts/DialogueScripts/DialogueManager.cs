@@ -150,6 +150,17 @@ public class DialogueManager : MonoBehaviour
 
     public GameObject interrogationManager;
     public GameObject interrogateButton;
+
+    [Header("Summary Panel UI")]
+    public Sprite chaseSummary;
+    public Sprite eddieSummary;
+    public Sprite scarletSummary;
+    public Sprite jbSummary;
+    public GameObject qMark1;
+    public GameObject qMark2;
+    public GameObject qMark3;
+    public GameObject qMark4;
+    public GameObject qMark5;
     
 
     // Start is called before the first frame update
@@ -962,6 +973,24 @@ public class DialogueManager : MonoBehaviour
             firstInterrogation = false;
         }
         summaryPanel.SetActive(!summaryPanel.activeSelf);
+        if(activeNPC == chase)
+        {
+            summaryPanel.GetComponent<Image>().sprite = chaseSummary;
+        }
+        if(activeNPC == scarlet)
+        {
+            summaryPanel.GetComponent<Image>().sprite = scarletSummary;
+        }
+        if(activeNPC == eddie)
+        {
+            summaryPanel.GetComponent<Image>().sprite = eddieSummary;
+        }
+        if(activeNPC == juiceBox)
+        {
+            summaryPanel.GetComponent<Image>().sprite = jbSummary;
+        }
+
+        
         if(summaryPanel.activeSelf)
         {
             tick1.SetActive(false);
@@ -969,40 +998,50 @@ public class DialogueManager : MonoBehaviour
             tick3.SetActive(false);
             tick4.SetActive(false);
             tick5.SetActive(false);
+            qMark1.SetActive(true);
+            qMark2.SetActive(true);
+            qMark3.SetActive(true);
+            qMark4.SetActive(true);
+            qMark5.SetActive(true);
         }
-        npcName.GetComponent<TextMeshProUGUI>().text = activeNPC.gameObject.name;
-        npcSprite.sprite = activeNPC.GetComponent<NPCDialogue>().sprite;
-        npcDescription.GetComponent<TextMeshProUGUI>().text = activeNPC.GetComponent<NPCDialogue>().description;
+       // npcName.GetComponent<TextMeshProUGUI>().text = activeNPC.gameObject.name;
+        //npcSprite.sprite = activeNPC.GetComponent<NPCDialogue>().sprite;
+        //npcDescription.GetComponent<TextMeshProUGUI>().text = activeNPC.GetComponent<NPCDialogue>().description;
 
         foreach (string evidence in pinBoardManager.GetComponent<PinboardManager>().threadedEvidence)
         {
             if (activeNPC.GetComponent<NPCDialogue>().requiredEvidence1 == evidence)
             {
-                tick1.SetActive(true);;
+                tick1.SetActive(true);
+                qMark1.SetActive(false);
                 continue;
             }
             
             if(activeNPC.GetComponent<NPCDialogue>().requiredEvidence2 == evidence )
             {
                 tick2.SetActive(true);
+                qMark2.SetActive(false);
                 continue;
             }
          
             if(activeNPC.GetComponent<NPCDialogue>().requiredEvidence3 == evidence)
             {
                 tick3.SetActive(true);
+                qMark3.SetActive(false);
                 continue;
             }
         
             if(activeNPC.GetComponent<NPCDialogue>().requiredEvidence4 == evidence)
             {
                 tick4.SetActive(true);
+                qMark4.SetActive(false);
                 continue;
             }
            
             if(activeNPC.GetComponent<NPCDialogue>().requiredEvidence5 == evidence)
             {
                 tick5.SetActive(true);
+                qMark5.SetActive(false);
                 continue;
             }
            
